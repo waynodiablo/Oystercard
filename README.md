@@ -2,7 +2,7 @@
 
 Welcome to the first 12 weeks of the rest of your life...
 
-1. The Basics
+1. [The Basics](https://github.com/makersacademy/course/blob/master/1_the_basics.md)
 2. Playing with Rubies
 3. Object Oriented Programming
 4. Making Games
