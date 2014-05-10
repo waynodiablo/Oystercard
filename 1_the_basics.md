@@ -54,7 +54,9 @@ git remote add origin git@github.com:makersacademy/student-directory.git
 git push -u origin master
 ````
 
-Don't copy-paste them, though. Type everything in, it's really important to remember everything. If you copy-paste code, you may as well skip the exercise altogether. Typing everything in also forces you to think about what exactly is going on. For example, what about the `git init` command? Is it really necessary here, given that we've already initialised the repo? Maybe not.
+**Don't copy-paste them, though. Type everything in, it's really important to remember everything. If you copy-paste code, you may as well skip the exercise altogether.**
+
+Typing everything in also forces you to think about what exactly is going on. For example, what about the `git init` command? Is it really necessary here, given that we've already initialised the repo? Maybe not.
 
 ![git push](https://github.com/makersacademy/course/raw/master/images/git_push.png)
 
