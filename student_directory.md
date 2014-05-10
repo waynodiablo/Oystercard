@@ -193,6 +193,7 @@ The Alien
 Terminator
 Freddy Kruger
 The Joker
+Overall, we have 9 great students
 ````
 
 If you want to put the line break character manually, you can do it like this:
