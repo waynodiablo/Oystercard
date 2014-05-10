@@ -29,7 +29,7 @@ The script will be invoked from the command-line and it will only use pure Ruby,
 
 First, open the terminal and navigate to your project directory. Then create a new directory called "student-directory" (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)), change into it and initialise it as an empty git repository (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
 
-![terminal](https://github.com/makersacademy/course/raw/master/images/term.png)
+![terminal](https://github.com/makersacademy/course/raw/master/student_directory/images/term.png)
 
 It makes sense to keep all projects you'll be working on in a designated project directory (and not on desktop, for example).
 
@@ -37,13 +37,13 @@ We always begin a new project (unless it's a throwaway code that will not live u
 
 **Now let's create a repository on Github!**
 
-![new repo](https://github.com/makersacademy/course/raw/master/images/new_github_repo.png)
+![new repo](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo.png)
 
 Make it public, name it "student-directory" (it's usually a good idea to use the same name for Github repos and local folders) but don't initialise it with a README – we'll do it manually. This is what your repo will look like right after it's created.
 
-![new repo created](https://github.com/makersacademy/course/raw/master/images/new_github_repo_created.png)
+![new repo created](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo_created.png)
 
-Let's now initialise the repo with a README file and create a local remote(:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)). Github gives you steps required to do it:
+Let's now initialise the repo with a README file and create a local remote ( :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)). Github gives you steps required to do it:
 
 ````
 touch README.md
@@ -58,7 +58,10 @@ git push -u origin master
 
 Typing everything in also forces you to think about what exactly is going on. For example, what about the `git init` command? Is it really necessary here, given that we've already initialised the repo? Maybe not.
 
-![git push](https://github.com/makersacademy/course/raw/master/images/git_push.png)
+![git push](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push.png)
+
+Once you do it, refresh the Github page. It should show an empty repo (with the README.md file only).
+
 
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
