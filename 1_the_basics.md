@@ -4,7 +4,7 @@ In this week we are aiming to get you ready with a lot of basic concepts and pra
 
 Each week we will be working on a project that will solidify your understanding of the techniques and practices you'll be learning day by day; this week we are going to build a simple terminal based student directory.
 
-Make sure that you go through the **knowledge pills (:pill:)** at the bottom of this module when you struggle.
+Make sure that you go through the **[knowledge pills](https://github.com/makersacademy/course/blob/master/pills.md) (:pill:)** when you struggle.
 
 ## Overview
 
