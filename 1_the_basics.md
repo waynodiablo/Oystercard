@@ -27,8 +27,13 @@ The script will be invoked from the command-line and it will only use pure Ruby,
 
 ## Version 0: Setting up your environment
 
-First, open the terminal and navigate to your project directory (version control). Then create a new directory called "student-directory", change into it and initialise it as an empty git repo. In the example below my project directory is called ~/dev.
+First, open the terminal and navigate to your project directory. Then create a new directory called "student-directory" (:pill: [The command line](https://github.com/makersacademy/course/blob/master/unix/command_line.md)), change into it and initialise it as an empty git repository (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)).
 
+It makes sense to keep all projects you'll be working on in a designated project directory (and not on desktop, for example).
+
+We always begin a new project (unless it's a throwaway code that will not live until tomorrow) by initialising a new repository. 
+
+**Now let's create a repository on Github!**
 
 ## Knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/unix/command_line.md)
