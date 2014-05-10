@@ -282,7 +282,7 @@ Let's use the `<section>` tag to create section 1. Put this code directly betwee
 <section id="select-image">
   <h2>Step 1. Select an image</h2>
 </section>
-````html
+````
 
 It's very similar to the `<header>` element above it but it has two differences. First is that the we're using the `h2` tag for the actual header, instead of `h1`. This will make it a little bit smaller (`h1` is the biggest, `h6` is the smallest). The second difference is that we are giving this section an id of "select-image". The reason is that we'll have several sections and we'll need to differentiate between them later on. We'll be using the id values to refer to elements from CSS files.
 
