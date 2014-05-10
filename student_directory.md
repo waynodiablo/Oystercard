@@ -84,7 +84,7 @@ This README file is written using [Github-flavoured markdown](https://help.githu
 
 Then, write your README file (you don't have to use the same we used), commit the changes and push to Github to see what it looks like there.
 
-![gitconfig](https://github.com/makersacademy/course/raw/master/student_directory/images/gitconfig.png)
+![gitconfig](https://github.com/makersacademy/course/raw/master/student_directory/images/git_config.png)
 
 If you get the **"push.default is unset"** warning, like in the screenshot above, just choose the `simple` mode as the default.
 
