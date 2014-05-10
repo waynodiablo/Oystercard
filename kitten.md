@@ -138,14 +138,125 @@ Refresh the page in the browser and you should see the new text.
 
 Now we have a very simple but functioning website. Let's add some HTML to it to make in more interesting.
 
-HTML stands for Hypertext Markup Language. This is the language that is used to create webpages. All websites you're using daily are built using HTML. At Makers Academy we have written an introductory guide to HTML that you may find useful.
+HTML stands for Hypertext Markup Language. This is the language that is used to create webpages. All websites you're using daily are built using HTML.
 
-It's inconvenient to put our HTML right into app.rb. It will be easier to create a separate file. Just like you created app.rb in Sublime Text, create a folder called views and a file index.erb inside it. Your project now should look like this.
+It's inconvenient to put our HTML right into app.rb. It will be easier to create a separate file. Just like you created app.rb in Sublime Text, create a folder called `views` and a file index.erb inside it. Your project now should look like this.
 
+![index_erb](https://github.com/makersacademy/course/raw/master/images/day_one/index_erb.png)
 
-## Version 2: Adding some logic into the application
+Why don't we move the text `"Motivational Posters"` from our app.rb into this file?
 
-## Version 3: Final touches and "getting it out there"
+![index_erb_motivational](https://github.com/makersacademy/course/raw/master/images/day_one/index_erb_motivational.png)
+
+One last thing we need to do is to tell the app.rb file to actually use this file. Update your Ruby code to this.
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  erb :index
+end
+````
+
+Line 4 here means: take the contents of index.erb and output it to the browser. What about the views folder? Sinatra looks there by default: it's where most developers using Sinatra keep HTML files, so you don't have to specify it.
+
+Restart your website as you've done before (Ctrl-C and then ruby app.rb again) and refresh the browser. It should look exactly like before.
+
+Now let's add some real HTML into index.erb. Every HTML file must have the following structure.
+
+````html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title of the website</title>
+</head>
+<body>
+  
+</body>
+</html>
+````
+
+Replace the contents of the index.erb with this HTML code.
+
+````html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Motivational Posters</title>
+</head>
+<body>
+  <h1>Motivational Posters</h1>
+  <p>By Tonight I'll have a fully functioning website!</p>
+</body>
+</html>
+````
+
+Go back to the browser (no need to restart the website this time, it's only necessary if you modify app.rb). You should see this.
+
+![localhost_motivational](https://github.com/makersacademy/course/raw/master/images/day_one/localhost_motivational.png)
+
+If you see this, you know you're on the right track: your website is up and running and it loads HTML code from index.erb.
+
+## Version 2: Adding some style
+
+CSS (stands for Cascading Style Sheets) is the technology that is used to define how your website looks. Right now it doesn't look anything special: black text on a white background but if we add a little bit of CSS, it'll be different.
+
+Let's choose the background for our website first. Go to [Subtle Patterns](http://subtlepatterns.com) and choose any background that you like. It will help if your background is light, and not dark. Download the background you chose from the website and unzip it. There will be two images there and a `readme` file. For example, this is the background I chose (unzipped).
+
+![ricepaper](https://github.com/makersacademy/course/raw/master/images/day_one/ricepaper.png)
+
+Take the smaller of the two images (ricepaper_v3.png) in this example and put it in the `public/images` folder in motivational-posters directory (use Finder to do it). You'll need to create the folders `public` and `images` first. After you do this, your project will look like this.
+
+![index_erb2](https://github.com/makersacademy/course/raw/master/images/day_one/index_erb_2.png)
+
+Now let's set this image as the background for our website. Update line 6 in index.erb to do this.
+
+![index_erb3](https://github.com/makersacademy/course/raw/master/images/day_one/index_erb_3.png)
+
+We have just added some CSS code to tell the browser that the body of our page, that is, everything that's visible on the screen, should use the file that we put into the images folder as the background image. Our page now looks like this.
+
+![browser1](https://github.com/makersacademy/course/raw/master/images/day_one/browser_1.png)
+
+I bet you can see where it's going. By adding various CSS rules one after another we will make our website look good in almost no time!
+
+Even though we can put CSS in the HTML file, it's inconvenient. We'll be writing a lot of CSS, so let's put it into a separate file. Create a folder `css` inside the `public` folder and then create a file application.css inside `public/css`. Your project structure will look like this.
+
+![appcss](https://github.com/makersacademy/course/raw/master/images/day_one/appcss.png)
+
+Now let's move our CSS code from the HTML file into here. Remove the CSS from index.erb, so that the `<body>` tag has no attributes:
+
+`<body>`
+
+Then add this CSS into public/css/application.css:
+
+````css
+body {
+  background-image: url(/images/ricepaper_v3.png)
+}
+````
+
+Obviously, you'll need to replace ricepaper_v3.png with another filename if you have chosen a different background.
+
+This CSS code tells the browser that this background image should be used for the `body` element in HTML. However, if you refresh your browser right now, there will be no background at all. This is because we haven't told the browser to use this CSS file.
+
+In order to tell the browser to load CSS directives from a different file, we need to link the HTML file to the CSS file. You can do it by adding this line to the <head> section of your HTML (partial index.erb shown):
+
+````html
+<head>
+  <link href="/css/application.css" rel="stylesheet" type="text/css">
+  <title>Motivational Posters</title>
+</head>
+````
+
+This tells the browser that when rendering this web page, it should use the file application.css in the css folder. It also tells the browser that it's a stylesheet (that is, a file that determines what the webpage looks like) and it's of a CSS type.
+
+If you refresh the browser now, you should see your background again. This time it will be defined in an external CSS file.
+
+![browser1](https://github.com/makersacademy/course/raw/master/images/day_one/browser_1.png)
+
+## Version 3: Adding some logic into the application
+
+## Version 4: Final touches and "getting it out there"
 
 ## Extra Exercises
 
