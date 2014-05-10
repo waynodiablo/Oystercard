@@ -62,11 +62,54 @@ Typing everything in also forces you to think about what exactly is going on. Fo
 
 Once you do it, refresh the Github page. It should show an empty repo (with the README.md file only).
 
+![new repo readme](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo_readme.png)
+
+Good, now we have an empty repo with a remote called "master" pointing to Github. This is the basic groundwork you need to do before creating any new project.
+
+Note how Github displays the contents of the `README.md` file on your project page (it's empty now but you can still see it below the file list). This is because the file is named README, it's the default name for the file that has information about the project. The "md" extension means that the format of this file is [markdown](http://daringfireball.net/projects/markdown/basics). We'll write some [markdown](http://daringfireball.net/projects/markdown/basics) soon.
+
+Let's start SublimeText now. You should be able to do this by running `subl .` in the project directory (note there's a space between `subl` and the dot). The dot stands for the current directory (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)) and `subl` is the shortcut that the developers often create for SublimeText. If you don't have it ( _that is, if you get an error message when trying to run the command_), you probably don't have this shortcut set up (:pill: [Sublime Text](https://github.com/makersacademy/course/blob/master/pills/sublime.md)).
+
+After you launch SublimeText, it should look like this.
+
+![sublime](https://github.com/makersacademy/course/raw/master/student_directory/images/sublime.png)
+
+If you don't see the list of files and folders on the left, select View → Sidebar → Show Open Files.
+
+Let's now write a description for the project. This is a good idea because it will let other developers to quickly see what the codebase does. Every good project on Github has a good `README` file.
+
+![readme](https://github.com/makersacademy/course/raw/master/student_directory/images/readme.png)
+
+This README file is written using [Github-flavoured markdown](https://help.github.com/articles/github-flavored-markdown). Take a look the both the [markdown reference](http://daringfireball.net/projects/markdown/basics) and the [Github-flavoured markdown](https://help.github.com/articles/github-flavored-markdown) reference so that you know what's possible.
+
+Then, write your README file (you don't have to use the same we used), commit the changes and push to Github to see what it looks like there.
+
+![gitconfig](https://github.com/makersacademy/course/raw/master/student_directory/images/gitconfig.png)
+
+If you get the **"push.default is unset"** warning, like in the screenshot above, just choose the `simple` mode as the default.
+
+````
+git config --global push.default simple
+````
+
+There's an [explanation on StackOverflow](http://stackoverflow.com/questions/11872984/what-is-the-difference-between-git-push-default-current-and-push-default-upstrea) of what this warning means. Don't worry if it sounds a bit cryptic right now.
+
+After we push the README file, we'll see it on Github.
+
+![studentreadme](https://github.com/makersacademy/course/raw/master/student_directory/images/student_directory_readme.png)
+
+Now we have a local and and a remote repo with a README file that describes the project we're about to create.
+
+Throughout this and future tutorials we will be giving links to specific commits on Github that correspond to the relevant section of the tutorial. So, if you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/f68074835a0eb6587bbd0064df05a52f0f0c3cb9).
+
+
 
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 
 :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)
+
+:pill: [Sublime Text](https://github.com/makersacademy/course/blob/master/pills/sublime.md)
 
 :pill: [Ruby: variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
 
