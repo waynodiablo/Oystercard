@@ -1,6 +1,7 @@
 # Course Outline
 
-1. [The Basics](https://github.com/makersacademy/course/blob/master/1_the_basics.md)
+1. [I can haz kittenz](https://github.com/makersacademy/course/blob/master/kitten.md)
+2. [The Basics](https://github.com/makersacademy/course/blob/master/1_the_basics.md)
 3. Object Oriented Programming
 4. Making Games
 5. The Web
