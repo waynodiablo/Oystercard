@@ -256,6 +256,223 @@ If you refresh the browser now, you should see your background again. This time 
 
 ## Version 3: Adding some logic into the application
 
+Now it's time to add some real content to the website. By now you already have a general understanding of how HTML tags work but if you're confused by anything, please ask.
+
+Let's start by adding the header section with some text to our HTML file. Put this in the `<body>` section of index.erb, deleting what we have there.
+
+````html
+<header>
+    <h1>Motivational posters</h1>
+  </header>
+````
+
+Now your webpage should just have one header.
+
+![header](https://github.com/makersacademy/course/raw/master/images/day_one/motivational_header.png)
+
+Let's add some more content. Let's add the first section on our website. The finished section should look like this.
+
+![kitten_select](https://github.com/makersacademy/course/raw/master/images/day_one/kitten_select.png)
+
+It will have a header, some text, an input box, a button, an area for search results and Google's branding in the lower right corner (required by the terms and conditions of Google Image Search).
+
+Let's use the `<section>` tag to create section 1. Put this code directly between the closing `</header>` tag and the closing `</body>` tag.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+</section>
+````html
+
+It's very similar to the `<header>` element above it but it has two differences. First is that the we're using the `h2` tag for the actual header, instead of `h1`. This will make it a little bit smaller (`h1` is the biggest, `h6` is the smallest). The second difference is that we are giving this section an id of "select-image". The reason is that we'll have several sections and we'll need to differentiate between them later on. We'll be using the id values to refer to elements from CSS files.
+
+Then let's add some text. Let's use the `<p>` tag to add it.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+  <p>Enter the keyword to search for images</p>
+</section>
+````
+
+Now your web page looks like this.
+
+![select_image](https://github.com/makersacademy/course/raw/master/images/day_one/select_image.png)
+
+Don't worry that it doesn't look exactly like it'll look at the very end. This is because we haven't added the CSS yet. For now let's make sure we have the elements that we need on the page.
+
+Let's now add the input field for our keyword.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+  <p>Enter the keyword to search for images</p>
+	<input id="search-term" type="text">
+</section>
+````
+
+The input field that you can type things in is created by the `<input>` tag. There may be many different types of input tags, the one that looks like a search box is the one that has `type="text"`. We also give it an `id`, so that we could add some CSS later.
+
+Once you have added the input fields, add the button. Not surprisingly, you can use the `<button>` tag to do it. As with other elements, let's give it some `id`.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+  <p>Enter the keyword to search for images</p>
+  <input id="search-term" type="text">
+  <button id="go-search">Go!</button>
+</section>
+````
+
+These are all elements that we'll need to search for images but we don't have any place to display what we'll find. Let's create an empty element for that.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+  <p>Enter the keyword to search for images</p>
+  <input id="search-term" type="text">
+  <button id="go-search">Go!</button>
+  <div id="search-results"></div>
+</section>
+````
+
+The `<div>` element is just a generic element without any special significance. Since it's empty, it won't be visible on the page but it's important it exists because we'll be putting the search results in there. Last, but not least, let's add another empty element for Google branding. This is the requirement of Google Image Search.
+
+````html
+<section id="select-image">
+  <h2>Step 1. Select an image</h2>
+  <p>Enter the keyword to search for images</p>
+  <input id="search-term" type="text">
+  <button id="go-search">Go!</button>
+  <div id="search-results"></div>
+  <div id="branding"></div>
+</section>
+````
+
+So, this is what our application looks like right now.
+
+![select_image_2](https://github.com/makersacademy/course/raw/master/images/day_one/select_image_2.png)
+
+### Adding some Javascript
+
+Javascript is the programming language that the browser uses. While Ruby is used by your computer (what you run in the Terminal), Javascript is run by your browser right inside of the web page, so you can use it to add dynamic behaviour to your pages.
+
+In this case we'll add some Javascript to fetch the images from Google Image Search and display them on our page.
+
+Let's begin by creating one more folder, `public/javascript`, for our javascript files. Create two files inside: `support.js` and `application.js`.
+
+The first file, `support.js` will contain some javascript that we wrote for you for this project. It is slightly more complex than the other stuff, so we'll leave it until the end. This file does two things: actually performs a Google Image Search and saves the parameters of the form in the url, so we could tweet it later without losing out motivational image (we'll get to this functionality later).
+
+For now just take the contents of this file from [Github](https://github.com/makersacademy/course/raw/master/images/day_one/support.js) and copy-paste it into the `support.js` file in your project - don't worry about using Copy-Paste just this once :). Leave the `application.js` empty for a moment.
+
+Now let's link our JS files to the HTML file using a very similar technique that we used to link CSS files to HTML. Add these four lines into the `<head>` section of your index.erb.
+
+````html
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="/javascript/support.js"></script>        
+<script src="/javascript/application.js"></script>
+````
+
+Now your `<head>` section looks like this. The first `<script>` tag links to the google server that will actually perform the image search. The second `<script>` tag links to [jQuery](http://jquery.com), a widely used Javascript library that simplified many operations.
+
+````html
+<head>
+  <link href="/css/application.css" rel="stylesheet" type="text/css">        
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="/javascript/support.js"></script>  
+  <script src="/javascript/application.js"></script>
+  <title>Motivational Posters</title>
+</head>
+````
+
+However, even though the code is loaded as part of the page, it's inactive right now because we never executed it. Let's see how we can do it.
+
+We want our images to be found when the user clicks the button. The Javascript way of doing it looks like this:
+
+````javascript
+$(document).on('click', '#go-search', function() {
+  findImagesOnGoogle({keywords: $('#search-term').val(), container: '#search-results'})
+});
+````
+
+So, what's going on here? In plain English, this should be read like this:
+
+> When an element with the id of "go-search" is clicked in the document, a block of code (function) should be executed that will find images on google using the keyword from the field with id of "search-term" and put them in the area with id of "search-results".
+
+Sounds complex, right? It's actually simpler than it seems. Let's break it down into pieces.
+
+To determine what to do when some event happens, we use this Javascript:
+
+````javascript
+$(document).on(event, element, function() {
+  // what to do when this event happens on this element
+});
+````
+
+In this case we want to find images when a "click" event happens on the element with id "go-search". Remember we were giving many elements an `id`? That's exactly what they are needed for: to reference the elements later.
+
+If we want to reference an element by `id`, we just put a hash in front of a name. We call this a **CSS selector**.
+
+So, if we want to do something when a button with a specific id is clicked, we write:
+
+````javascript
+$(document).on('click', '#go-search', function() {
+  // the action to execute
+});
+````
+
+Now, what do we want to happen? We want to search Google Images for a given keyword and show the results. Remember we created an input field for the keyword?
+
+````html
+<input id="search-term" type="text">
+````
+
+It has the `id="search-term"`, so we can reference it using this id to get it's value. To do this, we can use this piece of Javascript.
+
+````javascript
+$('#search-term').val()
+````
+
+This code means "Take element with id of 'search-term' and give me its value, that is, what's typed inside".
+
+Where do we put the results? Again, remember we created a special area for them?
+
+````html
+<div id="search-results"></div>
+````
+
+As you can probably guess by now, we can reference this area like this.
+
+````javascript
+$("#search-results")
+````
+
+Now we have everything we need to tell our browser to get the images from Google and show the results.
+
+````javascript
+findImagesOnGoogle({keywords: $('#search-term').val(), container: '#search-results'})
+````
+
+This code asks the browser to go find images on google using whatever is typed into `#search-term` and put the results into `#search-results`. Makes sense?
+
+Now, let's put it all together, so that this code was executed only when the button was pressed.
+
+````javascript
+$(document).on('click', '#go-search', function() {
+  findImagesOnGoogle({keywords: $('#search-term').val(), container: '#search-results'})
+});
+````
+
+Now put the code above into application.js and save the file. Refresh your browser, enter the search term and you'll see the results!
+
+![browser2](https://github.com/makersacademy/course/raw/master/images/day_one/browser_2.png)
+
+Impressive, isn't it? Especially that we did very little work to achieve this result.
+
+It still doesn't look exactly like we want it to look at the very end but we'll fix it soon.
+
 ## Version 4: Final touches and "getting it out there"
 
 ## Extra Exercises
