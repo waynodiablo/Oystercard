@@ -29,3 +29,107 @@ Type this in the Terminal window.
 ```
 curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
 ```
+
+## Version 0: Create a walking skeleton
+
+Create a new directory on your desktop called "motivational-posters" (note the hyphen). Launch Sublime Text editor that you installed before and open this directory by choosing File->Open. 
+
+You should see a window like this.
+
+![subl](https://github.com/makersacademy/course/raw/master/images/day_one/subl.png)
+
+This is the directory where all our files for our web page will be stored. Let's begin by creating a file called app.rb. The .rb extension means that this is going to be a Ruby file. Ruby is a programming language that many websites are built with. Today we'll be using a tiny bit of Ruby but our website will be built using mostly Javascript – another programming language.
+
+Right click the folder name and create a new file.
+
+![new_file](https://github.com/makersacademy/course/raw/master/images/day_one/new_file.png)
+
+Sublime Text will create an untitled file first. Press `Cmd-S` to save it as app.rb.
+
+Let's create the most basic web page first. It will show the text `"Hello, world!"`. Put this into the app.rb.
+
+```` ruby
+require 'sinatra'
+
+get '/' do
+    "Hello, world"
+end
+````
+
+We'll get back to what this means in a second. Let's see if it works first.
+
+Open the Terminal. It will look like this.
+
+![term](https://github.com/makersacademy/course/raw/master/images/day_one/term.png)
+
+The Terminal is a text-based interface for interacting with your computer. It's also called the command line, the shell or the CLI (command-line interface). It's used by all web developers on a daily basis. It may seem strange to use a text-based interface at first (after all, we've got beautiful graphical interface on a Mac) but it's actually very convenient once you get used to it.
+
+In the Terminal you're always in some directory, just like you're always viewing contents of some directory in Finder. Let's open the directory we need in the Terminal. Type this command:
+
+`cd ~/Desktop/motivational-posters`
+
+Note that there's a space after cd. The cd commands stands for "change directory". After the command is the address of the directory that we just created a few minutes ago. The "~/Desktop" is your Desktop (yes, it's just a normal directory) and "motivational-posters" is what we have created for our project.
+
+Now that we're in the motivational-posters directory, let's install some more software that we'll need. First, type ruby -v to make sure you've got Ruby installed. The Terminal should look like this.
+
+![term_ruby](https://github.com/makersacademy/course/raw/master/images/day_one/term_ruby.png)
+
+In this case, the version of Ruby is 2.0.0.p0. If yours is different, for example, 1.9.3 or 1.8.6 it isn't a problem. If you don't see the version number, it means you haven't got Ruby installed and you need to go back to the installation instructions.
+
+Now let's install the software that we'll need. To build a website, we'll need something called a framework. This is a piece of software that acts as a bridge between your code and the browser. It will read the app.rb file and make sure it's available in the browser. Let's install it. Type this in the Terminal to install a framework called Sinatra.
+
+`gem install sinatra`
+
+You should see something like this (it may take a minute).
+
+![sinatra_gem](https://github.com/makersacademy/course/raw/master/images/day_one/sinatra_gem.png)
+
+Now that you've got Sinatra, let's launch our "Hello, world" website. Type this in the Terminal to run the app.rb file.
+
+`ruby app.rb`
+
+Now you're telling your Ruby to execute the file that we've created earlier.  You should see this in the Terminal (the previous lines that we typed were cleared because they are no longer relevant).
+
+![sinatra](https://github.com/makersacademy/course/raw/master/images/day_one/sinatra.png)
+
+This message means that your website is up and running at the address `localhost:4567` (note the last line). This is a special address that is used for running websites locally. (If your website starts on the address `localhost:3000`, it's ok as well, just use that address). Now open a new browser window and type this address in. You should see "Hello, world".
+
+![localhost](https://github.com/makersacademy/course/raw/master/images/day_one/localhost.png)
+
+If you see this, you've just made your first step towards developing your first website! This doesn't look like a website yet but it's actually a fully functioning website that we'll be extending and improving until we are happy with the result.
+
+Let's get back to the contents of the app.rb file. Here's what it looks like.
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  "Hello, world"
+end
+````
+
+As we mentioned above, this is a Ruby file, that is, a programme written in a programming language called Ruby. It's very simple. On the first line we tell Ruby to use the Sinatra framework that we've installed previously. Then, on line 3 we're telling it that when we go to the index page of the website (the last "/" in "localhost:4567/"), it should display "Hello, world" on this page. This is exactly what we're seeing in the browser.
+
+Let's practice changing this page. Go back to the terminal and stop your server by pressing Ctrl-C. You should see "Sinatra has ended his set" message.
+
+![sinatra_stop](https://github.com/makersacademy/course/raw/master/images/day_one/sinatra_stop.png)
+
+Now go back to app.rb in Sublime Text and change the text to "Motivational Posters". Pay attention to the quotes around the text, they are important and they must be the same, that is, either single or double quotes but both of the same type.
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  "Motivational Posters"
+end
+````
+
+Now go back to the terminal and start your website again.
+
+`ruby app.rb`
+
+Refresh the page in the browser and you should see the new text.
+
+![motivational](https://github.com/makersacademy/course/raw/master/images/day_one/motivational.png)
+
+**That was all for our first version, great job!**
