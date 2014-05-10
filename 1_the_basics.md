@@ -37,7 +37,11 @@ We always begin a new project (unless it's a throwaway code that will not live u
 
 **Now let's create a repository on Github!**
 
+![new repo](https://github.com/makersacademy/course/raw/master/images/new_github_repo.png)
+
 Make it public, name it "student-directory" (it's usually a good idea to use the same name for Github repos and local folders) but don't initialise it with a README – we'll do it manually. This is what your repo will look like right after it's created.
+
+![new repo created](https://github.com/makersacademy/course/raw/master/images/new_github_repo_created.png)
 
 Let's now initialise the repo with a README file and create a local remote(:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)). Github gives you steps required to do it:
 
@@ -52,7 +56,9 @@ git push -u origin master
 
 Don't copy-paste them, though. Type everything in, it's really important to remember everything. If you copy-paste code, you may as well skip the exercise altogether. Typing everything in also forces you to think about what exactly is going on. For example, what about the `git init` command? Is it really necessary here, given that we've already initialised the repo? Maybe not.
 
-## Knowledge pills
+![git push](https://github.com/makersacademy/course/raw/master/images/git_push.png)
+
+## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/unix/command_line.md)
 
 :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)
