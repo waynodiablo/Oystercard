@@ -27,7 +27,7 @@ The script will be invoked from the command-line and it will only use pure Ruby,
 
 ## Version 0: Setting up your environment
 
-First, open the terminal and navigate to your project directory. Then create a new directory called "student-directory" (:pill: [The command line](https://github.com/makersacademy/course/blob/master/unix/command_line.md)), change into it and initialise it as an empty git repository (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)).
+First, open the terminal and navigate to your project directory. Then create a new directory called "student-directory" (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)), change into it and initialise it as an empty git repository (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
 
 ![terminal](https://github.com/makersacademy/course/raw/master/images/term.png)
 
@@ -43,7 +43,7 @@ Make it public, name it "student-directory" (it's usually a good idea to use the
 
 ![new repo created](https://github.com/makersacademy/course/raw/master/images/new_github_repo_created.png)
 
-Let's now initialise the repo with a README file and create a local remote(:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)). Github gives you steps required to do it:
+Let's now initialise the repo with a README file and create a local remote(:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)). Github gives you steps required to do it:
 
 ````
 touch README.md
@@ -59,30 +59,30 @@ Don't copy-paste them, though. Type everything in, it's really important to reme
 ![git push](https://github.com/makersacademy/course/raw/master/images/git_push.png)
 
 ## This lessons knowledge pills
-:pill: [The command line](https://github.com/makersacademy/course/blob/master/unix/command_line.md)
+:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 
-:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/unix/git.md)
+:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)
 
-:pill: [Ruby: variables](https://github.com/makersacademy/course/blob/master/ruby/variables.md)
+:pill: [Ruby: variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
 
-:pill: [Ruby: introducing irb](https://github.com/makersacademy/course/blob/master/ruby/irb.md)
+:pill: [Ruby: introducing irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
 
-:pill: [Ruby: creating ruby files](https://github.com/makersacademy/course/blob/master/ruby/files.md)
+:pill: [Ruby: creating ruby files](https://github.com/makersacademy/course/blob/master/pills/files.md)
 
-:pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/ruby/strings.md)
+:pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
 
-:pill: [Ruby: Interacting with the users](https://github.com/makersacademy/course/blob/master/ruby/command_line.md)
+:pill: [Ruby: Interacting with the users](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 
-:pill: [Ruby: True, False and nothing](https://github.com/makersacademy/course/blob/master/ruby/boolean.md)
+:pill: [Ruby: True, False and nothing](https://github.com/makersacademy/course/blob/master/pills/boolean.md)
 
-:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/ruby/methods.md)
+:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
 
-:pill: [Ruby: Arrays](https://github.com/makersacademy/course/blob/master/ruby/array.md)
+:pill: [Ruby: Arrays](https://github.com/makersacademy/course/blob/master/pills/array.md)
 
-:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/ruby/hash.md)
+:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/pills/hash.md)
 
-:pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/ruby/symbols.md)
+:pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
 
-:pill: [Ruby: Control Flow](https://github.com/makersacademy/course/blob/master/ruby/control_flow.md)
+:pill: [Ruby: Control Flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md)
 
-:pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/ruby/rspec.md)
+:pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)

@@ -133,3 +133,34 @@ Refresh the page in the browser and you should see the new text.
 ![motivational](https://github.com/makersacademy/course/raw/master/images/day_one/motivational.png)
 
 **That was all for our first version, great job!**
+
+## Version 1: Let's build the front end
+
+Now we have a very simple but functioning website. Let's add some HTML to it to make in more interesting.
+
+HTML stands for Hypertext Markup Language. This is the language that is used to create webpages. All websites you're using daily are built using HTML. At Makers Academy we have written an introductory guide to HTML that you may find useful.
+
+It's inconvenient to put our HTML right into app.rb. It will be easier to create a separate file. Just like you created app.rb in Sublime Text, create a folder called views and a file index.erb inside it. Your project now should look like this.
+
+
+## Version 2: Adding some logic into the application
+
+## Version 3: Final touches and "getting it out there"
+
+## Extra Exercises
+
+Finally, once you are really comfortable with the existing codebase, do the following exercises. Many of them will involve some googling around to learn something new, others will involve going back to this tutorial, as well as HTML & CSS overview.
+
+- Add more colours into the drop-down menu. Make sure there are lots of colours to choose from.
+- Change the background colours of the sections to something new, don't use the colours we've just used. Play with the opacity values.
+- When the thumbnails are shown, they look rather dull: all together, without borders or shadows, without any space in between. How can you make them look better?
+- When you enter the keyword and press Enter, the search isn't performed by default. What if you add a Javascript event to listen for when you hit "Enter" in the keyword input field? Then, when this event happens, you could kick off the image search. You'll probably need to google a little bit to find out how to listen for this event (stackoverflow.com is the best source of programming tips).
+- Right now we're using Helvetica as the font for the page. Find out how to use a different font. What fonts are available in every browser by default? Change the font to one of them.
+- Can you find out how to download an exotic font, add it to the project and apply only to the h1 header on the page using CSS?
+Right now the "Powered by Google" logo is right-aligned. Can you make it centred?
+- Add your name to the footer, so that everyone knew who built this site!
+- In the footer we're listing the technologies used. Can you find their websites and add the links in the footer?
+- We've got the tweet button on the page that we've got from the Twitter website. Can you find the code for the Facebook like page? (This may be a bit tricky, it may involve creating an "application" on Facebook but it's actually much easier than it sounds).
+- What other text properties, apart from position, colour, alignment and font size can you think of? Can you add them to the page and make them work with javascript?
+- Find a website that allows you to generate a logo, create one for the page and add as an image to the header.
+- Find a website that allows you to generate buttons, create a beautiful "Search" button and replace our plain and dull "Go" button.
