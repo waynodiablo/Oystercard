@@ -18,15 +18,4 @@ Your goal, as a beginner, is not just to learn how to build software. You must l
 
 At Makers Academy, we worked hard to figure out what needs to be learned in what order in order to maximise your productivity. The very first project is designed to give you a foundation in Ruby and version control. The goal is to learn how to use the language itself before getting to complex frameworks like Rails or Sinatra. This way, you'll be able to focus on the frameworks themselves when we get to them and your progress won't be hindered by your lack of experience with Ruby.
 
-1. [The Basics](https://github.com/makersacademy/course/blob/master/1_the_basics.md)
-2. Playing with Rubies
-3. Object Oriented Programming
-4. Making Games
-5. The Web
-6. Database Backed Applications
-7. Bringing the Web to life
-8. Rails
-9. More Rails
-10. Advanced Rails
-11. Final Projects
-12. Final Projects
+**Are you ready?** [Go to the Course outline!](https://github.com/makersacademy/course/blob/master/toc.md)
