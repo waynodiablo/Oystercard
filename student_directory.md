@@ -154,7 +154,7 @@ It's a good idea to commit code once a specific change was introduced to the cod
 
 Now, what does the code do? Every puts statement prints a line of text in the terminal. More precisely, it prints it to the standard output (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)).
 
-`puts` itself is a method provided by Ruby. The string after every `puts` is an argument. In Ruby we can use parentheses around arguments but it's not mandatory (:pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)). So, another way of writing the same code would be
+`puts` itself is a method provided by Ruby. The string after every `puts` is an argument. In Ruby we can use parentheses around arguments but it's not mandatory (:pill: [methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)). So, another way of writing the same code would be
 
 ````ruby
 puts("The students of my cohort at Makers Academy")
@@ -430,8 +430,75 @@ Let's check the code in. Are you using good commit messages?
 
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/d8a01783d4c57379cb95160456fc830d45a42b55).
 
+# Version 5: Adding more information about the student
 
+Right now the only information we have about our students is the name. What if we want to know what cohort they belong to? Let's update our students array to be an array of arrays. The nested arrays will have both the name and the cohort month.
 
+````ruby
+students = [
+  ["Dr. Hannibal Lecter", :november],
+  ["Darth Vader", :november],
+  ["Nurse Ratched", :november],
+  ["Michael Corleone", :november],
+  ["Alex De Large", :november],
+  ["The Alien", :november],
+  ["Terminator", :november],
+  ["Freddy Kruger", :november],
+  ["The Joker", :november]
+]
+````
+
+Since we changed our data structure, let's also update the print() method. Note that I renamed the argument since we are not passing just a name anymore. Also, I'm storing the cohort month as a symbol because I don't expect to treat it as a string (that is, combine it with another string, manipulate individual characters, etc).
+
+````ruby
+def print(students)
+  students.each do |student|
+    puts "#{student[0]} (#{student[1]} cohort)"
+  end
+end
+````
+
+This gives us a beautiful output.
+
+````
+ruby directory.rb
+The students of my cohort at Makers Academy
+-------------
+Dr. Hannibal Lecter (november cohort)
+Darth Vader (november cohort)
+Nurse Ratched (november cohort)
+Michael Corleone (november cohort)
+Alex De Large (november cohort)
+The Alien (november cohort)
+Terminator (november cohort)
+Freddy Kruger (november cohort)
+The Joker (november cohort)
+Overall, we have 9 great students
+````
+
+However, what's the problem with this code? Stop here for a second. Before you read the answer, ask yourself, what's wrong with this line:
+
+````ruby
+puts "#{student[0]} (#{student[1]} cohort)"
+````
+
+If you guess that it doesn't communicate its intent well enough, you're right. If you read this line in isolation, you can see that it's printing some information about a student but you don't know anything else. Is `student[0]` a name? A first name? A last name? An average grade? Even though you can answer these questions by reading the entire program, you should strive to write code that's easy to understand as it is. 
+
+Let's fix this problem. Let's store the student data not in arrays but in hashes (:pill:  [hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md) )
+
+````ruby
+students = [
+  {:name => "Dr. Hannibal Lecter", :cohort => :november},
+  {:name => "Darth Vader", :cohort => :november},
+  {:name => "Nurse Ratched", :cohort => :november},
+  {:name => "Michael Corleone", :cohort => :november},
+  {:name => "Alex De Large", :cohort => :november},
+  {:name => "The Alien", :cohort => :november},
+  {:name => "Terminator", :cohort => :november},
+  {:name => "Freddy Kruger", :cohort => :november},
+  {:name => "The Joker", :cohort => :november}
+]
+````
 
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
