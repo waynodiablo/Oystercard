@@ -23,12 +23,7 @@ We can't stress this enough. Copy and Paste is the DEVIL!! Even though at times 
 - Make sure you know how to run Terminal (it's already installed on every Mac). Find it in your Applications (in the Utilities folder) and launch it. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/finder.png)
 - XCode command line tools (:pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md) ).
 - Once you have installed XCode, install Heroku Toolbelt from https://toolbelt.heroku.com/ 
-- Install RVM. 
-Type this in the Terminal window.
-
-```
-curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
-```
+- Install RVM (:pill: [Installing RVM](https://github.com/makersacademy/course/blob/master/pills/installing_rvm.md) ).
 
 ## Version 0: Create a walking skeleton
 
