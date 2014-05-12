@@ -19,8 +19,8 @@ Click Agree when the License Agreement appears:
 
 Your computer will then attempt to find the software, and then will start downloading it. The following popup will appear:
 
-![step3](https://github.com/makersacademy/course/raw/master/pills/images/install-clt-mavericks-step-3.png)
+![step3](https://github.com/makersacademy/course/raw/master/pills/images/install-clt-mavericks-step-4.png)
 
 Once the software is installed, click Done. That’s it!
 
-![step4](https://github.com/makersacademy/course/raw/master/pills/images/install-clt-mavericks-step-4.png)
+![step4](https://github.com/makersacademy/course/raw/master/pills/images/install-clt-mavericks-step-5.png)
