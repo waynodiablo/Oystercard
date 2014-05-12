@@ -17,6 +17,7 @@ Evgeny
 Nice to meet you Evgeny. What day of the week is it today?
 Tuesday
 It's great that you're coding on Tuesday
+````
 
 So, what's happening here? The gets() method is the opposite of puts(). Instead of printing things on the screen, it waits for the user input and returns it to your Ruby program. So on line two we're asking the user to enter the name and save it to the `name` variable.
 
