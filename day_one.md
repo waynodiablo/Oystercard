@@ -21,7 +21,7 @@ We can't stress this enough. Copy and Paste is the DEVIL!! Even though at times 
 - [Google Chrome browser](http://www.google.co.uk/chrome/). It's very well suited to web development ( _Safari; bundled with your Mac will do fine as well though_ ).
 - [SublimeText editor](http://www.sublimetext.com). This is a very convenient text editor that we'll be using.
 - Make sure you know how to run Terminal (it's already installed on every Mac). Find it in your Applications (in the Utilities folder) and launch it. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/finder.png)
-- XCode command line tools. Go to https://developer.apple.com/xcode/, click "View downloads" under Xcode 5 section, enter your Apple ID (you use it to get content from AppStore or iTunes), create one if you don't have it, select "Command Line tools for OS X Mountain Lion XCode5", download and follow the installation instructions. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/command_line_tools.png)
+- XCode command line tools (:pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md).
 - Once you have installed XCode, install Heroku Toolbelt from https://toolbelt.heroku.com/ 
 - Install RVM. 
 Type this in the Terminal window.

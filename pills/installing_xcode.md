@@ -24,3 +24,10 @@ Your computer will then attempt to find the software, and then will start downlo
 Once the software is installed, click Done. That’s it!
 
 ![step4](https://github.com/makersacademy/course/raw/master/pills/images/install-clt-mavericks-step-5.png)
+
+## Older versions
+Go to https://developer.apple.com/xcode/. 
+
+Click **View downloads** under Xcode 5 section, enter your Apple ID ( _you use it to get content from AppStore or iTunes_), create one if you don't have it, select **Command Line tools for OS X Mountain Lion XCode5**, download and follow the installation instructions. 
+
+![finder](https://github.com/makersacademy/course/raw/master/day_one/images/command_line_tools.png)
