@@ -637,6 +637,5 @@ You also know how to save the input into a variable:
 selection = gets.chomp
 ````
 
-Finally, we need to do some action based on what the user has asked us to do. A switch statement that we discussed in Ruby 2 will be helpful.
-
+Finally, we need to do some action based on what the user has asked us to do. 
 

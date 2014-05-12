@@ -134,3 +134,94 @@ puts "let's go out" if hungry
 ````
 
 Obviously this only works with one-liners and only if the line is short enough: you don't want your one-liner to be longer than a few dozen characters at most (probably shorter).
+
+## Comparison operators
+
+In the examples above, "==" is a comparison operator. Comparison operators always compare the operands and evaluate to either true or false. Here are a few examples:
+
+````ruby
+hungry == true # true if hungry is true
+age > 30 # true if age is strictly greater than 30
+15 >= 30 # false
+2 < 10 # true
+size <= 22 # true if size is less or equal to 22
+30 != 15 # true
+````
+
+Let's go through each of these line by line. The first one you know, it's evaluating equality. If hungry is assigned a value of true, the entire comparison will evaluate to true. 
+
+Why does equality use two "=" instead of one? Because one "=" is what we use for assignment operators such as when we change the value of a variable.
+
+The next four comparisons should be familiar from the school math. They are greater than, greater than or equal to, less than, and less than or equal to, respectively.
+
+The final comparison may look strange, but it simply means "not equal to" and is the opposite of "==" The example we've provided of "30 != 15" would evaluate to true because they're not equal.
+
+## Unless
+
+Unless statements are the opposite of if/else statements - they will always run the code within them unless the condition is true. Here's an example:
+
+````ruby
+hungry = false
+		
+unless hungry
+  puts "Don't eat food"
+end
+````
+
+This will run the puts statement because unless statements will always run unless the condition is true. You can read this much like you'd read a sentence, "Unless you're hungry - don't eat food."
+
+Some Ruby developers find "unless" confusing, especially if it's used with complex conditions. If you find your code is easier to read, don't be afraid of using "if" instead:
+
+````ruby
+hungry = false
+		
+if !hungry
+  puts "Don't eat food"
+end
+````
+
+This code does exactly the same thing as the example above it. Here, the bang (exclamation mark) means the negation:
+
+````ruby
+!true # false
+!false # true
+````
+
+## Switch Statements
+
+After a certain point, if/else statements will get a bit too large for comfort. For example, if we wanted to create a bit of code that prints out the name of a fruit and its color, we might do it with if/else statements like this:
+
+````ruby
+if fruit == "apple"
+  puts "The apple is red"
+elsif fruit == "banana"
+  puts "The banana is yellow"
+elsif fruit == "orange"
+  puts "The orange is orange"
+elsif fruit == "kiwi"
+  puts "The kiwi is green"
+else
+  puts "We don't recognise that fruit"
+end
+````
+
+This can get a bit cumbersome so ruby also has switch statements. We can rewrite the code above as:
+
+````ruby
+case fruit
+when "apple"
+  puts "The apple is red"
+when "banana"
+  puts "The banana is yellow"
+when "orange"
+  puts "The orange is orange"
+when "kiwi"
+  puts "The kiwi is green"
+else
+  puts "We don't recognise that fruit"
+end
+````
+
+The "case" is the value that we want to evaluate - in our case, the fruit variable. Then, we list out the various cases and tell it what to do based on each case.
+
+Quite often, case statements are a [code smell](http://en.wikipedia.org/wiki/Code_smell) that indicates that the code can be refactored to make it simpler. However, they can be genuinely useful in some cases.
