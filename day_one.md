@@ -21,7 +21,7 @@ We can't stress this enough. Copy and Paste is the DEVIL!! Even though at times 
 - [Google Chrome browser](http://www.google.co.uk/chrome/). It's very well suited to web development ( _Safari; bundled with your Mac will do fine as well though_ ).
 - [SublimeText editor](http://www.sublimetext.com). This is a very convenient text editor that we'll be using.
 - Make sure you know how to run Terminal (it's already installed on every Mac). Find it in your Applications (in the Utilities folder) and launch it. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/finder.png)
-- XCode command line tools. Go to https://developer.apple.com/xcode/, click "View downloads" under Xcode 5 section, enter your Apple ID (you use it to get content from AppStore or iTunes), create one if you don't have it, select "Command Line tools for OS X Mountain Lion XCode5", download and follow the installation instructions.![finder](https://github.com/makersacademy/course/raw/master/day_one/images/command_line_tools.png)
+- XCode command line tools. Go to https://developer.apple.com/xcode/, click "View downloads" under Xcode 5 section, enter your Apple ID (you use it to get content from AppStore or iTunes), create one if you don't have it, select "Command Line tools for OS X Mountain Lion XCode5", download and follow the installation instructions. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/command_line_tools.png)
 - Once you have installed XCode, install Heroku Toolbelt from https://toolbelt.heroku.com/ 
 - Install RVM. 
 Type this in the Terminal window.
@@ -363,7 +363,7 @@ Let's begin by creating one more folder, `public/javascript`, for our javascript
 
 The first file, `support.js` will contain some javascript that we wrote for you for this project. It is slightly more complex than the other stuff, so we'll leave it until the end. This file does two things: actually performs a Google Image Search and saves the parameters of the form in the url, so we could tweet it later without losing out motivational image (we'll get to this functionality later).
 
-For now just take the contents of this file from [Github](https://github.com/makersacademy/course/raw/master/day_one/images/support.js) and copy-paste it into the `support.js` file in your project - don't worry about using Copy-Paste just this once :). Leave the `application.js` empty for a moment.
+For now just take the contents of this file from [Github](https://github.com/makersacademy/course/raw/master/day_one/support.js) and copy-paste it into the `support.js` file in your project - don't worry about using Copy-Paste just this once :). Leave the `application.js` empty for a moment.
 
 Now let's link our JS files to the HTML file using a very similar technique that we used to link CSS files to HTML. Add these four lines into the `<head>` section of your index.erb.
 
