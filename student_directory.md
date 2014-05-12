@@ -102,7 +102,109 @@ Now we have a local and and a remote repo with a README file that describes the 
 
 Throughout this and future tutorials we will be giving links to specific commits on Github that correspond to the relevant section of the tutorial. So, if you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/f68074835a0eb6587bbd0064df05a52f0f0c3cb9).
 
+## Version 1: Printing the list of students
 
+Let's now write some Ruby code. First, create a file called directory.rb in the project directory by using the "touch" command (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)). Don't forget the extension (".rb") and don't put any spaces in the filename.
+
+![touch](https://github.com/makersacademy/course/raw/master/student_directory/images/touch.png)
+
+Now you should see the empty file in SublimeText.
+
+![directoryrb](https://github.com/makersacademy/course/raw/master/student_directory/images/directoryrb.png)
+
+Find out the names of the students in your cohort (great excuse to say hello to everyone again and have a little chat!) and print them all. I'll just use fictional names here. 
+
+**Reminder: do not copy-paste the code! Always type everything yourself.**
+
+````ruby
+puts "The students of my cohort at Makers Academy"
+puts "-------------"
+puts "Dr. Hannibal Lecter"
+puts "Darth Vader"
+puts "Nurse Ratched"
+puts "Michael Corleone"
+puts "Alex De Large"
+puts "The Alien"
+puts "Terminator"
+puts "Freddy Kruger"
+puts "The Joker"
+````
+
+Now save the file and run it by passing the filename as an argument to ruby.
+
+![directoryexec](https://github.com/makersacademy/course/raw/master/student_directory/images/directoryexec.png)
+
+You should see all names printed on the screen. If you get an error, it may look like this.
+
+````ruby
+directory.rb:7: syntax error, unexpected tCONSTANT, expecting end-of-input
+puts "Alex De Large"
+          ^
+````
+
+Here, Ruby gives you the name of the file ("directory.rb"), the line where the error occurred (7), specifics of the problem ("syntax error, unexpected tCONSTANT, expecting end-of-input") and the line that causes the error (`puts "Alex De Large"`). Finally, it uses the caret (^) symbol to show where exactly the problem lies. In this case I caused this problem to happen by "accidentally" using an single quote instead of a double quote on the previous line. So Ruby assumed the string from the previous line continued until the first double quote on this line. After that Ruby decided that "Alex" is not part of the string (because it had just been closed), so it must be part of the program. However, we don't have a variable called Alex, so Ruby got confused and threw an error, letting us know that it has no idea what "Alex" is. All because I _accidentally_ used a single quote instead of a double quote.
+
+Let's do two things now. Firstly, we need to commit the change. Secondly, we'll discuss what exactly this code does.
+
+We need to commit the change because we've just done a small but meaningful piece of work. Every time you do finish a small task, you need to commit your code. What is a small task? There's no fast and easy rule but there are a few rules of thumb you can use.
+
+It's a good idea to commit code once a specific change was introduced to the codebase and this change is finished. For example, we've just put a list of students in the codebase. We are happy with the codebase as it is right now because it works. A bad time to commit the code would be when the code is broken (it throws an error) or half-finished (you haven't double-checked the spelling yet, for example).
+
+![git push2](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push_2.png)
+
+Now, what does the code do? Every puts statement prints a line of text in the terminal. More precisely, it prints it to the standard output (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)).
+
+`puts` itself is a method provided by Ruby. The string after every `puts` is an argument. In Ruby we can use parentheses around arguments but it's not mandatory (:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)). So, another way of writing the same code would be
+
+````ruby
+puts("The students of my cohort at Makers Academy")
+puts("-------------")
+puts("Dr. Hannibal Lecter")
+puts("Darth Vader")
+puts("Nurse Ratched")
+puts("Michael Corleone")
+puts("Alex De Large")
+puts("The Alien")
+puts("Terminator")
+puts("Freddy Kruger")
+puts("The Joker")
+````
+
+The method "puts" adds a line return after printing each argument. It's invisible but it causes the "cursor" to wrap onto the next line. That's why every name is printed on a new line. What if we didn't want the line to be wrapped automatically? Ruby provides a method "print" that's just like "puts" except it doesn't wrap the line. Add this code to the end of your Ruby file:
+
+````ruby
+print "Overall, we have "
+print 9
+puts " great students"
+````
+
+Note how the lines don't wrap if we use "print".
+
+````
+ruby directory.rb
+The students of my cohort at Makers Academy
+-------------
+Dr. Hannibal Lecter
+Darth Vader
+Nurse Ratched
+Michael Corleone
+Alex De Large
+The Alien
+Terminator
+Freddy Kruger
+The Joker
+Overall, we have 9 great students
+````
+
+If you want to put the line break character manually, you can do it like this:
+
+````
+print "line1\nline2\nline3" # has to be in double quotes!
+````
+
+The "\n" is an escape sequence ( _[There are many more of them](http://en.wikibooks.org/wiki/Ruby_Programming/Strings#Escape_sequences)_).
+
+So, now that we added the student count, let's commit it again.
 
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
