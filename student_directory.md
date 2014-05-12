@@ -437,14 +437,14 @@ Right now the only information we have about our students is the name. What if w
 ````ruby
 students = [
   ["Dr. Hannibal Lecter", :november],
-  ["Darth Vader", :november],
-  ["Nurse Ratched", :november],
-  ["Michael Corleone", :november],
-  ["Alex De Large", :november],
-  ["The Alien", :november],
-  ["Terminator", :november],
-  ["Freddy Kruger", :november],
-  ["The Joker", :november]
+  ["Darth Vader", :november],
+  ["Nurse Ratched", :november],
+  ["Michael Corleone", :november],
+  ["Alex De Large", :november],
+  ["The Alien", :november],
+  ["Terminator", :november],
+  ["Freddy Kruger", :november],
+  ["The Joker", :november]
 ]
 ````
 
@@ -452,9 +452,9 @@ Since we changed our data structure, let's also update the print() method. Note 
 
 ````ruby
 def print(students)
-  students.each do |student|
-    puts "#{student[0]} (#{student[1]} cohort)"
-  end
+  students.each do |student|
+    puts "#{student[0]} (#{student[1]} cohort)"
+  end
 end
 ````
 
@@ -488,45 +488,35 @@ Let's fix this problem. Let's store the student data not in arrays but in hashes
 
 ````ruby
 students = [
-  {:name => "Dr. Hannibal Lecter", :cohort => :november},
-  {:name => "Darth Vader", :cohort => :november},
-  {:name => "Nurse Ratched", :cohort => :november},
-  {:name => "Michael Corleone", :cohort => :november},
-  {:name => "Alex De Large", :cohort => :november},
-  {:name => "The Alien", :cohort => :november},
-  {:name => "Terminator", :cohort => :november},
-  {:name => "Freddy Kruger", :cohort => :november},
-  {:name => "The Joker", :cohort => :november}
+  {:name => "Dr. Hannibal Lecter", :cohort => :november},
+  {:name => "Darth Vader", :cohort => :november},
+  {:name => "Nurse Ratched", :cohort => :november},
+  {:name => "Michael Corleone", :cohort => :november},
+  {:name => "Alex De Large", :cohort => :november},
+  {:name => "The Alien", :cohort => :november},
+  {:name => "Terminator", :cohort => :november},
+  {:name => "Freddy Kruger", :cohort => :november},
+  {:name => "The Joker", :cohort => :november}
 ]
 ````
 
-## This lessons knowledge pills
-:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
+Hashes have keys corresponding to values, so instead of referencing the data by index as we've done with arrays (`student[0]`), we can reference them by key:
 
-:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)
+````ruby
+def print(students)
+  students.each do |student|
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  end
+end
+````
 
-:pill: [Sublime Text](https://github.com/makersacademy/course/blob/master/pills/sublime_text.md)
+Now this method is much more readable. Even if you know nothing about the rest of the program, you can tell that for each student from an array of students it prints a name, followed by the cohort.
 
-:pill: [Ruby: variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
+Now it's a good time to commit the code.
 
-:pill: [Ruby: introducing irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/e0a6822e232602036e37e09674d26d5dc15c7a6d).
 
-:pill: [Ruby: creating ruby files](https://github.com/makersacademy/course/blob/master/pills/files.md)
+## Version 6: Asking for user input
 
-:pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
+Let's ask the user for the list of students instead of hardcoding them into the script. So we'll create an empty array of students and then ask the user for the first name and put it into the array. Then we'll ask for the second name and put it into the array. Then we'll ask for the third name and so on, until the user enters an empty name, at which point we'll just show the list of students. Sounds easy, right?  (:pill: [user interaction]((https://github.com/makersacademy/course/blob/master/pills/user_interaction.md) )
 
-:pill: [Ruby: Interacting with the users](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
-
-:pill: [Ruby: True, False and nothing](https://github.com/makersacademy/course/blob/master/pills/boolean.md)
-
-:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
-
-:pill: [Ruby: Arrays](https://github.com/makersacademy/course/blob/master/pills/array.md)
-
-:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/pills/hash.md)
-
-:pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
-
-:pill: [Ruby: Control Flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md)
-
-:pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
