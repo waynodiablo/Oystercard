@@ -429,7 +429,7 @@ Let's check the code in. Are you using good commit messages?
 
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/d8a01783d4c57379cb95160456fc830d45a42b55).
 
-# Version 5: Adding more information about the student
+## Version 5: Adding more information about the student
 
 Right now the only information we have about our students is the name. What if we want to know what cohort they belong to? Let's update our students array to be an array of arrays. The nested arrays will have both the name and the cohort month.
 
