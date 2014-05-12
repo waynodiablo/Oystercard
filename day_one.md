@@ -731,9 +731,10 @@ However, #caption is invisible because there's no text inside. We want the text 
 
 Do you remember that we gave that input box the id "text"? Let's listen for the "input" event that happens every time something is typed in the input box. Put this in your application.js.
 
-$(document).on('input', '#text', function() {
+````$(document).on('input', '#text', function() {
   $("#caption").text($(this).val());
 });
+````
 
 This code is waiting until something is typed in the `	#text` element and when it happens, it takes the text from there ( `$(this).val()`) and puts it into `#caption`. This works but the caption is small and hardly noticeable.
 
