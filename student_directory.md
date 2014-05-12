@@ -386,38 +386,37 @@ If you would like to see what the code looks like at this stage of the tutorial,
 Remember we discussed methods (:pill: [methods](https://github.com/makersacademy/course/blob/master/pills/methods.md) )? Let's create a few methods to make our program easier to read.
 
 ````ruby
-		# let's put all students into an array
-		students = [
-		  "Dr. Hannibal Lecter",
-		  "Darth Vader",
-		  "Nurse Ratched",
-		  "Michael Corleone",
-		  "Alex De Large",
-		  "The Alien",
-		  "Terminator",
-		  "Freddy Kruger",
-		  "The Joker"
-		]
+#let's put all students into an array
+students = [
+  "Dr. Hannibal Lecter",
+  "Darth Vader",
+  "Nurse Ratched",
+  "Michael Corleone",
+  "Alex De Large",
+  "The Alien",
+  "Terminator",
+  "Freddy Kruger",
+  "The Joker"
+]
+
+def print_header
+  puts "The students of my cohort at Makers Academy"
+  puts "-------------"
+end
 		
-		def print_header
-		  puts "The students of my cohort at Makers Academy"
-		  puts "-------------"
-		end
-		
-		def print(names)
-		  names.each do |name|
-		    puts name
-		  end
-		end
-		
-		def print_footer(names)
-		  puts "Overall, we have #{names.length} great students"
-		end
-		
-		# nothing happens until we call the methods
-		print_header
-		print(students)
-		print_footer(students)
+def print(names)
+  names.each do |name|
+    puts name
+  end
+end
+	
+def print_footer(names)
+  puts "Overall, we have #{names.length} great students"
+end	
+#nothing happens until we call the methods
+print_header
+print(students)
+print_footer(students)
 ````
 
 Let's start by discussing why we've done it in the first place and then talk about how it works.
@@ -519,4 +518,124 @@ If you would like to see what the code looks like at this stage of the tutorial,
 ## Version 6: Asking for user input
 
 Let's ask the user for the list of students instead of hardcoding them into the script. So we'll create an empty array of students and then ask the user for the first name and put it into the array. Then we'll ask for the second name and put it into the array. Then we'll ask for the third name and so on, until the user enters an empty name, at which point we'll just show the list of students. Sounds easy, right?  (:pill: [user interaction](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md) )
+
+The method we're about to write (**no copy and pasting, as usual**) is going to be the most complex yet but don't worry, we'll break it down line by line.
+
+````ruby
+def input_students
+  puts "Please enter the names of the students"
+  puts "To finish, just hit return twice"
+  # create an empty array
+  students = []
+  # get the first name
+  name = gets.chomp
+  # while the name is not empty, repeat this code
+  while !name.empty? do    
+    # add the student hash to the array
+    students << {:name => name, :cohort => :november}    
+    puts "Now we have #{students.length} students"
+    # get another name from the user
+    name = gets.chomp
+  end
+  # return the array of students
+  students
+end
+````
+
+Now, instead of hardcoding the list of students, let's get it from the user:
+
+````ruby
+students = input_students
+print_header
+print(students)
+print_footer(students)
+````
+
+So, what's going on in the `input_students` method? Firstly, we create an empty array to store our future students (line 5). Then we ask for the name of the first student (line 7) and discard the return character. Then, we write a block of code (lines 9 to 15) that will be executed repeatedly as long as the name variable is not empty (the "empty?" method is part of the String class). If the name the user entered on line 7 is not empty (exclamation mark at the beginning means negation), the block will be executed at least once. If not, it'll be skipped altogether and Ruby will jump to line 17.
+
+Inside the block we know that the name is not empty (otherwise it wouldn't be executed at all). Then we add a new hash to the array ([the << is called a shovel operator and it's used to put things into an array](http://ruby-doc.org/core-2.0.0/Array.html#method-i-3C-3C) ) with the value of the name the user entered corresponding to the key :name. The value of the cohort is hardcoded (see the list of exercises on some ideas how to change it).
+
+Then we print a line to let the user know how many students have been entered so far and ask for another name. When the current iteration finishes, the next thing that will be evaluated is the condition on line 9. If the user entered an empty name, Ruby will jump to line 17. Otherwise, if we do have a name, it will execute the block again.
+
+Finally, the method will return the array of students that we'll assign to the variable `students` and then pass to other methods for printing on the screen as a list.
+
+````
+ruby directory.rb
+Please enter the names of the students
+To finish, just hit return twice
+Dr. Hannibal Lecter
+Now we have 1 students
+Darth Vader
+Now we have 2 students
+Nurse Ratched
+Now we have 3 students
+
+The students of my cohort at Makers Academy
+—————————
+Dr. Hannibal Lecter (november cohort)
+Darth Vader (november cohort)
+Nurse Ratched (november cohort)
+Overall, we have 3 great students
+````
+
+If everything works as it should, commit the code.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/be185955c825cc3b377fd6c8ad8df917820880ad).
+
+So, our list of students is becoming interactive. Make sure you really understand all code and then try to extend it. See the list of exercises for some ideas on how to make it better.
+
+## Version 7: Adding an interactive menu
+
+Right now our script is interactive, that is, it asks for the user input and prints it back. Later in this tutorial we'll add more sophisticated functionality: saving data to a file and loading it back, showing information about a particular student, displaying aggregates, etc. Let's start by creating an interactive menu that will ask the user what to do.
+
+Every time you want to write a piece of code, describe how it works to yourself or your pairing partner in plain English. It often helps to understand what your code needs to do, saving you lots of time. As a Makers Academy student Nadia put it: _[Sometimes I think to myself “well, I’m not entirely sure how that will work out, but I’ll worry about it when I get there…” Bad, bad move…](http://startingupupandaway.wordpress.com/2013/10/27/battling-with-code-ships-and-sudoku/)_
+
+So let's talk through how our interactive menu will work in the first place. Firstly, we'll need to show the user a list of possible options. If the user doesn't know what our program can do, how could he or she make a choice? For example, right now our program can input the list of students from the keyboard and print them on the screen.
+
+Secondly, after we have shown the list of possible options, we need to ask the user what to do next. At this point we'll read the user input and execute the action. So, if the user wants to show the list of students, we'll do it.
+
+Finally, we need to go back to step one instead of exiting the program. Otherwise our program will be able to do only one action and it won't be very useful.
+
+So, a method that does it could look like this if we described what we want to do using comments:
+
+````ruby
+def interactive_menu
+  # 1. print the menu and ask the user what to do
+  # 2. read the input and save it into a variable
+  # 3. do what the user has asked
+  # 4. repeat from step 1
+end
+````
+
+You learned how to perform all those actions in last week's project. Let's convert them into real Ruby code. Instead of starting with the first action, though, let's start with the last one: repeating the code from line 1, so that the user could make multiple selections.
+
+If we need to repeat a certain action a number of times, we need a loop. In this program, we need to keep asking for the user input indefinitely (until the program terminates), so a simple loop is a good choice (:pill: [control flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md) ) ).
+
+````ruby
+def interactive_menu
+  loop do
+    # 1. print the menu and ask the user what to do
+    # 2. read the input and save it into a variable
+    # 3. do what the user has asked
+  end
+end
+````
+
+You already know how to print something, so the first step isn't a problem.
+
+````ruby
+#1. print the menu and ask the user what to do
+puts "1. Input the students"
+puts "2. Show the students"
+puts "9. Exit" # 9 because we'll be adding more items
+````
+
+You also know how to save the input into a variable:
+
+````ruby
+#2. read the input and save it into a variable
+selection = gets.chomp
+````
+
+
 
