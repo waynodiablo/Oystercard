@@ -731,7 +731,8 @@ However, #caption is invisible because there's no text inside. We want the text 
 
 Do you remember that we gave that input box the id "text"? Let's listen for the "input" event that happens every time something is typed in the input box. Put this in your application.js.
 
-````$(document).on('input', '#text', function() {
+````
+$(document).on('input', '#text', function() {
   $("#caption").text($(this).val());
 });
 ````
