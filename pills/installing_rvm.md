@@ -20,6 +20,14 @@ And then finally you should type the following in order to tell rvm to use versi
 rvm use 2.0.0
 ```
 
+You may be asked to install a particular version of Ruby, e.g.
+
+```
+rvm install ruby-2.0.0-p451
+```
+
+and you may need to enter your administrator password a few times to complete the install.
+
 ## Resources
 
 - [RVM](http://rvm.io)
