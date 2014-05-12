@@ -154,7 +154,7 @@ It's a good idea to commit code once a specific change was introduced to the cod
 
 Now, what does the code do? Every puts statement prints a line of text in the terminal. More precisely, it prints it to the standard output (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)).
 
-`puts` itself is a method provided by Ruby. The string after every `puts` is an argument. In Ruby we can use parentheses around arguments but it's not mandatory (:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)). So, another way of writing the same code would be
+`puts` itself is a method provided by Ruby. The string after every `puts` is an argument. In Ruby we can use parentheses around arguments but it's not mandatory (:pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)). So, another way of writing the same code would be
 
 ````ruby
 puts("The students of my cohort at Makers Academy")
@@ -382,6 +382,56 @@ It's certainly a good time to commit the code.
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/a08bb43b1ba0f4304ff6602daf8cdf92cec70020).
 
 ## Version 4: Methods
+
+Remember we discussed methods (:pill: [methods](https://github.com/makersacademy/course/blob/master/pills/methods.md) )? Let's create a few methods to make our program easier to read.
+
+````ruby
+		# let's put all students into an array
+		students = [
+		  "Dr. Hannibal Lecter",
+		  "Darth Vader",
+		  "Nurse Ratched",
+		  "Michael Corleone",
+		  "Alex De Large",
+		  "The Alien",
+		  "Terminator",
+		  "Freddy Kruger",
+		  "The Joker"
+		]
+		
+		def print_header
+		  puts "The students of my cohort at Makers Academy"
+		  puts "-------------"
+		end
+		
+		def print(names)
+		  names.each do |name|
+		    puts name
+		  end
+		end
+		
+		def print_footer(names)
+		  puts "Overall, we have #{names.length} great students"
+		end
+		
+		# nothing happens until we call the methods
+		print_header
+		print(students)
+		print_footer(students)
+````
+
+Let's start by discussing why we've done it in the first place and then talk about how it works.
+
+Now that we have extracted the code into the methods, the body of our program reads almost like English. First, we print the header. Then we print the list of students. Finally, we print the footer. It's easy to see what's going on without looking at the implementation.
+
+Note that we are now passing the students variable to the methods as an argument (called "names" in both cases). This is because the methods don't have access to local variables defined outside them, so we couldn't have references `students`. In any case, in most cases it's a good idea to pass the data the a method needs as an argument to make the code easier to understand.
+
+Let's check the code in. Are you using good commit messages?
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/d8a01783d4c57379cb95160456fc830d45a42b55).
+
+
+
 
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
