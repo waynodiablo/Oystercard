@@ -550,7 +550,7 @@ run Sinatra::Application
 
 This means that to launch this website we need to run a Sinatra application located in `app.rb`.
 
-Finally, we need to prepare our files for deployment. To do this, execute the following commands **while being in the motivational-posters directory in the Terminal** (to explain what exactly is going on here is outside the scope of a weekend course but we go through all of this and much more during our 12 week course at Makers Academy). Type all symbols exactly are they appear (dot, hyphen, both apostrophes).
+Finally, we need to prepare our files for deployment. To do this, execute the following commands **while being in the motivational-posters directory in the Terminal** (to explain what exactly is going on here is outside the scope of this first day but we will go through all of this and much more during the full 12 week course at Makers Academy). Type all symbols exactly are they appear (dot, hyphen, both apostrophes).
 
 ````
 git init
@@ -902,7 +902,7 @@ Let's add the final section on the page: the footer. Add its HTML code at the ve
 <footer>
   <a href="http://www.makersacademy.com/"><img src="http://www.makersacademy.com/images/logo.png"></a>
   <div>
-    I built this page during a weekend course at 
+    I built this page during my first day at 
     <a href="http://www.makersacademy.com">Makers Academy, a highly selective 12 week coding course in London</a>.
   </div>
   <div>
