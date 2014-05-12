@@ -518,5 +518,5 @@ If you would like to see what the code looks like at this stage of the tutorial,
 
 ## Version 6: Asking for user input
 
-Let's ask the user for the list of students instead of hardcoding them into the script. So we'll create an empty array of students and then ask the user for the first name and put it into the array. Then we'll ask for the second name and put it into the array. Then we'll ask for the third name and so on, until the user enters an empty name, at which point we'll just show the list of students. Sounds easy, right?  (:pill: [user interaction]((https://github.com/makersacademy/course/blob/master/pills/user_interaction.md) )
+Let's ask the user for the list of students instead of hardcoding them into the script. So we'll create an empty array of students and then ask the user for the first name and put it into the array. Then we'll ask for the second name and put it into the array. Then we'll ask for the third name and so on, until the user enters an empty name, at which point we'll just show the list of students. Sounds easy, right?  (:pill: [user interaction](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md) )
 
