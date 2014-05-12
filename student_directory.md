@@ -206,6 +206,183 @@ The "\n" is an escape sequence ( _[There are many more of them](http://en.wikibo
 
 So, now that we added the student count, let's commit it again.
 
+![git push3](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push_3.png)
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/eff34bdc6aa33810178b6dac18bbe7e917523fef).
+
+Let's now add some comments to our Ruby code as well.
+
+````ruby
+#first we print the list of students
+puts "The students of my cohort at Makers Academy"
+puts "-------------"
+puts "Dr. Hannibal Lecter"
+puts "Darth Vader"
+puts "Nurse Ratched"
+puts "Michael Corleone"
+puts "Alex De Large"
+puts "The Alien"
+puts "Terminator"
+puts "Freddy Kruger"
+puts "The Joker"
+#finally, we print the total
+print "Overall, we have "
+#it’s important that print() doesn’t add new line characters
+print 9
+puts " great students"
+````
+
+And let's commit the code again, just for practice (don't forget to add a meaningful commit message).
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/44f6e11c888d45931e802bc5da082e97eeed2046).
+
+## Version 2: Refactoring (cleaning the code)
+
+Refactoring is the process of improving the code without changing what it does. Let's make our code slightly better by introducing a variable instead of a number on line 16. Why? It's more descriptive. It may not matter much in such a simple example but in a more complex programs numbers numbers used on their own may be a source of confusion. There's a good discussion of these numbers (called magic numbers) and a few code examples in [Wikipedia](http://en.wikipedia.org/wiki/Magic_number_(programming)).
+
+So, let's extract the number 9 into a variable. Define it at the beginning of the file
+
+````ruby
+student_count = 9
+````
+
+and print it instead of the raw number
+
+````ruby
+print student_count
+````
+
+Now your code looks like this.
+
+````ruby
+		student_count = 9
+		# first, we print the list of students
+		puts "The students of my cohort at Makers Academy"
+		puts "-------------"
+		puts "Dr. Hannibal Lecter"
+		puts "Darth Vader"
+		puts "Nurse Ratched"
+		puts "Michael Corleone"
+		puts "Alex De Large"
+		puts "The Alien"
+		puts "Terminator"
+		puts "Freddy Kruger"
+		puts "The Joker"
+		# finally, we print the total
+		print "Overall, we have "
+		# it's important that print() doesn't add new line characters
+		print student_count
+		puts " great students"
+````
+
+Now line 17 clearly communicates what it does. Let's reduce the line count by two by using interpolation (:pill: [String interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md) ). Replace the last three lines with this.
+
+````ruby
+ # finally, we print the total
+puts "Overall, we have #{student_count} great students"
+````
+
+Now our code is both shorter and more expressive than it was before. Good time to commit it.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/d47b0fa16e4e0c62c7194a3cbb49274dd509c6fd).
+
+## Version 3: Arrays
+
+Our code works but it's not perfect. There are two problems here. Firstly, it's repetitive. The same operation – printing the student name – is repeated several times. Every time you see any kind of repetition in code, try to eliminate it because it will result in a hard to maintain code at best or be a source of nasty bugs at worst. For example, if we want to add one more student to our program, do we really have to type "puts" again? What if we had a thousand students? Oh, and we'll need to manually update `student_count`. That's a big red flag.
+
+Secondly, the data (student names) is tightly coupled with what we do with this data (printing it). What if we wanted to change the way the students are printed, for example putting a number in front of the name? That'd mean updating every single line that prints a student name. What if we wanted to print the list twice: first in alphabetical order, then in reverse order? You can see how quickly it can all go wrong.
+
+Arrays (:pill: [Arrays](https://github.com/makersacademy/course/blob/master/pills/arrays.md) ) will help us avoid both of these problems. Let's start by putting the students into an array. Remember, don't copy-paste, type everything in yourself, it's important. Make sure you understand every line here: _if you don't, talk to other students or the coaches_.
+
+````ruby
+		student_count = 9
+		# let's put all students into an array
+		students = [
+		  "Dr. Hannibal Lecter",
+		  "Darth Vader",
+		  "Nurse Ratched",
+		  "Michael Corleone",
+		  "Alex De Large",
+		  "The Alien",
+		  "Terminator",
+		  "Freddy Kruger",
+		  "The Joker"
+		]
+		# and then print them
+		puts "The students of my cohort at Makers Academy"
+		puts "-------------"
+		puts students[0]
+		puts students[1]
+		puts students[2]
+		puts students[3]
+		puts students[4]
+		puts students[5]
+		puts students[6]
+		puts students[7]
+		puts students[8]
+		# finally, we print the total
+		puts "Overall, we have #{student_count} great students"
+````
+
+It still does exactly the same thing as before. However, if still suffers from the same problems that we discussed above. Why did we put the students into an array then? Because now we can actually improve our code.
+
+Let's start with a student count. Now that our students are in an array, we can use the array's length() method to count them instead of doing it manually. Get rid of the `student_count` variable and update the last line:
+
+````ruby
+		puts "Overall, we have #{students.length} great students"
+````
+
+Now if we put one more student in the array, we won't have to update the `student_count` variable. That's really good news.
+
+What about the repetition? There's a way to print every value in the array without referring to each value individually. We will discuss how it actually works early next week in Ruby 3 but for now you can learn how to do it even if you don't understand everything that's going on behind the scenes.
+
+Doing some operation on every value of an array is called iterating. One such operation is called an iteration. So if we need to print every value of an array, we need to iterate over this array and print the current value on every iteration. Makes sense? Let's see what the code would look like. Instead of `puts students[0]` ... `puts students[8]` you can do this:
+
+````ruby
+		students.each do |student|
+		  puts student
+		end
+````
+
+We'll discuss exactly how this works in Ruby 3, as promised, but for now just understand what it does. This code takes every name from the array `students` and for each name it executes the block of code between `do` and `end`. Every execution of this block of code is called an iteration. On every iteration, the current name will be assigned to the value `student` that we specified between two vertical bars.
+
+So, on the very first iteration, it will take the first value from the array ("Dr. Hannibal Lecter") and assign it to the variable `student`. Then, it will execute the block of code (`puts student`) that will print it to the screen. Since "Dr. Hannibal Lecter" is not the last person in our array of charming students, Ruby will perform the second iteration, assigning the value of "Darth Vader" to the variable `student` and printing it again.
+
+Now our program is much shorter.
+
+````ruby
+		# let's put all students into an array
+		students = [
+		  "Dr. Hannibal Lecter",
+		  "Darth Vader",
+		  "Nurse Ratched",
+		  "Michael Corleone",
+		  "Alex De Large",
+		  "The Alien",
+		  "Terminator",
+		  "Freddy Kruger",
+		  "The Joker"
+		]
+		# and then print them
+		puts "The students of my cohort at Makers Academy"
+		puts "-------------"
+		students.each do |student|
+		  puts student
+		end
+		# finally, we print the total
+		puts "Overall, we have #{students.length} great students"
+````
+
+By doing this we have solved two problems. Firstly, we separated the data (the array) from the operation on this array (line 17). This means that if we want to print this array again, it's very easy to do. It also means that if we want to add one more student, we won't have to do anything other than adding one more name to the array. On top of that, we could get rid of the `student_count` variable.
+
+Secondly, we got rid of the repetition. This means that if we want to change the way this array is printed, there's only one line to update, line 17.
+
+It's certainly a good time to commit the code.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/a08bb43b1ba0f4304ff6602daf8cdf92cec70020).
+
+## Version 4: Methods
+
 ## This lessons knowledge pills
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 
