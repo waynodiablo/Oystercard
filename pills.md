@@ -28,7 +28,7 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Ruby: Arrays](https://github.com/makersacademy/course/blob/master/pills/array.md)
 
-:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/pills/hash.md)
+:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md)
 
 :pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
 

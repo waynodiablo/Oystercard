@@ -1,10 +1,10 @@
 # Course Outline
 
 1. [Day one](https://github.com/makersacademy/course/blob/master/day_one.md)
-2. [The Basics](https://github.com/makersacademy/course/blob/master/student_directory.md)
-3. Object Oriented Programming
-4. Making Games
-5. The Web
+2. [The Basics: Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md)
+3. Boris Bikes
+4. Sudoku
+5. Bookmark Manager
 6. Database Backed Applications
 7. Bringing the Web to life
 8. Rails
