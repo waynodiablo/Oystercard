@@ -653,7 +653,7 @@ Before moving on to the next lesson, complete each of the following tasks.
 - *Push local changes to Github*
 - *Verify that you can now see your repository on Github (and note how Github displays your README file by default as the project description)*
 - *Now create a file called "mv" in your local repo. Commit it locally and push the changes to Github.*
-- Go to Github and find that file there. Edit it by putting the description of the "mv" shell command inside, in your own words. Don't copy the man page, just write what you know about the "mv" command. Commit the changes on Github.*
+- *Go to Github and find that file there. Edit it by putting the description of the "mv" shell command inside, in your own words. Don't copy the man page, just write what you know about the "mv" command. Commit the changes on Github.*
 - *Pull the changes from Github. Cat the file locally to verify that you pulled the change, so the file is not empty anymore.*
 - *Do the same for commands "cp", "grep", "wc" and "ps". Use meaningful commit messages that describe well what you are doing.*
 - *You should have 11 commits by now: the initial one plus two commits (one local and one done on github) for every command. Verify this by viewing the commit log locally and on Github. Both logs should be in sync. **Make sure they are in sync before proceeding to the next step!***
