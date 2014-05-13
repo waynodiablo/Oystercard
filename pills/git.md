@@ -73,7 +73,7 @@ git add gitText
 git commit -m "First commit"
 ```
 
-![First commit](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381242923515_Screen%20Shot%202013-10-08%20at%2015.35.05.png)
+![Step one](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381242923515_Screen%20Shot%202013-10-08%20at%2015.35.05.png)
 
 
 Let's break down these commands line by line.
@@ -161,6 +161,97 @@ So, we're creating a commit called "First commit" indicating that we just initia
 
 
 ### Checking the status
+
+
+If you want to see what's going on in your repository, use this:
+
+```
+git status
+```
+
+This will give you an overview of what files have changed since the last commit. This is what mine shows:
+
+![Step two](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381245384685_Screen%20Shot%202013-10-08%20at%2016.16.13.png)
+
+So, git tells us that there's nothing to commit (working directory clean). The first part (nothing to commit) means that we haven't added anything to the staging area. The second part (working directory clean) means that there is nothing that could be added to the working directory. We haven't made any changes since the last commit, so we can't make another one. A commit is a record of some changes and we haven't made any.
+
+(There's also a mention of something called a "master branch". This refers to one name of the current "reality". Remember we can switch between different realities, or branches? The main one is called "master". We'll get to branches in due time, just ignore it for now).
+
+If we were to make a change such as changing the text of gitText, git would tell us that there's been a change. So, let's make a change a see what the status is again.
+
+![Step three](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381245987544_Screen%20Shot%202013-10-08%20at%2016.25.50.png)
+
+The "git status" command now shows us that we've made a change that isn't staged (that is, added to the staging area).
+
+So, what does this message mean? Let's break it down.
+
+First, it tells us that one file was modified:
+
+```
+modified:   gitText
+```
+
+That's because we changed some text in it using echo right before running `git status`. Git also tells us that this file isn't staged for commit yet, so if we try to commit right now, nothing will happen.
+
+Git also helps us by telling how to add this file to staging:
+
+```
+(use "git add <file>..." to update what will be committed)
+```
+
+If you don't want these changes and just want to go back to the version of this file at the time of the last commit, we can do it as well. Git helps us by showing how:
+
+```
+(use "git checkout -- <file>..." to discard changes in working directory)
+```
+
+Finally, git tells us that there's nothing in the staging area at all:
+
+```
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Since we've made a change, we should now stage it. After adding it to staging, check git status again:
+
+```
+git add gitText
+git status
+```
+
+It will now show us that we've staged this new file, but it hasn't been *commited* yet.
+
+![Step four](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381246723428_Screen%20Shot%202013-10-08%20at%2016.38.35.png)
+
+If we move on to commit it permanently, we run:
+
+```
+git commit -m "Updated gitText"
+git status
+```
+
+The "git commit" command again commits everything in staging with a short comment about what we've changed. As you can see, everything then is saved and up-to-date.
+
+![Step five](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381247257500_Screen%20Shot%202013-10-08%20at%2016.47.19.png)
+
+It's a good idea to check the status often, especially if you suspect something is going wrong. Run `git status` every now and then, if only to confirm that the repo is in the state you expect it to be.
+
+
+### Viewing the log (history) of the changes
+
+Finally, if we want to view all of the commits we've made, we run:
+
+```
+git log
+```
+
+This will list out information about all of the previous commits.
+
+![Step six](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381247504285_Screen%20Shot%202013-10-08%20at%2016.49.02.png)
+
+This gives you the history of all changes, including who made them and when they were made. The long incomprehensible number (56d9881253...) is the unique number of every commit. We need it because the commit messages are not guaranteed to be unique.
+
+### Removing files
+
 
 
 
