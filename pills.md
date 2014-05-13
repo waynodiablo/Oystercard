@@ -20,7 +20,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
 
-:pill: [Ruby: Interacting with the users](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
+:pill: [Ruby: Interacting with the
+users](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md)
 
 :pill: [Ruby: True, False and nothing](https://github.com/makersacademy/course/blob/master/pills/boolean.md)
 
