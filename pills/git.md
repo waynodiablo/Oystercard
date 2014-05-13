@@ -103,6 +103,76 @@ rm -rf .git
 So, the first thing we do when we start a new project is to create a directory, change into it and place it under version control by running `git init`.
 
 
+### Adding files to the staging area
+
+
+The second line tells the computer to add the gitText file to the staging area (or staging, for short). What is staging area? Isn't git supposed to track all changes automatically?
+
+```
+git add gitText
+```
+
+Git is mean to act like a time machine, allowing you to go back in time. However, allowing you to travel to an arbitrary moment in time wouldn't make sense. Think about time travel. You may want to go back to yesterday, or yesterday morning, or that specific moment right before you try to rob the bank. However, you wouldn't want to go to any specific second of any of the past years, unless that second was somehow important for some reason.
+
+Tracking every single change would be unnecessary and slow (imagine how much disk space would it take to record every single keystroke of every developer on a large project!). So instead of tracking every change, we must tell git when to create a "checkpoint" (or "commit", in git terminology) that we'll be able to go back in time to.
+
+However, before creating a commit, we need to specify what is being "committed". What if we have a temporary file that we don't want to be saved anywhere long-term? Imagine you're using git to track changes to a novel you're writing. You've finished chapter one and you want to commit it to git, so that you could always go back in time to the moment the first chapter is finished, if you need. However, you also have some random notes for chapter two that you don't want to save just yet (you'll commit them when chapter two starts taking some shape).
+
+So, you'd tell git to only add chapter one to the staging area. The staging area is a special place that git uses to keep track of all files that will be committed on the next step. So even if you have several files that have changed since the last commit (or since the repo was created), you can choose which of them will get committed. So, we're telling git that we're happy with the file as it is now and we'd like to create a "checkpoint" (or commit) that we could go to in case we ever want to.
+
+Even though there's no output from git after you tell it to add a file, unless you see an error message you can assume it went well.
+
+### Committing files
+
+The final line tells us to commit everything in the *staging area*.
+
+```
+git commit -m 'First commit'
+```
+
+At this point git actually creates a commit, remembering all files that you added to the staging area right now and naming it "First commit" (it's called a commit message). We give it a name so that we could go back to it if we want to.
+
+Remember our science-fiction bank-robbing example? If you could use git for real, you'd want to make a commit right before starting preparing for the heist (in case you make a mistake preparing for it and want to travel back in time to this moment later).
+
+```
+git commit -m "About to start preparing for heist"
+```
+
+Then you'd commit right before the bank robbery, in case it goes wrong and you want to replay it from that moment in time again and avoid preparing for it again.
+
+```
+git commit -m "Ready for the heist"
+```
+
+Then, if anything goes wrong at the preparation stage (you forget to buy a balaclava), you can go back in time to the moment when you were "about to start preparing for the heist" and fix the problem before trying the robbery again. If anything goes wrong during the robbery (you accidentally introduce yourself by your real name to the cashier), you can go back in time to the moment when you were "ready for the heist" and avoid the same mistake.
+
+When you commit the file, git tells you what it does:
+
+```
+$ git commit -m "First commit"
+[master (root-commit) a1833e4] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gitText
+```
+
+This is what a successful commit message looks like. Git is telling you that it created a commit called "First commit" with a number (or hash, or SHA) a1833e4. One file was changed (gitText), there was one insertion (we put a line of text in it).
+
+So, we're creating a commit called "First commit" indicating that we just initialised a repo in this directory. If we ever need to go to the very beginning, we'll be able to checkout "first commit".
+
+
+### Checking the status
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
