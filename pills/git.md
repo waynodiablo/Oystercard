@@ -380,7 +380,81 @@ The key feature of git is its ability to copy code between repositories. If you 
 ### Using Github
 
 
+First, go through [this tutorial to generate SSH keys for Github](https://help.github.com/articles/generating-ssh-keys).
 
+Second, create a new repository by clicking the large green "New repository" button on Github's homepage (you must be logged in). 
+
+![Step 16](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335055212_Screen%20Shot%202013-10-09%20at%2017.10.44.png)
+
+Make it public, so that others could see it. Unless you have a good reason to keep the code private, make it public. Don't initialise it with a README file.
+
+At this point Github runs `git init` somewhere on their computer. After you do this, you'll see an empty repository. 
+
+![Step 17](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335315204_Screen%20Shot%202013-10-09%20at%2017.14.59.png)
+
+This means that you have a remote repository but it's empty. Github shows us the steps required for a new repository and for an existing one. Since we already have a local repository, we have to do only two steps.
+
+The first one is to connect our two repositories together. Right now you have two git repositories: one locally and one on Github but they don't "know" of each other. So, we need to connect them first.
+
+Connecting two repositories is done by creating something called a "remote". A remote is simply a record in a local repository that it's linked to another one. Let's take a look at the current list of the remotes for your local git repo.
+
+![Step 18](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335581070_Screen%20Shot%202013-10-09%20at%2017.19.33.png)
+
+Typing `git remote -v` gives no output, meaning that you have no remotes set up. Let's set one up. Type this:
+
+```
+git remote add origin git@github.com:makersacademy/playing-with-git.git
+```
+
+You'll need to replace the address of the repository (*git@github.com:makersacademy*/playing-with-git.git) with the one Github gives you. This command adds a remote called "origin" with the given address to your local repo.
+
+Why is it called origin? It's just a convention. You can call it whatever you want but if you're using one repository to store the code remotely (and coordinate the work of several *devs*, if part of a team), it's a convention among developers to call it "origin".
+
+Check the list of your remotes now:
+
+![Step 19](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335853408_Screen%20Shot%202013-10-09%20at%2017.23.54.png)
+
+Cool. Now your local repository knows that it's "linked" to another repository somewhere on github.com. Note that no real connection is established yet. You could have added a remote while being offline. The only thing this command does is modifying a .git/config file.
+
+![Step 20](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336089702_Screen%20Shot%202013-10-09%20at%2017.28.02.png)
+
+Next we'll need to transfer the code from the local repository to the one on Github (called "origin"). This operation is called a "push". Do this:
+
+```
+git push -u origin master
+```
+
+You should see this output.
+
+![Step 21](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336390806_Screen%20Shot%202013-10-09%20at%2017.32.52.png)
+
+This means that the push went well. Let's break this command down:
+
+```
+git push -u origin master
+```
+
+It tells git to push your code from your local repository (it's implied) to a repository called origin (that's the name of the remote that we just added). The last bit, "master", means that we're pushing the branch called "master" (the only branch we have right now). We haven't discussed branches yet, so don't worry about it. The "-u" switch means that these parameters should be saved as default, so next time you won't have to type "origin master". You'll be able to simply do
+
+```
+git push
+```
+
+Try it now. Git will tell you that everything is up to date. This means that there are no local changes that haven't been pushed yet to Github.
+
+Ok, let's now take a look at Github. Just refresh the page. You'll see the same content you have locally.
+
+![Step 22](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336762893_Screen%20Shot%202013-10-09%20at%2017.39.13.png)
+
+If you click on "3 commits" link, you'll see the same history you see when you type `git log` locally. Click around: you'll see the changes that were done on every step.
+
+![Step 23](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336812363_Screen%20Shot%202013-10-09%20at%2017.40.03.png)
+
+Compare it to the local version.
+
+![Step 24](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336834219_Screen%20Shot%202013-10-09%20at%2017.40.27.png)
+
+So now you have two repositories, one locally and one on Github, that have the same commits. Now you can afford to lose your laptop: you'll be able to get your code from Github if something happens.
 
 
 
