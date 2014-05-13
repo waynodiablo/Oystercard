@@ -380,11 +380,288 @@ The key feature of git is its ability to copy code between repositories. If you 
 ### Using Github
 
 
+First, go through [this tutorial to generate SSH keys for Github](https://help.github.com/articles/generating-ssh-keys).
+
+Second, create a new repository by clicking the large green "New repository" button on Github's homepage (you must be logged in). 
+
+![Step 16](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335055212_Screen%20Shot%202013-10-09%20at%2017.10.44.png)
+
+Make it public, so that others could see it. Unless you have a good reason to keep the code private, make it public. Don't initialise it with a README file.
+
+At this point Github runs `git init` somewhere on their computer. After you do this, you'll see an empty repository. 
+
+![Step 17](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335315204_Screen%20Shot%202013-10-09%20at%2017.14.59.png)
+
+This means that you have a remote repository but it's empty. Github shows us the steps required for a new repository and for an existing one. Since we already have a local repository, we have to do only two steps.
+
+The first one is to connect our two repositories together. Right now you have two git repositories: one locally and one on Github but they don't "know" of each other. So, we need to connect them first.
+
+Connecting two repositories is done by creating something called a "remote". A remote is simply a record in a local repository that it's linked to another one. Let's take a look at the current list of the remotes for your local git repo.
+
+![Step 18](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335581070_Screen%20Shot%202013-10-09%20at%2017.19.33.png)
+
+Typing `git remote -v` gives no output, meaning that you have no remotes set up. Let's set one up. Type this:
+
+```
+git remote add origin git@github.com:makersacademy/playing-with-git.git
+```
+
+You'll need to replace the address of the repository (*git@github.com:makersacademy*/playing-with-git.git) with the one Github gives you. This command adds a remote called "origin" with the given address to your local repo.
+
+Why is it called origin? It's just a convention. You can call it whatever you want but if you're using one repository to store the code remotely (and coordinate the work of several *devs*, if part of a team), it's a convention among developers to call it "origin".
+
+Check the list of your remotes now:
+
+![Step 19](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381335853408_Screen%20Shot%202013-10-09%20at%2017.23.54.png)
+
+Cool. Now your local repository knows that it's "linked" to another repository somewhere on github.com. Note that no real connection is established yet. You could have added a remote while being offline. The only thing this command does is modifying a .git/config file.
+
+![Step 20](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336089702_Screen%20Shot%202013-10-09%20at%2017.28.02.png)
+
+Next we'll need to transfer the code from the local repository to the one on Github (called "origin"). This operation is called a "push". Do this:
+
+```
+git push -u origin master
+```
+
+You should see this output.
+
+![Step 21](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336390806_Screen%20Shot%202013-10-09%20at%2017.32.52.png)
+
+This means that the push went well. Let's break this command down:
+
+```
+git push -u origin master
+```
+
+It tells git to push your code from your local repository (it's implied) to a repository called origin (that's the name of the remote that we just added). The last bit, "master", means that we're pushing the branch called "master" (the only branch we have right now). We haven't discussed branches yet, so don't worry about it. The "-u" switch means that these parameters should be saved as default, so next time you won't have to type "origin master". You'll be able to simply do
+
+```
+git push
+```
+
+Try it now. Git will tell you that everything is up to date. This means that there are no local changes that haven't been pushed yet to Github.
+
+Ok, let's now take a look at Github. Just refresh the page. You'll see the same content you have locally.
+
+![Step 22](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336762893_Screen%20Shot%202013-10-09%20at%2017.39.13.png)
+
+If you click on "3 commits" link, you'll see the same history you see when you type `git log` locally. Click around: you'll see the changes that were done on every step.
+
+![Step 23](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336812363_Screen%20Shot%202013-10-09%20at%2017.40.03.png)
+
+Compare it to the local version.
+
+![Step 24](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381336834219_Screen%20Shot%202013-10-09%20at%2017.40.27.png)
+
+So now you have two repositories, one locally and one on Github, that have the same commits. Now you can afford to lose your laptop: you'll be able to get your code from Github if something happens.
 
 
+### Git workflow
 
 
+So, let's sum up the steps we've done so far:
 
+1. We created a folder for a new project
+2. We initialised a repository inside it
+3. We created some files
+4. We added them to the staging area
+5. We committed them
+6. We created a repo on Github
+7. We created a remote called "origin" pointing to Github
+8. We pushed the code to the origin
+
+
+Whenever you are starting work on a new project, follow these steps. Create a new repository (actually, it doesn't matter where to create it first: you can try creating it first on Github and then locally). Create a remote pointing to Github. Commit a few changes, push them to Github from time to time.
+
+You need to be in the directory where the repository is in order to push your data to Github. When you do `git push` or a similar command git applies it to the directory you are in, so if you're in a wrong directory you won't get the results you expect.
+
+
+### Pulling the code from Github
+
+
+By now you know how to create a repo locally and push your local code to Github. You also need to know how to get your code back from Github. Let's say you and one other developer work on a website together. You both have local repos and a Github repository that you both have added as a remote called "origin". Your colleague made some changes to the website and pushed them to Github. How do you get them? You need to "pull" them:
+
+```
+git pull origin master
+```
+
+This command tells git to get all the latest commits from origin and copy them into your local repository. Try pulling the changes now. Nothing will happen because there are no remote changes.
+
+![Step 25](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340415375_Screen%20Shot%202013-10-09%20at%2018.40.08.png)
+
+Let's make a remote change. We'll use Github UI for this but normally this would happen because someone else pushed new code.
+
+Go to your git repo and click on moreGitText file:
+
+![Step 27](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340516535_Screen%20Shot%202013-10-09%20at%2018.41.42.png)
+
+There is an edit button there. Add some text
+
+![Step 28](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340579666_Screen%20Shot%202013-10-09%20at%2018.42.50.png)
+
+and then scroll down and commit it. Behind the scenes Github will do `git add` and `git commit` for you.
+
+![Step 29](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340626565_Screen%20Shot%202013-10-09%20at%2018.43.40.png)
+
+This will create a new commit. Go back to the repository main page and click "4 commits".
+
+![Step 30](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340685224_Screen%20Shot%202013-10-09%20at%2018.44.39.png)
+
+You will see the commit you've just done there. However, this change isn't reflected locally yet. Do `git log` in your local repo.
+
+![Step 31](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340765344_Screen%20Shot%202013-10-09%20at%2018.45.58.png)
+
+This is because we haven't pulled the changes yet. Let's get the latest changes from Github. You don't have to type the full `git pull origin master` command if you've done `git push -u origin master` before because the "-u" flag would save "origin master" parameters as default ones, so we can just do:
+
+```
+git pull
+```
+
+![Step 32](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340883981_Screen%20Shot%202013-10-09%20at%2018.47.50.png)
+
+This is what a successful pull looks like. You can verify that you've got the changes by looking at the log and looking at the file.
+
+![Step 33](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381340982104_Screen%20Shot%202013-10-09%20at%2018.49.33.png)
+
+
+### When and how to commit
+
+
+A good rule of thumb is "commit early, commit often". Whenever you make a meaningful change, make a commit. You don't have to push it to Github straight away: you can make several commits and then push them in one go.
+
+
+Make a commit when you've done a meaningful piece of work. Ideally, your commit log should document the development of the project. For example:
+
+- Initial commit (added a README file)
+- Added an empty web page
+- Put a welcome message on the page
+- Added a header with a logo
+- Added a footer with a few links
+- Added /contact-us page
+
+and so on and so forth (in reality it'll be more detailed and technical). Read [the commit messages of the jQuery project](https://github.com/jquery/jquery/commits/master) to get an idea of what they should look like in real life.
+
+
+### File organisation
+
+
+You already know that you should have a separate directory initialised as a git repo for every project. It's convenient to have a separate directory for all projects you'll have. For example, you can create a Projects directory in your home directory:
+
+```
+mkdir ~/Projects
+```
+
+Then when you need to start a new project, create a new folder inside it
+
+```
+cd ~/Projects
+mkdir ruby-practice
+cd ruby-practice
+```
+
+Then initialise it and add a README file
+
+```
+git init
+echo "Introductory Ruby exercises" > README
+git add README
+git commit -m "Initial commit"
+```
+
+If you then need to work with another project you created before, move to that directory.
+
+```
+cd ~/Projects/command-line-practice
+```
+
+and then do the same there: some changes, commits and pushes to github.
+
+
+### Cloning repositories from Github
+
+
+So far we've learned how to create our own repository and put it on Github. Now let's get someone else's repository from Github. This process is called "cloning" because the command that does this is `git clone`.
+
+Let's clone [this repository](https://github.com/JoshCheek/ruby-kickstart). It contains lots of Ruby lessons that you may find useful.
+
+First, navigate to your projects directory that we created earlier. Let's say it is ~/Projects.
+
+```
+cd ~/Projects
+```
+
+Then open [the Github repository](https://github.com/JoshCheek/ruby-kickstart) in your browser. On the right there will be a box with a "clone url".
+
+![Step 34](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381397446815_JoshCheek%20ruby%20kickstart.png)
+
+Copy it by clicking the button next to the url. Now use it in the command line:
+
+![Step 35](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381397626330_Screen%20Shot%202013-10-10%20at%2010.33.35.png)
+
+Now you have a "ruby-kickstart" folder in your project directory. You can go in there and take a look at a few Ruby exercises.
+
+![Step 36](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381397808252_Screen%20Shot%202013-10-10%20at%2010.36.27.png)
+
+So, what has just happened? `git clone` is just a shortcut for several commands you already know. When you typed:
+
+```
+git clone https://github.com/JoshCheek/ruby-kickstart.git
+```
+
+git did the equivalent of the following:
+
+```
+mkdir ruby-kickstart
+cd ruby-kickstart 
+git init
+git remote add origin https://github.com/JoshCheek/ruby-kickstart.git
+git pull
+cd ..
+```
+
+Nothing new here. We just created a new local repo, added a remote and pulled the changes. No magic.
+
+A common mistake is to forget that `git clone` created a folder for you. You need to run `git clone` in your projects folder, not the folder you want the repo files to be in.
+
+
+### Additional Resources
+
+
+There are many fantastic tutorials on the web covering git and Github in depth. Go through them to better understand how git works.
+
+There is no point in repeating what's already out there. The point of this tutorial is to show you what git it and the basics of how to use it. Once you get the basics, you'll be able to dive in the middle of git book or git tutorial and make sense of it.
+
+- [Git Immersion](http://gitimmersion.com/) – probably the best resource out there. Covers git very well.
+- [Try Git](https://www.codeschool.com/courses/try-git) – interactive git game
+- [Pro Git book](http://git-scm.com/book) – a reference book on git.
+- [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys) – you'll need to do this before connecting to Github from the command line
+
+
+### Challenges 
+
+Before moving on to the next lesson, complete each of the following tasks.
+
+- *Create a directory where you'll be keeping all your projects (~/Projects, ~/dev, ~/coding or something like this)*
+- *Create a directory "command-line" in your projects folder
+- *Initialise a git repository inside it*
+- *Create a README file with the following content: "This is a list of some of the most useful shell commands"*
+- *Add it to the repo and commit it*
+- *Create a repo with the same name on Github*
+- *Create a remote in your local repo called "origin" pointing to your Github repo*
+- *Verify that the remote actually exists and points to the right location*
+- *Push local changes to Github*
+- *Verify that you can now see your repository on Github (and note how Github displays your README file by default as the project description)*
+- *Now create a file called "mv" in your local repo. Commit it locally and push the changes to Github.*
+- *Go to Github and find that file there. Edit it by putting the description of the "mv" shell command inside, in your own words. Don't copy the man page, just write what you know about the "mv" command. Commit the changes on Github.*
+- *Pull the changes from Github. Cat the file locally to verify that you pulled the change, so the file is not empty anymore.*
+- *Do the same for commands "cp", "grep", "wc" and "ps". Use meaningful commit messages that describe well what you are doing.*
+- *You should have 11 commits by now: the initial one plus two commits (one local and one done on github) for every command. Verify this by viewing the commit log locally and on Github. Both logs should be in sync. **Make sure they are in sync before proceeding to the next step!***
+- *Delete the local repository by removing the folder*
+- *Go to your repo on Github, copy the clone url and clone the repository locally, recreating it*
+- *Look at the list of commits. Check that there are no missing commits. Your repo should be in exactly in the same as it was before you deleted it.*
+- *Now delete one of the files in the local repository and commit the change.*
+- *Push to Github and verify that you don't see the deleted file there.*
 
 
 
