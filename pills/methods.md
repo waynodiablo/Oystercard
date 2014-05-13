@@ -41,3 +41,17 @@ hello("jenny",55)
 ````
 
 You see how "rob" is passed in as the "name" variable and 30 is passed in as the "age" variable in the first example?
+
+## Method chaining
+
+In Ruby everything is an object and every object has methods. This enables us to "chain" several method calls together. You'll see this pattern often:
+
+````ruby
+"hello, world".slice(0, 5).capitalize.sub("o", "0") #=> Hell0
+````
+
+This line takes the string "hello, world", then takes five characters starting with the first one (index 0). This operation will return "hello". Then we capitalise this string, at which point we get "Hello". Finally, we substitute the letter "o" with number "0" (sub stands for substitution). That's how we get "Hell0" as the result.
+
+This technique of calling the methods directly on the return value of the previous method call is called method chaining. It can allow you to do fairly powerful data transformations in just one line.
+
+All methods used above are part of the class String, so you can read about them in the documentation (do you remember how to find Ruby classes documentation by googling?).
