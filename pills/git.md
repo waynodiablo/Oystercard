@@ -252,12 +252,132 @@ This gives you the history of all changes, including who made them and when they
 
 ### Removing files
 
+For a final example, let's delete the gitText file completely and add another blank file called moreGitText. Then run git status.
+
+```
+rm gitText
+touch moreGitText
+git status
+```
+
+As you can see, it shows that moreGitText is not being tracked yet because we haven't staged it and gitText has been deleted. 
+
+![Step seven](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248192309_Screen%20Shot%202013-10-08%20at%2017.03.00.png)
+
+If we now add moreGitText and run git status:
+
+```
+git add moreGitText
+git status
+```
+
+You'll see that moreGitText is staged and ready to be committed, but the deletion of gitText isn't. 
+
+![Step eight](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248217999_Screen%20Shot%202013-10-08%20at%2017.03.26.png)
+
+*This is because even when you delete files, you still need to tell git that you want those changes to be staged*. Think about it for a second. Git is a system that tracks changes. Deleting a file is a change, just like adding a file or modifying it, so it needs to be tracked. If something needs to be tracked, it needs to be added to the staging area. If we created a new file, we add it like this:
+
+```
+git add newFile
+```
+
+If we remove a file, we can delete it and add this change to staging in one go:
+
+```
+git rm newFile
+```
+
+So, when we were removing the file, we could use:
+
+```
+git rm gitText
+```
+
+Let's do it now to tell git that this file is gone and we want to stage the change.
+
+![Step nine](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248692864_Screen%20Shot%202013-10-08%20at%2017.11.16.png)
+
+Now all we have to do is commit everything from staging and we're back to a clean working directory.
+
+```
+git commit -m "deleted gitText"
+git status
+```
+
+![Step ten](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248728928_Screen%20Shot%202013-10-08%20at%2017.11.59.png)
+
+Git is an incredibly powerful tool and it can be a bit daunting when you're first introduced to it. We'll cover some more commands and use-case scenarios in future lessons, but know for now that it's here to help your workflow.
 
 
+### Going back in history
+
+Let's say you want to take a look what gitFile (that doesn't even exist anymore) looked like when we first created it. Let's take a look at the commit log first.
+
+![Step 11](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248816249_Screen%20Shot%202013-10-08%20at%2017.13.30.png)
+
+So we want to go back to the "first commit". Let's use the commit hash (or SHA) to go to it.
+
+```
+git checkout a1833e4ef4a1b
+```
+
+![Step 12](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381249076792_Screen%20Shot%202013-10-08%20at%2017.15.36.png)
+
+Note that we're using just the first few characters of the commit hash. You don't have to copy the entire commit hash, just the first few characters will do as long as there is no ambiguity (you have to use at least four, though). 
+
+Now git takes us to a "parallel universe" to the time when we just created our "first commit". If you `ls` the directory now, you'll see that the moreGitText doesn't exist yet and gitText still exists (we haven't deleted it yet). Furthermore, gitText contains the text that we put in it right before "first commit".
+
+![Step 13](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381249323435_Screen%20Shot%202013-10-08%20at%2017.21.37.png)
+
+There are ways to take changes from this commit and bring them into the latest version and do many other exciting things but we'll cover them later. Let's just take a look at what our files were at the point of the first commit and go back to the "main" reality (branch) called "master".
+
+```
+git checkout master
+```
+
+![Step 14](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381249491294_Screen%20Shot%202013-10-08%20at%2017.24.42.png)
+
+By now you should know how to initialise a new repo, stage new files, commit changes, including removed files, and how to take a look at the past version of the code by checking out a specific commit. We'll explore more advanced git features in week 2.
 
 
+### Github 
 
 
+Making all of these changes on your local computer are great, but we'll need some additional functionality provided by [Github](https://github.com/) to collaborate with other developers and browse code online. 
+
+Github does three things. Firstly, it displays git repos in a visual way, so you can look at them online. Secondly, it serves as a common place for open source projects, so if you're using some open source library, the chances are you can find it on Github. Finally, Github provides a set of tools (forking, issues, wiki, etc) to help developers collaborate on projects. If you'd like to see an example Github project, check out [Bootstrap](https://github.com/twbs/bootstrap), [jQuery](https://github.com/jquery/jquery) or [Cocktails for Programmers](https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md).
+
+
+### You Are Your Github Profile
+
+
+As a developer, you are your Github profile. When hiring developers, most technology companies will make Github their first stop. If you haven't already signed up, please do so immediately and treat it the same way you would a CV. (i.e. Add a picture, use your real name, etc.) In addition, start using git and Github for all of the code you write from here forward, including simple exercises. Every. Project. Every. Time.
+
+The reason for this is that Github shows what you've been doing as a developer. If you're claiming you're a developer and you have little to show on Github, other developers won't take you seriously unless you have an impressive history of projects you worked on. If you're a junior developer, having a decent Github profile helps a lot. For example, this is a real email we received from one of our hiring partners some time ago:
+
+Evgheny S.:
+> So, two of your graduates applied for a job with us and we had a good look through their github. To say we're impressed is an understatement.
+
+The first thing that this guy did was to look at everything our graduates created at Github during their time at Makers Academy. Because these students kept their Github profiles in a really good state, they managed to impress him even before coming for an interview.
+
+To sum it up: you are your Github profile. Just putting Makers Academy on your CV achieves nothing. You have to show what you can do in code. Don't worry that you'll be checking in some basic code at first because all developers start with "hello, world". It's much better than having an empty Github.
+
+
+### git is distributed
+
+
+Github is really just another computer somewhere in the USA that you can create a repository on. When you go to Github and press the green button to create a new repository, Github does `git init` on its local computer.
+
+![Step 15](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381334254614_Screen%20Shot%202013-10-09%20at%2016.57.18.png)
+
+So Github's web interface is nothing more but a visual interface to git installed on Github's server.
+
+Git is a [distributed version control system](http://en.wikipedia.org/wiki/Distributed_revision_control). What this means is that there is no such thing as a "central" reposity in git. In other words, all repositories are created equal. It also means that every developer must have a repository on their computer to work on a shared project. If you have a project repository on your laptop and another developer also has a repository for this project on her laptop, these repositories are equal in every respect. Github is just another computer where you can create a repository. Your repositories on Github are not "superior" in any way to your local ones. Normally you'll have a repository on the laptops of all developers, on Github and on the computer where your production website resides (we'll learn how to deploy our code later).
+
+The key feature of git is its ability to copy code between repositories. If you have a local repository and a remote repository on Github, you can copy code in either direction. In the next section we'll see how it's done. You can also move code using git between developers' laptops directly if you wish to.
+
+
+### Using Github
 
 
 
