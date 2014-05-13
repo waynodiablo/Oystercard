@@ -711,7 +711,7 @@ First of all, why refactor if it works? Refactoring the code means improving its
 What's wrong with our current code? First of all, the `interactive_menu` method is too long, taking 24 lines. We should aim to write methods as short as reasonably possible. Under 10 lines is good, under 5 lines is better, 1-3 lines is very good. Let's make this method shorter by extracting a couple of methods from it. We can extract the code that prints the menu into its own method.
 
 ````ruby
-def print_menu    
+def print_menu
   puts "1. Input the students"
   puts "2. Show the students"
   puts "9. Exit" # 9 because we'll be adding more items  
@@ -758,9 +758,9 @@ end
 Note that we're passing the user selection as an argument to the method. The input_students() method isn't returning a list of students since it will work with the `@students` variable now. We don't need to pass the list of students to show_students() for the same reason. Now our interactive_menu() method looks much better.
 
 ````ruby
-def interactive_menu  
+def interactive_menu
   loop do
-    print_menu        
+    print_menu
     process(gets.chomp)
   end
 end
@@ -799,3 +799,48 @@ Dr. Hannibal Lecter,november
 Darth Vader,november
 ````
 
+and so on. Let's see how we could save the list of students to a file.
+
+````ruby
+def save_students
+  # open the file for writing
+  file = File.open("students.csv", "w")
+  # iterate over the array of students
+  @students.each do |student|
+    student_data = [student[:name], student[:cohort]]
+    csv_line = student_data.join(",")
+    file.puts csv_line
+  end
+  file.close
+end
+````
+
+Let's discuss this piece of code in detail. If we want to write to a file in Ruby, we need to "open" the file first. This is very similar to opening a file in a normal text editor, e.g. SublimeText. When we open a file, the open() method returns us a reference to the file that we can save it a variable called "file". Then we iterate over the array of students, processing one student at a time.
+
+On every iteration we create a new array with the student name and the cohort, that is, the information we want to save to the file. We do this in order to convert it to a comma-separated string on the next line. The join() method joins all elements of the array it's called on together, using its argument as a separator. Finally, we write the csv line to the file using the familiar puts() method (except we call it on a file, so it writes to the file and not on the screen).
+
+If the previous paragraph wasn't confusing, you're doing really well! If it was, don't worry, we'll discuss it again. So, on every iteration we want to write a line like this to the file: 
+
+````
+Dr. Hannibal Lecter,november
+````
+
+However, our data is stored in a hash, right? So, we need to convert this hash to a string to write to the file. An easy way to do it is to put all elements of the hash into an array and then convert it all to the string. So, on line 6 we'll create an array like this:
+
+````ruby
+["Dr. Hannibal Lecter", :november]
+````
+
+Then, on line 7 we'll join it all together using comma as a separator:
+
+````
+"Dr. Hannibal Lecter,november"
+````
+
+Then, on line 8 we write this line to the file using the method puts(). Finally, after we save all students to the file, we close it on line 10. Every time you open file, it needs to be closed.
+
+We've just used a few new methods that you are not familiar with yet. Google their names to find more about them. Just searching [ruby file open](http://www.google.com/?q=ruby%20file%20open#q=ruby+file+open) or [ruby array join](https://www.google.com/?q=ruby%20file%20open#q=ruby+array+join) will give you want you need as the first result. Read the documentation for these methods to learn more about them. For example, what does the second argument to `File.open` mean? Most importantly, play with these methods in the irb. Create an array, then combine it into a string with join() using various separators. This is the best way to learn.
+
+Allow me to digress from writing files for a second. As a developer, you need to be able to solve unknown problems on a daily basis, read and understand code written by other people, learn new languages and methods, etc. The main goal of this section is not to show that when you need to write something to a file, you need to call the method open() of the class File and then combine the data using the method join() from the class Array. These are insignificant details. Instead, you need to read the piece of code above, understand it, google the methods used and remember that the files must be opened and closed (how exactly to do it doesn't matter, you can always google it in a second). Also, you need to remember that if you need to write an array of data, you would normally iterate over this array and write a piece of data on every iteration. Don't worry about how exactly to do it: it's easy to look up. Overall, strive to understand things conceptually and learn how to find answers instead of memorising them.
+
+So, back to writing files. Why did we use the method puts() to write to a file. Actually, this is a Ruby method that can be used in various situations. When we call it on its own, without any file reference, Ruby assumes that we want to write to standard output (remember streams from the Command-Line?). So, these two lines are equivalent:
