@@ -12,7 +12,7 @@ Single quotes can also be used:
 
 ` 'This is also a string.' `
 
-But a single-quoted string behaves differently, in some circumstances, than a double- quoted string. The main difference is that string interpolation doesn’t work with sin- gle-quoted strings. Try these two snippets, and you’ll see the difference:
+But a single-quoted string behaves differently, in some circumstances, than a double- quoted string. The main difference is that [string interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md) doesn’t work with sin- gle-quoted strings. Try these two snippets, and you’ll see the difference:
 
 ````ruby
 2.1.1 :001 > puts "Two plus two is #{2 + 2}."
@@ -76,33 +76,17 @@ To create a new string consisting of two or more strings, you can use the + meth
 
 The string you get back from + is always a new string. You can test this by assigning a string to a variable, using it in a + operation, and checking to see what its value is after the operation:
 
+````ruby
+>> str = "Hi "
+=> "Hi"
+>> str + "there."
+=> "Hi there."
+>> str
+=> "Hi"
+````
 
+### STRING COMBINATION VIA INTERPOLATION
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+At its simplest, [string interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md) involves dropping one existing string into another.
 
 
