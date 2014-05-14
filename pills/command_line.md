@@ -352,7 +352,7 @@ We can view the last few lines of a file just as easily with:
 
 OSX, the operating system on the Mac, uses a number of log files. You can peek at what your computer is doing by running
 
-` tail -f /private/var/log/system.log `
+`tail -f /private/var/log/system.log `
 
 First you'll see the last 10 messages. If you quit or start some application, your Terminal will be updated with new messages describing what's going on. To stop tailing the log, press Ctrl-C.
 
@@ -360,7 +360,7 @@ First you'll see the last 10 messages. If you quit or start some application, yo
 
 There will be any number of situations where you'll have a question about what command to use or wonder what a command is truly designed for. Let's see how to handle those situations. 
 
-` man ls `
+`man ls `
 
 The "man" or "manual" command takes a parameter of another command to provide you more information about it. In the example here, we want to know more about the "ls" command.
 
@@ -427,9 +427,9 @@ This is how you'd list just the text files:
 
 The asterisk acts as a wildcard, telling the computer to only show you the files that end in .txt. You can use the wildcard in various scenarios. Take a guess at what each of these do before running them:
 
-`ls new*.txt
-ls *
-ls *n*`
+`ls new*.txt`
+`ls *`
+`ls *n*`
 
 And obviously you can use asterisks with any command, not just "ls" because that's the built-in feature of the command-line (or the bash shell, strictly speaking), not of any particular command.
 
@@ -439,15 +439,15 @@ Another way to list specific files is by using the "find" command. It looks like
 
 This command works a lot just like normal English. It's saying: "find all files, starting with the current directory, with any name that ends in .txt and print it to the screen." Another cool feature of the "find" command is that, if you have additional directories inside the directory you search in, it will go into those directories as well and continue the search. Therefore, this is how we'd print out every text file in our home directory:
 
-`cd ~
-find . -name *.txt -print`
+`cd ~`
+`find . -name *.txt -print`
 
 The first command you already know - to change directories into your home directory. The second command is just using the find command again to tell it to go through and print all text files in the Home directory, plus any other directories inside your home directory.
 
 So, knowing everything that we know now, how could you create a text document that lists out every mp3 file in your Music directory? (Not everyone uses and stores their music the same way, so you may not be able to find any mp3 files on your computer, but you should understand how it works.)
 
-`cd ~/Music
-find . -name *.mp3 -print > myMusic.txt`
+`cd ~/Music`
+`find . -name *.mp3 -print > myMusic.txt`
 
 Both wildcards and "find" are useful for displaying specific files, but what if we want to look inside those files? If you remember from earlier, we've created a few text files in SomeDir. What if I wanted to look at only those files with the word "binary" inside the file? That's where grep comes in.
 
@@ -573,8 +573,8 @@ How can we run our little program just like irb by typing its name in the termin
 
 Make sure you quit irb if you launched it. 
 
-`$ ./hello.rb
--bash: ./hello.rb: Permission denied`
+`$ ./hello.rb`
+`-bash: ./hello.rb: Permission denied`
 
 (Don't worry about ./ right now, we'll explain why it's necessary soon. It's simply a hint for the terminal that we want to run hello.rb from the current directory. Remember that "." stands for current directory?)
 
@@ -584,8 +584,8 @@ The reason we get permission denied error is that the file doesn't have the "exe
 
 Try running the file right now. The permission denied error is now gone but we get another problem.
 
-`$ ./hello.rb
-./hello.rb: line 1: puts: command not found`
+`$ ./hello.rb`
+`./hello.rb: line 1: puts: command not found`
 
 So the terminal (or the shell, to be more precise) complains that it doesn't know what "puts" on line 1 means: command not found. Why is that?
 
@@ -597,8 +597,8 @@ Shebang is the instruction for your computer that tells what program to use to e
 
 We want our file to be executed by Ruby, so let's find out where ruby interpreter is first.
 
-`$ which ruby
-/Users/shadchnev/.rvm/rubies/ruby-2.0.0-p0/bin/ruby`
+`$ which ruby`
+`/Users/shadchnev/.rvm/rubies/ruby-2.0.0-p0/bin/ruby`
 
 On my machine, the current version of ruby is located at "/Users/shadchnev/.rvm/rubies/ruby-2.0.0-p0/bin/ruby". Find out where your ruby is and add a shebang to your hello.rb using SublimeText.
 
@@ -606,8 +606,8 @@ On my machine, the current version of ruby is located at "/Users/shadchnev/.rvm/
 
 This tells the command line to use this ruby interpreter to execute the file. Now you can type "./hello.rb" and it will print "Hello, world".
 
-`./hello.rb
-Hello, world!`
+`./hello.rb`
+`Hello, world!`
 
 What's happening behind the scenes is that the shell (command-line) passes the contents of the file to the interpreter that we specified in the shebang.
 
@@ -669,15 +669,15 @@ Every program you launch on your computer has access to the environment variable
 
 You can view any single environment variable by typing "echo $ENV_VAR", e.g.
 
-`$ echo $HOME
-/Users/shadchnev`
+`$ echo $HOME`
+`/Users/shadchnev`
 
 #### A note on echo
 
 One seemingly useless but actually quite useful command available in the terminal is "echo". It just prints whatever text you give it on the screen.
 
-`$ echo "Hello"
-Hello`
+`$ echo "Hello"`
+`Hello`
 
 It can be used to view environment variables as we've just seen.
 
@@ -696,15 +696,15 @@ One of the most important environment variables is PATH, so let's discuss it in 
 
 This is a list of paths, separated by colons. When you type a command without specifying its path, e.g. "ruby", the shell looks through all these directories until it finds this file and executes it. So, when you type "ls", the shell will be examining the following paths in order until it finds a file that exists.
 
-`/Users/shadchnev/.rvm/gems/ruby-2.0.0-p247/bin/ls
-/Users/shadchnev/.rvm/gems/ruby-2.0.0-p247@global/bin/ls
-/Users/shadchnev/.rvm/rubies/ruby-2.0.0-p247/bin/ls
-/Users/shadchnev/.rvm/bin/ls
-/usr/bin/ls
-/bin/ls
-/usr/sbin/ls
-/sbin/ls
-/usr/local/bin/ls`
+`/Users/shadchnev/.rvm/gems/ruby-2.0.0-p247/bin/ls`
+`/Users/shadchnev/.rvm/gems/ruby-2.0.0-p247@global/bin/ls`
+`/Users/shadchnev/.rvm/rubies/ruby-2.0.0-p247/bin/ls`
+`/Users/shadchnev/.rvm/bin/ls`
+`/usr/bin/ls`
+`/bin/ls`
+`/usr/sbin/ls`
+`/sbin/ls`
+`/usr/local/bin/ls`
 
 On my system, "ls" will be found in "/bin/ls".
 
@@ -758,8 +758,8 @@ Let's create (or re-create if it already exists) the env variable SEASON.
 
 Verify that it exists.
 
-`$ echo $SEASON
-winter`
+`$ echo $SEASON`
+`winter`
 
 Now open another terminal window and try to see if the variable exist. It shouldn't: it only exists in the shell where it was originally created. Every variable should be recreated every time a new terminal session starts.
 
@@ -843,6 +843,8 @@ This is the absolute minimum you need to know to make a basic edit using vi. Pri
 #### Exiting the shell
 
 Finally, to exit the shell, just type "exit" :)
+
+
 
 
 
