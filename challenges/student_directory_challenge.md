@@ -1,3 +1,6 @@
+Exercises
+-----
+
 Some of them are easy and some are more challenging. If you find yourself struggling, discuss the exercise with other students or just do an easy one before coming back to the harder exercise.
 
 1. Can you make the program do exactly what it does now without using any "puts" statement? What would be the alternative?
