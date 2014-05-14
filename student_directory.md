@@ -202,7 +202,7 @@ If you want to put the line break character manually, you can do it like this:
 print "line1\nline2\nline3" # has to be in double quotes!
 ````
 
-The "\n" is an escape sequence ( _[There are many more of them](http://en.wikibooks.org/wiki/Ruby_Programming/Strings#Escape_sequences)_).
+The "\n" is an escape sequence (_[There are many more of them](http://en.wikibooks.org/wiki/Ruby_Programming/Strings#Escape_sequences)_).
 
 So, now that we added the student count, let's commit it again.
 
