@@ -861,7 +861,7 @@ You can inspect the file using SublimeText to make sure it looks correct.
 Finally, let's add one more menu item to save the students if we want to.
 
 ````ruby
-def print_menu    
+def print_menu
   puts "1. Input the students"
   puts "2. Show the students"
   puts "3. Save the list to students.csv"
@@ -873,18 +873,18 @@ You'll also need to add one more case in the process() method.
 
 ````ruby
 when "3"
-  save_students    
+  save_students
 ````
 
 Check that everything works as expected and commit the `directory.rb` file.
 
 However, what about the students.csv file we have in our project directory? It's not part of the codebase, so it shouldn't be checked in at all. However, if we do "git status", it will be shown as untracked.
 
-![untracked](http://hackpad.com_6drFCagmgo8_p.52567_1383043943068_Screen Shot 2013-10-29 at 10.52.09.png)
+![untracked](https://hackpad.com_6drFCagmgo8_p.52567_1383043943068_Screen Shot 2013-10-29 at 10.52.09.png)
 
 We want to tell git to ignore this file completely, as if it didn't exist. To do this, create a ".gitignore" file (starting with a dot) and put the name of the file you want to ignore in it.
 
-![gitignore](http://hackpad.com_6drFCagmgo8_p.52567_1383044859861_Screen Shot 2013-10-29 at 11.07.23.png)
+![gitignore](https://hackpad.com_6drFCagmgo8_p.52567_1383044859861_Screen Shot 2013-10-29 at 11.07.23.png)
 
 Now the csv file will be ignored by git. However, you'll need to add the .gitignore file itself to your project.
 
@@ -932,7 +932,7 @@ On the next line we create a new hash and put it in the array of students using 
 If you now update the print_menu() and process() methods, your program should be able to load the students from file.
 
 ````ruby
-def print_menu    
+def print_menu
   puts "1. Input the students"
   puts "2. Show the students"
   puts "3. Save the list to students.csv"
@@ -1069,10 +1069,10 @@ If you would like to see what the code looks like at this stage of the tutorial,
 
 ## Extra Exercises
 
-	1. Update the code to use `@students` variable instead of the `students` variable passed as an argument.
-	2.	Continue refactoring the code. Which method is a bit too long? What method names are not clear enough? Anything else you'd change to make your code look more elegant? Why? Show your code to a teacher after you make it as beautiful as you can.
-	3.	Write a short program that reads its own source code (search StackOverflow to find out how to get the name of the currently executed file) and prints it on the screen.
-	4.	After we added the code to load the students from file, we ended up with adding the students to `@students` in two places. The lines in load_students() and input_students() are almost the same. This violates the _Don't Repeat Yourself_ principle. How can you extract them into a method to fix this problem?
-	5.	We are opening and closing the files manually. Read the documentation of the File class to find out how to use a code block (do...end) to access a file, so that we didn't have to close it explicitly (it will be closed automatically when the block finishes).  Refactor the code to use a code block.
-	6.	We are de-facto using CSV format to store data. However, Ruby includes [a library to work with the CSV files](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html) that we could use instead of working directly with the files. Refactor the code to use this library.
-	7.	The filename we use to save and load data (menu items 3 and 4) is hardcoded. Make the script more flexible by asking for the filename if the user chooses these menu items.
+1. Update the code to use `@students` variable instead of the `students` variable passed as an argument.
+2.	Continue refactoring the code. Which method is a bit too long? What method names are not clear enough? Anything else you'd change to make your code look more elegant? Why? Show your code to a teacher after you make it as beautiful as you can.
+3.	Write a short program that reads its own source code (search StackOverflow to find out how to get the name of the currently executed file) and prints it on the screen.
+4.	After we added the code to load the students from file, we ended up with adding the students to `@students` in two places. The lines in load_students() and input_students() are almost the same. This violates the _Don't Repeat Yourself_ principle. How can you extract them into a method to fix this problem?
+5.	We are opening and closing the files manually. Read the documentation of the File class to find out how to use a code block (do...end) to access a file, so that we didn't have to close it explicitly (it will be closed automatically when the block finishes).  Refactor the code to use a code block.
+6.	We are de-facto using CSV format to store data. However, Ruby includes [a library to work with the CSV files](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html) that we could use instead of working directly with the files. Refactor the code to use this library.
+7.	The filename we use to save and load data (menu items 3 and 4) is hardcoded. Make the script more flexible by asking for the filename if the user chooses these menu items.
