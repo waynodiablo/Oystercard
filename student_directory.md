@@ -957,7 +957,7 @@ There are a couple of new things happening here. First, we're doing a parallel a
 
 In our file every line has one comma, so if split the line at this comma, we'll get an array with two values. The first one will become the name and the second one will become the cohort ( :pill: [parallel assignment](https://github.com/makersacademy/course/blob/master/pills/parallel_assignment.md) ).
 
-On the next line we create a new hash and put it in the array of students using the shovel operator. The only thing that's different from the input_students() method that does the same operation is that here we're converting a string that we read from the file to a symbol (`cohort.to_sym`). We do it for consistency: if we have decided to store the cohort as a symbol, so let's not change the format.
+On the next line we create a new hash and put it in the array of students using the shovel operator ( :pill: [shovel operator](https://github.com/makersacademy/course/blob/master/pills/shovel_operator.md) ). The only thing that's different from the input_students() method that does the same operation is that here we're converting a string that we read from the file to a symbol (`cohort.to_sym`). We do it for consistency: if we have decided to store the cohort as a symbol, so let's not change the format.
 
 If you now update the print_menu() and process() methods, your program should be able to load the students from file.
 
