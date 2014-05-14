@@ -883,9 +883,15 @@ However, what about the students.csv file we have in our project directory? It's
 ````
 git status
 # on branch master
+# Changes to be committed:
+#    (use “git reset HEAD <file>…” to upstage)
+#         modified: directory.rb
 # 
+# Untracked files:
+#    (use “git add <file>…” to include in what will be committed)
+# 
+#       students.csv
 ````
-![untracked](https://hackpad.com_6drFCagmgo8_p.52567_1383043943068_Screen Shot 2013-10-29 at 10.52.09.png)
 
 We want to tell git to ignore this file completely, as if it didn't exist. To do this, create a ".gitignore" file (starting with a dot) and put the name of the file you want to ignore in it.
 
