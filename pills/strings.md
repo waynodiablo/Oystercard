@@ -27,6 +27,7 @@ Two plus two is #{2 + 2}.
 As you’ll see if you paste these lines into irb, you get two very different results:
 
 ` Two plus two is 4. `
+
 ` Two plus two is #{2 + 2}. `
 
 
@@ -39,7 +40,8 @@ As you’ll see if you paste these lines into irb, you get two very different re
 To retrieve the *n*th character in a string, you use the [] operator/method, giving it the index, on a zero-origin basis, for the character you want. Negative numbers index from the end of the string:
 
 ````ruby
->> string = "Ruby is a cool language." => "Ruby is a cool language."
+>> string = "Ruby is a cool language." 
+=> "Ruby is a cool language."
 >> string[5]
 => "i"
 >> string[-12] => "o"
