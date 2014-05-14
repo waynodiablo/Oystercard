@@ -1,4 +1,4 @@
-# Git challenge
+# Git challenges
 
 
 - *Create a directory where you'll be keeping all your projects (~/Projects, ~/dev, ~/coding or something like this)*
