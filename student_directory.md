@@ -895,8 +895,6 @@ git status
 
 We want to tell git to ignore this file completely, as if it didn't exist. To do this, create a ".gitignore" file (starting with a dot) and put the name of the file you want to ignore in it.
 
-![gitignore](https://hackpad.com_6drFCagmgo8_p.52567_1383044859861_Screen Shot 2013-10-29 at 11.07.23.png)
-
 Now the csv file will be ignored by git. However, you'll need to add the .gitignore file itself to your project.
 
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/437b0decb366d08431911a45db269ddc945197b7).
