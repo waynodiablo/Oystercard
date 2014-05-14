@@ -202,7 +202,7 @@ If you want to put the line break character manually, you can do it like this:
 print "line1\nline2\nline3" # has to be in double quotes!
 ````
 
-The "\n" is an escape sequence ( _[There are many more of them](http://en.wikibooks.org/wiki/Ruby_Programming/Strings#Escape_sequences)_).
+The "\n" is an escape sequence (_[There are many more of them](http://en.wikibooks.org/wiki/Ruby_Programming/Strings#Escape_sequences)_).
 
 So, now that we added the student count, let's commit it again.
 
@@ -334,7 +334,7 @@ Let's start with a student count. Now that our students are in an array, we can 
 
 Now if we put one more student in the array, we won't have to update the `student_count` variable. That's really good news.
 
-What about the repetition? There's a way to print every value in the array without referring to each value individually. We will discuss how it actually works early next week in Ruby 3 but for now you can learn how to do it even if you don't understand everything that's going on behind the scenes.
+What about the repetition? There's a way to print every value in the array without referring to each value individually. We will discuss how it actually works later on but for now you can learn how to do it even if you don't understand everything that's going on behind the scenes.
 
 Doing some operation on every value of an array is called iterating. One such operation is called an iteration. So if we need to print every value of an array, we need to iterate over this array and print the current value on every iteration. Makes sense? Let's see what the code would look like. Instead of `puts students[0]` ... `puts students[8]` you can do this:
 
@@ -344,7 +344,7 @@ Doing some operation on every value of an array is called iterating. One such op
 		end
 ````
 
-We'll discuss exactly how this works in Ruby 3, as promised, but for now just understand what it does. This code takes every name from the array `students` and for each name it executes the block of code between `do` and `end`. Every execution of this block of code is called an iteration. On every iteration, the current name will be assigned to the value `student` that we specified between two vertical bars.
+We'll discuss exactly how this works later, but for now just understand what it does. This code takes every name from the array `students` and for each name it executes the block of code between `do` and `end`. Every execution of this block of code is called an iteration. On every iteration, the current name will be assigned to the value `student` that we specified between two vertical bars.
 
 So, on the very first iteration, it will take the first value from the array ("Dr. Hannibal Lecter") and assign it to the variable `student`. Then, it will execute the block of code (`puts student`) that will print it to the screen. Since "Dr. Hannibal Lecter" is not the last person in our array of charming students, Ruby will perform the second iteration, assigning the value of "Darth Vader" to the variable `student` and printing it again.
 
@@ -583,6 +583,27 @@ If everything works as it should, commit the code.
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/be185955c825cc3b377fd6c8ad8df917820880ad).
 
 So, our list of students is becoming interactive. Make sure you really understand all code and then try to extend it. See the list of exercises for some ideas on how to make it better.
+
+
+Exercises
+-----
+
+Some of them are easy and some are more challenging. If you find yourself struggling, discuss the exercise with other students or just do an easy one before coming back to the harder exercise.
+
+1. Can you make the program do exactly what it does now without using any "puts" statement? What would be the alternative?
+2. We're using the each() method to iterate over an array of students. How can you modify the program to print a number before the name of each student, e.g. "1. Dr. Hannibal Lecter"? Hint: replace each() with each_with_index().
+3. Modify your program to only print the students whose name begins with a letter "A" (or any other).
+4. Modify your program to only print the students whose name is shorter than 12 characters.
+5. Rewrite the each() method that prints all students using "while" or "until" control flow methods (see Ruby 2).
+6. Our code only works with the student name and cohort. Add more information: hobbies, country of birth, height, etc.
+7. Research how the method center() of the String class works. Use it in your code to make the output beautifully aligned.
+8. In the `input_students` method the cohort value is hard-coded. How can you ask for both the name and the cohort? What if one of the values is empty? Can you supply a default value? The input will be given to you as a string? How will you convert it to a symbol? What if the user makes a typo?
+9. Once you complete the previous exercise, change the way the users are displayed: print them grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the map() method may be useful but it's not the only option), iterate over it and only print the students from that cohort.
+10. Right now if we have only one student, the user will see a message "Now we have 1 students", whereas it should be "Now we have 1 student". How can you fix it so that it used singular form when appropriate and plural form otherwise?
+11. We've been using the chomp() method to get rid of the last return character. Find another method among those provided by the String class that could be used for the same purpose (although it will require passing some arguments).
+12. Once you have completed the "Asking for user input" section, open [this file](https://raw.github.com/makersacademy/student-directory/b1820c858409e93166ac86cb1aa6b54fee2e1d7a/directory.rb). It's Ruby code but it has some typos. Copy it to a local file and open it in SublimeText without syntax highlighting. To do this, select "Plain Text" in the lower right corner of the window. It should look like this: ![rubysyntaxhighlighting](https://github.com/makersacademy/course/raw/master/student_directory/images/SelectingRubySyntaxHighlighting.png)
+ Now, find all typos in that file and correct them. Use your experience, online documentation, etc. to find all mistakes. Run the script in the terminal from time to time to make sure it works as it should. Google the errors Ruby will give you, think about what they could mean, try different things but don't look the answer up :)
+13. What happens if the user doesn't enter any students? It will try to print an empty list. How can you use an "if" statement (see Ruby 2) to only print the list if there is at least one student in there?
 
 ## Version 7: Adding an interactive menu
 
