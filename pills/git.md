@@ -640,6 +640,6 @@ There is no point in repeating what's already out there. The point of this tutor
 
 ### Challenges 
 
-Before moving on to the next lesson, complete each of the following [tasks]().
+Before moving on to the next lesson, complete each of the following [tasks](https://github.com/makersacademy/course/blob/master/challenges/git_challenge.md).
 
 
