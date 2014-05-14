@@ -843,4 +843,236 @@ We've just used a few new methods that you are not familiar with yet. Google the
 
 Allow me to digress from writing files for a second. As a developer, you need to be able to solve unknown problems on a daily basis, read and understand code written by other people, learn new languages and methods, etc. The main goal of this section is not to show that when you need to write something to a file, you need to call the method open() of the class File and then combine the data using the method join() from the class Array. These are insignificant details. Instead, you need to read the piece of code above, understand it, google the methods used and remember that the files must be opened and closed (how exactly to do it doesn't matter, you can always google it in a second). Also, you need to remember that if you need to write an array of data, you would normally iterate over this array and write a piece of data on every iteration. Don't worry about how exactly to do it: it's easy to look up. Overall, strive to understand things conceptually and learn how to find answers instead of memorising them.
 
-So, back to writing files. Why did we use the method puts() to write to a file. Actually, this is a Ruby method that can be used in various situations. When we call it on its own, without any file reference, Ruby assumes that we want to write to standard output (remember streams from the Command-Line?). So, these two lines are equivalent:
+So, back to writing files. Why did we use the method puts() to write to a file. Actually, this is a Ruby method that can be used in various situations. When we call it on its own, without any file reference, Ruby assumes that we want to write to standard output ( :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md) ). So, these two lines are equivalent:
+
+````ruby
+puts "Hello"
+STDOUT.puts "Hello"
+````
+
+However, if we want to write to a file, instead of the output stream, we need to call it explicitly.
+
+````ruby
+file.puts "This is written to a file"
+````
+
+You can inspect the file using SublimeText to make sure it looks correct.
+
+Finally, let's add one more menu item to save the students if we want to.
+
+````ruby
+def print_menu    
+  puts "1. Input the students"
+  puts "2. Show the students"
+  puts "3. Save the list to students.csv"
+  puts "9. Exit" # 9 because we'll be adding more items  
+end
+````
+
+You'll also need to add one more case in the process() method.
+
+````ruby
+when "3"
+  save_students    
+````
+
+Check that everything works as expected and commit the `directory.rb` file.
+
+However, what about the students.csv file we have in our project directory? It's not part of the codebase, so it shouldn't be checked in at all. However, if we do "git status", it will be shown as untracked.
+
+![untracked](http://hackpad.com_6drFCagmgo8_p.52567_1383043943068_Screen Shot 2013-10-29 at 10.52.09.png)
+
+We want to tell git to ignore this file completely, as if it didn't exist. To do this, create a ".gitignore" file (starting with a dot) and put the name of the file you want to ignore in it.
+
+![gitignore](http://hackpad.com_6drFCagmgo8_p.52567_1383044859861_Screen Shot 2013-10-29 at 11.07.23.png)
+
+Now the csv file will be ignored by git. However, you'll need to add the .gitignore file itself to your project.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/437b0decb366d08431911a45db269ddc945197b7).
+
+## Version 9: Loading the data from the file
+
+If we have the data saved to the file, we can load it on startup, so that we didn't have to input all the students again. The loading procedure is going to be the reverse of the what we've done to save the data to the file.
+
+First, we need to open the file for reading. Then, we'll read the contents of the file, iterate over all lines, split every line at the comma and put a new hash into the array `@students`. Finally, we'll close the file.
+
+Before write the code, let's talk about different file access modes. When we opened the file for writing in the previous section, we did this:
+
+````ruby
+File.open("students.csv", "w")
+````
+
+The second argument is the file access mode. When you're accessing a file, you need to specify what you intend to do with it: read, write, read and write, append to it, etc. You need to do this so that other programs could access the file, if it's possible. For example, the same file can be opened simultaneously by several programs in "read only" mode but only one can open it in the "write" mode.
+
+It makes sense: if several programs would open a file in write mode at the same time, what changes would be saved on the disk? The situation would be unpredictable. So the operating system (Ruby simply delegates opening the file to the operating system) doesn't allow to open the files if there's a possibility of a conflict.
+
+You can read about different modes that Ruby allows in [the documentation](http://www.ruby-doc.org/core-2.0.0/IO.html#method-c-new-label-IO+Open+Mode). When you need to access the file, choose the most appropriate file access mode and use it.
+
+Now let's load the students from the file.
+
+````ruby
+def load_students
+  file = File.open("students.csv", "r")
+  file.readlines.each do |line|
+  name, cohort = line.chomp.split(',')
+    @students << {:name => name, :cohort => cohort.to_sym}
+  end
+  file.close
+end
+````
+
+So, we open the file (this time for reading), then we read all lines into an array and iterate over it. On every iteration we discard the training new line character from the line, split it at the comma (this will give us an array with two elements) and assign it to the `name` and `cohort` variables. Once we have the name and the cohort, we create a new hash and put it into the list of students. Finally, we close the file.
+
+There are a couple of new things happening here. First, we're doing a parallel assignment on line 4. This means that we are assigning two variables at the same time. If the assigned value is an array, then the first variable will get the first value of the array, the second variable – the second value and so on.
+
+In our file every line has one comma, so if split the line at this comma, we'll get an array with two values. The first one will become the name and the second one will become the cohort ( :pill: [parallel assignment](https://github.com/makersacademy/course/blob/master/pills/parallel_assignment.md) ).
+
+On the next line we create a new hash and put it in the array of students using the shovel operator. The only thing that's different from the input_students() method that does the same operation is that here we're converting a string that we read from the file to a symbol (`cohort.to_sym`). We do it for consistency: if we have decided to store the cohort as a symbol, so let's not change the format.
+
+If you now update the print_menu() and process() methods, your program should be able to load the students from file.
+
+````ruby
+def print_menu    
+  puts "1. Input the students"
+  puts "2. Show the students"
+  puts "3. Save the list to students.csv"
+  puts "4. Load the list from students.csv"
+  puts "9. Exit" # 9 because we'll be adding more items  
+end
+````
+
+Right now we have a good opportunity for refactoring. See the list of exercises for more details. I've done it for you, so you can see it on Github (after you do it yourself!).
+
+If everything works as it should, it's a good time to commit everything.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/be462c52c2b5a284f58a3a1cc57aa4e94cf51762).
+
+## Version 10: Taking arguments from the command line
+
+Right now, the list of students is loaded from the file if you select the corresponding option from the menu. What if we wanted to load the information from the file on startup? Let's learn how to read command-line arguments and use them.
+
+When you run a program in the terminal, you can pass arguments to it. You've done it many times by now. For example, when you change to a parent directory,
+
+````
+cd ..
+````
+
+you are executing a program called `cd` and you're passing `..` as an argument, so that it knows what directory to change into. An argument here is very similar to an argument you're giving to a method. For example, if you wanted to change the current directory from Ruby, you'd do
+
+````ruby
+Dir.chdir('..')
+````
+
+Programs can use arguments passed to them on startup, just like methods have access to their own arguments. In case of methods, the arguments are usually (but not always) named in advance, for example:
+
+````ruby
+def convert(amount, original_currency, target_currency)
+end
+````
+
+So we know in advance that we'll get exactly three arguments that we'll be referring to as `amount`, `original_currency` and `target_currency`. When a program is launched, there's no way of knowing how many arguments will be passed to it, let alone their names. Therefore, we have to access them by their index.
+
+If our program is launched, the special `ARGV` array will contain all the arguments. So, if we run
+
+````
+ruby directory.rb foo bar
+````
+
+the `ARGV` array will contain the arguments:
+
+````ruby
+puts ARGV.inspect #=> ["foo", "bar"]
+````
+
+This allows us to use the command-line arguments to load the data from the file on startup. If we pass the filename as an argument, we can load the data from there automatically:
+
+````
+ruby directory.rb students.csv
+````
+
+The argument, `students.csv`, will be the first and only element in the `ARGV` array. We'll be able to access it like this
+
+````ruby
+ARGV.first
+````
+
+So, let's load the data from the file on startup, if the file is present. We already have a method to load students from a file:
+
+````ruby
+def load_students
+  file = File.open("students.csv", "r")
+  file.readlines.each do |line|
+    name, cohort = line.chomp.split(',')
+    add_student(name, cohort)
+  end
+  file.close
+end
+````
+
+This method has the filename hardcoded into it. To make it work with arbitrary filenames, we need to make the method more flexible by passing the name as the argument. However, to preserve the original functionality, let's give it a default value.
+
+````ruby
+def load_students(filename = "students.csv")
+  file = File.open(filename, "r")
+  file.readlines.each do |line|
+    name, cohort = line.chomp.split(',')
+    add_student(name, cohort)
+  end
+  file.close
+end
+````
+
+So, now the method accepts the filename as an argument. However,  if the argument is not supplied, then the value "students.csv" will be used. This value is called the default value for an argument. Providing it allows us to call the method either without the arguments or with one argument:
+
+````ruby
+load_students # will load from students.csv by default
+load_students(list.txt) # will load from list.txt
+````
+
+Let's now load the data if the file is given to the script as an argument. First, we'll need to see if the argument is given. If not, we just proceed as before and don't do anything. Then we need to check if the file exists. If it doesn't, the user must have given us the incorrect file name, so let's show an error message and quit. Finally, if the file is given and it exists, let's load it.
+
+````ruby
+def try_load_students
+  filename = ARGV.first # first argument from the command line
+  return if filename.nil? # get out of the method if it isn't given
+  if File.exists?(filename) # if it exists
+    load_students(filename)
+     puts "Loaded #{@students.length} from #{filename}"
+  else # if it doesn't exist
+    puts "Sorry, #{filename} doesn't exist."
+    exit # quit the program
+  end
+end
+````
+
+Look at line 4. We're using a method exists?() defined in class File to check if a given file exists. How could you have guessed to use this method if you didn't know about it? First, it's reasonable to assume that Ruby has some methods to check for file existence. We can find it either by googling [ruby check file exists](https://www.google.co.uk/search?q=ruby+check+file+exists) (the first result will be a stack overflow question with an answer) or by assuming that this functionality is in the File class that we used before. Again, [google ruby file](http://www.google.com/search?q=ruby+file) to find it and then search the page for the word "exist". It must be mentioned in the description of the method that does that. As it turns out, the name of the method is exists?().
+
+Again, your don't need to remember that the method that checks for file existence is File.exist?() (although you will, eventually). Instead, you need to learn how to find this method if you don't know its name.
+
+We're almost done with this section. There's one more change we need to make to our program that's related to the way gets() works. We use this method to get the input from the keyboard but it actually does something else. It reads from the list of files supplied as arguments, only defaulting to the keyboard (or, standard input stream, to be precise) if there are no files. So, our code will now break unless we tell gets() to read specifically from the input stream even if some files have been passed as an argument. Read more about how gets() works in its [documentation](http://www.ruby-doc.org/core-2.0.0/Kernel.html#method-i-gets).
+
+So, whenever we use gets(), let's specify that it should read from the standard input stream:
+
+````ruby
+STDIN.gets
+````
+
+Update the input_students() and process() methods that use the gets() method to take the input from standard input.
+
+Now, if you call this method right before showing the menu, it will load the students from the file if it's supplied by the command-line.
+
+If everything works as expected, it's now time to commit the code.
+
+If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/72d6159cdd7a2959f9628e13615e6d203d6f4531).
+
+**Congratulations! You have reached the end of this tutorial!**
+
+## Extra Exercises
+
+	1. Update the code to use `@students` variable instead of the `students` variable passed as an argument.
+	2.	Continue refactoring the code. Which method is a bit too long? What method names are not clear enough? Anything else you'd change to make your code look more elegant? Why? Show your code to a teacher after you make it as beautiful as you can.
+	3.	Write a short program that reads its own source code (search StackOverflow to find out how to get the name of the currently executed file) and prints it on the screen.
+	4.	After we added the code to load the students from file, we ended up with adding the students to `@students` in two places. The lines in load_students() and input_students() are almost the same. This violates the _Don't Repeat Yourself_ principle. How can you extract them into a method to fix this problem?
+	5.	We are opening and closing the files manually. Read the documentation of the File class to find out how to use a code block (do...end) to access a file, so that we didn't have to close it explicitly (it will be closed automatically when the block finishes).  Refactor the code to use a code block.
+	6.	We are de-facto using CSV format to store data. However, Ruby includes [a library to work with the CSV files](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html) that we could use instead of working directly with the files. Refactor the code to use this library.
+	7.	The filename we use to save and load data (menu items 3 and 4) is hardcoded. Make the script more flexible by asking for the filename if the user chooses these menu items.
