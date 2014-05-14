@@ -334,7 +334,7 @@ Let's start with a student count. Now that our students are in an array, we can 
 
 Now if we put one more student in the array, we won't have to update the `student_count` variable. That's really good news.
 
-What about the repetition? There's a way to print every value in the array without referring to each value individually. We will discuss how it actually works early next week in Ruby 3 but for now you can learn how to do it even if you don't understand everything that's going on behind the scenes.
+What about the repetition? There's a way to print every value in the array without referring to each value individually. We will discuss how it actually works later on but for now you can learn how to do it even if you don't understand everything that's going on behind the scenes.
 
 Doing some operation on every value of an array is called iterating. One such operation is called an iteration. So if we need to print every value of an array, we need to iterate over this array and print the current value on every iteration. Makes sense? Let's see what the code would look like. Instead of `puts students[0]` ... `puts students[8]` you can do this:
 
@@ -344,7 +344,7 @@ Doing some operation on every value of an array is called iterating. One such op
 		end
 ````
 
-We'll discuss exactly how this works in Ruby 3, as promised, but for now just understand what it does. This code takes every name from the array `students` and for each name it executes the block of code between `do` and `end`. Every execution of this block of code is called an iteration. On every iteration, the current name will be assigned to the value `student` that we specified between two vertical bars.
+We'll discuss exactly how this works later, but for now just understand what it does. This code takes every name from the array `students` and for each name it executes the block of code between `do` and `end`. Every execution of this block of code is called an iteration. On every iteration, the current name will be assigned to the value `student` that we specified between two vertical bars.
 
 So, on the very first iteration, it will take the first value from the array ("Dr. Hannibal Lecter") and assign it to the variable `student`. Then, it will execute the block of code (`puts student`) that will print it to the screen. Since "Dr. Hannibal Lecter" is not the last person in our array of charming students, Ruby will perform the second iteration, assigning the value of "Darth Vader" to the variable `student` and printing it again.
 
