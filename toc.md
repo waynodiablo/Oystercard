@@ -4,5 +4,9 @@
 2. [The Basics: Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md)
 3. Boris Bikes
 
-# Supporting Material
+## Supporting Materials
+
+Here you will find other, relevant materials and challenges that will help you on your quest of becoming a software developer in a matter of weeks!
+
 - [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
+- [Pills](https://github.com/makersacademy/course/blob/master/pills.md)
