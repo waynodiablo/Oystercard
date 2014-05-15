@@ -3,13 +3,6 @@
 1. [Day one](https://github.com/makersacademy/course/blob/master/day_one.md)
 2. [The Basics: Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md)
 3. Boris Bikes
-4. Sudoku
-5. Bookmark Manager
-6. Database Backed Applications
-7. Bringing the Web to life
-8. Rails
-9. More Rails
-10. Advanced Rails
-11. Final Projects
-12. Final Projects
-13. [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
+
+# Supporting Material
+- [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
