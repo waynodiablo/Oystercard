@@ -119,7 +119,7 @@ Finished in 0.0085 seconds
 One of the things that most people complain about is the concept of doing **the simplest thing that could possibly work**. If you look into our greet method this becomes obvious; trying to call the **greet** method with a different name, say **Chloë**, will obviously fail. **Or will it?** For a simple method like *greet* the answer is easy and obvious, when our code becomes more complex this **obvious** answers don't seem to be that obvious any longer. In order to avoid assumptions we need to prove that the code *really* does what we want it to do by writing another example in our spec file:
 
 ````ruby
-it 'greets Chloë do
+it 'greets Chloë’ do
   expect(greet(“Chloë”)).to eq ‘Hello, Chloë, how are you today?’
 end
 ````
