@@ -13,4 +13,4 @@
 11. Final Projects
 12. Final Projects
 
-13. Challenges
+13. [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
