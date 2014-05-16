@@ -435,12 +435,12 @@ And obviously you can use asterisks with any command, not just "ls" because that
 
 Another way to list specific files is by using the "find" command. It looks like this:
 
-`find . -name *.txt -print`
+`find . -name "*.txt" -print`
 
 This command works a lot just like normal English. It's saying: "find all files, starting with the current directory, with any name that ends in .txt and print it to the screen." Another cool feature of the "find" command is that, if you have additional directories inside the directory you search in, it will go into those directories as well and continue the search. Therefore, this is how we'd print out every text file in our home directory:
 
 `cd ~`
-`find . -name *.txt -print`
+`find . -name "*.txt" -print`
 
 The first command you already know - to change directories into your home directory. The second command is just using the find command again to tell it to go through and print all text files in the Home directory, plus any other directories inside your home directory.
 
