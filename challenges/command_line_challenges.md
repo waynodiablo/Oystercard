@@ -1,6 +1,6 @@
 # Command-line challenges
 
-Make sure that you're able to do each of the following tasks:
+First download this [challenge file](https://dl.dropboxusercontent.com/u/3550474/Challenge%201.zip). Make sure that you're able to do each of the following tasks:
 
 - *Show the name of your home directory.* 
 - *Navigate to the "Challenge 1" folder.*
