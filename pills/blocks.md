@@ -2,7 +2,7 @@
 
 Blocks are a fundamental feature of Ruby. In fact, blocks are one of the reasons Ruby is so flexible and easy to use. Let's discuss the basics of using the blocks.
 
-In most cases, when calling a method, you pass simple objects – Symbols (:pill: [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)), Strings (:pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)), numbers – as arguments. However, you can also pass a block of code as an argument. This block of code is not executed immediately when the method is called but may be executed later.
+In most cases, when calling a method, you pass simple objects – [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md), [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)), numbers – as arguments. However, you can also pass a block of code as an argument. This block of code is not executed immediately when the method is called but may be executed later.
 
 In [Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md) we iterated over an array of names using this code:
 
@@ -34,7 +34,7 @@ Mary
 
 This is the most basic example of using blocks. Blocks can take several arguments (not just one) and they can be passed to any method, not just an to one of the methods of class Array.
 
-You'll see blocks in the documentation for many Ruby methods. For example, if we have an array of names and we want to select the names that start with "A", we can use the [select()](http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-select) method.
+You'll see blocks in the documentation for many [Ruby methods](https://github.com/makersacademy/course/blob/master/pills/methods.md). For example, if we have an array of names and we want to select the names that start with "A", we can use the [select()](http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-select) method.
 
 ````ruby
 ["John", "Alice", "Amanda", "Bob"].select do |name|
