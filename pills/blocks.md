@@ -102,3 +102,80 @@ LocalJumpError: no block given (yield)
 ````
 
 The block can only appear immediately after the method invocation. You can't have standalone blocks that are not passed to any methods. However, it's possible to create standalone objects that behave like blocks: they are called procs (:pill: [procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)) and lambdas (:pill: [lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)).
+
+## do...end vs curly braces
+
+There are two ways to define blocks. The example above used the do...end syntax. However, the same block can be defined using curly braces:
+
+````ruby
+['hello', 'world'].each {|word| puts word}
+````
+
+Both variants are functionally equivalent except for precedence. The do...end syntax is usually used when the block contains more than one line or if the only line is very long. The curly braces are used if the line is very short.
+
+The precedence of curly braces is higher than that of the block. Consider the following code
+
+````ruby
+puts [2].map {|x| x * 2} #=> 4
+````
+
+In here, the block of code is correctly passed to the map method that returns 4, which is printed on the screen. However, if we use the do...end syntax, the result will be different:
+
+````ruby
+puts [2].map do |x| x * 2 end #=> #<Enumerator:0x007fa9fba37940>
+````
+
+What happens here is that the block of code is passed to the puts method that completely ignores it. The block is not passed to the map method, so it returns an Enumerator (it always does if no block is passed).
+
+Put another way, in the former case the following code was executed:
+
+````ruby
+puts([2].map do |x| x * 2 end) #=> 4
+````
+
+And in the latter case
+
+````ruby
+puts([2].map) do |x| x * 2 end #=> #<Enumerator:0x007fa9fba37940>
+````
+
+## Method chaining
+
+You can chain method calls that take blocks like any other methods. For example, let's multiply every element of the original array by two and then select only those values that are larger than 3:
+
+````ruby
+[1,2,3].map{|v| v*2}.select{|v| v > 3} #=> [4, 6] 
+````
+
+You can do the same even with do...end blocks, even though some developers would consider such code to be less readable:
+
+````ruby
+[1,2,3].map do |v|
+  v * 2
+end.select do |v|
+  v > 3
+end #=> [4, 6] 
+````
+
+## Closures
+
+Every block is a closure. This means that it remembers the context from where it was called: the variables, the value of self , etc. Consider this example:
+
+````ruby
+name = "David"
+last_names = ['Cameron', 'Blunkett', 'Shaw', 'Steel']
+last_names.each do |last_name|
+  puts "#{name} #{last_name}"
+end
+````
+
+Output:
+
+````ruby
+David Cameron
+David Blunkett
+David Shaw
+David Steel
+````
+
+In this example, the block has access to the variable name, even though the block is actually executed somewhere inside the [each()](http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-each) method, where the name variable doesn't exist. You can read and modify all variables that are accessible when the block was defined inside it.
