@@ -12,32 +12,35 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 ## Ruby
 
-:pill: [Ruby: variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
+:pill: [Arrays](https://github.com/makersacademy/course/blob/master/pills/arrays.md)
 
-:pill: [Ruby: introducing irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
+:pill: [Blocks](https://github.com/makersacademy/course/blob/master/pills/blocks.md)
 
-:pill: [Ruby: creating ruby files](https://github.com/makersacademy/course/blob/master/pills/files.md)
+:pill: [Control Flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md)
 
-:pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
+:pill: [Creating Ruby Files](https://github.com/makersacademy/course/blob/master/pills/files.md)
 
-:pill: [Ruby: Interacting with the
-users](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md)
+:pill: [Hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md)
 
-:pill: [Ruby: True, False and nothing](https://github.com/makersacademy/course/blob/master/pills/boolean.md)
+:pill: [Introducing Irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
 
-:pill: [Ruby: Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
+:pill: [Interacting with the users](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md)
 
-:pill: [Ruby:
-Arrays](https://github.com/makersacademy/course/blob/master/pills/arrays.md)
+:pill: [Lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)
 
-:pill: [Ruby: Hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md)
+:pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
 
-:pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
+:pill: [Procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)
 
-:pill: [Ruby: Control Flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md)
+:pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
+
+:pill: [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
+
+:pill: [True, False and nothing](https://github.com/makersacademy/course/blob/master/pills/boolean.md)
+
+:pill: [Variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
+
 
 ## Testing
 
 :pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
-
-
