@@ -38,6 +38,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)
 
+:pill: [Recursion](https://github.com/makersacademy/course/blob/master/pills/recursion.md)
+
 :pill: [Shovel Operator](https://github.com/makersacademy/course/blob/master/pills/shovel_operator.md)
 
 :pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
