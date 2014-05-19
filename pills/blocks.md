@@ -2,7 +2,7 @@
 
 Blocks are a fundamental feature of Ruby. In fact, blocks are one of the reasons Ruby is so flexible and easy to use. Let's discuss the basics of using the blocks.
 
-In most cases, when calling a method, you pass simple objects – Symbols (:pill: [Ruby: Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)), Strings (:pill: [Ruby: Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)), numbers – as arguments. However, you can also pass a block of code as an argument. This block of code is not executed immediately when the method is called but may be executed later.
+In most cases, when calling a method, you pass simple objects – Symbols (:pill: [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)), Strings (:pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)), numbers – as arguments. However, you can also pass a block of code as an argument. This block of code is not executed immediately when the method is called but may be executed later.
 
 In [Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md) we iterated over an array of names using this code:
 
@@ -101,4 +101,4 @@ If you don't pass the block to a method that expects it, then you'll see this er
 LocalJumpError: no block given (yield)
 ````
 
-The block can only appear immediately after the method invocation. You can't have standalone blocks that are not passed to any methods. However, it's possible to create standalone objects that behave like blocks: they are called procs and lambdas.
+The block can only appear immediately after the method invocation. You can't have standalone blocks that are not passed to any methods. However, it's possible to create standalone objects that behave like blocks: they are called procs (:pill: [procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)) and lambdas (:pill: [lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)).
