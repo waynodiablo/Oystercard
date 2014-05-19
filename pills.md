@@ -5,6 +5,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 ## Unix
 :pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 
+:pill: [Installing RVM](https://github.com/makersacademy/course/blob/master/pills/installing_rvm.md)
+
 :pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md)
 
 ## Git
@@ -30,9 +32,15 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
 
+:pill: [Parallel Assignment](https://github.com/makersacademy/course/blob/master/pills/parallel_assignment.md)
+
 :pill: [Procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)
 
+:pill: [Shovel Operator](https://github.com/makersacademy/course/blob/master/pills/shovel_operator.md)
+
 :pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
+
+:pill: [String Interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md)
 
 :pill: [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md)
 
@@ -44,3 +52,5 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 ## Testing
 
 :pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
+
+:pill: [Test Driven Development](https://github.com/makersacademy/course/blob/master/pills/tdd.md)
