@@ -52,7 +52,7 @@ This also happens if you enter text into irb. A piece of text is called a "strin
 If, however, we forget to close the string by omitting the double quote, irb will wait until you enter it because it will assume you're still entering the string. This is a very common source of confusion among beginners because it will look like the irb isn't responding. This is what's happening here:
 
 ````ruby
-:0021> 2 + 2
+:001> 2 + 2
 => 4
 :002 > "Hello, Makers
 :002"> I forgot to close the quote
