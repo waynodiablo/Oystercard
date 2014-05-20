@@ -29,7 +29,7 @@ The script will be invoked from the command-line and it will only use pure Ruby,
 
 First, open the terminal and navigate to your project directory. Then create a new directory called "student-directory" (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)), change into it and initialise it as an empty git repository (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
 
-![terminal](https://github.com/makersacademy/course/raw/master/student_directory/images/term.png)
+![terminal](/raw/master/student_directory/images/term.png)
 
 It makes sense to keep all projects you'll be working on in a designated project directory (and not on desktop, for example).
 
