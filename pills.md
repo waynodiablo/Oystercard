@@ -58,3 +58,5 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
 
 :pill: [Test Driven Development](https://github.com/makersacademy/course/blob/master/pills/tdd.md)
+
+:pill: [RSpec - Predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)
