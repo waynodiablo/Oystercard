@@ -37,11 +37,11 @@ We always begin a new project (unless it's a throwaway code that will not live u
 
 **Now let's create a repository on Github!**
 
-![new repo](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo.png)
+![new repo](/student_directory/images/new_github_repo.png)
 
 Make it public, name it "student-directory" (it's usually a good idea to use the same name for Github repos and local folders) but don't initialise it with a README – we'll do it manually. This is what your repo will look like right after it's created.
 
-![new repo created](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo_created.png)
+![new repo created](/student_directory/images/new_github_repo_created.png)
 
 Let's now initialise the repo with a README file and create a local remote ( :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)). Github gives you steps required to do it:
 
@@ -58,11 +58,11 @@ git push -u origin master
 
 Typing everything in also forces you to think about what exactly is going on. For example, what about the `git init` command? Is it really necessary here, given that we've already initialised the repo? Maybe not.
 
-![git push](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push.png)
+![git push](/student_directory/images/git_push.png)
 
 Once you do it, refresh the Github page. It should show an empty repo (with the README.md file only).
 
-![new repo readme](https://github.com/makersacademy/course/raw/master/student_directory/images/new_github_repo_readme.png)
+![new repo readme](/student_directory/images/new_github_repo_readme.png)
 
 Good, now we have an empty repo with a remote called "master" pointing to Github. This is the basic groundwork you need to do before creating any new project.
 
@@ -72,19 +72,19 @@ Let's start SublimeText now. You should be able to do this by running `subl .` i
 
 After you launch SublimeText, it should look like this.
 
-![sublime](https://github.com/makersacademy/course/raw/master/student_directory/images/sublime.png)
+![sublime](/student_directory/images/sublime.png)
 
 If you don't see the list of files and folders on the left, select View → Sidebar → Show Open Files.
 
 Let's now write a description for the project. This is a good idea because it will let other developers to quickly see what the codebase does. Every good project on Github has a good `README` file.
 
-![readme](https://github.com/makersacademy/course/raw/master/student_directory/images/readme.png)
+![readme](/student_directory/images/readme.png)
 
 This README file is written using [Github-flavoured markdown](https://help.github.com/articles/github-flavored-markdown). Take a look the both the [markdown reference](http://daringfireball.net/projects/markdown/basics) and the [Github-flavoured markdown](https://help.github.com/articles/github-flavored-markdown) reference so that you know what's possible.
 
 Then, write your README file (you don't have to use the same we used), commit the changes and push to Github to see what it looks like there.
 
-![gitconfig](https://github.com/makersacademy/course/raw/master/student_directory/images/git_config.png)
+![gitconfig](/student_directory/images/git_config.png)
 
 If you get the **"push.default is unset"** warning, like in the screenshot above, just choose the `simple` mode as the default.
 
@@ -96,7 +96,7 @@ There's an [explanation on StackOverflow](http://stackoverflow.com/questions/118
 
 After we push the README file, we'll see it on Github.
 
-![studentreadme](https://github.com/makersacademy/course/raw/master/student_directory/images/student_directory_readme.png)
+![studentreadme](/student_directory/images/student_directory_readme.png)
 
 Now we have a local and and a remote repo with a README file that describes the project we're about to create.
 
@@ -106,11 +106,11 @@ Throughout this and future tutorials we will be giving links to specific commits
 
 Let's now write some Ruby code. First, create a file called directory.rb in the project directory by using the "touch" command (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)). Don't forget the extension (".rb") and don't put any spaces in the filename.
 
-![touch](https://github.com/makersacademy/course/raw/master/student_directory/images/touch.png)
+![touch](/student_directory/images/touch.png)
 
 Now you should see the empty file in SublimeText.
 
-![directoryrb](https://github.com/makersacademy/course/raw/master/student_directory/images/directoryrb.png)
+![directoryrb](/student_directory/images/directoryrb.png)
 
 Find out the names of the students in your cohort (great excuse to say hello to everyone again and have a little chat!) and print them all. I'll just use fictional names here. 
 
@@ -132,7 +132,7 @@ puts "The Joker"
 
 Now save the file and run it by passing the filename as an argument to ruby.
 
-![directoryexec](https://github.com/makersacademy/course/raw/master/student_directory/images/directoryexec.png)
+![directoryexec](/student_directory/images/directoryexec.png)
 
 You should see all names printed on the screen. If you get an error, it may look like this.
 
@@ -150,7 +150,7 @@ We need to commit the change because we've just done a small but meaningful piec
 
 It's a good idea to commit code once a specific change was introduced to the codebase and this change is finished. For example, we've just put a list of students in the codebase. We are happy with the codebase as it is right now because it works. A bad time to commit the code would be when the code is broken (it throws an error) or half-finished (you haven't double-checked the spelling yet, for example).
 
-![git push2](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push_2.png)
+![git push2](/student_directory/images/git_push_2.png)
 
 Now, what does the code do? Every puts statement prints a line of text in the terminal. More precisely, it prints it to the standard output (:pill: [The command line](https://github.com/makersacademy/course/blob/master/pills/command_line.md)).
 
@@ -206,7 +206,7 @@ The "\n" is an escape sequence (_[There are many more of them](http://en.wikiboo
 
 So, now that we added the student count, let's commit it again.
 
-![git push3](https://github.com/makersacademy/course/raw/master/student_directory/images/git_push_3.png)
+![git push3](/student_directory/images/git_push_3.png)
 
 If you would like to see what the code looks like at this stage of the tutorial, [follow this link](https://github.com/makersacademy/student-directory/tree/eff34bdc6aa33810178b6dac18bbe7e917523fef).
 
@@ -601,7 +601,7 @@ Some of them are easy and some are more challenging. If you find yourself strugg
 9. Once you complete the previous exercise, change the way the users are displayed: print them grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the map() method may be useful but it's not the only option), iterate over it and only print the students from that cohort.
 10. Right now if we have only one student, the user will see a message "Now we have 1 students", whereas it should be "Now we have 1 student". How can you fix it so that it used singular form when appropriate and plural form otherwise?
 11. We've been using the chomp() method to get rid of the last return character. Find another method among those provided by the String class that could be used for the same purpose (although it will require passing some arguments).
-12. Once you have completed the "Asking for user input" section, open [this file](https://raw.github.com/makersacademy/student-directory/b1820c858409e93166ac86cb1aa6b54fee2e1d7a/directory.rb). It's Ruby code but it has some typos. Copy it to a local file and open it in SublimeText without syntax highlighting. To do this, select "Plain Text" in the lower right corner of the window. It should look like this: ![rubysyntaxhighlighting](https://github.com/makersacademy/course/raw/master/student_directory/images/SelectingRubySyntaxHighlighting.png)
+12. Once you have completed the "Asking for user input" section, open [this file](https://raw.github.com/makersacademy/student-directory/b1820c858409e93166ac86cb1aa6b54fee2e1d7a/directory.rb). It's Ruby code but it has some typos. Copy it to a local file and open it in SublimeText without syntax highlighting. To do this, select "Plain Text" in the lower right corner of the window. It should look like this: ![rubysyntaxhighlighting](/student_directory/images/SelectingRubySyntaxHighlighting.png)
  Now, find all typos in that file and correct them. Use your experience, online documentation, etc. to find all mistakes. Run the script in the terminal from time to time to make sure it works as it should. Google the errors Ruby will give you, think about what they could mean, try different things but don't look the answer up :)
 13. What happens if the user doesn't enter any students? It will try to print an empty list. How can you use an "if" statement (see Ruby 2) to only print the list if there is at least one student in there?
 
