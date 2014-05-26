@@ -28,6 +28,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md)
 
+:pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
+
 :pill: [Introducing Irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
 
 :pill: [Interacting with the users](https://github.com/makersacademy/course/blob/master/pills/user_interaction.md)
