@@ -2,7 +2,8 @@
 
 1. [Day one](https://github.com/makersacademy/course/blob/master/day_one.md)
 2. [The Basics: Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md)
-3. Boris Bikes
+3. [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
+4. More advanced OO with games: Battle Ships
 
 ## Supporting Materials
 
