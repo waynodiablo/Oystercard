@@ -22,9 +22,13 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Creating Ruby Files](https://github.com/makersacademy/course/blob/master/pills/files.md)
 
+:pill: [Floats](https://github.com/makersacademy/course/blob/master/pills/floats.md)
+
 :pill: [Gems](https://github.com/makersacademy/course/blob/master/pills/gems.md)
 
 :pill: [Hashes](https://github.com/makersacademy/course/blob/master/pills/hashes.md)
+
+:pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
 
 :pill: [Introducing Irb](https://github.com/makersacademy/course/blob/master/pills/irb.md)
 
@@ -33,6 +37,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)
 
 :pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
+
+:pill: [Modules](https://github.com/makersacademy/course/blob/master/pills/modules.md)
 
 :pill: [Parallel Assignment](https://github.com/makersacademy/course/blob/master/pills/parallel_assignment.md)
 
