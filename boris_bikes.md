@@ -493,7 +493,7 @@ class DockingStation
 end
 ````
 
-If you run the test now, you'll get the same an error again. Again, unless it's immediately obvious, think about what's going on. We created the class but Ruby can't link the test to the class definition because we never "required" the file. Remember, we had exactly the same problem with the Bike class? Fix the problem by requiring the class file just like we've done it in the Bike test (I'm omitting the exact line of code as an tiny exercise for you).
+If you run the test now, you'll get the same an error again. Again, unless it's immediately obvious, think about what's going on. We created the class but Ruby can't link the test to the class definition because we never "required" the file. Remember, we had exactly the same problem with the Bike class? Fix the problem by requiring the class file just like we've done it in the Bike test (I'm omitting the exact line of code as a tiny exercise for you).
 
 If you've done it correctly, you should now see a test failure
 
