@@ -105,7 +105,7 @@ The newer `expect` syntax should be used whenever possible but you'll come acros
 So, now that you have an idea of what this test does, let's run it. It will fail.
 
 ````
-rspec bike_spec.rb
+rspec spec/bike_spec.rb
 /Users/ecomba/dev/boris_bikes/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
 	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `load'
 	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
