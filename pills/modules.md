@@ -15,7 +15,9 @@ end
 
 It looks just like a class, except that instead of the **class** keyword on line 1 we use the **module** keyword. The key difference between modules and classes is that classes can be instantiated but modules cannot.
 
-`Demo.new # this is wrong, modules can't be instantiated!`
+```ruby
+Demo.new # this is wrong, modules can't be instantiated!
+```
 
 So, what are modules good for? We can include them into classes (and other modules). For example:
 
