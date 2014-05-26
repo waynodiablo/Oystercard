@@ -10,7 +10,8 @@ module Demo
   def greet(name)
     puts "#{GREETING}, #{name}"
   end
-end```
+end
+```
 
 It looks just like a class, except that instead of the **class** keyword on line 1 we use the **module** keyword. The key difference between modules and classes is that classes can be instantiated but modules cannot.
 
