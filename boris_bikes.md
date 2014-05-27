@@ -103,7 +103,7 @@ The newer `expect` syntax should be used whenever possible but you'll come acros
 So, now that you have an idea of what this test does, let's run it. It will fail.
 
 ````
-rspec bike_spec.rb
+rspec spec/bike_spec.rb
 /Users/ecomba/dev/boris_bikes/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
 	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `load'
 	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
@@ -491,7 +491,7 @@ class DockingStation
 end
 ````
 
-If you run the test now, you'll get the same an error again. Again, unless it's immediately obvious, think about what's going on. We created the class but Ruby can't link the test to the class definition because we never "required" the file. Remember, we had exactly the same problem with the Bike class? Fix the problem by requiring the class file just like we've done it in the Bike test (I'm omitting the exact line of code as an tiny exercise for you).
+If you run the test now, you'll get the same an error again. Again, unless it's immediately obvious, think about what's going on. We created the class but Ruby can't link the test to the class definition because we never "required" the file. Remember, we had exactly the same problem with the Bike class? Fix the problem by requiring the class file just like we've done it in the Bike test (I'm omitting the exact line of code as a tiny exercise for you).
 
 If you've done it correctly, you should now see a test failure
 

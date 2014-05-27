@@ -1,6 +1,6 @@
 # Inheritance
 
-One strategy is inheritance. OOP allows classes to "subclass" from each other, inheriting the common functionality. Consider this example.
+One strategy is inheritance. [OOP](https://github.com/makersacademy/course/blob/master/boris_bikes.md) allows classes to "subclass" from each other, inheriting the common functionality. Consider this example.
 
 ```ruby
 class Car
