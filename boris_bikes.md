@@ -28,8 +28,6 @@ Our classes will implement a number of methods. To get an idea of what they may 
 
 Again, not all verbs will become methods and we'll have methods that don't correspond to any verbs in this description but that's ok. Right now we just need a idea of what they could be.
 
-**TODO: add crc cards primer**
-
 ## Version 1: Setting up the project & building the bike
 
 It's time to write some code. The first step should be describing what you will build using specs. Create a new repository in your projects directory (mine is called ~/makers) and add a `README.md` file to the repository.
