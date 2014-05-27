@@ -12,4 +12,4 @@ To know which object is self, you need to know what context you’re in.
 
 Table 1.1 How the current object (self) is determined
 
-![Table 1.1]()
+![Table 1.1](https://github.com/makersacademy/course/blob/master/pills/images/table_1-1.png)
