@@ -1,4 +1,4 @@
-# Boris Bikes
+# OOD & OOP Basics: Boris Bikes
 
 The goal of this project is to introduce you to [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming)and show you the very basics of [Object-Oriented Design (OOD)](https://en.wikipedia.org/wiki/Object-oriented_design).
 
@@ -988,3 +988,21 @@ There's a really good overview of [potential strategies you could use on StackOv
 8. The method that releases the bike takes an argument: a bike to release. Would in make sense to rewrite the method to not to take any arguments? What are the pros and cons? How will you release broken bikes in this case? Discuss with other students and update the code, if necessary.
 9. Go over your code and identify if there are any scenarios that are not covered with tests and write tests for them. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
 10. Finally, identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 1-2 lines? Does anything look ugly to you?
+
+## Supporting Material
+
+### Pills
+
+- :pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
+- :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
+- :pill: [Understanding self, the current/default object](https://github.com/makersacademy/course/blob/master/pills/self.md)
+
+### Resources
+
+- [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
+- [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
+- [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
+- [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
+
+
+
