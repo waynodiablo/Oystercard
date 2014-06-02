@@ -16,10 +16,11 @@ One of the things you have to keep in mind is to simplify as much as you can whe
 
 **Tasks**:
 
-1. [Create your **battleships** repository](/new) (use the name _battleships_) in Github.
-2. Add a description of your project into the `README.md` file.
-3. Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
-4. Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
+1. Create the **CRC** model of the classes involved in the game. 
+2. [Create your **battleships** repository](/new) (use the name _battleships_) in Github.
+3. Add a description of your project into the `README.md` file.
+4. Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
+5. Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
 
 ## Version 1: The Model
 
