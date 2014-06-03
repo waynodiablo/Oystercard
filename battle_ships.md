@@ -1,12 +1,12 @@
 # More advanced OO with games: Battle Ships
 
-Battleships (or Battleship) is a game where each player places a number of ships on a board. The board is a 10x10 two dimensional grid.
+Battleships (or Battleship) is a game where each player has a board upon which they can place a number of ships. The boards are 10x10 two dimensional grid.
 
 ![Battleships grid](https://upload.wikimedia.org/wikipedia/commons/6/65/Battleship_game_board.svg)
 
-After the ships have been placed on a players board each player takes turns to shoot on the opponents board. In each round, each player takes a turn to announce a target square in the opponent's grid which is to be shot at. The opponent announces whether or not the square is occupied by a ship, and if it is a _hit_ they mark this on their own primary grid. The attacking player notes the hit or miss on their own _tracking_ grid, in order to build up a picture of the opponent's fleet.
+After each player has placed their ships on their own board they take turns to shoot on the opponents board. In each round, each player takes a turn to announce a target square in the opponent's grid which is to be shot at. The opponent announces whether or not the square is occupied by a ship, and if it is a _hit_ they mark this on their own primary grid. The attacking player notes the hit or miss on their own _tracking_ grid, in order to build up a picture of the opponent's fleet.
 
-When all the opponents ships have been hit by the game finishes.
+When all of one player's ships have been hit the game finishes and the player who has ships remaining is the winner.
 
 ## Version 0: Modelling the domain
 
@@ -17,7 +17,7 @@ One of the things you have to keep in mind is to simplify as much as you can whe
 **Tasks**:
 
 1. Create the **CRC** model of the classes involved in the game. 
-2. [Create your **battleships** repository](/new) (use the name _battleships_) in Github.
+2. Create your **battleships** repository (use the name _battleships_) in Github.
 3. Add a description of your project into the `README.md` file.
 4. Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
 5. Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
