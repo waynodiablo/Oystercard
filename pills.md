@@ -42,6 +42,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Modules](https://github.com/makersacademy/course/blob/master/pills/modules.md)
 
+:pill: [Namespacing](https://github.com/makersacademy/course/blob/master/pills/namespacing.md)
+
 :pill: [Parallel Assignment](https://github.com/makersacademy/course/blob/master/pills/parallel_assignment.md)
 
 :pill: [Procs](https://github.com/makersacademy/course/blob/master/pills/procs.md)
