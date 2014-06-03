@@ -4,7 +4,7 @@
 
 ````ruby
 [1,2,3].nonexistent #=> NoMethodError: undefined method `nonexistent'
-''''
+````
 
 Or, if you try to divide by zero, you'll get an error:
 
