@@ -206,7 +206,7 @@ Check that it all works by running the test (make sure you have required "data_m
 
 `$ rspec`
 Run options: include {:focus=>true}
-`
+```
 All examples were filtered out; ignoring {:focus=>true}
 .
 
@@ -215,7 +215,7 @@ Finished in 0.00991 seconds
 
 Randomized with seed 41436
 
-`
+```
 
 Why two databases?
 
