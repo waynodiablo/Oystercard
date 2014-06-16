@@ -589,8 +589,817 @@ First we find the tag that we need (note the use of a named parameter in the rou
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/e45ed5d9c3289c8320632e6aadcc56c3d624fbcc
 
-## Adding user accounts
-todo
+##Bookmark manager – Adding user accounts
+
+Let's implement basic user account functionality using what we learned in Security. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user. This section will rely on your understanding of what we (will) have discussed in Security.
+
+The goal of this exercise is to demonstrate how to create a user management system from scratch without using user management libraries (we'll be using them later in the course, though).
+
+We will add the following functionality:
+*Sign up with an email and a password
+*Sign in
+*Sign out
+*A welcome message for the logged in user
+*Every link and every tag will be linked to the user that created it, unless the user was anonymous
+
+We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
+
+Bookmark manager - Adding user accounts - signing up
+Let's begin with a test, as usual. The integration test should go to /spec/features/user_management_spec.rb.
+```ruby
+require 'spec_helper'
+
+feature "User signs up" do
+ 
+  # Strictly speaking, the tests that check the UI 
+  # (have_content, etc.) should be separate from the tests 
+  # that check what we have in the DB. The reason is that 
+  # you should test one thing at a time, whereas
+  # by mixing the two we're testing both 
+  # the business logic and the views.
+  #
+  # However, let's not worry about this yet 
+  # to keep the example simple.
+
+  
+  scenario "when being logged out" do    
+    lambda { sign_up }.should change(User, :count).by(1)    
+    expect(page).to have_content("Welcome, alice@example.com")
+    expect(User.first.email).to eq("alice@example.com")        
+  end
+
+  def sign_up(email = "alice@example.com", 
+              password = "oranges!")
+    visit '/users/new'
+    expect(page.status_code).to eq(200)
+    expect(page.status_code).to eq(200)
+    fill_in :email, :with => email
+    fill_in :password, :with => password
+    click_button "Sign up"
+  end
+
+end
+```
+
+Running the test tells us that we haven't got the User class. Let's create a basic model in /lib/user.rb (where the Link model is).
+
+```ruby
+class User
+
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :email, String
+  
+end
+```
+
+A word of caution. If you declare a property, you shouldn't declare an accessor (or reader, or writer) for that property because you'll override datamapper's default functionality. Ruby will not throw any warning in this case. In other words, if you do this:
+
+```ruby
+# this is wrong!
+property :description, Text
+attr_reader :description
+```
+
+you will not be able to get the description back from the database.
+
+The next error in our test suite is not having the form to fill in to sign up. That's easy to fix by updating app/server.rb (or just server.rb if you chose to place it in the root folder).
+
+```ruby
+get '/users/new' do
+  # note the view is in views/users/new.erb
+  # we need the quotes because otherwise
+  # ruby would divide the symbol :users by the
+  # variable new (which makes no sense)
+  erb :"users/new"
+end
+
+```
+
+
+and /views/users/new.erb.
+
+```html
+
+<h1>Please sign up</h1>
+
+<form action="/users" method="post">
+  Email: <input name="email" type="text">
+  Password: <input name="password" type="password">
+  <input type="submit" value="Sign up">
+</form>
+
+```
+
+Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist. Let's fix this in /app/server.rb
+
+```ruby
+post '/users' do
+  User.create(:email => params[:email], 
+              :password => params[:password])
+  redirect to('/')
+end
+```
+
+This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails. Let's extend our User class (/lib/user.rb).
+
+```ruby
+# bcrypt will generate the password hash
+require 'bcrypt'
+class User
+
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :email, String
+  # this will store both the password and the salt
+  # It's Text and not String because String holds 
+  # 50 characters by default
+  # and it's not enough for the hash and salt
+  property :password_digest, Text
+
+  # when assigned the password, we don't store it directly
+  # instead, we generate a password digest, that looks like this:
+  # "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa"
+  # and save it in the database. This digest, provided by bcrypt,
+  # has both the password hash and the salt. We save it to the 
+  # database instead of the plain password for security reasons.
+  def password=(password)
+    self.password_digest = BCrypt::Password.create(password)
+  end
+
+end
+
+```
+
+Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in Sudoku – web version).
+
+First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into /server.rb.
+
+```ruby
+enable :sessions
+set :session_secret, 'super secret'
+
+Then, let's save the user id in the session after it's created (/server.rb).
+
+post '/users' do
+  user = User.create(:email => params[:email], 
+                     :password => params[:password])  
+  session[:user_id] = user.id
+  redirect to('/')
+end
+
+```
+
+Then, let's create a helper that will give us access to the current user, if logged in (server.rb).
+
+```ruby
+helpers do
+
+  def current_user    
+    @current_user ||=User.get(session[:user_id]) if session[:user_id]
+  end
+
+end
+
+```
+
+Finally, let's use this helper in the layout file (/views/layout.erb)
+
+```html
+<body>
+  <% if current_user %>
+    Welcome, <%= current_user.email %>
+  <% end %>
+  <%= yield %>
+</body>
+
+```
+
+Finally, make sure 'bcrypt-ruby' is in your Gemfile and it's installed. Our test finally passes.
+
+Let's clean the code up a little bit by extracting the helpers and datamapper-related code to external files and moving server.rb, views and helpers to /app. Now the codebase looks a little bit cleaner.
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd31ddf5d7706d139
+
+### Bookmark manager - Adding user accounts - Password confirmation
+
+Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by adding a test for this.
+```ruby
+  scenario "with a password that doesn't match" do
+    lambda { sign_up('a@a.com', 'pass', 'wrong') }.should change(User, :count).by(0)    
+  end
+
+  def sign_up(email = "alice@example.com", 
+              password = "oranges!", 
+              password_confirmation = "oranges!")
+    visit '/users/new'
+    fill_in :email, :with => email
+    fill_in :password, :with => password
+    fill_in :password_confirmation, :with => password_confirmation
+    click_button "Sign up"
+  end
+
+```
+
+So we pass a non-matching password and we expect the user to not be created. Modify the erb template accordingly and then add the virtual attributes to the User model.
+
+```ruby
+attr_reader :password
+attr_accessor :password_confirmation
+
+# this is datamapper's method of validating the model.
+# The model will not be saved unless both password
+# and password_confirmation are the same
+# read more about it in the documentation
+# http://datamapper.org/docs/validations.html
+validates_confirmation_of :password
+
+```
+
+The reason we need the reader for :password and :password_confirmation is that datamapper should have access to both values to make sure they are the same.
+
+The reason we need the writer for :password_confirmation is that we're now passing the password confirmation to the model in the controller.
+
+```ruby
+post '/users' do
+  user = User.create(:email => params[:email], 
+              :password => params[:password],
+              :password_confirmation => params[:password_confirmation])  
+  session[:user_id] = user.id
+  redirect to('/')
+end
+```
+
+However, you may wonder what happens to :password since we wrote a custom writer for this property.
+
+```ruby
+  def password=(password)
+    self.password_digest = BCrypt::Password.create(password)
+  end
+```
+
+Because we have a custom writer for this property, we'll never be storing the plain text password in an instance variable and datamapper will be unable to compare it to the password confirmation. Let's fix it by modifying our writer.
+
+```ruby
+  def password=(password)
+    @password = password
+    self.password_digest = BCrypt::Password.create(password)
+  end
+
+```
+
+Now the test passes.
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/f41a3a2b35451eadd0773e0abbc8e85aba481e90
+
+### Bookmark manager - Adding user accounts - Handling input errors
+
+Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
+
+```ruby 
+post '/users' do
+  user = User.create(:email => params[:email], 
+              :password => params[:password],
+              :password_confirmation => params[:password_confirmation])    
+  # the user.id will be nil if the user wasn't saved
+  # because of password mismatch
+  session[:user_id] = user.id
+  redirect to('/')
+end
+```
+
+Let's extend the test to expect a redirection back to the sign up form if the passwords don't match.
+```ruby
+
+  scenario "with a password that doesn't match" do
+    lambda { sign_up('a@a.com', 'pass', 'wrong') }.should change(User, :count).by(0) 
+    expect(current_path).to eq('/users')   
+    expect(page).to have_content("Sorry, your passwords don't match")
+  end
+```
+
+This test expects the website to stay at /users, instead of navigating to the home page (note the use of the current_path helper, provided by capybara). The reason is that we are submitting the form to /users and we don't want the redirection to happen if the user is not saved because we will lose the unsaved data.
+
+Let's suppose we have a longer sign up form. A user fills out 20 fields but makes a mistake in password_confirmation. If we refresh the page by doing a redirect, we'll lose all information that was entered in the form because it was never saved to the database. This information only exists in memory, as properties of the invalid User model that is alive only for the duration of this request.
+
+So, instead of redirecting the user, let's show the same form but this time we'll populate it using our invalid User object.
+```ruby
+
+post '/users' do
+  # we just initialize the object
+  # without saving it. It may be invalid
+  user = User.new(:email => params[:email], 
+              :password => params[:password],
+              :password_confirmation => params[:password_confirmation])  
+  # let's try saving it
+  # if the model is valid,
+  # it will be saved
+  if user.save
+    session[:user_id] = user.id
+    redirect to('/')
+    # if it's not valid,
+    # we'll show the same
+    # form again
+  else
+    erb :"users/new"
+  end
+end
+```
+
+This is a fairly common pattern of handling potential errors. Instead of creating the object straight away, you initialise it, attempt to save and handle both possibilities.
+
+However, how will the data (in our case the email the user entered) make its way from the user object to the re-rendered form? Let's make the user an instance variable and update the view.
+
+```ruby
+post '/users' do
+  @user = User.new(:email => params[:email], 
+              :password => params[:password],
+              :password_confirmation => params[:password_confirmation])  
+  if @user.save
+    session[:user_id] = @user.id
+    redirect to('/')
+  else
+    erb :"users/new"
+  end
+end
+```
+
+```html
+
+Email: <input name="email" type="text" value="<%= @user.email %>">
+```
+
+Now the email will be part of the form when it's rendered again.
+
+Because the view now expects @user instance variable, we must make sure that it's available in the /users/new route as well.
+
+```ruby
+get '/users/new' do
+  @user = User.new
+  erb :"users/new"
+end
+
+```
+
+An new instance of the user will simply return nil for @user.email.
+
+Finally, let's display a flash message, notifying the user of the error. Add the rack-flash3 gem as described in Sudoku – web version and set the flash before the view is re-rendered.
+
+```ruby
+
+if @user.save
+  session[:user_id] = @user.id
+  redirect to('/')
+else
+  flash[:notice] = "Sorry, your passwords don't match"
+  erb :"users/new"
+end
+```
+
+Finally, display it in the layout.erb.
+
+```ruby
+<% if flash[:notice] %>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+```
+
+It will be displayed on top the page that was re-rendered (note the /users path).
+
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380105990218_Screen%20Shot%202013-09-25%20at%2011.46.01.png "bookmark manager")
+
+
+Finally, our tests pass.
+```
+Finished in 0.40513 seconds
+7 examples, 0 failures
+```
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
+
+### Bookmark manager - Adding user accounts - Three level of data checks
+
+Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
+
+In general, there are three levels at which you can and should check for the uniqueness in a well-designed application.
+
+Firstly, you should check it before the form is submitted by sending a request to the server to check if the form is valid. This is done using Javascript that we haven't covered yet, so let's ignore it for now. You can't rely exclusively on this check anyway because the form may be submitted directly without the page being rendered or javascript may be disabled.
+
+You can see an example of it in action on Github if you try to create a new repository with a non-unique name.
+
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380107708596_Screen%20Shot%202013-09-25%20at%2012.13.52.png "bookmark manager")
+
+Secondly, you should check for the uniqueness of records on the model level by using validations. This will allow you to display meaningful error messages. So, on the model level we want to have a uniqueness validation:
+
+```ruby
+validates_uniqueness_of :email
+```
+
+This datamapper validation will check if a record with this email exists before trying to create a new one.
+
+Finally, you should introduce database-level constraints. This is a safety check that protects the database in case any data is written directly, bypassing the model. For example, if you need to batch-add 10,000 new users from a text file, you may not want to initialise your User model for every record for performance reasons. Instead, you'll write to the database directly bypassing datamapper. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level contraints.
+
+```ruby
+property :email, String, :unique => true
+```
+
+This will generate SQL that will create a unique index on that field.
+
+```
+CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" VARCHAR(50), "password_digest" TEXT, PRIMARY KEY("id"))
+CREATE UNIQUE INDEX "unique_users_email" ON "users" ("email")
+```
+This unique index on users.email will make sure that no records with duplicate emails will ever be saved to the database.
+
+In datamapper's case, creating a unique index automatically implies the necessity of the validation, so this code
+```ruby
+validates_uniqueness_of :email
+```
+
+would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
+
+### Bookmark manager - Adding user accounts - Preventing duplicate registrations
+
+Let's write a test first, as usual, checking that we can't register the same user twice.
+```ruby
+  scenario "with an email that is already registered" do    
+    lambda { sign_up }.should change(User, :count).by(1)
+    lambda { sign_up }.should change(User, :count).by(0)
+    expect(page).to have_content("This email is already taken")
+  end
+
+  ```
+
+We need to do two things. Firstly, we need to put constrains on the email field.
+
+property :email, String, :unique => true, :message => "This email is already taken"
+
+We're setting the error message datamapper is going to return explicitely even though a very similar message would be used by default if we didn't specify it.
+
+Secondly, we need to refactor our controller code. Right now it looks like this.
+
+```ruby
+if @user.save
+  session[:user_id] = @user.id
+  redirect to('/')
+else
+  flash[:notice] = "Sorry, your passwords don't match"
+  erb :"users/new"
+end
+```
+
+The problem is that the only error message that this controller can show is the one about passwords not being the same. However, we need to show various error messages and even several messages at the same time, if necessary. Let's take the list of messages from datamapper.
+
+```ruby
+if @user.save
+    session[:user_id] = @user.id
+    redirect to('/')
+  else
+    flash.now[:errors] = @user.errors.full_messages
+    erb :"users/new"
+  end
+```
+
+Note that we're switching to using flash[:errors] instead of flash[:notice]. Given that these errors prevent us from proceeding further, it's more appropriate to call them errors.
+
+We're also using flash.now instead of just flash. By default, a flash message is available for both the current request and the next request. This is very convenient if we're doing a redirect. However, since we are just re-rendering the page, we just want to show the flash for the current request, not for the next one. If we use flash[:errors], then after the user fixes the mistakes, we'll be redirected to the homepage where we'll see our message again.
+
+The @user.errors object contains all validation errors. It can be used to get errors for a given field (if you want to display the error next to a specific field). The full_messages method just returns an array of all errors as strings. Let's display them in our layout file.
+
+```html
+<% if flash[:errors] && !flash[:errors].empty? %>
+  Sorry, there were the following problems with the form. 
+  <ul id="errors">
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+```
+
+Now we get a list of errors if the user is trying to both register with the same email and mistypes the password.
+
+
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380116432734_Screen%20Shot%202013-09-25%20at%2014.39.55.png "bookmark manager")
+
+
+We have all the code we need to make our tests pass. (If your tests fail, the chances are the database is in an inconsistent state, see the next section).
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/44a6f6d79ab74d5da01487c14ac5929349e74651
+
+### Bookmark manager - Adding user accounts - Rake tasks for database management
+
+Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute DataMapper.auto_migrate! instead of DataMapper.auto_upgrade! after we create a unique index.
+
+Right now our data_upgrade! call is in data_mapper_setup but this creates two problems. First, we don't want to edit this file every time we want to run data_migrate! instead. Second, we don't want to run data_upgrade every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
+
+Rake is a tool for running automated tasks. The tasks are defined in Rakefile (with capital R). Put this Rakefile in the root folder of the project.
+
+```ruby
+require 'data_mapper'
+require './app/data_mapper_setup'  
+
+task :auto_upgrade do  
+  # auto_upgrade makes non-destructive changes. 
+  # If your tables don't exist, they will be created
+  # but if they do and you changed your schema 
+  # (e.g. changed the type of one of the properties)
+  # they will not be upgraded because that'd lead to data loss.
+  DataMapper.auto_upgrade!
+  puts "Auto-upgrade complete (no data loss)"
+end
+
+task :auto_migrate do
+  # To force the creation of all tables as they are 
+  # described in your models, even if this
+  # may lead to data loss, use auto_migrate:
+  DataMapper.auto_migrate!
+  puts "Auto-migrate complete (data could have been lost)"
+end
+# Finally, don't forget that before you do any of that stuff, 
+# you need to create a database first.
+```
+
+
+The syntax should be self-explanatory. We define two tasks: "auto_migrate" and "auto_upgrade". Whenever we want to run any of them, we just invoke rake from the command line:
+
+```
+$ rake auto_migrate
+```
+
+This way you can upgrade or migrate your database manually after every change to the model. Ruby on Rails makes extensive use of Rake tasks, as we'll see later.
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/a97fbdb0d12210277d6dca158b03ce6c88d07677
+
+### Bookmark manager - Adding user accounts - Signing in
+The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
+```ruby
+feature "User signs in" do
+
+  before(:each) do
+    User.create(:email => "test@test.com", 
+                :password => 'test', 
+                :password_confirmation => 'test')
+  end
+
+  scenario "with correct credentials" do
+    visit '/'
+    expect(page).not_to have_content("Welcome, test@test.com")
+    sign_in('test@test.com', 'test')
+    expect(page).to have_content("Welcome, test@test.com")
+  end
+
+  scenario "with incorrect credentials" do
+    visit '/'
+    expect(page).not_to have_content("Welcome, test@test.com")
+    sign_in('test@test.com', 'wrong')
+    expect(page).not_to have_content("Welcome, test@test.com")
+  end
+
+  def sign_in(email, password)
+    visit '/sessions/new'
+    fill_in 'email', :with => email
+    fill_in 'password', :with => password
+    click_button 'Sign in'
+  end
+
+end
+```
+
+The only interesting part in this test is line 24. Why do we want to sign_in at "/sessions/new", and not at "/sign_in", "/users/sign_in", "/login" or something like this? Technically, it would work but it wouldn't be as elegant.
+
+When signing in or out, we are manipulating a session: creating it, destroying it, and displaying a form to create it. By creating urls that define actions that apply to resources, we will achieve more elegant and easy to understand urls. Compare this
+
+```
+/users/new
+/users
+/users/edit
+/sessions/new
+/sessions
+```
+
+to this
+```
+
+/create_user_form
+/create_user
+/edit_user_form
+/edit_user
+/sign_in_form
+/sign_in
+/logout
+```
+
+The first approach is far more elegant. We've barely touched how urls should be defined (it's a slightly larger topic) but we'll go into details in Routing and REST.
+
+To make this work, we'll need a form in sessions/new
+
+```html
+Please sign in.
+
+<form method="post" action="/sessions">
+  Email: <input type="text" name='email'>
+  Password: <input type="password" name='password'>
+  <input type="submit" value="Sign in">
+```
+a method to show this form:
+```ruby 
+get '/sessions/new' do
+  erb :"sessions/new"
+end
+```
+
+a method to handle form submission
+
+```ruby
+post '/sessions' do
+  email, password = params[:email], params[:password]
+  user = User.authenticate(email, password)
+  if user
+    session[:user_id] = user.id
+    redirect to('/')
+  else
+    flash[:errors] = ["The email or password is incorrect"]
+    erb :"sessions/new"
+  end
+end
+```
+
+and the User.authenticate method that we'll get to in a second.
+
+Note that we're using the same pattern we used before: we try to obtain the user object by authenticating using the email and password provided and then check if we got one. If we did, we sign the user in and redirect. If we didn't, we show an error and display the form again.
+
+Finally, we need a class method to authenticate a user.
+
+```ruby
+def self.authenticate(email, password)
+  # that's the user who is trying to sign in
+  user = first(:email => email)
+  # if this user exists and the password provided matches
+  # the one we have password_digest for, everything's fine
+  #
+  # The Password.new returns an object that overrides the ==
+  # method. Instead of comparing two passwords directly
+  # (which is impossible because we only have a one-way hash)
+  # the == method calculates the candidate password_digest from
+  # the password given and compares it to the password_digest
+  # it was initialised with.
+  # So, to recap: THIS IS NOT A STRING COMPARISON 
+  if user && BCrypt::Password.new(user.password_digest) == password
+    # return this user
+    user
+  else
+    nil
+  end
+end
+
+```
+
+Since we're using bcrypt to generate a one-way hash, we cannot compare the passwords directly. We genuinely have no way of recovering the actual password. It is lost forever. However, what we do have is a digest that we can use to check if the password the user is trying to log in with is correct.
+
+So we pass the password that the user is trying to log in with to the == method of the Password class. That method then calculates the digest for that password and compares it to the one in the database. It could look like this (not real bcrypt code):
+
+```ruby
+module BCrypt
+  class Password
+    def initialize(digest)
+        @digest = digest
+    end
+    def ==(password)        
+        @digest == digest(salt(@digest), password)
+    end
+    def digest(salt, password)
+        # compute the digest
+        # by using bcrypt magic.
+        # return something like
+        # "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yKUOYTa"
+    end
+  end
+end
+```
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/3beb8ac44357ceedf643bcbc9fccd92459faa92d
+
+### Bookmark manager - Adding user accounts - Signing out
+
+So far we learned how to create the users and sign them in. Let's see how we can log them out.
+
+Since "signed in" only means that there's a user_id in the session, logging the user out is as simple as setting the session[:user_id] to nil. Let's write a test.
+
+```ruby
+feature 'User signs out' do
+
+  before(:each) do
+    User.create(:email => "test@test.com", 
+                :password => 'test', 
+                :password_confirmation => 'test')
+  end
+
+  scenario 'while being signed in' do
+    sign_in('test@test.com', 'test')
+    click_button "Sign out"
+    expect(page).to have_content("Good bye!") # where does this message go?
+    expect(page).not_to have_content("Welcome, test@test.com")
+  end
+
+end
+```
+
+Since the sign_in helper is now used for more than one feature (sign in and sign out), let's extract it into an separate helper and include it as a module:
+
+```ruby
+require_relative 'helpers/session'
+
+include SessionHelpers
+```
+
+The module now contains the methods sign_in and sign_up that we used to have in user_management_spec.
+
+We will now need to display the Sign Out button that the test expects. The layout is a good place to do it since we'll need it on all pages of our site.
+
+```html
+  <% if current_user %>
+    Welcome, <%= current_user.email %>
+    <form method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out">
+    </form>
+  <% end %>
+
+```
+The form sends a POST request to /sessions but it also includes a hidden field _method (note the underscore) with value "delete". The reason is that the common convention for a url that destroys a resource is sending a DELETE request to /resource_url. However, modern browsers are unable to send any requests other than GET or POST when the form is being submitted. A common solution to this problem, used by both Sinatra and Ruby on Rails, is to include a hidden field called _method that will override the actual type of request. So, when Sinatra receives this request, it will behave as if it were a DELETE request and not a POST request. Therefore, the handler for this form needs to specify "delete" as an HTTP verb:
+
+
+Finally, let's add support for flash[:notice] in our layout.
+```html
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+```
+
+The tests pass, so we know that the user can now be signed out.
+
+Now it's a good time to refactor our code a little bit. Let's install 'sinatra-partial' gem and use it like we did in Sudoku – web version to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder. After we do this, our server.rb is nice and clean, containing only require statements and high-level configuration. Let's also move the models from /lib to /app/models to make sure that the models, views and controllers are in one place (incidentally, we're following Ruby on Rails naming conventions to some extent).
+
+Current state is on Github
+https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
+
+### Bookmark manager - Adding user accounts - Forgotten password
+
+Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.
+
+If a user forgets the password, we cannot just send it by email for two reasons. Firstly, we don't know the password: we only have the digest. Secondly, that would be insecure because the password would likely be stored in the email archive. If the email archive is compromised, then the attacker would know the password.
+
+Instead of sending the password, we need to send a one-time password recovery token. It's a long random string that can be used only once and only for a limited time to change the password. The flow is as follows:
+
+*Create a form that can be used to request a new password. The only field you need is email.
+*Find the record of the user that's recovering the password.
+*Generate a long, random password recovery token and save it as part of the user record, together with a timestamp.
+```ruby
+user = User.first(:email => email)
+# avoid having to memorise ascii codes
+user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
+user.password_token_timestamp = Time.now
+user.save
+```
+*Create a route to reset the password: get "/users/reset_password/:token"
+*Send an email with this a link containing this token to the user.
+*When the link is clicked, find the user that has this token in the database.
+```ruby 
+user = User.first(:password_token => token)
+```
+*Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
+
+### Sending the email
+
+To send an email, you will need an external SMTP server that will do it for you. There are several companies provided these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku, making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
+
+First, you'll need to add the addon to heroku. This will make the API key that you need to send an email available in your env variables (you can read them by typing "heroku config" in the project folder).
+
+Sending the email is as easy as sending a POST request from your app. To send an HTTP request, you'll need one of the many available libraries (HTTParty, Net::HTTP, RestClient, etc). The following example is taken from the Mailgun quickstart guide. It uses RestClient.
+
+```ruby
+def send_simple_message
+  RestClient.post "https://api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0"\
+  "@api.mailgun.net/v2/samples.mailgun.org/messages",
+  :from => "Excited User <me@samples.mailgun.org>",
+  :to => "bar@example.com, baz@example.com",
+  :subject => "Hello",
+  :text => "Testing some Mailgun awesomness!"
+end
+```
+
+To test it locally it may be convenient to add the addon to Heroku to generate and API key and then create an environment variable in your .bash_profile to make it available locally.
+
 ## Styling the website
 todo
 
