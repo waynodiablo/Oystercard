@@ -5,9 +5,9 @@
 
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
 
-*Integration testing: Capybara (Monday)
-*Relational databases (Tuesday and Wednesday)
-*Security considerations (Thursday)
+* Integration testing: Capybara (Monday)
+* Relational databases (Tuesday and Wednesday)
+* Security considerations (Thursday)
 
 In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Sudoku – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
@@ -19,10 +19,10 @@ A bookmark manager is a website to maintain a collection of links, organised by 
 
 The website will have the following options:
 
-*Show a list of links from the database
-*Add new links
-*Add tags to the links
-*Filter links by a tag
+* Show a list of links from the database
+* Add new links
+* Add tags to the links
+* Filter links by a tag
 
 This is the basic view of the website. This tutorial will discuss how to build it, step by step. At the end of the section there are multiple exercises challenging you to extend the functionality of this website. 
 
@@ -41,8 +41,7 @@ To prevent this pad from getting very large, let's break it down into sections.
 
 In this project, we'll need to store the data in a database. Before we add any functionality, let's add a relational database to this project.
 
-
-First you will have to install postgresql (unless you have installed it already). eSQLFirst install postgresql. Postgres is a widely used open source relational database engine.
+First you will have to install postgresql (unless you have installed it already). First install PostgreSQL. Postgres is a widely used open source relational database engine.
 
 There are two ways of doing this. Downloading the app (2) will, sometimes, leave you with a non-working postgresql installation. We recommend using option 1.
 
@@ -56,8 +55,8 @@ After homebrew has downloaded the software it will show you some installation in
 
 Make sure you run these commands after installing postgresql with homebrew:
 
-`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist`
+`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`
+`launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist`
 
 You can check your installation by running
 
