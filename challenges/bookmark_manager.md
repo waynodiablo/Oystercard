@@ -2,6 +2,7 @@
 
 ### Completion time 3-4 days
 
+
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
 
 *Integration testing: Capybara (Monday)
