@@ -1440,29 +1440,33 @@ Let's start by creating a black header line that will have the logo and the sign
   </div>
 </header>
 ```
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380201890089_Screen%20Shot%202013-09-26%20at%2014.24.45.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380201890089_Screen%20Shot%202013-09-26%20at%2014.24.45.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/8dde272fc5957bff09d196d6ec56d1278aa0c7c9
 
 Let's now add sign up and sign in buttons.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380203189272_Screen%20Shot%202013-09-26%20at%2014.46.12.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380203189272_Screen%20Shot%202013-09-26%20at%2014.46.12.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/c61d9bb8c2516207c1bd16c26c2d4ca367135bfe
 
 Let's add some subtle texture to the background. The Extra Clean Paper on Subtle Patterns looks nice.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204212191_Screen%20Shot%202013-09-26%20at%2015.03.27.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204212191_Screen%20Shot%202013-09-26%20at%2015.03.27.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/94ff132a390afb6bc9e3bfffeb118f737bb64da9
 
 Let's now extract the form to add a link to its own page. To do this we need to create a new view, /links/new.erb, a new route in links.rb and update the tests that were expecting the form to be on the frontpage.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204564552_Screen%20Shot%202013-09-26%20at%2015.09.19.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204564552_Screen%20Shot%202013-09-26%20at%2015.09.19.png)
 
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204584565_Screen%20Shot%202013-09-26%20at%2015.09.39.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380204584565_Screen%20Shot%202013-09-26%20at%2015.09.39.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/3f393ebd1c36c290cc545f7d1c55012aba307c6d
 
 The logo of the website is usually a link to the frontpage. Let's make it a link by wrapping the text in the anchor element. We'll need to update our css to specify that all links in the header are white and have no text-decoration (by default, links are underlined). 
@@ -1485,12 +1489,13 @@ a.button.highlighted {
 
 Now we have a button that's slightly different from the default button. The space between the logo and the button is explained by the margin-right on the logo.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380205383837_Screen%20Shot%202013-09-26%20at%2015.22.58.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380205383837_Screen%20Shot%202013-09-26%20at%2015.22.58.png)
 
 The colour was chosen using Colorhexa. It can generate colour schemes: sets of colours that arguably go together. If you're can't tell what colours go together (I'm like this), use colour scheme generators.
 
 Note that I added a couple more links to the database.
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/7baae00b00b55846c4a4618c337c202523315879
 
 Let's now style the links list. First, let's put them into a container and move the link itself into a partial (remember partials from Sudoku – web version?). This will allow us to style the container itself.
@@ -1506,7 +1511,7 @@ Let's now style the links list. First, let's put them into a container and move 
 
 Just the white background, margins, padding and a hint of a shadow and it already looks better.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380206873619_Screen%20Shot%202013-09-26%20at%2015.47.45.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380206873619_Screen%20Shot%202013-09-26%20at%2015.47.45.png)
 
 Now let's make the links look better. First, let's create the elements we want to see in the link partial: title, description, time and author. We don't have most of the information yet, so let's use placeholders for now.
 
@@ -1555,10 +1560,11 @@ Most of the css for this partial is here.
 
 Now our frontpage looks much better.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380208869701_Screen%20Shot%202013-09-26%20at%2016.21.03.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380208869701_Screen%20Shot%202013-09-26%20at%2016.21.03.png)
 
 Note how the use of shadows gives the page depth.
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/2aac0e5a09c8a1f2bbaad5eecf774eb0c9494211
 
 Now let's add a footer to the page to give it completeness (and include a reference to Makers Academy in case this bookmark manager becomes really popular).
@@ -1613,19 +1619,20 @@ footer {
 
 This produces the following effect.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380216944437_Screen%20Shot%202013-09-26%20at%2018.33.15.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380216944437_Screen%20Shot%202013-09-26%20at%2018.33.15.png)
 
 The footer is not "sticky", that is, if the window is larger than the content available, then the footer will not be at the bottom of the page.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217103005_Screen%20Shot%202013-09-26%20at%2018.38.15.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217103005_Screen%20Shot%202013-09-26%20at%2018.38.15.png)
 
 There are various techniques of making the footer "sticky". Feel free to try this one.
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/27a54fced01e6c140d9040340c11e12709c57635
 
 Let's now get back to the header and write some CSS for the case when the user is logged in because right now it's not very pretty.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217495035_Screen%20Shot%202013-09-26%20at%2018.44.07.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217495035_Screen%20Shot%202013-09-26%20at%2018.44.07.png)
 
 The first step would be to give all children of #user-links the display: inline-block property. The second step would be to replace the default button with a beautiful button. Just add the class "button" and update the CSS because right now all relevant CSS declarations only apply to links with the class button, whereas we have an input element in the form. Also, we'll need to explicitely set font-size: 16px for the "button" class.
 
@@ -1645,7 +1652,7 @@ width: 110px;
 
 This finally produces a nice result: the input element looks exactly like a button.
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380218599377_Screen%20Shot%202013-09-26%20at%2019.02.51.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380218599377_Screen%20Shot%202013-09-26%20at%2019.02.51.png)
 
 One last change to the header, though. When you hover over links, the cursor looks like a hand, whereas if you hover over an input element, it looks like an arrow. It's easy to fix by forcing the cursor we need for the button class.
 
@@ -1653,12 +1660,13 @@ One last change to the header, though. When you hover over links, the cursor loo
 cursor: pointer; /* pointer looks like a hand */
 ```
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/9c854827b174fa962a5c06df70bf8234c2bc81d3
 
 Finally, let's style the flash message. At the moment it's not styled at all, it just appears as text:
 
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380219002454_Screen%20Shot%202013-09-26%20at%2019.09.57.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380219002454_Screen%20Shot%202013-09-26%20at%2019.09.57.png)
 
 Let's make it beatiful. A few trivial changes produce a better flash notice.
 
@@ -1674,16 +1682,18 @@ Let's make it beatiful. A few trivial changes produce a better flash notice.
 }
 ```
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380219458030_Screen%20Shot%202013-09-26%20at%2019.17.30.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380219458030_Screen%20Shot%202013-09-26%20at%2019.17.30.png)
 
 Now our frontpage looks slightly more sophisticated than when we started (even though a professional designer would not be particularly impressed by what we've done).
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/83af49077d34aa9e1d39673df689ab1daef2d73d
 
 Let's style other pages in the same way. The process is mostly mechanical, so let's highlight only the most interesting points.
 
 Firstly, let's make the #links-container element part of the layout, so that it was the basis of every page. Since it's not a links container anymore, we'll rename it as well. This change will not lead to any change in the way the frontpage looks, so no screenshot here.
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/cc1cbffa1314f36021293376e6eae5404ec1dc8e
 
 Now let's make the /links/new view look better. Note that we're using placeholders (text inside the input that disappears on focus) instead of labels.
@@ -1691,8 +1701,9 @@ Now let's make the /links/new view look better. Note that we're using placeholde
 <input type="text" name="url" placeholder="Url">
 ```
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380271885168_Screen%20Shot%202013-09-27%20at%2009.51.17.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380271885168_Screen%20Shot%202013-09-27%20at%2009.51.17.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/eb68cf41e0bc204365a142fa3520141574a241a2
 
 Let's do the same to the sign up and sign in forms, not forgetting the flash for the form. Since we can potentially show more than one error or notice, let's switch to using classes instead of ids.
@@ -1712,10 +1723,11 @@ Let's do the same to the sign up and sign in forms, not forgetting the flash for
 <% end %>
 ```
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380275191987_Screen%20Shot%202013-09-27%20at%2010.36.20.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380275191987_Screen%20Shot%202013-09-27%20at%2010.36.20.png)
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380275196397_Screen%20Shot%202013-09-27%20at%2010.46.17.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380275196397_Screen%20Shot%202013-09-27%20at%2010.46.17.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/0a78ed38cc17b197fc91ee999ab14a4a72090045
 
 Now let's make the footer sticky using the technique described by Ryan Fait. One aspect of this technique is that it requires the footer to have a fixed height, so let's fix it at 70px (the height of the image and reduce the font-size to 12px. This will produce a weird side-effect on narrow screens (try resizing the window) but let's learn how to deal with it later, when we'll be discussing responsive design.
@@ -1738,8 +1750,9 @@ By applying Ryan's CSS directly, we achieve the desired effect with minimal chan
 </body>
 ```
 
-https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380276377318_Screen%20Shot%202013-09-27%20at%2011.06.12.png
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380276377318_Screen%20Shot%202013-09-27%20at%2011.06.12.png)
 
+github
 https://github.com/makersacademy/bookmark_manager/tree/10f47e97815b73dc0d75dcbb4eb9a79686f9576f
 
 We will add more advanced functionality using Javascript and more advanced HTML&CSS techniques next week. If you haven't done so yet, it's a good time to deploy your website to Heroku.
