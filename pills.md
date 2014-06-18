@@ -76,3 +76,13 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Test Driven Development](https://github.com/makersacademy/course/blob/master/pills/tdd.md)
 
 :pill: [RSpec - Predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)
+
+## JavaScript/jQuery
+
+:pill: [Functions](https://github.com/makersacademy/course/blob/master/pills/js_functions.md)
+
+:pill: [Arrays](https://github.com/makersacademy/course/blob/master/pills/js_arrays.md)
+
+:pill: [JS conventions](https://github.com/makersacademy/course/blob/master/pills/js_conventions.md)
+
+:pill: [jQuery events](https://github.com/makersacademy/course/blob/master/pills/jquery_events.md)
