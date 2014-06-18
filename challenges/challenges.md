@@ -7,3 +7,4 @@ These are some extra challenges you may want to take on to test your skills and 
 - [Recursion](https://github.com/makersacademy/course/blob/master/challenges/recursion.md)
 - [Sudoku](https://github.com/makersacademy/course/blob/master/challenges/sudoku.md)
 - [Version control](https://github.com/makersacademy/course/blob/master/challenges/git_challenge.md)
+- [Thermostat (JavaScript)](https://github.com/makersacademy/course/blob/master/challenges/thermostat.md)

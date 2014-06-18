@@ -5,6 +5,7 @@
 3. [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
 4. [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
 5. Playing Battleships in the browser
+6. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 
 ## Supporting Materials
 
