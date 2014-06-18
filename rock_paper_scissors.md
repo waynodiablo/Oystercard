@@ -4,7 +4,7 @@ For the initial version of Rock-Paper-Scissors, take our existing Ruby code and 
 
 * There's no concept of **symbols** in JavaScript (everything is a string)
 * **Blocks, methods and classes** are replaced with the :pill: [function keyword](https://github.com/makersacademy/course/blob/master/pills/js_functions.md).
-* We define methods outside of the 'class' using the :pill: [prototype](https://github.com/makersacademy/course/blob/master/pills/js_functions.md).
+* We define methods outside of the 'class' using the :pill: [prototype](https://github.com/makersacademy/course/blob/master/pills/js_functions.md#function-to-define-methods).
 * There are **no constants, or private methods** in JavaScript - so instead we should use :pill: [helpful conventions](https://github.com/makersacademy/course/blob/master/pills/js_conventions.md).
 
 ## Version 2 - Rock-Paper-Scissors-Lizard-Spock
@@ -23,7 +23,7 @@ Write new Jasmine specs for these new choices. Try and avoid a bunch of long, co
 
 > **Alex's rock crushes Tony's scissors**
 
-### Version 3 - Web interface
+## Version 3 - Web interface
 
 ![RPS interface](https://github.com/makersacademy/course/raw/master/images/rps_interface.png)
 
