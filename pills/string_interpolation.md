@@ -12,7 +12,7 @@ There's another way to access variables called interpolation. We can recreate th
 		puts "The people variable is currently: #{people}"
 ````
 
-Using the syntax of `#{something}` inside a double-quoted string where "something" is Ruby code will execute it a substitute it as part of the string .
+Using the syntax of `#{something}` inside a double-quoted string where "something" is Ruby code will execute it and substitute it as part of the string .
 ````ruby
 		# Pass the string "Makers" into a variable and print it out
 		people = "Makers"
