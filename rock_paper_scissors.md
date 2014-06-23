@@ -110,6 +110,7 @@ A free online book. I wouldn't recommend reading cover-to-cover, just skim throu
 * http://learn.jquery.com/about-jquery/how-jquery-works/
 * http://learn.jquery.com/events/introduction-to-events/
 * http://learn.jquery.com/using-jquery-core/selecting-elements/
+* [jQuery fundamentals](http://jqfundamentals.com/) - free interactive book
 
 ### CSS transitions
 
