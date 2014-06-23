@@ -9,6 +9,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md)
 
+:pill: [Sublime Text License](https://github.com/makersacademy/course/blob/master/pills/sublime_text.md)
+
 ## Git
 :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)
 
