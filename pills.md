@@ -42,6 +42,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)
 
+:pill: [Loops](https://github.com/makersacademy/course/blob/master/pills/loops.md)
+
 :pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
 
 :pill: [Modules](https://github.com/makersacademy/course/blob/master/pills/modules.md)
