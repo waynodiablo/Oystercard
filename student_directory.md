@@ -594,7 +594,7 @@ Some of them are easy and some are more challenging. If you find yourself strugg
 2. We're using the each() method to iterate over an array of students. How can you modify the program to print a number before the name of each student, e.g. "1. Dr. Hannibal Lecter"? Hint: replace each() with each_with_index().
 3. Modify your program to only print the students whose name begins with a letter "A" (or any other).
 4. Modify your program to only print the students whose name is shorter than 12 characters.
-5. Rewrite the each() method that prints all students using "while" or "until" control flow methods (see Ruby 2).
+5. Rewrite the each() method that prints all students using "while" or "until" control flow methods (:pill: [Loops](https://github.com/makersacademy/course/blob/master/pills/loops.md)).
 6. Our code only works with the student name and cohort. Add more information: hobbies, country of birth, height, etc.
 7. Research how the method center() of the String class works. Use it in your code to make the output beautifully aligned.
 8. In the `input_students` method the cohort value is hard-coded. How can you ask for both the name and the cohort? What if one of the values is empty? Can you supply a default value? The input will be given to you as a string? How will you convert it to a symbol? What if the user makes a typo?
