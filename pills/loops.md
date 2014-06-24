@@ -45,7 +45,9 @@ You get the picture.
 > it):
 > 
 > `count += 1 # count = count + 1`
+>
 > `count -= 1 # count = count - 1`
+>
 > `count *= 5 # count = count * 5`
 
 ## Until
