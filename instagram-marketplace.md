@@ -1,4 +1,4 @@
-Instagram Deluxe
+Instagram Marketplace
 =========
 
 under construction ...
