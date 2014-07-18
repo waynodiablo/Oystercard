@@ -1,6 +1,8 @@
 Yelp
 =====
 
+under construction ...
+
 * Rails
 * More Rails
 * Validations
