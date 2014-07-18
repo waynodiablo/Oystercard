@@ -88,7 +88,9 @@ Another way to rewrite this line is
 
 ```ruby
 # Expect the method broken? of the object 'bike' to return false
-expect(the_bike.broken?).to be_false
+expect(the_bike.broken?).to be_false # in RSpec version 2.x.x
+# or
+expect(the_bike.broken?).to be false # in RSpec version 3.x.x
 ````
 
 This is slightly less readable, isn't it? Yet it's exactly the same thing. Yet another way to write the same expectation is to use an old [rspec](http://rspec.info) syntax:
