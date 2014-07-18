@@ -7,6 +7,9 @@
 5. Playing Battleships in the browser
 6. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 7. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
+8. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
+9. [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
+10. [Instagram Deluxe](https://github.com/makersacademy/course/blob/master/instagram-deluxe.md)
 
 ## Supporting Materials
 
