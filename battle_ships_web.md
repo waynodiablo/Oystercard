@@ -23,10 +23,10 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use LINK_ ).
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of the week our directory structure will look a little more complex:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
 
 ````
-./battleships_web
+.
 |---README.md
 |---config.ru
 |---Gemfile
@@ -39,15 +39,14 @@ First we need to make sure that the code we wrote for battleships is in the righ
 |---spec
 |---views
     |---styles
-		|---layouts
+    |---layouts
 ````
+
  **Hang on! We need a Gemfile!**
 
-Our Gemfile helps us to keep track of the gems ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project.
+Our Gemfile helps us to keep track of the gems ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
 
 ````ruby
-# Gemfile
-
 source 'https://rubygems.org'
 
 gem 'sinatra'
@@ -139,5 +138,18 @@ cucumber features/starting_a_game.feature:6 # Scenario: Registering
 3 steps (1 failed, 1 skipped, 1 passed)
 0m0.053s
 ````
+
+**What did just happen?** Cucumber is telling us that it cannot find a button named _New Game_ in the homepage. But, how is it possible that cucumber was able to go to the homepage? Which homepage? At this point in time we haven't even created anything apart from our feature file. What's going on?
+
+Start your sinatra application
+
+````
+rackup
+[2014-05-19 17:57:39] INFO  WEBrick 1.3.1
+[2014-05-19 17:57:39] INFO  ruby 2.1.2 (2014-05-08) [x86_64-darwin13.0]
+[2014-05-19 17:57:39] INFO  WEBrick::HTTPServer#start: pid=14728 port=9292
+````
+
+and point your browser to your application ( _http://localhost:9292_ ).
 
 ## Version 2: 
