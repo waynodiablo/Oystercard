@@ -44,17 +44,28 @@ First we need to make sure that the code we wrote for battleships is in the righ
 ````
  **Hang on! We need a Gemfile!**
 
+Our Gemfile helps us to keep track of the gems ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project.
+
 ````ruby
 # Gemfile
 
 source 'https://rubygems.org'
 
+gem 'sinatra'
+
 group :development, :test do
+  gem 'capybara'
+  gem 'cucumber'
+	gem 'cucumber-sinatra'
+	gem 'launchy'
   gem 'rspec'
+	gem 'shotgun'
 end
 ````
 
-Once you've bundled the `Gemfile` run `rspec` and makes sure everything is working.
+_You might have noticed that we have ordered the gems alphabetically. This is for practical reasons. In bigger projects that use a lot of different gems we want to make sure that we find them in our Gemfile fairly quickly._
+
+Once you've bundled the `Gemfile` run `rspec` and make sure everything is working ( _did you remember to add your code into the lib and spec directories?_ ).
 
 Now that your specs are passing and the code is all in place we are ready to start working on our battleships online game!
 
