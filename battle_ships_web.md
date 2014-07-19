@@ -150,6 +150,6 @@ rackup
 [2014-05-19 17:57:39] INFO  WEBrick::HTTPServer#start: pid=14728 port=9292
 ````
 
-and point your browser to your application ( _http://localhost:9292_ ).
+and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
 ## Version 2: 
