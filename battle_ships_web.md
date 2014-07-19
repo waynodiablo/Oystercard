@@ -23,7 +23,7 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use LINK_ ).
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of the week our directory structure will look a little more complex:
 
 ````
 ./battleships_web
@@ -39,7 +39,6 @@ First we need to make sure that the code we wrote for battleships is in the righ
 |---spec
 |---views
     |---styles
-		|---javascript
 		|---layouts
 ````
  **Hang on! We need a Gemfile!**
