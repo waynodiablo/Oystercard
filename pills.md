@@ -20,6 +20,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Blocks](https://github.com/makersacademy/course/blob/master/pills/blocks.md)
 
+:pill: [Bundler](https://github.com/makersacademy/course/blob/master/pills/bundler.md)
+
 :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
 
 :pill: [Control Flow](https://github.com/makersacademy/course/blob/master/pills/control_flow.md)
