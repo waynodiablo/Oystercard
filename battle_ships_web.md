@@ -102,14 +102,14 @@ Let's write the first scenario of our first feature (`features/starting_a_game.f
 
 ````
 Feature: Starting the game
-	In order to play battleships
+  In order to play battleships
   As a nostalgic player
   I want to start a new game
 
   Scenario: Registering
-		Given I am on the homepage
-		When I press "New Game"
-		Then I should see "What's your name?"
+    Given I am on the homepage
+    When I press "New Game"
+    Then I should see "What's your name?"
 ````
 
 Running cucumber now looks very different than it did before:
