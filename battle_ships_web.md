@@ -68,6 +68,76 @@ Once you've bundled the `Gemfile` run `rspec` and make sure everything is workin
 
 Now that your specs are passing and the code is all in place we are ready to start working on our battleships online game!
 
-## Version 1:
+## Version 1: Building an application from the outside in
+
+Everything is setup and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full fledged web application; our friends and family can play with our app!
+
+**Let's get started then, shall we?**
+
+One of the gems you should have in your system now is ``cucumber-sinatra``. This gem will help you setting up cucumber.
+
+Cucumber is a testing too written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described (CUCUMBER PILL).
+
+In your projects directory run:
+
+````
+cucumber-sinatra init --app  BattleShips lib/battleships.rb
+Generating with init generator:
+     [ADDED]  features/support/env.rb
+     [ADDED]  features/support/paths.rb
+     [ADDED]  features/step_definitions/web_steps.rb
+     [ADDED]  lib/battleships.rb
+     [ADDED]  config.ru
+````
+
+This has added some directories and files in our application directory. If we run cucumber now we will see the following output:
+
+````
+cucumber
+0 scenarios
+0 steps
+0m0.000s
+````
+
+Let's write the first scenario of our first feature:
+
+````
+Feature: Starting the game
+	In order to play battleships
+  As a nostalgic player
+  I want to start a new game
+
+  Scenario: Welcome
+		Given I am on the homepage
+		When I press "New Game"
+		Then I should see "What's your name?"
+````
+
+Running cucumber now looks very different than it did before:
+
+````
+cucumber
+Feature: Starting the game
+  In order to play battleships
+  As a nostalgic player
+  I want to start a new game
+
+  Scenario: Welcome                       # features/starting_a_game.feature:6
+    Given I am on the homepage            # features/step_definitions/web_steps.rb:19
+    When I press "New Game"               # features/step_definitions/web_steps.rb:27
+      Unable to find button "New Game" (Capybara::ElementNotFound)
+      ./features/step_definitions/web_steps.rb:29:in `block (2 levels) in <top (required)>'
+      ./features/step_definitions/web_steps.rb:14:in `with_scope'
+      ./features/step_definitions/web_steps.rb:28:in `/^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/'
+      features/starting_a_game.feature:8:in `When I press "New Game"'
+    Then I should see "What's your name?" # features/step_definitions/web_steps.rb:107
+
+Failing Scenarios:
+cucumber features/starting_a_game.feature:6 # Scenario: Welcome
+
+1 scenario (1 failed)
+3 steps (1 failed, 1 skipped, 1 passed)
+0m0.053s
+````
 
 ## Version 2: 
