@@ -28,7 +28,7 @@ What we are going to do is to first put our code into the right places into the 
 ````ruby
 # Gemfile
 
-source 'https://rubygems.org
+source 'https://rubygems.org'
 
 group :development, :test do
   gem 'rspec'
