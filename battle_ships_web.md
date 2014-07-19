@@ -23,7 +23,26 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use LINK_ ).
 
-What we are going to do is to first put our code into the right places into the ``lib`` and ``spec`` directories and make sure that everything is still working... **Hang on! We need a Gemfile first!**
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more:
+
+````
+./battleships_web
+|---README.md
+|---config.ru
+|---Gemfile
+|---Gemfile.lock
+|---features
+    |---step_definitions
+    |---support
+|---lib
+|---public
+|---spec
+|---views
+    |---styles
+		|---javascript
+		|---layouts
+````
+ **Hang on! We need a Gemfile!**
 
 ````ruby
 # Gemfile
@@ -37,6 +56,8 @@ end
 
 Once you've bundled the `Gemfile` run `rspec` and makes sure everything is working.
 
-## Version 2:
+Now that your specs are passing and the code is all in place we are ready to start working on our battleships online game!
 
-## Version 3: 
+## Version 1:
+
+## Version 2: 
