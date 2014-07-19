@@ -99,7 +99,7 @@ cucumber
 0m0.000s
 ````
 
-Let's write the first scenario of our first feature:
+Let's write the first scenario of our first feature (`features/starting_a_game.feature`):
 
 ````
 Feature: Starting the game
@@ -107,7 +107,7 @@ Feature: Starting the game
   As a nostalgic player
   I want to start a new game
 
-  Scenario: Welcome
+  Scenario: Registering
 		Given I am on the homepage
 		When I press "New Game"
 		Then I should see "What's your name?"
@@ -122,7 +122,7 @@ Feature: Starting the game
   As a nostalgic player
   I want to start a new game
 
-  Scenario: Welcome                       # features/starting_a_game.feature:6
+  Scenario: Registering                   # features/starting_a_game.feature:6
     Given I am on the homepage            # features/step_definitions/web_steps.rb:19
     When I press "New Game"               # features/step_definitions/web_steps.rb:27
       Unable to find button "New Game" (Capybara::ElementNotFound)
@@ -133,7 +133,7 @@ Feature: Starting the game
     Then I should see "What's your name?" # features/step_definitions/web_steps.rb:107
 
 Failing Scenarios:
-cucumber features/starting_a_game.feature:6 # Scenario: Welcome
+cucumber features/starting_a_game.feature:6 # Scenario: Registering
 
 1 scenario (1 failed)
 3 steps (1 failed, 1 skipped, 1 passed)
