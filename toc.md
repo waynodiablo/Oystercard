@@ -4,7 +4,7 @@
 2. [The Basics: Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md)
 3. [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
 4. [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
-5. Playing Battleships in the browser
+5. [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
 6. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 7. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 8. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
