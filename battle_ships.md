@@ -16,11 +16,11 @@ One of the things you have to keep in mind is to simplify as much as you can whe
 
 **Tasks**:
 
-- [] Create the **CRC** model of the classes involved in the game. 
-- [] Create your **battleships** repository (use the name _battleships_) in Github.
-- [] Add a description of your project into the `README.md` file.
-- [] Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
-- [] Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
+1. [ ] Create the **CRC** model of the classes involved in the game. 
+2. [ ] Create your **battleships** repository (use the name _battleships_) in Github.
+3. [ ] Add a description of your project into the `README.md` file.
+4. [ ] Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
+5. [ ] Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
 
 ## Version 1: The Model
 
@@ -36,10 +36,10 @@ The **SRP** is one of five principles that make up **SOLID** ( _Single responsib
 
 **Tasks**:
 
-- [] Code the classes and their interactions ( _Test First!_ )
-- [] Think about the classes you have created. Are they following the **SRP** ?
-- [] Play with your code in `irb` ( _if you prefer `pry` go with it_ )
-- [] Present one of the **SOLID** principles to your cohort.
+1. [ ] Code the classes and their interactions ( _Test First!_ )
+2. [ ] Think about the classes you have created. Are they following the **SRP** ?
+3. [ ] Play with your code in `irb` ( _if you prefer `pry` go with it_ )
+4. [ ] Present one of the **SOLID** principles to your cohort.
 
 ## Version 2: The Game Engine
 
@@ -67,11 +67,11 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 
 **Tasks**
 
-- [] Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your cohort ( _maybe as a lunch and learn?_ ). 
-- [] Create a storyboard of screens you think you will need to implement in order to cater for a good UX.
-- [] Present the UI and UX you have created to the your cohort and discuss the different approaches.
-- [] Implement the User Interface.
-- [] Let your cohort ( and the senior cohort ) play with your battleships game ( _maybe a little battleships tournament?_ )!
+1. [ ] Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your cohort ( _maybe as a lunch and learn?_ ). 
+2. [ ] Create a storyboard of screens you think you will need to implement in order to cater for a good UX.
+3. [ ] Present the UI and UX you have created to the your cohort and discuss the different approaches.
+4. [ ] Implement the User Interface.
+5. [ ] Let your cohort ( and the senior cohort ) play with your battleships game ( _maybe a little battleships tournament?_ )!
 
 ## Supporting Material
 
