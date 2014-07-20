@@ -75,7 +75,7 @@ Everything is setup and ready, but how do we start? If you have been following b
 
 One of the gems you should have in your system now is ``cucumber-sinatra``. This gem will help you setting up cucumber.
 
-Cucumber is a testing too written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described (CUCUMBER PILL).
+Cucumber is a testing too written by Aslak HellesÃ¸y that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described (CUCUMBER PILL).
 
 In your projects directory run:
 
@@ -152,6 +152,23 @@ rackup
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
-Why is sinatra greeting us?
+Why is sinatra greeting us with a "Hello BattleShips!" message?
+
+If you open your `lib/battleships.rb` file you will see why:
+
+````ruby
+require 'sinatra/base'
+
+class BattleShips < Sinatra::Base
+  get '/' do
+    'Hello BattleShips!'
+  end
+
+  # start the server if ruby file executed directly
+  run! if app_file == $0
+end
+````
+
+When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our battleships controller ready and waiting to change for us.
 
 ## Version 2: 
