@@ -102,7 +102,7 @@ Feature: Starting the game
 
   Scenario: Registering
     Given I am on the homepage
-    When I press "New Game"
+    When I follow "New Game"
     Then I should see "What's your name?"
 ```
 
@@ -117,12 +117,12 @@ Feature: Starting the game
 
   Scenario: Registering                   # features/starting_a_game.feature:6
     Given I am on the homepage            # features/step_definitions/web_steps.rb:19
-    When I press "New Game"               # features/step_definitions/web_steps.rb:27
+    When I follow "New Game"               # features/step_definitions/web_steps.rb:27
       Unable to find button "New Game" (Capybara::ElementNotFound)
       ./features/step_definitions/web_steps.rb:29:in `block (2 levels) in <top (required)>'
       ./features/step_definitions/web_steps.rb:14:in `with_scope'
-      ./features/step_definitions/web_steps.rb:28:in `/^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/'
-      features/starting_a_game.feature:8:in `When I press "New Game"'
+      ./features/step_definitions/web_steps.rb:28:in `/^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/'
+      features/starting_a_game.feature:8:in `When I follow "New Game"'
     Then I should see "What's your name?" # features/step_definitions/web_steps.rb:107
 
 Failing Scenarios:
@@ -163,6 +163,55 @@ class BattleShips < Sinatra::Base
 end
 ````
 
-When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our battleships controller ready and waiting to change for us.
+When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleShips controller returning that greeting.
+
+To make the first step work we need to do a few things:
+
+- create a views directory
+- tell our `BattleShips` controller where the views are
+- create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
+
+Running cucumber again after we have finished these tasks we will see the following:
+
+```shell-session
+Feature: Starting the game
+  In order to play battleships
+  As a nostalgic player
+  I want to start a new game
+
+  Scenario: Registering                   # features/starting_a_game.feature:6
+    Given I am on the homepage            # features/step_definitions/web_steps.rb:19
+    When I follow "New Game"               # features/step_definitions/web_steps.rb:27
+    Then I should see "What's your name?" # features/step_definitions/web_steps.rb:107
+      expected to find text "What's your name?" in "New Game" (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/web_steps.rb:110:in `block (2 levels) in <top (required)>'
+      ./features/step_definitions/web_steps.rb:14:in `with_scope'
+      ./features/step_definitions/web_steps.rb:108:in `/^(?:|I )should see "([^\"]*)"(?: within "([^\"]*)")?$/'
+      features/starting_a_game.feature:9:in `Then I should see "What's your name?"'
+
+Failing Scenarios:
+cucumber features/starting_a_game.feature:6 # Scenario: Registering
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 passed)
+```
+
+**We are almost there!** Now we only need to change the button so that it actually takes us to a new page that will ask us for our name. Once we have done this we will see the following output from cucumber:
+
+```shell-session
+Feature: Starting the game
+  In order to play battleships
+  As a nostalgic player
+  I want to start a new game
+
+  Scenario: Registering                   # features/starting_a_game.feature:6
+    Given I am on the homepage            # features/step_definitions/web_steps.rb:19
+    When I press "New Game"               # features/step_definitions/web_steps.rb:27
+    Then I should see "What's your name?" # features/step_definitions/web_steps.rb:107
+
+1 scenario (1 passed)
+3 steps (3 passed)
+0m0.035s
+```
 
 ## Version 2: 
