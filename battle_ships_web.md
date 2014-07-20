@@ -1,19 +1,13 @@
 # Playing Battleships in the browser
 
 This time we are going to improve on our battleships game. 
-In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) 
-we implemented the battleships game for the terminal. 
+In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) we implemented the battleships game for the terminal. 
 
-Whilst interacting with the computer on the terminal is an essential skill 
-for us developer types, it is far from the preferred way to interact with 
-your computer for people in general. When was the last time you checked your calendar on the terminal? **Exactly!**
+Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with your computer for people in general. When was the last time you checked your calendar on the terminal? **Exactly!**
 
-Nowadays applications are much richer in colours and interactions, they feel 
-smoother and friendlier that the terminal does.
+Nowadays applications are much richer in colours and interactions, they feel smoother and friendlier that the terminal does.
 
-The web offers a wonderful plethora of technologies and possibilities to 
-build applications. It's time for us to look into web technologies and play 
-with them.
+The web offers a wonderful plethora of technologies and possibilities to build applications. It's time for us to look into web technologies and play with them.
 
 **How about being able to  play battleships on the browser?**
 
@@ -25,7 +19,7 @@ Last week you created a playable battleships game for the terminal. You separate
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](#) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
 
-````
+```
 .
 |---README.md
 |---config.ru
@@ -40,7 +34,7 @@ First we need to make sure that the code we wrote for battleships is in the righ
 |---views
     |---styles
     |---layouts
-````
+```
 
  **Hang on! We need a Gemfile!**
 
@@ -79,7 +73,7 @@ Cucumber is a testing too written by Aslak Hellesøy that let's you describe you
 
 In your projects directory run:
 
-````
+```shell-session
 cucumber-sinatra init --app  BattleShips lib/battleships.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
@@ -87,11 +81,11 @@ Generating with init generator:
      [ADDED]  features/step_definitions/web_steps.rb
      [ADDED]  lib/battleships.rb
      [ADDED]  config.ru
-````
+```
 
 This has added some directories and files in our application directory. If we run cucumber now we will see the following output:
 
-```
+```shell-session
 cucumber
 0 scenarios
 0 steps
@@ -114,7 +108,7 @@ Feature: Starting the game
 
 Running cucumber now looks very different than it did before:
 
-```shell
+```shell-session
 cucumber
 Feature: Starting the game
   In order to play battleships
