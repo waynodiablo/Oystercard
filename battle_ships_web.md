@@ -214,4 +214,34 @@ Feature: Starting the game
 0m0.035s
 ```
 
-## Version 2: 
+OK, our cukes (that's a common name to refer to cucumber features) are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
+
+**Tasks**
+
+- Add steps to the scenario
+- Add a scenario for when the player does not input his name
+
+## Version 2: Making the game playable
+
+We have now the first walking skeleton of our application and we are ready to add more features to describe our application.
+
+For this to happen we need to introduce the concept of a session to our application and make it _remember_ who is playing against whom. We also need to make sure that our application only allows 2 players per game.
+
+**Task: Write the following features (and add the functionality to the application):**
+
+- Registering a second player
+- Placing the ships
+- Shooting at each others boards in turns
+- Winning and loosing
+
+## Version 3: Multigame battleships
+
+Up until now our application has been running only for two players at a time. Can you make it work with any amount of players and games ( obviously with two players per game )?
+
+## Final touches
+
+It would be nice if our battleships game looked like something that people wanted to play with, maybe we should be looking at it :wink:
+
+Once we have added some CSS goodness let's deploy our application to heroku and share it with the world!
+
+**Congratulations! You have released your first application!**
