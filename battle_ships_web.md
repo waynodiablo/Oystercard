@@ -114,7 +114,7 @@ Feature: Starting the game
 
 Running cucumber now looks very different than it did before:
 
-```cucumber
+```shell
 cucumber
 Feature: Starting the game
   In order to play battleships
