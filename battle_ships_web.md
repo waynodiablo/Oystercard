@@ -46,7 +46,7 @@ First we need to make sure that the code we wrote for battleships is in the righ
 
 Our Gemfile helps us to keep track of the gems ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
 
-````ruby
+```ruby
 source 'https://rubygems.org'
 
 gem 'sinatra'
@@ -59,7 +59,7 @@ group :development, :test do
   gem 'rspec'
   gem 'shotgun'
 end
-````
+```
 
 _You might have noticed that we have ordered the gems alphabetically. This is for practical reasons. In bigger projects that use a lot of different gems we want to make sure that we find them in our Gemfile fairly quickly._
 
@@ -91,16 +91,16 @@ Generating with init generator:
 
 This has added some directories and files in our application directory. If we run cucumber now we will see the following output:
 
-````
+```
 cucumber
 0 scenarios
 0 steps
 0m0.000s
-````
+```
 
 Let's write the first scenario of our first feature (`features/starting_a_game.feature`):
 
-````
+```cucumber
 Feature: Starting the game
   In order to play battleships
   As a nostalgic player
@@ -110,11 +110,11 @@ Feature: Starting the game
     Given I am on the homepage
     When I press "New Game"
     Then I should see "What's your name?"
-````
+```
 
 Running cucumber now looks very different than it did before:
 
-````
+```
 cucumber
 Feature: Starting the game
   In order to play battleships
@@ -137,18 +137,18 @@ cucumber features/starting_a_game.feature:6 # Scenario: Registering
 1 scenario (1 failed)
 3 steps (1 failed, 1 skipped, 1 passed)
 0m0.053s
-````
+```
 
 **What did just happen?** Cucumber is telling us that it cannot find a button named _New Game_ in the homepage. But, how is it possible that cucumber was able to go to the homepage? Which homepage? At this point in time we haven't even created anything apart from our feature file. What's going on?
 
 Start your sinatra application
 
-````
+```shell-session
 rackup
 [2014-05-19 17:57:39] INFO  WEBrick 1.3.1
 [2014-05-19 17:57:39] INFO  ruby 2.1.2 (2014-05-08) [x86_64-darwin13.0]
 [2014-05-19 17:57:39] INFO  WEBrick::HTTPServer#start: pid=14728 port=9292
-````
+```
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
