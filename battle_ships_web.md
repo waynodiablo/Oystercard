@@ -114,7 +114,7 @@ Feature: Starting the game
 
 Running cucumber now looks very different than it did before:
 
-```shell-session
+```cucumber
 cucumber
 Feature: Starting the game
   In order to play battleships
