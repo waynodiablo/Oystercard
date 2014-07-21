@@ -1,13 +1,14 @@
 Yelp
 =====
 
-under construction ...
+under construction ... in the meantime please find individual walkthroughs below for reference:
+
 
 * Rails
 * More Rails
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md)
 * One-to-many
-* Helpers
+* [Helpers](https://github.com/makersacademy/Walkthroughs/blob/master/helpers.md)
 * Ajax
 * Devise
 * JBuilder
