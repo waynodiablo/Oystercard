@@ -5,7 +5,7 @@ under construction ... in the meantime please find individual walkthroughs below
 
 
 * Rails
-* More Rails
+* [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md)
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md)
 * One-to-many
 * [Helpers](https://github.com/makersacademy/Walkthroughs/blob/master/helpers.md)
