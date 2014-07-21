@@ -1,7 +1,7 @@
 Instagram Marketplace
 =========
 
-under construction ...
+under construction ... in the meantime please find individual walkthroughs below for reference:
 
 * [WebSockets](https://github.com/makersacademy/Walkthroughs/blob/master/websockets.md)
 * [Heroku](https://github.com/makersacademy/Walkthroughs/blob/master/heroku.md)
