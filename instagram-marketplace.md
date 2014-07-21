@@ -8,4 +8,4 @@ under construction ...
 * [Stripe](https://github.com/makersacademy/Walkthroughs/blob/master/stripe.md)
 * [Email](https://github.com/makersacademy/Walkthroughs/blob/master/email.md)
 * [Maps](https://github.com/makersacademy/Walkthroughs/blob/master/gmaps.md)
-* OmniAuth
+* [OmniAuth](https://github.com/makersacademy/Walkthroughs/blob/master/devise_omniauth.md)
