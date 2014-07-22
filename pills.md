@@ -64,6 +64,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Shovel Operator](https://github.com/makersacademy/course/blob/master/pills/shovel_operator.md)
 
+:pill: [Sinatra Part 1](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md)
+
 :pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
 
 :pill: [String Interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md)
