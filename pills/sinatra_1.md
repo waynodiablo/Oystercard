@@ -183,9 +183,22 @@ get '/' do
 end
 ````
 
+Now go to the webpage: _http://localhost:4567/_ (if you aren't using shotgun, don't forget to restart the your web server: press Ctrl-C in the terminal and start it again).
 
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_4.png)
 
+However, this image, as lovely as it is, is a bit dull. Real web pages have something else in them that makes them look good: CSS.
 
+CSS stands for Cascading Style Sheets. It's a language that describes what HTML elements should look like when they are rendered by the browser. For example, let's add some CSS code to create a border around the **div** that contains our image.
+
+````ruby
+require 'sinatra'
+get '/' do
+  "<div style='border: 3px dashed red'>     
+     <img src='http://bit.ly/1eze8aE'>    
+   </div>"
+end 
+````
 
 
 
