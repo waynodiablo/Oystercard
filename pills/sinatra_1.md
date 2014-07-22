@@ -139,13 +139,49 @@ Now go back to _http://localhost:4567/secret_ and magic: it now works... but wha
 
 ## Automatic code reloading
 
+What we've been doing is restarting our server every time we made a change to the files because Sinatra needed to reload them. There's a way to reload the files without restarting the entire process.
 
+Firstly, install a gem called **shotgun** by putting in your Gemfile and running 'bundle install'.
 
+Secondly, load your application like this:
 
+`$ shotgun hello.rb -p 4567`
 
+The -p switch tells shotgun what port to use. Use this switch to keep the port consistent with the default Sinatra port. By default shotgun will use port 9393.
 
+If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the _Gemfile_ and ran "bundle install" afterwards.
 
+## Basics of HTML and CSS
 
+Now, let's make our website slightly more interesting. Let's add some HTML and CSS to the page. I assume you've already have a basic grasp of what they are but if not, here's a reminder.
+
+HTML stands for HyperText Markup Language. It is the language that is used to create webpages. Every web page that you see in your browser is built using HTML. If you right-click the page you're reading right now and select 'View source', you'll see the HTML code for the current page.
+
+HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **< div >** is called the _opening tag_ and the last **< /div >** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket. 
+
+````
+< div >
+  < img src='http://bit.ly/1eze8aE' >
+< /div >
+````
+
+The **< img >** tag doesn't need the closing tag as it is a 'self-closing tag'. The **src** bit is called an attribute. Its value determines what image will be displayed. In this case, _http://bit.ly/1eze8aE_ is a direct link to a kitten image.
+
+If you put this html in a web page, it will be rendered by the browser like this:
+
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_3.png)
+
+Let's try it:
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  "< div >
+    < img src='http://bit.ly/1eze8aE' >
+   < /div >"
+end
+````
 
 
 
