@@ -275,19 +275,110 @@ So, we've just learned how to extract HTML into separate files and how to transf
 
 ## Parameters (aka Params)
 
+Our current web page is not interactive. It doesn't take any input from the user but that could be a very useful feature. Pretty much any website you see online is interactive and that's what makes the web such an exciting place.
 
+Let's make our kitten say hello to the visitor of the website. Add this method to 
 
+````ruby
+get '/hello' do
+  @visitor = params[:name]   
+  erb :index 
+end 
+````
 
+This method expects a parameter called name that can be provided like this:
 
+`http://localhost:4567/hello?name=James`
 
+This parameter can be accessed using the **params** hash. This is provided to you by Sinatra, you don't have to declare it anywhere. So, if we pass the parameter "name" as part of the URL, then "James" will be available in params[:name]. If necessary, you can specify multiple parameters separated by ampersands:
 
+`http://localhost:4567/hello?name=James&last_name=Cameron`
 
+The question mark in the url serves to separate the address from the list of parameters.
 
+Now, if you modify your erb template to expect this value, you'll see a welcome message if a name is provided:
 
+````html
+<div style='border: 3px dashed red'>   
+  <% if @visitor %>     
+    Hello, <%= @visitor %>!   
+  <% end %>   
+  <% if @name %>
+    My name is <%= @name %>   
+  <% end %>
+  <img src='http://bit.ly/1eze8aE'> 
+</div>
+````
 
+Notice that we're not just printing the name of the visitor on the screen, we're putting a welcome message "Hello, #{@visitor}" only if the visitor is defined. This way it won't be printed when we open the root url ("/") that displays the same template. To achieve this we're using a usual if statement, embedding it inside <% %> tags. Because we don't want to output the results of the if statement, that is, line 2 into the HTML, we don't put = after the opening tag or the closing tag on line 4. We do the same for the @name variable.
 
+Now, if we go to _http://localhost:4567/hello?name=James_, we'll get the welcome message.
 
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_7.png)
 
+### Forms
+
+It's inconvenient to enter the visitor's name directly in the URL. Let's create a form to ask for the visitor's name. Modify your erb template:
+
+````html
+<div style='border: 3px dashed red'>
+  <% if @visitor %>  
+    Hello, <%= @visitor %>!
+  <% else %>
+    <form action="/hello">
+      My name is <%= @name %>.
+      What's your name?
+      <input type="text" name="name">
+      <input type="submit">
+    </form>
+  <% end %>
+  <img src='http://bit.ly/1eze8aE'>
+</div>
+````
+
+This is what it's going to look like:
+
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_8.png)
+
+So, what is happening in this code? First, we check if we have a value in @visitor. If we do, we greet the user. If we don't we display a form, described by yet another HTML tag.
+
+The form tag creates a form that sends the data back to the server when it's submitted. The URL that the form data is sent to is defined by the **action** attribute. The data that is sent is determined by the fields that are present inside the form (before the closing </form> tag).
+
+In this case we have two "input" fields. The first one is the input field (because it has type "text") and the second one is the submit button (because it has type "submit"). Even though they look and act differently, they are both created by the **input** tag.
+
+Since the second input tag doesn't have any data in it (it's a button, after all), it won't be sent back to the server. But the first input tag will be. The string that you input into it will be sent back to the server as the "name" parameter because that's what we specified in the "name" attribute:
+
+````html
+<input type="text" name="name">
+````
+
+So, when you click the submit button, your browser sends a request to the URL specified in the **action** attribute of the form tag and sends all input fields from the **form** as parameters. That's why when you enter your name a click the button, you get redirected to /hello?name=YourName.
+
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_9.png)
+
+## Static files
+
+Earlier we've linked to an external image in our HTML. This is fine but it would be so much nicer to have the image as a part of our project. This would be a **static asset**, let's see how Sinatra handles them.
+
+Let's put our image into **public/images/kitten.png** file in our project. The **public** folder doesn't exist, so create it as well as the images folder inside it. Now our file structure looks like this.
+
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_10.png)
+
+Please note that the only file in the views folder so far is _index.erb. Gemfile, Gemfile.lock_ and _hello.rb_ are in the top-level project directory.
+
+Now let's update our image tag to refer to the image:
+
+````html
+<img src='http://localhost:4567/images/kitten.png'>
+````
+
+You'll still see the image of the kitten but now it's loaded from localhost and not a remote server.
+
+You probably have noticed that the address includes **images** folder but not the **public** folder. This is by design: Sinatra treats everything that's located inside the **public** folder as available via URLs. That's why by just putting a file there we were able to access it from the browser. This only works for the folder called **public**. You can't get to the views folder in the same way. The name is customisable, though: you can choose a different name for the **public** folder if you wish.
+
+Of course, you can put anything you want inside this folder: not only images but also text files, executable files, CSS files (we'll get to them in a second) and many more things.
+
+## Absolute vs relative URLs
 
 
 
