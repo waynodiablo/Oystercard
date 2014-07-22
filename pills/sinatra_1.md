@@ -48,6 +48,124 @@ Once you have installed Sinatra, you are ready to create the "hello, world" appl
 
 Let's create the most basic web application using Sinatra. It will have only one page and on this page there will be "hello!" text. This is what it will look like.
 
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_1.png)
+
+Now, let's make it happen. Create a new file _hello.rb_ and type the following:
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  'hello!'
+end
+````
+
+Now, run this file.
+
+`$ ruby hello.rb`
+
+You should see this:
+
+```
+== Sinatra/1.4.3 has taken the stage on 4567 for development with backup from Thin 
+>> Thin web server (v1.5.1 codename Straight Razor) 
+>> Maximum connections set to 1024 
+>> Listening on localhost:4567, CTRL+C to stop 
+```
+
+Now, open this address (http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
+
+### What does localhost:4567 mean?
+
+This means that Sinatra started running making your web application available on the address _http://localhost:4567_. The address looks different from most web addresses but in fact it's a normal web address. The 'localhost' is a reserved word that always refers to the computer it's used on. So, localhost on my machine means my machine and localhost on your machine means your machine. Technically, it corresponds to the IP address 127.0.0.1 that always points to the current machine. The 4567 is the number of the port that is used to connect to localhost. Every internet connection always needs at least two parameters: the address of the machine (localhost, google.com or an IP address) and a port (80, 3000, 4567 or some other). So, in this case Sinatra is listening for connections on localhost and on port 4567.
+
+You may ask why you don't normally specify a port when you connect to a web server? Why can you type google.com in the address bar and it will work without the port? The reason is that by convention, web servers usually run on port 80, so your browser assumes you want to use port 80 if you don't specify any. So, when you type this in the address bar
+
+`www.google.com`
+
+your browser actually opens the connection to
+
+`www.google.com`
+
+You can try putting the port in the browser bar, it will work just as fine. If you try to put a port number that google.com doesn't expect, you won't get a response. For example, you'll get an error if you do this
+
+`www.google.com:22`
+
+As we mentioned, the port 80 is reserved for web (HTTP) connections but there are many more. For example, ssh uses port 22 and https (encrypted HTTP connection) usually run on port 443. However, all of those are just conventions. Nothing prevents you from running an ssh server on port 80, if you insist on it.
+
+## How does it work?
+
+So, let's take a look at the source code again.
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  'hello!'
+end
+````
+
+First, we require Sinatra, the gem, to be available in our application. Then we call the _get()_ method, provided by Sinatra, passing '/' as an argument - this could therefore be re-written get('/') but the convention is to ignore the brackets. What you're telling the Sinatra to do is to _get_ whatever the block returns, in this case the string 'hello!' whenever someone requests it by calling the page at the address '/'.
+
+The '/' part of the address is the last slash in _http://localhost:4567/_. If we wanted to have another page at http://localhost:4567/secret, then we'd do the following
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  'hello!'
+end
+
+get '/secret' do
+  'This is a secret page'
+end
+````
+
+Having done this on your Sinatra application and gone to http://localhost:4567/secret on your browser, you found the following page:
+
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_2.png)
+
+### What's happening?
+
+Nothing to worry about. What Sinatra is telling you is that it doesn't know what '/secret' is all about, despite you've written this in your app.
+
+What's happening is that you haven't re-loaded the application server, so the server doesn't know about this new '/secret' address is all about.
+
+First things first, go back to terminal and press Ctrl-C to stop the server. Then re-start it by writing:
+
+`$ ruby hello.rb`
+
+Now go back to _http://localhost:4567/secret_ and magic: it now works... but what a painful process.
+
+## Automatic code reloading
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
