@@ -12,4 +12,4 @@ under construction ... in the meantime please find individual walkthroughs below
 * Ajax
 * Devise
 * JBuilder
-* [Rails Create Update](https://github.com/makersacademy/Walkthroughs/blob/master/rails_create_update.md)
+* [Rails Create Update](https://github.com/makersacademy/Walkthroughs/blob/master/rails_create_update.md)  <-- Under construction
