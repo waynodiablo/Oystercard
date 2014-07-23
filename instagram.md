@@ -1,7 +1,7 @@
 Instagram
 ========
 
-under construction ...
+under construction ... in the meantime please find individual walkthroughs below for reference:
 
 * [Paperclip](https://github.com/makersacademy/Walkthroughs/blob/master/paperclip.md)
 * [S3](https://github.com/makersacademy/Walkthroughs/blob/master/S3.md)
