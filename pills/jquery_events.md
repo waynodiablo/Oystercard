@@ -129,3 +129,8 @@ $(document).ready(function() {
 ```
 
 See it in action here - http://jsfiddle.net/2yySD/
+
+## Resources
+
+* [jQuery events](http://jqfundamentals.com/chapter/events) - Chapter from jQuery fundamentals
+* [`.on` method](http://api.jquery.com/on/) - jQuery official docs

@@ -595,11 +595,11 @@ Let's implement basic user account functionality using what we learned in Securi
 The goal of this exercise is to demonstrate how to create a user management system from scratch without using user management libraries (we'll be using them later in the course, though).
 
 We will add the following functionality:
-*Sign up with an email and a password
-*Sign in
-*Sign out
-*A welcome message for the logged in user
-*Every link and every tag will be linked to the user that created it, unless the user was anonymous
+* Sign up with an email and a password
+* Sign in
+* Sign out
+* A welcome message for the logged in user
+* Every link and every tag will be linked to the user that created it, unless the user was anonymous
 
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
 
@@ -1360,9 +1360,9 @@ If a user forgets the password, we cannot just send it by email for two reasons.
 
 Instead of sending the password, we need to send a one-time password recovery token. It's a long random string that can be used only once and only for a limited time to change the password. The flow is as follows:
 
-*Create a form that can be used to request a new password. The only field you need is email.
-*Find the record of the user that's recovering the password.
-*Generate a long, random password recovery token and save it as part of the user record, together with a timestamp.
+* Create a form that can be used to request a new password. The only field you need is email.
+* Find the record of the user that's recovering the password.
+* Generate a long, random password recovery token and save it as part of the user record, together with a timestamp.
 ```ruby
 user = User.first(:email => email)
 # avoid having to memorise ascii codes
@@ -1370,9 +1370,9 @@ user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
 user.password_token_timestamp = Time.now
 user.save
 ```
-*Create a route to reset the password: get "/users/reset_password/:token"
-*Send an email with this a link containing this token to the user.
-*When the link is clicked, find the user that has this token in the database.
+* Create a route to reset the password: get "/users/reset_password/:token"
+* Send an email with this a link containing this token to the user.
+* When the link is clicked, find the user that has this token in the database.
 ```ruby 
 user = User.first(:password_token => token)
 ```

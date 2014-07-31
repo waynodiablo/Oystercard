@@ -9,6 +9,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md)
 
+:pill: [Sublime Text License](https://github.com/makersacademy/course/blob/master/pills/sublime_text.md)
+
 ## Git
 :pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)
 
@@ -17,6 +19,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Arrays](https://github.com/makersacademy/course/blob/master/pills/arrays.md)
 
 :pill: [Blocks](https://github.com/makersacademy/course/blob/master/pills/blocks.md)
+
+:pill: [Bundler](https://github.com/makersacademy/course/blob/master/pills/bundler.md)
 
 :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
 
@@ -40,6 +44,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Lambdas](https://github.com/makersacademy/course/blob/master/pills/lambdas.md)
 
+:pill: [Loops](https://github.com/makersacademy/course/blob/master/pills/loops.md)
+
 :pill: [Methods](https://github.com/makersacademy/course/blob/master/pills/methods.md)
 
 :pill: [Modules](https://github.com/makersacademy/course/blob/master/pills/modules.md)
@@ -57,6 +63,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Self](https://github.com/makersacademy/course/blob/master/pills/self.md)
 
 :pill: [Shovel Operator](https://github.com/makersacademy/course/blob/master/pills/shovel_operator.md)
+
+:pill: [Sinatra Part 1](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md)
 
 :pill: [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md)
 

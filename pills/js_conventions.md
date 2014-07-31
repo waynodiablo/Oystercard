@@ -73,3 +73,8 @@ There's no concept of constants in the current version of JS. By convention thou
 ~~~javascript
 Dog.prototype.NUMBER_OF_LEGS = 4;
 ~~~
+
+## Resources
+
+* [Github's JS style guide](https://github.com/styleguide/javascript)
+* [Airbnb's JS style guide](https://github.com/airbnb/javascript) - (very in-depth)
