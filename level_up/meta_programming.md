@@ -12,7 +12,7 @@ We'll start with that...
 
 ## How do you write code to create a method in ruby?
 
-Within each Class in Ruby there is a Private method called 'define_method'. Calling Private methods is tricky but not impossible. We simply have to call it from within the class using the 'send' method. Well first need to get the name of the class we want to call it from. 
+Within each Class in Ruby there is a Private method called 'define_method'. Calling Private methods is tricky but not impossible. We simply have to call it from within the class using the 'send' method. We'll first need to get the name of the class we want to call it from. 
 
 ```ruby
 self.class
@@ -42,7 +42,7 @@ from within our class. As we know though the thing which makes methods a method 
 self.class.send(:define_method, :does_it_return_true?){true}
 ```
 
-Ok so we've got our class defining it's own methods with whatever name we git it and we've told it what to return. This is great but we can use something else to give this power a little more kick. 
+Ok so we've got our class defining it's own methods with whatever name we give it and we've told it what to return. This is great but we can use something else to give this power a little more kick. 
 
 ## Method missing
 
