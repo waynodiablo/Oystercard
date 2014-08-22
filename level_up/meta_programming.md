@@ -53,7 +53,7 @@ You've probably seen this a few times before...
 NameError: undefined local variable or method `method_name' for main:Object
 ``` 
 
-To go into what's happening here is quite complicated, but there's a way to intercept this error by patching over an invisible method which is in every class- and it's called method_missing. 
+To go into what's happening here is quite complicated, but there's a way to intercept this error by patching over an invisible method which is in every class- and it's called **method_missing**. 
 
 Try this from within a class.  
 
@@ -66,7 +66,7 @@ end
 
 Now create a new instance of that class and run a method you're sure doesn't exist. You shouldn't get an error, instead you should get the above message back with the name of the method inside it.
 
-method_missing intercepts the error message and the first argument it receives is the name of the method it was trying to call. method_missing can take two additional arguments after the name of the called method, its arguments and a block. 
+**method_missing** intercepts the error message and the first argument it receives is the name of the method it was trying to call. **method_missing** can take two additional arguments after the name of the called method, its arguments and a block. 
 
 This can look like the following: 
 
@@ -79,7 +79,7 @@ This could give you the power to not only see the name of the method which you w
 
 The possibilities are endless. 
 
-So here's a challenge for you. I want you to pass these tests without writing the name of the methods required. You'll need to implement both define_method and method_missing to pass these tests. 
+So here's a challenge for you. I want you to pass these tests without writing the name of the methods required. You'll need to implement both **define_method** and **method_missing** to pass these tests. 
 ```
 spec/students_spec.rb
 ```
@@ -101,13 +101,13 @@ end
 
 ### Additional information
 
-We need to implement a method on the student called 'has_something?'. The 'something' can be anything. If the class doesn't know what we're talking about then we can logically infer we don't have that something and respond with false. It's like me asking you if you have a STIS (which stands for Space Telescope Imaging Spectrograph). You may not know what the hell that is and because of this, you're likely to answer 'No'. So I think if we ask our program if it has something - and if it doesn't know that is, then it should just answer 'No' (or false). 
+We need to implement a method on the student called '**has_something**?'. The 'something' can be anything. If the class doesn't know what we're talking about then we can logically infer we don't have that something and respond with false. It's like me asking you if you have a STIS (which stands for Space Telescope Imaging Spectrograph). You may not know what the hell that is and because of this, you're likely to answer 'No'. So I think if we ask our program if it has something - and if it doesn't know what that is, then it should just answer 'No' (or false). 
 
 A real-world analogy might be if we were to hand somebody an item they had no previous experience with, and the mere act of putting it in their hands is enough for them to automatically know everything about that object.
 
 PLEASE NOTE: 
-Our original method exception is still useful. So let's make sure we only create these has_something? methods when we're trying to called a method which looks like /^has_.+?\?/ 
-If it doesn't match this pattern then we should continue doing what we were originally doing (i.e refer to the superclass for instructions). 
+Our original method exception is still useful. So let's make sure we only create these **has_something?** methods when we're trying to called a method which looks like /^has_.+?\?/ 
+If it doesn't match this pattern then we should continue what we were originally doing (i.e refer to the superclass for instructions). 
 
 Good luck students, and when you're done go and call has_metaroid? on yourself and return a big fat 'true'. 
 
