@@ -1,6 +1,6 @@
 # Meta-programming
 
-You'll hear the phrase Meta-programming thrown around a lot. Entire books are dedicated to the subject. 
+You'll hear the phrase Meta-Programming thrown around a lot. Entire books are dedicated to the subject. 
 In this short tutorial we'll touch on the basics and by the end create a small application.
 
 length: approximately 2-4 hours
