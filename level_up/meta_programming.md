@@ -101,7 +101,7 @@ end
 
 ### Additional information
 
-We need to implement a method on the student called '**has_something**?'. The 'something' can be anything. If the class doesn't know what we're talking about then we can logically infer we don't have that something and respond with false. It's like me asking you if you have a STIS (which stands for Space Telescope Imaging Spectrograph). You may not know what the hell that is and because of this, you're likely to answer 'No'. So I think if we ask our program if it has something - and if it doesn't know what that is, then it should just answer 'No' (or false). 
+We need to implement a method on the student called **has_something?**. The 'something' can be anything. If the class doesn't know what we're talking about then we can logically infer we don't have that something and respond with false. It's like me asking you if you have a STIS (which stands for Space Telescope Imaging Spectrograph). You may not know what the hell that is and because of this, you're likely to answer 'No'. So I think if we ask our program if it has something - and if it doesn't know what that is, then it should just answer 'No' (or false). 
 
 A real-world analogy might be if we were to hand somebody an item they had no previous experience with, and the mere act of putting it in their hands is enough for them to automatically know everything about that object.
 
