@@ -5,7 +5,7 @@ In this short tutorial we'll touch on the basics and by the end create a small a
 
 Length: approximately 2-4 hours
 
-So what is Meta Programming? The definition of Meta is 'referring to itself or to the conventions of its genre.' 
+So what is Meta Programming? The definition of Meta is 'referring to itself or to the conventions of its genre'. 
 We can infer from this that Meta-Programming is Self-Programming. That's exactly what it is. A program which can create itself, or more importantly it can create its own methods. 
 
 We'll start with that...
