@@ -960,7 +960,7 @@ There are several way of doing this. The simplest would be to use a different me
 
 ````ruby
 def accept(bike)
-    bike.fix
+    bike.fix!
     dock(bike)
 end
 ````
