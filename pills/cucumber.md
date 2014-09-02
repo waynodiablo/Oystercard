@@ -61,27 +61,75 @@ Let's add the features nao. (Sorry, now)
 
 ```cucumber
 Feature: cucumber says OH HAI CUCUMNER¬
+	In order to start learn Cucumber¬
+	As a student at Makers academy¬
+	I want to say OH HAI CUCUMNER¬
 
-In order to start learn Cucumber¬
-As a student at Makers academy¬
-I want to say OH HAI CUCUMNER¬
-
-Scenario: cucumber says OH HAI CUCUMNER¬
-Given a lulz greeter¬
-When I send it the greet message¬
-Then I should see "OH HAI CUCUMNER!"¬
+	Scenario: cucumber says OH HAI CUCUMNER¬
+		Given a lulz greeter¬
+		When I send it the greet message¬
+		Then I should see "OH HAI CUCUMNER!"¬
 ```
 
 This is a Cucumber feature. It starts with a description of the feature (what
 it's doing, what it's for) as a reference point for people reading it to
-understand why the feature is there in the first place.
+understand why the feature is there in the first place. Often it's written in
+the form of *In order... / As a... / I want...*, but this is convention; the text
+indented underneath is entirely free. But bear in mind that the *In order...*
+pattern is a good place to start when trying to say what your feature is going
+to do.
 
 The second part is a **scenario**, which is where the actual tests live. They are
 built around keywords that describe the what the software is doing - above we
 have **Given**, **When** and **Then**. When we read this description of the
 program we have a good idea of what it ought to be doing.
 
-Now when we run `cucumber` we get this exciting message:
+The whole *Given / When / Then* thing is a way of describing the internal state
+of the program before you do something ("Given"), what you're doing to it
+("When"), and then what it's like just after it happens ("Then"). You're
+doing similar things in Rspec, but less explicitly.
+
+**Given**, **When** and **Then** are *keywords* for Cucumber, as are **And** and
+**But**. They all mean the same things - they tell Cucumber to make a new test
+there. You could also use <b>\*</b> -- making a bulleted list.
+
+###Many Languages
+
+You don't even have to use English - here's the same in Spanish...
+
+```cucumber
+Escenario: Cucumber dice OH HAI CUCUMNER
+	Dado un lulz saludo
+	Cuando envío un mensaje de bienvenida
+	Entonces debería ver "OH HAI CUCUMNER!"
+```
+
+Catalan...
+
+```cucumber
+Escenari: Cucumber diu OH HAI CUCUMNER
+	Donat una lulz salutació
+	Quan envío un missatge de benvinguda
+	Aleshores d'hauría de dir "OH HAI CUCUMNER!"
+```
+
+And LOL
+
+```cucumber
+MISHUM: MAKES CUCUMNER SAY OH HAI CUCUMNER
+	I CAN HAZ A LULZY GREETER
+	WEN I TELL IT TO SAY HAI
+	DEN I SEE "OH HAI CUCUMNER!"
+```
+
+Cucumber can handle most of the world's languages, making it easy to show people
+from anywhere what the software specification is (yes, Klingon works too. No,
+I'm not demoing it).
+
+###On with the show
+
+OK, so save off one of those files (the first one, in English, is what we'll be
+following below). Now when we run `cucumber` we get this exciting message:
 
 ```shell
 Feature: cucumber says OH HAI CUCUMNER
@@ -138,6 +186,10 @@ Then(/^I should see "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 ```
+
+See how the *Given / When / Then* lines are now `pending` tests? The description
+of the tests have been dropped in as a Regex - you could use strings instead but
+Regexes are safer and the default.
 
 We're going to be writing what each of these steps means in Ruby in each of
 the `pending` gaps. The first step is to put the above in a file called
@@ -242,10 +294,10 @@ Feature: cucumber says OH HAI CUCUMNER
 0m0.044s
 ```
 
-##More things to look at
-
+And that ends the demo!
 
 
 ###Further Reading
-[Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL
+
+[Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
 [Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
