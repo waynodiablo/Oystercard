@@ -294,10 +294,12 @@ Feature: cucumber says OH HAI CUCUMNER
 0m0.044s
 ```
 
-And that ends the demo!
-
+And that ends the intro! There's a lot more to look at (Cucumber loads its
+environment up from a file called `env.rb` inside `features/support` would be
+a good place to start)
 
 ###Further Reading
 
 [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
 [Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
+[Cucumber Home Page](http://cukes.info/)
