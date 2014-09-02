@@ -160,9 +160,9 @@ HTML stands for HyperText Markup Language. It is the language that is used to cr
 HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **< div >** is called the _opening tag_ and the last **< /div >** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket. 
 
 ````
-< div >
-  < img src='http://bit.ly/1eze8aE' >
-< /div >
+<div>
+  <img src='http://bit.ly/1eze8aE'>
+</div>
 ````
 
 The **< img >** tag doesn't need the closing tag as it is a 'self-closing tag'. The **src** bit is called an attribute. Its value determines what image will be displayed. In this case, _http://bit.ly/1eze8aE_ is a direct link to a kitten image.
@@ -177,9 +177,9 @@ Let's try it:
 require 'sinatra'
 
 get '/' do
-  "< div >
-    < img src='http://bit.ly/1eze8aE' >
-   < /div >"
+  "<div>
+    <img src='http://bit.ly/1eze8aE'>
+   </div>"
 end
 ````
 
