@@ -235,7 +235,11 @@ expect(@message).to eq lulzy_greeting
 end
 ```
 
-See how Cucumber saw the string in quotes in `Then I should see...`and turned him into an argument in the pipes? And how the `expect` step is just the same as in Rspec? Pretty cool.
+See how Cucumber saw the string in quotes in `Then I should see...`and turned
+him into an argument in the pipes? And how the `expect` step is just the same as
+in Rspec? That's because Cucumber automatically loads up all the Rspec
+expectation definitions. So if you know how to `expect` something in Rspec, you
+know how to expect it in Cucumber.
 
 Now when we run cucumber we get:
 
