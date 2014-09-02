@@ -60,15 +60,15 @@ it up in your editor.
 Let's add the features nao. (Sorry, now)
 
 ```cucumber
-Feature: cucumber says OH HAI CUCUMNER¬
-	In order to start learn Cucumber¬
-	As a student at Makers academy¬
-	I want to say OH HAI CUCUMNER¬
+Feature: cucumber says OH HAI CUCUMNER
+	In order to start learn Cucumber
+	As a student at Makers academy
+	I want to say OH HAI CUCUMNER
 
-	Scenario: cucumber says OH HAI CUCUMNER¬
-		Given a lulz greeter¬
-		When I send it the greet message¬
-		Then I should see "OH HAI CUCUMNER!"¬
+	Scenario: cucumber says OH HAI CUCUMNER
+		Given a lulz greeter
+		When I send it the greet message
+		Then I should see "OH HAI CUCUMNER!"
 ```
 
 This is a Cucumber feature. It starts with a description of the feature (what
@@ -300,6 +300,8 @@ a good place to start)
 
 ###Further Reading
 
-[Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
-[Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
-[Cucumber Home Page](http://cukes.info/)
+- [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
+
+- [Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
+
+- [Cucumber Home Page](http://cukes.info/)
