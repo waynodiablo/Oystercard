@@ -116,14 +116,14 @@ Escenari: Cucumber diu OH HAI CUCUMNER
 And LOL
 
 ```cucumber
-MISHUM: MAKES CUCUMNER SAY OH HAI CUCUMNER
+MISHUN: MAKES CUCUMNER SAY OH HAI CUCUMNER
 	I CAN HAZ A LULZY GREETER
 	WEN I TELL IT TO SAY HAI
 	DEN I SEE "OH HAI CUCUMNER!"
 ```
 
 Cucumber can handle most of the world's languages, making it easy to show people
-from anywhere what the software specification is (yes, Klingon works too. No,
+from anywhere what the software specification is (and yes, Klingon works too. No,
 I'm not demoing it).
 
 ###On with the show
