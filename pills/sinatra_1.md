@@ -204,7 +204,7 @@ Now our web page looks like this:
 
 ![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_5.png)
 
-To achieve this effect we added an **attribute** called **style** to the **di**v element. Its **value** is "border: 3px dashed red". It defines what style is applied to the element, in this case a border, 3 pixels wide, dashed (as opposed to solid, for example), and red in colour.
+To achieve this effect we added an **attribute** called **style** to the **div** element. Its **value** is "border: 3px dashed red". It defines what style is applied to the element, in this case a border, 3 pixels wide, dashed (as opposed to solid, for example), and red in colour.
 
 By combining HTML and CSS we can achieve sophisticated visual effects in our web applications. We'll explore the basics of how HTML and CSS work in more details later this week and we'll discuss advanced HTML and CSS features in weeks 7 and 8.
 
