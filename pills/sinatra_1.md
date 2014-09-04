@@ -444,7 +444,7 @@ However, you're forced to specify the full path to the image. Another solution i
 <img src="1.png">
 ```
 
-Note the lack of a slash in the beginning of the URL. This means that the path is relative to the current URL path: http://www.example.com/users/12345/galleries/4/kittens/. So, the browser interprets '<img src="1.png">' as 
+Note the lack of a slash in the beginning of the URL. This means that the path is relative to the current URL path: ```http://www.example.com/users/12345/galleries/4/kittens/```. So, the browser interprets '<img src="1.png">' as 
 
 ```
 http://www.example.com/users/12345/galleries/4/kittens/1.png 
