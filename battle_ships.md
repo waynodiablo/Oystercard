@@ -2,7 +2,7 @@
 
 Battleships (or Battleship) is a game where each player has a board upon which they can place a number of ships. The boards are 10x10 two dimensional grid.
 
-![Battleships grid](https://upload.wikimedia.org/wikipedia/commons/6/65/Battleship_game_board.svg)
+<img src="images/battleships.jpg" width="500px" height="500px">
 
 After each player has placed their ships on their own board they take turns to shoot on the opponents board. In each round, each player takes a turn to announce a target square in the opponent's grid which is to be shot at. The opponent announces whether or not the square is occupied by a ship, and if it is a _hit_ they mark this on their own primary grid. The attacking player notes the hit or miss on their own _tracking_ grid, in order to build up a picture of the opponent's fleet.
 
@@ -16,7 +16,7 @@ One of the things you have to keep in mind is to simplify as much as you can whe
 
 **Tasks**:
 
-1. Create the **CRC** model of the classes involved in the game. 
+1. Create the **CRC** model of the classes involved in the game.
 2. Create your **battleships** repository (use the name _battleships_) in Github.
 3. Add a description of your project into the `README.md` file.
 4. Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
@@ -28,7 +28,7 @@ We have recognised the objects that make up the domain of the game. Let's implem
 
 The important thing here is that, once we have recognised the objects that make up the battleship game we start implementing them with the desired functionality they should have ( _How does a ship register a shot? How do you place ships on a board? How does the board look like? etc._ ). If we make sure that every object has it's responsibilities clearly defined we will be able to _"wire"_ them into a turn based game fairly easily.
 
-When you model your domain, make sure that your objects follow the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) ( **SRP** from now on ). 
+When you model your domain, make sure that your objects follow the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) ( **SRP** from now on ).
 
 Do you know why? What's the benefit of the **SRP**?
 
@@ -67,7 +67,7 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 
 **Tasks**
 
-1. Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your cohort ( _maybe as a lunch and learn?_ ). 
+1. Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your cohort ( _maybe as a lunch and learn?_ ).
 2. Create a storyboard of screens you think you will need to implement in order to cater for a good UX.
 3. Present the UI and UX you have created to the your cohort and discuss the different approaches.
 4. Implement the User Interface.

@@ -9,7 +9,7 @@ This week's project is a bookmark manager. The goal is to expose you to the foll
 * Relational databases (Tuesday and Wednesday)
 * Security considerations (Thursday)
 
-In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Sudoku – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
+In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to BattleShip– web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
 ## High-level specification
 
@@ -631,7 +631,6 @@ feature "User signs up" do
               password = "oranges!")
     visit '/users/new'
     expect(page.status_code).to eq(200)
-    expect(page.status_code).to eq(200)
     fill_in :email, :with => email
     fill_in :password, :with => password
     click_button "Sign up"
@@ -732,7 +731,7 @@ end
 
 ```
 
-Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in Sudoku – web version).
+Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in BattleShips – web version).
 
 First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into /server.rb.
 
@@ -946,7 +945,7 @@ end
 
 An new instance of the user will simply return nil for @user.email.
 
-Finally, let's display a flash message, notifying the user of the error. Add the rack-flash3 gem as described in Sudoku – web version and set the flash before the view is re-rendered.
+Finally, let's display a flash message, notifying the user of the error. Add the rack-flash3 gem as described in BattleShip – web version and set the flash before the view is re-rendered.
 
 ```ruby
 
@@ -1347,7 +1346,7 @@ Finally, let's add support for flash[:notice] in our layout.
 
 The tests pass, so we know that the user can now be signed out.
 
-Now it's a good time to refactor our code a little bit. Let's install 'sinatra-partial' gem and use it like we did in Sudoku – web version to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder. After we do this, our server.rb is nice and clean, containing only require statements and high-level configuration. Let's also move the models from /lib to /app/models to make sure that the models, views and controllers are in one place (incidentally, we're following Ruby on Rails naming conventions to some extent).
+Now it's a good time to refactor our code a little bit. Let's install 'sinatra-partial' gem and use it like we did in BattleShip – web version to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder. After we do this, our server.rb is nice and clean, containing only require statements and high-level configuration. Let's also move the models from /lib to /app/models to make sure that the models, views and controllers are in one place (incidentally, we're following Ruby on Rails naming conventions to some extent).
 
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
@@ -1497,7 +1496,7 @@ Note that I added a couple more links to the database.
 github
 https://github.com/makersacademy/bookmark_manager/tree/7baae00b00b55846c4a4618c337c202523315879
 
-Let's now style the links list. First, let's put them into a container and move the link itself into a partial (remember partials from Sudoku – web version?). This will allow us to style the container itself.
+Let's now style the links list. First, let's put them into a container and move the link itself into a partial (remember partials from BattleShip – web version?). This will allow us to style the container itself.
 ```html
 <div id='links-container'>
   <ul id='links'>
