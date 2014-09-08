@@ -55,7 +55,7 @@ After homebrew has downloaded the software it will show you some installation in
 
 Make sure you run these commands after installing postgresql with homebrew:
 
-`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`
+`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`<br>
 `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist`
 
 You can check your installation by running
