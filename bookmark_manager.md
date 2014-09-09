@@ -24,7 +24,7 @@ The website will have the following options:
 * Add tags to the links
 * Filter links by a tag
 
-This is the basic view of the website. This tutorial will discuss how to build it, step by step. At the end of the section there are multiple exercises challenging you to extend the functionality of this website. 
+This is the basic view of the website. This tutorial will discuss how to build it, step by step. At the end of the section there are multiple exercises challenging you to extend the functionality of this website.
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
@@ -55,7 +55,7 @@ After homebrew has downloaded the software it will show you some installation in
 
 Make sure you run these commands after installing postgresql with homebrew:
 
-`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`
+`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`<br>
 `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist`
 
 You can check your installation by running
@@ -131,7 +131,7 @@ By default Postgres.app is configured to accept connections from a logged in use
 
 After we require our models, datamapper will know what data schema we have in our project (because we include DataMapper::Resource in every model). After the models are finalised (checked for consistency), we can ask datamapper to create the tables.
 
-However, datamapper will not create the database for us. We need to do it ourselves. 
+However, datamapper will not create the database for us. We need to do it ourselves.
 
 In the terminal run psql to connect to your database server.
 
@@ -140,7 +140,7 @@ Psql is a text-based interface to talk to the database, much like irb is used to
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1379937867691_Screen%20Shot%202013-09-23%20at%2012.44.14.png "terminal")
 
-Finally, type 
+Finally, type
 `\q`
 to exit psql.
 
@@ -164,12 +164,12 @@ Add this on top of spec/spec_helper:
 # Remember environment variables from week 1?
 ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
 
-# this needs to be after ENV["RACK_ENV"] = 'test' 
+# this needs to be after ENV["RACK_ENV"] = 'test'
 # because the server needs to know
-# what environment it's running it: test or development. 
+# what environment it's running it: test or development.
 # The environment determines what database to use.
 require 'server'
-``` 
+```
 
 Finally, create the spec/link_spec.rb:
 ```ruby
@@ -184,7 +184,7 @@ describe Link do
       # In the beginning our database is empty, so there are no links
       expect(Link.count).to eq(0)
       # this creates it in the database, so it's stored on the disk
-      Link.create(:title => "Makers Academy", 
+      Link.create(:title => "Makers Academy",
                   :url => "http://www.makersacademy.com/")
       # We ask the database how many links we have, it should be 1
       expect(Link.count).to eq(1)
@@ -272,7 +272,7 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-  
+
 end
 ```
 
@@ -372,7 +372,7 @@ feature "User adds a new link" do
       fill_in 'url', :with => url
       fill_in 'title', :with => title
       click_button 'Add link'
-    end      
+    end
   end
 end
 ```
@@ -414,9 +414,9 @@ Let's implement a new feature: allowing links to have tags associated with them.
 
   scenario "with a few tags" do
     visit "/"
-    add_link("http://www.makersacademy.com/", 
-                "Makers Academy", 
-                ['education', 'ruby'])    
+    add_link("http://www.makersacademy.com/",
+                "Makers Academy",
+                ['education', 'ruby'])
     link = Link.first
     expect(link.tags).to include("education")
     expect(link.tags).to include("ruby")
@@ -429,7 +429,7 @@ Let's implement a new feature: allowing links to have tags associated with them.
       # our tags will be space separated
       fill_in 'tags', :with => tags.join(' ')
       click_button 'Add link'
-    end      
+    end
   end
   ```
 
@@ -472,7 +472,7 @@ class Tag
 
   property :id, Serial
   property :text, String
-  
+
 end
 ```
 
@@ -559,16 +559,16 @@ Let's also update the before(:each) block to create some test data.
 ```ruby
   before(:each) {
     Link.create(:url => "http://www.makersacademy.com",
-                :title => "Makers Academy", 
+                :title => "Makers Academy",
                 :tags => [Tag.first_or_create(:text => 'education')])
-    Link.create(:url => "http://www.google.com", 
-                :title => "Google", 
+    Link.create(:url => "http://www.google.com",
+                :title => "Google",
                 :tags => [Tag.first_or_create(:text => 'search')])
-    Link.create(:url => "http://www.bing.com", 
-                :title => "Bing", 
+    Link.create(:url => "http://www.bing.com",
+                :title => "Bing",
                 :tags => [Tag.first_or_create(:text => 'search')])
-    Link.create(:url => "http://www.code.org", 
-                :title => "Code.org", 
+    Link.create(:url => "http://www.code.org",
+                :title => "Code.org",
                 :tags => [Tag.first_or_create(:text => 'education')])
   }
   ```
@@ -609,25 +609,25 @@ Let's begin with a test, as usual. The integration test should go to /spec/featu
 require 'spec_helper'
 
 feature "User signs up" do
- 
-  # Strictly speaking, the tests that check the UI 
-  # (have_content, etc.) should be separate from the tests 
-  # that check what we have in the DB. The reason is that 
+
+  # Strictly speaking, the tests that check the UI
+  # (have_content, etc.) should be separate from the tests
+  # that check what we have in the DB. The reason is that
   # you should test one thing at a time, whereas
-  # by mixing the two we're testing both 
+  # by mixing the two we're testing both
   # the business logic and the views.
   #
-  # However, let's not worry about this yet 
+  # However, let's not worry about this yet
   # to keep the example simple.
 
-  
-  scenario "when being logged out" do    
-    lambda { sign_up }.should change(User, :count).by(1)    
+
+  scenario "when being logged out" do
+    expect{ sign_up }.to change(User, :count).by(1)
     expect(page).to have_content("Welcome, alice@example.com")
-    expect(User.first.email).to eq("alice@example.com")        
+    expect(User.first.email).to eq("alice@example.com")
   end
 
-  def sign_up(email = "alice@example.com", 
+  def sign_up(email = "alice@example.com",
               password = "oranges!")
     visit '/users/new'
     expect(page.status_code).to eq(200)
@@ -648,7 +648,7 @@ class User
 
   property :id, Serial
   property :email, String
-  
+
 end
 ```
 
@@ -694,7 +694,7 @@ Now the test will be able to fill out the form but the form submits to the route
 
 ```ruby
 post '/users' do
-  User.create(:email => params[:email], 
+  User.create(:email => params[:email],
               :password => params[:password])
   redirect to('/')
 end
@@ -712,7 +712,7 @@ class User
   property :id, Serial
   property :email, String
   # this will store both the password and the salt
-  # It's Text and not String because String holds 
+  # It's Text and not String because String holds
   # 50 characters by default
   # and it's not enough for the hash and salt
   property :password_digest, Text
@@ -721,7 +721,7 @@ class User
   # instead, we generate a password digest, that looks like this:
   # "$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa"
   # and save it in the database. This digest, provided by bcrypt,
-  # has both the password hash and the salt. We save it to the 
+  # has both the password hash and the salt. We save it to the
   # database instead of the plain password for security reasons.
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
@@ -742,8 +742,8 @@ set :session_secret, 'super secret'
 Then, let's save the user id in the session after it's created (/server.rb).
 
 post '/users' do
-  user = User.create(:email => params[:email], 
-                     :password => params[:password])  
+  user = User.create(:email => params[:email],
+                     :password => params[:password])
   session[:user_id] = user.id
   redirect to('/')
 end
@@ -755,7 +755,7 @@ Then, let's create a helper that will give us access to the current user, if log
 ```ruby
 helpers do
 
-  def current_user    
+  def current_user
     @current_user ||=User.get(session[:user_id]) if session[:user_id]
   end
 
@@ -787,11 +787,11 @@ https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by adding a test for this.
 ```ruby
   scenario "with a password that doesn't match" do
-    lambda { sign_up('a@a.com', 'pass', 'wrong') }.should change(User, :count).by(0)    
+    expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
   end
 
-  def sign_up(email = "alice@example.com", 
-              password = "oranges!", 
+  def sign_up(email = "alice@example.com",
+              password = "oranges!",
               password_confirmation = "oranges!")
     visit '/users/new'
     fill_in :email, :with => email
@@ -823,9 +823,9 @@ The reason we need the writer for :password_confirmation is that we're now passi
 
 ```ruby
 post '/users' do
-  user = User.create(:email => params[:email], 
+  user = User.create(:email => params[:email],
               :password => params[:password],
-              :password_confirmation => params[:password_confirmation])  
+              :password_confirmation => params[:password_confirmation])
   session[:user_id] = user.id
   redirect to('/')
 end
@@ -858,11 +858,11 @@ https://github.com/makersacademy/bookmark_manager/tree/f41a3a2b35451eadd0773e0ab
 
 Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
 
-```ruby 
+```ruby
 post '/users' do
-  user = User.create(:email => params[:email], 
+  user = User.create(:email => params[:email],
               :password => params[:password],
-              :password_confirmation => params[:password_confirmation])    
+              :password_confirmation => params[:password_confirmation])
   # the user.id will be nil if the user wasn't saved
   # because of password mismatch
   session[:user_id] = user.id
@@ -874,8 +874,8 @@ Let's extend the test to expect a redirection back to the sign up form if the pa
 ```ruby
 
   scenario "with a password that doesn't match" do
-    lambda { sign_up('a@a.com', 'pass', 'wrong') }.should change(User, :count).by(0) 
-    expect(current_path).to eq('/users')   
+    expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
+    expect(current_path).to eq('/users')
     expect(page).to have_content("Sorry, your passwords don't match")
   end
 ```
@@ -890,9 +890,9 @@ So, instead of redirecting the user, let's show the same form but this time we'l
 post '/users' do
   # we just initialize the object
   # without saving it. It may be invalid
-  user = User.new(:email => params[:email], 
+  user = User.new(:email => params[:email],
               :password => params[:password],
-              :password_confirmation => params[:password_confirmation])  
+              :password_confirmation => params[:password_confirmation])
   # let's try saving it
   # if the model is valid,
   # it will be saved
@@ -914,9 +914,9 @@ However, how will the data (in our case the email the user entered) make its way
 
 ```ruby
 post '/users' do
-  @user = User.new(:email => params[:email], 
+  @user = User.new(:email => params[:email],
               :password => params[:password],
-              :password_confirmation => params[:password_confirmation])  
+              :password_confirmation => params[:password_confirmation])
   if @user.save
     session[:user_id] = @user.id
     redirect to('/')
@@ -1024,9 +1024,9 @@ would be unnecessary. When using other ORMs, double check if creating a unique i
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 ```ruby
-  scenario "with an email that is already registered" do    
-    lambda { sign_up }.should change(User, :count).by(1)
-    lambda { sign_up }.should change(User, :count).by(0)
+  scenario "with an email that is already registered" do
+    expect{ sign_up }.to change(User, :count).by(1)
+    expect{ sign_up }.to change(User, :count).by(0)
     expect(page).to have_content("This email is already taken")
   end
 
@@ -1070,7 +1070,7 @@ The @user.errors object contains all validation errors. It can be used to get er
 
 ```html
 <% if flash[:errors] && !flash[:errors].empty? %>
-  Sorry, there were the following problems with the form. 
+  Sorry, there were the following problems with the form.
   <ul id="errors">
     <% flash[:errors].each do |error| %>
       <li><%= error %></li>
@@ -1100,12 +1100,12 @@ Rake is a tool for running automated tasks. The tasks are defined in Rakefile (w
 
 ```ruby
 require 'data_mapper'
-require './app/data_mapper_setup'  
+require './app/data_mapper_setup'
 
-task :auto_upgrade do  
-  # auto_upgrade makes non-destructive changes. 
+task :auto_upgrade do
+  # auto_upgrade makes non-destructive changes.
   # If your tables don't exist, they will be created
-  # but if they do and you changed your schema 
+  # but if they do and you changed your schema
   # (e.g. changed the type of one of the properties)
   # they will not be upgraded because that'd lead to data loss.
   DataMapper.auto_upgrade!
@@ -1113,13 +1113,13 @@ task :auto_upgrade do
 end
 
 task :auto_migrate do
-  # To force the creation of all tables as they are 
+  # To force the creation of all tables as they are
   # described in your models, even if this
   # may lead to data loss, use auto_migrate:
   DataMapper.auto_migrate!
   puts "Auto-migrate complete (data could have been lost)"
 end
-# Finally, don't forget that before you do any of that stuff, 
+# Finally, don't forget that before you do any of that stuff,
 # you need to create a database first.
 ```
 
@@ -1141,8 +1141,8 @@ The users can sign up on our website but there's no way to sign in if you happen
 feature "User signs in" do
 
   before(:each) do
-    User.create(:email => "test@test.com", 
-                :password => 'test', 
+    User.create(:email => "test@test.com",
+                :password => 'test',
                 :password_confirmation => 'test')
   end
 
@@ -1207,7 +1207,7 @@ Please sign in.
   <input type="submit" value="Sign in">
 ```
 a method to show this form:
-```ruby 
+```ruby
 get '/sessions/new' do
   erb :"sessions/new"
 end
@@ -1248,7 +1248,7 @@ def self.authenticate(email, password)
   # the == method calculates the candidate password_digest from
   # the password given and compares it to the password_digest
   # it was initialised with.
-  # So, to recap: THIS IS NOT A STRING COMPARISON 
+  # So, to recap: THIS IS NOT A STRING COMPARISON
   if user && BCrypt::Password.new(user.password_digest) == password
     # return this user
     user
@@ -1269,7 +1269,7 @@ module BCrypt
     def initialize(digest)
         @digest = digest
     end
-    def ==(password)        
+    def ==(password)
         @digest == digest(salt(@digest), password)
     end
     def digest(salt, password)
@@ -1295,8 +1295,8 @@ Since "signed in" only means that there's a user_id in the session, logging the 
 feature 'User signs out' do
 
   before(:each) do
-    User.create(:email => "test@test.com", 
-                :password => 'test', 
+    User.create(:email => "test@test.com",
+                :password => 'test',
                 :password_confirmation => 'test')
   end
 
@@ -1372,7 +1372,7 @@ user.save
 * Create a route to reset the password: get "/users/reset_password/:token"
 * Send an email with this a link containing this token to the user.
 * When the link is clicked, find the user that has this token in the database.
-```ruby 
+```ruby
 user = User.first(:password_token => token)
 ```
 *Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
@@ -1428,9 +1428,9 @@ Let's start by creating a black header line that will have the logo and the sign
   <div id="user-links">
     <% if current_user %>
       <span id="welcome-message">
-        Welcome, <%= current_user.email %>  
+        Welcome, <%= current_user.email %>
       </span>
-    
+
       <form id="sign-out" method="post" action="/sessions">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Sign out">
@@ -1467,7 +1467,7 @@ Let's now extract the form to add a link to its own page. To do this we need to 
 github
 https://github.com/makersacademy/bookmark_manager/tree/3f393ebd1c36c290cc545f7d1c55012aba307c6d
 
-The logo of the website is usually a link to the frontpage. Let's make it a link by wrapping the text in the anchor element. We'll need to update our css to specify that all links in the header are white and have no text-decoration (by default, links are underlined). 
+The logo of the website is usually a link to the frontpage. Let's make it a link by wrapping the text in the anchor element. We'll need to update our css to specify that all links in the header are white and have no text-decoration (by default, links are underlined).
 
 It's also a good time to get rid of the "Welcome to the bookmark manager" message.
 
@@ -1503,7 +1503,7 @@ Let's now style the links list. First, let's put them into a container and move 
     <% @links.each do |link| %>
       <%= partial :link, :locals => {:link => link}  %>
     <% end %>
-  </ul>  
+  </ul>
 </div>
 ```
 
@@ -1520,7 +1520,7 @@ Now let's make the links look better. First, let's create the elements we want t
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
   <span class='source'>
-    added yesterday by 
+    added yesterday by
     <a href="#">evgeny@makersacademy.com</a>
   </span>
 </li>
@@ -1551,7 +1551,7 @@ Most of the css for this partial is here.
 
   .link .source {
     /* http://learnlayout.com/float.html and the next 4 sections */
-    float: right; 
+    float: right;
     font-size: 12px;
   }
 ```
@@ -1576,12 +1576,12 @@ Now let's add a footer to the page to give it completeness (and include a refere
   </div>
   <div id="technologies">
     <p>
-      I built this page at 
+      I built this page at
       <a href="http://www.makersacademy.com">Makers Academy,
       a highly selective 12 week coding course in London</a>.
     </p>
     <p>
-      This website is built using Ruby, Sinatra, 
+      This website is built using Ruby, Sinatra,
       RSpec, Capybara, HTML and CSS.
     </p>
   </div>
@@ -1712,7 +1712,7 @@ Let's do the same to the sign up and sign in forms, not forgetting the flash for
     <%= flash[:notice] %>
   </div>
 <% end %>
-<% if flash[:errors] && !flash[:errors].empty? %>  
+<% if flash[:errors] && !flash[:errors].empty? %>
   <ul>
     <% flash[:errors].each do |error| %>
       <li class='flash error'><%= error %></li>
