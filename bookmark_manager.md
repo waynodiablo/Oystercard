@@ -738,9 +738,11 @@ First, we need to enable the sessions and set the encryption key to make sure no
 ```ruby
 enable :sessions
 set :session_secret, 'super secret'
+```
 
 Then, let's save the user id in the session after it's created (/server.rb).
 
+```ruby
 post '/users' do
   user = User.create(:email => params[:email],
                      :password => params[:password])
