@@ -1034,7 +1034,9 @@ Let's write a test first, as usual, checking that we can't register the same use
 
 We need to do two things. Firstly, we need to put constrains on the email field.
 
+```ruby
 property :email, String, :unique => true, :message => "This email is already taken"
+```
 
 We're setting the error message datamapper is going to return explicitely even though a very similar message would be used by default if we didn't specify it.
 
@@ -1092,11 +1094,11 @@ https://github.com/makersacademy/bookmark_manager/tree/44a6f6d79ab74d5da01487c14
 
 ### Bookmark manager - Adding user accounts - Rake tasks for database management
 
-Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute DataMapper.auto_migrate! instead of DataMapper.auto_upgrade! after we create a unique index.
+Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
 
-Right now our data_upgrade! call is in data_mapper_setup but this creates two problems. First, we don't want to edit this file every time we want to run data_migrate! instead. Second, we don't want to run data_upgrade every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
+Right now our `data_upgrade!` call is in `data_mapper_setup` but this creates two problems. First, we don't want to edit this file every time we want to run `data_migrate!` instead. Second, we don't want to run `data_upgrade` every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
 
-Rake is a tool for running automated tasks. The tasks are defined in Rakefile (with capital R). Put this Rakefile in the root folder of the project.
+Rake is a tool for running automated tasks. The tasks are defined in `Rakefile` (with capital R). Put this Rakefile in the root folder of the project.
 
 ```ruby
 require 'data_mapper'
