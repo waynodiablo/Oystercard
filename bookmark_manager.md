@@ -68,7 +68,7 @@ At first it can happen that you don't have a database named after your username 
 
 `postgres# create database "ecomba";`
 
-`DATABASE CREATE`
+`CREATE DATABASE`
 
 `postgres# \q`
 
