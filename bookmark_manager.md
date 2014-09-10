@@ -1034,7 +1034,9 @@ Let's write a test first, as usual, checking that we can't register the same use
 
 We need to do two things. Firstly, we need to put constrains on the email field.
 
+```ruby
 property :email, String, :unique => true, :message => "This email is already taken"
+```
 
 We're setting the error message datamapper is going to return explicitely even though a very similar message would be used by default if we didn't specify it.
 
