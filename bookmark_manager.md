@@ -1205,6 +1205,7 @@ Please sign in.
   Email: <input type="text" name='email'>
   Password: <input type="password" name='password'>
   <input type="submit" value="Sign in">
+</form>
 ```
 a method to show this form:
 ```ruby
