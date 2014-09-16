@@ -354,7 +354,7 @@ Let's pause for a while before continuing implementing more features. Is our cod
 
 Refactoring is the process of changing the structure of the code in order to make it more readable, maintainable or extendable without adding any new functionality.
 
-Software developers, even (and specially) experienced ones, don't write perfect code on their first attempt. First you write the code that works, then you refactor it to make it good. Let's refactor the code we have so far.
+Software developers, even (and especially) experienced ones, don't write perfect code on their first attempt. First you write the code that works, then you refactor it to make it good. Let's refactor the code we have so far.
 
 Before starting refactoring, always make sure all the examples pass. If your examples fail or if you have no examples, you have no idea whether your refactored code is doing the same thing as before. Just hoping that it does is not enough: some changes in functionality are subtle and non-obvious even to experienced developers and may produce ripple effects. So, make sure the examples pass before you begin.
 
