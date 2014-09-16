@@ -756,7 +756,7 @@ When you need to get a bike from a station, you need to know what bikes are avai
 ````ruby
 it "should provide the list of available bikes" do
   working_bike, broken_bike = Bike.new, Bike.new    
-  broken_bike.break
+  broken_bike.break!
   station.dock(working_bike)
   station.dock(broken_bike)
   expect(station.available_bikes).to eq([working_bike])
