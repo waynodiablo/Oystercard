@@ -69,7 +69,7 @@ Everything is setup and ready, but how do we start? If you have been following b
 
 One of the gems you should have in your system now is ``cucumber-sinatra``. This gem will help you setting up cucumber.
 
-Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](https://github.com/gypsydave5/course/blob/master/pills/cucumber.md)).
+Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](https://github.com/makersacademy/course/blob/master/pills/cucumber.md)).
 
 In your projects directory run:
 
