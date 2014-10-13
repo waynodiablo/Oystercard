@@ -1,6 +1,6 @@
 # Io (Silver)
 
-First thing's first: silver (nor any other precious metal) has nothing to do with **Io**. I was just trying to think of a good pun for the title of this article. With that said, it's time to learn about everybody's favourite wee language: Io.
+First thing's first: silver (nor any other precious metal) has nothing to do with **Io**. I was just trying to think of a good pun for the title of this article. With that said, it's time to learn about everybody's favourite wee language: Io. Steve Dekorte invented the Io language in 2002, and it's always written with a capital 'I' and small 'o' - neither of which will improve your chances of a decent Google search, but it is kinda cool nonetheless :)
 
 So why are we using up valuable Makers time with such an obscure little language? Well, firstly Io is really fun. No, not like your Maths teacher loved Trigonometry - this is actually go out on a Saturday night, get drunk and puke on your shoes kinda fun. At least, as close as you can get in the world of programming...
 
@@ -13,6 +13,8 @@ However, there is also another reason that we are showing you Io as a part of yo
 "What's a prototype-based language, Roi?" Excellent question, have a sticker. So far you will have danced with Object-Oriented languages, and should be familiar with what classes are, and how they fit in with the programs you have been playing with thus far.
 
 As a quick recap, classes can be thought of as a collection of methods, which act as a Blueprint or template for something you wish to represent in your program. In a prototype-based language, the closest equivalent to this would be pre-existing objects that you would *__clone__* "to "become your starting points for objects that you define further. These original (pre-cloned) objects are your prototypes - and they are beautiful in their simplicity.
+
+Something to remember, is in a prototypical language, everything is an object. And to communicate with each object, you send a message (method). You don't instantiate classes, instead you clone objects. Each object remembers its prototype, so that connection between the two always exists. Make sense?
 
 ## Io Who??
 
@@ -69,30 +71,32 @@ You should see a slightly familiar sight (although the number after 'Turtle_' mi
 
 This means you have successfully created a prototypical object of type 'Turtle', which is ready for you to start shaping out of digital clay. Go you.
 
-One of the most obvious differentiations between our beloved Ninja Turtles has and will always be their bandana colour (I was always partial to Donatello - who was your favourite?) So let's give our Turtle the capacity to define a bandana colour:
+One of the most obvious differentiations between our beloved Ninja Turtles has and will always be their bandana colour (I was always partial to donatello - who was your favourite?) So let's give our Turtle the capacity to define a bandana colour:
 
 ```bash
 Io> Turtle bandana := "some colour"
 ```
 
+You have just witnessed the power of slots. Each object has slots, which is another way of saying it has somewhere to store stuff (properties, methods etc).
+
 Well this is exciting, isn't it? Let's start reaping the benefits of our awesome (so far) program. Let's make a Leonardo!
 
 ```bash
-Io> Leonardo := Turtle clone
+Io> leonardo := Turtle clone
 ```
 
 While we're at it, let's see what colour his bandana is set to:
 
 ```bash
-Io> Leonardo bandana
+Io> leonardo bandana
 ==> some colour
 ```
 
-Hmm, that's fine - this means that our Leonardo object has the ability to have a value assigned to 'bandana', so now we just have to set it:
+Hmm, that's fine - this means that our leonardo object has the ability to have a value assigned to 'bandana', so now we just have to set it:
 
 ```bash
-Io> Leonardo bandana := "Blue"
-==> Blue
+Io> leonardo bandana := "blue"
+==> blue
 ```
 
 Go ahead and create the rest of the Turtles, and assign their requisite bandana colours - I'll wait here. On the off chance that your childhood was devoid of light and happiness, you might find [this link](http://www.deviantart.com/art/TEENAGE-MUTANT-NINJA-TURTLES-162331870) useful in your endeavours.
@@ -106,21 +110,21 @@ Io> Turtle weapon := "some weapon"
 Let's check that this has filtered down the foodchain to our turtles, with a random spot check. DONATELLO - I CHOOSE YOU!
 
 ```bash
-Io> Donatello weapon
+Io> donatello weapon
 ==> some weapon
 ```
 
 Fantastic - now we know that changes to our prototype filter down to the cloned items based on that original object. As you can see, this allows us a great deal of flexibility. Let's get those turtles tooled up!
 
 ```bash
-Io> Donatello weapon := "Bo Staff"
-==> Bo Staff
-Io> Raphael weapon := "Sais"
-==> Sais
-Io> Michaelangelo weapon := "Nunchuckus"
-==> Nunchuckus
-Io> Leonardo weapon := "Katana"
-==> Katana
+Io> donatello weapon := "bo staff"
+==> bo staff
+Io> raphael weapon := "sais"
+==> sais
+Io> michaelangelo weapon := "nunchuckus"
+==> nunchuckus
+Io> leonardo weapon := "katana"
+==> katana
 ```
 
 Now this is plenty of fun, but how about we get a method happening? I always loved their irreverent 80s catchphrases, so perhaps we could create a method (or message as they are known in Io) for each turtle to say something cool (a few decades ago):
@@ -128,6 +132,10 @@ Now this is plenty of fun, but how about we get a method happening? I always lov
 ```bash
 Io> Turtle says := method("catchphrase" println)
 ```
+
+Ooh, see what we did there? Let's ignore the method declaration for now, and instead concentrate on what's happening in the brackets. We have a string "catchphrase", and we are applying a method called 'println' to it. In Io parlance, the string would be the **receiver** and println would be the **message.**
+
+Also, notice how simple this method definition is? Don't worry, you can also declare methods over several lines (but naturally you wouldn't dream of making complicated methods, would you?)
 
 Now we are set to give our little guys a voice. For those of you who weren't present in the 80s (or just not cool during that period), here is a list of possible phrases:
 
@@ -140,39 +148,8 @@ Now we are set to give our little guys a voice. For those of you who weren't pre
 Let's put one of those in action now:
 
 ```bash
-Io> Michaelangelo says := "COWABUNGA!!!"
+Io> michaelangelo says := "COWABUNGA!!!"
 ```
 
 And with that, it's time for you to accept the keys and take Io for a spin. Be safe, but have fun! You will find plenty of help in the [guide section of the official website](http://iolanguage.org/scm/io/docs/IoGuide.html), and [syntax help in the reference guide](http://iolanguage.org/scm/io/docs/reference/index.html).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
