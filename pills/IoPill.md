@@ -71,13 +71,15 @@ You should see a slightly familiar sight (although the number after 'Turtle_' mi
 
 This means you have successfully created a prototypical object of type 'Turtle', which is ready for you to start shaping out of digital clay. Go you.
 
+'Object' is what's known as the root object. You are sending it the message (method) 'clone' - and assigning the resulting copy of Object to 'Turtle'. Fun!
+
 One of the most obvious differentiations between our beloved Ninja Turtles has and will always be their bandana colour (I was always partial to donatello - who was your favourite?) So let's give our Turtle the capacity to define a bandana colour:
 
 ```bash
 Io> Turtle bandana := "some colour"
 ```
 
-You have just witnessed the power of slots. Each object has slots, which is another way of saying it has somewhere to store stuff (properties, methods etc).
+You have just witnessed the power of slots. Each object has slots, which is another way of saying it has somewhere to store stuff (properties, methods etc). You can think of them as hashes (or key/value pairs if you prefer). Each key, or slot name will have an associated value, which you can view by calling on that slot name. So in our example above, 'bandana' is the slot name, and the value is whatever string gets returned.
 
 Well this is exciting, isn't it? Let's start reaping the benefits of our awesome (so far) program. Let's make a Leonardo!
 
