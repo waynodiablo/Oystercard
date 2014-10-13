@@ -150,6 +150,12 @@ Let's put one of those in action now:
 ```bash
 Io> michaelangelo says := "COWABUNGA!!!"
 ```
+How cool is that? If you want to know what an object is hiding in its slots? Easy:
+
+```bash
+Io> Michaelangelo slotNames
+==> list(says, type, weapon)
+```
 
 And with that, it's time for you to accept the keys and take Io for a spin. Be safe, but have fun! You will find plenty of help in the [guide section of the official website](http://iolanguage.org/scm/io/docs/IoGuide.html), and [syntax help in the reference guide](http://iolanguage.org/scm/io/docs/reference/index.html).
 
