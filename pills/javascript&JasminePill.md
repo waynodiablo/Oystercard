@@ -89,7 +89,7 @@ describe('',);
 #### Step 5
 Now we need to declare the body of our method. In Ruby, we would type 'do' and 'end' - but in javascript we use the dreaded 'function' keyword.
 
-We are going to step outside of our describe method right now, and focuse on 'function' as its own entity. The reason we will do this will become apparent in a short while.
+We are going to step outside of our describe method right now, and focus on 'function' as its own entity. The reason we will do this will become apparent in a short while.
 
 ##### Step 5a
 ```javascript
