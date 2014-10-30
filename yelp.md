@@ -121,13 +121,13 @@ Now run `rspec`, which will say that there's no route matching `/restaurants`. S
 
 The config/routes.rb file has lots of clues as to how to write routes – have a look at them.
 
-`routes.db`:
+`config/routes.db`:
 
 ```ruby
-resources:restaurants
+resources :restaurants
 ```
 
-If you now run `rake routes` you'll get a list of the different routes that this has created.
+If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
 
