@@ -152,7 +152,7 @@ Now we get a different error – that /app/views/ is missing an index view.
 
 `$ touch app/views/restaurants/index.html.erb`
 
-(Note the requirement to use the double file extension here.)
+(Note the double file extension here.)
 
 Now our error is that there's no text on the page! Fix it:
 
@@ -171,7 +171,7 @@ No restaurants yet!
 <a href='#'>Add a restaurant</a>
 ```
 
-And now, our test is passing.
+We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same, so now, our test is passing.
 
 ### The second test – creating a restaurant
 
@@ -229,6 +229,126 @@ And in `app/views/restaurants/index.html.erb`:
 <a href='#'>Add a restaurant</a>
 ```
 
+## Migrations – adding a column to a database
+
+```shell
+$ rails g migration AddDescriptionToRestaurants description:text
+$ rake db:migrate
+```
+
+## Associations
+
+Let's add some reviews for our restaurants.
+
+`app/spec/features/review_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+describe 'reviewing' do
+    before do
+        Restaurant.create(name: 'KFC')
+    end
+
+    it 'allows users to leave a review using a form' do
+       visit '/restaurants'
+       click_link 'Review KFC'
+       fill_in "Thoughts", with: "so so"
+       select '3', from: 'Rating'
+       click_button 'Leave Review'
+
+       expect(current_path).to eq '/restaurants'
+       expect(page).to have_content('so so')
+    end
+
+end
+```
+
+First, we need a new route for reviews. Update `routes.rb` to have a nested resource:
+
+```ruby
+resource :restaurants do
+    resource :reviews
+end
+```
+
+Then, add a link (using Rails' `link_to` helper) to `new_restaurant_review_path` (you can see this path appearing in `rake routes`).
+
+Now we need a new controller.
+
+`$ rails g controller reviews`
+
+In `app/controllers/reviews_controller.rb`, add the 'new' method:
+
+```rb
+def new
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review = Review.new
+end
+```
+
+This sets up @restaurant and @review which get passed into the 'new review' form in the next step.
+
+Keep following the errors RSpec is giving you. Now we need a view:
+
+`app/views/reviews/new.html.erb`:
+
+```erb
+<%= form_for [@restaurant, @review] do |f| %>
+<%= f.label :thoughts %>
+<%= f.text_area :thoughts %>
+
+<%= f.label :rating %>
+<%= f.select :rating, (1..5) %>
+<%= f.submit 'Leave review' %>
+<% end %>
+```
+
+Cool. Now we need a model for reviews – currently they aren't being stored in the database!
+
+`$ rails g model review thoughts:text rating:integer`
+
+Let's add a create method to our reviews controller.
+
+`app/controllers/reviews_controller.rb`:
+
+```ruby
+def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
+end
+```
+
+RSpec will now complain that we don't have an association between restaurants and reviews. Bummer. Time to fix that.
+
+To `app/models/restaurant.rb`, add:
+
+`has_many :reviews`
+
+Time for a migration.
+
+`$ rails g migration AddResturantIdToReviews restaurant:belongs_to`
+`$ rake db:migrate`
+
+This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
+
+If you ever want to undo this, you can rollback a migration using
+
+`$ rake db:rollback[n]`
+
+where *n* is the number of migrations you want to roll back.
+
+Now, if you look at your `schema.rb` you'll see the new assocation between restaurants and reviews.
+
+RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the create method in the reviews model.
+
+`app/controllers/reviews_controller.rb`:
+
+```ruby
+redirect_to restaurants_path
+```
+
+Finally, update your restaurants index.html.erb to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
 
 # Version 2 - User login
 
