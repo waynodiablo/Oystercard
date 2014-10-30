@@ -66,11 +66,15 @@ or
 
 `$ rails s`
 
-and visit http://localhost:3000. You'll likely need to run a `rake` task to get your database going – visit the page and you'll be told which.
+will get you started. (Rails has lots of these little command-line shortcuts.) Now visit http://localhost:3000. Don't worry if you see an error – you'll likely need to run a `rake` task to get your database going, so visit the page and you'll be told which.
 
-`$ bin/rake db:create`
+`$ rake db:create`
 
-You may need to append RAILS_ENV=test to get your tests working.
+If this doesn't work, you may need to run 
+
+`$ rake db:create RAILS_ENV=test`
+
+instead.
 
 ### Add some testing gems
 
@@ -83,7 +87,7 @@ gem 'capybara', group: :test
 
 With these, we also want to run this command:
 
-`$ bin/rails generate rspec:install`
+`$ rails generate rspec:install`
 
 This gets RSpec going by creating a /spec directory and a helper file.
 
@@ -92,6 +96,139 @@ In your spec/rails_helper.rb file, add the line:
 `require 'capybara/rails'`
 
 This lets you use Capybara in your testing environment.
+
+### The first test – home page with a link
+
+Make a spec/features/ directory, and make a new spec file inside it.
+
+`restaurants_feature_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+describe 'restaurants' do
+    context 'no restaurants have been added' do
+        it 'should display a prompt to add a restaurant' do
+            visit '/restaurants'
+            expect(page).to have_content 'No restaurants'
+            expect(page).to have_link 'Add a restaurant'
+        end
+    end
+end
+```
+
+Now run `rspec`, which will say that there's no route matching `/restaurants`. Simple.
+
+The config/routes.rb file has lots of clues as to how to write routes – have a look at them.
+
+`routes.db`:
+
+```ruby
+resources:restaurants
+```
+
+If you now run `rake routes` you'll get a list of the different routes that this has created.
+
+Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
+
+`$ rails g controller restaurants`
+
+(Here, 'g' is short for generate.)
+
+Now, RSpec gives us a different error – that there's no action /index for restaurants. Let's fix that.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+class RestaurantsController < ApplicationController
+
+def index
+end
+
+end
+```
+
+Now we get a different error – that /app/views/ is missing an index view.
+
+`$ touch app/views/restaurants/index.html.erb`
+
+(Note the requirement to use the double file extension here.)
+
+Now our error is that there's no text on the page! Fix it:
+
+`app/views/restaurants/index.html.erb`:
+
+```html
+No restaurants yet!
+```
+
+Cool – but now RSpec is telling us we need a link on the page.
+
+`app/views/restaurants/index.html.erb`:
+
+```html
+No restaurants yet!
+<a href='#'>Add a restaurant</a>
+```
+
+And now, our test is passing.
+
+### The second test – creating a restaurant
+
+Add the following to `spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+context 'restaurants have been added' do
+    before do
+        Restaurant.create(name: 'KFC')
+    end
+
+    it 'should display restaurants' do
+        visit '/restaurants'
+        expect(page).to have_content('KFC')
+        expect(page).not_to have_content('No restaurants yet')
+    end
+end
+```
+
+Now we need a Restaurants model to satisfy our failing test.
+
+`$ rails g model restaurant name:string description:text`
+
+This command will add 'name' and 'description' properties to the database for each restaurant, and make a migration file that you can run to create these properties. Each item gets an ID automatically. Note that 'restaurant' here is singular, but the controller refers to 'restaurants'.
+
+If you make a mistake, you can type the above command but using 'rails d' – for destroy – to remove the migrate.
+
+Then:
+
+`$ rake db:migrate`
+
+which will run all of your database migrations.
+
+(A word on migrations – don't go into those files and edit them. If you want to remove database tables or change the schema, instead write another migration that does that.)
+
+Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
+
+```ruby
+def index
+    @restaurants = Restaurant.all
+end
+```
+
+And in `app/views/restaurants/index.html.erb`:
+
+```
+<% if @restaurants.any? %>
+    <% @restaurants.each do |restaurant| %>
+        <h2> <%= restaurant.name %> </h2>
+    <% end %>
+<% else %>
+    No restaurants yet
+<% end %>
+
+<a href='#'>Add a restaurant</a>
+```
+
 
 # Version 2 - User login
 
