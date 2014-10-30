@@ -234,8 +234,9 @@ And in `app/views/restaurants/index.html.erb`:
 Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
 
 | id | name |
-| 1 | KFC | 
-| 2 | ... |
+| -- | ---- |
+| 1  | KFC  |
+| 2  | ...  |
 
 We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**.
 
