@@ -67,7 +67,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
-### V2 Walkthrough →
+### [V2 Walkthrough →](yelpv2.md)
 
 ## Version 3 - Enhanced UX
 
