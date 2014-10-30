@@ -180,6 +180,7 @@ context 'restaurants have been added' do
     expect(page).not_to have_content('No restaurants yet')
   end
 end
+...
 ```
 
 Now we need a Restaurants model to satisfy our failing test.
@@ -210,7 +211,7 @@ end
 
 This creates an instance variable, `@restaurants`, that is accessible by our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
 
-```
+```erb
 <% if @restaurants.any? %>
   <% @restaurants.each do |restaurant| %>
     <h2> <%= restaurant.name %> </h2>
@@ -271,7 +272,6 @@ Here, we're using Rails' built-in `form_for` helper to build a form, which takes
 
 Run your tests again – RSpec will now say it doesn't know what to do with the information submitted into that form. We need a `create` method!
 
-
 ```ruby
 class RestaurantsController < ApplicationController
 ...
@@ -302,7 +302,7 @@ which tells Rails that we should allow only the field labelled 'name' to be acce
 
 Now let's clean up that form a bit – using `Restaurant.new` inside the view logic isn't good practice, so instead we'll use `@restaurant` and let the controller deal with what that means.
 
-1. `app/views/restaurants/new.html.erb`:
+`app/views/restaurants/new.html.erb`:
 
 ```erb
 <%= form_for Restaurant.new do |f| %>
@@ -312,7 +312,7 @@ Now let's clean up that form a bit – using `Restaurant.new` inside the view lo
 <% end %>
 ```
 
-2. `app/controllers/restaurants_controller.rb`:
+`app/controllers/restaurants_controller.rb`:
 
 ```ruby
 class RestaurantsController < ApplicationController
@@ -408,8 +408,11 @@ That's fine, but now RSpec complains about a missing `edit` template. Let's crea
 <% end %>
 ```
 
+@@WIP
+
 ##### Deleting restaurants
 
+@@WIP
 
 
 #### Adding reviews to restaurants – associations
@@ -479,12 +482,11 @@ Keep following the errors RSpec is giving you. Now we need a view:
 
 ```erb
 <%= form_for [@restaurant, @review] do |f| %>
-<%= f.label :thoughts %>
-<%= f.text_area :thoughts %>
-
-<%= f.label :rating %>
-<%= f.select :rating, (1..5) %>
-<%= f.submit 'Leave review' %>
+  <%= f.label :thoughts %>
+  <%= f.text_area :thoughts %>
+  <%= f.label :rating %>
+  <%= f.select :rating, (1..5) %>
+  <%= f.submit 'Leave review' %>
 <% end %>
 ```
 
@@ -516,13 +518,14 @@ To `app/models/restaurant.rb`, add:
 Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
 
 `$ rails g migration AddResturantIdToReviews restaurant:belongs_to`
+
 `$ rake db:migrate`
 
 This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
 
 Now, if you look at your `schema.rb` you'll see the new association between restaurants and reviews.
 
-RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the create method in the reviews model.
+RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the `create` method in the reviews model.
 
 `app/controllers/reviews_controller.rb`:
 
@@ -530,11 +533,15 @@ RSpec now gives an error about a missing template for create, so time to create 
 redirect_to restaurants_path
 ```
 
-Finally, update your restaurants index.html.erb to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
+Now, once the method is run, Rails will take a user back to the list of restaurants.
+
+Finally, update `restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
+
+@@WIP
 
 ##### `belongs_to` and dealing with orphan reviews
 
-Adding the following line in the `review.rb` model will tie the review to a restaurant:
+Adding the following line to the `review.rb` model will tie the review to a restaurant:
 
 ```ruby
 belongs_to :restaurant
@@ -556,7 +563,6 @@ First, write a test. We'll add this within our existing feature spec for restaur
 
 ```ruby
 describe 'creating restaurants' do
-    context 'a valid restaurant' do
 
         ...
 
