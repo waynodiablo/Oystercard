@@ -1,7 +1,25 @@
-Yelp
-=====
+# Yelp
 
-### Completion time - 1 week
+**Contents**
+- [Version 1 - MVP](#version-1---mvp)
+    - [Specification](#specification)
+    - [Walkthrough](#walkthrough)
+        - [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
+        - [Where'd all the files go?](#whered-all-the-files-go)
+        - [Boot the server](#boot-the-server)
+        - [Add some testing gems](#add-some-testing-gems)
+        - [The first test – home page with a link](#the-first-test--home-page-with-a-link)
+        - [The second test – creating a restaurant](#the-second-test--creating-a-restaurant)
+        - [Adding a column to a database](#adding-a-column-to-a-database)
+        - [Associations](#associations)
+- [Version 2 - User login](#version-2---user-login)
+    - [Specification](#specification)
+- [Version 3 - Enhanced UX](#version-3---enhanced-ux)
+    - [Specification](#specification)
+- [Resources](#resources)
+- [Walkthroughs](#walkthroughs-under-construction)
+
+**Completion time - 1 week**
 
 ![Yelp screenshot](images/yelp.jpg)
 
@@ -17,7 +35,7 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 * AJAX in Rails
 
 
-# Version 1 - MVP
+## Version 1 - MVP
 
 For the initial version we want to duplicate the core functionality of Yelp - users should be presented with a list of restaurants which they can leave reviews for.
 
@@ -31,9 +49,9 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
 
-## Getting started
+### Walkthrough 
 
-### Installing Rails and initialising your app
+#### Installing Rails and initialising your app
 
 `$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
 
@@ -45,7 +63,7 @@ Make a new Rails app:
 * By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
 * `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
 
-### Where'd all the files go?
+#### Where'd all the files go?
 
 True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
 
@@ -56,7 +74,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 * `config` – configuration information, including `database.yml` which includes database configuration details, a routes file,
 * `bin` – contains your specified version of Rails.
 
-### Boot the server
+#### Boot the server
 
 Start up the server!
 
@@ -76,7 +94,7 @@ If this doesn't work, you may need to run
 
 instead.
 
-### Add some testing gems
+#### Add some testing gems
 
 Now, add some gems to your Gemfile!
 
@@ -97,7 +115,7 @@ In your spec/rails_helper.rb file, add the line:
 
 This lets you use Capybara in your testing environment.
 
-### The first test – home page with a link
+#### The first test – home page with a link
 
 Make a spec/features/ directory, and make a new spec file inside it.
 
@@ -173,7 +191,7 @@ No restaurants yet!
 
 We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same, so now, our test is passing.
 
-### The second test – creating a restaurant
+#### The second test – creating a restaurant
 
 Add the following to `spec/features/restaurants_feature_spec.rb`:
 
@@ -231,7 +249,7 @@ And in `app/views/restaurants/index.html.erb`:
 <a href='#'>Add a restaurant</a>
 ```
 
-### Adding a column to a database
+#### Adding a column to a database
 
 Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
 
@@ -249,7 +267,7 @@ $ rails g migration AddDescriptionToRestaurants description:text
 $ rake db:migrate
 ```
 
-## Associations
+#### Associations
 
 Let's add some reviews for our restaurants.
 
@@ -363,7 +381,7 @@ redirect_to restaurants_path
 
 Finally, update your restaurants index.html.erb to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
 
-# Version 2 - User login
+## Version 2 - User login
 
 Although our initial version serves its purpose - it's limited in a few respects. First any visitor can freely delete or edit restaurants, leaving our site open to vandalism. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
 
@@ -385,7 +403,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
-# Version 3 - Enhanced UX
+## Version 3 - Enhanced UX
 
 Finally, let's focus on creating a better user experience. This will introduce us to [Rails helper methods] and [AJAX in Rails]. We'll also use CSS to enhance the look of our front-end.
 
