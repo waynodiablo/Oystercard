@@ -2,8 +2,8 @@
 
 **Contents**
 - [Version 1 - MVP](#version-1---mvp)
-    - [Specification](#specification)
-    - [Walkthrough](#walkthrough)
+    - [V1 Specification](#v1-specification)
+    - [V1 Walkthrough](#v1-walkthrough)
         - [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
         - [Where'd all the files go?](#whered-all-the-files-go)
         - [Boot the server](#boot-the-server)
@@ -13,9 +13,11 @@
         - [Adding a column to a database](#adding-a-column-to-a-database)
         - [Associations](#associations)
 - [Version 2 - User login](#version-2---user-login)
-    - [Specification](#specification)
+    - [V2 Specification](#v2-specification)
+    - [V2 Walkthrough](#v2-walkthrough)
 - [Version 3 - Enhanced UX](#version-3---enhanced-ux)
-    - [Specification](#specification)
+    - [V3 Specification](#v3-specification)
+    - [V3 Walkthrough](#v3-walkthrough)
 - [Resources](#resources)
 - [Walkthroughs](#walkthroughs-under-construction)
 
@@ -41,7 +43,7 @@ For the initial version we want to duplicate the core functionality of Yelp - us
 
 Remember to drive the addition of all features using feature tests, and unit tests when needed.
 
-### Specification
+### V1 Specification
 
 - Visitors can create new restaurants using a form, specifying a name and cuisine
 - Restaurants can be edited and deleted
@@ -49,7 +51,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
 
-### Walkthrough 
+### V1 Walkthrough 
 
 #### Installing Rails and initialising your app
 
@@ -392,7 +394,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 *Any additional functionality regarding users that we add (e.g. users can only write one review per restaurant) should be tested as normal*.
 
 
-### Specification
+### V2 Specification
 
 * Users can register/login
 * A user must be logged in to create restaurants
@@ -407,7 +409,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 
 Finally, let's focus on creating a better user experience. This will introduce us to [Rails helper methods] and [AJAX in Rails]. We'll also use CSS to enhance the look of our front-end.
 
-### Specification
+### V3 Specification
 
 * Currently, when writing a review, we have to go to a separate page and trigger a page refresh. Migrate the functionality to happen asynchronously with AJAX. We'll also have to set up [Poltergeist](https://github.com/teampoltergeist/poltergeist) to enable us to run JS-enabled tests.
 * Create a helper method to allow ratings and average ratings to be displayed as stars (e.g.) rather than numbers
