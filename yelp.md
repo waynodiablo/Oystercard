@@ -59,6 +59,8 @@ Remember to drive the addition of all features using feature tests, and unit tes
 
 `$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
 
+Right. All installed? Then let's begin.
+
 Make a new Rails app:
 
 `$ rails new yelp_clone -d postgresql -T`
@@ -155,7 +157,7 @@ Running `rspec` again, we get another `RoutingError` – this time, there's no 
 
 `$ rails g controller restaurants`
 
-(Here, 'g' is short for generate.)
+(Here, `g` is short for generate.)
 
 Now, RSpec gives us a different error – that there's no action /index for restaurants. Let's fix that.
 
