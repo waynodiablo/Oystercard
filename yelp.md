@@ -197,6 +197,8 @@ Now we need a Restaurants model to satisfy our failing test.
 
 This command will add 'name' and 'description' properties to the database for each restaurant, and make a migration file that you can run to create these properties. Each item gets an ID automatically. Note that 'restaurant' here is singular, but the controller refers to 'restaurants'.
 
+(Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
+
 If you make a mistake, you can type the above command but using 'rails d' – for destroy – to remove the migrate.
 
 Then:
