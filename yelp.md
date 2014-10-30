@@ -31,6 +31,20 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
 
+## Getting started
+
+### Installing Rails and initialising your app
+
+`$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
+
+Make a new Rails app:
+
+`$ rails new yelp_clone -d postgresql -T`
+
+* `yelp_clone` is the name of your app – Rails will create this in a new directory. 
+* By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
+* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
+
 # Version 2 - User login
 
 Although our initial version serves its purpose - it's limited in a few respects. First any visitor can freely delete or edit restaurants, leaving our site open to vandalism. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
