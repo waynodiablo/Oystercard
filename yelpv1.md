@@ -613,8 +613,6 @@ Now, once the method is run, Rails will take a user back to the list of restaura
 
 Finally, update `restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
 
-@@WIP
-
 ##### `belongs_to` and dealing with orphan reviews
 
 Adding the following line to the `review.rb` model will tie the review to a restaurant:
