@@ -149,6 +149,8 @@ We've just fudged this by setting the link's `href` value to '#', so it doesn't 
 Add the following to `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
+...
+
 context 'restaurants have been added' do
   before do
     Restaurant.create(name: 'KFC')
@@ -357,5 +359,32 @@ But what if the 'parent' restaurant gets deleted? This would lead to reviews wit
 ```ruby
 has_many :reviews, dependent: :destroy
 ```
+
+#### Stop users creating duplicate restaurants – validations
+
+First, write a test. We'll add this within our existing feature spec for restaurants.
+
+`spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+describe 'creating restaurants' do
+    context 'a valid restaurant' do
+
+        ...
+
+    context 'an invalid restaurant' do
+        it 'does not let you submit a name that is too short' do
+            visit '/restaurant'
+            click_link 'Add a restaurant'
+            fill_in 'Name', with: 'kf'
+            click_button 'Create Restaurant'
+            expect(page).not_to have_css 'h2', text: 'kf'
+            expect(page).to have_content 'error'
+        end
+    end
+end
+```
+
+
 
 Done. On to [version 2](yelpv2.md)!
