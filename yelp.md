@@ -231,7 +231,15 @@ And in `app/views/restaurants/index.html.erb`:
 
 ### Adding a column to a database
 
-Currently, our database has a rest
+Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
+
+| id | name |
+| 1 | KFC | 
+| 2 | ... |
+
+We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**.
+
+Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can rollback your database to a previous state by using those migration files (which provide a record of every change to your data).
 
 ```shell
 $ rails g migration AddDescriptionToRestaurants description:text
