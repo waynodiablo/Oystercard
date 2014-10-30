@@ -3,7 +3,7 @@ Yelp
 
 ### Completion time - 1 week
 
-![Yelp](http://online.wsj.com/media/yelp_E_20090219184904.jpg)
+![Yelp screenshot](images/yelp.jpg)
 
 This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
 
