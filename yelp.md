@@ -43,7 +43,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
 
-### V1 Walkthrough →
+### [V1 Walkthrough →](yelpv1.md)
 
 ## Version 2 - User login
 
