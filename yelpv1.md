@@ -432,6 +432,8 @@ validates :name, length: {minimum: 3}
 
 That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saves – but not the original feature test. Let's fix our feature test now.
 
+Currently our restaurants controller will save a restaurant passed to its `create` method regardless of whether it's correct or not – so let's change that.
+
 `app/controllers/restaurants_controller.rb`:
 
 ```ruby
@@ -466,6 +468,26 @@ What does this do? Well, in the case that our restaurant has any errors on it (t
 
 (Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)
 
+##### Adding validations - restaurant uniqueness
 
+We also don't want to allow users to create the same restaurant twice. So, let's write a test!
+
+```ruby
+it "is not valid unless it has a unique name" do
+    Restaurant.create(name: "Moe's Tavern")
+    restaurant = Restaurant.new(name: "Moe's Tavern")
+    expect(restaurant).to have(1).error_on(:name)
+end
+```
+
+This test fails because we haven't implemented a validation on uniqueness yet. Fix it by updating this line in your restaurants model as follows:
+
+```ruby
+validates :name, length: {minimum: 3}, uniqueness: true
+```
+
+(RailsGuides has lots of information on the [different validations](http://guides.rubyonrails.org/active_record_validations.html) that are available to you.)
+
+Your tests should now all be passing.
 
 On to [version 2](yelpv2.md)!
