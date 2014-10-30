@@ -43,7 +43,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
 
-### V1 Walkthrough 
+### V1 Walkthrough →
 
 ## Version 2 - User login
 
@@ -67,6 +67,8 @@ We can solve both of these problems by adding a user login system, as we did wit
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
+### V2 Walkthrough →
+
 ## Version 3 - Enhanced UX
 
 Finally, let's focus on creating a better user experience. This will introduce us to [Rails helper methods] and [AJAX in Rails]. We'll also use CSS to enhance the look of our front-end.
@@ -78,6 +80,8 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Use CSS to enhance the overall design of the site
 * Refactor your more complex views to use partials
 * *Optional* - Add the ability for users to add an image to a restaurant, by pointing to an external image URL
+
+### V3 Walkthrough →
 
 
 ## Resources
