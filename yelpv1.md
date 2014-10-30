@@ -396,7 +396,21 @@ First, we need an edit link for each restaurant. In `app/views/restaurants/index
 
 Note that `edit_restaurant_path` takes an argument – the restaurant you want to edit!
 
-That's fine, but now RSpec complains about a missing `edit` template. Let's create one.
+We need to make an `edit` method. We can use `Restaurant.find` to find a restaurant by its id.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+...
+
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+...
+```
+
+Now we need to create the missing `edit` view.
 
 `app/views/restaurants/edit.html.erb`:
 
@@ -408,11 +422,6 @@ That's fine, but now RSpec complains about a missing `edit` template. Let's crea
 <% end %>
 ```
 
-@@WIP
-
-##### Deleting restaurants
-
-@@WIP
 
 
 #### Adding reviews to restaurants – associations
