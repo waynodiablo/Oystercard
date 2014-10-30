@@ -341,3 +341,21 @@ redirect_to restaurants_path
 ```
 
 Finally, update your restaurants index.html.erb to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
+
+##### `belongs_to` and dealing with orphan reviews
+
+Adding the following line in the `review.rb` model will tie the review to a restaurant:
+
+```ruby
+belongs_to :restaurant
+```
+
+But what if the 'parent' restaurant gets deleted? This would lead to reviews without a restaurant associated with them. Awful. So we need to tie the 'destroy' commands of both of these together – if a restaurant is deleted, all its child reviews go as well.
+
+`app/models/restaurant.rb`:
+
+```ruby
+has_many :reviews, dependent: :destroy
+```
+
+Done. On to [version 2](yelpv2.md)!
