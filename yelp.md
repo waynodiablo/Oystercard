@@ -107,13 +107,13 @@ Make a spec/features/ directory, and make a new spec file inside it.
 require 'rails_helper'
 
 describe 'restaurants' do
-    context 'no restaurants have been added' do
-        it 'should display a prompt to add a restaurant' do
-            visit '/restaurants'
-            expect(page).to have_content 'No restaurants'
-            expect(page).to have_link 'Add a restaurant'
-        end
+  context 'no restaurants have been added' do
+      it 'should display a prompt to add a restaurant' do
+      visit '/restaurants'
+      expect(page).to have_content 'No restaurants'
+      expect(page).to have_link 'Add a restaurant'
     end
+  end
 end
 ```
 
@@ -179,15 +179,15 @@ Add the following to `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 context 'restaurants have been added' do
-    before do
-        Restaurant.create(name: 'KFC')
-    end
+  before do
+    Restaurant.create(name: 'KFC')
+  end
 
-    it 'should display restaurants' do
-        visit '/restaurants'
-        expect(page).to have_content('KFC')
-        expect(page).not_to have_content('No restaurants yet')
-    end
+  it 'should display restaurants' do
+    visit '/restaurants'
+    expect(page).to have_content('KFC')
+    expect(page).not_to have_content('No restaurants yet')
+  end
 end
 ```
 
@@ -211,7 +211,7 @@ Now, in `restaurants_controller.rb` we want to get all of those restaurants from
 
 ```ruby
 def index
-    @restaurants = Restaurant.all
+  @restaurants = Restaurant.all
 end
 ```
 
@@ -219,17 +219,19 @@ And in `app/views/restaurants/index.html.erb`:
 
 ```
 <% if @restaurants.any? %>
-    <% @restaurants.each do |restaurant| %>
-        <h2> <%= restaurant.name %> </h2>
-    <% end %>
+  <% @restaurants.each do |restaurant| %>
+    <h2> <%= restaurant.name %> </h2>
+  <% end %>
 <% else %>
-    No restaurants yet
+  No restaurants yet
 <% end %>
 
 <a href='#'>Add a restaurant</a>
 ```
 
-## Migrations – adding a column to a database
+### Adding a column to a database
+
+Currently, our database has a rest
 
 ```shell
 $ rails g migration AddDescriptionToRestaurants description:text
@@ -246,20 +248,20 @@ Let's add some reviews for our restaurants.
 require 'rails_helper'
 
 describe 'reviewing' do
-    before do
-        Restaurant.create(name: 'KFC')
-    end
+  before do
+    Restaurant.create(name: 'KFC')
+  end
 
-    it 'allows users to leave a review using a form' do
-       visit '/restaurants'
-       click_link 'Review KFC'
-       fill_in "Thoughts", with: "so so"
-       select '3', from: 'Rating'
-       click_button 'Leave Review'
+  it 'allows users to leave a review using a form' do
+     visit '/restaurants'
+     click_link 'Review KFC'
+     fill_in "Thoughts", with: "so so"
+     select '3', from: 'Rating'
+     click_button 'Leave Review'
 
-       expect(current_path).to eq '/restaurants'
-       expect(page).to have_content('so so')
-    end
+     expect(current_path).to eq '/restaurants'
+     expect(page).to have_content('so so')
+  end
 
 end
 ```
@@ -268,7 +270,7 @@ First, we need a new route for reviews. Update `routes.rb` to have a nested reso
 
 ```ruby
 resource :restaurants do
-    resource :reviews
+  resource :reviews
 end
 ```
 
@@ -282,8 +284,8 @@ In `app/controllers/reviews_controller.rb`, add the 'new' method:
 
 ```rb
 def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @review = Review.new
+  @restaurant = Restaurant.find(params[:restaurant_id])
+  @review = Review.new
 end
 ```
 
@@ -314,8 +316,8 @@ Let's add a create method to our reviews controller.
 
 ```ruby
 def create
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
+  @restaurant = Restaurant.find(params[:restaurant_id])
+  @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
 end
 ```
 
