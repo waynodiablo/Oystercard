@@ -697,7 +697,7 @@ Let's do that now. Create `app/views/restaurants/_form.html.erb` (the prepended 
 Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` and `app/views/restaurants/new.html.erb`), remove the form and type this line instead:
 
 ```erb
-<%= render 'form' %>
+<%= render "form" %>
 ```
 
 So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
