@@ -2,7 +2,37 @@
 
 ### V1 Walkthrough
 
-@@TOC@@
+- [V1 Walkthrough](#v1-walkthrough)
+    - [Getting started](#getting-started)
+        - [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
+        - [Where'd all the files go?](#whered-all-the-files-go)
+        - [Boot the server](#boot-the-server)
+        - [Add some testing gems](#add-some-testing-gems)
+    - [The first test – home page with a link](#the-first-test--home-page-with-a-link)
+        - [`rake routes`](#rake-routes)
+        - [Creating controllers](#creating-controllers)
+        - [Creating views](#creating-views)
+    - [The second test – creating a restaurant on the backend](#the-second-test--creating-a-restaurant-on-the-backend)
+        - [Models and migrations](#models-and-migrations)
+        - [Rendering restaurants in the view](#rendering-restaurants-in-the-view)
+    - [Creating a restaurant on the frontend](#creating-a-restaurant-on-the-frontend)
+        - [Making forms in Rails – `form_for`, `create`, and `permit`](#making-forms-in-rails--formfor-create-and-permit)
+    - [Adding a description to restaurants – migrations](#adding-a-description-to-restaurants--migrations)
+    - [Putting the 'UD' in CRUD - updating and destroying restaurants](#putting-the-ud-in-crud---updating-and-destroying-restaurants)
+        - [Updating restaurants](#updating-restaurants)
+        - [Deleting restaurants](#deleting-restaurants)
+    - [Adding reviews to restaurants – associations](#adding-reviews-to-restaurants--associations)
+        - [Test first!](#test-first)
+        - [Nested routes](#nested-routes)
+        - [Add a controller and a model](#add-a-controller-and-a-model)
+        - [Associating restaurants and reviews](#associating-restaurants-and-reviews)
+        - [`belongs_to` and dealing with orphan reviews](#belongsto-and-dealing-with-orphan-reviews)
+    - [Stop users creating duplicate restaurants – validations](#stop-users-creating-duplicate-restaurants--validations)
+        - [Unit testing a model](#unit-testing-a-model)
+        - [Adding validations – restaurant name length](#adding-validations--restaurant-name-length)
+        - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
+    - [Refactoring using partials](#refactoring-using-partials)
+    - [Done](#done)
 
 #### Getting started
 
@@ -192,7 +222,7 @@ Models contain all the logic behind the 'nouns' that make up your app. In our ca
 This command does a couple of things.
 
 * creates a new model, which tells the app what a 'restaurant' is and what properties it has
-* creates a **migration** which contains instructions for `rake` ('Ruby `make`') to update the database
+* creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database
 
 Specifically, we're add 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
 
@@ -269,13 +299,17 @@ class RestaurantsController < ApplicationController
 
 Run your tests again – sure enough, our `new` method doesn't have a view associated with it. Let's make one.
 
-`app/views/restaurants/new.html.erb`:
+`$ touch app/views/restaurants/new.html.erb`
+
+##### Making forms in Rails – `form_for`, `create`, and `permit`
+
+`app/views/restaurants/new.html.erb`
 
 ```erb
 <%= form_for Restaurant.new do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
 <% end %>
 ```
 
@@ -316,7 +350,7 @@ Now let's clean up that form a bit – using `Restaurant.new` inside the view lo
 `app/views/restaurants/new.html.erb`:
 
 ```erb
-<%= form_for Restaurant.new do |f| %>
+<%= form_for @restaurant do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.submit %>
@@ -351,9 +385,9 @@ Id | Name
 2 | Pret a Manger
 3 | ...
 
-We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**.
+We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**. Let's look at migrations again.
 
-Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can rollback your database to a previous state by using those migration files (which provide a record of every change to your data).
+Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can roll your database back to a previous state by using those migration files (which provide a record of every change to your data).
 
 ```shell
 $ rails g migration AddDescriptionToRestaurants description:text
