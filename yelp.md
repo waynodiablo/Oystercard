@@ -142,8 +142,8 @@ Now, RSpec gives us a different error – that there's no action /index for rest
 ```ruby
 class RestaurantsController < ApplicationController
 
-def index
-end
+  def index
+  end
 
 end
 ```
@@ -207,7 +207,7 @@ Then:
 
 which will run all of your database migrations.
 
-(A word on migrations – don't go into those files and edit them. If you want to remove database tables or change the schema, instead write another migration that does that.)
+(A word on migrations – if you need to change something, **don't go into those files and edit them**. If you want to remove database tables or change the schema, instead write another migration that does that.)
 
 Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
 
