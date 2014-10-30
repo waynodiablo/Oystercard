@@ -300,6 +300,36 @@ Restaurant.create(params[:restaurant]).permit(:name)
 
 which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
 
+Now let's clean up that form a bit – using `Restaurant.new` inside the view logic isn't good practice, so instead we'll use `@restaurant` and let the controller deal with what that means.
+
+1. `app/views/restaurants/new.html.erb`:
+
+```erb
+<%= form_for Restaurant.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+```
+
+2. `app/controllers/restaurants_controller.rb`:
+
+```ruby
+class RestaurantsController < ApplicationController
+...
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.new(params[:restaurant])
+    redirect_to '/restaurants'
+  end
+...
+```
+
+Much better.
+
 #### Adding a description to restaurants – migrations
 
 Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
@@ -320,6 +350,67 @@ $ rake db:migrate
 ```
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
+
+#### Putting the 'UD' in CRUD - updating and destroying restaurants
+
+You remember [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), right? That's all Yelp is, at its core. Just a fancy CRUD app.
+
+So far we've got creating restaurants down, but we can't update or delete them.
+
+##### Updating restaurants
+
+Let's tackle updating restaurants first. Let's test:
+
+`spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+...
+context 'editing restaurants' do
+
+  before do 
+    Restaurant.create(name:'KFC') 
+  end
+
+  it 'lets a user edit a restaurant' do
+   visit '/restaurants'
+   click_link 'Edit KFC'
+   fill_in 'Name', with: 'Kentucky Fried Chicken'
+   click 'Update Restaurant'
+   expect(page).to have_content 'Kentucky Fried Chicken'
+   expect(current_path).to eq '/restaurants'
+  end
+
+end
+...
+```
+
+(Note the `before` hook which creates a restaurant in the database before running our test.)
+
+Run RSpec, and follow the path it leads you down... Again, a quick good at `rake routes` will show you that Rails has some built-in routes for you to use.
+
+First, we need an edit link for each restaurant. In `app/views/restaurants/index.html.erb` to the code that loops through each restaurant, add:
+
+```erb
+<%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
+```
+
+Note that `edit_restaurant_path` takes an argument – the restaurant you want to edit!
+
+That's fine, but now RSpec complains about a missing `edit` template. Let's create one.
+
+`app/views/restaurants/edit.html.erb`:
+
+```erb
+<%= form_for @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+```
+
+##### Deleting restaurants
+
+
 
 #### Adding reviews to restaurants – associations
 
