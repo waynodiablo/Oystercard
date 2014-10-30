@@ -8,11 +8,11 @@ Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framew
 
 This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
 
-* Creating Rails applications
-* The structure of Rails apps (models, views, controllers, the router, helpers)
-* TDD on Rails, with RSpec & Capybara
-* Associations in Rails
-* Validations
+* creating Rails applications
+* the structure of Rails apps (MVC, the router, helpers)
+* TDD in Rails, with RSpec & Capybara
+* associations
+* validations
 * AJAX in Rails
 
 **Contents**
