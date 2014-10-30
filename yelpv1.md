@@ -385,6 +385,87 @@ describe 'creating restaurants' do
 end
 ```
 
+As we haven't got any length limits on restaurant name, the test will fail. Let's fix that – by writing another test, this time for the restaurant model (as distinct from the restaurant feature). Here, we're testing the way that restaurants are actually represented by our code, rather than what the user sees on our website.
+
+##### Unit testing a model
+
+`spec/models/restaurant_spec.rb`:
+
+```ruby
+require 'spec_helper'
+
+RSpec.describe Restaurant, :type => :model do
+    it 'is not valid with a name of less than three characters' do
+        restaurant = Restaurant.new(name: "kf")
+        expect(restaurant).not_to be_valid
+    end
+end
+```
+
+Specifying `:type => :model` ensures that your test has methods appropriate for a model (unlike Capybara, which is specifically for web feature testing).
+
+But our expectation of `not_to be_valid` is pretty vague – a restaurant might be invalid for a variety of reasons. Let's narrow it down:
+
+```ruby
+require 'spec_helper'
+
+RSpec.describe Restaurant, :type => :model do
+    it 'is not valid with a name of less than three characters' do
+        restaurant = Restaurant.new(name: "kf")
+        expect(restaurant).to have(1).error_on(:name)
+        expect(restaurant).not_to be_valid
+    end
+end
+```
+
+To get this test to run, you may also need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.
+
+##### Adding validations – restaurant name length
+
+To pass this test we need to add a validation to our restaurant model.
+
+`app/models/restaurant.rb`:
+
+```ruby
+validates :name, length: {minimum: 3}
+```
+
+That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saves – but not the original feature test. Let's fix our feature test now.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+def create
+    @restaurant = Restaurant.new(params[:restaurant].permit(:name))
+    if restaurant.save
+        redirect_to restaurants_path
+    else
+        render 'new'
+    end
+end
+```
+
+Here, `Restaurant.create` has been split up into its component parts – `Restaurant.new` and `Restaurant.save`. We're still not showing the user an error, though, even though one is being generated in the background (it's that error that's passing our unit test).
+
+To show an error, let's edit our view. Add this to the top of your `views/restaurants/new.html.erb` file:
+
+```erb
+<% if @restaurant.errors.any? %>
+    <div id="errors" >
+        <h2> <%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved: </h2>
+        <ul>
+            <% @restaurant.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+```
+
+What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it), those errors are displayed on screen in a `div`, along with a count of how many errors there are.
+
+(Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)
 
 
-Done. On to [version 2](yelpv2.md)!
+
+On to [version 2](yelpv2.md)!
