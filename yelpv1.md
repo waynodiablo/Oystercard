@@ -422,7 +422,19 @@ Now we need to create the missing `edit` view.
 <% end %>
 ```
 
+Cool. But we still haven't got an `update` action, as RSpec will tell you – so time to add that to `restaurants_controller.rb`.
 
+```ruby
+...
+  def update
+    @restaurant = Restaurants.find(:params[:id])
+    @restaurant.update(params[:restaurants]).permit(:name)
+    redirect_to '/restaurants'
+  end
+...
+```
+
+And we're done.
 
 #### Adding reviews to restaurants – associations
 
