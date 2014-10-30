@@ -1,5 +1,22 @@
 # Yelp
 
+
+
+**Completion time - 1 week**
+
+![Yelp screenshot](images/yelp.jpg)
+
+Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framework – it gives you much more flexibility and fewer conventions when you're building a website. Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'.
+
+This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
+
+* Creating Rails applications
+* The structure of Rails apps (models, views, controllers, the router, helpers)
+* TDD on Rails, with RSpec & Capybara
+* Associations in Rails
+* Validations
+* AJAX in Rails
+
 **Contents**
 - [Version 1 - MVP](#version-1---mvp)
     - [V1 Specification](#v1-specification)
@@ -20,21 +37,6 @@
     - [V3 Walkthrough](#v3-walkthrough)
 - [Resources](#resources)
 - [Walkthroughs](#walkthroughs-under-construction)
-
-**Completion time - 1 week**
-
-![Yelp screenshot](images/yelp.jpg)
-
-Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framework – it gives you much more flexibility and fewer conventions when you're building a website. Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'.
-
-This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
-
-* Creating Rails applications
-* The structure of Rails apps (models, views, controllers, the router, helpers)
-* TDD on Rails, with RSpec & Capybara
-* Associations in Rails
-* Validations
-* AJAX in Rails
 
 
 ## Version 1 - MVP
@@ -351,6 +353,8 @@ def create
   @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
 end
 ```
+
+(What's all this `permit` business about? Well, `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well! As a result, we need to explicitly state which params we're going to allow.)
 
 RSpec will now complain that we don't have an association between restaurants and reviews. Bummer. Time to fix that.
 
