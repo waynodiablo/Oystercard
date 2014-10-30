@@ -113,9 +113,9 @@ With these, we also want to run this command:
 
 `$ rails generate rspec:install`
 
-This gets RSpec going by creating a /spec directory and a helper file.
+This gets RSpec going by creating a `spec` directory and a helper file.
 
-In your spec/rails_helper.rb file, add the line:
+In your `spec/rails_helper.rb` file, add the line:
 
 `require 'capybara/rails'`
 
@@ -123,9 +123,9 @@ This lets you use Capybara in your testing environment.
 
 #### The first test – home page with a link
 
-Make a spec/features/ directory, and make a new spec file inside it.
+Make a `spec/features/` directory, and make a new spec file inside it.
 
-`restaurants_feature_spec.rb`:
+`spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 require 'rails_helper'
@@ -143,7 +143,7 @@ end
 
 Now run `rspec`, which will say that there's no route matching `/restaurants`. Simple.
 
-The config/routes.rb file has lots of clues as to how to write routes – have a look at them.
+The `config/routes.rb` file has lots of clues as to how to write routes – have a look at them.
 
 `config/routes.db`:
 
@@ -151,7 +151,7 @@ The config/routes.rb file has lots of clues as to how to write routes – have 
 resources :restaurants
 ```
 
-If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
+If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you. Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
 
@@ -172,7 +172,7 @@ class RestaurantsController < ApplicationController
 end
 ```
 
-Now we get a different error – that /app/views/ is missing an index view.
+Now we get a different error – that `/app/views/` is missing an index view.
 
 `$ touch app/views/restaurants/index.html.erb`
 
@@ -223,7 +223,7 @@ This command will add 'name' and 'description' properties to the database for ea
 
 (Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
 
-If you make a mistake, you can type the above command but using `rails d` – for destroy – to remove the migrate.
+If you make a mistake, you can type the above command but using `rails d` – for destroy – to remove the migration.
 
 Then:
 
@@ -231,7 +231,7 @@ Then:
 
 which will run all of your database migrations.
 
-(A word on migrations – if you need to change something, **don't go into those files and edit them**. If you want to remove database tables or change the schema, instead write another migration that does that.)
+(A word on migrations – if you need to change something, **don't go into the schema file and just edit it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
 
 Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
 
@@ -241,7 +241,7 @@ def index
 end
 ```
 
-And in `app/views/restaurants/index.html.erb`:
+This creates an instance variable, `@restaurants`, that is accessible by our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
 
 ```
 <% if @restaurants.any? %>
@@ -273,7 +273,9 @@ $ rails g migration AddDescriptionToRestaurants description:text
 $ rake db:migrate
 ```
 
-#### Associations
+The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
+
+#### Adding reviews to restaurants
 
 Let's add some reviews for our restaurants.
 
@@ -300,6 +302,8 @@ describe 'reviewing' do
 
 end
 ```
+
+Naturally, your test fails. We need to tell our app what reviews are, and how they're related to restaurants. This relationship is called an **association**.
 
 First, we need a new route for reviews. Update `routes.rb` to have a nested resource:
 
