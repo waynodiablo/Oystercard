@@ -45,6 +45,54 @@ Make a new Rails app:
 * By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
 * `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
 
+### Where'd all the files go?
+
+True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
+
+* `app` – **where your code goes**. Contains models, views and controllers.
+* `vendors` – a place for resources that you haven't written but are needed for the project, like JQuery.
+* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default.
+* `log` – keeps server logs and terminal output.
+* `config` – configuration information, including `database.yml` which includes database configuration details, a routes file,
+* `bin` – contains your specified version of Rails.
+
+### Boot the server
+
+Start up the server!
+
+`$ rails server`
+
+or
+
+`$ rails s`
+
+and visit http://localhost:3000. You'll likely need to run a `rake` task to get your database going – visit the page and you'll be told which.
+
+`$ bin/rake db:create`
+
+You may need to append RAILS_ENV=test to get your tests working.
+
+### Add some testing gems
+
+Now, add some gems to your Gemfile!
+
+```ruby
+gem 'rspec-rails', group: :test
+gem 'capybara', group: :test
+```
+
+With these, we also want to run this command:
+
+`$ bin/rails generate rspec:install`
+
+This gets RSpec going by creating a /spec directory and a helper file.
+
+In your spec/rails_helper.rb file, add the line:
+
+`require 'capybara/rails'`
+
+This lets you use Capybara in your testing environment.
+
 # Version 2 - User login
 
 Although our initial version serves its purpose - it's limited in a few respects. First any visitor can freely delete or edit restaurants, leaving our site open to vandalism. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
