@@ -199,7 +199,7 @@ This command will add 'name' and 'description' properties to the database for ea
 
 (Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
 
-If you make a mistake, you can type the above command but using 'rails d' – for destroy – to remove the migrate.
+If you make a mistake, you can type the above command but using `rails d` – for destroy – to remove the migrate.
 
 Then:
 
