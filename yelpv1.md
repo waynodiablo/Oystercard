@@ -2,32 +2,11 @@
 
 ### V1 Walkthrough
 
+@@TOC@@
 
-  - [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
-  - [Where'd all the files go?](#whered-all-the-files-go)
-  - [Boot the server](#boot-the-server)
-  - [Add some testing gems](#add-some-testing-gems)
-  - [The first test – home page with a link](#the-first-test--home-page-with-a-link)
-  - [The second test – creating a restaurant on the backend](#the-second-test--creating-a-restaurant-on-the-backend)
-  - [Creating a restaurant on the frontend](#creating-a-restaurant-on-the-frontend)
-  - [Adding a description to restaurants – migrations](#adding-a-description-to-restaurants--migrations)
-  - [Putting the 'UD' in CRUD - updating and destroying restaurants](#putting-the-ud-in-crud---updating-and-destroying-restaurants)
-      - [Updating restaurants](#updating-restaurants)
-      - [Deleting restaurants](#deleting-restaurants)
-  - [Adding reviews to restaurants – associations](#adding-reviews-to-restaurants--associations)
-      - [Test first!](#test-first)
-      - [Nested routes](#nested-routes)
-      - [Add a controller and a model](#add-a-controller-and-a-model)
-      - [Associating restaurants and reviews](#associating-restaurants-and-reviews)
-      - [`belongs_to` and dealing with orphan reviews](#belongsto-and-dealing-with-orphan-reviews)
-  - [Stop users creating duplicate restaurants – validations](#stop-users-creating-duplicate-restaurants--validations)
-      - [Unit testing a model](#unit-testing-a-model)
-      - [Adding validations – restaurant name length](#adding-validations--restaurant-name-length)
-      - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
-  - [Refactoring using partials](#refactoring-using-partials)
-  - [Done](#done)
+#### Getting started
 
-#### Installing Rails and initialising your app
+##### Installing Rails and initialising your app
 
 `$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
 
@@ -41,7 +20,7 @@ Make a new Rails app:
 * By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
 * `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
 
-#### Where'd all the files go?
+##### Where'd all the files go?
 
 True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
 
@@ -52,7 +31,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 * `config` – configuration information, including `database.yml` which includes database configuration details, a routes file,
 * `bin` – contains your specified version of Rails.
 
-#### Boot the server
+##### Boot the server
 
 Start up the server!
 
@@ -72,7 +51,7 @@ If this doesn't work, you may need to run
 
 instead.
 
-#### Add some testing gems
+##### Add some testing gems
 
 Now, add some gems to your Gemfile!
 
@@ -123,9 +102,17 @@ The `config/routes.rb` file has lots of clues as to how to write routes – hav
 resources :restaurants
 ```
 
-If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you. Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
+##### `rake routes`
+
+If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
+
+Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
+
+##### Creating controllers
+
+Controllers are a bit like methods in a Sinatra server file – they contain the 'verbs' that handle incoming requests and do something in response to them.
 
 `$ rails g controller restaurants`
 
@@ -144,7 +131,11 @@ class RestaurantsController < ApplicationController
 end
 ```
 
-Now we get a different error – that `app/views/` is missing an index view.
+Now we get a different error – that `app/views/` is missing an index view. Let's make one of those.
+
+##### Creating views
+
+Much like in Sinatra, views tell your app how to present content on the page.
 
 `$ touch app/views/restaurants/index.html.erb`
 
@@ -192,9 +183,20 @@ end
 
 Now we need a Restaurants model to satisfy our failing test.
 
+##### Models and migrations
+
+Models contain all the logic behind the 'nouns' that make up your app. In our case, those are going to be restaurants, reviews, etc. They give those things constraints and tell the app how they should be represented in the database.
+
 `$ rails g model restaurant name:string description:text`
 
-This command will add 'name' and 'description' properties to the database for each restaurant, and make a migration file that you can run to create these properties. Each item gets an ID automatically. Note that 'restaurant' here is singular, but the controller refers to 'restaurants'.
+This command does a couple of things.
+
+* creates a new model, which tells the app what a 'restaurant' is and what properties it has
+* creates a **migration** which contains instructions for `rake` ('Ruby `make`') to update the database
+
+Specifically, we're add 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
+
+**Vitally**, that 'restaurant' here is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
 
 (Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
 
@@ -207,6 +209,8 @@ Then:
 which will run all of your database migrations.
 
 (A word on migrations – if you need to change something, **don't edit the schema file it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
+
+##### Rendering restaurants in the view
 
 Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
 
