@@ -2,6 +2,24 @@
 
 ### V1 Walkthrough
 
+- [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
+    - [Where'd all the files go?](#whered-all-the-files-go)
+    - [Boot the server](#boot-the-server)
+    - [Add some testing gems](#add-some-testing-gems)
+- [The first test – home page with a link](#the-first-test--home-page-with-a-link)
+- [The second test – creating a restaurant](#the-second-test--creating-a-restaurant)
+- [Adding a description to restaurants – migrations](#adding-a-description-to-restaurants--migrations)
+- [Adding reviews to restaurants – associations](#adding-reviews-to-restaurants--associations)
+    - [Test first!](#test-first)
+    - [Nested routes](#nested-routes)
+    - [Add a controller and a model](#add-a-controller-and-a-model)
+    - [Associating restaurants and reviews](#associating-restaurants-and-reviews)
+    - [`belongs_to` and dealing with orphan reviews](#belongsto-and-dealing-with-orphan-reviews)
+- [Stop users creating duplicate restaurants – validations](#stop-users-creating-duplicate-restaurants--validations)
+    - [Unit testing a model](#unit-testing-a-model)
+    - [Adding validations – restaurant name length](#adding-validations--restaurant-name-length)
+    - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
+
 #### Installing Rails and initialising your app
 
 `$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
