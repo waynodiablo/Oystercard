@@ -1,0 +1,343 @@
+# Yelp
+
+### V1 Walkthrough
+
+#### Installing Rails and initialising your app
+
+`$ gem install rails` will install the Rails gem. Expect it to take a while. `rails --help` gives a nice help menu.
+
+Right. All installed? Then let's begin.
+
+Make a new Rails app:
+
+`$ rails new yelp_clone -d postgresql -T`
+
+* `yelp_clone` is the name of your app – Rails will create this in a new directory. 
+* By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
+* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
+
+#### Where'd all the files go?
+
+True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
+
+* `app` – **where your code goes**. Contains models, views and controllers.
+* `vendors` – a place for resources that you haven't written but are needed for the project, like JQuery.
+* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default.
+* `log` – keeps server logs and terminal output.
+* `config` – configuration information, including `database.yml` which includes database configuration details, a routes file,
+* `bin` – contains your specified version of Rails.
+
+#### Boot the server
+
+Start up the server!
+
+`$ rails server`
+
+or
+
+`$ rails s`
+
+will get you started. (Rails has lots of these little command-line shortcuts.) Now visit http://localhost:3000. Don't worry if you see an error – you'll likely need to run a `rake` task to get your database going, so visit the page and you'll be told which.
+
+`$ rake db:create`
+
+If this doesn't work, you may need to run 
+
+`$ rake db:create RAILS_ENV=test`
+
+instead.
+
+#### Add some testing gems
+
+Now, add some gems to your Gemfile!
+
+```ruby
+gem 'rspec-rails', group: :test
+gem 'capybara', group: :test
+```
+
+With these, we also want to run this command:
+
+`$ rails generate rspec:install`
+
+This gets RSpec going by creating a `spec` directory and a helper file.
+
+In your `spec/rails_helper.rb` file, add the line:
+
+`require 'capybara/rails'`
+
+This lets you use Capybara in your testing environment.
+
+#### The first test – home page with a link
+
+Make a `spec/features/` directory, and make a new spec file inside it.
+
+`spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+describe 'restaurants' do
+  context 'no restaurants have been added' do
+      it 'should display a prompt to add a restaurant' do
+      visit '/restaurants'
+      expect(page).to have_content 'No restaurants'
+      expect(page).to have_link 'Add a restaurant'
+    end
+  end
+end
+```
+
+Now run `rspec`, which will say that there's no route matching `/restaurants`. Simple.
+
+The `config/routes.rb` file has lots of clues as to how to write routes – have a look at them.
+
+`config/routes.db`:
+
+```ruby
+resources :restaurants
+```
+
+If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you. Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
+
+Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
+
+`$ rails g controller restaurants`
+
+(Here, `g` is short for generate.)
+
+Now, RSpec gives us a different error – that there's no action /index for restaurants. Let's fix that.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+class RestaurantsController < ApplicationController
+
+  def index
+  end
+
+end
+```
+
+Now we get a different error – that `/app/views/` is missing an index view.
+
+`$ touch app/views/restaurants/index.html.erb`
+
+(Note the double file extension here.)
+
+Now our error is that there's no text on the page! Fix it:
+
+`app/views/restaurants/index.html.erb`:
+
+```html
+No restaurants yet!
+```
+
+Cool – but now RSpec is telling us we need a link on the page.
+
+`app/views/restaurants/index.html.erb`:
+
+```html
+No restaurants yet!
+<a href='#'>Add a restaurant</a>
+```
+
+We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same, so now, our test is passing.
+
+#### The second test – creating a restaurant
+
+Add the following to `spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+context 'restaurants have been added' do
+  before do
+    Restaurant.create(name: 'KFC')
+  end
+
+  it 'should display restaurants' do
+    visit '/restaurants'
+    expect(page).to have_content('KFC')
+    expect(page).not_to have_content('No restaurants yet')
+  end
+end
+```
+
+Now we need a Restaurants model to satisfy our failing test.
+
+`$ rails g model restaurant name:string description:text`
+
+This command will add 'name' and 'description' properties to the database for each restaurant, and make a migration file that you can run to create these properties. Each item gets an ID automatically. Note that 'restaurant' here is singular, but the controller refers to 'restaurants'.
+
+(Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
+
+If you make a mistake, you can type the above command but using `rails d` – for destroy – to remove the migration.
+
+Then:
+
+`$ rake db:migrate`
+
+which will run all of your database migrations.
+
+(A word on migrations – if you need to change something, **don't go into the schema file and just edit it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
+
+Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
+
+```ruby
+def index
+  @restaurants = Restaurant.all
+end
+```
+
+This creates an instance variable, `@restaurants`, that is accessible by our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
+
+```
+<% if @restaurants.any? %>
+  <% @restaurants.each do |restaurant| %>
+    <h2> <%= restaurant.name %> </h2>
+  <% end %>
+<% else %>
+  No restaurants yet
+<% end %>
+
+<a href='#'>Add a restaurant</a>
+```
+
+#### Adding a description to restaurants – migrations
+
+Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
+
+| id | name |
+| -- | ---- |
+| 1  | KFC  |
+| 2  | ...  |
+
+We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**.
+
+Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can rollback your database to a previous state by using those migration files (which provide a record of every change to your data).
+
+```shell
+$ rails g migration AddDescriptionToRestaurants description:text
+$ rake db:migrate
+```
+
+The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
+
+#### Adding reviews to restaurants – associations
+
+##### Test first!
+
+Let's add some reviews for our restaurants.
+
+`app/spec/features/review_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+describe 'reviewing' do
+  before do
+    Restaurant.create(name: 'KFC')
+  end
+
+  it 'allows users to leave a review using a form' do
+     visit '/restaurants'
+     click_link 'Review KFC'
+     fill_in "Thoughts", with: "so so"
+     select '3', from: 'Rating'
+     click_button 'Leave Review'
+
+     expect(current_path).to eq '/restaurants'
+     expect(page).to have_content('so so')
+  end
+
+end
+```
+
+Naturally, your test fails. We need to tell our app what reviews are, and how they're related to restaurants. This relationship is called an **association**.
+
+##### Nested routes
+
+First, we need a new route for reviews. Update `routes.rb` to have a nested resource:
+
+```ruby
+resource :restaurants do
+  resource :reviews
+end
+```
+
+Then, add a link (using Rails' `link_to` helper) to `new_restaurant_review_path` (you can see this path appearing in `rake routes`).
+
+##### Add a controller and a model
+
+Now we need a new controller.
+
+`$ rails g controller reviews`
+
+In `app/controllers/reviews_controller.rb`, add the 'new' method:
+
+```rb
+def new
+  @restaurant = Restaurant.find(params[:restaurant_id])
+  @review = Review.new
+end
+```
+
+This sets up `@restaurant` and `@review` instance variables which get passed into the 'new review' form in the next step.
+
+Keep following the errors RSpec is giving you. Now we need a view:
+
+`app/views/reviews/new.html.erb`:
+
+```erb
+<%= form_for [@restaurant, @review] do |f| %>
+<%= f.label :thoughts %>
+<%= f.text_area :thoughts %>
+
+<%= f.label :rating %>
+<%= f.select :rating, (1..5) %>
+<%= f.submit 'Leave review' %>
+<% end %>
+```
+
+Cool. Now we need a model for reviews – currently they aren't being stored in the database!
+
+`$ rails g model review thoughts:text rating:integer`
+
+Let's add a create method to our reviews controller.
+
+`app/controllers/reviews_controller.rb`:
+
+```ruby
+def create
+  @restaurant = Restaurant.find(params[:restaurant_id])
+  @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
+end
+```
+
+(What's all this `permit` business about? Well, `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well! As a result, we need to explicitly state which params we're going to allow.)
+
+##### Associating restaurants and reviews
+
+RSpec will now complain that we don't have an association between restaurants and reviews. Bummer. Time to fix that.
+
+To `app/models/restaurant.rb`, add:
+
+`has_many :reviews`
+
+Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
+
+`$ rails g migration AddResturantIdToReviews restaurant:belongs_to`
+`$ rake db:migrate`
+
+This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
+
+Now, if you look at your `schema.rb` you'll see the new association between restaurants and reviews.
+
+RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the create method in the reviews model.
+
+`app/controllers/reviews_controller.rb`:
+
+```ruby
+redirect_to restaurants_path
+```
+
+Finally, update your restaurants index.html.erb to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
