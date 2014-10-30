@@ -137,7 +137,7 @@ class RestaurantsController < ApplicationController
 end
 ```
 
-Now we get a different error – that `/app/views/` is missing an index view.
+Now we get a different error – that `app/views/` is missing an index view.
 
 `$ touch app/views/restaurants/index.html.erb`
 
@@ -162,7 +162,7 @@ No restaurants yet!
 
 We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same, so now, our test is passing.
 
-#### The second test – creating a restaurant
+#### The second test – creating a restaurant on the backend
 
 Add the following to `spec/features/restaurants_feature_spec.rb`:
 
@@ -198,7 +198,7 @@ Then:
 
 which will run all of your database migrations.
 
-(A word on migrations – if you need to change something, **don't go into the schema file and just edit it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
+(A word on migrations – if you need to change something, **don't edit the schema file it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
 
 Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
 
@@ -221,6 +221,84 @@ This creates an instance variable, `@restaurants`, that is accessible by our `in
 
 <a href='#'>Add a restaurant</a>
 ```
+
+#### Creating a restaurant on the frontend
+
+That last test is all well and good, but it invokes `Restaurant.create` – we still don't have a way for users of our site to add restaurants. Let's add a test for that now.
+
+`spec/features/restaurants_feature_spec.rb`:
+
+```ruby
+describe 'creating restaurants' do 
+ it 'prompts user to fill out a form, then displays the new restaurant' do
+  visit '/restaurants'
+  click_link 'Add a restaurant'
+  fill_in 'Name', with: 'KFC'
+  click_button 'Create Restaurant'
+  expect(page).to have_content 'KFC'
+  expect(current_path).to eq '/restaurants'
+ end
+end
+```
+
+The test will fail. We have an 'Add a restaurant' link, but it doesn't go anywhere! Where should we link to? Run `rake routes` if you want a clue...
+
+Let's make a new method in `restaurants_controller.rb` to go alongside our `index` method.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+class RestaurantsController < ApplicationController
+...
+  def new
+  end
+...
+```
+
+Run your tests again – sure enough, our `new` method doesn't have a view associated with it. Let's make one.
+
+`app/views/restaurants/new.html.erb`:
+
+```erb
+<%= form_for Restaurant.new do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
+<% end %>
+```
+
+Here, we're using Rails' built-in `form_for` helper to build a form, which takes care of a lot of things, including verifying the authenticity of the form. You can read more about that in [RailsGuides](http://guides.rubyonrails.org/form_helpers.html).
+
+Run your tests again – RSpec will now say it doesn't know what to do with the information submitted into that form. We need a `create` method!
+
+
+```ruby
+class RestaurantsController < ApplicationController
+...
+  def create
+    Restaurant.create(params[:restaurant])
+    redirect_to '/restaurants'
+  end
+...
+```
+
+Looks good. Wait... why doesn't this work?
+
+Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
+
+As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Modify the following line:
+
+```ruby
+Restaurant.create(params[:restaurant])
+```
+
+to instead say
+
+```ruby
+Restaurant.create(params[:restaurant]).permit(:name) 
+```
+
+which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
 
 #### Adding a description to restaurants – migrations
 
@@ -334,7 +412,7 @@ def create
 end
 ```
 
-(What's all this `permit` business about? Well, `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well! As a result, we need to explicitly state which params we're going to allow.)
+(Remember all the `permit` weirdness from before!)
 
 ##### Associating restaurants and reviews
 
