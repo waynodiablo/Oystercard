@@ -255,7 +255,7 @@ This creates an instance variable, `@restaurants`, that is accessible by our `in
 <a href='#'>Add a restaurant</a>
 ```
 
-#### Adding a column to a database
+#### Adding a description to restaurants – migrations
 
 Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
 
@@ -275,7 +275,9 @@ $ rake db:migrate
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
 
-#### Adding reviews to restaurants
+#### Adding reviews to restaurants – associations
+
+##### Test first!
 
 Let's add some reviews for our restaurants.
 
@@ -305,6 +307,8 @@ end
 
 Naturally, your test fails. We need to tell our app what reviews are, and how they're related to restaurants. This relationship is called an **association**.
 
+##### Nested routes
+
 First, we need a new route for reviews. Update `routes.rb` to have a nested resource:
 
 ```ruby
@@ -314,6 +318,8 @@ end
 ```
 
 Then, add a link (using Rails' `link_to` helper) to `new_restaurant_review_path` (you can see this path appearing in `rake routes`).
+
+##### Add a controller and a model
 
 Now we need a new controller.
 
@@ -328,7 +334,7 @@ def new
 end
 ```
 
-This sets up @restaurant and @review which get passed into the 'new review' form in the next step.
+This sets up `@restaurant` and `@review` instance variables which get passed into the 'new review' form in the next step.
 
 Keep following the errors RSpec is giving you. Now we need a view:
 
@@ -362,26 +368,22 @@ end
 
 (What's all this `permit` business about? Well, `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well! As a result, we need to explicitly state which params we're going to allow.)
 
+##### Associating restaurants and reviews
+
 RSpec will now complain that we don't have an association between restaurants and reviews. Bummer. Time to fix that.
 
 To `app/models/restaurant.rb`, add:
 
 `has_many :reviews`
 
-Time for a migration.
+Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
 
 `$ rails g migration AddResturantIdToReviews restaurant:belongs_to`
 `$ rake db:migrate`
 
 This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
 
-If you ever want to undo this, you can rollback a migration using
-
-`$ rake db:rollback[n]`
-
-where *n* is the number of migrations you want to roll back.
-
-Now, if you look at your `schema.rb` you'll see the new assocation between restaurants and reviews.
+Now, if you look at your `schema.rb` you'll see the new association between restaurants and reviews.
 
 RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the create method in the reviews model.
 
