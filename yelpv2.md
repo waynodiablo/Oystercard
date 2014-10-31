@@ -142,7 +142,7 @@ Here we'll use Facebook as an example, but you are free to use whatever and as m
 Next up, you should add the columns "provider" (string) and "uid" (string) to your User model. 
 
 ```shell
-$ rails g migration AddColumnsToUsers provider uid
+$ rails g migration AddColumnsToUsers provider:string uid:string
 $ rake db:migrate
 ```
 
@@ -154,7 +154,7 @@ config.omniauth :facebook, "APP_ID", "APP_SECRET"
 
 and replace `APP_ID` and `APP_SECRET` with your app id and secret. **Bear in mind – committing secrets to public git repos is a super bad idea!** Let's go with it for now, but at the end we'll come back to this and look at a better way of doing it.
 
-Now you need to make the User model that Devise created 'omniauthable',
+Now you need to make the User model that Devise created 'omniauthable'.
 
 `app/models/user.rb`:
 
