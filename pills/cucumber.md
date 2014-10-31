@@ -1,8 +1,8 @@
 #Cucumber
 
-[Cucumber](http://cukes.info/) is a tool for writing [acceptance tests](http://en.wikipedia.org/wiki/Acceptance_testing) in Ruby. It's widely use in conjunction with [RSpec](http://rspec.info).
+[Cucumber](http://cukes.info/) is a tool for writing [acceptance tests](http://en.wikipedia.org/wiki/Acceptance_testing) in Ruby. It's widely used in conjunction with [RSpec](http://rspec.info).
 
-Cucumber functions as both a description of the software for both the developer and the client, as well as a testing framework to determine whether the software is meeting the description. Although written in Ruby, Cucumber tests are written in a Domain Specific Language (DSL) called Gherkin, which makes the test readable to both the developer and their client alike.
+Cucumber functions as a description of the software for both the developer and the client, as well as a testing framework to determine whether the software is meeting the description. Although written in Ruby, Cucumber tests are written in a Domain Specific Language (DSL) called Gherkin, which makes the test readable to both the developer and their client alike.
 
 ##Why not just use Rspec
 
@@ -38,7 +38,7 @@ If we drop into this directory and run `cucumber` we'll get an error message:
 No such file or directory - features. Please create a features directory to get started. (Errno::ENOENT)
 ```
 
-Because Cucumber likes to keep its tests (which it calls *features*) in a directory
+...because Cucumber likes to keep its tests (which it calls *features*) in a directory
 called `features`. So let's add one!
 
 ```shell
@@ -80,7 +80,7 @@ pattern is a good place to start when trying to say what your feature is going
 to do.
 
 The second part is a **scenario**, which is where the actual tests live. They are
-built around keywords that describe the what the software is doing - above we
+built around keywords that describe what the software is doing - above we
 have **Given**, **When** and **Then**. When we read this description of the
 program we have a good idea of what it ought to be doing.
 
