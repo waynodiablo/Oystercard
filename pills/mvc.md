@@ -2,7 +2,7 @@
 
 **MVC** stands for **model, view, controller** – the three key types of component that make up many web apps.
 
-Rails is very *opinionated*, and expects you to develop your web apps using this MVC design pattern. So what are these three things, exactly?
+Rails is very *opinionated*, and expects you to develop your web apps using this MVC architectural pattern. So what are these three things, exactly?
 
 ## The components
 
