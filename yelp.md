@@ -98,6 +98,7 @@ Finally, let's focus on creating a better user experience. This will introduce u
 ## Walkthroughs (under construction)
 
 * :pill: [Rails console](pills/rails_console.md)
+* :pill: [MVC](pills/mvc.md)
 * [Rails](https://github.com/makersacademy/Walkthroughs/blob/master/rails.md) <-- Under construction
 * [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md) <-- Under construction
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) <-- Under construction
