@@ -33,6 +33,23 @@ $ rails console
 > User.destroy_all
 ```
 
+### What does this helper do?
+
+Rails has lots of helpers, and `rails console` is a nice way of trying them out interactively. For example, you could have a go with `truncate`:
+
+```shell
+> helper.truncate("Testing", length: 5)
+=> "Te..."
+```
+
+Or how about `pluralize`?
+
+```shell
+> helper.pluralize(2, 'dog')
+=> "2 dogs"
+```
+
+
 ### Playing in the sandbox
 
 You can invoke the console in sandbox mode, so all your changes will be rolled back on reset. Go nuts!
