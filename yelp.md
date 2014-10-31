@@ -1,18 +1,32 @@
-Yelp
-=====
+# Yelp
 
-### Completion time - 1 week
+**Completion time - 1 week**
 
-![Yelp](http://online.wsj.com/media/yelp_E_20090219184904.jpg)
+![Yelp screenshot](images/yelp.jpg)
+
+Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framework – it gives you much more flexibility and fewer conventions when you're building a website. Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'.
 
 This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
 
-* Creating Rails applications
-* The structure of Rails apps (models, views, controllers, the router, helpers)
-* TDD on Rails, with RSpec & Capybara
-* Associations in Rails
-* Validations
+* creating Rails applications
+* the structure of Rails apps (MVC, the router, helpers)
+* TDD in Rails, with RSpec & Capybara
+* associations
+* validations
 * AJAX in Rails
+
+**Contents**
+- [Version 1 - MVP](#version-1---mvp)
+    - [V1 Specification](#v1-specification)
+    - [V1 Walkthrough](#v1-walkthrough)
+- [Version 2 - User login](#version-2---user-login)
+    - [V2 Specification](#v2-specification)
+    - [V2 Walkthrough](#v2-walkthrough)
+- [Version 3 - Enhanced UX](#version-3---enhanced-ux)
+    - [V3 Specification](#v3-specification)
+    - [V3 Walkthrough](#v3-walkthrough)
+- [Resources](#resources)
+- [Walkthroughs](#walkthroughs-under-construction)
 
 
 ## Version 1 - MVP
@@ -21,13 +35,15 @@ For the initial version we want to duplicate the core functionality of Yelp - us
 
 Remember to drive the addition of all features using feature tests, and unit tests when needed.
 
-### Specification
+### V1 Specification
 
 - Visitors can create new restaurants using a form, specifying a name and cuisine
 - Restaurants can be edited and deleted
 - Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
+
+### [V1 Walkthrough →](yelpv1.md)
 
 ## Version 2 - User login
 
@@ -40,7 +56,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 *Any additional functionality regarding users that we add (e.g. users can only write one review per restaurant) should be tested as normal*.
 
 
-### Specification
+### V2 Specification
 
 * Users can register/login
 * A user must be logged in to create restaurants
@@ -51,17 +67,21 @@ We can solve both of these problems by adding a user login system, as we did wit
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
+### [V2 Walkthrough →](yelpv2.md)
+
 ## Version 3 - Enhanced UX
 
 Finally, let's focus on creating a better user experience. This will introduce us to [Rails helper methods] and [AJAX in Rails]. We'll also use CSS to enhance the look of our front-end.
 
-### Specification
+### V3 Specification
 
 * Currently, when writing a review, we have to go to a separate page and trigger a page refresh. Migrate the functionality to happen asynchronously with AJAX. We'll also have to set up [Poltergeist](https://github.com/teampoltergeist/poltergeist) to enable us to run JS-enabled tests.
 * Create a helper method to allow ratings and average ratings to be displayed as stars (e.g.) rather than numbers
 * Use CSS to enhance the overall design of the site
 * Refactor your more complex views to use partials
 * *Optional* - Add the ability for users to add an image to a restaurant, by pointing to an external image URL
+
+### V3 Walkthrough →
 
 
 ## Resources
