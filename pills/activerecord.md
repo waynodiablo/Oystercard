@@ -4,6 +4,8 @@ Web frameworks typically include a friendly of getting your web app talking to a
 
 In Sinatra, you've used DataMapper to perform this task. In Rails, the built-in ORM is **Active Record**.
 
+@@TOC@@
+
 ### What is it?
 
 Active Record is a piece of software that interprets Ruby commands and turns them into SQL queries for you, so you don't have to deal with that yourself.
