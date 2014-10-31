@@ -77,6 +77,11 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [Variables](https://github.com/makersacademy/course/blob/master/pills/variables.md)
 
 
+## Rails
+
+:pill: [Rails console](pills/rails_console.md)
+
+
 ## Testing
 
 :pill: [Behaviour Driven Development with RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
