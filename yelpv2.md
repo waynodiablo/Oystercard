@@ -28,12 +28,14 @@ The run the Devise generator:
 
 `$ rails g devise User`
 
+And run `$ rake db:migrate` to get that lovely users table added to your database.
+
 This does the following:
 
 * *creates a database migration to add a Users table*
 * *adds a User model*, which tells Rails about the properties that our users should have
 * *updates `config/routes.rb`* with the relevant user signin, signout and signup routes
-* *adds a Users controller* (really the Devise controller) which gives Rails the commands to deal with users
+* *adds a Users controller* (really the Devise controller) which gives Rails the commands to deal with users.
 
 #### How do I log into this thing?
 
@@ -66,5 +68,40 @@ Boot up your server with `$ rails s` and try visiting `/users/sign_in`.
 
 So we've got routes that let our users sign-in/-out/-up, but they have no way of getting to them. Time to update our view logic!
 
-As always, let's test first.
+As always, let's test first. **There's no real need to test Devise's internals** – the user model and so on – because we can probably assume that they work pretty well. Instead, let's write a feature test.
+
+`spec/features/users_feature_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+context "user not signed in and on the homepage" do
+  it "should see a 'sign in' link and a 'sign up' link" do
+    visit('/')
+    expect(page).to have_link('Sign in')
+    expect(page).to have_link('Sign up')
+  end
+
+  it "should not see 'sign out' link" do
+    visit('/')
+    expect(page).not_to have_link('Sign out')
+  end
+end
+
+context "user signed in on the homepage" do
+  it "should see 'sign out' link" do
+    visit('/')
+    expect(page).to have_link('Sign out')
+  end
+
+  it "should not see a 'sign in' link and a 'sign up' link" do
+    visit('/')
+    expect(page).not_to have_link('Sign in')
+    expect(page).not_to have_link('Sign up')
+  end
+end
+```
+
+
+
 
