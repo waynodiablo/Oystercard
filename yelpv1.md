@@ -31,6 +31,7 @@
         - [Unit testing a model](#unit-testing-a-model)
         - [Adding validations – restaurant name length](#adding-validations--restaurant-name-length)
         - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
+        - [Adding validations – reviews](#adding-validations---reviews)
     - [Refactoring using partials](#refactoring-using-partials)
     - [Done](#done)
 
@@ -801,9 +802,26 @@ validates :name, length: {minimum: 3}, uniqueness: true
 
 (RailsGuides has lots of information on the [different validations](http://guides.rubyonrails.org/active_record_validations.html) that are available to you.)
 
-Lets also make sure that the rating cannot be more than 5.
+##### Adding validations – reviews
 
+Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb` model test – this should go in `spec/models`.
 
+```ruby
+require 'rails_helper'
+
+RSpec.describe Review, :type => model do 
+  it "is invalid if the rating is more than 5" do 
+    review = Review.new(rating: 10)
+    expect(review).to have(1).error_on(:rating)
+  end
+end
+```
+
+Your test will fail because our review model doesn't stop someone from submitting a rating greater than 5. So in `app/models/review.rb`, add:
+
+```ruby
+validates :rating, inclusion: (1..5)
+```
 
 Your tests should now all be passing.
 
