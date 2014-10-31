@@ -27,7 +27,11 @@ by their author.
 ## First Steps
 
 As you'd do with every new project, create a new repository on Github. Create an
-empty [Sinatra] application with a Gemfile and config.ru.
+empty [Sinatra] application with a `Gemfile` and `config.ru`.
+
+Given that we will be using Cucumber for our integration tests, a quick way to
+get everything set up is to use the `cucumber-sinatra` gem. Install the gem and
+then run `cucumber-sinatra init --app Blagger server.rb`
 
 ## Outline
 
@@ -152,7 +156,7 @@ rspec --init
 Add this on top of `spec/spec_helper`:
 
 ```ruby
- Remember environment variables from week 1?
+# Remember environment variables from week 1?
 ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
 
 # this needs to be after ENV["RACK_ENV"] = 'test'
@@ -180,8 +184,9 @@ describe Post do
       expect(Post.count).to eq(0)
 
       # this creates it in the database, so it's stored on the disk
-      Post.create(:title => "Makers Academy",
-                  :url => "http://www.makersacademy.com/")
+      Post.create(:title => "Blagger is Born",
+                  :text => "My first post about my wonderful new blogging
+                  platform.")
 
       # We ask the database how many posts we have, it should be 1
       expect(Post.count).to eq(1)
@@ -190,8 +195,9 @@ describe Post do
       post = Post.first
 
       # Now it has all properties that it was saved with.
-      expect(post.url).to eq("http://www.makersacademy.com/")
-      expect(post.title).to eq("Makers Academy")
+      expect(post.text).to eq("My first post about my wonderful new blogging
+                  platform.")
+      expect(post.title).to eq("Blagger is Born")
 
       # If we want to, we can destroy it
       post.destroy
@@ -226,7 +232,7 @@ pill here) if you haven't already.
 When a test runs, it assumes that the database is empty. The test is not obliged
 to leave the database clean, though. We need to take care of this ourselves. Add
 the `database_cleaner` gem to the Gemfile and install it. Then, require it in
-`spec_helper` and configure RSpec to use it.
+`spec_helper` and configure RSpec to use it (inside the `RSpec.configure` loop)
 
 ```ruby
 RSpec.configure do |config|
@@ -249,4 +255,65 @@ end
 
 This will make sure that the database is cleared after every test run.
 
+###Managing posts
 
+So that's how to get testing going with Rspec - but I said we'd be using
+Cucumber to do our integration tests. Let's get that set up too!
+
+If you've used the `cucumber-sinatra` gem to do your set up you've already got
+the required file structures in place (if not, just set up the directories as
+described in the Cucumber pill).
+
+First add two gems to the Gemfile's development and test groups - `capybara`
+and `cucumber`. Cucumber should be familiar by now - [Capybara](pill?) less so.
+
+We'll be using Capybara to write the individual tests that Cucumber will then
+be running. Capybara is a (headless) browser and DSL for testing websites - you
+can write tests that move a virtual browser around a website and test the
+content, server responses, CSS and HTML you find there.
+
+Let's start with a test to see all the blog posts when we get to the homepage.
+
+```gherkin
+Feature: Blagger homepage
+    In order to use the Blagger blogging platform
+    As reader of blogs
+    I want there to be a homepage
+
+    Scenario: User browses th list of posts
+        Given there is a blog post with the title of "My first blog post"
+        When I am on the homepage
+        Then I should see "My first blog post"
+```
+
+If you run `cucumber` now you'll get the following output to the terminal:
+
+```shell
+  Scenario: User browses the list of posts                            # features/homepage.feature:6
+    Given there is a blog post with the title of "My first blog post" # features/homepage.feature:7
+    When I am on the homepage                                         # features/step_definitions/web_steps.rb:19
+    Then I should see "My first blog post"                            # features/step_definitions/web_steps.rb:107
+
+1 scenario (1 undefined)
+3 steps (2 skipped, 1 undefined)
+0m0.002s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Given(/^there is a blog post with the title of "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+```
+
+Which is Cucumber's way of telling us that it doesn't know what that step is
+all about. Copy and paste the snippet above into a new file in the
+`features\step_definitions`. Let's call it `homepage_steps.rb`. And let's fill
+in the blanks as follows:
+
+```ruby
+Given(/^there is a blog post with the title of "(.*?)"$/) do |title|
+  Post.create(title: "My first blog post")
+end
+```
+
+When
