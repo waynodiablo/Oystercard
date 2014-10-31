@@ -123,6 +123,56 @@ And now we need sign in and sign up links, so add this to the above:
 
 And now we should be green.
 
+#### Adding OmniAuth login
+
+For this example, we'll be adding a 'sign in with Facebook' link.
+
+##### Register a Facebook Developer application
+
+Create a [Facebook Developer application](http://developers.facebook.com), making note of the two keys you're given.
+
+The first step then is to add an OmniAuth gem to your application. This can be done in our Gemfile:
+
+```ruby
+gem 'omniauth-facebook'
+```
+
+Here we'll use Facebook as an example, but you are free to use whatever and as many OmniAuth gems as you'd like. Generally, the gem name is "omniauth-provider" where provider can be "facebook" or "twitter", for example. For a full list of these providers, please check [OmniAuth's list of strategies](https://github.com/intridea/omniauth/wiki/List-of-Strategies). 
+
+Next up, you should add the columns "provider" (string) and "uid" (string) to your User model. 
+
+```shell
+$ rails g migration AddColumnsToUsers provider uid
+$ rake db:migrate
+```
+
+Next, you need to declare the provider in your `config/initializers/devise.rb`:
+
+```ruby
+config.omniauth :facebook, "APP_ID", "APP_SECRET"
+```
+
+and replace `APP_ID` and `APP_SECRET` with your app id and secret. **Bear in mind – committing secrets to public git repos is a super bad idea!** Let's go with it for now, but at the end we'll come back to this and look at a better way of doing it.
+
+Now you need to make the User model that Devise created 'omniauthable',
+
+`app/models/user.rb`:
+
+```ruby
+devise :omniauthable, :omniauth_providers => [:facebook]
+```
+
+Restart your server if it's running. Devise will now create the following routes:
+
+* user_omniauth_authorize_path(provider)
+* user_omniauth_callback_path(provider)
+
+And now, as if by magic...
+
+![Log in with Facebook form](images/facebook_login.jpg)
+
+Devise is great!
+
 
 
 
