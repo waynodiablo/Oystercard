@@ -102,6 +102,27 @@ context "user signed in on the homepage" do
 end
 ```
 
+Now we need to add these links to the view logic. Specifically, we need to tell the app to show certain links dependent on whether or not a user is logged in.
+
+In `views/layout/application.rb`, add a sign out link:
+
+```erb
+<% if user_signed_in? %>
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+...
+```
+
+And now we need sign in and sign up links, so add this to the above:
+
+```erb
+...
+<% else %>
+<%= link_to "Sign in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+```
+
+And now we should be green.
+
 
 
 
