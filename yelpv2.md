@@ -187,4 +187,21 @@ Make sure that `secrets.yml` is in your `.gitignore` file to prevent it being pi
 
 Anyway – all of the above is in [this tutorial](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview) if you want to read more on OmniAuth and Devise.
 
+#### Setting limits on users
 
+Now we want to set limits on what site visitors can do. From our [specification](yelp.md#v2-specification):
+
+* A user must be logged in to create restaurants
+* Users can only edit/delete restaurants **which they've created**
+* Users can only leave **one review per restaurant**
+* Users can delete their own reviews
+
+Let's tackle these one by one.
+
+##### A user must be logged in to create restaurants
+
+##### Users can only edit/delete restaurants **which they've created**
+
+##### Users can only leave **one review per restaurant**
+
+##### Users can delete their own reviews
