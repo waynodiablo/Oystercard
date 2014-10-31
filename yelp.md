@@ -88,7 +88,7 @@ Finally, let's focus on creating a better user experience. This will introduce u
 
 * [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)
 * [Structure of Rails apps (diagram)](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png)
-* [ActiveRecord basics](http://guides.rubyonrails.org/active_record_basics.html)
+* [Active Record basics](http://guides.rubyonrails.org/active_record_basics.html)
 * [Associations](http://guides.rubyonrails.org/association_basics.html)
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
@@ -97,8 +97,9 @@ Finally, let's focus on creating a better user experience. This will introduce u
 
 ## Walkthroughs (under construction)
 
-* :pill: [Rails console](pills/rails_console.md)
 * :pill: [MVC](pills/mvc.md)
+* :pill: [Rails console](pills/rails_console.md)
+* :pill: [Active Record](pills/activerecord.md)
 * [Rails](https://github.com/makersacademy/Walkthroughs/blob/master/rails.md) <-- Under construction
 * [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md) <-- Under construction
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) <-- Under construction

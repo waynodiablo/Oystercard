@@ -47,6 +47,13 @@ user.save
 
 There are many more **Read** methods than can be covered here – have a look at the [appropriate RailsGuide](http://guides.rubyonrails.org/active_record_querying.html) for a comprehensive list.
 
+### Validations
+
+Model validations are performed by Active Record – you know, all those tests for 'uniqueness' and password length and so on.
+
+### Migrations
+
+Active Record also deals with migrations. (Is there *anything* it doesn't do?)
 
 ## Further reading
 
