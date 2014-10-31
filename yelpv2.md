@@ -2,7 +2,17 @@
 
 ### V2 Walkthrough
 
-@@TOC@@
+- [Installing Devise](#installing-devise)
+- [How do I log into this thing?](#how-do-i-log-into-this-thing)
+- [Adding links to log in and out](#adding-links-to-log-in-and-out)
+- [Adding OmniAuth login](#adding-omniauth-login)
+    - [Register a Facebook Developer application](#register-a-facebook-developer-application)
+    - [Keeping secrets properly](#keeping-secrets-properly)
+- [Setting limits on users](#setting-limits-on-users)
+    - [A user must be logged in to create restaurants](#a-user-must-be-logged-in-to-create-restaurants)
+    - [Users can only edit/delete restaurants which they've created](#users-can-only-editdelete-restaurants-which-theyve-created)
+    - [Users can only leave one review per restaurant](#users-can-only-leave-one-review-per-restaurant)
+    - [Users can delete only their own reviews](#users-can-delete-only-their-own-reviews)
 
 In this version, we want to add user login. In Sinatra, this requires you to manually add a User model, and then create all the usual controller routes – for login, logout, signing up and so on. How tedious.
 
