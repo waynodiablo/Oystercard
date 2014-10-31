@@ -329,7 +329,7 @@ class RestaurantsController < ApplicationController
 
 Looks good. Wait... why doesn't this work?
 
-Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
+Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
 
 As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Modify the following line:
 
@@ -800,6 +800,10 @@ validates :name, length: {minimum: 3}, uniqueness: true
 ```
 
 (RailsGuides has lots of information on the [different validations](http://guides.rubyonrails.org/active_record_validations.html) that are available to you.)
+
+Lets also make sure that the rating cannot be more than 5.
+
+
 
 Your tests should now all be passing.
 
