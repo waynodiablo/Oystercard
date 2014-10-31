@@ -196,12 +196,18 @@ Now we want to set limits on what site visitors can do. From our [specification]
 * Users can only leave **one review per restaurant**
 * Users can delete their own reviews
 
-Let's tackle these one by one.
+Let's tackle these one by one. Remember to always write tests first!
 
 ##### A user must be logged in to create restaurants
 
-##### Users can only edit/delete restaurants **which they've created**
+In `restaurants_controller.rb`, we can add a `before_action` that checks to see if a user is logged in before the action runs.
 
-##### Users can only leave **one review per restaurant**
+```ruby
+before_action :authenticate_user!, :except => [:index, :show]
+```
 
-##### Users can delete their own reviews
+As you can guess, this will apply to all of the methods in the controller except for `index` and `show`, so guests will still be able to see the list of restaurants and the individual restaurant pages.
+
+##### Users can only edit/delete restaurants which they've created
+##### Users can only leave one review per restaurant
+##### Users can delete only their own reviews
