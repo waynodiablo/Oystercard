@@ -173,6 +173,18 @@ And now, as if by magic...
 
 Devise is great!
 
+##### Keeping secrets properly
 
+The proper way of saving secrets is to abstract them out into a separate file.
+
+Add your Facebook keys to the Rails `secrets.yml` file. They can then get called into the above code without needing to check them into version control. Call them using the following:
+
+`Rails.application.secret.NAME_OF_SECRET`
+
+Make sure that `secrets.yml` is in your `.gitignore` file to prevent it being picked up by version control. (Bear in mind that at this point it's already in your Git history, so it's not actually gone. To remove secrets from a repo's history, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/).)
+
+**This becomes super, super important when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
+
+Anyway – all of the above is in [this tutorial](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview) if you want to read more on OmniAuth and Devise.
 
 
