@@ -18,11 +18,15 @@ Examples: *Users*, *Comments*, *Reviews*
 
 Hang on, aren't those examples the same as above? Not quite – note that they're plural here. The User model above defines *what a user is*, whereas the Users controller describes *what we can do to users* and *how they can be interacted with*.
 
+**Controllers** contain the 'verbs' of your app which act on models.
+
 In the case of Comments, we'll want to be able to create them, delete them, update them, view all of them as a list, view a single one of them in detail... Those methods are kept in a controller.
 
 If we changed the way in which we interacted with Comments – say, we now want to get them using an API – we can just modify the controller to output JSON instead. We don't need to modify the model layer at all.
 
 ### Views
+
+
 
 
 
