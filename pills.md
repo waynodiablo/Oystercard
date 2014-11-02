@@ -85,6 +85,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [Active Record](pills/activerecord.md)
 
+:pill: [Helper Methods](pills/rails_helpers.md)
+
 
 ## Testing
 
