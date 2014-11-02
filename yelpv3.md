@@ -465,6 +465,22 @@ end
 
 Phew! Now we're good to go. Run your tests again and make sure nothing is broken.
 
+##### Write the test
+
+In `spec/features/endorsements_feature_spec.rb`, you want to change your existing test to look something like this:
+
+```ruby
+...
+it 'a user can endorse a review, which increments the endorsement count', js: true do
+  visit '/restaurants'
+  click_link 'Endorse'
+  expect(page).to have_content("1 endorsement")
+end
+...
+```
+
+Notice the `js: true` bit. That's important – it tells Capybara to use Poltergeist/Phantom for this test so the JavaScript stuff that we're about to add works.
+
 ##### Let's add some JavaScript
 
 Rails actually accepts CoffeeScript natively. Have a look in `app/assets/javascripts` – you'll see some files ending in `.coffee`.
