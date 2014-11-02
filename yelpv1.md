@@ -717,7 +717,22 @@ redirect_to restaurants_path
 
 Now, once the method is run, Rails will take a user back to the list of restaurants.
 
-Finally, update `restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
+Finally, update `app/views/restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.erb`. Use something like this:
+
+```erb
+<h3>Reviews</h3>
+<% if !@restaurant.reviews.any? %>
+  <p>No reviews.</p>
+<% else %>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        <%= review.content %>, <strong><%= review.rating %></strong>/5
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+```
 
 ##### `belongs_to` and dealing with orphan reviews
 
