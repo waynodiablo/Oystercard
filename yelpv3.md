@@ -243,12 +243,18 @@ it "returns three black stars and two white stars for 3.5" do
 end
 ```
 
-Alas - we'll get "3.5" back as 3.5 is a Float, not a Fixnum. Let's do a bit of duck typing rather than strict typing to identify the input as valid - does it respond to `round`? We can round the review to make sure we get an integer back (rather than using half stars).
+However, there's a problem - we'll get "3.5" back as 3.5 is a Float, not a Fixnum. Let's do a bit of [duck typing](http://en.wikipedia.org/wiki/Duck_typing) to identify the input as valid - does it respond to `round`?
+
+If it does, we can then proceed with the method, which involves rounding the review to make sure we get an integer back (rather than using half stars).
 
 ```ruby
 module ReviewsHelper
   def star_rating(rating)
+    # does the rating respond to `round`? If not, just return the rating
     return rating unless rating.respond_to?(:round)
+
+    # if it does – i.e. if it's a valid number - then the rest of the 
+    # method is run
     remainder = (5 - rating)
     "★" * rating.round + "☆" * remainder
   end
@@ -264,7 +270,7 @@ feature test to pass.
 ...
 ```
 
-Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: [Helper methods](pills/helper_methods.md) to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
+Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](pills/helper_methods.md)** to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
 
 #### Refactoring using partials
 
