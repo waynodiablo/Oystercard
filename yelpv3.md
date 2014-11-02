@@ -465,6 +465,84 @@ end
 
 Phew! Now we're good to go. Run your tests again and make sure nothing is broken.
 
+##### Let's add some JavaScript
+
+Rails actually accepts CoffeeScript natively. Have a look in `app/assets/javascripts` – you'll see some files ending in `.coffee`.
+
+This time, we're going to write pure JS, so let's change that file extension:
+
+`app/assets/javascripts/endorsements.js.coffee` -> `app/assets/javascripts/endorsements.js`
+
+Sweet. Now let's actually put some JavaScript in that file.
+
+```js
+$(document).ready(function() {
+
+  $('.endorsements-link').on('click', function(event){
+      var endorsementCount = $(this).siblings('.endorsements_count');
+      event.preventDefault();
+      $.post(this.href, function(response){
+        endorsementCount.text(response.new_endorsement_count);
+    })
+  })
+})
+```
+
+There's a lot going on here, so let's break it down line by line.
+
+* `$(document).ready` is a jQuery method that makes sure the page is fully loaded before the JS fires.
+* `$('.endorsements-link').on('click',` – when the user clicks on an HTML element with the class 'endorsements-link'...
+* `var endorsementCount` – make a new variable called `endorsementCount`...
+* `$(this).siblings('.endorsements_count')` – and tell that to refer to the HTML element with class 'endorsements_count' that's next to the current element (we need to do this weirdness because we're getting a `span` element that's *next to* the link being clicked)...
+* `$.post` – and then make a post request...
+* `this.href` – to the very same URL specified by the link that just got clicked...
+* `response.new_endorsement_count` – and grab the response of that request...
+* `endorsementCount.text(response.new_endorsement_count)` – and overwrite the endorsementCount element we defined before with that response (which will be the number of endorsements).
+
+And... breathe.
+
+##### Updating the controller
+
+Now we need to tell our controller to serve up JSON objects that our JS on the client side can parse.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+class EndorsementsController < ApplicationController
+
+  def create
+    @review = Review.find(params[:review_id])
+    @review.endorsements.create
+    render json: {new_endorsement_count: @review.endorsements.count}
+  end
+
+end
+```
+
+The `create` method now serves up a JSON which has a single item, `new_endorsement_count`, whose value is computed when the method is called.
+
+##### Updating the view
+
+Now we need to update the view so that the JS has something to actually modify when it gets a JSON from the server.
+
+In `app/views/restaurants/index.html.erb`, add this code, replacing your existing code where appropriate:
+
+```erb
+<ul>
+  <% restaurant.reviews.each do |review| %>
+    <li>
+      <%= review.content %>, <strong><%= review.rating %></strong>/5<em>
+      <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
+        <span class="endorsements_count"> <%= review.endorsements.count %> </span> endorsements
+    </li>
+  <% end %>
+</ul>
+```
+
+Here, the `span` tag with class 'endorsements_count' is populated with the current review endorsements count when the page is first loaded. Then, when the user clicks on 'Endorse', our JS is fired and posts to the URL linked to by the 'Endorse' link. It takes the response and replaces the number in the `span` with it.
+
+Your tests should now be passing.
+
 #### Refactoring using partials
 
 A good rule of thumb is that if you do something twice, you should consider refactoring. (If you're doing it three times, *definitely* refactor.)
