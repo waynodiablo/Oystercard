@@ -9,6 +9,27 @@ In this version of our app, we want to tidy up the UX (user experience). It woul
 
 Let's see what we can do.
 
+- [Average ratings](#average-ratings)
+    - [Feature and unit tests](#feature-and-unit-tests)
+    - [Making an `average_rating` helper](#making-an-averagerating-helper)
+    - [Displaying the average rating](#displaying-the-average-rating)
+    - [Stars make things pretty](#stars-make-things-pretty)
+    - [DIY helper methods](#diy-helper-methods)
+- [Adding endorsements](#adding-endorsements)
+    - [Test first](#test-first)
+    - [Add a new route](#add-a-new-route)
+    - [Creating endorsements controller](#creating-endorsements-controller)
+    - [Creating the model](#creating-the-model)
+    - [Showing endorsements on the main page](#showing-endorsements-on-the-main-page)
+- [Using AJAX to update endorsements in real-time](#using-ajax-to-update-endorsements-in-real-time)
+    - [Testing JS on web pages](#testing-js-on-web-pages)
+    - [Write the test](#write-the-test)
+    - [Let's add some JavaScript](#lets-add-some-javascript)
+    - [Updating the controller](#updating-the-controller)
+    - [Updating the view](#updating-the-view)
+- [Refactoring using partials](#refactoring-using-partials)
+- [Done](#done)
+
 #### Average ratings
 
 We want our restaurants to show their average rating. Test!
@@ -576,3 +597,7 @@ Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` 
 ```
 
 So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
+
+#### Done
+
+All finished.
