@@ -1,0 +1,1 @@
+# Rails helper methods
