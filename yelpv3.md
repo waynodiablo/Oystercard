@@ -302,9 +302,7 @@ end
 
 ##### Add a new route
 
-Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements.
-
-We need to think about what kind of relationship endorsements and reviews are going to have before we do this. 
+Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements. We need to think about what kind of relationship endorsements and reviews are going to have before we do this - specifically, each review is going to have many endorsements.
 
 Open up `config/routes.rb`. We want to add a nested resource route to reviews, so change this:
 
@@ -330,6 +328,43 @@ Great. Now let's make an endorsements controller.
 $ rails g controller endorsements
 ```
 
+Cool. Let's create the first method for the controller:
+
+`app/controllers/endorsements_controller.rb`:
+
+```ruby
+class EndorsementsController < ApplicationController
+
+  def create
+    @review = Review.find(params[:review_id])
+    @review.endorsements.create
+    redirect_to restaurants_path
+  end
+
+end
+```
+
+This is a pretty standard `create` method, but note that at the end it takes the user back to the list of restaurants. As a result, we won't need a `show` method for endorsements (which makes sense, as we probably don't want each individual endorsement to have a whole page devoted to it!).
+
+##### Creating the model
+
+Now run
+
+```shell
+$ rails g model endorsement review:belongs_to
+```
+
+to generate your model. This command tells Rails that there is a `belongs_to` relationship here – specifically, that each Endorsement will belong to a Review. Running this command generates an appropriate migration for updating your database to reflect this (the migration will make a table for endorsements and an index to link them to reviews).
+
+We don't want our endorsements to have any other properties (unlike restaurants, which have a name and a rating, or reviews, with their comment and rating), so we don't need to specify any other columns.
+
+Now run 
+
+```shell
+$ rake db:migrate
+```
+
+to run your database migrations. 
 
 #### Refactoring using partials
 
