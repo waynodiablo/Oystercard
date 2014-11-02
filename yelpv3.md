@@ -19,17 +19,17 @@ To `review_feature_spec.rb`, add the below. Here, we've extracted out the leavin
 
 ```ruby
 def leave_review(thoughts, rating)
-    visit '/restaurants'
-    click_link 'Review KFC'
-    fill_in "Thoughts", with: thoughts
-    select rating, from: 'Rating'
-    click_button 'Leave Review'
+  visit '/restaurants'
+  click_link 'Review KFC'
+  fill_in "Thoughts", with: thoughts
+  select rating, from: 'Rating'
+  click_button 'Leave Review'
 end
 
 it 'displays an average rating for all reviews' do
-    leave_review('So so', "3")
-    leave_review('Great', "5")
-    expect(page).to have_content("Average: 4")
+  leave_review('So so', "3")
+  leave_review('Great', "5")
+  expect(page).to have_content("Average: 4")
 end
 ```
 
@@ -38,12 +38,12 @@ Now, in our `restaurant_spec.rb`, we add a unit test:
 ```ruby
 ...
 describe '#average_rating' do
-    context 'no reviews' do
-        it 'returns "N/A" when there are no reviews' do
-            restaurant = Restaurant.create(name: "The Ivy")
-            expect(restaruant.average_rating).to eq 'N/A'
-        end
+  context 'no reviews' do
+    it 'returns "N/A" when there are no reviews' do
+      restaurant = Restaurant.create(name: "The Ivy")
+      expect(restaruant.average_rating).to eq 'N/A'
     end
+  end
 end
 ...
 ```
@@ -56,7 +56,7 @@ To make the test pass, we need to update our restaurant model.
 
 ```ruby
 def average_rating
-    'N/A'
+  'N/A'
 end
 ```
 
@@ -67,11 +67,11 @@ This passes the test so far, but obviously isn't very useful. Now we need a test
 ```ruby
 ...
 context '1 review' do
-    it 'returns that rating' do
-        restaurant = Restaurant.create(name: "The Ivy")
-        restaurant.reviews.create(rating: 4)
-        expect(restaurant.average_rating).to eq 4
-    end
+  it 'returns that rating' do
+    restaurant = Restaurant.create(name: "The Ivy")
+    restaurant.reviews.create(rating: 4)
+    expect(restaurant.average_rating).to eq 4
+  end
 end
 ...
 ```
@@ -82,8 +82,8 @@ Let's update our `average_rating` method.
 
 ```ruby
 def average_rating
-    return 'N/A' if reviews.none?
-    reviews.inject(0) {|memo, review| memo + review.rating}
+  return 'N/A' if reviews.none?
+  reviews.inject(0) {|memo, review| memo + review.rating}
 end
 ```
 
@@ -94,12 +94,12 @@ And now for multiple reviews...
 ```ruby
 ...
 context 'multiple reviews' do
-    it 'returns the average' do
-        restaurant = Restaurant.create(name: "The Ivy")
-        restaurant.reviews.create(rating: 1)
-        restaurant.reviews.create(rating: 5)
-        expect(restaurant.average_rating).to eq 3
-    end
+  it 'returns the average' do
+    restaurant = Restaurant.create(name: "The Ivy")
+    restaurant.reviews.create(rating: 1)
+    restaurant.reviews.create(rating: 5)
+    expect(restaurant.average_rating).to eq 3
+  end
 end
 ...
 ```
@@ -110,8 +110,8 @@ And update our `average_rating` method...
 
 ```ruby
 def average_rating
-    return 'N/A' if reviews.none?
-    reviews.inject(0) {|memo, review| memo + review.rating} / reviews.count
+  return 'N/A' if reviews.none?
+  reviews.inject(0) {|memo, review| memo + review.rating} / reviews.count
 end
 ```
 
@@ -151,9 +151,9 @@ Let's change the feature spec to expect that output.
 
 ```ruby
 it "displays an average rating for all reviews" do
-    leave_review("so so", "3")
-    leave_review("Great!", "5")
-    expect(page).to have_content("Average rating: ★★★★☆")
+  leave_review("so so", "3")
+  leave_review("Great!", "5")
+  expect(page).to have_content("Average rating: ★★★★☆")
 end
 ```
 
@@ -164,3 +164,105 @@ Somewhere in the layout `head` section you'll need to have this `meta` tag:
 ```erb
 <meta charset="UTF-8">
 ```
+
+##### DIY helper methods
+
+Now we can create our own helper method that we can call to generate a star rating from a numerical rating.
+
+First we'll make a test for it - throw together a `helpers` folder in the spec
+folder, and write a new test in a new file called `reviews_helper_spec.rb`.
+
+```ruby
+require 'rails-helper'
+
+describe ReviewsHelper, :type => :helper do
+  context "#star_rating" do
+    it "does nothing for not a number" do
+      expect(helper.star_rating('N/A')).to eq "N/A"
+    end
+  end
+end
+```
+
+Time to write that helper method. Rails has auto-generated some placeholder files that we can open up and edit.
+
+`app/helpers/reviews_helper.rb`:
+
+```ruby
+module ReviewsHelper
+  def star_rating(rating)
+    rating
+  end
+end
+```
+
+Our test passes. Refine with a new test:
+
+```ruby
+it "returns five black stars for five" do
+  expect(helper.star_rating(5)). to eq '★★★★★'
+end
+```
+
+Which needs an updated method to pass.
+
+```ruby
+module ReviewsHelper
+  def star_rating(rating)
+    return rating unless rating.is_a?(Fixnum)
+    "★" * rating
+  end
+end
+```
+
+And it's time for another test:
+
+```ruby
+it "returns three black stars and two white stars for three" do
+  expect(helper.star_rating(5)). to eq '★★★☆☆'
+end
+```
+
+So we need to work out the remainder to put on the end as white stars:
+
+```ruby
+module ReviewsHelper
+  def star_rating(rating)
+    return rating unless rating.is_a?(Fixnum)
+    remainder = (5 - rating)
+    "★" * rating + "☆" * remainder
+  end
+end
+```
+
+And the final test:
+
+```ruby
+it "returns three black stars and two white stars for 3.5" do
+  expect(helper.star_rating(3.5)). to eq '★★★☆☆'
+end
+```
+
+Alas - we'll get "3.5" back as 3.5 is a Float, not a Fixnum. Let's do a bit of duck typing rather than strict typing to identify the input as valid - does it respond to `round`? We can round the review to make sure we get an integer back (rather than using half stars).
+
+```ruby
+module ReviewsHelper
+  def star_rating(rating)
+    return rating unless rating.respond_to?(:round)
+    remainder = (5 - rating)
+    "★" * rating.round + "☆" * remainder
+  end
+end
+```
+
+And that should pass those tests. So let's go back to our `index` to get the
+feature test to pass.
+
+```erb
+...
+<%= star_rating(restaurant.average_rating) %>
+...
+```
+
+Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: [Helper methods](pills/helper_methods.md) to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
+
