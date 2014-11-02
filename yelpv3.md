@@ -135,3 +135,32 @@ Now, add some code to the index page to display this average beside each restaur
 ...
 ```
 
+##### Stars make things pretty
+
+But we can do better than that. Yelp uses star ratings which are a nice way of showing a restaurant's rating. We can do something similar just by using the Unicode 'star' characters.
+
+Specifically, we can use these two glyphs:
+
+> BLACK STAR (U+2605)
+> ★
+  
+> WHITE STAR (U+2606)
+> ☆
+
+Let's change the feature spec to expect that output.
+
+```ruby
+it "displays an average rating for all reviews" do
+    leave_review("so so", "3")
+    leave_review("Great!", "5")
+    expect(page).to have_content("Average rating: ★★★★☆")
+end
+```
+
+And now let's make sure the page uses the UTF-8 character set, otherwise those Unicode stars won't render properly.
+
+Somewhere in the layout `head` section you'll need to have this `meta` tag:
+
+```erb
+<meta charset="UTF-8">
+```
