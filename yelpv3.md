@@ -388,6 +388,24 @@ So to that block, you want to call the number of endorsements that each review h
 <p><%= review.endorsements.count %> endorsements</p>
 ```
 
+#### Using AJAX to update endorsements in real-time
+
+This is where it gets fun. We can use AJAX to update the page in real-time without having to refresh. Broadly, it works like this:
+
+1. User clicks 'Endorse' link next to a review
+2. Click event invokes some JavaScript in the page, which tells the server that the endorsements count for that review should go up
+3. The server responds with a JSON object containing the new endorsements count
+4. Client-side JavaScript listens out for that JSON, parses it, and updates the count on the page
+
+It's pretty neat. How do we get started?
+
+##### Testing JS on web pages
+
+We test!
+
+But not so fast. Capybara's default web driver has trouble with JavaScript, so we need something that won't hiccup on this task. In this case, we'll use [Poltergeist](https://github.com/teampoltergeist/poltergeist), which is a headless browser for Capybara based on [PhantomJS](http://phantomjs.org/).
+
+
 
 #### Refactoring using partials
 
