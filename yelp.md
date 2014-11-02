@@ -37,11 +37,11 @@ Remember to drive the addition of all features using feature tests, and unit tes
 
 ### V1 Specification
 
-- Visitors can create new restaurants using a form, specifying a name and cuisine
+- Visitors can create new restaurants using a form, specifying a name and rating
 - Restaurants can be edited and deleted
 - Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
-- [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
+- [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
 ### [V1 Walkthrough →](yelpv1.md)
 
