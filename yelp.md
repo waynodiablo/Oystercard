@@ -81,7 +81,7 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Refactor your more complex views to use partials
 * *Optional* - Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### V3 Walkthrough →
+### [V3 Walkthrough →](yelpv3.md)
 
 
 ## Resources
