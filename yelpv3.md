@@ -272,6 +272,65 @@ feature test to pass.
 
 Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](pills/helper_methods.md)** to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
 
+#### Adding endorsements
+
+We want users to be able to 'endorse' reviews. We're going to follow the same method as last time: testing, then adding a new resource to routes, then creating a model and a controller.
+
+##### Test first
+
+Let's make a new feature test for adding endorsements.
+
+`spec/features/endorsements_feature_spec.rb`:
+
+```ruby
+require 'rails_helper'
+
+describe 'endorsing reviews' do
+  before do
+    kfc = Restaurant.create(name: 'KFC')
+    kfc.reviews.create(rating: 3, content: "It was an abomination")
+  end
+
+  it 'a user can endorse a review, which updates the review endorsement count' do
+    visit '/restaurants'
+    click_link 'Endorse'
+    expect(page).to have_content('1 endorsement')
+  end
+  
+end
+```
+
+##### Add a new route
+
+Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements.
+
+We need to think about what kind of relationship endorsements and reviews are going to have before we do this. 
+
+Open up `config/routes.rb`. We want to add a nested resource route to reviews, so change this:
+
+```ruby
+resources :reviews
+```
+
+to this:
+
+```ruby
+resources :reviews do
+  resources :endorsements
+end
+```
+
+Run `rake routes` to see what this does. You should see the general structure – that endorsements can now be accessed as a sub-root of each restaurant.
+
+##### Creating endorsements controller
+
+Great. Now let's make an endorsements controller.
+
+```shell
+$ rails g controller endorsements
+```
+
+
 #### Refactoring using partials
 
 A good rule of thumb is that if you do something twice, you should consider refactoring. (If you're doing it three times, *definitely* refactor.)
