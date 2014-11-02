@@ -266,7 +266,7 @@ feature test to pass.
 
 ```erb
 ...
-<%= star_rating(restaurant.average_rating) %>
+<%= star_rating(@restaurant.average_rating) %>
 ...
 ```
 
@@ -293,7 +293,7 @@ describe 'endorsing reviews' do
 
   it 'a user can endorse a review, which updates the review endorsement count' do
     visit '/restaurants'
-    click_link 'Endorse'
+    click_link 'Endorse KFC'
     expect(page).to have_content('1 endorsement')
   end
   
@@ -358,13 +358,36 @@ to generate your model. This command tells Rails that there is a `belongs_to` re
 
 We don't want our endorsements to have any other properties (unlike restaurants, which have a name and a rating, or reviews, with their comment and rating), so we don't need to specify any other columns.
 
+We also need to update the Review model to reflect this. Let's open it up and add in the `has_many` relationship.
+
+`/app/models/review.rb`:
+
+```ruby
+has_many :endorsements
+```
+
 Now run 
 
 ```shell
 $ rake db:migrate
 ```
 
-to run your database migrations. 
+to run your database migrations.
+
+##### Showing endorsements on the main page
+
+We now need to update the view to show each review's endorsements. Have a look in `app/views/restaurants/index.html.erb` – you probably have something like:
+
+```erb
+<% @restaurant.reviews.each do |review| %>
+```
+
+So to that block, you want to call the number of endorsements that each review has. Try using something like this:
+
+```erb
+<p><%= review.endorsements.count %> endorsements</p>
+```
+
 
 #### Refactoring using partials
 
