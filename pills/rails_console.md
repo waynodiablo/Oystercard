@@ -37,6 +37,8 @@ $ rails console
 
 ### What does this helper do?
 
+**See the :pill: [Rails helper methods](rails_helpers.md) pill for more.**
+
 Rails has lots of helpers, and `rails console` is a nice way of trying them out interactively. For example, you could have a go with `truncate`:
 
 ```shell
