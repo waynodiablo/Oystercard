@@ -405,7 +405,65 @@ We test!
 
 But not so fast. Capybara's default web driver has trouble with JavaScript, so we need something that won't hiccup on this task. In this case, we'll use [Poltergeist](https://github.com/teampoltergeist/poltergeist), which is a headless browser for Capybara based on [PhantomJS](http://phantomjs.org/).
 
+To get this working, we need to add two gems to our Gemfile: `poltergeist` (for the reasons discussed above) and `database_cleaner`, because running Poltergeist means running code outside of our normal test process, so the database otherwise won't be properly cleared between tests as it is currently.
 
+Add these to your `Gemfile`:
+
+```ruby
+gem 'poltergeist', group: :test
+gem 'database_cleaner', group: :test
+```
+
+Don't forget to run `bundle install` to install those shiny new gems.
+
+In your RSpec helper file, you need to require Poltergeist, and tell Capybara that it's your JavaScript web driver of choice.
+
+`spec/rails_helper.rb`:
+
+```ruby
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+```
+
+In that same file, change this line:
+
+```ruby
+config.use_transactional_fixtures = true
+```
+
+to be `false`.
+
+Now you need to configure Database Cleaner as below. (The instructions here are taken from the [Virtuous Code blog](http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/) where you can find a full explanation of what's happening).
+
+`spec/support/database_cleaner.rb`:
+
+```ruby
+RSpec.configure do |config|
+
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  config.before(:each, :js => true) do
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+end
+```
+
+Phew! Now we're good to go. Run your tests again and make sure nothing is broken.
 
 #### Refactoring using partials
 
