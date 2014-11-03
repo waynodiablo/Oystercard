@@ -370,7 +370,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(params[:restaurant])
+    @restaurant = Restaurant.create(params[:restaurant].permit(:name))
     redirect_to '/restaurants'
   end
 ...
@@ -457,8 +457,8 @@ Now all we need is a view for the restaurant show method. Let's make one.
 `app/views/restaurants/show.html.erb`:
 
 ```erb
+<p><%= @restaurant.name %></p>
 <p><%= @restaurant.description %></p>
-<p><%= @restaurant.rating %></p>
 ```
 
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
