@@ -343,7 +343,7 @@ Restaurant.create(params[:restaurant])
 to instead say
 
 ```ruby
-Restaurant.create(params[:restaurant]).permit(:name) 
+Restaurant.create(params[:restaurant].permit(:name))
 ```
 
 which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
@@ -370,7 +370,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(params[:restaurant])
+    @restaurant = Restaurant.create(params[:restaurant].permit(:name))
     redirect_to '/restaurants'
   end
 ...
@@ -437,7 +437,7 @@ First, we need to update the view to show that link.
 In the `<% @restaurants.each do |restaurant| %>` loop in `app/views/restaurants/index.html.erb`, add this line (removing the existing `<%= restaurant.name %>`):
 
 ```erb
-<%= link_to "#{Restaurant.name}", restaurant_path(restaurant) %>
+<%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
 ```
 
 Now each restaurant should have its name displayed as a clickable link. But we're still missing a 'show' method in the restaurants controller, so let's add one.
@@ -457,8 +457,8 @@ Now all we need is a view for the restaurant show method. Let's make one.
 `app/views/restaurants/show.html.erb`:
 
 ```erb
+<p><%= @restaurant.name %></p>
 <p><%= @restaurant.description %></p>
-<p><%= @restaurant.rating %></p>
 ```
 
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
