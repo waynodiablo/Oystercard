@@ -9,7 +9,35 @@ In this version of our app, we want to tidy up the UX (user experience). It woul
 
 Let's see what we can do.
 
-@@TOC@@
+- [Average ratings](#average-ratings)
+    - [Feature and unit tests](#feature-and-unit-tests)
+    - [Making an `average_rating` helper](#making-an-averagerating-helper)
+    - [Displaying the average rating](#displaying-the-average-rating)
+    - [Stars make things pretty](#stars-make-things-pretty)
+    - [DIY helper methods](#diy-helper-methods)
+- [Adding endorsements](#adding-endorsements)
+    - [Test first](#test-first)
+    - [Add a new route](#add-a-new-route)
+    - [Creating endorsements controller](#creating-endorsements-controller)
+    - [Creating the model](#creating-the-model)
+    - [Showing endorsements on the main page](#showing-endorsements-on-the-main-page)
+- [Using AJAX to update endorsements in real-time](#using-ajax-to-update-endorsements-in-real-time)
+    - [Testing JS on web pages](#testing-js-on-web-pages)
+    - [Write the test](#write-the-test)
+    - [Let's add some JavaScript](#lets-add-some-javascript)
+    - [Updating the controller](#updating-the-controller)
+    - [Updating the view](#updating-the-view)
+- [Refactoring using partials](#refactoring-using-partials)
+- [Adding images to restaurants](#adding-images-to-restaurants)
+    - [Install ImageMagick](#install-imagemagick)
+    - [Getting started with Paperclip](#getting-started-with-paperclip)
+    - [Adding file uploads](#adding-file-uploads)
+- [Uploading images to Amazon Web Services S3](#uploading-images-to-amazon-web-services-s3)
+    - [Sign up for AWS](#sign-up-for-aws)
+    - [Install the gem](#install-the-gem)
+    - [Setting AWS environment vars](#setting-aws-environment-vars)
+    - [Deploy](#deploy)
+- [Done](#done)
 
 #### Average ratings
 
