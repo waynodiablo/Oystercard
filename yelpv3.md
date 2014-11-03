@@ -9,26 +9,7 @@ In this version of our app, we want to tidy up the UX (user experience). It woul
 
 Let's see what we can do.
 
-- [Average ratings](#average-ratings)
-    - [Feature and unit tests](#feature-and-unit-tests)
-    - [Making an `average_rating` helper](#making-an-averagerating-helper)
-    - [Displaying the average rating](#displaying-the-average-rating)
-    - [Stars make things pretty](#stars-make-things-pretty)
-    - [DIY helper methods](#diy-helper-methods)
-- [Adding endorsements](#adding-endorsements)
-    - [Test first](#test-first)
-    - [Add a new route](#add-a-new-route)
-    - [Creating endorsements controller](#creating-endorsements-controller)
-    - [Creating the model](#creating-the-model)
-    - [Showing endorsements on the main page](#showing-endorsements-on-the-main-page)
-- [Using AJAX to update endorsements in real-time](#using-ajax-to-update-endorsements-in-real-time)
-    - [Testing JS on web pages](#testing-js-on-web-pages)
-    - [Write the test](#write-the-test)
-    - [Let's add some JavaScript](#lets-add-some-javascript)
-    - [Updating the controller](#updating-the-controller)
-    - [Updating the view](#updating-the-view)
-- [Refactoring using partials](#refactoring-using-partials)
-- [Done](#done)
+@@TOC@@
 
 #### Average ratings
 
@@ -597,6 +578,82 @@ Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` 
 ```
 
 So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
+
+#### Adding images to restaurants
+
+It's all looking a bit plain-text at the moment. Why can't we add an image to our restaurants?
+
+This actually requires quite a lot of magic to happen – user uploads, resizing and compression of images on the server side, storing the images somewhere – so we'll do this in steps.
+
+We're going to 'spike' that part of the walkthrough – that is, do it in one big go without testing – but you'll be expected to write tests for it afterwards (it requires a bit of research to get your testing suite to be able to upload images to the site).
+
+##### Install ImageMagick
+
+ImageMagick is a code library that deals with image compression. Install it using Homebrew:
+
+```shell
+$ brew install imagemagick
+```
+
+This might take a little while.
+
+##### Getting started with Paperclip
+
+Paperclip is a gem that makes file uploads to Ruby apps a bit simpler.
+
+Add the Paperclip gem to your Gemfile—
+
+`gem 'paperclip'`
+
+—and run `bundle install`.
+
+Have a look at the boilerplate text from the [Paperclip repo](https://github.com/thoughtbot/paperclip) below:
+
+```ruby
+class User < ActiveRecord::Base
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+end
+```
+
+This looks pretty good. Add this into your Restaurant model, but change `:avatar` to `:image` so you get something like this:
+
+```ruby
+...
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+...
+```
+
+Now, we need a migration to add this image to our restaurant model – each restaurant item in the database needs to know what image is associated with it, so we need an image column. Generate it using
+
+```shell
+$ rails generate paperclip restaurant image
+```
+
+and then run `rake db:migrate` to add the new column to your database.
+
+##### Adding file uploads
+
+Have a look at `app/views/restaurant/new.html.erb`. Change the first line to the following – this lets you send larger files than normal by using multipart HTML encoding:
+
+`:html => { :multipart => true }`
+
+and then add 
+
+`<%= f.file_field :image %>`
+
+to your form, which will add a file picker for users to select an image from their local machine and upload it.
+
+Go to your restaurants controller and add `:image` to your `.permit` statement.
+
+Now, when a user creates a restaurant and includes an image, it gets saved to the `/public` directory.
+
+In `views/restaurants/index.html.erb`, you now want to include a photo.
+
+`<%= image_tag @restaurant.image.url(:thumb) %>`
+
+**Now – work out how to test this with Capybara!**
 
 #### Done
 
