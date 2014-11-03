@@ -533,7 +533,7 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
 ```ruby
 ...
   def update
-    @restaurant = Restaurants.find(:params[:id])
+    @restaurant = Restaurants.find(params[:id])
     @restaurant.update(params[:restaurants]).permit(:name)
     redirect_to '/restaurants'
   end
