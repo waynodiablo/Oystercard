@@ -346,7 +346,7 @@ Run `rake routes` to see what this does. You should see the general structure â€
 Great. Now let's make an endorsements controller.
 
 ```shell
-$ rails g controller endorsements
+$ bin/rails g controller endorsements
 ```
 
 Cool. Let's create the first method for the controller:
@@ -372,7 +372,7 @@ This is a pretty standard `create` method, but note that at the end it takes the
 Now run
 
 ```shell
-$ rails g model endorsement review:belongs_to
+$ bin/rails g model endorsement review:belongs_to
 ```
 
 to generate your model. This command tells Rails that there is a `belongs_to` relationship here â€“ specifically, that each Endorsement will belong to a Review. Running this command generates an appropriate migration for updating your database to reflect this (the migration will make a table for endorsements and an index to link them to reviews).
@@ -390,7 +390,7 @@ has_many :endorsements
 Now run 
 
 ```shell
-$ rake db:migrate
+$ bin/rake db:migrate
 ```
 
 to run your database migrations.
