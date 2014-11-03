@@ -50,11 +50,17 @@ This does the following:
 * *updates `config/routes.rb`* with the relevant user signin, signout and signup routes
 * *adds a Users controller* (really the Devise controller) which gives Rails the commands to deal with users.
 
+Make sure you then follow the on-screen instructions to finish setting up devise, but change the root declaration in **routes.rb** to:
+
+```ruby
+root to: "restaurants#index"
+```
+
 #### How do I log into this thing?
 
 Have a look at `app/models/user.rb` to get the gist of your new User class.
 
-That's Devise pretty well done. It's now given you all the necessary kit for creating and logging in users, and running `rake routes` will show you this:
+That's Devise pretty well done. It's now given you all the necessary kit for creating and logging in users, and running `bin/rake routes` will show you this:
 
 ```
                   Prefix Verb   URI Pattern                    Controller#Action
@@ -102,6 +108,16 @@ context "user not signed in and on the homepage" do
 end
 
 context "user signed in on the homepage" do
+
+  before do
+    visit('/')
+    click_link('Sign up')
+    fill_in('Email', with: 'test@example.com')
+    fill_in('Password', with: 'testtest')
+    fill_in('Password confirmation', with: 'testtest')
+    click_button('Sign up')
+  end
+
   it "should see 'sign out' link" do
     visit('/')
     expect(page).to have_link('Sign out')
@@ -132,6 +148,7 @@ And now we need sign in and sign up links, so add this to the above:
 <% else %>
   <%= link_to "Sign in", new_user_session_path %>
   <%= link_to "Sign up", new_user_registration_path %>
+<% end %>
 ```
 
 And now we should be green.
@@ -144,47 +161,9 @@ For this example, we'll be adding a 'sign in with Facebook' link.
 
 Create a [Facebook Developer application](http://developers.facebook.com), making note of the two keys you're given.
 
-The first step then is to add an OmniAuth gem to your application. This can be done in our Gemfile:
+Now follow the instructions on the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview), ensuring you read the next section straight after about keeping your private details safe!
 
-```ruby
-gem 'omniauth-facebook'
-```
-
-Here we'll use Facebook as an example, but you are free to use whatever and as many OmniAuth gems as you'd like. Generally, the gem name is "omniauth-provider" where provider can be "facebook" or "twitter", for example. For a full list of these providers, please check [OmniAuth's list of strategies](https://github.com/intridea/omniauth/wiki/List-of-Strategies). 
-
-Next up, you should add the columns "provider" (string) and "uid" (string) to your User model. 
-
-```shell
-$ bin/rails g migration AddColumnsToUsers provider:string uid:string
-$ bin/rake db:migrate
-```
-
-Next, you need to declare the provider in your `config/initializers/devise.rb`:
-
-```ruby
-config.omniauth :facebook, "APP_ID", "APP_SECRET"
-```
-
-and replace `APP_ID` and `APP_SECRET` with your app id and secret. **Bear in mind – committing secrets to public git repos is a super bad idea!** Let's go with it for now, but at the end we'll come back to this and look at a better way of doing it.
-
-Now you need to make the User model that Devise created 'omniauthable'.
-
-`app/models/user.rb`:
-
-```ruby
-devise :omniauthable, :omniauth_providers => [:facebook]
-```
-
-Restart your server if it's running. Devise will now create the following routes:
-
-* user_omniauth_authorize_path(provider)
-* user_omniauth_callback_path(provider)
-
-And now, as if by magic...
-
-![Log in with Facebook form](images/facebook_login.jpg)
-
-Devise is great!
+Note that Devise will add the link to Facebook sign-up automatically, so you don't need to follow that step on the wiki.
 
 ##### Keeping secrets properly
 
@@ -194,11 +173,9 @@ Add your Facebook keys to the Rails `secrets.yml` file. They can then get called
 
 `Rails.application.secret.NAME_OF_SECRET`
 
-Make sure that `secrets.yml` is in your `.gitignore` file to prevent it being picked up by version control. (Bear in mind that at this point it's already in your Git history, so it's not actually gone. To remove secrets from a repo's history, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/).)
+Make sure that `config/secrets.yml` is in your `.gitignore` file to prevent it being picked up by version control. (Bear in mind that at this point it's already in your Git history, so it's not actually gone. To remove secrets from a repo's history, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/).)
 
 **This becomes super, super important when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
-
-Anyway – all of the above is in [this tutorial](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview) if you want to read more on OmniAuth and Devise.
 
 #### Setting limits on users
 
@@ -213,7 +190,7 @@ Let's tackle these one by one. Remember to always write tests first!
 
 ##### A user must be logged in to create restaurants
 
-In `restaurants_controller.rb`, we can add a `before_action` that checks to see if a user is logged in before the action runs.
+In `restaurants_controller.rb`, we can add a `before_action` at the top of the controller that checks to see if a user is logged in before the action runs. See if you can write a test first before adding the code below:
 
 ```ruby
 before_action :authenticate_user!, :except => [:index, :show]
@@ -221,6 +198,8 @@ before_action :authenticate_user!, :except => [:index, :show]
 
 As you can guess, this will apply to all of the methods in the controller except for `index` and `show`, so guests will still be able to see the list of restaurants and the individual restaurant pages.
 
-##### Users can only edit/delete restaurants which they've created
-##### Users can only leave one review per restaurant
-##### Users can delete only their own reviews
+Now try adding tests/code for the following scenarios:
+
+* **Users can only edit/delete restaurants which they've created**
+* **Users can only leave one review per restaurant**
+* **Users can delete only their own reviews**
