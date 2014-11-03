@@ -547,6 +547,7 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
   def update
     @restaurant = Restaurant.find(params[:id])
     @restaurant.update(restaurant_params)
+
     redirect_to '/restaurants'
   end
 ...
@@ -571,7 +572,7 @@ describe 'deleting restaurants' do
   end
 
   it "removes a restaurant when a user clicks a delete link" do
-    visit '/'
+    visit '/restaurants'
     click_link 'Delete KFC'
     expect(page).not_to have_content 'KFC'
     expect(page).to have_content 'Restaurant deleted successfully'
@@ -607,15 +608,12 @@ To the restaurants controller, add a destroy method:
 ...
 ```
 
-Then we need to be able to render our flash message (this is a message that appears for only one request) in the index page
-
-`app/views/restaurants/index.html.erb`:
+Don't forget to display the `flash[:notice]` in `application.html.erb`, by adding it above `<%= yield %>`
 
 ```ruby
-<% if flash[:notice].present? %>
-  <p><%= flash[:notice] %></p>
-<% end %>
-``
+<%= notice %>
+<%= yield %>
+```
 
 And now our tests pass and we've got all four CRUD methods!
 
