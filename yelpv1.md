@@ -485,7 +485,7 @@ context 'editing restaurants' do
    visit '/restaurants'
    click_link 'Edit KFC'
    fill_in 'Name', with: 'Kentucky Fried Chicken'
-   click 'Update Restaurant'
+   click_button 'Update Restaurant'
    expect(page).to have_content 'Kentucky Fried Chicken'
    expect(current_path).to eq '/restaurants'
   end
@@ -537,8 +537,8 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
 ```ruby
 ...
   def update
-    @restaurant = Restaurants.find(params[:id])
-    @restaurant.update(params[:restaurants]).permit(:name)
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(params[:restaurants].permit(:name))
     redirect_to '/restaurants'
   end
 ...
@@ -556,14 +556,14 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 ...
 
-describe ‘deleting restaurants’ do
+describe 'deleting restaurants' do
 
   before do
     Restaurant.create(:name => "KFC")
   end
 
   it "removes a restaurant when a user clicks a delete link" do
-    visit '/'
+    visit '/restaurants'
     click_link 'Delete KFC'
     expect(page).not_to have_content 'KFC'
     expect(page).to have_content 'Restaurants deleted successfully'
@@ -594,7 +594,7 @@ To the restaurants controller, add a destroy method:
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     flash[:notice] = 'Restaurant deleted successfully'
-    redirect_to '/restaurant'
+    redirect_to '/restaurants'
   end
 ...
 ```
