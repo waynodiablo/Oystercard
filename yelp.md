@@ -37,11 +37,11 @@ Remember to drive the addition of all features using feature tests, and unit tes
 
 ### V1 Specification
 
-- Visitors can create new restaurants using a form, specifying a name and cuisine
+- Visitors can create new restaurants using a form, specifying a name and rating
 - Restaurants can be edited and deleted
 - Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
-- [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and cuisine, reviews must be given a rating from 1-5 (comment is optional)
+- [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
 ### [V1 Walkthrough →](yelpv1.md)
 
@@ -81,14 +81,14 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Refactor your more complex views to use partials
 * *Optional* - Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### V3 Walkthrough →
+### [V3 Walkthrough →](yelpv3.md)
 
 
 ## Resources
 
 * [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)
 * [Structure of Rails apps (diagram)](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png)
-* [ActiveRecord basics](http://guides.rubyonrails.org/active_record_basics.html)
+* [Active Record basics](http://guides.rubyonrails.org/active_record_basics.html)
 * [Associations](http://guides.rubyonrails.org/association_basics.html)
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
@@ -97,6 +97,9 @@ Finally, let's focus on creating a better user experience. This will introduce u
 
 ## Walkthroughs (under construction)
 
+* :pill: [MVC](pills/mvc.md)
+* :pill: [Rails console](pills/rails_console.md)
+* :pill: [Active Record](pills/activerecord.md)
 * [Rails](https://github.com/makersacademy/Walkthroughs/blob/master/rails.md) <-- Under construction
 * [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md) <-- Under construction
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) <-- Under construction

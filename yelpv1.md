@@ -1,3 +1,6 @@
+| Yelp V1 | [Yelp home](yelp.md) | [Yelp V2 →](yelpv2.md) |
+|---------|----------------------|-----------------------:|
+
 # Yelp
 
 ### V1 Walkthrough
@@ -31,7 +34,7 @@
         - [Unit testing a model](#unit-testing-a-model)
         - [Adding validations – restaurant name length](#adding-validations--restaurant-name-length)
         - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
-    - [Refactoring using partials](#refactoring-using-partials)
+        - [Adding validations – reviews](#adding-validations---reviews)
     - [Done](#done)
 
 #### Getting started
@@ -329,7 +332,7 @@ class RestaurantsController < ApplicationController
 
 Looks good. Wait... why doesn't this work?
 
-Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:reviews]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
+Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
 
 As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Modify the following line:
 
@@ -396,15 +399,73 @@ $ rake db:migrate
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
 
-#### Putting the 'UD' in CRUD - updating and destroying restaurants
+#### Putting the 'CUD' in CRUD - updating and destroying restaurants
 
 You remember [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), right? That's all Yelp is, at its core. Just a fancy CRUD app.
 
-So far we've got creating restaurants down, but we can't update or delete them.
+So far we've got creating restaurants down, but we can't update or delete them, nor can we really 'read' them (though we can see an index page of them).
+
+##### Reading (showing) restaurants
+
+We want to be able to click on the name of a restaurant and be taken to its individual profile page, just like on the real Yelp.
+
+Let's write a test:
+
+```ruby
+...
+context 'viewing restaurants' do
+
+  before do 
+    @kfc = Restaurant.create(name:'KFC') 
+  end
+
+  it 'lets a user view a restaurant' do
+   visit '/restaurants'
+   click_link 'KFC'
+   expect(page).to have_content 'KFC'
+   expect(current_path).to eq "/restaurants/#{@kfc.id}"
+  end
+
+end
+...
+```
+
+Great: so we're expecting that a user can click on the restaurant's name on the main page and get to the restaurant's profile page (whose path should be a subroot of restaurants with the ID of the restaurant in question). The test should fail – let's walk through the steps needed to make it pass.
+
+First, we need to update the view to show that link.
+
+In the `<% @restaurants.each do |restaurant| %>` loop in `app/views/restaurants/index.html.erb`, add this line (removing the existing `<%= restaurant.name %>`):
+
+```erb
+<%= link_to "#{Restaurant.name}", restaurant_path(restaurant) %>
+```
+
+Now each restaurant should have its name displayed as a clickable link. But we're still missing a 'show' method in the restaurants controller, so let's add one.
+
+`app/controllers/restaurants_controller.rb`:
+
+```ruby
+def show
+  @restaurant = Restaurant.find(params[:id])
+end
+```
+
+This method gets called when you go to `/restaurants/:restaurant_id`, and uses the ID passed in the URL to look up the correct record from the database.
+
+Now all we need is a view for the restaurant show method. Let's make one.
+
+`app/views/restaurants/show.html.erb`:
+
+```erb
+<p><%= @restaurant.description %></p>
+<p><%= @restaurant.rating %></p>
+```
+
+That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
 
 ##### Updating restaurants
 
-Let's tackle updating restaurants first. Let's test:
+Now let's tackle updating restaurants. Testing first:
 
 `spec/features/restaurants_feature_spec.rb`:
 
@@ -656,7 +717,22 @@ redirect_to restaurants_path
 
 Now, once the method is run, Rails will take a user back to the list of restaurants.
 
-Finally, update `restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them.
+Finally, update `app/views/restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.erb`. Use something like this:
+
+```erb
+<h3>Reviews</h3>
+<% if !@restaurant.reviews.any? %>
+  <p>No reviews.</p>
+<% else %>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        <%= review.content %>, <strong><%= review.rating %></strong>/5
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+```
 
 ##### `belongs_to` and dealing with orphan reviews
 
@@ -801,25 +877,28 @@ validates :name, length: {minimum: 3}, uniqueness: true
 
 (RailsGuides has lots of information on the [different validations](http://guides.rubyonrails.org/active_record_validations.html) that are available to you.)
 
-Your tests should now all be passing.
+##### Adding validations – reviews
 
-#### Refactoring using partials
+Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb` model test – this should go in `spec/models`.
 
-A good rule of thumb is that if you do something twice, you should consider refactoring. (If you're doing it three times, *definitely* refactor.)
+```ruby
+require 'rails_helper'
 
-We've used the same form for restaurants twice (in create and edit) – exactly the same code. This is unnecessary duplication, and it also makes life more difficult for us. If we updated our restaurants model – say we wanted it to include an address – then we have two forms to update. If we forgot to do that, things would break.
-
-Much better would be to have the same form abstracted out, and *refer* to it twice. Rails makes this easy with [partials](http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials).
-
-Let's do that now. Create `app/views/restaurants/_form.html.erb` (the prepended '_' indicates this is a partial) and copy and paste the form there.
-
-Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` and `app/views/restaurants/new.html.erb`), remove the form and type this line instead:
-
-```erb
-<%= render "form" %>
+RSpec.describe Review, :type => model do 
+  it "is invalid if the rating is more than 5" do 
+    review = Review.new(rating: 10)
+    expect(review).to have(1).error_on(:rating)
+  end
+end
 ```
 
-So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
+Your test will fail because our review model doesn't stop someone from submitting a rating greater than 5. So in `app/models/review.rb`, add:
+
+```ruby
+validates :rating, inclusion: (1..5)
+```
+
+Your tests should now all be passing.
 
 #### Done
 
