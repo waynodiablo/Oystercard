@@ -338,7 +338,15 @@ Looks good. Wait... why doesn't this work?
 
 Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
 
-As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Modify the following line:
+As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Let's create a utility method that does this for us and add it to our controller:
+
+```ruby
+  def restaurant_params
+    params.require(:restaurant).permit(:name)
+  end
+```
+
+Now replace
 
 ```ruby
 Restaurant.create(params[:restaurant])
@@ -347,7 +355,7 @@ Restaurant.create(params[:restaurant])
 to instead say
 
 ```ruby
-Restaurant.create(params[:restaurant].permit(:name))
+Restaurant.create(restaurant_params)
 ```
 
 which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
@@ -374,7 +382,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(params[:restaurant].permit(:name))
+    @restaurant = Restaurant.create(restaurant_params)
     redirect_to '/restaurants'
   end
 ...
@@ -485,7 +493,7 @@ context 'editing restaurants' do
    visit '/restaurants'
    click_link 'Edit KFC'
    fill_in 'Name', with: 'Kentucky Fried Chicken'
-   click 'Update Restaurant'
+   click_button 'Update Restaurant'
    expect(page).to have_content 'Kentucky Fried Chicken'
    expect(current_path).to eq '/restaurants'
   end
@@ -494,11 +502,11 @@ end
 ...
 ```
 
-(Note the `before` hook which creates a restaurant in the database before running our test.)
+(Note the `before` hook which creates a restaurant in the database before running our test).
 
-Run RSpec, and follow the path it leads you down... Again, a quick good at `rake routes` will show you that Rails has some built-in routes for you to use.
+Run RSpec and follow the path it leads you down... Again, a quick look at `bin/rake routes` will show you that Rails has some built-in routes for you to use.
 
-First, we need an edit link for each restaurant. In `app/views/restaurants/index.html.erb` to the code that loops through each restaurant, add:
+First, we need to add an edit link for each restaurant. In `app/views/restaurants/index.html.erb` add to the code that loops through each restaurant:
 
 ```erb
 <%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
@@ -537,8 +545,8 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
 ```ruby
 ...
   def update
-    @restaurant = Restaurants.find(params[:id])
-    @restaurant.update(params[:restaurants]).permit(:name)
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params)
     redirect_to '/restaurants'
   end
 ...
@@ -556,7 +564,7 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 ...
 
-describe ‘deleting restaurants’ do
+describe 'deleting restaurants' do
 
   before do
     Restaurant.create(:name => "KFC")
@@ -566,7 +574,7 @@ describe ‘deleting restaurants’ do
     visit '/'
     click_link 'Delete KFC'
     expect(page).not_to have_content 'KFC'
-    expect(page).to have_content 'Restaurants deleted successfully'
+    expect(page).to have_content 'Restaurant deleted successfully'
   end
 
 end
@@ -594,10 +602,20 @@ To the restaurants controller, add a destroy method:
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     flash[:notice] = 'Restaurant deleted successfully'
-    redirect_to '/restaurant'
+    redirect_to '/restaurants'
   end
 ...
 ```
+
+Then we need to be able to render our flash message (this is a message that appears for only one request) in the index page
+
+`app/views/restaurants/index.html.erb`:
+
+```ruby
+<% if flash[:notice].present? %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+``
 
 And now our tests pass and we've got all four CRUD methods!
 
@@ -607,7 +625,7 @@ And now our tests pass and we've got all four CRUD methods!
 
 Let's add some reviews for our restaurants.
 
-`app/spec/features/review_spec.rb`:
+`spec/features/reviews_feature_spec.rb`:
 
 ```ruby
 require 'rails_helper'
@@ -635,11 +653,11 @@ Naturally, your test fails. We need to tell our app what reviews are, and how th
 
 ##### Nested routes
 
-First, we need a new route for reviews. Update `routes.rb` to have a nested resource:
+We first need a new route for reviews. Update `routes.rb` to have a nested resource:
 
 ```ruby
-resource :restaurants do
-  resource :reviews
+resources :restaurants do
+  resources :reviews
 end
 ```
 
@@ -672,7 +690,7 @@ Keep following the errors RSpec is giving you. Now we need a view:
   <%= f.text_area :thoughts %>
   <%= f.label :rating %>
   <%= f.select :rating, (1..5) %>
-  <%= f.submit 'Leave review' %>
+  <%= f.submit 'Leave Review' %>
 <% end %>
 ```
 
@@ -687,7 +705,11 @@ Let's add a create method to our reviews controller.
 ```ruby
 def create
   @restaurant = Restaurant.find(params[:restaurant_id])
-  @restaurant.reviews.create(params[:reviews].permit(:thoughts, :rating))
+  @restaurant.reviews.create(review_params)
+end
+
+def review_params
+  params.require(:review).permit(:thoughts, :rating)
 end
 ```
 
@@ -703,7 +725,7 @@ To `app/models/restaurant.rb`, add:
 
 Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
 
-`$ bin/rails g migration AddResturantIdToReviews restaurant:belongs_to`
+`$ bin/rails g migration AddRestaurantIdToReviews restaurant:belongs_to`
 
 `$ bin/rake db:migrate`
 
@@ -711,7 +733,7 @@ This does some Rails magic – it interprets AddRestaurantIdToReviews and parses
 
 Now, if you look at your `schema.rb` you'll see the new association between restaurants and reviews.
 
-RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the `create` method in the reviews model.
+RSpec now gives an error about a missing template for create, so time to create that. Let's add the following line to the end of the `create` method in the reviews controller.
 
 `app/controllers/reviews_controller.rb`:
 
@@ -721,20 +743,21 @@ redirect_to restaurants_path
 
 Now, once the method is run, Rails will take a user back to the list of restaurants.
 
-Finally, update `app/views/restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.erb`. Use something like this:
+Finally, update `app/views/restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.erb`. Use something like this inside of your each loop:
 
 ```erb
-<h3>Reviews</h3>
-<% if !@restaurant.reviews.any? %>
-  <p>No reviews.</p>
-<% else %>
+<h3>Reviews for <%= restaurant.name %></h3>
+
+<% if restaurant.reviews.any? %>
   <ul>
-    <% @restaurant.reviews.each do |review| %>
+    <% restaurant.reviews.each do |review| %>
       <li>
-        <%= review.content %>, <strong><%= review.rating %></strong>/5
+        <%= review.thoughts %>, <strong><%= review.rating %></strong>/5
       </li>
     <% end %>
   </ul>
+<% else %>
+  <p>No reviews.</p>
 <% end %>
 ```
 
@@ -746,7 +769,7 @@ Adding the following line to the `review.rb` model will tie the review to a rest
 belongs_to :restaurant
 ```
 
-But what if the 'parent' restaurant gets deleted? This would lead to reviews without a restaurant associated with them. Awful. So we need to tie the 'destroy' commands of both of these together – if a restaurant is deleted, all its child reviews go as well.
+But what if the 'parent' restaurant gets deleted? This would lead to reviews existing without a restaurant associated with them. Awful. So we need to tie the 'destroy' commands of both of these together – if a restaurant is deleted, all its child reviews go as well.
 
 `app/models/restaurant.rb`:
 
@@ -767,7 +790,7 @@ describe 'creating restaurants' do
 
   context 'an invalid restaurant' do
     it 'does not let you submit a name that is too short' do
-      visit '/restaurant'
+      visit '/restaurants'
       click_link 'Add a restaurant'
       fill_in 'Name', with: 'kf'
       click_button 'Create Restaurant'
@@ -778,7 +801,7 @@ describe 'creating restaurants' do
 ...
 ```
 
-As we haven't got any length limits on restaurant name, the test will fail. Let's fix that – by writing another test, this time for the restaurant model (as distinct from the restaurant feature). Here, we're testing the way that restaurants are actually represented by our code, rather than what the user sees on our website.
+As we haven't got any length limits on restaurant name, the test will fail. Let's fix that – by writing another test, this time for the restaurant model (this is distinct from the restaurant feature spec). Here, we're testing the way that restaurants are actually represented by our code, rather than what the user sees on our website.
 
 ##### Unit testing a model
 
@@ -811,7 +834,7 @@ RSpec.describe Restaurant, :type => :model do
 end
 ```
 
-To get this test to run, you may also need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.
+To get this test to run, you will need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.
 
 ##### Adding validations – restaurant name length
 
@@ -831,8 +854,8 @@ Currently our restaurants controller will save a restaurant passed to its `creat
 
 ```ruby
 def create
-  @restaurant = Restaurant.new(params[:restaurant].permit(:name))
-  if restaurant.save
+  @restaurant = Restaurant.new(restaurant_params)
+  if @restaurant.save
     redirect_to restaurants_path
   else
     render 'new'
@@ -857,13 +880,13 @@ To show an error, let's edit our view. Add this to the top of your `views/restau
 <% end %>
 ```
 
-What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it), those errors are displayed on screen in a `div`, along with a count of how many errors there are.
+What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `div`, along with a count of how many errors there are.
 
 (Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)
 
 ##### Adding validations - restaurant uniqueness
 
-We also don't want to allow users to create the same restaurant twice. So, let's write a test!
+We also don't want to allow users to create the same restaurant twice. So, let's write a test in our restaurant model spec!
 
 ```ruby
 it "is not valid unless it has a unique name" do
@@ -873,7 +896,7 @@ it "is not valid unless it has a unique name" do
 end
 ```
 
-This test fails because we haven't implemented a validation on uniqueness yet. Fix it by updating this line in your restaurants model as follows:
+This test fails because we haven't implemented a validation on uniqueness yet. Fix it by updating this line in your restaurant model as follows:
 
 ```ruby
 validates :name, length: {minimum: 3}, uniqueness: true
