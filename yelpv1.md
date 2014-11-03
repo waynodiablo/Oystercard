@@ -370,7 +370,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(params[:restaurant])
+    @restaurant = Restaurant.create(params[:restaurant])
     redirect_to '/restaurants'
   end
 ...
