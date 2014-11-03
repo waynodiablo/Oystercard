@@ -68,19 +68,19 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 
 Start up the server!
 
-`$ rails server`
+`$ bin/rails server`
 
 or
 
-`$ rails s`
+`$ bin/rails s`
 
 will get you started. (Rails has lots of these little command-line shortcuts.) Now visit http://localhost:3000. Don't worry if you see an error – you'll likely need to run a `rake` task to get your database going, so visit the page and you'll be told which.
 
-`$ rake db:create`
+`$ bin/rake db:create`
 
 If this doesn't work, you may need to run 
 
-`$ rake db:create RAILS_ENV=test`
+`$ bin/rake db:create RAILS_ENV=test`
 
 instead.
 
@@ -95,7 +95,7 @@ gem 'capybara', group: :test
 
 With these, we also want to run this command:
 
-`$ rails generate rspec:install`
+`$ bin/rails generate rspec:install`
 
 This gets RSpec going by creating a `spec` directory and a helper file.
 
@@ -135,9 +135,9 @@ The `config/routes.rb` file has lots of clues as to how to write routes – hav
 resources :restaurants
 ```
 
-##### `rake routes`
+##### `bin/rake routes`
 
-If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
+If you now run `bin/rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
 
 Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
 
@@ -147,7 +147,7 @@ Running `rspec` again, we get another `RoutingError` – this time, there's no 
 
 Controllers are a bit like methods in a Sinatra server file – they contain the 'verbs' that handle incoming requests and do something in response to them.
 
-`$ rails g controller restaurants`
+`$ bin/rails g controller restaurants`
 
 (Here, `g` is short for generate.)
 
@@ -220,7 +220,7 @@ Now we need a Restaurants model to satisfy our failing test.
 
 Models contain all the logic behind the 'nouns' that make up your app. In our case, those are going to be restaurants, reviews, etc. They give those things constraints and tell the app how they should be represented in the database.
 
-`$ rails g model restaurant name:string description:text`
+`$ bin/rails g model restaurant name:string description:text`
 
 This command does a couple of things.
 
@@ -237,7 +237,7 @@ If you make a mistake, you can type the above command but using `rails d` – fo
 
 Then:
 
-`$ rake db:migrate`
+`$ bin/rake db:migrate`
 
 which will run all of your database migrations.
 
@@ -286,7 +286,7 @@ describe 'creating restaurants' do
 end
 ```
 
-The test will fail. We have an 'Add a restaurant' link, but it doesn't go anywhere! Where should we link to? Run `rake routes` if you want a clue...
+The test will fail. We have an 'Add a restaurant' link, but it doesn't go anywhere! Where should we link to? Run `bin/rake routes` if you want a clue...
 
 Let's make a new method in `restaurants_controller.rb` to go alongside our `index` method.
 
@@ -393,8 +393,8 @@ We want to add another column to the table for a description. In Rails, the way 
 Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can roll your database back to a previous state by using those migration files (which provide a record of every change to your data).
 
 ```shell
-$ rails g migration AddDescriptionToRestaurants description:text
-$ rake db:migrate
+$ bin/rails g migration AddDescriptionToRestaurants description:text
+$ bin/rake db:migrate
 ```
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
@@ -639,13 +639,13 @@ resource :restaurants do
 end
 ```
 
-Then, add a link (using Rails' `link_to` helper) to `new_restaurant_review_path` (you can see this path appearing in `rake routes`).
+Then, add a link (using Rails' `link_to` helper) to `new_restaurant_review_path` (you can see this path appearing in `bin/rake routes`).
 
 ##### Add a controller and a model
 
 Now we need a new controller.
 
-`$ rails g controller reviews`
+`$ bin/rails g controller reviews`
 
 In `app/controllers/reviews_controller.rb`, add the 'new' method:
 
@@ -674,7 +674,7 @@ Keep following the errors RSpec is giving you. Now we need a view:
 
 Cool. Now we need a model for reviews – currently they aren't being stored in the database!
 
-`$ rails g model review thoughts:text rating:integer`
+`$ bin/rails g model review thoughts:text rating:integer`
 
 Let's add a create method to our reviews controller.
 
@@ -699,9 +699,9 @@ To `app/models/restaurant.rb`, add:
 
 Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
 
-`$ rails g migration AddResturantIdToReviews restaurant:belongs_to`
+`$ bin/rails g migration AddResturantIdToReviews restaurant:belongs_to`
 
-`$ rake db:migrate`
+`$ bin/rake db:migrate`
 
 This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
 
