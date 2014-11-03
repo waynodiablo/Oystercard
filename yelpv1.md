@@ -566,7 +566,7 @@ describe 'deleting restaurants' do
     visit '/restaurants'
     click_link 'Delete KFC'
     expect(page).not_to have_content 'KFC'
-    expect(page).to have_content 'Restaurants deleted successfully'
+    expect(page).to have_content 'Restaurant deleted successfully'
   end
 
 end
@@ -597,6 +597,13 @@ To the restaurants controller, add a destroy method:
     redirect_to '/restaurants'
   end
 ...
+```
+
+Don't forget to display the `flash[:notice]` in `application.html.erb`, by adding it above `<%= yield %>`
+
+```ruby
+<%= notice %>
+<%= yield %>
 ```
 
 And now our tests pass and we've got all four CRUD methods!
