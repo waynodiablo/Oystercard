@@ -35,11 +35,11 @@ and install it with `bundle install`.
 
 The run the Devise generator:
 
-`$ rails g devise:install`
+`$ bin/rails g devise:install`
 
 (Remember, the `g` is short for `generate`.) Now you're ready to tell Devise to make your User model:
 
-`$ rails g devise User`
+`$ bin/rails g devise User`
 
 And run `$ rake db:migrate` to get that lovely users table added to your database.
 
@@ -155,8 +155,8 @@ Here we'll use Facebook as an example, but you are free to use whatever and as m
 Next up, you should add the columns "provider" (string) and "uid" (string) to your User model. 
 
 ```shell
-$ rails g migration AddColumnsToUsers provider:string uid:string
-$ rake db:migrate
+$ bin/rails g migration AddColumnsToUsers provider:string uid:string
+$ bin/rake db:migrate
 ```
 
 Next, you need to declare the provider in your `config/initializers/devise.rb`:
