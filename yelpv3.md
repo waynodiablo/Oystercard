@@ -637,21 +637,27 @@ and then run `rake db:migrate` to add the new column to your database.
 
 Have a look at `app/views/restaurant/new.html.erb`. Change the first line to the following – this lets you send larger files than normal by using multipart HTML encoding:
 
-`:html => { :multipart => true }`
+```erb
+:html => { :multipart => true }
+```
 
 and then add 
 
-`<%= f.file_field :image %>`
+```erb
+<%= f.file_field :image %>
+```
 
 to your form, which will add a file picker for users to select an image from their local machine and upload it.
 
-Go to your restaurants controller and add `:image` to your `.permit` statement.
+Go to your restaurants controller and add `:image` to your `.permit` statement, to tell Rails that it's okay that users are submitting forms with images.
 
 Now, when a user creates a restaurant and includes an image, it gets saved to the `/public` directory.
 
 In `views/restaurants/index.html.erb`, you now want to include a photo.
 
-`<%= image_tag @restaurant.image.url(:thumb) %>`
+```erb
+<%= image_tag @restaurant.image.url(:thumb) %>
+```
 
 **Now – work out how to test this with Capybara!**
 
