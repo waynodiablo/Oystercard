@@ -17,3 +17,16 @@ Or how about `pluralize`?
 > helper.pluralize(2, 'dog')
 => "2 dogs"
 ```
+
+## Writing your own helpers
+
+Rails has blank helper files set up for you.
+
+Say you have a controller called `Restaurants`. Rails has already created a file for you – `app/helpers/restaurants_helper.rb` – with a module that gets automatically included by the app.
+
+```ruby
+module RestaurantsHelper
+end
+```
+
+You write methods in that module and call them elsewhere. In the [Yelp walkthrough](https://github.com/makersacademy/course/blob/master/yelpv3.md#diy-helper-methods), there's an example of using a helper method to generate star ratings from a number. You can simply call that helper method in the view.
