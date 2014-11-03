@@ -437,7 +437,7 @@ First, we need to update the view to show that link.
 In the `<% @restaurants.each do |restaurant| %>` loop in `app/views/restaurants/index.html.erb`, add this line (removing the existing `<%= restaurant.name %>`):
 
 ```erb
-<%= link_to "#{Restaurant.name}", restaurant_path(restaurant) %>
+<%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
 ```
 
 Now each restaurant should have its name displayed as a clickable link. But we're still missing a 'show' method in the restaurants controller, so let's add one.
