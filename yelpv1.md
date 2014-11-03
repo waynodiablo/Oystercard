@@ -343,7 +343,7 @@ Restaurant.create(params[:restaurant])
 to instead say
 
 ```ruby
-Restaurant.create(params[:restaurant]).permit(:name) 
+Restaurant.create(params[:restaurant].permit(:name))
 ```
 
 which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
