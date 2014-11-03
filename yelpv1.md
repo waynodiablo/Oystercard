@@ -49,19 +49,19 @@ Make a new Rails app:
 
 `$ rails new yelp_clone -d postgresql -T`
 
-* `yelp_clone` is the name of your app – Rails will create this in a new directory. 
+* `yelp_clone` is the name of your app – Rails will create this in a new directory.
 * By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
-* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL. 
+* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL.
 
 ##### Where'd all the files go?
 
 True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
 
 * `app` – **where your code goes**. Contains models, views and controllers.
-* `vendors` – a place for resources that you haven't written but are needed for the project, like JQuery.
+* `vendors` – a place for resources that you haven't written but are needed for the project, like jQuery.
 * `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default.
 * `log` – keeps server logs and terminal output.
-* `config` – configuration information, including `database.yml` which includes database configuration details, a routes file,
+* `config` – configuration information, including `database.yml` which includes database configuration details and a routes file.
 * `bin` – contains your specified version of Rails.
 
 ##### Boot the server
@@ -78,7 +78,7 @@ will get you started. (Rails has lots of these little command-line shortcuts.) N
 
 `$ rake db:create`
 
-If this doesn't work, you may need to run 
+If this doesn't work, you may need to run
 
 `$ rake db:create RAILS_ENV=test`
 
@@ -93,13 +93,17 @@ gem 'rspec-rails', group: :test
 gem 'capybara', group: :test
 ```
 
-With these, we also want to run this command:
+Run bundler to install your gems"
+
+`$ bundle`
+
+Once installed we want to run this command:
 
 `$ rails generate rspec:install`
 
 This gets RSpec going by creating a `spec` directory and a helper file.
 
-In your `spec/rails_helper.rb` file, add the line:
+In your `spec/rails_helper.rb` file, add the below the other require statements:
 
 `require 'capybara/rails'`
 
@@ -137,9 +141,9 @@ resources :restaurants
 
 ##### `rake routes`
 
-If you now run `rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
+If you now run `rake routes` you'll get a list of the different routes created by adding the **restaurants** resource. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
 
-Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast would be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
+Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast it can be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
 
@@ -191,11 +195,11 @@ No restaurants yet!
 <a href='#'>Add a restaurant</a>
 ```
 
-We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same, so now, our test is passing.
+We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same. Now our test is passing.
 
 #### The second test – creating a restaurant on the backend
 
-Add the following to `spec/features/restaurants_feature_spec.rb`:
+Add the following inside the 'restaurants' describe block in `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 ...
@@ -214,26 +218,26 @@ end
 ...
 ```
 
-Now we need a Restaurants model to satisfy our failing test.
+Now we need a Restaurant model to satisfy our failing test.
 
 ##### Models and migrations
 
-Models contain all the logic behind the 'nouns' that make up your app. In our case, those are going to be restaurants, reviews, etc. They give those things constraints and tell the app how they should be represented in the database.
+Models contain all the logic behind the 'nouns' that make up your app. In our case, these are going to be restaurants, reviews, etc. They add constraints to these and tell the app how they should be represented in the database.
 
-`$ rails g model restaurant name:string description:text`
+`$ rails g model restaurant name:string rating:integer`
 
-This command does a couple of things.
+This command does a couple of things:
 
-* creates a new model, which tells the app what a 'restaurant' is and what properties it has
-* creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database
+* creates a new model, which tells the app what a 'restaurant' is and what properties it has.
+* creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database.
 
-Specifically, we're add 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
+Specifically, we've add 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
 
-**Vitally**, that 'restaurant' here is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
+**Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
 
 (Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
 
-If you make a mistake, you can type the above command but using `rails d` – for destroy – to remove the migration.
+If you make a mistake, you can type the above command but using instead `rails d` – for destroy – to remove the migration.
 
 Then:
 
@@ -241,11 +245,11 @@ Then:
 
 which will run all of your database migrations.
 
-(A word on migrations – if you need to change something, **don't edit the schema file it**. If you want to remove database tables or change the schema in any way, instead write another migration that does that.)
+(A word on migrations – if you need to change something, **don't edit the schema file**. If you want to remove database tables or change the schema in any way, instead write another migration that does that).
 
 ##### Rendering restaurants in the view
 
-Now, in `restaurants_controller.rb` we want to get all of those restaurants from the database. Let's add a method for that (*the below replaces the old method*):
+Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's add a method for that (*the method below replaces the old method*):
 
 ```ruby
 def index
@@ -253,7 +257,7 @@ def index
 end
 ```
 
-This creates an instance variable, `@restaurants`, that is accessible by our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
+This creates an instance variable `@restaurants` that is accessible in our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
 
 ```erb
 <% if @restaurants.any? %>
@@ -274,7 +278,7 @@ That last test is all well and good, but it invokes `Restaurant.create` – we s
 `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
-describe 'creating restaurants' do 
+describe 'creating restaurants' do
  it 'prompts user to fill out a form, then displays the new restaurant' do
   visit '/restaurants'
   click_link 'Add a restaurant'
@@ -343,7 +347,7 @@ Restaurant.create(params[:restaurant])
 to instead say
 
 ```ruby
-Restaurant.create(params[:restaurant]).permit(:name) 
+Restaurant.create(params[:restaurant].permit(:name))
 ```
 
 which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
@@ -370,7 +374,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(params[:restaurant])
+    @restaurant = Restaurant.create(params[:restaurant].permit(:name))
     redirect_to '/restaurants'
   end
 ...
@@ -380,11 +384,11 @@ Much better.
 
 #### Adding a description to restaurants – migrations
 
-Currently, our database has a restaurants table with a few columns (much like a sheet in Excel). Let's say it looks something like this:
+Currently, our database has a restaurants table with a few columns (much like a spreadsheet in Excel). Let's say it looks something like this:
 
-Id | Name  
---- | --- 
-1 | KFC 
+Id | Name
+--- | ---
+1 | KFC
 2 | Pret a Manger
 3 | ...
 
@@ -415,8 +419,8 @@ Let's write a test:
 ...
 context 'viewing restaurants' do
 
-  before do 
-    @kfc = Restaurant.create(name:'KFC') 
+  before do
+    @kfc = Restaurant.create(name:'KFC')
   end
 
   it 'lets a user view a restaurant' do
@@ -437,7 +441,7 @@ First, we need to update the view to show that link.
 In the `<% @restaurants.each do |restaurant| %>` loop in `app/views/restaurants/index.html.erb`, add this line (removing the existing `<%= restaurant.name %>`):
 
 ```erb
-<%= link_to "#{Restaurant.name}", restaurant_path(restaurant) %>
+<%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
 ```
 
 Now each restaurant should have its name displayed as a clickable link. But we're still missing a 'show' method in the restaurants controller, so let's add one.
@@ -457,6 +461,7 @@ Now all we need is a view for the restaurant show method. Let's make one.
 `app/views/restaurants/show.html.erb`:
 
 ```erb
+<p><%= @restaurant.name %></p>
 <p><%= @restaurant.description %></p>
 <p><%= @restaurant.rating %></p>
 ```
@@ -473,8 +478,8 @@ Now let's tackle updating restaurants. Testing first:
 ...
 context 'editing restaurants' do
 
-  before do 
-    Restaurant.create(name:'KFC') 
+  before do
+    Restaurant.create(name:'KFC')
   end
 
   it 'lets a user edit a restaurant' do
@@ -579,7 +584,7 @@ If you look at `rake routes`, you'll see a `destroy` route that takes the verb `
 
 Again, `restaurant_path` takes a restaurant as an argument, but here we have to explicitly specify the `delete` method so that Rails knows we want to delete the item.
 
-Running RSpec again will throw a different error – this time that there's a method missing. 
+Running RSpec again will throw a different error – this time that there's a method missing.
 
 To the restaurants controller, add a destroy method:
 
@@ -884,8 +889,8 @@ Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb
 ```ruby
 require 'rails_helper'
 
-RSpec.describe Review, :type => model do 
-  it "is invalid if the rating is more than 5" do 
+RSpec.describe Review, :type => model do
+  it "is invalid if the rating is more than 5" do
     review = Review.new(rating: 10)
     expect(review).to have(1).error_on(:rating)
   end
