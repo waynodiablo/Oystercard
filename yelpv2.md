@@ -33,7 +33,7 @@ gem 'devise'
 
 and install it with `bundle install`.
 
-The run the Devise generator:
+Then run the Devise generator:
 
 `$ bin/rails g devise:install`
 
