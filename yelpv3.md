@@ -45,7 +45,7 @@ We want our restaurants to show their average rating. Test!
 
 ##### Feature and unit tests
 
-To `review_feature_spec.rb`, add the below. Here, we've extracted out the leaving review method.
+To `review_feature_spec.rb`, add the code below. Here, we've extracted out the leaving review method:
 
 ```ruby
 def leave_review(thoughts, rating)
@@ -59,7 +59,7 @@ end
 it 'displays an average rating for all reviews' do
   leave_review('So so', "3")
   leave_review('Great', "5")
-  expect(page).to have_content("Average: 4")
+  expect(page).to have_content("Average rating: 4")
 end
 ```
 
@@ -71,7 +71,7 @@ describe '#average_rating' do
   context 'no reviews' do
     it 'returns "N/A" when there are no reviews' do
       restaurant = Restaurant.create(name: "The Ivy")
-      expect(restaruant.average_rating).to eq 'N/A'
+      expect(restaurant.average_rating).to eq 'N/A'
     end
   end
 end
@@ -173,7 +173,7 @@ Specifically, we can use these two glyphs:
 
 > BLACK STAR (U+2605)
 > ★
-  
+
 > WHITE STAR (U+2606)
 > ☆
 
@@ -203,7 +203,7 @@ First we'll make a test for it - throw together a `helpers` folder in the spec
 folder, and write a new test in a new file called `reviews_helper_spec.rb`.
 
 ```ruby
-require 'rails-helper'
+require 'rails_helper'
 
 describe ReviewsHelper, :type => :helper do
   context "#star_rating" do
@@ -249,7 +249,7 @@ And it's time for another test:
 
 ```ruby
 it "returns three black stars and two white stars for three" do
-  expect(helper.star_rating(5)). to eq '★★★☆☆'
+  expect(helper.star_rating(3)). to eq '★★★☆☆'
 end
 ```
 
@@ -268,8 +268,8 @@ end
 And the final test:
 
 ```ruby
-it "returns three black stars and two white stars for 3.5" do
-  expect(helper.star_rating(3.5)). to eq '★★★☆☆'
+it "returns four black stars and one white star for 3.5" do
+  expect(helper.star_rating(3.5)). to eq '★★★★☆'
 end
 ```
 
@@ -283,7 +283,7 @@ module ReviewsHelper
     # does the rating respond to `round`? If not, just return the rating
     return rating unless rating.respond_to?(:round)
 
-    # if it does – i.e. if it's a valid number - then the rest of the 
+    # if it does – i.e. if it's a valid number - then the rest of the
     # method is run
     remainder = (5 - rating)
     "★" * rating.round + "☆" * remainder
@@ -291,12 +291,11 @@ module ReviewsHelper
 end
 ```
 
-And that should pass those tests. So let's go back to our `index` to get the
-feature test to pass.
+And that should pass those tests. So let's go back to our `index` to get the feature test to pass.
 
 ```erb
 ...
-<%= star_rating(@restaurant.average_rating) %>
+<%= star_rating(restaurant.average_rating) %>
 ...
 ```
 
@@ -318,7 +317,7 @@ require 'rails_helper'
 describe 'endorsing reviews' do
   before do
     kfc = Restaurant.create(name: 'KFC')
-    kfc.reviews.create(rating: 3, content: "It was an abomination")
+    kfc.reviews.create(rating: 3, thoughts: "It was an abomination")
   end
 
   it 'a user can endorse a review, which updates the review endorsement count' do
@@ -326,7 +325,7 @@ describe 'endorsing reviews' do
     click_link 'Endorse KFC'
     expect(page).to have_content('1 endorsement')
   end
-  
+
 end
 ```
 
@@ -334,21 +333,17 @@ end
 
 Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements. We need to think about what kind of relationship endorsements and reviews are going to have before we do this - specifically, each review is going to have many endorsements.
 
-Open up `config/routes.rb`. We want to add a nested resource route to reviews, so change this:
+Open up `config/routes.rb`. We want to add a nested resource route to reviews, so update your routes with the following code:
 
 ```ruby
-resources :reviews
-```
-
-to this:
-
-```ruby
-resources :reviews do
-  resources :endorsements
+resources :restaurants, shallow: true do
+  resources :reviews do
+    resources :endorsements
+  end
 end
 ```
 
-Run `rake routes` to see what this does. You should see the general structure – that endorsements can now be accessed as a sub-root of each restaurant.
+Note that we are using [shallow nesting](http://guides.rubyonrails.org/routing.html#shallow-nesting). Follow that link and have a read about shallow nesting, and see what adding `shallow: true` does to your Rails routes - in short it means we can avoid ever having resources nested more than one level deep in our URL structure.
 
 ##### Creating endorsements controller
 
@@ -396,7 +391,7 @@ We also need to update the Review model to reflect this. Let's open it up and ad
 has_many :endorsements
 ```
 
-Now run 
+Now run
 
 ```shell
 $ bin/rake db:migrate
@@ -412,7 +407,7 @@ We now need to update the view to show each review's endorsements. Have a look i
 <% @restaurant.reviews.each do |review| %>
 ```
 
-So to that block, you want to call the number of endorsements that each review has. Try using something like this:
+In that block you want to call the number of endorsements that each review has. Try using something like this:
 
 ```erb
 <p><%= review.endorsements.count %> endorsements</p>
@@ -525,8 +520,10 @@ Sweet. Now let's actually put some JavaScript in that file.
 $(document).ready(function() {
 
   $('.endorsements-link').on('click', function(event){
-      var endorsementCount = $(this).siblings('.endorsements_count');
       event.preventDefault();
+
+      var endorsementCount = $(this).siblings('.endorsements_count');
+
       $.post(this.href, function(response){
         endorsementCount.text(response.new_endorsement_count);
     })
@@ -551,7 +548,7 @@ And... breathe.
 
 Now we need to tell our controller to serve up JSON objects that our JS on the client side can parse.
 
-`app/controllers/restaurants_controller.rb`:
+`app/controllers/endorsements_controller.rb`:
 
 ```ruby
 class EndorsementsController < ApplicationController
@@ -571,13 +568,13 @@ The `create` method now serves up a JSON which has a single item, `new_endorseme
 
 Now we need to update the view so that the JS has something to actually modify when it gets a JSON from the server.
 
-In `app/views/restaurants/index.html.erb`, add this code, replacing your existing code where appropriate:
+In `app/views/restaurants/index.html.erb`, add this code replacing your existing code where appropriate:
 
 ```erb
 <ul>
   <% restaurant.reviews.each do |review| %>
     <li>
-      <%= review.content %>, <strong><%= review.rating %></strong>/5<em>
+      <%= review.thoughts %>, <strong><%= review.rating %></strong>/5<em>
       <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
         <span class="endorsements_count"> <%= review.endorsements.count %> </span> endorsements
     </li>
@@ -591,7 +588,7 @@ Your tests should now be passing.
 
 #### Refactoring using partials
 
-A good rule of thumb is that if you do something twice, you should consider refactoring. (If you're doing it three times, *definitely* refactor.)
+A good rule of thumb is that if you do something twice, you should consider refactoring (if you're doing it three times, *definitely* refactor).
 
 We've used the same form for restaurants twice (in create and edit) – exactly the same code. This is unnecessary duplication, and it also makes life more difficult for us. If we updated our restaurants model – say we wanted it to include an address – then we have two forms to update. If we forgot to do that, things would break.
 
@@ -669,7 +666,7 @@ Have a look at `app/views/restaurant/new.html.erb`. Change the first line to the
 :html => { :multipart => true }
 ```
 
-and then add 
+and then add
 
 ```erb
 <%= f.file_field :image %>
