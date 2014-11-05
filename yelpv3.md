@@ -430,7 +430,13 @@ We test!
 
 But not so fast. Capybara's default web driver has trouble with JavaScript, so we need something that won't hiccup on this task. In this case, we'll use [Poltergeist](https://github.com/teampoltergeist/poltergeist), which is a headless browser for Capybara based on [PhantomJS](http://phantomjs.org/).
 
-To get this working, we need to add two gems to our Gemfile: `poltergeist` (for the reasons discussed above) and `database_cleaner`, because running Poltergeist means running code outside of our normal test process, so the database otherwise won't be properly cleared between tests as it is currently.
+Since Poltergeist relies on PhantomJS, we'll need to install this ourselves using Homebrew. Run in your terminal:
+
+```shell
+brew install phantomjs
+```
+
+Now to get poltergeist working, we need to add two gems to our Gemfile: `poltergeist` (for the reasons discussed above) and `database_cleaner`, because running Poltergeist means running code outside of our normal test process, so the database otherwise won't be properly cleared between tests as it is currently.
 
 Add these to your `Gemfile`:
 
@@ -448,6 +454,7 @@ In your RSpec helper file, you need to require Poltergeist, and tell Capybara th
 ```ruby
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
+require 'support/database_cleaner'
 ```
 
 In that same file, change this line:
@@ -574,8 +581,8 @@ In `app/views/restaurants/index.html.erb`, add this code replacing your existing
 <ul>
   <% restaurant.reviews.each do |review| %>
     <li>
-      <%= review.thoughts %>, <strong><%= review.rating %></strong>/5<em>
-      <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
+      <%= review.thoughts %> Average rating: <%= star_rating(restaurant.average_rating) %>
+        <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
         <span class="endorsements_count"> <%= review.endorsements.count %> </span> endorsements
     </li>
   <% end %>
