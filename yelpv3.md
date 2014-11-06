@@ -45,7 +45,7 @@ We want our restaurants to show their average rating. Test!
 
 ##### Feature and unit tests
 
-To `review_feature_spec.rb`, add the code below. Here, we've extracted out the leaving review method:
+To `review_feature_spec.rb`, add the code below. If you've done the extra authentication steps in the previous tutorial you may need to add them to your feature specs as you write them.
 
 ```ruby
 def leave_review(thoughts, rating)
@@ -667,10 +667,10 @@ and then run `rake db:migrate` to add the new column to your database.
 
 ##### Adding file uploads
 
-Have a look at `app/views/restaurant/new.html.erb`. Change the first line to the following – this lets you send larger files than normal by using multipart HTML encoding:
+Have a look at `app/views/restaurant/_form.html.erb`. Change the form tag to the following – this lets you send files to the server using your HTML form:
 
 ```erb
-:html => { :multipart => true }
+<%= form_for @restaurant, html: {multipart: true} do |f| %>
 ```
 
 and then add
@@ -681,21 +681,21 @@ and then add
 
 to your form, which will add a file picker for users to select an image from their local machine and upload it.
 
-Go to your restaurants controller and add `:image` to your `.permit` statement, to tell Rails that it's okay that users are submitting forms with images.
+Go to your restaurants controller and add `:image` to your `permit` statement, to tell Rails that it's okay that users are submitting forms with images.
 
 Now, when a user creates a restaurant and includes an image, it gets saved to the `/public` directory.
 
 In `views/restaurants/index.html.erb`, you now want to include a photo.
 
 ```erb
-<%= image_tag @restaurant.image.url(:thumb) %>
+<%= image_tag restaurant.image.url(:thumb) %>
 ```
 
 **Now – work out how to test this with Capybara!**
 
 #### Uploading images to Amazon Web Services S3
 
-So far we've got images being saved straight to your web server – which is okay, and certainly fine for testing, but in practice may not be what you'd do. For example, Heroku has a strict size limit on dynos, which you'll quickly exceed if your site makes it big (which it will, duh). So we want to store images somewhere else.
+So far we've got images being saved straight to your web server – which is okay, and certainly fine for testing, but in practice may not be what you'd do. For example, Heroku has a strict size limit on dynos, which you'll quickly exceed if you upload files directly onto Heroku. So we want to store images somewhere else.
 
 For this, we'll use Amazon Web Services (AWS) **S3**, which stands for **Simple Storage Service**.
 
@@ -736,19 +736,28 @@ config.paperclip_defaults = {
 
 What we're doing here is setting environment variables so we don't have to store our AWS secrets naked in a configuration file – which is checked into version control and visible to the public internet. That would be **a Very Bad Thing**.
 
-Now we need to tell Heroku about those environment variables. (This assumes you've already deployed the app to Heroku; if you haven't, might be time to run `heroku create` and do that.)
+You will need to check your S3 hostname is set correctly if you are on a non-US server
+
+##### Deploying to Heroku
+
+If you're feeling adventurous then you'll now want to put your app up onto Heroku. We warn you may come across some issues when doing this, as you'll need to configure your app to work with Heroku. Here's some hints:
+
+
+* Unfortunately we can't use secrets.yml on Heroku, instead we need to manually tell Heroku about our secret variables, for example in the case of getting AWS working we would do:
 
 ```shell
 $ heroku config:set S3_BUCKET_NAME=your_bucket_name
 $ heroku config:set AWS_ACCESS_KEY_ID=your_access_key_id
 $ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
 ```
+This will set these values to the ENV hash.
 
-You'll also want to set these as local environment variables by adding them to your `~/.bash_profile` or similar.
-
+* You can use gems such as [Figaro](https://github.com/laserlemon/figaro) or [Dotenv](https://github.com/bkeepers/dotenv) to manage your secrets rather than `secrets.yml`
 ##### Deploy
 
 Commit, run `git push heroku master` and watch as your users are able to upload items and have them saved on S3!
+
+However you will still need to find a way to get all of the values in your secrets.yml file working with Heroku which uses ENV variables instead. Remember to be careful not to expose any of your secrets
 
 #### Done
 
