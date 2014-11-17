@@ -23,3 +23,16 @@ While chatting about this subject with a [very astute student](https://github.co
 In this case, you have a function called __eatAtRestaurant__ and as an argument, you pass a second function called __tableForTwoPlease__ which is necessary for __eatAtRestaurant__ to complete successfully. That annoying little thing with the flashing lights is the message sent to the calling function (__eatAtRestaurant__) to let you know that __tableForTwoPlease__ has been processed.
 
 [Video on NodeJS by Spike](https://vimeo.com/110240527)
+
+Resources
+---------
+
+* [Node Patterns](https://github.com/nodebits/distilled-patterns)
+* [Module Patterns](http://darrenderidder.github.io/talks/ModulePatterns/#/)
+* [Interface Design Patterns for Node](http://bites.goodeggs.com/posts/export-this/)
+* [NodeJS Handbook](https://github.com/FredKSchott/NodeJS-Handbook)
+* [JavaScript SOLID Principles](https://www.youtube.com/watch?v=TAVn7s-kO9o)
+* [Single Responsibility (JavaScript)](http://freshbrewedcode.com/derekgreer/2011/12/08/solid-javascript-single-responsibility-principle/)
+* [Open Closed (JavaScript)](http://aspiringcraftsman.com/2011/12/19/solid-javascript-the-openclosed-principle/)
+
+
