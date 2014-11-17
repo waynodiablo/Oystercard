@@ -208,8 +208,9 @@ end
 Check that it all works by running the test (make sure you have required "data_mapper" in server.rb).
 
 `$ rspec`
-Run options: include {:focus=>true}
+
 ```
+Run options: include {:focus=>true}
 All examples were filtered out; ignoring {:focus=>true}
 .
 
