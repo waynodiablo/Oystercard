@@ -55,7 +55,7 @@ $array = array(1,2,3);
 $array[] = 4; // Adds 4 to the array
 ```
 
-2) Kind of like a hash
+2) Kind of like a hash:
 
 ```php
 <?php
@@ -64,7 +64,7 @@ $assoc_array = array('name' => 'PHP', 'weird_quirks' => 23456);
 
 print $assoc_array['name']; // Prints 'PHP'
 
-$assoc_array['author'] = 'Rasmus Lerdorf' // Adds Rasmus Lerdorf to the associative array
+$assoc_array['author'] = 'Rasmus Lerdorf'; // Adds Rasmus Lerdorf to the associative array
 ```
 
 Another gotcha is to remember that in PHP FALSE, NULL, 0, and "" are considered false:
@@ -72,7 +72,7 @@ Another gotcha is to remember that in PHP FALSE, NULL, 0, and "" are considered 
 ```php
 <?php
 
-if ("" == false)
+if ("" == FALSE)
 {
   print "unbelievably this is true";
 }
@@ -86,27 +86,29 @@ At some point OOP was hacked onto PHP. It improved in PHP 5 but is still by no m
 ```php
 <?php
 
-class SimpleClass extends AnotherClass
+class SimpleClass
 {
-    // property declaration
+    // public property declaration
     public $var = 'a default value';
 
+    // private property declaration
     private $construct_var;
 
+    // constructor
     public function __construct($construct_var) {
 
+       // this is like self in Ruby
        $this->construct_var = $construct_var;
-
-       parent::__construct();
-       print "In SubClass constructor\n";
+       print "In constructor\n";
    }
 
-    // method declaration
+    // public method declaration
     public function displayVar() {
         echo $this->var;
         $this->displayPrivate();
     }
 
+    // private method declaration
     private function displayPrivate() {
         echo $this->construct_var;
         echo "Only called within this class";
@@ -119,7 +121,8 @@ We can then instantiate the class by going:
 ```php
 <?php
 
-$object = new SimpleClass();
+$object = new SimpleClass('constructor vars');
+$object->displayVars(); // Prints out the variables
 ```
 
 Can you work out the analogies with Ruby?
