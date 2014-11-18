@@ -36,7 +36,7 @@ And then start our local server in the command line:
 php -S localhost:8000
 ```
 
-If we go to [http://localhost:8000] we should now see an HTML page with PHP embedded in it (PHP is showing us a Unix timestamp). If you refresh the page you should see the number of seconds increase.
+If we go to [http://localhost:8000](http://localhost:8000) we should now see an HTML page with PHP embedded in it (PHP is showing us a Unix timestamp). If you refresh the page you should see the number of seconds increase.
 
 > Note that because anything outside a `<?php ?>` block is considered HTML by the PHP interpreter, we **always** need to add a `<?php` to the beginning of our PHP file when executing PHP code, even if there is no HTML on the page at all
 
