@@ -4,13 +4,14 @@ If PHP is [not the world's greatest language](http://whydoesitsuck.com/why-does-
 
 ## Installing PHP
 
-We can install PHP using [Homebrew](http://brew.sh/). Run these commands in the terminal:
+We can install PHP using [Homebrew](http://brew.sh/). Run these commands in the terminal (the final command installs Composer which is PHP's answer to Bundler):
 
 ```
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
 brew install php56
+brew install composer
 ```
 
 ## Hello World
@@ -131,6 +132,6 @@ Can you work out the analogies with Ruby?
 
 Of course we want to go a bit more advanced than just embedding bits of PHP in the page, and in fact PHP allows us to build an entire MVC application just like we can in Ruby.
 
-For this purpose I recommend you use [Slim](http://www.slimframework.com/), which is pretty similar to Sinatra. We'll also need an ORM: [Laravel](http://laravel.com/) (the equivalent to Rails) has [Eloquent ORM](http://laravel.com/docs/4.2/eloquent) (the equivalent to Active::Record) which is available as a separate package from Composer (equivalent to Bundler).
+For this purpose I recommend you use [Slim](http://www.slimframework.com/), which is pretty similar to Sinatra. We'll also need an ORM: [Laravel](http://laravel.com/) (the equivalent to Rails) has [Eloquent ORM](http://laravel.com/docs/4.2/eloquent) (the equivalent to Active::Record) which is available as a separate package from Composer.
 
-Using [this tutorial](http://www.slimframework.com/news/slim-and-laravel-eloquent-orm) see if you can set up a little MVC app. Note that you should probably switch your driver to `postgres` to avoid having to set up MySQL.
+Using [this tutorial](http://www.slimframework.com/news/slim-and-laravel-eloquent-orm) see if you can set up a little MVC app. Note that you should probably switch your driver to `postgres` to avoid having to set up MySQL. If you're feeling ambitious you could build it BDD-style using [Behat](http://docs.behat.org/en/v2.5/) (equivalent to Cucumber) - it even allows you to use [ZombieJS to do your acceptance testing](http://shashikantjagtap.net/using-zombie-js-driver-with-behats-minkextension/).
