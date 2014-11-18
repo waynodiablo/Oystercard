@@ -24,7 +24,7 @@ PHP at first glance works a bit like ERB, and historically that was how it was a
   </head>
   <body>
     <p>
-      Hello world, in unix time it's: <?php echo time() ?>
+      Hello world, in unix time it is: <?php echo time(); ?>
     </p>
   </body>
 </html>
