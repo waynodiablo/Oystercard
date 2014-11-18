@@ -11,6 +11,7 @@ brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
 brew install php56
+brew install php56-pdo-pgsql
 brew install composer
 ```
 
@@ -134,4 +135,8 @@ Of course we want to go a bit more advanced than just embedding bits of PHP in t
 
 For this purpose I recommend you use [Slim](http://www.slimframework.com/), which is pretty similar to Sinatra. We'll also need an ORM: [Laravel](http://laravel.com/) (the equivalent to Rails) has [Eloquent ORM](http://laravel.com/docs/4.2/eloquent) (the equivalent to Active::Record) which is available as a separate package from Composer.
 
-Using [this tutorial](http://www.slimframework.com/news/slim-and-laravel-eloquent-orm) see if you can set up a little MVC app. Note that you should probably switch your driver to `postgres` to avoid having to set up MySQL. If you're feeling ambitious you could build it BDD-style using [Behat](http://docs.behat.org/en/v2.5/) (equivalent to Cucumber) - it even allows you to use [ZombieJS to do your acceptance testing](http://shashikantjagtap.net/using-zombie-js-driver-with-behats-minkextension/).
+You can follow this video (from xxx) to help you get your app started.
+
+**Watch out for these gotchas:**
+
+* You might get a memory error when installing your composer files, if so run `sudo subl /usr/local/etc/php/5.6/php.ini` and search for memory_limit and change it to **5000M**.
