@@ -1,6 +1,6 @@
 # An introduction to PHP
 
-If [PHP](http://php.net/) is [not the world's greatest language](http://whydoesitsuck.com/why-does-php-suck/) (a fact [even its creator seems to admit](http://talks.php.net/mx14#/8)) it's certainly [the most popular on the web](http://trends.builtwith.com/framework/programming-language) and one worth being aware of, particularly if you plan to work with [WordPress](https://wordpress.com/) (the world's most popular blogging engine), or [Drupal](http://drupal.com/) (the most popular open-source CMS).
+If [PHP](http://php.net/) is [not the world's greatest language](http://whydoesitsuck.com/why-does-php-suck/) (a fact [even its creator seems to admit](http://talks.php.net/mx14#/8)) it's certainly [the most popular on the web](http://trends.builtwith.com/framework/programming-language) and one worth being aware of, particularly if you plan to work with WordPress (the world's most popular blogging engine), or Drupal (the most popular open-source CMS).
 
 ## Installing PHP
 
