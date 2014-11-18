@@ -41,7 +41,7 @@ To prevent this pad from getting very large, let's break it down into sections.
 
 In this project, we'll need to store the data in a database. Before we add any functionality, let's add a relational database to this project.
 
-First you will have to install postgresql (unless you have installed it already). First install PostgreSQL. Postgres is a widely used open source relational database engine.
+Firstly, install PostgreSQL (unless you have installed it already). Postgres is a widely used open source relational database engine.
 
 There are two ways of doing this. Downloading the app (2) will, sometimes, leave you with a non-working postgresql installation. We recommend using option 1.
 
