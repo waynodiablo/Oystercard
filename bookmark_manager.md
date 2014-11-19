@@ -294,7 +294,7 @@ Let's write our first integration test using Capybara first. First, add capybara
 ```ruby
 require 'capybara/rspec'
 
-Capybara.app = Sinatra::Application.new
+Capybara.app = BookmarkManager
 ```
 
 Then, create spec/features folder where our integration tests will be. Create the first test (listing_all_links_spec.rb) that visits the homepage and checks that the link we put in the database is there.
