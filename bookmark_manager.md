@@ -110,7 +110,7 @@ Then, add this code to server.rb.
 
 
 ```ruby
-env = ENV["RACK_ENV"] || "development"
+env = ENV['RACK_ENV'] || 'development'
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
@@ -152,8 +152,8 @@ First, add rspec to the Gemfile.
 ```ruby
 group :development, :test do
   gem "rspec"
- end
- ```
+end
+```
 
 Then, init the rspec files:
 ```ruby
