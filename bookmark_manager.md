@@ -106,7 +106,7 @@ end
 
 This file describes the relationship between the table in the database (they don't exist yet) and this Ruby class. We'll see how it can be used in a minute.
 
-Then, add this code to server.rb.
+Then, add this code to ```server.rb```.
 
 
 ```ruby
@@ -174,7 +174,7 @@ ENV['RACK_ENV'] = 'test' # because we need to know what database to work with
 require 'server'
 ```
 
-Finally, create the spec/link_spec.rb:
+Finally, create the ```spec/link_spec.rb```:
 ```ruby
 require 'spec_helper'
 
@@ -208,7 +208,7 @@ end
 
 ```
 
-Check that it all works by running the test (make sure you have required "data_mapper" in server.rb).
+Check that it all works by running the test (make sure you have ```require 'data_mapper'``` in ```server.rb```).
 
 `$ rspec`
 
@@ -249,7 +249,7 @@ And then we select the database based on the environment.
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 ```
 
-Finally, in our spec_helper we specify the environment, so that our tests were using the right database.
+Finally, in our ```spec_helper.rb``` we specify the environment, so that our tests were using the right database.
 
 ```ruby
 ENV['RACK_ENV'] = 'test'
@@ -260,7 +260,7 @@ https://github.com/makersacademy/bookmark_manager/tree/24321e022f78f1275b77dcdff
 
 ## Cleaning the database
 
-When a test runs, it assumes that the database is empty. The test is not obliged to leave the database clean, though. We need to take care of this ourselves. Add the database_cleaner gem to the Gemfile and install it. Then, require it in the spec_helper and configure RSpec to use it.
+When a test runs, it assumes that the database is empty. The test is not obliged to leave the database clean, though. We need to take care of this ourselves. Add the ```database_cleaner``` gem to the ```Gemfile``` and install it. Then, require it in ```spec_helper.rb``` and configure RSpec to use it.
 ```ruby
 RSpec.configure do |config|
 
@@ -297,7 +297,7 @@ require 'capybara/rspec'
 Capybara.app = BookmarkManager
 ```
 
-Then, create spec/features folder where our integration tests will be. Create the first test (listing_all_links_spec.rb) that visits the homepage and checks that the link we put in the database is there.
+Then, create ```spec/features``` folder where our integration tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
 ```ruby
 require 'spec_helper'
 
@@ -355,7 +355,7 @@ https://github.com/makersacademy/bookmark_manager/tree/7d35ba70c772421e64999eac6
 
 Submitting a new link
 
-So, let's add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, adding_links_spec.rb.
+So, let's add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
 
 ```ruby
 require 'spec_helper'
@@ -555,7 +555,7 @@ https://github.com/makersacademy/bookmark_manager/tree/88dd9bc90041fc02dd5f335ad
 
 ## Filtering by tag
 
-Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag. Let's write a test for this in listing_all_links_spec first.
+Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag. Let's write a test for this in ```listing_all_links_spec.rb``` first.
 
 ```ruby
 scenario "filtered by a tag" do
@@ -617,7 +617,7 @@ We will add the following functionality:
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
 
 Bookmark manager - Adding user accounts - signing up
-Let's begin with a test, as usual. The integration test should go to /spec/features/user_management_spec.rb.
+Let's begin with a test, as usual. The integration test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
 require 'spec_helper'
 
@@ -652,7 +652,7 @@ feature "User signs up" do
 end
 ```
 
-Running the test tells us that we haven't got the User class. Let's create a basic model in /lib/user.rb (where the Link model is).
+Running the test tells us that we haven't got the User class. Let's create a basic model in ```lib/user.rb``` (where the Link model is).
 
 ```ruby
 class User
@@ -675,7 +675,7 @@ attr_reader :description
 
 you will not be able to get the description back from the database.
 
-The next error in our test suite is not having the form to fill in to sign up. That's easy to fix by updating app/server.rb (or just server.rb if you chose to place it in the root folder).
+The next error in our test suite is not having the form to fill in to sign up. That's easy to fix by updating ```app/server.rb``` (or just ```server.rb``` if you chose to place it in the root folder).
 
 ```ruby
 get '/users/new' do
@@ -689,7 +689,7 @@ end
 ```
 
 
-and /views/users/new.erb.
+and ```views/users/new.erb```.
 
 ```html
 
@@ -703,7 +703,7 @@ and /views/users/new.erb.
 
 ```
 
-Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist. Let's fix this in /app/server.rb
+Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist. Let's fix this in ```app/server.rb```.
 
 ```ruby
 post '/users' do
@@ -713,7 +713,7 @@ post '/users' do
 end
 ```
 
-This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails. Let's extend our User class (/lib/user.rb).
+This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails. Let's extend our User class ```lib/user.rb```.
 
 ```ruby
 # bcrypt will generate the password hash
@@ -746,14 +746,15 @@ end
 
 Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in BattleShips – web version).
 
-First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into /server.rb.
+First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into ```server.rb```.
 
 ```ruby
 enable :sessions
 set :session_secret, 'super secret'
 ```
 
-Then, let's save the user id in the session after it's created (/server.rb).
+Then, let's save the user id in the session after it's created:
+```server.rb```.
 
 ```ruby
 post '/users' do
