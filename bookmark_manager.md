@@ -62,7 +62,7 @@ You can check your installation by running
 
 `psql`
 
-At first it can happen that you don't have a database named after your username (you will see a message along the lines "unknown database 'ecomba'"). Let's create that database for you so that you can loging without having to specify the database:
+At first it can happen that you don't have a database named after your username (you will see a message along the lines "unknown database 'ecomba'"). Let's create that database for you so that you can login without having to specify the database:
 
 `psql postgres`
 
