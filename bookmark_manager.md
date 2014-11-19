@@ -479,6 +479,11 @@ class Tag
 
 end
 ```
+and remember to require the file within ```server.rb```:
+
+```ruby
+require 'tag'
+```
 
 Note that we're doing a few things other than creating an empty datamapper model without letting the tests tell us that we need to do it (add the relationship with Link, add the text property). Use your best judgement when choosing how fast to go.
 
