@@ -459,11 +459,15 @@ Let's go back and run the test. We get another error:
 
 Cannot find the child_model Tag for Link in tags (NameError)
 
-It means that the Link model now expect a Tag model to exist but we never defined it.
+The error occurs because we haven't defined a Tag model, which the Link model now expects to exist.
 
-Before we do it, let's discuss the process we're going through. We have written a test that describes the functionality we want to see. Then we ran it and it highlighted a problem (no tags associated to a link). We fixed just that problem, no more, no less. We didn't create the Tag class straight away. Then we ran the test again and it told us that we didn't have the model Tag. This is when we decided to create the model Tag to get past this particular error. We'll be repeating this process several times over.
+Before adding the Tag model, let's review the process we're going through. We have written a test that describes the functionality we want to see. We then ran the test and it highlighted a problem - no tags associated to a link. We then fixed that problem specifically. As we didn't create the Tag class straight away, we ran the test again and it told us that we didn't have the Tag model. We then know we need to create a Tag model to overcome the error.
 
-This is what is called test-driven development. You shouldn't merely have tests, they should drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example, if there were no tags linked to the Link model it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go. There isn't a one rule fits all approach. However, if you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
+We'll be repeating this process several times over.
+
+This is the fundamental concept of test-driven development. You shouldn't merely have tests, instead they should actually drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example if there were no tags linked to the Link model, it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go. 
+
+There isn't a one rule fits all approach. If you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
 
 So, let's create the Tag model that also has a many-to-many relationship to Link.
 
