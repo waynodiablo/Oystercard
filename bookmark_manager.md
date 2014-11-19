@@ -144,9 +144,9 @@ Finally, type
 `\q`
 to exit psql.
 
-Now we have everything we need to use datamapper in our code. Let's see how we could do it by writin an rspec test.
+Now we have everything we need to use datamapper in our code. Let's see how we could do it by writing an rspec test.
 
-RSpec demonstration
+**RSpec demonstration**
 
 First, add rspec to the Gemfile.
 ```ruby
