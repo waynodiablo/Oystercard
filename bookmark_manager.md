@@ -111,6 +111,7 @@ Then, add this code to server.rb.
 
 ```ruby
 env = ENV['RACK_ENV'] || 'development'
+require 'data_mapper'
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
@@ -150,8 +151,8 @@ Now we have everything we need to use datamapper in our code. Let's see how we c
 
 First, add rspec to the Gemfile.
 ```ruby
-group :development, :test do
-  gem "rspec"
+group :test do
+  gem 'rspec'
 end
 ```
 
@@ -162,7 +163,7 @@ rspec --init
 Add this on top of spec/spec_helper:
 ```ruby
 # Remember environment variables from week 1?
-ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
+ENV['RACK_ENV'] = 'test' # because we need to know what database to work with
 
 # this needs to be after ENV["RACK_ENV"] = 'test'
 # because the server needs to know
@@ -177,22 +178,22 @@ require 'spec_helper'
 
 describe Link do
 
-  context "Demonstration of how datamapper works" do
+  context 'Demonstration of how datamapper works' do
 
     # This is not a real test, it's simply a demo of how it works
     it 'should be created and then retrieved from the db' do
       # In the beginning our database is empty, so there are no links
       expect(Link.count).to eq(0)
       # this creates it in the database, so it's stored on the disk
-      Link.create(:title => "Makers Academy",
-                  :url => "http://www.makersacademy.com/")
+      Link.create(title: 'Makers Academy',
+                  url: 'http://www.makersacademy.com/')
       # We ask the database how many links we have, it should be 1
       expect(Link.count).to eq(1)
       # Let's get the first (and only) link from the database
       link = Link.first
       # Now it has all properties that it was saved with.
-      expect(link.url).to eq("http://www.makersacademy.com/")
-      expect(link.title).to eq("Makers Academy")
+      expect(link.url).to eq('http://www.makersacademy.com/')
+      expect(link.title).to eq('Makers Academy')
       # If we want to, we can destroy it
       link.destroy
       # so now we have no links in the database
