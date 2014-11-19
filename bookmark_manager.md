@@ -110,8 +110,10 @@ Then, add this code to server.rb.
 
 
 ```ruby
-env = ENV['RACK_ENV'] || 'development'
 require 'data_mapper'
+
+env = ENV['RACK_ENV'] || 'development'
+
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
@@ -238,7 +240,7 @@ So, getting back to the databases: we don't want to use the same database in dif
 That is why we are checking what environment we're in, defaulting to development.
 
 ```ruby
-env = ENV["RACK_ENV"] || "development"
+env = ENV['RACK_ENV'] || 'development'
 ```
 
 And then we select the database based on the environment.
@@ -250,7 +252,7 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 Finally, in our spec_helper we specify the environment, so that our tests were using the right database.
 
 ```ruby
-ENV["RACK_ENV"] = 'test'
+ENV['RACK_ENV'] = 'test'
 ```
 
 Current state is on Github.
