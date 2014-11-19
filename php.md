@@ -46,6 +46,8 @@ If we go to [http://localhost:8000](http://localhost:8000) we should now see an 
 
 PHP is a bit like JavaScript in that it uses curly braces and semi-colons. It's a bit of a mess in other respects however. Fortunately, the PHP manual is pretty good at explaining things. You can read the [manual's language reference](http://php.net/manual/en/langref.php) here or if you want a quick guide this [reference sheet](http://www.dreamincode.net/downloads/ref_sheets/php_reference_sheet.pdf) is pretty useful.
 
+> You can mess around with PHP in the console by running the command `php -a`
+
 One thing to note is that although PHP's arrays are pretty familiar, rather than have hashes like Ruby PHP has "associative arrays". This means we can use arrays in two ways:
 
 1) Like we normally would in Ruby:
