@@ -1353,6 +1353,9 @@ We will now need to display the Sign Out button that the test expects. The layou
 ```
 The form sends a POST request to /sessions but it also includes a hidden field _method (note the underscore) with value "delete". The reason is that the common convention for a url that destroys a resource is sending a DELETE request to /resource_url. However, modern browsers are unable to send any requests other than GET or POST when the form is being submitted. A common solution to this problem, used by both Sinatra and Ruby on Rails, is to include a hidden field called _method that will override the actual type of request. So, when Sinatra receives this request, it will behave as if it were a DELETE request and not a POST request. Therefore, the handler for this form needs to specify "delete" as an HTTP verb:
 
+You need to add this line to the Sinatra server
+
+```use Rack::MethodOverride```
 
 Finally, let's add support for flash[:notice] in our layout.
 ```html
