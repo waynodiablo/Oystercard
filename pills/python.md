@@ -1,6 +1,8 @@
 Python
 ======
 <p align="center">
+Talk on Python
+<br/><br/>
 [![Python Talk][2]][1]
 <p>
 
