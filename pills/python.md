@@ -1,7 +1,13 @@
 Python
 ======
+<p align="center">
+[![Python Talk][2]][1]
+<p>
 
-[Python Talk by Sam](https://www.youtube.com/watch?v=jwgqY_IcrJg)
+
+  [1]: https://www.youtube.com/watch?v=jwgqY_IcrJg
+  [2]: https://i.ytimg.com/vi/jwgqY_IcrJg/hqdefault.jpg?time=1416606788295
+
 
 Resources
 ------
