@@ -2,8 +2,8 @@ Python
 ======
 <p align="center">
 [![Python Talk][2]][1]
-<br/><br/>
-Introduction to Python
+<br/>
+Introduction to Python (44mins)
 <p>
 
 
