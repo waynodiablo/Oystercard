@@ -465,6 +465,13 @@ and then throw some numbers at it:
 
 Here endeth the lesson. Hope you had as much fun as I did - enjoy Javascript and go make something cool! <3
 
+### External Resources
+
+In addition to the 5 JavaScript and JQuery pills we have supplied for you in the course materials, you will also find the following external resources helpful:
+
+* [Codecademy - Javascript Track](http://www.codecademy.com/tracks/javascript) - They also have a JQuery track that is worth working through.
+* [JavaScript for Cats](http://jsforcats.com/) - An introduction for new Programmers.
+* [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript) - An Awesome repository of JavaScript resources.
 
 
 
