@@ -760,7 +760,7 @@ Then, let's save the user id in the session after it's created:
 post '/users' do
   user = User.create(:email => params[:email],
                      :password => params[:password])
-  session[:user_id] = user.id
+  session[:user_id] = User.id
   redirect to('/')
 end
 
