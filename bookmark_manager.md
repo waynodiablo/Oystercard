@@ -799,7 +799,7 @@ https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd
 
 ### Bookmark manager - Adding user accounts - Password confirmation
 
-Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by adding a test for this.
+Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
 ```ruby
   scenario "with a password that doesn't match" do
     expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
@@ -816,8 +816,11 @@ Now a user can register on our website but it would be nice to ask for password 
   end
 
 ```
+The test passes a different value for ```password``` and ```password_confirmation``` and then expects the user registration to be rejected because of the differing password values.
 
-So we pass a non-matching password and we expect the user to not be created. Modify the erb template accordingly and then add the virtual attributes to the User model.
+The following files also need to be updated with the change:
+*```server.rb```
+*```user/new/erb```
 
 ```ruby
 attr_reader :password
@@ -829,7 +832,6 @@ attr_accessor :password_confirmation
 # read more about it in the documentation
 # http://datamapper.org/docs/validations.html
 validates_confirmation_of :password
-
 ```
 
 The reason we need the reader for :password and :password_confirmation is that datamapper should have access to both values to make sure they are the same.
