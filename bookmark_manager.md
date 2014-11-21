@@ -9,7 +9,7 @@ This week's project is a bookmark manager. The goal is to expose you to the foll
 * Relational databases (Tuesday and Wednesday)
 * Security considerations (Thursday)
 
-In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to BattleShip– web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
+In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Battleships – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
 ## High-level specification
 
@@ -41,7 +41,7 @@ To prevent this pad from getting very large, let's break it down into sections.
 
 In this project, we'll need to store the data in a database. Before we add any functionality, let's add a relational database to this project.
 
-First you will have to install postgresql (unless you have installed it already). First install PostgreSQL. Postgres is a widely used open source relational database engine.
+Firstly, install PostgreSQL (unless you have installed it already). Postgres is a widely used open source relational database engine.
 
 There are two ways of doing this. Downloading the app (2) will, sometimes, leave you with a non-working postgresql installation. We recommend using option 1.
 
@@ -62,7 +62,7 @@ You can check your installation by running
 
 `psql`
 
-At first it can happen that you don't have a database named after your username (you will see a messags along the lines 'unknown database "ecomba"). Let's create that database for you so that you can login without having to specify the database:
+At first it can happen that you don't have a database named after your username (you will see a message along the lines "unknown database 'ecomba'"). Let's create that database for you so that you can login without having to specify the database:
 
 `psql postgres`
 
@@ -110,7 +110,10 @@ Then, add this code to server.rb.
 
 
 ```ruby
-env = ENV["RACK_ENV"] || "development"
+require 'data_mapper'
+
+env = ENV['RACK_ENV'] || 'development'
+
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
@@ -144,16 +147,16 @@ Finally, type
 `\q`
 to exit psql.
 
-Now we have everything we need to use datamapper in our code. Let's see how we could do it by writin an rspec test.
+Now we have everything we need to use datamapper in our code. Let's see how we could do it by writing an rspec test.
 
-RSpec demonstration
+**RSpec demonstration**
 
 First, add rspec to the Gemfile.
 ```ruby
-group :development, :test do
-  gem "rspec"
- end
- ```
+group :test do
+  gem 'rspec'
+end
+```
 
 Then, init the rspec files:
 ```ruby
@@ -162,7 +165,7 @@ rspec --init
 Add this on top of spec/spec_helper:
 ```ruby
 # Remember environment variables from week 1?
-ENV["RACK_ENV"] = 'test' # because we need to know what database to work with
+ENV['RACK_ENV'] = 'test' # because we need to know what database to work with
 
 # this needs to be after ENV["RACK_ENV"] = 'test'
 # because the server needs to know
@@ -177,22 +180,22 @@ require 'spec_helper'
 
 describe Link do
 
-  context "Demonstration of how datamapper works" do
+  context 'Demonstration of how datamapper works' do
 
     # This is not a real test, it's simply a demo of how it works
     it 'should be created and then retrieved from the db' do
       # In the beginning our database is empty, so there are no links
       expect(Link.count).to eq(0)
       # this creates it in the database, so it's stored on the disk
-      Link.create(:title => "Makers Academy",
-                  :url => "http://www.makersacademy.com/")
+      Link.create(title: 'Makers Academy',
+                  url: 'http://www.makersacademy.com/')
       # We ask the database how many links we have, it should be 1
       expect(Link.count).to eq(1)
       # Let's get the first (and only) link from the database
       link = Link.first
       # Now it has all properties that it was saved with.
-      expect(link.url).to eq("http://www.makersacademy.com/")
-      expect(link.title).to eq("Makers Academy")
+      expect(link.url).to eq('http://www.makersacademy.com/')
+      expect(link.title).to eq('Makers Academy')
       # If we want to, we can destroy it
       link.destroy
       # so now we have no links in the database
@@ -208,8 +211,9 @@ end
 Check that it all works by running the test (make sure you have required "data_mapper" in server.rb).
 
 `$ rspec`
-Run options: include {:focus=>true}
+
 ```
+Run options: include {:focus=>true}
 All examples were filtered out; ignoring {:focus=>true}
 .
 
@@ -236,7 +240,7 @@ So, getting back to the databases: we don't want to use the same database in dif
 That is why we are checking what environment we're in, defaulting to development.
 
 ```ruby
-env = ENV["RACK_ENV"] || "development"
+env = ENV['RACK_ENV'] || 'development'
 ```
 
 And then we select the database based on the environment.
@@ -248,7 +252,7 @@ DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 Finally, in our spec_helper we specify the environment, so that our tests were using the right database.
 
 ```ruby
-ENV["RACK_ENV"] = 'test'
+ENV['RACK_ENV'] = 'test'
 ```
 
 Current state is on Github.
@@ -290,7 +294,7 @@ Let's write our first integration test using Capybara first. First, add capybara
 ```ruby
 require 'capybara/rspec'
 
-Capybara.app = Sinatra::Application.new
+Capybara.app = BookmarkManager
 ```
 
 Then, create spec/features folder where our integration tests will be. Create the first test (listing_all_links_spec.rb) that visits the homepage and checks that the link we put in the database is there.
@@ -455,11 +459,15 @@ Let's go back and run the test. We get another error:
 
 Cannot find the child_model Tag for Link in tags (NameError)
 
-It means that the Link model now expect a Tag model to exist but we never defined it.
+The error occurs because we haven't defined a Tag model, which the Link model now expects to exist.
 
-Before we do it, let's discuss the process we're going through. We have written a test that describes the functionality we want to see. Then we ran it and it highlighted a problem (no tags associated to a link). We fixed just that problem, no more, no less. We didn't create the Tag class straight away. Then we ran the test again and it told us that we didn't have the model Tag. This is when we decided to create the model Tag to get past this particular error. We'll be repeating this process several times over.
+Before adding the Tag model, let's review the process we're going through. We have written a test that describes the functionality we want to see. We then ran the test and it highlighted a problem - no tags associated to a link. We then fixed that problem specifically. As we didn't create the Tag class straight away, we ran the test again and it told us that we didn't have the Tag model. We then know we need to create a Tag model to overcome the error.
 
-This is what is called test-driven development. You shouldn't merely have tests, they should drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example, if there were no tags linked to the Link model it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go. There isn't a one rule fits all approach. However, if you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
+We'll be repeating this process several times over.
+
+This is the fundamental concept of test-driven development. You shouldn't merely have tests, instead they should actually drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example if there were no tags linked to the Link model, it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go. 
+
+There isn't a one rule fits all approach. If you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
 
 So, let's create the Tag model that also has a many-to-many relationship to Link.
 
@@ -474,6 +482,11 @@ class Tag
   property :text, String
 
 end
+```
+and remember to require the file within ```server.rb```:
+
+```ruby
+require 'tag'
 ```
 
 Note that we're doing a few things other than creating an empty datamapper model without letting the tests tell us that we need to do it (add the relationship with Link, add the text property). Use your best judgement when choosing how fast to go.
@@ -731,7 +744,7 @@ end
 
 ```
 
-Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in BattleShips – web version).
+Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in Battleships – web version).
 
 First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into /server.rb.
 
