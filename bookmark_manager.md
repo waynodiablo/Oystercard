@@ -9,7 +9,7 @@ This week's project is a bookmark manager. The goal is to expose you to the foll
 * Relational databases (Tuesday and Wednesday)
 * Security considerations (Thursday)
 
-In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to BattleShip– web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
+In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Battleships – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
 ## High-level specification
 
@@ -731,7 +731,7 @@ end
 
 ```
 
-Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in BattleShips – web version).
+Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in Battleships – web version).
 
 First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into /server.rb.
 
