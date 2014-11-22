@@ -253,7 +253,7 @@ describe('Javabuzz', function() {
 
     it('divisible by 3', function() {
       javabuzz = new Javabuzz();
-      expect(isDivisibleByThree(3)).toEqual(true);
+      expect(isDivisibleByThree(3)).toBe(true);
     });
 
   });
@@ -323,13 +323,13 @@ However, our test, is still failing, despite everything in our Fizzbuzz career t
 Well, the problem lies in our spec file. Take a look at that expectation again:
 
 ```javascript
-expect(isDivisibleByThree(3)).toEqual(true);
+expect(isDivisibleByThree(3)).toBe(true);
 ```
 
 Javascript needs us to be more specific. It needs to know exactly what `isDivisibleByThree(3)` refers to. So let's help it out. Since 'isDivisibleByThree' is a method of our javabuzz instance, let's do some Ruby-style dot notation:
 
 ```javascript
-expect(javabuzz.isDivisibleByThree(3)).toEqual(true);
+expect(javabuzz.isDivisibleByThree(3)).toBe(true);
 ```
 
 Now there can be no doubt that we mean **this particular method** belongs to **that particular class!**
