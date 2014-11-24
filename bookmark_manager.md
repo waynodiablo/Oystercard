@@ -753,17 +753,15 @@ enable :sessions
 set :session_secret, 'super secret'
 ```
 
-Then, let's save the user id in the session after it's created:
-```server.rb```.
+Then, let's save the user id in the session after it's created within ```server.rb```:
 
 ```ruby
 post '/users' do
   user = User.create(:email => params[:email],
                      :password => params[:password])
-  session[:user_id] = User.id
+  session[:user_id] = user.id
   redirect to('/')
 end
-
 ```
 
 Then, let's create a helper that will give us access to the current user, if logged in (server.rb).
@@ -960,10 +958,11 @@ get '/users/new' do
 end
 
 ```
-
 An new instance of the user will simply return nil for @user.email.
 
-Finally, let's display a flash message, notifying the user of the error. Add the rack-flash3 gem as described in BattleShip – web version and set the flash before the view is re-rendered.
+Finally, let's display a flash message at the top of the page which notifies the user of the error.
+
+Begin by adding ```rack-flash3``` to the ```Gemfile```. Now add the flash line to ```server.rb```:
 
 ```ruby
 
@@ -976,7 +975,7 @@ else
 end
 ```
 
-Finally, display it in the layout.erb.
+Finally, add the following code to ```layout.erb``` allow the flash message to appear on the page.
 
 ```ruby
 <% if flash[:notice] %>
