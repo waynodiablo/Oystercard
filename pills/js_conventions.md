@@ -1,6 +1,6 @@
 # JavaScript conventions
 
-Each language has it's own unique set of coding conventions. Ignoring conventions won't stop your code working, but it may make your code less easy to understand, and different developers using different conventions can lead to a messy codebase.
+Each language has its own unique set of coding conventions. Ignoring conventions won't stop your code working, but it may make your code less easy to understand, and different developers using different conventions can lead to a messy codebase.
 
 Some conventions are different between JavaScript and Ruby, while others will be familiar.
 
