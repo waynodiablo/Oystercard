@@ -35,5 +35,6 @@ Resources
 * [Single Responsibility (JavaScript)](http://freshbrewedcode.com/derekgreer/2011/12/08/solid-javascript-single-responsibility-principle/)
 * [Open Closed (JavaScript)](http://aspiringcraftsman.com/2011/12/19/solid-javascript-the-openclosed-principle/)
 * [Leo's Test-Driven Chat Site](https://github.com/pitchinvasion/node-mocha)
+* [OS node project: ShareLatex](https://github.com/sharelatex/web-sharelatex)
 
 
