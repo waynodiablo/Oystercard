@@ -107,7 +107,7 @@ be declared:
 ```java
 int aNumber = 1;
 boolean isNumber = true;
-Calculator pocketCalculator = new Calculator;
+Calculator pocketCalculator = new Calculator();
 ```
 
 (That's how to make a new instance of a class by the way.)
