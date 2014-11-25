@@ -100,6 +100,10 @@ A free online book. I wouldn't recommend reading cover-to-cover, just skim throu
 
 * http://eloquentjavascript.net/contents.html
 
+#### Douglas Crockford Lectures on JavaScript
+
+* [Crockford on JavaScript](http://yuiblog.com/crockford/)
+
 ### Jasmine
 
 * http://jasmine.github.io/2.0/introduction.html
