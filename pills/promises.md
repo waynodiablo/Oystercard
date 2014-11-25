@@ -1,7 +1,40 @@
 JavaScript Promises
 ===================
 
-Promises are a technique for ensuring that certain actions will not execute in JavaScript unless certain conditions have been fulfilled.  It might seem like this can already be achieved in JavaScript since once can check for whether images have completed loading with the 'complete' property, and the ability to add event listeners.  The problem is that this might miss images that already error'd before we had the chance to actually add an event listener, and it gets particularly complicated for multiple image download.  Promises are intended to provide a general framework for ensuring that the results of any asynchronous action (such as image downloading) can be handled effectively, at the the time they complete. 
+Promises are a technique for ensuring that certain actions will not execute in JavaScript unless certain conditions have been fulfilled.  It might seem like this can already be achieved in JavaScript since once can check for whether images have completed loading with the 'complete' property, and the ability to add event listeners.  The problem is that this might miss images that already errored before we had the chance to actually add an event listener, and it gets particularly complicated for multiple image download.  Promises are intended to provide a general framework for ensuring that the results of any asynchronous action (such as image downloading) can be handled effectively, at the the time they complete. 
+
+## Promises in jQuery
+
+You may have already come across Promises in jQuery. Compare this style of dealing with callbacks from an ajax request:
+
+```javascript
+var jqxhr = $.ajax({
+  success: function(){
+    alert("success");
+  },
+  error: function() {
+    alert("error");
+  }
+});
+```
+
+With the (now recommended) way of handling callbacks in jQuery.
+
+```javascript
+// Assign handlers immediately after making the request,
+// and remember the jqXHR object for this request
+var jqxhr = $.ajax( "example.json" )
+  .done(function() {
+    alert("success");
+  })
+  .fail(function() {
+    alert("error");
+  });
+```
+
+We can do this because our call to `$.ajax` returns [jQuery's version of a **Promise** object](http://api.jquery.com/category/deferred-object/), which gives us the `done` method that is called on success and `fail` when there was an error in the request.
+
+## ECMA 6 Promises
 
 Promises have been available in JavaScript in the form of libraries for some time, and are now making their way into core JavaScript.  Promises operate by providing a 'then' function that allows us to specify the precise actions that will be taken when an asynchronous operation either completes or fails.  For example (code from the [HTML5 Rocks Article on Promises](http://www.html5rocks.com/en/tutorials/es6/promises)):
 
