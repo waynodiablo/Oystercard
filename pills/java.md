@@ -1,7 +1,7 @@
 Java
 ====
 
-Java derives much of its syntax from the [C] and [C++] family of programming
+Java derives much of its syntax from the [C] and family of programming
 languages - the closest you will have seen to the overall look of Java is its
 namesake [JavaScript], but the similarity is at the surface level; the two
 languages are quite different.
@@ -11,8 +11,12 @@ languages are quite different.
 The first difference you will notice is that Java is compiled. Unlike Ruby
 and JS, files writen in Java (conventionally saved with the extension `.java`).
 cannot be run directly by your computer. Instead they are changed by another
-program - the compiler - into files which can be run by [the Java Virtual
-Machine] - files with the extension `.class`.
+program - the compiler - into files which can be run by the Java Virtual
+Machine (JVM) - files with the extension `.class`. The JVM runs Java programs
+extremely quickly and has been implemented in almost all operating systems.
+This speed and prevalence has made the JVM a popular target for other
+programming languages, including [Clojure], [Scala], and even [jRuby], an
+implementation of Ruby for the JVM.
 
 Let's take a look at this in action. First of all you'll need to make sure you
 have Java installed on your computer. All Macs will come with Java by default,
@@ -175,7 +179,7 @@ extensive and thorough Gradle documentation for more information.
 
 Even with the help of a relatively simple package manager like Gradle, Java can
 be a terrible beast to master. Professional Java developers tend to steer clear
-of pure text editors like [Vi] and [Sublime] in favour of using an [IDE] - an
+of pure text editors like [Vim] and [Sublime] in favour of using an [IDE] - an
 integrated development environment. These programs take care of the
 boilerplate in Java, constantly compile your code in the background to pick up
 errors on as you're typing, organize your project directory structure, help you
@@ -185,21 +189,29 @@ in the background, a good IDE will help you write good code faster.
 
 Take a look at [IntelliJ IDEA]'s community version (recommended) or [Eclipse].
 Both tools are fairly daunting to begin with, but experiment with starting
-a project one or the other.
+a project in one or the other and writing your code with them. There are many
+tutorials available.
 
 ###Further Reading
 
 The [Java Tutorials] are an excellent and free source of materials about Java,
-along with the [Java reference pages]
+especially the first track on [Learning the Java Language], along with the
+[Java reference pages]
 
-
-[primitives]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
-[jUnit]: http://junit.org/
 [annotation]: https://docs.oracle.com/javase/tutorial/java/annotations/index.html
+[C]: http://en.wikipedia.org/wiki/C_%28programming_language%29
+[Clojure]: http://clojure.org/
+[Eclipse]: https://eclipse.org/
+[Gradle]: http://www.gradle.org/
+[Groovy]: http://groovy.codehaus.org/
 [IDE]: http://en.wikipedia.org/wiki/Integrated_development_environment
 [IntelliJ IDEA]: https://www.jetbrains.com/idea/
-[Eclipse]: https://eclipse.org/
-[Groovy]: http://groovy.codehaus.org/
-[Gradle]: http://www.gradle.org/
-[Java Tutorials]: https://docs.oracle.com/javase/tutorial/index.html
 [Java reference pages]: https://docs.oracle.com/javase/8/
+[Java Tutorials]: https://docs.oracle.com/javase/tutorial/index.html
+[jRuby]: http://jruby.org/
+[jUnit]: http://junit.org/
+[Learning the Java Language]: https://docs.oracle.com/javase/tutorial/java/index.html
+[primitives]: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+[Scala]: http://www.scala-lang.org/
+[Sublime]: http://www.sublimetext.com/
+[Vim]: http://en.wikipedia.org/wiki/Vim_(text_editor)
