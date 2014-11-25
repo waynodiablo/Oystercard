@@ -85,8 +85,11 @@ git push heroku master
 
 ## Related Walkthroughs
 
-* https://github.com/makersacademy/Walkthroughs/blob/master/javascript_intro.md
-* https://github.com/makersacademy/Walkthroughs/blob/master/more_javascript.md
+* Part 1: JavaScript and Jasmine
+  * [JavaScript Intro](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_intro.md)
+  * [More JavaScript](https://github.com/makersacademy/Walkthroughs/blob/master/more_javascript.md)
+* Part 2: JQuery
+* Part 3: JS Templating
 
 ## Related Pills
 
