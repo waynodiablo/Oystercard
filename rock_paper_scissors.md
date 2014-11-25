@@ -83,6 +83,19 @@ heroku create myrpsapp
 git push heroku master
 ~~~
 
+## Related Walkthroughs
+
+* https://github.com/makersacademy/Walkthroughs/blob/master/javascript_intro.md
+* https://github.com/makersacademy/Walkthroughs/blob/master/more_javascript.md
+
+## Related Pills
+
+* https://github.com/makersacademy/course/blob/master/pills/javascript%26JasminePill.md
+* https://github.com/makersacademy/course/blob/master/pills/jquery_events.md
+* https://github.com/makersacademy/course/blob/master/pills/js_arrays.md
+* https://github.com/makersacademy/course/blob/master/pills/js_conventions.md
+* https://github.com/makersacademy/course/blob/master/pills/js_functions.md
+
 ## Resources
 
 ### JavaScript
