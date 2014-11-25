@@ -102,6 +102,8 @@ A free online book. I wouldn't recommend reading cover-to-cover, just skim throu
 
 #### Douglas Crockford Lectures on JavaScript
 
+These are starting to be a little dated, but they are awesome!  And they contain a lot of computer science history that you really should know.  They are not a great 'introduction' for novices, but once you've spent a few days coding in JavaScript they might make good sense.
+
 * [Crockford on JavaScript](http://yuiblog.com/crockford/)
 
 ### Jasmine
