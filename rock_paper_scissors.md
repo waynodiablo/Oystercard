@@ -1,3 +1,10 @@
+Rock Paper Scissors Lizard Spock in JavaScript on Heroku
+======================================================
+
+This project involves implementing the Rock Paper Scissors Lizard Spock game in client side JavaScript and deploying it to Heroku so that anyone in the world can play it.
+
+[Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.] 
+
 ## Version 1 - Ruby -> JavaScript
 
 For the initial version of Rock-Paper-Scissors, take our existing Ruby code and Jasmine specs and implement RPS in JavaScript. Some gotchas to watch out for:
