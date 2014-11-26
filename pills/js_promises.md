@@ -61,11 +61,12 @@ Enter Promises! Promises take this mess of callback code and give us a way for a
 Now by getting our get function to use promises we can tidy up the code: 
 
 ```javascript
-get('story.json').then(function(response){
-  console.log("Success!", response);
-}, function(error) {
-  console.error("Failed!", error);
-});
+get('story.json')
+  .then(function(response){
+    console.log("Success!", response);
+  }, function(error) {
+    console.error("Failed!", error);
+  });
 ```
 
 Already things are looking better. But what's actually going on here? What we've done is refactored the original `get` method to return a `Promises` object which provides us with the `then` method that we've used instead of callbacks. An example of how we could do this is below:
