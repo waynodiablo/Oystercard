@@ -111,10 +111,13 @@ Now there is no chance that the asynchronous request (in this example an AJAX re
 Promises are especially powerful in that the `then` method will always return another promise so they can be chained. This means we can tidy up the really messy example from before with multiple callbacks like so:
 
 ```javascript
-get('story.json').then(function(response){
-  console.log("Success!", response);
-}).then(get('story.json')).then(JSON.parse, function(error) {
-  console.error("Failed!", error);
+get('story.json')
+  .then(function(response){
+    console.log("Success!", response);
+  })
+  .then(get('story.json'))
+  .then(JSON.parse, function(error) {
+    console.error("Failed!", error);
 });
 ```
 
