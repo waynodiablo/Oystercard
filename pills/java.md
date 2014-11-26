@@ -1,7 +1,7 @@
 Java
 ====
 
-Java derives much of its syntax from the [C] and family of programming
+Java derives much of its syntax from the [C] family of programming
 languages - the closest you will have seen to the overall look of Java is its
 namesake [JavaScript], but the similarity is at the surface level; the two
 languages are quite different.
@@ -34,10 +34,10 @@ class HelloWorld {
 };
 ```
 
-Pretty verbose, right? We'll get on to the `public stateic void` etc. later --
+Pretty verbose, right? We'll get on to the `public static void` etc. later --
 for now see it as a bit of magic [boilerplate]. The `System.out` part should be
 a little more familiar - we're asking Java to print a line (`println`) and then
-giving it a string to print. And the `class` is very much as in othe languages
+giving it a string to print. And the `class` is very much as in other languages
 -- we've made a class called 'HelloWorld'. Note also the curly braces and
 semicolons as you'd see in JavaScript. This is a feature in C-like syntax,
 although the semicolons are not optional here (this is _not_ JavaScript).
@@ -208,6 +208,7 @@ especially the first track on [Learning the Java Language], along with the
 [IntelliJ IDEA]: https://www.jetbrains.com/idea/
 [Java reference pages]: https://docs.oracle.com/javase/8/
 [Java Tutorials]: https://docs.oracle.com/javase/tutorial/index.html
+[JavaScript]: http://en.wikipedia.org/wiki/JavaScript
 [jRuby]: http://jruby.org/
 [jUnit]: http://junit.org/
 [Learning the Java Language]: https://docs.oracle.com/javase/tutorial/java/index.html
