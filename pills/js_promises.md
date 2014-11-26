@@ -68,7 +68,7 @@ get('story.json').then(function(response){
 });
 ```
 
-Much better! But what's actually going on here? What we've done is refactored the original `get` method to return a `Promises` object which provides us with the `then` method that we've used instead of callbacks. An example of how we could do this is below:
+Already things are looking better. But what's actually going on here? What we've done is refactored the original `get` method to return a `Promises` object which provides us with the `then` method that we've used instead of callbacks. An example of how we could do this is below:
 
 ```javascript
 function get(url) {
@@ -117,7 +117,7 @@ get('story.json').then(function(response){
 });
 ```
 
-Looking much tidier! You'll notice we've only defined the error handler once as the final argument in the last `then` method - Promises are clever enough to keep looking down the chain until they find an error callback that can be called. Only having to define one error handler which handles all the errors is one of the biggest advantages that Promises offers us - it allows us to essentially create a `try`/`catch` block that works with asynchronous code.
+You'll notice we've only defined the error handler once as the final argument in the last `then` method - Promises are clever enough to keep looking down the chain until they find an error callback that can be called. Only having to define one error handler which handles all the errors is one of the biggest advantages that Promises offers us - it allows us to essentially create a `try`/`catch` block that works with asynchronous code.
 
 > Unfortunately Promises are not yet fully supported natively on all browsers, support is becoming more widespread but until then you will have to use a [library](https://github.com/jakearchibald/es6-promise) to make sure they work in all browsers.
 
