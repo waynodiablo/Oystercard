@@ -25,18 +25,32 @@ get('story.json', function(error, response) {
 });
 ```
 
-This is perfectly valid code, but it's already looking messy and we've created pretty much the most simple code possible. What if we want to do another action which needs another callback following this? Before long we're going to be in a complete mess, as an example from [this article](http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/) shows:
+This is perfectly valid code, but it's already looking messy and we've created pretty much the most simple code possible. What if we want to do another action which needs another callback following this? Before long we're going to be in a complete mess:
 
 ```javascript
-asyncCall(function(err, data1){
-    if(err) return callback(err);       
-    anotherAsyncCall(function(err2, data2){
-        if(err2) return calllback(err2);
-        oneMoreAsyncCall(function(err3, data3){
-            if(err3) return callback(err3);
-            // are we done yet?
-        });
-    });
+get('story.json', function(error, response) {
+  if (error) {
+    console.error("Failed!", error);
+  }
+  else {
+    
+    console.log("First success!", response);
+    
+    get('story2.json', function(error, response) {
+      if (error) {
+        console.error("Failed!", error);
+      }
+      else {
+        try {
+          response = JSON.parse(response);
+          console.log("Success!", response);
+        }
+        catch(error) {
+          console.error("Failed!", error);
+        }
+      }
+    }
+  }
 });
 ```
 
@@ -93,13 +107,25 @@ The key thing to notice here is that 'get' returns a Promise object, that tells 
 
 Now there is no chance that the asynchronous request (in this example an AJAX request) can fail before we have a chance to add event listeners, and we have successfuly removed difficult to fix errors that can result from timing issues in the running of our JavaScript related to the speed of network connections and so forth.
 
-Promises are very powerful in that they can also be chained to handle multiple events, and sequenced to ensure that they are presented in a particular order, but they are not yet fully supported natively on all browsers, so they are not a complete panacea, although support is becoming more widespread and we can look forward to them being a reliable tool in the not too distant future.
+Promises are especially powerful in that the `then` method will always return another promise so they can be chained. This means we can tidy up the really messy example from before with multiple callbacks like so:
+
+```javascript
+get('story.json').then(function(response){
+  console.log("Success!", response);
+}).then(get('story.json')).then(JSON.parse, function(error) {
+  console.error("Failed!", error);
+});
+```
+
+Looking much tidier! You'll notice we've only defined the error handler once as the final argument in the last `then` method - Promises are clever enough to keep looking down the chain until they find an error callback that can be called. Only having to define one error handler which handles all the errors is one of the biggest advantages that Promises offers us - it allows us to essentially create a `try`/`catch` block that works with asynchronous code.
+
+> Unfortunately Promises are not yet fully supported natively on all browsers, support is becoming more widespread but until then you will have to use a [library](https://github.com/jakearchibald/es6-promise) to make sure they work in all browsers.
 
 ## Promises in NodeJS
 
-NodeJS doesn't support Promises natively but we can use a library like bluebird to use Promises. 
+NodeJS doesn't support Promises natively but we can use a library like [Bluebird](https://github.com/petkaantonov/bluebird) to use Promises. You'll notice this offers other methods apart from just `then` such as `catch`, this is just a neater way of handling errors rather than passing a callback as the second argument of `then`.
 
-Let's have a look at some code that we can tidy using Promises - take this example where we're doing an asynchronous file read:
+Let's have a look at some code that we can tidy using Promises - take this example where we're doing an asynchronous file read (the comments explain what we're doing):
 
 ```javascript
 var fs = require('fs');
@@ -164,6 +190,7 @@ fs.readFileAsync('./file.json', 'utf8').then(JSON.parse).then(function(val) {
 Resources
 -------
 
+* [Introduction to Promises](https://www.promisejs.org/)
 * [HTML5 Rocks Article on Promises](http://www.html5rocks.com/en/tutorials/es6/promises)
 * [jQuery Promises are Broken](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken/)
 * [ECMAScript 6 Draft on Promises](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)
