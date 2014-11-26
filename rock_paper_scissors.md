@@ -96,15 +96,17 @@ git push heroku master
   * [JavaScript Intro](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_intro.md)
   * [More JavaScript](https://github.com/makersacademy/Walkthroughs/blob/master/more_javascript.md)
 * Part 2: JQuery
+  * [jQuery Intro](https://github.com/makersacademy/Walkthroughs/blob/master/jquery_intro.md) 
+  * [jQuery animations](https://github.com/makersacademy/Walkthroughs/blob/master/jquery_animations.md) 
 * Part 3: JS Templating
 
 ## Related Pills
 
-* https://github.com/makersacademy/course/blob/master/pills/javascript%26JasminePill.md
-* https://github.com/makersacademy/course/blob/master/pills/jquery_events.md
-* https://github.com/makersacademy/course/blob/master/pills/js_arrays.md
-* https://github.com/makersacademy/course/blob/master/pills/js_conventions.md
-* https://github.com/makersacademy/course/blob/master/pills/js_functions.md
+* :pill: [JavaScript & Jasmine](https://github.com/makersacademy/course/blob/master/pills/javascript%26JasminePill.md)
+* :pill: [jQuery Events](https://github.com/makersacademy/course/blob/master/pills/jquery_events.md)
+* :pill: [JavaScript arrays](https://github.com/makersacademy/course/blob/master/pills/js_arrays.md)
+* :pill: [JavaScript conventions](https://github.com/makersacademy/course/blob/master/pills/js_conventions.md)
+* :pill: [JavaScript functions](https://github.com/makersacademy/course/blob/master/pills/js_functions.md)
 
 ## Resources
 
@@ -125,9 +127,10 @@ A free online book. I wouldn't recommend reading cover-to-cover, just skim throu
 
 #### Douglas Crockford Lectures on JavaScript
 
-These are starting to be a little dated, but they are awesome!  And they contain a lot of computer science history that you really should know.  They are not a great 'introduction' for novices, but once you've spent a few days coding in JavaScript they might make good sense.
+These are starting to be a little dated, but they are awesome!  And they contain a lot of computer science history that you really should know.  They are not a great 'introduction' for novices, but once you've spent a few days coding in JavaScript they might make good sense.  Crockford also created the [JSLint JavaScript style checker](http://www.jslint.com/) which can be good for code review.
 
 * [Crockford on JavaScript](http://yuiblog.com/crockford/)
+* [JSLint](http://www.jslint.com/)
 
 ### Jasmine
 
