@@ -102,7 +102,7 @@ git push heroku master
   * [jQuery animations](https://github.com/makersacademy/Walkthroughs/blob/master/jquery_animations.md) 
 * Part 3: JS Templating
   * [Mustache](https://github.com/makersacademy/Walkthroughs/blob/master/mustache.md)
-  * Heroku
+  * [Heroku](https://github.com/makersacademy/Walkthroughs/blob/master/heroku_sinatra_javascript.md)
 
 ## Related Pills
 
