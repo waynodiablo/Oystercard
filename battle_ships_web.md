@@ -3,6 +3,8 @@
 This time we are going to improve on our battleships game.
 In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) we implemented the battleships game for the terminal.
 
+***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with your computer for people in general. When was the last time you checked your calendar on the terminal? **Exactly!**
 
 Nowadays applications are much richer in colours and interactions, they feel smoother and friendlier that the terminal does.
