@@ -194,6 +194,7 @@ fs.readFileAsync('./file.json', 'utf8').then(JSON.parse).then(function(val) {
 Resources
 -------
 
+* [Promises lecture at Maker's](https://www.youtube.com/watch?v=QujWZUYpeNk)
 * [Introduction to Promises](https://www.promisejs.org/)
 * [HTML5 Rocks Article on Promises](http://www.html5rocks.com/en/tutorials/es6/promises)
 * [jQuery Promises are Broken](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken/)
