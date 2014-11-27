@@ -16,6 +16,8 @@ This week's project is a clone of [Instagram](http://instagram.com). The goal is
 
 We deployed to Heroku at the end of last week. For this project we should be deploying much more regularly - ideally a few times every day. This allows us to catch any deployment issues early.
 
+***And of course we don't need to tell you again but for safety's sake let us note that as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
 ## Version 1 - Image uploading
 
 The fundamental feature of Instagram is that users can upload their photos to the service to share online - this is what we'll focus on first. For performance reasons, and because Heroku offers us very limited disk space, we'll use [Amazon's Secure Storage Service](http://aws.amazon.com/s3/) (S3) to persist our uploaded images.
