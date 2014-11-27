@@ -2,7 +2,6 @@
 
 ### Completion time 3-4 days
 
-
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
 
 * Integration testing: Capybara (Monday)
@@ -10,6 +9,8 @@ This week's project is a bookmark manager. The goal is to expose you to the foll
 * Security considerations (Thursday)
 
 In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Battleships – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
+
+***As usual note that as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 ## High-level specification
 
