@@ -5,7 +5,7 @@ This project involves implementing the Rock Paper Scissors Lizard Spock game in 
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-*Many thanks to [Alex Peattie](https://github.com/alexpeattie) for the design of these walkthroughs*
+*Many thanks to [Alex Peattie](https://github.com/alexpeattie) for the original design of this material*
 
 ## Version 1 - Ruby -> JavaScript
 
