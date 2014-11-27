@@ -27,8 +27,8 @@ Here you will find other, relevant materials and challenges that will help you o
 ![Spike](https://avatars3.githubusercontent.com/u/7307631?v=3&s=128) ![Nikesh](https://avatars2.githubusercontent.com/u/7963753?v=3&s=128) ![David](https://avatars0.githubusercontent.com/u/5469544?v=3&s=128)
 
 - List of good places to work at the weekend
-  - Look Mum No Hands (Barbican)
-  - Fix
-  - Timber Yard
-  - Salvation Jane
+  - [Look Mum No Hands](http://www.lookmumnohands.com)
+  - [Fix](http://www.fix-coffee.co.uk)
+  - [Timber Yard](http://timberyardlondon.com)
+  - [Salvation Jane](www.salvationjanecafe.co.uk/)
 
