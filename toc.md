@@ -1,5 +1,7 @@
 # Course Outline
 
+***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
 1. [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
 2. [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
 3. [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
@@ -20,4 +22,4 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
-- your alumni helpers are [Spike](https://github.com/spike01), [David](https://github.com/gypsydave5), [Nikesh](https://github.com/nikeshashar) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [Spike](https://github.com/spike01), [David](https://github.com/gypsydave5), [Nikesh](https://github.com/nikeshashar) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
