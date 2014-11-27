@@ -1,7 +1,11 @@
 Instagram Marketplace
 =========
 
-under construction ... in the meantime please find individual walkthroughs below for reference:
+***UNDER CONSTRUCTION***
+
+... in the meantime please find individual walkthroughs below for reference:
+
+***As you've heard before all Makers Academy materials may include subtle errors.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 * [WebSockets](https://github.com/makersacademy/Walkthroughs/blob/master/websockets.md)
 * [Heroku](https://github.com/makersacademy/Walkthroughs/blob/master/heroku.md)
