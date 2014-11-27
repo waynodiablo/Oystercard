@@ -15,7 +15,7 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 * validations
 * AJAX in Rails
 
-***As you know, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 **Contents**
 - [Version 1 - MVP](#version-1---mvp)
