@@ -28,7 +28,8 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - List of good places to work at the weekend
   - Look Mum No Hands (Barbican)
-  - Fix
-  - Timber Yard
-  - Salvation Jane
+  - Forge and Co (Shoreditch)
+  - Fix (Old Street)
+  - Timber Yard (Old Street)
+  - Salvation Jane (Old Street)
 
