@@ -103,6 +103,8 @@ git push heroku master
 * Part 3: JS Templating
   * [Mustache](https://github.com/makersacademy/Walkthroughs/blob/master/mustache.md)
   * [Heroku](https://github.com/makersacademy/Walkthroughs/blob/master/heroku_sinatra_javascript.md)
+* Part 4: JS Refactoring
+  * [JS Refactoring](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_testability.md)
 
 ## Related Pills
 
