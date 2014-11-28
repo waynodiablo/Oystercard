@@ -48,7 +48,7 @@ postgres=# \q
 The last command quits out of the postgres terminal.
 
 From now on you will be able to log in to postgresql without having to specify
-the database you want to log into. Which is nice!
+the database you want to log into.
 
 More fun commands
 -----------------
