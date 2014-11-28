@@ -26,7 +26,7 @@ In this case, you have a function called __eatAtRestaurant__ and as an argument,
 
 Resources
 ---------
-
+* [NodeSchool: Learn You Node](https://github.com/rvagg/learnyounode) - Node tutorial
 * [Node Patterns](https://github.com/nodebits/distilled-patterns)
 * [Module Patterns](http://darrenderidder.github.io/talks/ModulePatterns/#/)
 * [Interface Design Patterns for Node](http://bites.goodeggs.com/posts/export-this/)
