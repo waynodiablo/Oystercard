@@ -151,3 +151,7 @@ These are starting to be a little dated, but they are awesome!  And they contain
 ### CSS transitions
 
 * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions
+ 
+### Refactor for UI testing
+
+* https://github.com/makersacademy/rpsls-javascript-jquery/tree/ui-testing-refactor
