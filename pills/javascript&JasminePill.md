@@ -395,7 +395,7 @@ Oh no! Our tests fail! Does anyone know why? BECAUSE WE ARE NOT BEING SPECIFIC E
 
 #### this.
 
-We need to tell Javascript that ```_isDivisibleBy();``` belongs to the Javabuzz class. Now, since we are inside a method definition that is already bound to that class, all we have to do is add ```this.``` to the beginning of our method, and all our problems go away:
+We need to tell Javascript that `_isDivisibleBy();` belongs to the Javabuzz class. Now, since we are inside a method definition that is already bound to that class, all we have to do is add `this.` to the beginning of our method, and all our problems go away:
 
 ```javascript
 Javabuzz.prototype.isDivisibleByFifteen = function(number) {
