@@ -274,7 +274,7 @@ Now, if you head to your terminal application, and whilst in the home directory 
 
 ```bash
 Javabuzz knows when a number is divisible by 3
-ReferenceError: Fizzbuzz is not defined
+ReferenceError: Javabuzz is not defined
 ```
 
 This is Jasmine's very dramatic way of saying that it doesn't know what we mean when we refer to `Javabuzz();` on line 8(ish) of our spec file. Well you and I both know we meant the Javabuzz class, so let's head on over to **src/Javabuzz.js** and create the class now:
