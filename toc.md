@@ -7,9 +7,11 @@
 3. [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
 4. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 5. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
-6. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
-7. [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
-8. [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
+6. Github Profiles in JavaScript
+7. Chat Servers in Node
+8. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
+9. [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
+10. [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
 
 ## Supporting Materials
 
