@@ -391,11 +391,11 @@ Javabuzz.prototype.isDivisibleByFifteen = function(number) {
 };
 ```
 
-Oh no! Our tests fail! Does anyone know why? BECAUSE WE ARE NOT BEING SPECIFIC ENOUGH!!! Javascript really does need you to go the extra mile. I know, I know - but it's worth it.
+Oh no! Our tests fail! Does anyone know why? BECAUSE WE ARE NOT BEING SPECIFIC ENOUGH!!! Javascript really does need you to go the extra mile. I know, I know - but it is worth it.
 
 #### this.
 
-We need to tell Javascript that `_isDivisibleBy();` belongs to the Javabuzz class. Now, since we are inside a method definition that is already bound to that class, all we have to do as add 'this.' to the beginning of our method, and all our problems go away:
+We need to tell Javascript that ```_isDivisibleBy();``` belongs to the Javabuzz class. Now, since we are inside a method definition that is already bound to that class, all we have to do is add ```this.``` to the beginning of our method, and all our problems go away:
 
 ```javascript
 Javabuzz.prototype.isDivisibleByFifteen = function(number) {
@@ -472,6 +472,3 @@ In addition to the 5 JavaScript and JQuery pills we have supplied for you in the
 * [Codecademy - Javascript Track](http://www.codecademy.com/tracks/javascript) - They also have a JQuery track that is worth working through.
 * [JavaScript for Cats](http://jsforcats.com/) - An introduction for new Programmers.
 * [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript) - An Awesome repository of JavaScript resources.
-
-
-
