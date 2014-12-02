@@ -867,18 +867,18 @@ To show an error, let's edit our view. Add this to the top of your `views/restau
 
 ```erb
 <% if @restaurant.errors.any? %>
-  <div id="errors" >
+  <section id="errors" >
     <h2> <%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved: </h2>
     <ul>
       <% @restaurant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
-  </div>
+  </section>
 <% end %>
 ```
 
-What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `div`, along with a count of how many errors there are.
+What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `section`, along with a count of how many errors there are.
 
 (Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)
 
