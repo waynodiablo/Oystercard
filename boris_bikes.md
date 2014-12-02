@@ -404,7 +404,7 @@ describe Bike do
 
   it "should be able to break" do
     bike = Bike.new
-    bike.break
+    bike.break!
     expect(bike).to be_broken
   end
 
@@ -432,7 +432,7 @@ describe Bike do
   end
 
   it "should be able to break" do    
-    bike.break
+    bike.break!
     expect(bike).to be_broken
   end
 
