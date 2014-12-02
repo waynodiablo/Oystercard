@@ -343,7 +343,9 @@ resources :restaurants, shallow: true do
 end
 ```
 
-Note that we are using [shallow nesting](http://guides.rubyonrails.org/routing.html#shallow-nesting). Follow that link and have a read about shallow nesting, and see what adding `shallow: true` does to your Rails routes - in short it means we can avoid ever having resources nested more than one level deep in our URL structure.
+Note that we are using [shallow nesting](http://guides.rubyonrails.org/routing.html#shallow-nesting). Follow that link and have a read about shallow nesting, and see what adding `shallow: true` does to your Rails routes - in short it means we can avoid ever having resources nested more than one level deep in our URL structure. 
+
+Check your tests and amend any routes that may have changed.
 
 ##### Creating endorsements controller
 
