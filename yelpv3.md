@@ -10,7 +10,7 @@ In this version of our app, we want to tidy up the UX (user experience). It woul
 Let's see what we can do.
 
 - [Average ratings](#average-ratings)
-    - [Feature and unit tests](#feature-and-unit-tests)
+    - [Feature and unit tests](#feature-and-unit-tests)he
     - [Making an `average_rating` helper](#making-an-averagerating-helper)
     - [Displaying the average rating](#displaying-the-average-rating)
     - [Stars make things pretty](#stars-make-things-pretty)
@@ -299,7 +299,7 @@ And that should pass those tests. So let's go back to our `index` to get the fea
 ...
 ```
 
-Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](pills/helper_methods.md)** to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
+Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](/pills/rails_helpers.md)** to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
 
 #### Adding endorsements
 
