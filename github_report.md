@@ -52,6 +52,7 @@ Related Walkthoughs
 ---------------
 
 * [AJAX Introduction](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_introduction.md)
+* [AJAX and More jQuery](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_with_extra_jquery.md)
 
 ## Resources
 
