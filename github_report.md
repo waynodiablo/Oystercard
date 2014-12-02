@@ -48,6 +48,11 @@ Version 5 - Bonus Level
 
 Include further checks such as creating %completion based on expected number of commits, code smells, SOLID principles etc.
 
+Related Walkthoughs
+---------------
+
+* [AJAX Introduction](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_introduction.md)
+
 ## Resources
 
 #### Ajax
