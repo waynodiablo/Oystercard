@@ -521,7 +521,7 @@ This time, we're going to write pure JS, so let's change that file extension:
 
 `app/assets/javascripts/endorsements.js.coffee` -> `app/assets/javascripts/endorsements.js`
 
-Sweet. Now let's actually put some JavaScript in that file.
+Sweet. Now let's actually put some JavaScript in that file. **But first**, make sure you remove the comments at the top of the file! CoffeeScript comments start with a '#', but JavaScript comments start with '//' – so those comments will break your JavaScript.
 
 ```js
 $(document).ready(function() {
