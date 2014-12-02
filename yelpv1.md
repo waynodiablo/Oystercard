@@ -231,7 +231,7 @@ This command does a couple of things:
 * creates a new model, which tells the app what a 'restaurant' is and what properties it has.
 * creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database.
 
-Specifically, we've add 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
+Specifically, we've added 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
 
 **Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
 
