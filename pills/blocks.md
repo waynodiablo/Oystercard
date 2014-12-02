@@ -4,7 +4,7 @@ Blocks are a fundamental feature of Ruby. In fact, blocks are one of the reasons
 
 In most cases, when calling a method, you pass simple objects – [Symbols](https://github.com/makersacademy/course/blob/master/pills/symbols.md), [Strings](https://github.com/makersacademy/course/blob/master/pills/strings.md), numbers – as arguments. However, you can also pass a block of code as an argument. This block of code is not executed immediately when the method is called but may be executed later.
 
-In [Student Directory](https://github.com/makersacademy/course/blob/master/student_directory.md) we iterated over an array of names using this code:
+For example, given an array of student names, we can iterate over this array by using this code:
 
 ````ruby
 students.each do |student|
