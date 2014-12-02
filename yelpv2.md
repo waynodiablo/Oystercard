@@ -133,7 +133,7 @@ end
 
 Now we need to add these links to the view logic. Specifically, we need to tell the app to show certain links dependent on whether or not a user is logged in. We can use Devise's built-in `user_signed_in?` helper to do this.
 
-In `views/layouts/application.rb`, add a sign out link:
+In `views/layouts/application.erb`, add a sign out link:
 
 ```erb
   <% if user_signed_in? %>
