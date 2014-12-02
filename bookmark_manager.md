@@ -1802,3 +1802,7 @@ By now you should be able to do all of the following (in no particular order).
 * tag must have some text
 * Add a description property to the link.
 * Add a username to the User model, so that username instead of an email was shown next to the link.
+
+## Resources
+
+* [Three Tier Web Database Architecture](https://docs.google.com/drawings/d/17ES4_vO90p3x3np1K3X5b5C_JVs14VbJZ5N8KraVRUw/edit)
