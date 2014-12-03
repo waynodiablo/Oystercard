@@ -7,12 +7,33 @@ the database, while the columns represent the fields - the data stored about he
 entries. For instance, here's a representation of a user in a relational
 database:
 
-
-|      id | user_name | password | email       |
-|---------|-----------|----------|-------------|
-|  1      | bob       | 1234     | bob@bob.com |
-|  2      | tom       | 5678     | tom@tom.com |
-[User_v1]
+<table>
+  <thead>
+    <tr>
+      <td colspan="4" align="center"><i>User</i></td>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th>user_name</th>
+      <th>password</th>
+      <th>email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>bob</td>
+      <td>1234</td>
+      <td>bob@bob.com</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>tom</td>
+      <td>5678</td>
+      <td>tom@tom.com</td>
+    </tr>
+  </tbody>
+</table>
 
 Relational databases are managed using relational database management systems
 (RDBMS), such as PostgreSQL, MySQL and SQL Server.
