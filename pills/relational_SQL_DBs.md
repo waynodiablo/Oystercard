@@ -12,7 +12,7 @@ database:
 |---------|-----------|----------|-------------|
 |  1      | bob       | 1234     | bob@bob.com |
 |  2      | tom       | 5678     | tom@tom.com |
-[User]
+[User_v1]
 
 Relational databases are managed using relational database management systems
 (RDBMS), such as PostgreSQL, MySQL and SQL Server.
@@ -46,7 +46,7 @@ We could represent the users addresses like this:
 |---------|-----------|----------|-------------|-------|-------|
 |  1      | bob       | 1234     | bob@bob.com |London|SW1 1DB|
 |  2      | tom       | 5678     | tom@tom.com |Wisbech|PE13 2DB|
-[User]
+[User_v2]
 
 But it would be better to make another table for the addresses and set up
 a relationship between the two tables. That's the 'relational' in Relational
@@ -56,7 +56,7 @@ Database. The Address table might look like this:
 |---|---|---|
 | 27 |London|SW1 1DB|
 | 32 |Wisbech|PE13 2DB|
-[Address]
+[Address_v1]
 
 And the User table now looks like this:
 
@@ -64,7 +64,7 @@ And the User table now looks like this:
 |---------|-----------|----------|-------------|----------|
 |  1      | bob       | 1234     | bob@bob.com |  27 |
 |  2      | tom       | 5678     | tom@tom.com |  32 |
-[User]
+[User_v3]
 
 We can take a look at the full information about a user by using a SQL
 `INNER JOIN` statement as follows:
@@ -88,7 +88,7 @@ User table we'd be looking at something pretty ugly. And wide...
 |---------|-----------|----------|-------------|----------|---|---|---|---|
 |  1      | bob       | 1234     | bob@bob.com |  27 | my dog| my lovely dog| my cat| my wonderful cat|
 |  2      | tom       | 5678     | tom@tom.com |  32 | trees | Lovely trees| Prince| Yay Purple Rain |
-[User]
+[User_v4]
 
 This is bad. We'd have to be adding new fields for each extra blog post, along
 with leaving some of the 'cells' for each row blank when there isn't an nth
@@ -101,7 +101,7 @@ he blog posts to a separate table:
 |2 | 2 | trees | Lovely trees |
 |3 | 2 | Prince | Yay Purple Rain|
 |4 | 1 | my cat | my wonderful cat|
-[Blogposts]
+[Blogposts_v1]
 
 This is called a *one-to-many relationship* -- one user can have many blog
 posts. You can see that it's handled in the same way as the one-to-one
@@ -137,7 +137,7 @@ post:
 |2 | 2 | trees | Lovely trees | gardening| |
 |3 | 2 | Prince | Yay Purple Rain| diminutive pop-stars| |
 |4 | 1 | my cat | my wonderful cat| animals| cats|
-[Blogposts]
+[Blogposts_v2]
 
 But we've already seen that this ends in a very long table, and the repetition
 of content. It also means that there's no direct relationship between the
@@ -150,7 +150,7 @@ like this:
 |2 | animals|1 |4 |
 |3 | gardening|2 | |
 |4 | diminutive pop-stars|3 | |
-[Tags]
+[Tags_v1]
 
 and then change all the tag fields in the Blogposts table into tag_ids. No fun,
 and lots of repetition of information.
