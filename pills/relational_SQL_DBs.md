@@ -207,5 +207,5 @@ will do much of your work with databases using them.
 SQL was invented in 1970 and is still being used today, long after every other
 language around in the 70s has fallen by the wayside. While it's definitely
 not a cool language, or even very pretty, it's efficient and good at what
-it does, and an useful tool. When your database falls apart, it's good to know
+it does, and a useful tool. When your database falls apart, it's good to have
 some SQL
