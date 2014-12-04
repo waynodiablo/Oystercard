@@ -16,5 +16,5 @@ To get around this, follow the following steps:
 5. Profit!
 
 # Background reading
-[Heroku Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
-[Bower Configuration](http://bower.io/docs/config/)
+* [Heroku Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
+* [Bower Configuration](http://bower.io/docs/config/)
