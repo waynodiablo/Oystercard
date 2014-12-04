@@ -14,3 +14,7 @@ To get around this, follow the following steps:
 3. Add a buildpack to your Heroku env variables like so: ``` heroku config:add BUILDPACK_URL=git://github.com/qnyp/heroku-buildpack-ruby-bower.git#run-bower ```
 4. Push to heroku
 5. Profit!
+
+# Background reading
+[Heroku Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
+[Bower Configuration](http://bower.io/docs/config/)
