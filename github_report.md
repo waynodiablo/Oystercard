@@ -55,6 +55,7 @@ Related Walkthoughs
 * [AJAX and More jQuery](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_with_extra_jquery.md)
 * [AJAX and Even More jQuery](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_jquery_spinners.md)
 * [AngularJS](https://github.com/makersacademy/Walkthroughs/blob/master/angularjs.md)
+* [APIs and Angular](https://www.youtube.com/watch?v=Z0ZERKkhOec)
 
 ## Resources
 
