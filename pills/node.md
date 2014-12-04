@@ -29,6 +29,8 @@ Resources
 
 * [NodeSchool: Learn You Node](https://github.com/rvagg/learnyounode) - Node tutorial
 * [NodeJS Handbook](https://github.com/FredKSchott/NodeJS-Handbook)
+* [Art of Node](https://github.com/maxogden/art-of-node)
+* [Node Style Guide](https://github.com/felixge/node-style-guide)
 
 Advanced Resources
 ----------
