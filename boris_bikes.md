@@ -144,6 +144,8 @@ The next line in the stack trace shows what was executed directly before `config
 
 So, getting back to our error. If you guessed that `uninitialized constant Bike` error happened because we never defined what Bike is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
 
+This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
+
 Let's define the bike. Create `lib/bike.rb` and define an empty Bike class.
 
 ````ruby
