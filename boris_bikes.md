@@ -8,6 +8,8 @@ We are creating a simple system for managing [Boris Bikes in London](https://en.
 
 A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent a bike or return it some objects get created somewhere in the system that tracks the usage of all bikes.
 
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles at least as often as you see the :twisted_rightwards_arrows: sign. ***
+
 ## Version 0: Building a domain model
 
 The first step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). The [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them. In other words, it helps us understand what classes we may have and what methods they may implement.
@@ -58,11 +60,11 @@ Now let's write our first test in spec/bike_spec.rb.
 ````ruby
 #we're describing the functionality of a specific class, Bike
 describe Bike do
-  # this is a specific feature (behaviour) 
+  # this is a specific feature (behaviour)
   # that we expect to be present
   it "should not be broken after we create it" do
     the_bike = Bike.new # initialise a new object of Bike class
-    # expect an instance of this class to have 
+    # expect an instance of this class to have
     # a method "broken?" that should return false
     expect(the_bike).not_to be_broken
   end
@@ -159,7 +161,7 @@ If you run the test right now, will it pass? Again, stop for a second and think 
 
 You'll find out it doesn't. Same error again. Ruby still has no idea about the Bike class. But why, when we've just defined it in `bike.rb`?
 
-Think about it from Ruby's perspective. There are lots and lots of ruby files on your computer, defining hundreds if not thousands of different classes. Should all of them be available in every other Ruby file? Probably not. It's the programmer's responsibility to decide what should be available to Ruby code at what point. In other words, we haven't established any link between `bike_spec.rb` and `bike.rb`. That they are in the same repo or adjacent directories matters very little to Ruby. We need to explicitly link them together. 
+Think about it from Ruby's perspective. There are lots and lots of ruby files on your computer, defining hundreds if not thousands of different classes. Should all of them be available in every other Ruby file? Probably not. It's the programmer's responsibility to decide what should be available to Ruby code at what point. In other words, we haven't established any link between `bike_spec.rb` and `bike.rb`. That they are in the same repo or adjacent directories matters very little to Ruby. We need to explicitly link them together.
 
 Add a `require` statement to the spec.
 
@@ -222,11 +224,12 @@ Note that the method is empty. Why? Because [rspec](http://rspec.info) didn't co
 
 So it passed. However, you may have expected it to fail. That would have been a reasonable assumption since there's no implementation of the method. However, in Ruby a nil value is treated as false if a boolean value is needed. Given that a method returns nil if nothing else is returned, an empty method always returns nil. So, by writing an empty method, we satisfy the test's expectation that the bike must not be broken.
 
-Our code is still extremely basic but we're getting somewhere. This is a good time to commit the changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
+Our code is still extremely basic but we're getting somewhere. This is a good time to commit the changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and it's also a good time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
+
 
 ### Making the broken? method work properly
 
-You may feel suspicious that our test suite pass while we don't have much code just yet. You're right, we're missing something. We're missing more example! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
+You may feel suspicious that our test suite pass while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
 
 ````ruby
 it "should be able to break" do
@@ -272,7 +275,7 @@ Let's introduce an instance variable that holds this information. This must be a
 
 ````ruby
 class Bike
-  
+
   # the initialize method is always called when you create a new
   # class by typing Bike.new
   def initialize
@@ -291,11 +294,12 @@ class Bike
     # and any instance method can update them
     @broken = true
   end
-  
+
 end
 ````
 
-**Now all our examples pass, perfect time to commit our changes.**
+**Now all our examples pass, a perfect time to commit our changes, and to switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows:.
+**
 
 ### Fixing the bike
 
@@ -325,7 +329,7 @@ If we run the test, we'll find that the method `fix!()` is undefined.
 Easy enough to fix it ( _pun intended_). Add the method to the class.
 
 ````ruby
-def fix!   
+def fix!
 end
 ````
 
@@ -350,7 +354,8 @@ end
 
 **Do you expect the tests to pass?** Check it to make sure they do.
 
-Now it's a good time to check in the code. Stage and commit the files that changed and push to Github. It's a good practice to commit every time you are _green_.
+Now it's a good time to check in the code. Stage and commit the files that changed and push to Github. It's a good practice to commit every time you are _green_.  It's also a good time to switch to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, depending on your pairing methodology.
+
 
 ## Version 2: Refactoring
 
@@ -366,7 +371,7 @@ Take a look at the `Bike` class. What is the most obvious thing that is wrong he
 
 ````ruby
 class Bike
-  
+
   def initialize
     @broken = false
   end
@@ -379,14 +384,14 @@ class Bike
     @broken = true
   end
 
-  def fix!   
+  def fix!
     @broken = false
   end
-  
+
 end
 ````
 
-One of the problems is the code repetition. Lines 4 and 16 are the same. Code repetition violates the **DRY principle**: [Don't Repeat Yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Repeating anything in the code or system design is a likely source of nasty bugs.
+One of the problems is the code repetition. Lines 4 and 16 are the same. Code repetition violates the **DRY principle**: [Don't Repeat Yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Repeating anything in the code or system design is a possible source of nasty bugs.
 
 Instead of setting the instance variable in the initialiser, let's call the `fix!()` method instead.
 
@@ -429,16 +434,16 @@ describe Bike do
 
   let(:bike) { Bike.new }
 
-  it "should not be broken after we create it" do    
+  it "should not be broken after we create it" do
     expect(bike).not_to be_broken
   end
 
-  it "should be able to break" do    
+  it "should be able to break" do
     bike.break!
     expect(bike).to be_broken
   end
 
-  it "should be able to get fixed" do    
+  it "should be able to get fixed" do
     bike.break!
     bike.fix!
     expect(bike).not_to be_broken
@@ -449,9 +454,11 @@ end
 
 Line 5 calls an rspec helper `let()` that defines a local variable "bike" using the block provided (`{ Bike.new }`) before every test. This makes our tests more DRY. Run them to see if they still work. They should.
 
-Even though there are other repeated lines (8 and 19), it doesn't make sense to extract them into their own methods for readability's sake. However, in some cases it may be better to extract them: always use your best judgement. The code should look and feel elegant to you.
+Even though there are other repeated lines (8 and 19), it doesn't make sense to extract them into their own methods for readability's sake. However, in some cases it may be better to extract them: always use your best judgement. The code should look and feel elegant to you.  
 
-Now that we've finished with refactoring, it's a good time to push to Github.
+Note also that each time that you extract a commonality that you are adding a dependency.  DRYing out your code is very important, but developing an intuition for when to do it is critical.
+
+Now that we've finished with refactoring, it's a good time to push to Github and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ## Version 3: The Docking Station
 
@@ -463,14 +470,14 @@ Let's start with the most basic functionality: accepting the bikes. As usual, we
 
 ````ruby
 describe DockingStation do
-  
+
   it "should accept a bike" do
     bike = Bike.new
     station = DockingStation.new
     # we expect the station to have 0 bikes
     expect(station.bike_count).to eq(0)
     # let's dock a bike into the station
-    station.dock(bike)    
+    station.dock(bike)
     # now we expect the station to have 1 bike
     expect(station.bike_count).to eq(1)
   end
@@ -516,10 +523,10 @@ If your method is empty, the next error you should see is
 ````
 1) DockingStation should accept a bike
      Failure/Error: expect(station.bike_count).to eq(0)
-       
+
        expected: 0
             got: nil
-       
+
        (compared using ==)
      # ./spec/docking_station_spec.rb:9:in `block (2 levels) in <top (required)>'
 ````
@@ -528,7 +535,7 @@ Can you explain why this is happening? An empty method always return nil, wherea
 
 This may sound unnecessary. Why would you make the method return 0 if it's an obviously incorrect implementation that will be changed before the next commit? The reason we do this is that this approach forces us to write the absolute minimum necessary to make the test pass. It also ensures that we don't write the code that's not covered by the tests. Let the tests drive your code.
 
-In fact, please forgive me for digressing, I have yet to meet a developer who would use TDD really well, writing good tests and letting them to drive the code, who would be a bad coder. Quite the opposite, I've seen many programmers who ignored tests because they were "slowing them down" only to produce a piece of unmaintainable code that would be a pain to work with. 
+In fact, please forgive me for digressing, I have yet to meet a developer who would use TDD really well, writing good tests and letting them to drive the code, who would be a bad coder. Quite the opposite, I've seen many programmers who ignored tests because they were "slowing them down" only to produce a piece of unmaintainable code that would be a pain to work with.
 
 You can argue that it's possible to take the tests too far, testing absolutely every possible scenario and not writing a single line without a test telling you to do it. Use your best judgement. If it were possible to tell exactly when and how to write tests, we'd have computers writing them for us. TDD isn't a silver bullet but it's a very powerful weapon in your arsenal. Let the tests drive your code. Trust the tests.
 
@@ -559,10 +566,10 @@ By now you know that you need to create the method `dock()` and rerun the test. 
 ````
   1) DockingStation should accept a bike
      Failure/Error: expect(station.bike_count).to eq(1)
-       
+
        expected: 1
             got: 0
-       
+
        (compared using ==)
      # ./spec/docking_station_spec.rb:13:in `block (2 levels) in <top (required)>'
 ````
@@ -584,7 +591,7 @@ class DockingStation
     @bikes.count
   end
 
-  def dock(bike)    
+  def dock(bike)
   end
 
 end
@@ -595,7 +602,7 @@ Let's now rerun the test to makes sure the error is still the same. Since the ar
 However, to make this error go away, we need to write a real implementation of the `dock()` method.
 
 ````ruby
-def dock(bike)    
+def dock(bike)
   @bikes << bike
 end
 ````
@@ -650,7 +657,7 @@ let(:station) { DockingStation.new(:capacity => 20) }
 So we're initialising the station as the station that has the capacity of 20 and we're filling it with 20 bikes. We expect it to be full after that. Run the test (it will complain about the wrong number of arguments for the initialiser). Let's fix the problem the test has uncovered.
 
 ````ruby
-def initialize(options = {})    
+def initialize(options = {})
   @capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
   @bikes = []
 end
@@ -682,7 +689,7 @@ Finally, you'll need to define the default capacity at the top of the `DockingSt
 
 ````ruby
 class DockingStation
-  DEFAULT_CAPACITY = 10 
+  DEFAULT_CAPACITY = 10
 ````
 
 There's a different way of achieving the same effect: [named arguments in Ruby 2.0](http://brainspec.com/blog/2012/10/08/keyword-arguments-ruby-2-0/). However, since this is a relatively new feature, you're likely to see the pattern we're using in the real world.
@@ -714,17 +721,17 @@ However, what happens if we try to dock the bike into a station that's full?
 ````ruby
 it "should not accept a bike if it's full" do
   20.times { station.dock(Bike.new) }
-  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError)
+  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
 end
 ````
 
 From now on I'll start skipping the test failures because you've seen quite of few of them now.
 
-This test expects that docking a bike into a station should not raise an error. It will fail because this functionality isn't implemented yet. Let's update the `dock()` method.
+This test expects that docking a bike into a station should not [raise an error](https://www.relishapp.com/rspec/rspec-expectations/v/3-1/docs/built-in-matchers/raise-error-matcher). It will fail because this functionality isn't implemented yet. Let's update the `dock()` method.
 
 ````ruby
-def dock(bike) 
-  # if the capacity is reached, raise an exception   
+def dock(bike)
+  # if the capacity is reached, raise an exception
   raise "Station is full" if full?
   @bikes << bike
 end
@@ -749,7 +756,7 @@ Now our test look better.
 ````ruby
 it "should not accept a bike if it's full" do
   fill_station station
-  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError)
+  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
 end
 ````
 
@@ -759,7 +766,7 @@ When you need to get a bike from a station, you need to know what bikes are avai
 
 ````ruby
 it "should provide the list of available bikes" do
-  working_bike, broken_bike = Bike.new, Bike.new    
+  working_bike, broken_bike = Bike.new, Bike.new
   broken_bike.break!
   station.dock(working_bike)
   station.dock(broken_bike)
@@ -775,7 +782,7 @@ def available_bikes
 end
 ````
 
-Now that the tests pass, it's time to check the code in.
+Now that the tests pass, it's time to check the code in and of course to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 Our station is mostly done but there are a few more things, listed in the Exercises section below for you to finish.
 
@@ -816,11 +823,11 @@ module BikeContainer
     @bikes ||= []
   end
 
-  def capacity    
+  def capacity
     @capacity ||= DEFAULT_CAPACITY
   end
 
-  def capacity=(value)    
+  def capacity=(value)
     @capacity = value
   end
 
@@ -854,11 +861,11 @@ def bikes
   @bikes ||= []
 end
 
-def capacity    
+def capacity
   @capacity ||= DEFAULT_CAPACITY
 end
 
-def capacity=(value)    
+def capacity=(value)
   @capacity = value
 end
 ````
@@ -876,7 +883,7 @@ Here, `capacity` refers to the accessor method `capacity()` that we defined abov
 The third interesting thing is the use of the `||=` operators to initialise values. Consider this method:
 
 ````ruby
-def capacity    
+def capacity
   @capacity ||= DEFAULT_CAPACITY
 end
 ````
@@ -896,10 +903,10 @@ class DockingStation
   # this gives us all the methods that used to be in this class
   include BikeContainer
 
-  def initialize(options = {})    
-    # self.capacity is calling the capacity=() method 
+  def initialize(options = {})
+    # self.capacity is calling the capacity=() method
     # (note the equals sign) defined in BikeContainer
-    # capacity (the second argument to fetch()) is calling 
+    # capacity (the second argument to fetch()) is calling
     # the capacity() method in BikeContainer
     self.capacity = options.fetch(:capacity, capacity)
   end
@@ -919,15 +926,15 @@ require './lib/bike_container'
 class ContainerHolder; include BikeContainer; end
 
 describe BikeContainer do
-  
+
   let(:bike) { Bike.new }
   let(:holder) { ContainerHolder.new }
-    
-  it "should accept a bike" do        
+
+  it "should accept a bike" do
     # we expect the holder to have 0 bikes
     expect(holder.bike_count).to eq(0)
     # let's dock a bike into the holder
-    holder.dock(bike)    
+    holder.dock(bike)
     # now we expect the holder to have 1 bike
     expect(holder.bike_count).to eq(1)
   end
@@ -940,7 +947,7 @@ This is pretty much the same test we used to have for the station, except that w
 require './lib/docking_station'
 
 describe DockingStation do
-    
+
   let(:station) { DockingStation.new(:capacity => 123) }
 
   it "should allow setting default capacity on initialising" do
@@ -949,7 +956,7 @@ describe DockingStation do
 end
 ````
 
-Check that all tests still pass. If they do, push your code to Github.
+Check that all tests still pass. If they do, push your code to Github, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 Now you can create Van and Garage classes that will reuse BikeContainer. You'll need to think how to extend the functionality of the existing methods, though. For example, the garage must fix the bikes as they arrive. However, the dock() method knows nothing about fixing the bikes:
 
@@ -1009,6 +1016,3 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
 - [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
 - [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
-
-
-
