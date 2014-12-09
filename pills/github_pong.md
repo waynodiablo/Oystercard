@@ -32,7 +32,7 @@ http://code-worrier.com/blog/autocomplete-git/
 
 and it's absolutely essential to have branch names displayed in your command prompt:
 
-http://stackoverflow.com/questions/2231214/git-tips-and-tricks-display-branch-on-command-prompt-not-working-and-created-s
+http://stackoverflow.com/questions/17333531/how-can-i-display-the-current-branch-and-folder-path-in-terminal
 
 See examples in the following repos:
 
