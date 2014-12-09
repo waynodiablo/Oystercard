@@ -62,7 +62,7 @@ Now let's write our first test in spec/bike_spec.rb.
 describe Bike do
   # this is a specific feature (behaviour)
   # that we expect to be present
-  it "should not be broken after we create it" do
+  it 'should not be broken after we create it' do
     the_bike = Bike.new # initialise a new object of Bike class
     # expect an instance of this class to have
     # a method "broken?" that should return false
@@ -173,7 +173,7 @@ require 'bike'
 describe Bike do
 
   # this is a specific feature (behaviour) that we expect to be present
-  it "should not be broken after we create it" do
+  it 'should not be broken after we create it' do
     bike = Bike.new # initialise a new object of Bike class
     # expect an instance of this class to have a method "broken?" that should return false
     expect(bike).not_to be_broken
@@ -182,7 +182,7 @@ describe Bike do
 end
 ````
 
-Requiring a file is almost equivalent to just copy-pasting the contents of `bike.rb` on line 2 of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.
+Requiring a file is almost equivalent to just copy-pasting the contents of `bike.rb` on line 2 of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.  Note also that `require 'bike'` works here because the bike.rb file is in the lib directory.  The Ruby convention is that require will automatically look in a projects lib directory for Ruby files.
 
 **Now our example fails.**
 
@@ -192,7 +192,7 @@ However, now the example is failing, which means that we can test the Bike class
 
 ````ruby
 describe Bike do
-  it "should not be broken after we create it" do
+  it 'should not be broken after we create it' do
     # the test goes here, omitted for brevity
   end
 end
@@ -229,10 +229,10 @@ Our code is still extremely basic but we're getting somewhere. This is a good ti
 
 ### Making the broken? method work properly
 
-You may feel suspicious that our test suite pass while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
+You may feel suspicious that our test suite passes while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
 
 ````ruby
-it "should be able to break" do
+it 'should be able to break' do
   bike = Bike.new
   bike.break!
   expect(bike).to be_broken
@@ -306,7 +306,7 @@ end
 If a bike can be broken, it can be fixed too, right? Sounds like a test.
 
 ````ruby
-it "should be able to get fixed" do
+it 'should be able to get fixed' do
   bike = Bike.new
   bike.break!
   bike.fix!
@@ -404,18 +404,18 @@ require './lib/bike'
 
 describe Bike do
 
-  it "should not be broken after we create it" do
+  it 'should not be broken after we create it' do
     bike = Bike.new
     expect(bike).not_to be_broken
   end
 
-  it "should be able to break" do
+  it 'should be able to break' do
     bike = Bike.new
     bike.break!
     expect(bike).to be_broken
   end
 
-  it "should be able to get fixed" do
+  it 'should be able to get fixed' do
     bike = Bike.new
     bike.break!
     bike.fix!
@@ -434,16 +434,16 @@ describe Bike do
 
   let(:bike) { Bike.new }
 
-  it "should not be broken after we create it" do
+  it 'should not be broken after we create it' do
     expect(bike).not_to be_broken
   end
 
-  it "should be able to break" do
+  it 'should be able to break' do
     bike.break!
     expect(bike).to be_broken
   end
 
-  it "should be able to get fixed" do
+  it 'should be able to get fixed' do
     bike.break!
     bike.fix!
     expect(bike).not_to be_broken
@@ -471,7 +471,7 @@ Let's start with the most basic functionality: accepting the bikes. As usual, we
 ````ruby
 describe DockingStation do
 
-  it "should accept a bike" do
+  it 'should accept a bike' do
     bike = Bike.new
     station = DockingStation.new
     # we expect the station to have 0 bikes
@@ -614,7 +614,7 @@ Now that our tests pass it's a good time to check the code in.
 If our docking station can accept bikes, it will need to release them at some point. Let's write a test to release a bike.
 
 ````ruby
-it "should release a bike" do
+it 'should release a bike' do
   station.dock(bike)
   station.release(bike)
   expect(station.bike_count).to eq(0)
@@ -641,7 +641,7 @@ Now all tests should pass. Great news: we can now dock bikes and release them! L
 Let's now make our docking stations more realistic. Right now you can dock any number of bikes in there and it'll be ok as long as you have available memory on your machine (that'll be many, many millions of bikes). Let's introduce some limit on the capacity, set when the station is being initialised. As always, first comes the example.
 
 ````ruby
-it "should know when it's full" do
+it 'should know when it\'s full' do
   expect(station).not_to be_full
   20.times { station.dock(Bike.new) }
   expect(station).to be_full
@@ -719,7 +719,7 @@ Do you think the tests would pass now? Make a prediction, then run them. If they
 However, what happens if we try to dock the bike into a station that's full?
 
 ````ruby
-it "should not accept a bike if it's full" do
+it 'should not accept a bike if it\'s full' do
   20.times { station.dock(Bike.new) }
   expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
 end
@@ -754,7 +754,7 @@ end
 Now our test look better.
 
 ````ruby
-it "should not accept a bike if it's full" do
+it 'should not accept a bike if it\'s full' do
   fill_station station
   expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
 end
@@ -765,7 +765,7 @@ If everything passes, it's a good time to check everything in.
 When you need to get a bike from a station, you need to know what bikes are available. Some bikes can be broken and they shouldn't be available for rental. Let's create a method that will return the list of bikes that are available.
 
 ````ruby
-it "should provide the list of available bikes" do
+it 'should provide the list of available bikes' do
   working_bike, broken_bike = Bike.new, Bike.new
   broken_bike.break!
   station.dock(working_bike)
@@ -930,7 +930,7 @@ describe BikeContainer do
   let(:bike) { Bike.new }
   let(:holder) { ContainerHolder.new }
 
-  it "should accept a bike" do
+  it 'should accept a bike' do
     # we expect the holder to have 0 bikes
     expect(holder.bike_count).to eq(0)
     # let's dock a bike into the holder
@@ -950,7 +950,7 @@ describe DockingStation do
 
   let(:station) { DockingStation.new(:capacity => 123) }
 
-  it "should allow setting default capacity on initialising" do
+  it 'should allow setting default capacity on initialising' do
     expect(station.capacity).to eq(123)
   end
 end
@@ -987,7 +987,7 @@ garage.fix_bikes
 
 The advantage is that we have the same interface. The disadvantage is that we have to make two method calls (that's a big one).
 
-There's a really good overview of [potential strategies you could use on StackOverflow](http://stackoverflow.com/questions/4470108/when-monkey-patching-a-method-can-you-call-the-overridden-method-from-the-new-i_). Try using `alias_method` and `prepend` (and maybe others) and discuss their advantages and disadvantages with other students and teachers.
+There's a really good overview of [potential strategies you could use on StackOverflow](http://stackoverflow.com/questions/4470108/when-monkey-patching-a-method-can-you-call-the-overridden-method-from-the-new-i_). Try using `alias_method` and `prepend` (and maybe others) and discuss their advantages and disadvantages with other students and coaches.
 
 ## Exercises
 
