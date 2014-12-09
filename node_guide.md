@@ -85,11 +85,30 @@ Interesting, but not very useful. Let's start adding some testing tools so we ca
 
 At this point, it's a good idea to create a `.gitignore` file and add `node_modules` to it, as we don't want to add our local dependencies to Git, and ultimately to Github.
 
-Next, install `jasmine-node` (which is exactly what you think it is!), first locally to your dev-dependencies (`npm install --save-dev jasmine-node`), then, if you want, install it globally (`npm install -g jasmine-node`)
+Next, install `jasmine-node` (which is exactly what you think it is!), first locally to your dev-dependencies (`npm install --save-dev jasmine-node`), then, if you want, install it globally (`npm install -g jasmine-node`).
 
 > _When should I install npm packages globally?_
 > 
-> Great question. As a rule of thumb, if you want to use a package as an executable anywhere (the way that you can just type `rspec` in any folder and it will try to run - try it!), install it globally. However, always make sure that ALL the dependencies for a given project are listed correctly in the `package.json` so that anyone can clone your repo and get up and running. You can either do this by editing the `package.json` manually(not recommended, humans make silly mistakes), or using `npm install --save [package]` or `npm install --save-dev [package]`. Also, if you set up any scripts or automation tools, using the local executable from the `node_modules/[package]/bin` folder means that other developers won't have to your dependencies globally.
+> Great question. As a rule of thumb, if you want to use a package as an executable anywhere (the way that you can just type `rspec` in any folder and it will try to run - try it!), install it globally. However, always make sure that ALL the dependencies for a given project are listed correctly in the `package.json` so that anyone can clone your repo and get up and running. You can either do this by editing the `package.json` manually (not recommended, humans make silly mistakes), or using `npm install --save [package]` or `npm install --save-dev [package]`. Also, if you set up any scripts or automation tools, using the local executable from the `node_modules/[package]/bin` folder means that other developers won't have to your dependencies globally.
+
+Now we can start doing TDD in Node. Modify the `scripts` section of your `package.json` as follows:
+
+`package.json`  
+```json
+  "scripts": {
+    "test": "node_modules/jasmine-node/bin/jasmine-node spec/ --verbose"
+    },
+```
+
+We can now run our tests using the command `npm test`, which will look for a `spec` folder. Create that, and then we can start writing some tests.
+
+###Further resources
+[jasmine-node](https://github.com/mhevery/jasmine-node)
+
+
+
+
+
 
 [UNDER CONSTRUCTION]
 ##Node good practices: `npm`, `grunt`, JavaScript linters
