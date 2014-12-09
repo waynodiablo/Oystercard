@@ -6,6 +6,7 @@ Welcome to Node! This week, you will be learning how to build realtime applicati
 * Node is extrememly good at handling large numbers of simultaneous requests or connections  
 * Node is deliberately very minimal, encouraging users to write and use their own packages to extend functionality  
 * Node is growing at an incredible rate. Its ecosystem is massive, with the number of published `npm` packages rapidly overtaking Ruby's gems  
+  
 
 * Node is NOT multi-threaded; it's just very smart with how it deals with these requests  
 * Node is NOT mature - while currently stable, it is nowhere near a 1.0 release  
@@ -75,11 +76,11 @@ Error: no test specified
 npm ERR! Test failed.  See above for more details.
 ```
 
-Interesting, but not very useful. Let's start adding some testing tools so we can start playing with Node.
+Interesting, but not very useful. Let's start adding some testing tools so we can start playing with Node.  
 
 ###Further resources
-[What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json)
-[npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)
+[What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json)  
+[npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)  
 
 ##Unit testing with `jasmine-node`/Node modules
 
@@ -100,7 +101,63 @@ Now we can start doing TDD in Node. Modify the `scripts` section of your `packag
     },
 ```
 
-We can now run our tests using the command `npm test`, which will look for a `spec` folder. Create that, and then we can start writing some tests.
+We can now run our tests using the command `npm test`. `jasmine-node` has to be told which folder to look in, and will automatically detect any files ending in `*Spec.js`. Also, the `--verbose` flag means that we can see the spec list every time we run our test suite. Let's write a failing test, in this case for a hypothetical bowling scoring program:
+
+`spec/gameSpec.js`
+```javascript
+describe('Gutter game', function(){
+
+  var game = new Game;
+
+  it('Scores 0 on a gutter game', function(){
+    for(var i = 0; i < 20; i++){
+      game.roll(0);
+    }
+    expect(game.score).toEqual(0);
+  });
+});
+```
+
+As usual, we can begin to try to pass this test by creating the file `src/game.js` and creating a Game function (equivalent to a Ruby class):
+
+`src/game.js`
+```javascript
+function Game(){
+
+}
+```
+
+We will also need to require it at the top of the spec file:
+
+`spec/gameSpec.js`
+```javascript
+var Game = require('src/game');
+```
+
+*(if that `require` seems a bit strange, all will be explained...)*
+
+However, if we run `npm test`, we will get the following useful error, which will not change whatever we do to `game.js`:
+
+```shell
+TypeError: object is not a function
+```
+
+Thanks JavaScript. To explain this one, we need to take a brief sidestep and understand one of Node's key concepts: Node modules.
+
+###Node modules
+
+One of Node's guiding principles is that your app should be made of many small modules, each of which does one thing very well. This encourages code re-use, unit testing and decoupled architecture. Sound familiar? These are all concepts that you have encountered in Ruby & Unix and are important elements of writing good code.
+
+So how does this all work in practice? The main difference between Ruby and Node is that Node requires you to explicitly declare what parts of your module are accessible to other modules. So, with our example above, we can make the test pass by assigning our Game function to `module.exports`:
+
+`src/game/js`
+```javascript
+function Game(){
+
+}
+
+module.exports = Game;
+```
 
 ###Further resources
 [jasmine-node](https://github.com/mhevery/jasmine-node)
