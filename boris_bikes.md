@@ -1016,3 +1016,9 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
 - [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
 - [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
+
+### Related Videos
+
+- [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
+- [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
+- [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
