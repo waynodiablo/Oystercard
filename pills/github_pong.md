@@ -14,7 +14,13 @@ git checkout <pair-partner>/<branch-name>
 git checkout -b <branch-name>
 ```
 
-then to sync after your partner makes additional changes:
+Not that the above assumes a new branch name that you don't currently have on your local system.  If you are planning to ping pong on master then you can just pull your partners changes in directly like so
+
+```sh
+git pull <pair-partner> master
+```
+
+To sync after your partner makes additional changes:
 
 ```sh
 git pull <pair-partner> <branch-name>
@@ -24,7 +30,7 @@ It's also great to have tab completion for branch names:
 
 http://code-worrier.com/blog/autocomplete-git/
 
-and branch names displayed in your command prompt:
+and it's absolutely essential to have branch names displayed in your command prompt:
 
 http://stackoverflow.com/questions/2231214/git-tips-and-tricks-display-branch-on-command-prompt-not-working-and-created-s
 
