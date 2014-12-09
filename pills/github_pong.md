@@ -1,7 +1,7 @@
 Github Pong
 ============
 
-Github Pong involves pushing code back and forth over related Github branches to make for quick driver/navigator swaps when one is pairing using screen share.  First you need to ensure that all parties have a fork of whatever repo is being worked on.  Then make sure that everyone has each other added as a remote, e.g. 
+Github Pong involves pushing code back and forth over related Github branches to make for quick driver/navigator swaps when one is pairing using screen share.  First you need to ensure that all parties have a clone of whatever repo is being worked on.  Then make sure that everyone has each other added as a remote, e.g. 
 
 ```sh
 git remote add <pair-partner> <URL-to-pair-partners-repo>
