@@ -2,11 +2,16 @@
 
 Welcome to Node! This week, you will be learning how to build realtime applications using JavaScript across the whole stack. If you haven't heard of Node, here is a short list of what Node is and what Node isn't:
 
+**Please note, as with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
+
+
 * Node is a server-side implementation of JavaScript, using Google's extremely powerful V8 engine  
 * Node is extrememly good at handling large numbers of simultaneous requests or connections  
 * Node is deliberately very minimal, encouraging users to write and use their own packages to extend functionality  
 * Node is growing at an incredible rate. Its ecosystem is massive, with the number of published `npm` packages rapidly overtaking Ruby's gems  
   
+
+
 
 * Node is NOT multi-threaded; it's just very smart with how it deals with these requests  
 * Node is NOT mature - while currently stable, it is nowhere near a 1.0 release  
@@ -150,7 +155,7 @@ One of Node's guiding principles is that your app should be made of many small m
 
 So how does this all work in practice? The main difference between Ruby and Node is that Node requires you to explicitly declare what parts of your module are accessible to other modules. So, with our example above, we can make the test pass by assigning our Game function to `module.exports`:
 
-`src/game/js`
+`src/game.js`
 ```javascript
 function Game(){
 
@@ -158,6 +163,43 @@ function Game(){
 
 module.exports = Game;
 ```
+
+Now we should expect the following error:
+
+```shell
+TypeError: Object #<Game> has no method 'roll'
+```
+
+Awesome! Now our spec can see our Game module. Let's continue fixing the errors:
+
+`src/game.js`
+```javascript
+function Game(){
+
+}
+
+Game.prototype.roll = function(){
+
+}
+```
+
+Next error:
+
+```shell
+Expected undefined to equal 0.
+```
+
+And the fix:
+
+`src/game.js`
+```javascript
+function Game(){
+  this.score = 0;
+}
+```
+
+...and we should finally have a passing test! Highfive your pairing partner and celebrate how fun and easy testing in Node is. Kinda.
+
 
 ###Further resources
 [jasmine-node](https://github.com/mhevery/jasmine-node)
