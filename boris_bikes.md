@@ -751,7 +751,7 @@ def fill_station(station)
 end
 ````
 
-This DRYs out our test so that they will pass even if we change the default capacity.  Note that we can also drop the lambda from the test syntax so that our test now looks like this.
+This DRYs out our test so that they will pass even if we change the default capacity.  Note that we can also drop the [lambda](pills/lambdas.md) :pill: keyword from the test syntax so that our test now looks like this.
 
 ````ruby
 it 'should not accept a bike if it\'s full' do
