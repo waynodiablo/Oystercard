@@ -8,7 +8,7 @@
 4. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 5. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 6. [Github Profiles in JavaScript & Angular](https://github.com/makersacademy/course/blob/master/github_report.md)
-7. Chat Servers in Node
+7. [Chat Servers in Node](https://github.com/makersacademy/course/blob/master/node_guide.md)
 8. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
 9. [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
 10. [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
