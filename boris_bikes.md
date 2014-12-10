@@ -1022,3 +1022,5 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
 - [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
 - [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
+- [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
+- [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
