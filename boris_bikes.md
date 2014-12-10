@@ -743,24 +743,24 @@ Now our tests should pass but we have a long line of code in our tests that is r
 20.times { station.dock(Bike.new) }
 ````
 
-Let's refactor the code by extracting the method to a helper method (put it inside the `describe DockingStation` block).
+Let's refactor the code by extracting the method to a helper method (put it inside the `describe DockingStation` block), and referring to the constant in the DockingStation.
 
 ````ruby
 def fill_station(station)
-  20.times { station.dock(Bike.new) }
+  DockingStation::DEFAULT_CAPACITY.times { station.dock(Bike.new) }
 end
 ````
 
-Now our test look better.
+This DRYs out our test so that they will pass even if we change the default capacity.  Note that we can also drop the lambda from the test syntax so that our test now looks like this.
 
 ````ruby
 it 'should not accept a bike if it\'s full' do
   fill_station station
-  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
+  expect{ station.dock(bike) }.to raise_error(RuntimeError, 'Station is full')
 end
 ````
 
-If everything passes, it's a good time to check everything in.
+If everything passes, it's a good time to check everything in, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 When you need to get a bike from a station, you need to know what bikes are available. Some bikes can be broken and they shouldn't be available for rental. Let's create a method that will return the list of bikes that are available.
 
