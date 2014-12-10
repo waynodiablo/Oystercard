@@ -24,7 +24,11 @@ Next, let's get a server running, with tests: [A basic Node server](https://gith
 
 ###Related walkthroughs
 
-**Part 1:** 
+**Part 1:**  
 [Introduction to Node](https://github.com/makersacademy/Walkthroughs/blob/master/intro_to_node.md)  
 [Node good practices](https://github.com/makersacademy/Walkthroughs/blob/master/node_good_practices.md)  
 [A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md)
+
+**Part 2:**  
+[Express, `ejs` and middleware](https://github.com/makersacademy/Walkthroughs/blob/master/express_ejs.md)  
+
