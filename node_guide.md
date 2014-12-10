@@ -14,7 +14,7 @@ Check out the [Introduction to Node](https://github.com/makersacademy/Walkthroug
 Next, let's get a server running, with tests: [A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md).  
 
 ![Hello world](https://raw.githubusercontent.com/makersacademy/course/master/images/hw.png?token=AG-Bb1foQ0JkMHjnxgpyGbSDcxZkXWI9ks5UkWpbwA%3D%3D)
-![Tests passing!]()
+![Tests passing!](https://raw.githubusercontent.com/makersacademy/course/master/images/testpass.png?token=AG-BbzBqpKy1Nk8UTEIhVnvDfW1YfOtjks5UkWqfwA%3D%3D)
 
 ##Version 2 - Static pages and EJS templates
 
