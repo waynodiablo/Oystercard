@@ -651,7 +651,7 @@ end
 Why 20? Let's pass the capacity as a a parameter to the initialiser.
 
 ````ruby
-let(:station) { DockingStation.new(:capacity => 20) }
+let(:station) { DockingStation.new(capacity: 20) }
 ````
 
 So we're initialising the station as the station that has the capacity of 20 and we're filling it with 20 bikes. We expect it to be full after that. Run the test (it will complain about the wrong number of arguments for the initialiser). Let's fix the problem the test has uncovered.
@@ -714,7 +714,7 @@ end
 
 Why are we using `bike_count` as opposed to `@bikes.count`? Doing so would lead to repetition. If we have a method for giving us the bike count, we must use it.
 
-Do you think the tests would pass now? Make a prediction, then run them. If they do, it's a good time to commit the code.
+Do you think the tests would pass now? Make a prediction, then run them. If they do, it's a good time to commit the code, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 However, what happens if we try to dock the bike into a station that's full?
 
@@ -948,7 +948,7 @@ require './lib/docking_station'
 
 describe DockingStation do
 
-  let(:station) { DockingStation.new(:capacity => 123) }
+  let(:station) { DockingStation.new(capacity: 123) }
 
   it 'should allow setting default capacity on initialising' do
     expect(station.capacity).to eq(123)
