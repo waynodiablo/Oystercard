@@ -747,11 +747,11 @@ Let's refactor the code by extracting the method to a helper method (put it insi
 
 ````ruby
 def fill_station(station)
-  DockingStation::DEFAULT_CAPACITY.times { station.dock(Bike.new) }
+  20.times { station.dock(Bike.new) }
 end
 ````
 
-This DRYs out our test so that they will pass even if we change the default capacity.  Note that we can also drop the [lambda](pills/lambdas.md) :pill: keyword from the test syntax so that our test now looks like this.
+This helps make our test a little more readable.  Note that we can also drop the [lambda](pills/lambdas.md) :pill: keyword from the test syntax so that our test now looks like this.
 
 ````ruby
 it 'should not accept a bike if it\'s full' do
@@ -812,7 +812,9 @@ Instead, we need to use composition. A garage has a special area where to store 
 
 Let's begin by extracting the common functionality from the DockingStation to BikeContainer. Since we are not adding any new functionality, this process is refactoring. Therefore, we are not writing any new tests but using existing tests to make sure that we are not breaking anything in the process.
 
-Run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code more in details a minute later.
+Note that we might argue this is a case of 'premature refactoring'.  We haven't yet built the Van and the Garage and so we can't actually see the three replicated pieces of identical code that we will DRY out with this refactoring.  A cautious developer might write those classes first, and only refactor once they've been in use for a whole and it's clear that their functionality won't diverge.  In this simple artificial system it's easier to see that this will be a useful refactoring.  The important thing is to be aware of the tradeoffs regarding when to DRY out and when to hold off until you get more input from stakeholders in your project.  In this case let's create BikeContainer first to avoid writing the same code over and over.
+
+First, run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
 
 ````ruby
 module BikeContainer
@@ -836,7 +838,7 @@ module BikeContainer
   end
 
   def dock(bike)
-    raise "Station is full" if full?
+    raise 'Station is full' if full?
     bikes << bike
   end
 
