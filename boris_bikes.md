@@ -1032,3 +1032,4 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
 - [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
 - [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
+- [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
