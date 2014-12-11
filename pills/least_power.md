@@ -12,7 +12,7 @@ Some Ruby concepts from least to most powerful:
 7. hash {}
 8. nested array/hashes
 9. object
-10. collections of interactions objects
+10. collections of interacting objects
 11. composition
 12. inheritance
 
