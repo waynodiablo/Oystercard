@@ -1,7 +1,7 @@
 The Least Power Principle
 =========================
 
-Ruby concepts from least to most powerful.
+Some Ruby concepts from least to most powerful:
 
 1. nil
 2. boolean (true/false)
@@ -16,6 +16,7 @@ Ruby concepts from least to most powerful.
 11. composition
 12. inheritance
 
+Attr_* from least to most powerful:
 
 1. attr_reader
 2. attr_writer
