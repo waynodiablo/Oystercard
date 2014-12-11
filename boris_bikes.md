@@ -1024,6 +1024,7 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
 - [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
 - [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
+- [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
 
 ### Related Videos
 
@@ -1033,3 +1034,4 @@ There's a really good overview of [potential strategies you could use on StackOv
 - [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
 - [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
 - [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
+
