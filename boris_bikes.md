@@ -892,7 +892,7 @@ end
 
 Whenever any other method calls `capacity()`, it will return the value of the instance variable `@capacity`. However, if `@capacity` is nil, it will assign `DEFAULT_CAPACITY` to it first. This operator is short for `@capacity = @capacity || DEFAULT_CAPACITY`.
 
-This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.
+This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.  As with everything in Ruby please experiment with it in IRB to make sure you understand what's happening.
 
 The DockingStation now looks like this.
 
@@ -1003,6 +1003,12 @@ There's a really good overview of [potential strategies you could use on StackOv
 8. The method that releases the bike takes an argument: a bike to release. Would in make sense to rewrite the method to not to take any arguments? What are the pros and cons? How will you release broken bikes in this case? Discuss with other students and update the code, if necessary.
 9. Go over your code and identify if there are any scenarios that are not covered with tests and write tests for them. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
 10. Finally, identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 1-2 lines? Does anything look ugly to you?
+
+## Additional Exercises
+
+1. Rework your code using the London Style with doubles to ensure each unit test only relies on one class
+2. Create Integration tests that specifically check for class interactions (Chicago Styles)
+3. Create a text interface to allow you to move bikes around - start by testing our how to interact with the sytem in IRB
 
 ## Supporting Material
 
