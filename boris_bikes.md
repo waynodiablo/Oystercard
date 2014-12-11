@@ -651,7 +651,7 @@ end
 Why 20? Let's pass the capacity as a a parameter to the initialiser.
 
 ````ruby
-let(:station) { DockingStation.new(:capacity => 20) }
+let(:station) { DockingStation.new(capacity: 20) }
 ````
 
 So we're initialising the station as the station that has the capacity of 20 and we're filling it with 20 bikes. We expect it to be full after that. Run the test (it will complain about the wrong number of arguments for the initialiser). Let's fix the problem the test has uncovered.
@@ -714,7 +714,7 @@ end
 
 Why are we using `bike_count` as opposed to `@bikes.count`? Doing so would lead to repetition. If we have a method for giving us the bike count, we must use it.
 
-Do you think the tests would pass now? Make a prediction, then run them. If they do, it's a good time to commit the code.
+Do you think the tests would pass now? Make a prediction, then run them. If they do, it's a good time to commit the code, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 However, what happens if we try to dock the bike into a station that's full?
 
@@ -743,7 +743,7 @@ Now our tests should pass but we have a long line of code in our tests that is r
 20.times { station.dock(Bike.new) }
 ````
 
-Let's refactor the code by extracting the method to a helper method (put it inside the `describe DockingStation` block).
+Let's refactor the code by extracting the method to a helper method (put it inside the `describe DockingStation` block), and referring to the constant in the DockingStation.
 
 ````ruby
 def fill_station(station)
@@ -751,16 +751,16 @@ def fill_station(station)
 end
 ````
 
-Now our test look better.
+This helps make our test a little more readable.  Note that we can also drop the [lambda](pills/lambdas.md) :pill: keyword from the test syntax so that our test now looks like this.
 
 ````ruby
 it 'should not accept a bike if it\'s full' do
   fill_station station
-  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
+  expect{ station.dock(bike) }.to raise_error(RuntimeError, 'Station is full')
 end
 ````
 
-If everything passes, it's a good time to check everything in.
+If everything passes, it's a good time to check everything in, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 When you need to get a bike from a station, you need to know what bikes are available. Some bikes can be broken and they shouldn't be available for rental. Let's create a method that will return the list of bikes that are available.
 
@@ -812,7 +812,9 @@ Instead, we need to use composition. A garage has a special area where to store 
 
 Let's begin by extracting the common functionality from the DockingStation to BikeContainer. Since we are not adding any new functionality, this process is refactoring. Therefore, we are not writing any new tests but using existing tests to make sure that we are not breaking anything in the process.
 
-Run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code more in details a minute later.
+Note that we might argue this is a case of 'premature refactoring'.  We haven't yet built the Van and the Garage and so we can't actually see the three replicated pieces of identical code that we will DRY out with this refactoring.  A cautious developer might write those classes first, and only refactor once they've been in use for a whole and it's clear that their functionality won't diverge.  In this simple artificial system it's easier to see that this will be a useful refactoring.  The important thing is to be aware of the tradeoffs regarding when to DRY out and when to hold off until you get more input from stakeholders in your project.  In this case let's create BikeContainer first to avoid writing the same code over and over.
+
+First, run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
 
 ````ruby
 module BikeContainer
@@ -836,7 +838,7 @@ module BikeContainer
   end
 
   def dock(bike)
-    raise "Station is full" if full?
+    raise 'Station is full' if full?
     bikes << bike
   end
 
@@ -890,7 +892,7 @@ end
 
 Whenever any other method calls `capacity()`, it will return the value of the instance variable `@capacity`. However, if `@capacity` is nil, it will assign `DEFAULT_CAPACITY` to it first. This operator is short for `@capacity = @capacity || DEFAULT_CAPACITY`.
 
-This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.
+This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.  As with everything in Ruby please experiment with it in IRB to make sure you understand what's happening.
 
 The DockingStation now looks like this.
 
@@ -948,7 +950,7 @@ require './lib/docking_station'
 
 describe DockingStation do
 
-  let(:station) { DockingStation.new(:capacity => 123) }
+  let(:station) { DockingStation.new(capacity: 123) }
 
   it 'should allow setting default capacity on initialising' do
     expect(station.capacity).to eq(123)
@@ -1001,6 +1003,12 @@ There's a really good overview of [potential strategies you could use on StackOv
 8. The method that releases the bike takes an argument: a bike to release. Would in make sense to rewrite the method to not to take any arguments? What are the pros and cons? How will you release broken bikes in this case? Discuss with other students and update the code, if necessary.
 9. Go over your code and identify if there are any scenarios that are not covered with tests and write tests for them. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
 10. Finally, identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 1-2 lines? Does anything look ugly to you?
+
+## Additional Exercises
+
+1. Rework your code using the London Style with doubles to ensure each unit test only relies on one class
+2. Create Integration tests that specifically check for class interactions (Chicago Styles)
+3. Create a text interface to allow you to move bikes around - start by testing our how to interact with the sytem in IRB
 
 ## Supporting Material
 
