@@ -51,18 +51,23 @@ Make a new Rails app:
 
 * `yelp_clone` is the name of your app – Rails will create this in a new directory.
 * By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
-* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is problematic because Heroku doesn't support it. In this case, we're overriding the default to use PostgreSQL.
+* `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is a useful toy database, but can't be used on Heroku. In this case, we're overriding the default to use PostgreSQL.
 
 ##### Where'd all the files go?
 
 True to its 'opinionated' name, Rails is full of files and folders right from the get-go. Here's what some of them do:
 
-* `app` – **where your code goes**. Contains models, views and controllers.
-* `vendors` – a place for resources that you haven't written but are needed for the project, like jQuery.
-* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default.
-* `log` – keeps server logs and terminal output.
-* `config` – configuration information, including `database.yml` which includes database configuration details and a routes file.
-* `bin` – contains your specified version of Rails.
+* `app` – **where your code goes**. Contains models, views and controllers; as well also JavaScript & CSS assets
+* `bin` – contains specific versions of executables such as rails and rake for doing low level tasks
+* `config` – configuration information, including `database.yml` which includes database configuration details and a routes file
+* `db` - all our database related code for migrating and seeding the databse
+* `lib` - place to put non-rails ruby code
+* `log` – keeps server logs and terminal output
+* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default
+* `tmp` - temporary stuff gets stored here
+* `vendors` – a place for resources that you didn't write but are needed for the project, like jQuery; also called 3rd party assets
+
+
 
 ##### Boot the server
 
@@ -84,26 +89,28 @@ If this doesn't work, you may need to run
 
 instead.
 
-##### Add some testing gems
+##### Adding Gems for testing
 
-Now, add some gems to your Gemfile!
+We created a Rails app without its default testing framework.  Let's add in our prefered RSpec testing framework by adding som gems to our Gemfile.
 
 ```ruby
-gem 'rspec-rails', group: :test
-gem 'capybara', group: :test
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+end
 ```
 
-Run bundler to install your gems"
+Run bundler to install those gems
 
 `$ bundle`
 
-Once installed we want to run this command:
+Once installed we want to run this command (details on the rspec-rails website):
 
 `$ bin/rails generate rspec:install`
 
 This gets RSpec going by creating a `spec` directory and a helper file.
 
-In your `spec/rails_helper.rb` file, add the below the other require statements:
+In your `spec/rails_helper.rb` file, add the following below the other require statements:
 
 `require 'capybara/rails'`
 

@@ -8,11 +8,11 @@ Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framew
 
 This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
 
-* creating Rails applications
-* the structure of Rails apps (MVC, the router, helpers)
+* Creating Rails applications
+* The structure of Rails apps (MVC, the router, helpers)
 * TDD in Rails, with RSpec & Capybara
-* associations
-* validations
+* Associations
+* Validations
 * AJAX in Rails
 
 ***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
@@ -95,7 +95,7 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Michael Hartl's Rails tutorial](http://www.railstutorial.org/)
-* [Active Record Migrations] (http://guides.rubyonrails.org/migrations.html)]
+* [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
 
 ## Walkthroughs (under construction)
 
