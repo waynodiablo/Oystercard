@@ -4,7 +4,7 @@
 
 ![Yelp screenshot](images/yelp.jpg)
 
-Rails is a popular web framework. Sinatra, by comparison, is a DSL, not a framework – it gives you much more flexibility and fewer conventions when you're building a website. Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'.
+Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework.  It does not provide any guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'.
 
 This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to introduce you to Rails, focusing especially on:
 
@@ -30,6 +30,8 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 - [Resources](#resources)
 - [Walkthroughs](#walkthroughs-under-construction)
 
+
+Model View Controller (MVC) is an architectural pattern for dividing up responsibilities for serving a view, by having the presentation logic in a view, the business logic in a model and the two managed by a controller.  Very often the presentation of the final view will involve the controller coordinating the merging of model data with a view template for display to a user.  Please see this [diagram](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png).  As we go through building Yelp you'll see how Rails works in terms of Models, Views and Controllers.
 
 ## Version 1 - MVP
 
