@@ -94,7 +94,7 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * [Associations](http://guides.rubyonrails.org/association_basics.html)
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
-* [Michael Hartl's Rails tutorial](http://www.railstutorial.org/)
+* [Michael Hartl's Rails tutorial](http://www.railstutorial.org/book)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
 
 ## Walkthroughs (under construction)
