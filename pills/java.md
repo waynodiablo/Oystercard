@@ -46,7 +46,7 @@ To compile your program run `javac hello.java` (the `c` is for compile). All
 things being equal you'll see nothing happen. If you `ls` the contents you
 should see another file called `HelloWorld.class` in your directory. This is the
 compiled version of the Java you've just written. To run it just type
-`HelloWorld.class`, and you'll see what was expected. Note that the `.class`
+`java HelloWorld`, and you'll see what was expected. Note that the `.class`
 file name represents the class name in the `.java` file - it's best practice to
 name your `.java` files after the class they describe - do that from now on.
 
