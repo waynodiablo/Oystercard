@@ -116,7 +116,7 @@ This gets RSpec going by creating a `spec` directory and two helper files ('spec
 ```sh
 --color
 --format documentation
---helper spec_helper
+--require spec_helper
 ```
 
 Then, in your `spec/rails_helper.rb` file add the following require statement below the other require statements:
