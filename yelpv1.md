@@ -394,7 +394,7 @@ Let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twi
 
 ##### Rendering restaurants in the view
 
-Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's do this in the wrong way first, but see if you can spot what we are doing wrong:
+Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's do this in the wrong way first, but see if you can spot what we are doing wrong. Replace the contents of `restaurants/index.html.erb` with the following:
 
 ```html
 <% if Restaurant.all.any? %>
@@ -403,6 +403,7 @@ Now, in `restaurants_controller.rb` we want to get all of the restaurants from t
   <% end %>
 <% else %>
   <h1>No restaurants yet</h1>
+  <a href="#">Add a restaurant</a>
 <% end %>
 ```
 
