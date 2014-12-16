@@ -699,11 +699,9 @@ Now let's tackle updating restaurants. Testing first:
 ...
 context 'editing restaurants' do
 
-  before do
-    Restaurant.create(name:'KFC')
-  end
+  before {Restaurant.create name: 'KFC'}
 
-  it 'lets a user edit a restaurant' do
+  scenario 'let a user edit a restaurant' do
    visit '/restaurants'
    click_link 'Edit KFC'
    fill_in 'Name', with: 'Kentucky Fried Chicken'
@@ -781,11 +779,9 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 describe 'deleting restaurants' do
 
-  before do
-    Restaurant.create(:name => "KFC")
-  end
+  before {Restaurant.create name: 'KFC'}
 
-  it "removes a restaurant when a user clicks a delete link" do
+  scenario 'removes a restaurant when a user clicks a delete link' do
     visit '/restaurants'
     click_link 'Delete KFC'
     expect(page).not_to have_content 'KFC'
@@ -842,12 +838,10 @@ Let's add some reviews for our restaurants.
 ```ruby
 require 'rails_helper'
 
-describe 'reviewing' do
-  before do
-    Restaurant.create(name: 'KFC')
-  end
+feature 'reviewing' do
+  before {Restaurant.create name: 'KFC'}
 
-  it 'allows users to leave a review using a form' do
+  scenario 'allows users to leave a review using a form' do
      visit '/restaurants'
      click_link 'Review KFC'
      fill_in "Thoughts", with: "so so"
@@ -996,12 +990,12 @@ First, write a test. We'll add this within our existing feature spec for restaur
 `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
-describe 'creating restaurants' do
+feature 'creating restaurants' do
 
 ...
 
   context 'an invalid restaurant' do
-    it 'does not let you submit a name that is too short' do
+    scenario 'does not let you submit a name that is too short' do
       visit '/restaurants'
       click_link 'Add a restaurant'
       fill_in 'Name', with: 'kf'
@@ -1038,7 +1032,7 @@ But our expectation of `not_to be_valid` is pretty vague – a restaurant might 
 require 'spec_helper'
 
 RSpec.describe Restaurant, :type => :model do
-  it 'is not valid with a name of less than three characters' do
+  scenario 'is not valid with a name of less than three characters' do
     restaurant = Restaurant.new(name: "kf")
     expect(restaurant).to have(1).error_on(:name)
     expect(restaurant).not_to be_valid
@@ -1101,7 +1095,7 @@ What does this do? Well, in the case that our restaurant has any errors on it (t
 We also don't want to allow users to create the same restaurant twice. So, let's write a test in our restaurant model spec!
 
 ```ruby
-it "is not valid unless it has a unique name" do
+scenario "is not valid unless it has a unique name" do
   Restaurant.create(name: "Moe's Tavern")
   restaurant = Restaurant.new(name: "Moe's Tavern")
   expect(restaurant).to have(1).error_on(:name)
@@ -1124,7 +1118,7 @@ Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb
 require 'rails_helper'
 
 RSpec.describe Review, :type => model do
-  it "is invalid if the rating is more than 5" do
+  scenario "is invalid if the rating is more than 5" do
     review = Review.new(rating: 10)
     expect(review).to have(1).error_on(:rating)
   end
