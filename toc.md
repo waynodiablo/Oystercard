@@ -28,7 +28,7 @@ Here you will find other, relevant materials and challenges that will help you o
 
 ![Yvette](https://avatars2.githubusercontent.com/u/6195662?v=3&s=128) ![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128) ![Denise](https://avatars2.githubusercontent.com/u/8420094?v=3&s=128)
 ![Craig](https://avatars2.githubusercontent.com/u/8399027?v=3&s=128)
-![Tim](https://avatars2.githubusercontent.com/u/8402445?v=3&s=460)
+![Tim](https://avatars2.githubusercontent.com/u/8402445?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Look Mum No Hands](http://www.lookmumnohands.com)
