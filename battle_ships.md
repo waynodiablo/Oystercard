@@ -10,6 +10,8 @@ After each player has placed their ships on their own board they take turns to s
 
 When all of one player's ships have been hit the game finishes and the player who has ships remaining is the winner.
 
+***Please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+
 ## Version 0: Modelling the domain
 
 Your first task is to spend some time researching the domain of the battleships game and discovering the objects that you will need for this application to work (think back to what we did with [boris bikes](/boris_bikes.md) in Version 0).
@@ -38,7 +40,7 @@ The **SRP** is one of five principles that make up **SOLID** ( _Single responsib
 
 **Tasks**:
 
-1. Code the classes and their interactions ( _Test First!_ )
+1. Code the classes and their interactions ( _Test First!, and swap driver/navigator roles frequently :twisted_rightwards_arrows:._)
 2. Think about the classes you have created. Are they following the **SRP** ?
 3. Play with your code in `irb` ( _if you prefer `pry` go with it_ )
 4. Present one of the **SOLID** principles to your cohort.
@@ -72,7 +74,7 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 1. Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your cohort ( _maybe as a lunch and learn?_ ).
 2. Create a storyboard of screens you think you will need to implement in order to cater for a good UX.
 3. Present the UI and UX you have created to the your cohort and discuss the different approaches.
-4. Implement the User Interface.
+4. Implement the User Interface, swapping driver/navigator roles frequently :twisted_rightwards_arrows:.
 5. Let your cohort ( and the senior cohort ) play with your battleships game ( _maybe a little battleships tournament?_ )!
 
 ## Supporting Material

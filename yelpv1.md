@@ -12,7 +12,7 @@
         - [Boot the server](#boot-the-server)
         - [Add some testing gems](#add-some-testing-gems)
     - [The first test – home page with a link](#the-first-test--home-page-with-a-link)
-        - [`rake routes`](#rake-routes)
+        - [Rails Routing](#rails-routing)
         - [Creating controllers](#creating-controllers)
         - [Creating views](#creating-views)
     - [The second test – creating a restaurant on the backend](#the-second-test--creating-a-restaurant-on-the-backend)
@@ -36,6 +36,9 @@
         - [Adding validations - restaurant uniqueness](#adding-validations---restaurant-uniqueness)
         - [Adding validations – reviews](#adding-validations---reviews)
     - [Done](#done)
+
+
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles at least as often as you see the :twisted_rightwards_arrows: sign.***
 
 #### Getting started
 
@@ -108,26 +111,34 @@ Once installed we want to run this command (details on the rspec-rails website):
 
 `$ bin/rails generate rspec:install`
 
-This gets RSpec going by creating a `spec` directory and a helper file.
+This gets RSpec going by creating a `spec` directory and two helper files ('spec/spec_helper.rb' and 'spec/rails_helper.rb'). It also creates a '.rspec' file which we should edit to look like this:
 
-In your `spec/rails_helper.rb` file, add the following below the other require statements:
+```sh
+--color
+--format documentation
+--helper spec_helper
+```
+
+Then, in your `spec/rails_helper.rb` file add the following require statement below the other require statements:
 
 `require 'capybara/rails'`
 
-This lets you use Capybara in your testing environment.
+This lets you use Capybara in your testing environment for the purpose of writing end user acceptance tests.  
+
+**It might seem early but Rails has generated a lot of code for us so this would be a good time to commit our initial code to git, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.**
 
 #### The first test – home page with a link
 
-Make a `spec/features/` directory, and make a new spec file inside it.
+Let's start with a top level acceptance test of our site as it would be experienced through the eyes of our users.  Make a `spec/features/` directory, and make a new spec file inside it.
 
 `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 require 'rails_helper'
 
-describe 'restaurants' do
+feature 'restaurants' do
   context 'no restaurants have been added' do
-      it 'should display a prompt to add a restaurant' do
+    scenario 'should display a prompt to add a restaurant' do
       visit '/restaurants'
       expect(page).to have_content 'No restaurants'
       expect(page).to have_link 'Add a restaurant'
@@ -136,23 +147,48 @@ describe 'restaurants' do
 end
 ```
 
-Now run `rspec`, which will say that there's no route matching `/restaurants`. Simple.
+We should now see rspec fail with 'No route matches [GET] "/restaurants"' which indicates that we should make a change in 'config/routes.rb'
 
-The `config/routes.rb` file has lots of clues as to how to write routes – have a look at them.
+```ruby
+get 'restaurants' => 'restaurants#index'
+```
 
-`config/routes.db`:
+which links up the '/restaurants' URL to the index action on the restaurants controller.  As we have more actions we could continue to add individual routes such as "get 'restaurants/new' => 'restaurants#new'", but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
 
 ```ruby
 resources :restaurants
 ```
 
-##### `bin/rake routes`
+##### Rails Routing
 
-If you now run `bin/rake routes` you'll get a list of the different routes that this has created. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.
+If you now run `bin/rake routes` you'll get a list of the different routes created by `resources :restaurants`. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.  Here's the output from the bin/rake routes` command:
 
-Look at the way it's automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast it can be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
+```sh
 
-Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller. Time to make one!
+          Prefix  Verb    URI Pattern                     Controller#Action
+     restaurants  GET     /restaurants(.:format)          restaurants#index
+                  POST    /restaurants(.:format)          restaurants#create
+ new_restaurants  GET     /restaurants/new(.:format)      restaurants#new
+edit_restaurants  GET     /restaurants/:id/edit(.:format) restaurants#edit
+      restaurant  GET     /restaurants/:id(.:format)      restaurants#show
+                  PATCH   /restaurants/:id(.:format)      restaurants#update
+                  PUT     /restaurants/:id(.:format)      restaurants#update
+                  DELETE  /restaurants/:id(.:format)      restaurants#destroy
+
+```
+
+on the left we see special prefixes that we can use to refer to these routes in  our rails code.  More on those soon.  The Verb is the HTTP verb used to access this route given the specific URI pattern, which includes optional formatting and in some cases id variables.  Each route is mapped to a specific action method on a controller; for example a 'GET' request to '/restaurants/3/edit' would lead us to call the edit action on the restaurants controller with an id variable set to the value 3.
+
+Notice also the way `resources :restaurants` has automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast it can be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
+
+
+Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller.
+
+```sh
+uninitialized constant RestaurantsController
+```
+
+Time to make a controller! First let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Creating controllers
 
@@ -160,22 +196,50 @@ Controllers are a bit like methods in a Sinatra server file – they contain th
 
 `$ bin/rails g controller restaurants`
 
-(Here, `g` is short for generate.)
+Note, `g` is short for generate.  This command will generate a file restaurants_controller.rb in app/controllers and also an rspec test in spec/controllers.  Let's delete the latter for the moment since the integration test we are writing is currently sufficient for testing the controller functionality.
 
-Now, RSpec gives us a different error – that there's no action /index for restaurants. Let's fix that.
+Now, RSpec gives us a different error – that there's no action /index for restaurants.
 
-`app/controllers/restaurants_controller.rb`:
+```sh
+The action 'index' could not be found for RestaurantsController
+```
+
+Which indicates that we need to add an index method in our controller. If we were using Sinatra we might be tempted to use something like the following:
 
 ```ruby
-class RestaurantsController < ApplicationController
-
-  def index
-  end
+get '/restaurants' do
 
 end
 ```
 
-Now we get a different error – that `app/views/` is missing an index view. Let's make one of those.
+However rails is a little simpler, and we can just define a method like so:
+
+```ruby
+class RestaurantsController < ApplicationController
+  def index
+    raise 'Hello from the index action'
+  end  
+end
+```
+
+Let's now take a little detour to see what this generates if we view the live site in a browser.  To run our rails server use the following command:
+
+```sh
+bin/rails server
+```
+
+which creates a web server running on port 3000 that we can browse to at http://localhost:3000, which will have a friendly welcome page for us. [Note that to shut the server down we type Ctrl-C]
+
+Go to http://localhost:3000/restaurants and we'll see an error response in the RestaurantsController index action.  Notice the error page is showing us exactly the line in the controller where the error we raised occurred.  To move on we'll need a view and a model to give a response back to the user.
+
+
+We don't have to have a model immediately.  If we remove the raise statement from the controller and run our tests we should get the following error:
+
+```
+Missing template restaurants/index
+```
+
+This is because our controller index action is looking for an erb template to display. Let's create one of those views.
 
 ##### Creating views
 
@@ -183,7 +247,7 @@ Much like in Sinatra, views tell your app how to present content on the page.
 
 `$ touch app/views/restaurants/index.html.erb`
 
-(Note the double file extension here.)
+(Note the double file extension of the form 'index.html.erb'. Note that unlike sinatra that we don't have to specify the erb file directly. )
 
 Now our error is that there's no text on the page! Fix it:
 
@@ -202,7 +266,36 @@ No restaurants yet!
 <a href='#'>Add a restaurant</a>
 ```
 
-We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same. Now our test is passing.
+We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same. Now our test is passing.  A good time to commit our code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+
+Now let's try running out server again (if we didn't shut it down previously).  Note that we can use the following shorthand (where s is short for server)
+
+```sh
+bin/rails s
+```
+
+http://localhost:3000/restaurants should now show the content of the index.html.erb file in the browser.  There's a bit more work to get here than with Sinatra, but Rails is providing a layout that we'll use again and again. Each view is automatically wrapped in a layout file that by default is 'app/views/layouts/application.html.erb' which has the following contents:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>YelpClone</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>
+```
+
+where the yield statement is place that the controller specific template will be inserted.
+
+Note also that we can see the available routes in an error message if we get our route wrong, e.g. going to http://localhost:3000/restaurantss we'll get an error and the same routing table that we get from running `bin/rake routes`.  Note also we will only get these sorts of error messages in our development environment.
 
 #### The second test – creating a restaurant on the backend
 
@@ -216,7 +309,7 @@ context 'restaurants have been added' do
     Restaurant.create(name: 'KFC')
   end
 
-  it 'should display restaurants' do
+  scenario 'display restaurants' do
     visit '/restaurants'
     expect(page).to have_content('KFC')
     expect(page).not_to have_content('No restaurants yet')
@@ -225,26 +318,70 @@ end
 ...
 ```
 
-Now we need a Restaurant model to satisfy our failing test.
+Note that the creation of the object here is similar to DataMapper using the term Restaurant.create, although in this case we are using the Rails gem ActiveRecord to create an object that will be stored in the database.
+
+Running the tests here should give us the error 'Uninitialized constant Restaurant' which indicates that we need a Restaurant model to satisfy our failing test.
 
 ##### Models and migrations
 
-Models contain all the logic behind the 'nouns' that make up your app. In our case, these are going to be restaurants, reviews, etc. They add constraints to these and tell the app how they should be represented in the database.
+Models contain all the logic behind the 'nouns' that make up your app. In our case, these are going to be restaurants, reviews, etc. They add constraints to on how these objects can behave and tell the app how they should be represented in the database.
 
-`$ bin/rails g model restaurant name:string rating:integer`
+`$ bin/rails g model restaurant name:string description:text rating:integer`
+
+Which should generate terminal output something like the following:
+
+```sh
+invoke  active_record
+create    db/migrate/20141215193023_create_restaurants.rb
+create    app/models/restaurant.rb
+```
+
+Note that we can abbreviate generate to g (just as server was abbreviated to s) and that we can remove anything we generate using the same command but replacing 'generate' with 'destroy' (or d).
 
 This command does a couple of things:
 
-* creates a new model, which tells the app what a 'restaurant' is and what properties it has.
-* creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database.
+* it creates a new model, which tells the app what a 'restaurant' is and what properties it has.
+* it creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database.
 
-Specifically, we've added 'name' and 'description' properties for each restaurant. Each item gets an ID automatically.
+Specifically, we've added 'name', 'description' and rating properties for each restaurant. Each item gets an ID automatically.
 
 **Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
 
-(Here, **string** and **text** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not.)
+Unlike in Datamapper where we might add a property :name, String in the model file, in Rails active record the properties are all specified in migrations, so that we have a precise record of the changes that the database goes through as we evolve our models over time, and they can all be stored in our version control system.
 
-If you make a mistake, you can type the above command but using instead `rails d` – for destroy – to remove the migration.
+Looking at db/migrate/20141215193023_create_restaurants.rb we see the following file has been created:
+
+```ruby
+class CreateRestaurants < ActiveRecord::Migration
+  def change
+    create_table :restaurants do |t|
+      t.string :name
+      t.text :description
+      t.integer :rating
+
+      t.timestamps
+    end
+  end
+end
+```
+
+Note that as well as the string name property that we specified in the generator timestamps are automatically added for us (so when models are created and updated we'll be able to look up when that happened), and that also the migration itself is timestamped based on when we ran the generate command
+
+* We can run our tests now, but we'll get a reminder that we need to actually run these migrations in order to support the Restaurant model that we want to work with:
+
+```sh
+bin/rake db:migrate
+```
+
+* Depending on our setup we might also have to run this migration (which creates the restaurant table in the database) on the test database like so:
+
+```sh
+bin/rake db:migrate RAILS_ENV=test
+```
+
+(Here, **string**, **text** and **integer** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not; while integer is a number.)
+
+It's easy to make a mistake during generation.  You can quickly erase your work using the above command but using instead `rails d` – for destroy – to remove the migration.
 
 Then:
 
@@ -254,9 +391,27 @@ which will run all of your database migrations.
 
 (A word on migrations – if you need to change something, **don't edit the schema file**. If you want to remove database tables or change the schema in any way, instead write another migration that does that).
 
+Let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: again.
+
 ##### Rendering restaurants in the view
 
-Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's add a method for that (*the method below replaces the old method*):
+Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's do this in the wrong way first, but see if you can spot what we are doing wrong:
+
+```html
+<% if Restaurant.all.any? %>
+  <% Restaurant.all.each do |restaurant| %>
+    <%= restaurant.name %>
+  <% end %>
+<% else %>
+  <h1>No restaurants yet</h1>
+<% end %>
+```
+
+The tests should all pass now, but what cardinal sin have we committed?
+
+We're talking directly to our model from our view, and this can lead to dangerous spaghetti code.  We should prefer to have our controller mediate communication between the model and view.
+
+Let's add a method to suppport that (*the method below replaces the old method*):
 
 ```ruby
 def index
@@ -278,22 +433,26 @@ This creates an instance variable `@restaurants` that is accessible in our `inde
 <a href='#'>Add a restaurant</a>
 ```
 
+So in summary our URL http://localhost:3000/restaurants hits the Rails routing system, which passes the request to the index action in the restaurants controller which queries the database for any restaurant models.  The controller then passes an instance variable containing all the restaurant models to the erb view, where they can be correctlt formatted and the resulting HTML is passed back to the browser for display to the end user.
+
+The tests should all now pass. A good time to commit our code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+
 #### Creating a restaurant on the frontend
 
-That last test is all well and good, but it invokes `Restaurant.create` – we still don't have a way for users of our site to add restaurants. Let's add a test for that now.
+Currently we can browse a list of restaurants, but we don't have a way for users of our site to add restaurants. Let's add a test for that now.
 
 `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
-describe 'creating restaurants' do
- it 'prompts user to fill out a form, then displays the new restaurant' do
-  visit '/restaurants'
-  click_link 'Add a restaurant'
-  fill_in 'Name', with: 'KFC'
-  click_button 'Create Restaurant'
-  expect(page).to have_content 'KFC'
-  expect(current_path).to eq '/restaurants'
- end
+context 'creating restaurants' do
+  scenario 'prompts user to fill out a form, then displays the new restaurant' do
+    visit '/restaurants'
+    click_link 'Add a restaurant'
+    fill_in 'Name', with: 'KFC'
+    click_button 'Create Restaurant'
+    expect(page).to have_content 'KFC'
+    expect(current_path).to eq '/restaurants'
+  end
 end
 ```
 
