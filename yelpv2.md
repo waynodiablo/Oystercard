@@ -156,7 +156,7 @@ And now we need sign in and sign up links, so add this to the above:
 <% end %>
 ```
 
-And now we should be green.
+And now we should be green. A good time to  commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 #### Adding OmniAuth login
 
@@ -193,7 +193,8 @@ Now we want to set limits on what site visitors can do. From our [specification]
 * Users can only leave **one review per restaurant**
 * Users can delete their own reviews
 
-Let's tackle these one by one. Remember to always write tests first!
+Let's tackle these one by one. Remember to always write tests first, commit often to git and swap driver/navigator roles frequently&nbsp;:twisted_rightwards_arrows:.
+
 
 ##### A user must be logged in to create restaurants
 

@@ -3,6 +3,9 @@
 
 # Yelp
 
+***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
+
 ### V3 Walkthrough
 
 In this version of our app, we want to tidy up the UX (user experience). It would be nice if our restaurants showed their average rating. It would also be cool if the page didn't refresh when we clicked on a link but updated dynamically.
@@ -38,6 +41,8 @@ Let's see what we can do.
     - [Setting AWS environment vars](#setting-aws-environment-vars)
     - [Deploy](#deploy)
 - [Done](#done)
+
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles at least as often as you see the :twisted_rightwards_arrows: sign.***
 
 #### Average ratings
 
@@ -343,7 +348,7 @@ resources :restaurants, shallow: true do
 end
 ```
 
-Note that we are using [shallow nesting](http://guides.rubyonrails.org/routing.html#shallow-nesting). Follow that link and have a read about shallow nesting, and see what adding `shallow: true` does to your Rails routes - in short it means we can avoid ever having resources nested more than one level deep in our URL structure. 
+Note that we are using [shallow nesting](http://guides.rubyonrails.org/routing.html#shallow-nesting). Follow that link and have a read about shallow nesting, and see what adding `shallow: true` does to your Rails routes - in short it means we can avoid ever having resources nested more than one level deep in our URL structure.
 
 Check your tests and amend any routes that may have changed.
 
