@@ -3,6 +3,9 @@
 
 # Yelp
 
+***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
+
 ### V1 Walkthrough
 
 - [V1 Walkthrough](#v1-walkthrough)
