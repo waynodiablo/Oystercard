@@ -530,7 +530,7 @@ AbstractController::ActionNotFound:
 The action 'create' could not be found for RestaurantsController
 ```
 
-We need a `create` method!
+We need a `create` method!  Before implementing the following, please experiment with create doing a `raise params` instead of the below and see what that gives you.  The params is what is returned from the form submisson and it's very important to understand how it works.
 
 ```ruby
 class RestaurantsController < ApplicationController
