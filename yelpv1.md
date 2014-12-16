@@ -326,7 +326,7 @@ Running the tests here should give us the error 'Uninitialized constant Restaura
 
 Models contain all the logic behind the 'nouns' that make up your app. In our case, these are going to be restaurants, reviews, etc. They add constraints to on how these objects can behave and tell the app how they should be represented in the database.
 
-`$ bin/rails g model restaurant name:string description:text rating:integer`
+`$ bin/rails g model restaurant name:string rating:integer`
 
 Which should generate terminal output something like the following:
 
@@ -343,7 +343,7 @@ This command does a couple of things:
 * it creates a new model, which tells the app what a 'restaurant' is and what properties it has.
 * it creates a **migration** which contains instructions for Rake ('Ruby `make`') to update the database.
 
-Specifically, we've added 'name', 'description' and rating properties for each restaurant. Each item gets an ID automatically.
+Specifically, we've added 'name' and rating properties for each restaurant. Each item gets an ID automatically.
 
 **Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
 
@@ -356,7 +356,6 @@ class CreateRestaurants < ActiveRecord::Migration
   def change
     create_table :restaurants do |t|
       t.string :name
-      t.text :description
       t.integer :rating
 
       t.timestamps
@@ -379,7 +378,7 @@ bin/rake db:migrate
 bin/rake db:migrate RAILS_ENV=test
 ```
 
-(Here, **string**, **text** and **integer** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters whereas *text* does not; while integer is a number.)
+(Here, **string** and **integer** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters while integer is a number.)
 
 It's easy to make a mistake during generation.  You can quickly erase your work using the above command but using instead `rails d` – for destroy – to remove the migration.
 
@@ -456,9 +455,23 @@ context 'creating restaurants' do
 end
 ```
 
-The test will fail. We have an 'Add a restaurant' link, but it doesn't go anywhere! Where should we link to? Run `bin/rake routes` if you want a clue...
+The test should fail like so:
 
-Let's make a new method in `restaurants_controller.rb` to go alongside our `index` method.
+```sh
+Capybara::ElementNotFound:
+Unable to find field "Name"
+```
+
+We have an 'Add a restaurant' link, but it doesn't go anywhere! Where should we link to? Run `bin/rake routes` if you want a clue...
+
+If you're feeling advanced see if you can use a rails path helper rather than hardcoding a particular URL.  Once you've got the link set correctly you should get a new error like this:
+
+```sh
+AbstractController::ActionNotFound:
+The action 'new' could not be found for RestaurantsController
+```
+
+This indicates that we should make a new method in `restaurants_controller.rb` to go alongside our `index` method.
 
 `app/controllers/restaurants_controller.rb`:
 
@@ -470,11 +483,31 @@ class RestaurantsController < ApplicationController
 ...
 ```
 
-Run your tests again – sure enough, our `new` method doesn't have a view associated with it. Let's make one.
+This should give us a new test error. A good time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.  Note that generally we don't want to commit broken tests to master; it's better practice to use a feature branch and only merge to master when green.  In this case the new test error should be something like:
+
+```sh
+ActionView::MissingTemplate:
+Missing template restaurants/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+* "/Users/sam/Documents/Github/MakersAcademy/Sam/yelp_clone/app/views"
+```
+
+The problem is that our `new` method doesn't have a view associated with it. Let's make one.
 
 `$ touch app/views/restaurants/new.html.erb`
 
+This gives us a new test failure:
+
+```sh
+Failure/Error: fill_in 'Name', with: 'KFC'
+Capybara::ElementNotFound:
+Unable to find field "Name"
+```
+
+We're currently missing anything on that page to allow a user to submit restaurant details - let's make a form to fix that!
+
 ##### Making forms in Rails – `form_for`, `create`, and `permit`
+
+HTML forms are the common way to submit data through web applications and Rails provides a lot of helpers to streamline the process of creating them.  Adjust our new template as follows:
 
 `app/views/restaurants/new.html.erb`
 
@@ -488,7 +521,15 @@ Run your tests again – sure enough, our `new` method doesn't have a view assoc
 
 Here, we're using Rails' built-in `form_for` helper to build a form, which takes care of a lot of things, including verifying the authenticity of the form. You can read more about that in [RailsGuides](http://guides.rubyonrails.org/form_helpers.html).
 
-Run your tests again – RSpec will now say it doesn't know what to do with the information submitted into that form. We need a `create` method!
+Run your tests again – RSpec will now say it doesn't know what to do with the information submitted into that form.
+
+```sh
+Failure/Error: click_button 'Create Restaurant'
+AbstractController::ActionNotFound:
+The action 'create' could not be found for RestaurantsController
+```
+
+We need a `create` method!
 
 ```ruby
 class RestaurantsController < ApplicationController
@@ -500,7 +541,15 @@ class RestaurantsController < ApplicationController
 ...
 ```
 
-Looks good. Wait... why doesn't this work?
+Looks good. However there's a problem:
+
+```sh
+Failure/Error: click_button 'Create Restaurant'
+ActiveModel::ForbiddenAttributesError:
+ActiveModel::ForbiddenAttributesError
+```
+
+Hmmm... why doesn't this work?
 
 Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
 
@@ -524,7 +573,7 @@ to instead say
 Restaurant.create(restaurant_params)
 ```
 
-which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.
+which tells Rails that we should allow only the field labelled 'name' to be accepted by the form.  Your tests should now all be green!  This would be a good time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 Now let's clean up that form a bit – using `Restaurant.new` inside the view logic isn't good practice, so instead we'll use `@restaurant` and let the controller deal with what that means.
 
