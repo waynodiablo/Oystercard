@@ -687,7 +687,7 @@ Now all we need is a view for the restaurant show method. Let's make one.
 <p><%= @restaurant.description %></p>
 ```
 
-That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
+That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.  This is a good time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Updating restaurants
 
@@ -765,7 +765,7 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
 ...
 ```
 
-And we're done.
+And we're done. A good time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Deleting restaurants
 
@@ -825,7 +825,7 @@ Don't forget to display the `flash[:notice]` in `application.html.erb`, by addin
 <%= yield %>
 ```
 
-And now our tests pass and we've got all four CRUD methods!
+And now our tests pass and we've got all four CRUD methods!  Let's celebrate by  committing our latest code to git, and switching Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 #### Adding reviews to restaurants – associations
 
@@ -919,7 +919,7 @@ def review_params
 end
 ```
 
-(Remember all the `permit` weirdness from before!)
+(Remember all the `permit` weirdness from before!)  Not, this is probably a good time to commit our code and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Associating restaurants and reviews
 
@@ -983,6 +983,8 @@ But what if the 'parent' restaurant gets deleted? This would lead to reviews exi
 has_many :reviews, dependent: :destroy
 ```
 
+Before we move on let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: again.
+
 #### Stop users creating duplicate restaurants – validations
 
 First, write a test. We'll add this within our existing feature spec for restaurants.
@@ -1040,7 +1042,7 @@ RSpec.describe Restaurant, :type => :model do
 end
 ```
 
-To get this test to run, you will need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.
+To get this test to run, you will need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.  Time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Adding validations – restaurant name length
 
@@ -1088,7 +1090,7 @@ To show an error, let's edit our view. Add this to the top of your `views/restau
 
 What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `section`, along with a count of how many errors there are.
 
-(Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)
+(Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)  Let's also commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: one last time in this walkthrough.
 
 ##### Adding validations - restaurant uniqueness
 
@@ -1131,7 +1133,7 @@ Your test will fail because our review model doesn't stop someone from submittin
 validates :rating, inclusion: (1..5)
 ```
 
-Your tests should now all be passing.
+Your tests should now all be passing.  Commit and High Five!!!!!
 
 #### Done
 
