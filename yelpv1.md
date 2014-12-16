@@ -780,7 +780,7 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 ...
 
-describe 'deleting restaurants' do
+context 'deleting restaurants' do
 
   before {Restaurant.create name: 'KFC'}
 
@@ -922,7 +922,7 @@ def review_params
 end
 ```
 
-(Remember all the `permit` weirdness from before!)  Not, this is probably a good time to commit our code and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+(Remember all the `permit` weirdness from before!)  Now, this is probably a good time to commit our code and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Associating restaurants and reviews
 
