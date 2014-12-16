@@ -1140,4 +1140,9 @@ Your tests should now all be passing.  Commit and High Five!!!!!
 
 #### Done
 
+#### Related Videos:
+
+* [Rails](https://www.youtube.com/watch?v=iOJUBnC0imE)
+* [Rails Cont](https://www.youtube.com/watch?v=Tm7kjJBDa-8)
+
 On to [version 2](yelpv2.md)!
