@@ -141,7 +141,7 @@ Now we need to add these links to the view logic. Specifically, we need to tell 
 In `views/layouts/application.erb`, add a sign out link:
 
 ```erb
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 ...
 ```
@@ -211,3 +211,7 @@ Now try adding tests/code for the following scenarios:
 * **Users can only edit/delete restaurants which they've created**
 * **Users can only leave one review per restaurant**
 * **Users can delete only their own reviews**
+
+### Related Videos
+
+* [Devise/OmniAuth](https://www.youtube.com/watch?v=_nV4ENuO5QA)
