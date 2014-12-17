@@ -160,6 +160,12 @@ And now we should be green. A good time to  commit our latest code to git, and s
 
 #### Adding OmniAuth login
 
+Omniauth allows a user to log in to your site using a 3rd party login such as Facebook, Twitter, Github or other trusted 3rd party. This avoids the need for the user to create a new login/password just for your site.  Omniauth is a particular implementation of 3rd party login which involves a callback process as shown in this diagram:
+
+<center>
+![Omniauth login flow](http://3.bp.blogspot.com/-AkxYz8Ah9zA/T0rrsOVc0VI/AAAAAAAAIUI/GZUx5TbdecE/s1600/How+Omniauth+works.png)
+</center>
+
 For this example, we'll be adding a 'sign in with Facebook' link.
 
 ##### Register a Facebook Developer application
