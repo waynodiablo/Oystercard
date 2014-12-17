@@ -99,11 +99,14 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * [Michael Hartl's Rails tutorial](http://www.railstutorial.org/book)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
 
-## Walkthroughs (under construction)
+## Related Pills
 
 * :pill: [MVC](pills/mvc.md)
 * :pill: [Rails console](pills/rails_console.md)
 * :pill: [Active Record](pills/activerecord.md)
+
+## Walkthroughs (DEPRECATED)
+
 * [Rails](https://github.com/makersacademy/Walkthroughs/blob/master/rails.md) <-- Under construction
 * [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md) <-- Under construction
 * [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) <-- Under construction
