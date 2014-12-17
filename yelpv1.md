@@ -986,6 +986,8 @@ But what if the 'parent' restaurant gets deleted? This would lead to reviews exi
 has_many :reviews, dependent: :destroy
 ```
 
+***Exercise***: We just added code that does not support any functionality that we are testing.  Create a test to check for it, and then make sure it fails when either `belongs_to :restaurant` or the `dependent: :destroy` components are removed.  Test Driven Development (TDD) is the best way to ensure that tests fail before passing, but the critical thing is that you see the tests fail at least once.  Why?  Because otherwise you are not sure if your test is not just a vacuous test that will just waste time and leave you thinking you have test coverage when you don't really.
+
 Before we move on let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: again.
 
 #### Stop users creating duplicate restaurants – validations
@@ -995,12 +997,14 @@ First, write a test. We'll add this within our existing feature spec for restaur
 `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
-feature 'creating restaurants' do
+...
+
+context 'creating restaurants' do
 
 ...
 
   context 'an invalid restaurant' do
-    scenario 'does not let you submit a name that is too short' do
+    it 'does not let you submit a name that is too short' do
       visit '/restaurants'
       click_link 'Add a restaurant'
       fill_in 'Name', with: 'kf'
@@ -1021,7 +1025,7 @@ As we haven't got any length limits on restaurant name, the test will fail. Let'
 ```ruby
 require 'spec_helper'
 
-RSpec.describe Restaurant, :type => :model do
+describe Restaurant, :type => :model do
   it 'is not valid with a name of less than three characters' do
     restaurant = Restaurant.new(name: "kf")
     expect(restaurant).not_to be_valid
@@ -1036,8 +1040,8 @@ But our expectation of `not_to be_valid` is pretty vague – a restaurant might 
 ```ruby
 require 'spec_helper'
 
-RSpec.describe Restaurant, :type => :model do
-  scenario 'is not valid with a name of less than three characters' do
+describe Restaurant, :type => :model do
+  it 'is not valid with a name of less than three characters' do
     restaurant = Restaurant.new(name: "kf")
     expect(restaurant).to have(1).error_on(:name)
     expect(restaurant).not_to be_valid
@@ -1093,6 +1097,8 @@ To show an error, let's edit our view. Add this to the top of your `views/restau
 
 What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `section`, along with a count of how many errors there are.
 
+***Exercise***: inspect the css styles for the div surrounding the name input field.  You should find that rails has automatically added a `.field_with_errors` class.  Style this so that the form shows the user specifically which input field needs correcting.
+
 (Note that this uses the Rails helper method `pluralize` – have a look online and see what you find!)  Let's also commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: one last time in this walkthrough.
 
 ##### Adding validations - restaurant uniqueness
@@ -1100,7 +1106,7 @@ What does this do? Well, in the case that our restaurant has any errors on it (t
 We also don't want to allow users to create the same restaurant twice. So, let's write a test in our restaurant model spec!
 
 ```ruby
-scenario "is not valid unless it has a unique name" do
+it "is not valid unless it has a unique name" do
   Restaurant.create(name: "Moe's Tavern")
   restaurant = Restaurant.new(name: "Moe's Tavern")
   expect(restaurant).to have(1).error_on(:name)
@@ -1122,8 +1128,8 @@ Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb
 ```ruby
 require 'rails_helper'
 
-RSpec.describe Review, :type => model do
-  scenario "is invalid if the rating is more than 5" do
+describe Review, :type => :model do
+  it "is invalid if the rating is more than 5" do
     review = Review.new(rating: 10)
     expect(review).to have(1).error_on(:rating)
   end
