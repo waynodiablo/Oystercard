@@ -5,7 +5,7 @@ Devise
 
 
 
-```sh
+```
 Some setup you must do manually if you haven't yet:
 
   1. Ensure you have defined default url options in your environments files. Here
