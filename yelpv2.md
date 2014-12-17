@@ -221,3 +221,4 @@ Now try adding tests/code for the following scenarios:
 ### Related Videos
 
 * [Devise/OmniAuth](https://www.youtube.com/watch?v=_nV4ENuO5QA)
+* [Scaffold/Bootstrap](https://www.youtube.com/watch?v=pO7_fA2LeAk)
