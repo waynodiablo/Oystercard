@@ -80,6 +80,8 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 ## Supporting Material
 
 ### Resources
+
+- [Makers Lecture - Blocks, Procs and Lambdas](https://www.youtube.com/watch?v=2HTR4oOZ9iM)
 - [Battleships Game - Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
 - [SOLID - Wikipedia](https://en.wikipedia.org/wiki/Solid_(object-oriented_design))
 - [Principles of OOD - Robert C. Martin (unclebob)](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
