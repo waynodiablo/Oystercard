@@ -294,9 +294,9 @@ end
 
 Before you run this test think about whether you expect it to pass or fail.  Then run rspec to check. Consider the result carefully.  Whatever happens it's time to commit and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
 
-Were you surprised to see the test fail? When either of you was in navigator mode you might have started to worry about a more strategic issue arising from the helper implementation, that we've tied things to a class type.  The problem for this test in particular is that we'll get '3.5' back as 3.5, which in Ruby is a Float, and not a Fixnum. A good navigator here might well suggest a bit of [duck typing](http://en.wikipedia.org/wiki/Duck_typing) to identify the input as valid - either of you in navigator mode might make the suggestion that the thing to check is not whether we have a Fixum, but whether the incoming rating responds  to the `round` method?
+Were you surprised to see the test fail? When either of you was in navigator mode you might have started to worry about a more strategic issue arising from the current helper implementation, that we've tied things to a class type.  The problem for this test in particular is that we'll get '3.5' back as 3.5, which in Ruby is a Float, and not a Fixnum. A good navigator here might well suggest a bit of [duck typing](http://en.wikipedia.org/wiki/Duck_typing) to identify the input as valid - perhaps we could check not whether we have a Fixum, but whether the incoming rating responds to the `round` method?
 
-If it does, we can then proceed with the method, which involves rounding the review to make sure we get an integer back (rather than using half stars).
+If it does, we could then proceed with the method, which involves rounding the review to make sure we get an integer back (rather than using half stars).
 
 ```ruby
 module ReviewsHelper
@@ -312,7 +312,7 @@ module ReviewsHelper
 end
 ```
 
-And that should pass those tests. So let's go back to our `index` to get the feature test to pass.
+And that should pass those tests. We've completed our run of unit test ping pong and depending on how long it took you to get the last chunk working you might want to swap driver/navigator roles or not.  At the end of the day the critical thing is that both pair partners spend an equal amount of time on the keyboard, and also that you both get a nice balance of activity at the different testing levels and through the applicaiton logic.  Whether you swap roles here or not it's time to jump back up to our failing acceptance test to see if we can now fix it. We can make that pass with something like the following:
 
 ```erb
 ...
@@ -320,7 +320,11 @@ And that should pass those tests. So let's go back to our `index` to get the fea
 ...
 ```
 
-Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](/pills/rails_helpers.md)** to learn more – once you have, see if you can get the reviews to display when they were created relative to now (e.g. '5 hours ago').
+Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](/pills/rails_helpers.md)** to learn more.
+
+**Exercise - having reviewed the helper pill see if you can ping pong pair through an acceptance test unit test cycle to get the reviews to display when they were created relative to now (e.g. '5 hours ago').**
+
+Ensuring all our tests are green it's time to commit and we could swap driver/navigator roles before we start a new feature &nbsp;:twisted_rightwards_arrows:, but use your best judgement about how much keyboard time you are getting. Consider that you could place each feature on it's own feature branch and then merge back to master once completed and green.
 
 #### Adding endorsements
 
@@ -328,20 +332,20 @@ We want users to be able to 'endorse' reviews. We're going to follow the same me
 
 ##### Test first
 
-Let's make a new feature test for adding endorsements.
+Let's make a new feature test for adding endorsements.  For our purposes here feature test == acceptance test.
 
 `spec/features/endorsements_feature_spec.rb`:
 
 ```ruby
 require 'rails_helper'
 
-describe 'endorsing reviews' do
+feature 'endorsing reviews' do
   before do
     kfc = Restaurant.create(name: 'KFC')
-    kfc.reviews.create(rating: 3, thoughts: "It was an abomination")
+    kfc.reviews.create(rating: 3, thoughts: 'It was an abomination')
   end
 
-  it 'a user can endorse a review, which updates the review endorsement count' do
+  scenario 'a user can endorse a review, which updates the review endorsement count' do
     visit '/restaurants'
     click_link 'Endorse KFC'
     expect(page).to have_content('1 endorsement')
@@ -353,6 +357,8 @@ end
 ##### Add a new route
 
 Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements. We need to think about what kind of relationship endorsements and reviews are going to have before we do this - specifically, each review is going to have many endorsements.
+
+To get a ping pong rotation based on red you should swap driver/navigator roles here &nbsp;:twisted_rightwards_arrows:.
 
 Open up `config/routes.rb`. We want to add a nested resource route to reviews, so update your routes with the following code:
 
@@ -392,7 +398,7 @@ class EndorsementsController < ApplicationController
 end
 ```
 
-This is a pretty standard `create` method, but note that at the end it takes the user back to the list of restaurants. As a result, we won't need a `show` method for endorsements (which makes sense, as we probably don't want each individual endorsement to have a whole page devoted to it!).
+This is a pretty standard `create` method, but note that at the end it takes the user back to the list of restaurants. As a result, we won't need a `show` method for endorsements (which makes sense, as we probably don't want each individual endorsement to have a whole page devoted to it!).  With the controller in place let's commit to git and swap driver/navigator roles &nbsp;:twisted_rightwards_arrows:.
 
 ##### Creating the model
 
@@ -435,6 +441,10 @@ In that block you want to call the number of endorsements that each review has. 
 ```erb
 <p><%= review.endorsements.count %> endorsements</p>
 ```
+
+Note that because we are relying on basic rails functionality up to this point that we haven't had to write any unit tests yet - we are assuming that Rails own unit tests will already cover this functionality effectively and our acceptance test is sufficient for us to get the necessary test coverage.  We're also being a big naughty in that we're adding a display to the view without an acceptance test to cover it ...!
+
+**Exercise:** Go back and make an acceptance test that checks for the correct number of endorsements is displayed for each review.  This is not TDD, but sometimes it happens.  You wrote some functionality in your excitement.  It's not the end of the world, but if you are a professional software engineer you will go back, but the acceptance test in place, watch it pass AND THEN comment out the code in your app, **watch it fail**, and then get it to pass again.  This ensures you have not written a vacuous test after the fact and keeps you on the straigh and narrow!
 
 #### Using AJAX to update endorsements in real-time
 
