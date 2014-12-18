@@ -496,7 +496,7 @@ In that same file, change this line:
 config.use_transactional_fixtures = true
 ```
 
-to be `false`.  Transactions are a unit of work within a [database managemnt system](http://en.wikipedia.org/wiki/Database_transaction).  Rails uses these to ensure that the database removes everything created during individual tests.
+to be `false`.  Transactions are a unit of work within a [database management system](http://en.wikipedia.org/wiki/Database_transaction).  Rails uses these to ensure that the database removes everything created during individual tests.
 
 Now you need to configure Database Cleaner as below. (The instructions here are taken from the [Virtuous Code blog](http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/) where you can find a full explanation of what's happening).
 
