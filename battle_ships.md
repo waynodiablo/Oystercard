@@ -63,7 +63,7 @@ How will we go about implementing the game engine? What do we need?
 
 One important thing here is that you don't focus on how people will play the game, but concentrate on the logic of the game itself using the objects you created previously. We will look into the user interface in our last version.
 
-Don't try and implement everything once. Start with an MVP with, say, a single celled grid and a single ship.  Once you get a bit of playable logic that you can use in irb move forward slowly by adding in a little bit of complexity at a time, e.g. one additional type of ship; a 2x2 grid, a second player, but go slow; only one additional component at a time, and at each step make sure all your tests are green and that you can play your game in irb.
+Don't try and implement everything once. Start with an MVP with, say, a single celled grid and a single ship (do we even need cells and/or a grid?).  Once you get a bit of playable logic that you can use in irb move forward slowly by adding in a little bit of complexity at a time, e.g. one additional type of ship; a 2x2 grid, a second player, but go slow; only one additional component at a time, and at each step make sure all your tests are green and that you can play your game in irb.
 
 ## Version 3: User Interface (the terminal)
 
