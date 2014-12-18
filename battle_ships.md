@@ -79,6 +79,10 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 
 ## Supporting Material
 
+### Videos
+
+- [Pairing and MVP on Battleships](https://www.youtube.com/watch?v=1prKzVeRKII)
+
 ### Resources
 
 - [Makers Lecture - Blocks, Procs and Lambdas](https://www.youtube.com/watch?v=2HTR4oOZ9iM)
