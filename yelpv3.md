@@ -245,7 +245,7 @@ Our test passes. Refine with a new test:
 
 ```ruby
 it 'returns five black stars for five' do
-  expect(helper.star_rating(5)). to eq '★★★★★'
+  expect(helper.star_rating(5)).to eq '★★★★★'
 end
 ```
 
@@ -266,7 +266,7 @@ Once ping pong pairing is up and running the driver keeps making a test pass and
 
 ```ruby
 it 'returns three black stars and two white stars for three' do
-  expect(helper.star_rating(3)). to eq '★★★☆☆'
+  expect(helper.star_rating(3)).to eq '★★★☆☆'
 end
 ```
 
@@ -288,7 +288,7 @@ Now the driver can make a final unit test:
 
 ```ruby
 it 'returns four black stars and one white star for 3.5' do
-  expect(helper.star_rating(3.5)). to eq '★★★★☆'
+  expect(helper.star_rating(3.5)).to eq '★★★★☆'
 end
 ```
 
@@ -769,14 +769,14 @@ config.paperclip_defaults = {
 
 What we're doing here is setting environment variables so we don't have to store our AWS secrets naked in a configuration file – which is checked into version control and visible to the public internet. That would be **a Very Bad Thing**.
 
-You will need to check your S3 hostname is set correctly if you are on a non-US server
+You will need to check your S3 hostname is set correctly if you are on a non-US server.
 
 ##### Deploying to Heroku
 
-If you're feeling adventurous then you'll now want to put your app up onto Heroku. We warn you may come across some issues when doing this, as you'll need to configure your app to work with Heroku. Here's some hints:
+Ideally you've been deploying to Heroku as you've added each new piece of functionality.  Heroku deploys are a lot smoother than what we had to do back in the day but they can have tricky issues.  In particular features that require secret keys for 3rd party services may take a few goes to deploy successfully and securely. Here's some hints to help you on your way:
 
 
-* Unfortunately we can't use secrets.yml on Heroku, instead we need to manually tell Heroku about our secret variables, for example in the case of getting AWS working we would do:
+Unfortunately we can't use secrets.yml on Heroku, instead we need to manually tell Heroku about our secret variables, for example in the case of getting AWS working we would do:
 
 ```shell
 $ heroku config:set S3_BUCKET_NAME=your_bucket_name
@@ -785,16 +785,16 @@ $ heroku config:set AWS_SECRET_ACCESS_KEY=your_secret_access_key
 ```
 This will set these values to the ENV hash.
 
-* You can use gems such as [Figaro](https://github.com/laserlemon/figaro) or [Dotenv](https://github.com/bkeepers/dotenv) to manage your secrets rather than `secrets.yml`
+You can use gems such as [Figaro](https://github.com/laserlemon/figaro) or [Dotenv](https://github.com/bkeepers/dotenv) to manage your secrets rather than `secrets.yml`
 ##### Deploy
 
 Commit, run `git push heroku master` and watch as your users are able to upload items and have them saved on S3!
 
 However you will still need to find a way to get all of the values in your secrets.yml file working with Heroku which uses ENV variables instead. Remember to be careful not to expose any of your secrets
 
-#### Done
+#### Finally
 
-All finished.
+**Exercise:** Get your app looking as close as possible to the actual Yelp site using bootstrap and other CSS wizardry.
 
 ## Related Videos
 
