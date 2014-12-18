@@ -81,6 +81,11 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 
 ### Videos
 
+- [Battleships](https://www.youtube.com/watch?v=yG7v_cmDj3E)
+- [Class Methods](https://www.youtube.com/watch?v=_I6ft00Ep9c)
+- [Blocks, Procs &amp; Lambdas](https://www.youtube.com/watch?v=2HTR4oOZ9iM)
+- [SOLID](https://www.youtube.com/watch?v=dBMcKzlfgSk)
+- [SOLID II](https://www.youtube.com/watch?v=x-bX66IzcWM)
 - [Pairing and MVP on Battleships](https://www.youtube.com/watch?v=1prKzVeRKII)
 
 ### Resources
