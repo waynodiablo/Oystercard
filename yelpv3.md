@@ -448,7 +448,7 @@ Note that because we are relying on basic rails functionality up to this point t
 
 #### Using AJAX to update endorsements in real-time
 
-This is where it gets fun. We can use AJAX to update the page in real-time without having to refresh. Broadly, it works like this:
+This is where it gets fun. :twisted_rightwards_arrows: We can use AJAX to update the page in real-time without having to refresh. Broadly, it works like this:
 
 1. User clicks 'Endorse' link next to a review
 2. Click event invokes some JavaScript in the page, which tells the server that the endorsements count for that review should go up
@@ -471,11 +471,11 @@ brew install phantomjs
 
 Now to get poltergeist working, we need to add two gems to our Gemfile: `poltergeist` (for the reasons discussed above) and `database_cleaner`, because running Poltergeist means running code outside of our normal test process, so the database otherwise won't be properly cleared between tests as it is currently.
 
-Add these to your `Gemfile`:
+Add these to your `Gemfile` in the test group:
 
 ```ruby
-gem 'poltergeist', group: :test
-gem 'database_cleaner', group: :test
+gem 'poltergeist'
+gem 'database_cleaner'
 ```
 
 Don't forget to run `bundle install` to install those shiny new gems.
@@ -496,7 +496,7 @@ In that same file, change this line:
 config.use_transactional_fixtures = true
 ```
 
-to be `false`.
+to be `false`.  Transactions are a unit of work within a [database managemnt system](http://en.wikipedia.org/wiki/Database_transaction).  Rails uses these to ensure that the database removes everything created during individual tests.
 
 Now you need to configure Database Cleaner as below. (The instructions here are taken from the [Virtuous Code blog](http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/) where you can find a full explanation of what's happening).
 
@@ -544,7 +544,7 @@ end
 ...
 ```
 
-Notice the `js: true` bit. That's important – it tells Capybara to use Poltergeist/Phantom for this test so the JavaScript stuff that we're about to add works.
+Notice the `js: true` bit. That's important – it tells Capybara to use Poltergeist/Phantom for this test so the JavaScript stuff that we're about to add works. Commit and :twisted_rightwards_arrows:.
 
 ##### Let's add some JavaScript
 
@@ -582,7 +582,7 @@ There's a lot going on here, so let's break it down line by line.
 * `response.new_endorsement_count` – and grab the response of that request...
 * `endorsementCount.text(response.new_endorsement_count)` – and overwrite the endorsementCount element we defined before with that response (which will be the number of endorsements).
 
-And... breathe.
+And... breathe. And ... commit and :twisted_rightwards_arrows:.
 
 ##### Updating the controller
 
@@ -624,7 +624,7 @@ In `app/views/restaurants/index.html.erb`, add this code replacing your existing
 
 Here, the `span` tag with class 'endorsements_count' is populated with the current review endorsements count when the page is first loaded. Then, when the user clicks on 'Endorse', our JS is fired and posts to the URL linked to by the 'Endorse' link. It takes the response and replaces the number in the `span` with it.
 
-Your tests should now be passing.
+Your tests should now be passing. Commit and :twisted_rightwards_arrows:.
 
 #### Refactoring using partials
 
@@ -642,7 +642,7 @@ Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` 
 <%= render "form" %>
 ```
 
-So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
+So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.  Commit and :twisted_rightwards_arrows:.
 
 #### Adding images to restaurants
 
