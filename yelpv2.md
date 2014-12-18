@@ -160,7 +160,7 @@ And now we should be green. A good time to  commit our latest code to git, and s
 
 #### Adding OmniAuth login
 
-Omniauth allows a user to log in to your site using a 3rd party login such as Facebook, Twitter, Github or other trusted 3rd party. This avoids the need for the user to create a new login/password just for your site.  Omniauth is a particular implementation of 3rd party login which involves a callback process as shown in this diagram:
+Omniauth allows a user to log in to your site using a 3rd party login such as Facebook, Twitter, Github or other trusted 3rd party. This avoids the need for the user to create a new login/password just for your site.  Omniauth is a particular implementation of 3rd party authentication which involves a callback process as shown in this diagram:
 
 <center>
 ![Omniauth login flow](http://3.bp.blogspot.com/-AkxYz8Ah9zA/T0rrsOVc0VI/AAAAAAAAIUI/GZUx5TbdecE/s1600/How+Omniauth+works.png)
@@ -188,7 +188,16 @@ Add your Facebook keys to the Rails `secrets.yml` file. They can then get called
 
 Make sure that `config/secrets.yml` is in your `.gitignore` file to prevent it being picked up by version control. (Bear in mind that at this point it's already in your Git history, so it's not actually gone. To remove secrets from a repo's history, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/).)
 
-**This becomes super, super important when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
+Alternatively you can have your secrets.yml file pull in from environment variables like so:
+
+```yml
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+```
+
+which allows the `config/secrets.yml` file to be committed to git, which smoothes Heroku deploy.
+
+**Whichever method you use please please please never commit production secrets to open git repositories. Especially when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
 
 #### Setting limits on users
 
