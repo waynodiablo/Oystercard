@@ -724,7 +724,7 @@ In `views/restaurants/index.html.erb`, you now want to include a photo.
 <%= image_tag restaurant.image.url(:thumb) %>
 ```
 
-**Now – work out how to test this with Capybara!**
+**Exercise – work out how to test this with Capybara!** Then commit and :twisted_rightwards_arrows:.
 
 #### Uploading images to Amazon Web Services S3
 
@@ -795,3 +795,8 @@ However you will still need to find a way to get all of the values in your secre
 #### Done
 
 All finished.
+
+## Related Videos
+
+* [Rails Helpers and Acceptance/Unit Testing Cycle](https://www.youtube.com/watch?v=M7pUtGRO-zg)
+* [Rails Ajax and AWS](https://www.youtube.com/watch?v=OIjiJotzTnA)
