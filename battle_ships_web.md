@@ -1,9 +1,9 @@
 # Playing Battleships in the browser
 
+***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
 This time we are going to improve on our battleships game.
 In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) we implemented the battleships game for the terminal.
-
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with your computer for people in general. When was the last time you checked your calendar on the terminal? **Exactly!**
 
@@ -13,13 +13,15 @@ The web offers a wonderful plethora of technologies and possibilities to build a
 
 **How about being able to  play battleships on the browser?**
 
+***As usual please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+
 ## Version 0: Setting up
 
 The first thing we have to do is to setup our project so that it's ready for us to start working on it.
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use [our version](https://github.com/makersacademy/battle_ships_september)_ ).
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory. [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.  The basic Ruby Web framework [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) that we can use to have Ruby accept requests from a browser, can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
 
 ```
 .
@@ -38,9 +40,9 @@ First we need to make sure that the code we wrote for battleships is in the righ
     |---layouts
 ```
 
- **Hang on! We need a Gemfile!**
+ **First things first! We need a Gemfile!**
 
-Our Gemfile helps us to keep track of the gems ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
+Before we go off creating lots of directories, let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](https://github.com/makersacademy/course/blob/master/pills/gems.md) ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
 
 ```ruby
 source 'https://rubygems.org'
@@ -135,7 +137,7 @@ cucumber features/starting_a_game.feature:6 # Scenario: Registering
 0m0.053s
 ```
 
-**What did just happen?** Cucumber is telling us that it cannot find a button named _New Game_ in the homepage. But, how is it possible that cucumber was able to go to the homepage? Which homepage? At this point in time we haven't even created anything apart from our feature file. What's going on?
+**What just happened?** Cucumber is telling us that it cannot find a button named _New Game_ in the homepage. But, how is it possible that cucumber was able to go to the homepage? Which homepage? At this point in time we haven't even created anything apart from our feature file. What's going on?
 
 Start your sinatra application
 
