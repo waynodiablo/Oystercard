@@ -159,7 +159,7 @@ HTML stands for HyperText Markup Language. It is the language that is used to cr
 
 HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **&lt;div&gt;** is called the _opening tag_ and the last **&lt;/div&gt;** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket.
 
-BTW, in HTML5 best practice indicates that we should avoid using non-semantic tags such as '&lt;div&gt;'.  HTML5 will treat '&lt;div&gt;' in a very similar way to '<cat-pictures>' with the advantage that the latter tells us something about the expected content, whereas a whole sea of '&lt;div&gt;'s can be very difficult to work with.
+BTW, in HTML5 best practice indicates that we should avoid using non-semantic tags such as **&lt;div&gt;**.  HTML5 will treat **&lt;div&gt;** in a very similar way to **&lt;cat-pictures&gt;** with the advantage that the latter tells us something about the expected content, whereas a whole sea of **&lt;div&gt;**'s can be very difficult to work with.
 
 ````
 <div>
@@ -167,7 +167,7 @@ BTW, in HTML5 best practice indicates that we should avoid using non-semantic ta
 </div>
 ````
 
-Note that the **< img >** tag doesn't need the closing tag as it is a 'self-closing tag'. The **src** bit is called an attribute. Its value determines what image will be displayed. In this case, _http://bit.ly/1eze8aE_ is a direct link to a kitten image.
+Note that the **&lt;img&gt;** tag doesn't need the closing tag as it is a 'self-closing tag'. The **src** bit is called an attribute. Its value determines what image will be displayed. In this case, _http://bit.ly/1eze8aE_ is a direct link to a kitten image.
 
 If you put this html in a web page, it will be rendered by the browser like this:
 
