@@ -17,11 +17,11 @@ In order to share whatever we're building on our computer with the rest of the w
 
 Have you heard of Ruby-on-Rails? Ruby here is the language whereas Rails is the web application framework. A Ruby-on-Rails application is one that uses the Rails web application framework with the Ruby language.
 
-A web application framework for Ruby is a gem (library) that provides support to makes our Ruby code accessible to the web browser. There are plenty of web application frameworks available for the Ruby language; the two we focus on in the Makers Academy course are Sinatra and Rails, in that particular order.
+A web application framework for Ruby is a gem (library) that provides support to make our Ruby code accessible to the web browser. There are plenty of web application frameworks available for the Ruby language; the two we focus on in the Makers Academy course are Sinatra and Rails, in that particular order.
 
 ## Why start with Sinatra?
 
-Sinatra, unlike Rails, has a minimal feature set that will allow us to keep our web applications very simple. Because of Sinatra's simplicity, we will be able to focus on the basic elements of a web application, as opposed to the features of the framework. Once you understand well how Sinatra applications work, it will be much easier to get a deeper understanding of how Ruby on Rails works. Trust us, we've tested many ways and we found this is the best way for you to learn.
+Sinatra, unlike Rails, has a minimal feature set that will allow us to keep our web applications very simple. Because of Sinatra's simplicity, we will be able to focus on the basic elements of a web application, as opposed to the features of the framework. Once you have a good understanding of how Sinatra applications work, it will be much easier to get a deeper understanding of how Ruby on Rails works.
 
 Despite its simplicity, [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) is very powerful. A large number of websites and applications are built on Sinatra. There's a very incomplete list of [companies using it in the wild](http://www.sinatrarb.com/wild.html), it is certainly orders of magnitude bigger.
 
