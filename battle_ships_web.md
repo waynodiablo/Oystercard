@@ -23,7 +23,7 @@ A web application framework for Ruby is a gem (library) that provides support to
 
 Sinatra, unlike Rails, has a minimal feature set that will allow us to keep our web applications very simple. Because of Sinatra's simplicity, we will be able to focus on the basic elements of a web application, as opposed to the features of the framework. Once you have a good understanding of how Sinatra applications work, it will be much easier to get a deeper understanding of how Ruby on Rails works.
 
-Despite its simplicity, [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) is very powerful. A large number of websites and applications are built on Sinatra. There's a very incomplete list of [companies using it in the wild](http://www.sinatrarb.com/wild.html), it is certainly orders of magnitude bigger.
+Despite its simplicity, [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) is very powerful. A large number of websites and applications are built on Sinatra. There's a very incomplete list of [companies using it in the wild](http://www.sinatrarb.com/wild.html). The real number is certainly orders of magnitude bigger.
 
 ***As usual please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
