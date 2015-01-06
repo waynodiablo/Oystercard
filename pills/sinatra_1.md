@@ -489,3 +489,9 @@ Exercises
 
 * Try recreating this app without referring to the pill
 * Try recreating this app but with a different image and generating a different sort of text rather than a greeting, e.g. answering a simple question that ruby can answer, like is this string a number?
+
+Resources
+--------
+
+* [Talk Slides on Sinatra Chat Server](http://obfusk.org/achatwithsinatra/#1)
+* [Detailed Talk Slides on Sinatra](http://www.slideshare.net/BobNadlerJr/sinatra-flatiron)
