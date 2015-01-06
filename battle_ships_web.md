@@ -35,7 +35,7 @@ Please ensure you have a good understanding of [Sinatra](https://github.com/make
 
 The first thing we have to do is to setup our project so that it's ready for us to start working on it.
 
-Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use [our version](https://github.com/makersacademy/battle_ships_september)_ ).
+Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here is a [version](https://github.com/makersacademy/battle_ships_september) of battleships game engine you can use as an alternative.**
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
 
