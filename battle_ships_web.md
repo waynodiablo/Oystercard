@@ -37,7 +37,7 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here is a [version](https://github.com/makersacademy/battle_ships_september) of battleships game engine you can use as an alternative.**
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
 .
@@ -55,6 +55,8 @@ First we need to make sure that the code we wrote for battleships is in the righ
     |---styles
     |---layouts
 ```
+
+We will review what all these files and directories do as we come to them.
 
  **First things first! We need a Gemfile!**
 
