@@ -4,7 +4,7 @@ Sinatra is a simple no frills web application framework for Ruby. In contrast to
 
 As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
 
-***As always there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As always there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests very welcome.***
 
 ## What you will learn
 
@@ -24,7 +24,7 @@ As was mentioned above, Sinatra is just a Ruby gem, so you'll need to install it
 
 `$ gem install sinatra`
 
-However, a better way would be to put it in your Gemfile and install using bundler. There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help shotgun (we'll discuss it in a minute) to load sinatra.
+However, a better way would be to put it in your Gemfile and install using [bundler](pills/bundler.md). There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help shotgun (we'll discuss it in a minute) to load sinatra.
 
 ````ruby
 # this is Gemfile
