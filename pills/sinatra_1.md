@@ -165,7 +165,7 @@ Note that the **< img >** tag doesn't need the closing tag as it is a 'self-clos
 
 If you put this html in a web page, it will be rendered by the browser like this:
 
-![alt text](pills/images/sinatra/sinatra_basic_3.png)
+![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_3.png)
 
 Let's try it:
 
