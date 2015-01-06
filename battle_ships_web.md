@@ -190,7 +190,7 @@ When we initialised cucumber with sinatra-cucumber we told it to generate our ap
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are
+- tell our `BattleShips` controller where the views are: ```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleShips class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
 
 Running cucumber again after we have finished these tasks we will see the following:
