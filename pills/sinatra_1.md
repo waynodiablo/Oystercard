@@ -20,11 +20,11 @@ You should have a good understanding of Ruby, including how blocks work.
 
 ***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
-As was mentioned above, Sinatra is just a Ruby gem, so you'll need to install it as usual.
+As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual.
 
 `$ gem install sinatra`
 
-However, a better way would be to put it in your Gemfile and install using [bundler](pills/bundler.md). There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help shotgun (we'll discuss it in a minute) to load sinatra.
+However, a better way would be to put it in your Gemfile and install using [bundler](pills/bundler.md) :pill:. There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help shotgun (we'll discuss it in a minute) to load sinatra.
 
 ````ruby
 # this is Gemfile
@@ -69,7 +69,7 @@ Now, open this address (http://localhost:4567) in the browser and you should see
 
 ### What does localhost:4567 mean?
 
-This means that Sinatra started running making your web application available on the address _http://localhost:4567_. The address looks different from most web addresses but in fact it's a normal web address. The 'localhost' is a reserved word that always refers to the computer it's used on. So, localhost on my machine means my machine and localhost on your machine means your machine. Technically, it corresponds to the IP address 127.0.0.1 that always points to the current machine. The 4567 is the number of the port that is used to connect to localhost. Every internet connection always needs at least two parameters: the address of the machine (localhost, google.com or an IP address) and a port (80, 3000, 4567 or some other). So, in this case Sinatra is listening for connections on localhost and on port 4567.
+This means that Sinatra started running making your web application available on the address _http://localhost:4567_. The address looks different from most web addresses but in fact it's a normal web address. The 'localhost' is a reserved word that always refers to the computer it's used on. So, localhost on my machine means my machine and localhost on your machine means your machine. Technically, it corresponds to the IP address 127.0.0.1, or 0.0.0.0, both of which always points to the current machine. The 4567 is the number of the port that is used to connect to localhost. Every internet connection always needs at least two parameters: the address of the machine (localhost, google.com or an IP address) and a port (80, 3000, 4567 or some other). So, in this case Sinatra is listening for connections on localhost and on port 4567.
 
 You may ask why you don't normally specify a port when you connect to a web server? Why can you type google.com in the address bar and it will work without the port? The reason is that by convention, web servers usually run on port 80, so your browser assumes you want to use port 80 if you don't specify any. So, when you type this in the address bar
 
@@ -77,13 +77,13 @@ You may ask why you don't normally specify a port when you connect to a web serv
 
 your browser actually opens the connection to
 
-`www.google.com`
+`www.google.com:80`
 
 You can try putting the port in the browser bar, it will work just as fine. If you try to put a port number that google.com doesn't expect, you won't get a response. For example, you'll get an error if you do this
 
 `www.google.com:22`
 
-As we mentioned, the port 80 is reserved for web (HTTP) connections but there are many more. For example, ssh uses port 22 and https (encrypted HTTP connection) usually run on port 443. However, all of those are just conventions. Nothing prevents you from running an ssh server on port 80, if you insist on it.
+As we mentioned, the port 80 is reserved for web (HTTP) connections but there are many more. For example, ssh (secure shell connection) uses port 22 and https (encrypted HTTP connection) usually run on port 443. However, all of those are just conventions. Nothing prevents you from running an ssh server on port 80, if you insist on it.
 
 ## How does it work?
 
@@ -142,6 +142,8 @@ Secondly, load your application like this:
 The -p switch tells shotgun what port to use. Use this switch to keep the port consistent with the default Sinatra port. By default shotgun will use port 9393.
 
 If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the _Gemfile_ and ran "bundle install" afterwards.
+
+Assuming that you get shotgun working you can now make changes to your 'hello.rb' file and see the changes with a simple browser refresh.  Try adjusting the strings in the do ... end blocks and reload in the browser to confirm this.
 
 ## Basics of HTML and CSS
 
