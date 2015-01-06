@@ -154,6 +154,8 @@ Requests have headers and a body (which may be blank) in exactly the same way th
 
 You can also select elements in the browser 'right click' (control click) and select 'inspect element'. This allows you to see the parsed HTML response.
 
+![Inspect element](https://raw.githubusercontent.com/makersacademy/course/master/images/inspect-element.png?token=AABf3G-0LmFGpCDzMgdiaNIZ7G9J0LoYks5UtSirwA%3D%3D)
+
 HTML is what allows documents displayed in the browser to link to other documents.
 
 # Ruby console
