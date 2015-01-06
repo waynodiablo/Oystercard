@@ -2,18 +2,34 @@
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-This time we are going to improve on our battleships game.
+In this project we are going to improve on our battleships game.
 In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) we implemented the battleships game for the terminal.
 
-Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with your computer for people in general. When was the last time you checked your calendar on the terminal? **Exactly!**
+Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with computers for people in general. Before you even knew there was a terminal you likely did almost everything on a computer via a graphical interface of some sort; either through a dedicated desktop application or through a browser.
 
-Nowadays applications are much richer in colours and interactions, they feel smoother and friendlier that the terminal does.
+Back in the day the terminal was the only way to interact with a computer, but nowadays applications are much richer in colours and interactions, they feel smoother and friendlier that the terminal does.
 
-The web offers a wonderful plethora of technologies and possibilities to build applications. It's time for us to look into web technologies and play with them.
+The web offers a wonderful plethora of technologies and possibilities to build applications.  Web applications that run in a browser are different from dedicated desktop applications (like MS Word) that have to be installed separately on each individual computer.  Web applications can be accessed from any computer that has a browser, simply by pointing the browser at the correct web page or URL (Uniform Resource Locator, e.g. http://google.com).  This means if you want to create a new 'app' you can just share the link to it, rather than having to ask your users to go through a potentially complex and error prone installation process.  The flipside is browser compatibility issues, but more on that later.
 
-**How about being able to  play battleships on the browser?**
+**In the meantime, how about being able to play battleships in a browser?**
+
+In order to share whatever we're building on our computer with the rest of the world, on the Web, we need to learn how to build web applications using _"web application frameworks"_.
+
+Have you heard of Ruby-on-Rails? Ruby here is the language whereas Rails is the web application framework. A Ruby-on-Rails application is one that uses the Rails web application framework with the Ruby language.
+
+A web application framework for Ruby is a gem (library) that provides support to makes our Ruby code accessible to the web browser. There are plenty of web application frameworks available for the Ruby language; the two we focus on in the Makers Academy course are Sinatra and Rails, in that particular order.
+
+## Why start with Sinatra?
+
+Sinatra, unlike Rails, has a minimal feature set that will allow us to keep our web applications very simple. Because of Sinatra's simplicity, we will be able to focus on the basic elements of a web application, as opposed to the features of the framework. Once you understand well how Sinatra applications work, it will be much easier to get a deeper understanding of how Ruby on Rails works. Trust us, we've tested many ways and we found this is the best way for you to learn.
+
+Despite its simplicity, [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) is very powerful. A large number of websites and applications are built on Sinatra. There's a very incomplete list of [companies using it in the wild](http://www.sinatrarb.com/wild.html), it is certainly orders of magnitude bigger.
 
 ***As usual please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+
+## Prerequisites
+
+Please ensure you have a good understanding of [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) :pill: and [Cucumber](https://github.com/makersacademy/course/blob/master/pills/cucumber.md) :pill: before starting this project.  Cucumber is an alternative testing framework to RSpec, that also works with RSpec - please refer to the pills for details.
 
 ## Version 0: Setting up
 
@@ -21,7 +37,7 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it extensible in that direction ( _if you did not, there is a version of battleships you can clone and use [our version](https://github.com/makersacademy/battle_ships_september)_ ).
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.  The basic Ruby Web framework [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) that we can use to have Ruby accept requests from a browser, can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with only these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than what we have seen so far:
 
 ```
 .

@@ -1,20 +1,10 @@
 # Sinatra
 
-We hope you've enjoyed moving Boris bikes around and building the battleships game.
+Sinatra is a simple no frills web application framework for Ruby. In contrast to more complex web application frameworks such as Ruby on Rails, Sinatra provides very little beyond making your ruby code accessible to requests that come over the HTTP protocol.
 
-Now it's time to share whatever you're building on your computer with the rest of the world, on the Web. In order to do so, we need to learn how to build web applications using _"web application frameworks"_.
+As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
 
-Have you heard of Ruby-on-Rails? Ruby here is the language whereas Rails is the web application framework. You're thefore using the Rails web application framework (referred to as a framework) with the Ruby language.
-
-A framework is a library, a ruby gem that makes our Ruby code accessible to the web browser. There are plenty of web application frameworks available for the Ruby language; the two we will cover are Sinatra and Rails, in this particular order.
-
-## Why start with Sinatra?
-
-Sinatra, unlike Rails has a minimal feature set that will allow us to keep our web applications very simple. Because of Sinatra's simplicity, we will be able to focus on the basic elements of a web application, as opposed to the features of the framework. Once you understand well how Sinatra applications work, it will be much easier to get a deeper understanding of how Ruby on Rails works. Trust us, we've tested many ways and we found this is the best way for you to learn.
-
-Despite its simplicity, Sinatra is very powerful. A large number of websites and applications are built on Sinatra. There's a very incomplete list of [companies using it in the wild](http://www.sinatrarb.com/wild.html), it is certainly orders of magnitude bigger.
-
-You are encouraged to type in the code instead of copy-pasting it, it will help you to memorise and understand what you're doing.
+***As always there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 ## What you will learn
 
@@ -28,7 +18,9 @@ You should have a good understanding of Ruby, including how blocks work.
 
 ## Sinatra Installation
 
-As it was mentioned above, Sinatra is just a Ruby gem, so you'll need to install it as usual.
+***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+
+As was mentioned above, Sinatra is just a Ruby gem, so you'll need to install it as usual.
 
 `$ gem install sinatra`
 
@@ -67,10 +59,10 @@ Now, run this file.
 You should see this:
 
 ```
-== Sinatra/1.4.3 has taken the stage on 4567 for development with backup from Thin 
->> Thin web server (v1.5.1 codename Straight Razor) 
->> Maximum connections set to 1024 
->> Listening on localhost:4567, CTRL+C to stop 
+== Sinatra/1.4.3 has taken the stage on 4567 for development with backup from Thin
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on localhost:4567, CTRL+C to stop
 ```
 
 Now, open this address (http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
@@ -157,7 +149,7 @@ Now, let's make our website slightly more interesting. Let's add some HTML and C
 
 HTML stands for HyperText Markup Language. It is the language that is used to create webpages. Every web page that you see in your browser is built using HTML. If you right-click the page you're reading right now and select 'View source', you'll see the HTML code for the current page.
 
-HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **< div >** is called the _opening tag_ and the last **< /div >** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket. 
+HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **< div >** is called the _opening tag_ and the last **< /div >** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket.
 
 ````
 <div>
@@ -194,10 +186,10 @@ CSS stands for Cascading Style Sheets. It's a language that describes what HTML 
 ````ruby
 require 'sinatra'
 get '/' do
-  "<div style='border: 3px dashed red'>     
-     <img src='http://bit.ly/1eze8aE'>    
+  "<div style='border: 3px dashed red'>
+     <img src='http://bit.ly/1eze8aE'>
    </div>"
-end 
+end
 ````
 
 Now our web page looks like this:
@@ -216,10 +208,10 @@ So, we've got a kitten inside a box with a red border. The code looks like this
 require 'sinatra'
 
 get '/' do
-  "<div style='border: 3px dashed red'>     
-     <img src='http://bit.ly/1eze8aE'>    
+  "<div style='border: 3px dashed red'>
+     <img src='http://bit.ly/1eze8aE'>
    </div>"
-end 
+end
 ````
 
 It works but you can already guess a problem: it doesn't scale. Web pages usually have hundreds, if not thousands lines of HTML and CSS code. That's on top of thousands of lines of Ruby code. Putting it all together in a single file would lead to a mess: lots of unstructured code that is very hard to maintain.
@@ -235,7 +227,7 @@ require 'sinatra'
 
 get '/' do
   erb :index
-end 
+end
 ````
 
 So, what's happening here? On line 4, we're calling **erb**, a templating system that ships with Ruby. We are asking it to render it a file called **index.erb** from the folder **views**. How does it know to look inside the folder **views**? The name of the folder is just a convention: if you don't specify any other name, erb will assume that you want to use the file in the **views** folder.
@@ -255,7 +247,7 @@ We've just selected a name for the kitten in the instance variable **@name**. Le
 
 ````html
 <div style='border: 3px dashed red'>
-  My name is <%= @name %>   
+  My name is <%= @name %>
   <img src='http://bit.ly/1eze8aE'>
 </div>
 ````
@@ -264,7 +256,7 @@ The second line contains the text and an embedded ruby tag. The code that begins
 
 ````html
 <div style='border: 3px dashed red'>
-  My name is Oscar   
+  My name is Oscar
   <img src='http://bit.ly/1eze8aE'>
 </div>
 ````
@@ -277,13 +269,13 @@ So, we've just learned how to extract HTML into separate files and how to transf
 
 Our current web page is not interactive. It doesn't take any input from the user but that could be a very useful feature. Pretty much any website you see online is interactive and that's what makes the web such an exciting place.
 
-Let's make our kitten say hello to the visitor of the website. Add this method to 
+Let's make our kitten say hello to the visitor of the website. Add this method to
 
 ````ruby
 get '/hello' do
-  @visitor = params[:name]   
-  erb :index 
-end 
+  @visitor = params[:name]
+  erb :index
+end
 ````
 
 This method expects a parameter called name that can be provided like this:
@@ -299,14 +291,14 @@ The question mark in the url serves to separate the address from the list of par
 Now, if you modify your erb template to expect this value, you'll see a welcome message if a name is provided:
 
 ````html
-<div style='border: 3px dashed red'>   
-  <% if @visitor %>     
-    Hello, <%= @visitor %>!   
-  <% end %>   
-  <% if @name %>
-    My name is <%= @name %>   
+<div style='border: 3px dashed red'>
+  <% if @visitor %>
+    Hello, <%= @visitor %>!
   <% end %>
-  <img src='http://bit.ly/1eze8aE'> 
+  <% if @name %>
+    My name is <%= @name %>
+  <% end %>
+  <img src='http://bit.ly/1eze8aE'>
 </div>
 ````
 
@@ -444,13 +436,13 @@ However, you're forced to specify the full path to the image. Another solution i
 <img src="1.png">
 ```
 
-Note the lack of a slash in the beginning of the URL. This means that the path is relative to the current URL path: ```http://www.example.com/users/12345/galleries/4/kittens/```. So, the browser interprets '<img src="1.png">' as 
+Note the lack of a slash in the beginning of the URL. This means that the path is relative to the current URL path: ```http://www.example.com/users/12345/galleries/4/kittens/```. So, the browser interprets '<img src="1.png">' as
 
 ```
-http://www.example.com/users/12345/galleries/4/kittens/1.png 
+http://www.example.com/users/12345/galleries/4/kittens/1.png
 ```
 
-but only if this HTML is served by the page at 
+but only if this HTML is served by the page at
 
 ```
 http://www.example.com/users/12345/galleries/4/kittens/index.html
