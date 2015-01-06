@@ -2,12 +2,14 @@
 
 ## Three tier web architecture
 
+Today we will be talking about the arrows in this digram. The HTTP request and response.
+
 ![Three Tier Web Architecture](https://raw.githubusercontent.com/makersacademy/course/master/images/3-tier.png?token=AABf3D7xcLuEmQL0U7Csjo_eChFqknVkks5UtEHTwA%3D%3D
 )
 
 ## Map of the Web
 
-![Communities of the Web](http://1.1.1.1/bmi/imgs.xkcd.com/comics/online_communities_2.png)
+![Communities of the Web](http://imgs.xkcd.com/comics/online_communities_2.png)
 
 ## The Web
 
@@ -138,9 +140,13 @@ https://www.flickr.com/photos/girliemac/sets/72157628409467125
 
 You can view what's going on in Chrome by opening up the developer console `CMD-OPT-I`.
 
+![All Requests](https://raw.githubusercontent.com/makersacademy/course/master/images/console-requests.png?token=AABf3Ky-N9cV3BhzldzZkKeHQkwrfef6ks5UtSJ3wA%3D%3D)
+
 Select the network tab and make a web request in the usual way. You will see all the requests that are made in response.
 
 You can click on a particular repsonse to see more information about it, including the headers, etc.
+
+![Specific request](https://raw.githubusercontent.com/makersacademy/course/master/images/console-request.png?token=AABf3I-Z7gX49rIZ3DQ_kWqcPWsGHeUnks5UtSImwA%3D%3D)
 
 Requests have headers and a body (which may be blank) in exactly the same way that responses do.
 
