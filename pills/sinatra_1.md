@@ -20,6 +20,8 @@ You should have a good understanding of Ruby, including how blocks work.
 
 ***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
+As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called 'sinatra-test'.
+
 As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual.
 
 `$ gem install sinatra`
@@ -66,6 +68,8 @@ You should see this:
 ```
 
 Now, open this address (http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
+
+This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
 ### What does localhost:4567 mean?
 
@@ -116,6 +120,8 @@ end
 Having done this on your Sinatra application and gone to http://localhost:4567/secret on your browser, you found the following page:
 
 ![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_2.png)
+
+Another good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
 ### What's happening?
 
@@ -183,6 +189,8 @@ Now go to the webpage: _http://localhost:4567/_ (if you aren't using shotgun, do
 
 ![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_4.png)
 
+A good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+
 However, this image, as lovely as it is, is a bit dull. Real web pages have something else in them that makes them look good: CSS.
 
 CSS stands for Cascading Style Sheets. It's a language that describes what HTML elements should look like when they are rendered by the browser. For example, let's add some CSS code to create a border around the **div** that contains our image.
@@ -203,6 +211,8 @@ Now our web page looks like this:
 To achieve this effect we added an **attribute** called **style** to the **div** element. Its **value** is "border: 3px dashed red". It defines what style is applied to the element, in this case a border, 3 pixels wide, dashed (as opposed to solid, for example), and red in colour.
 
 By combining HTML and CSS we can achieve sophisticated visual effects in our web applications. We'll explore the basics of how HTML and CSS work in more details later this week and we'll discuss advanced HTML and CSS features in weeks 7 and 8.
+
+Before we move on let's commit our code, push it to Github and switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows:
 
 ## ERB: Separating your Ruby from your HTML and CSS
 
@@ -234,7 +244,7 @@ get '/' do
 end
 ````
 
-So, what's happening here? On line 4, we're calling **erb**, a templating system that ships with Ruby. We are asking it to render it a file called **index.erb** from the folder **views**. How does it know to look inside the folder **views**? The name of the folder is just a convention: if you don't specify any other name, erb will assume that you want to use the file in the **views** folder.
+Assuming this all works it's a good time to commit our code, push it to Github and switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows:, but the question that's likely on your mind is what's happening here? On line 4 in the do ... end block, we're calling **erb**, a templating system that ships with Ruby. We are asking it to render it a file called **index.erb** from the folder **views**. How does it know to look inside the folder **views**? The name of the folder is just a convention: if you don't specify any other name, erb will assume that you want to use the file in the **views** folder.
 
 We just called **erb** a templating system. The reason is that it's actually much more powerful than it may seem on the surface. Erb stands for Embedded Ruby. This means that the templates can combine plain text, such as HTML code, with executable Ruby code.
 
@@ -267,7 +277,7 @@ The second line contains the text and an embedded ruby tag. The code that begins
 
 Technically, the **erb()** method reads the input file, processes Ruby that is inside and returns resulting HTML. This HTML is then returned by the block passed to the **get()** method.
 
-So, we've just learned how to extract HTML into separate files and how to transfer data from Ruby code into templates. Let's add some more sophistication to our kitten website.
+So, we've just learned how to extract HTML into separate files and how to transfer data from Ruby code into templates. Naturally you'll want to commit the code, push it to Github and switch Driver/Navigator Roles &nbsp;:twisted_rightwards_arrows: but once we've done that let's add some more sophistication to our kitten website.
 
 ## Parameters (aka Params)
 
@@ -312,6 +322,8 @@ Now, if we go to _http://localhost:4567/hello?name=James_, we'll get the welcome
 
 ![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_7.png)
 
+Github and switch! :twisted_rightwards_arrows:
+
 ### Forms
 
 It's inconvenient to enter the visitor's name directly in the URL. Let's create a form to ask for the visitor's name. Modify your erb template:
@@ -352,6 +364,8 @@ So, when you click the submit button, your browser sends a request to the URL sp
 
 ![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_9.png)
 
+Github and switch! :twisted_rightwards_arrows:
+
 ## Static files
 
 Earlier we've linked to an external image in our HTML. This is fine but it would be so much nicer to have the image as a part of our project. This would be a **static asset**, let's see how Sinatra handles them.
@@ -373,6 +387,8 @@ You'll still see the image of the kitten but now it's loaded from localhost and 
 You probably have noticed that the address includes **images** folder but not the **public** folder. This is by design: Sinatra treats everything that's located inside the **public** folder as available via URLs. That's why by just putting a file there we were able to access it from the browser. This only works for the folder called **public**. You can't get to the views folder in the same way. The name is customisable, though: you can choose a different name for the **public** folder if you wish.
 
 Of course, you can put anything you want inside this folder: not only images but also text files, executable files, CSS files (we'll get to them in a second) and many more things.
+
+Github and switch! :twisted_rightwards_arrows: Although we are pretty much done with coding in this Sinatra pill - there are a few more things to explain.  Once you've read to the end of the pill why not try restarting this as a pair and re-creating the kitten app from scratch referring to the pill as little as possible?  Ultimately you should be able to build the app from memory.  Note of course that we are just playing around here, spiking a little app without any tests.  Best practise would avoid putting these quick spikes into production where many users would access them.
 
 ## Absolute vs relative URLs
 
@@ -465,3 +481,11 @@ http://www.example.com/users/1.png
 ```
 
 A common beginner mistake is to forget to put the slash at the beginning of the relative URL, watch out for it.
+
+Having completed this pill you should have a reasonable understanding of a basic Sinatra app.
+
+Exercises
+--------
+
+* Try recreating this app without referring to the pill
+* Try recreating this app but with a different image and generating a different sort of text rather than a greeting, e.g. answering a simple question that ruby can answer, like is this string a number?
