@@ -184,3 +184,6 @@ We've looked at TCP, HTTP and a tiny bit of HTML.
 
 To find out how to create your own web server look at the [Sinatra Pill](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md)
 
+# Resources
+
+* [A video from a talk on this subject](https://www.youtube.com/watch?v=Q8gE9dwgopE)
