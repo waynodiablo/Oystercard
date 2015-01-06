@@ -7,7 +7,7 @@ In [the last project](https://github.com/makersacademy/course/blob/master/battle
 
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with computers for people in general. Before you even knew there was a terminal you likely did almost everything on a computer via a graphical interface of some sort; either through a dedicated desktop application or through a browser.
 
-Back in the day the terminal was the only way to interact with a computer, but nowadays applications are much richer in colours and interactions, they feel smoother and friendlier that the terminal does.
+Back in the day the terminal was the only way to interact with a computer, but nowadays applications are much richer in colours and interactions, they feel smoother and friendlier than the terminal does.
 
 The web offers a wonderful plethora of technologies and possibilities to build applications.  Web applications that run in a browser are different from dedicated desktop applications (like MS Word) that have to be installed separately on each individual computer.  Web applications can be accessed from any computer that has a browser, simply by pointing the browser at the correct web page or URL (Uniform Resource Locator, e.g. http://google.com).  This means if you want to create a new 'app' you can just share the link to it, rather than having to ask your users to go through a potentially complex and error prone installation process.  The flipside is browser compatibility issues, but more on that later.
 
