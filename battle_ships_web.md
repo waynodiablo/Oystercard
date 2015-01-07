@@ -268,7 +268,7 @@ Up until now our application has been running only for two players at a time. Ca
 
 It would be nice if our battleships game looked like something that people wanted to play with, maybe we should be looking at it :wink:
 
-Once we have added some CSS goodness let's deploy our application to heroku and share it with the world!
+Once we have added some CSS goodness let's deploy our application to :pill: [heroku](https://github.com/makersacademy/course/blob/master/pills/heroku.md) and share it with the world!
 
 **Congratulations! You have released your first application!**
 
@@ -276,4 +276,5 @@ Resources
 ---------
 
 * [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
+* [Sinatra/Cucumber Cont](https://www.youtube.com/watch?v=_ptHGBh9sys)
 * [The Internet and WWW](pills/internet_web.md)
