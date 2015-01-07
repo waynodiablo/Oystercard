@@ -276,4 +276,5 @@ Resources
 ---------
 
 * [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
+* [Sinatra/Cucumber Cont](https://www.youtube.com/watch?v=_ptHGBh9sys)
 * [The Internet and WWW](pills/internet_web.md)
