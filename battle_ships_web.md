@@ -29,7 +29,7 @@ Despite its simplicity, Sinatra is very powerful. A large number of websites and
 
 ## Prerequisites
 
-Please ensure you have a good understanding of [Sinatra](pills/sinatra_1.md) :pill: and [Cucumber](pills/cucumber.md) :pill: before starting this project.  Cucumber is an alternative testing framework to RSpec, that also works with RSpec - please refer to the pills for details.
+Please ensure you have a good understanding of [Sinatra](pills/sinatra_1.md) :pill:, [Cucumber](pills/cucumber.md) :pill: and [Capybara](pills/capybara.md) :pill: before starting this project.  Cucumber is an alternative testing framework to RSpec, that also works with RSpec; Capybara is a ruby library that supports grabbing pieces of HTML web pages and taking actions like clicking links and filling in forms - please refer to the pills for details.
 
 ## Version 0: Setting up
 
