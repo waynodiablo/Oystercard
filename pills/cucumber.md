@@ -223,15 +223,15 @@ definitions.
 
 ```shell
 Given(/^a lulz greeter$/) do
-@greeter = LulzGreeter.new
+  @greeter = LulzGreeter.new
 end
 
 When(/^I send it the greet message$/) do
-@message = @greeter.greet
+  @message = @greeter.greet
 end
 
 Then(/^I should see "(.*?)"$/) do |lulzy_greeting|
-expect(@message).to eq lulzy_greeting
+  expect(@message).to eq lulzy_greeting
 end
 ```
 
@@ -273,9 +273,9 @@ just prepend it to the `oh_hai_cucumner_steps.rb` file. At the top, let's put:
 
 ```ruby
 class LulzGreeter
-	def greet
-		"OH HAI CUCUMNER!"
-	end
+  def greet
+    "OH HAI CUCUMNER!"
+  end
 end
 ```
 
