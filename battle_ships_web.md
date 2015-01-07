@@ -243,9 +243,13 @@ OK, our cukes (that's a common name to refer to cucumber features) are passing n
 - Add steps to the scenario
 - Add a scenario for when the player does not input his name
 
-## Version 2: Making the game playable
+**Exercises**
 
-We have now the first walking skeleton of our application and we are ready to add more features to describe our application.
+* Allow the user the play against the computer by shooting at a randomly generated computer opponent board
+
+## Version 2: Making the game playable by two people
+
+We now have the first walking skeleton of our application and we are ready to add more features to describe our application.
 
 For this to happen we need to introduce the concept of a session to our application and make it _remember_ who is playing against whom. We also need to make sure that our application only allows 2 players per game.
 
@@ -267,3 +271,9 @@ It would be nice if our battleships game looked like something that people wante
 Once we have added some CSS goodness let's deploy our application to heroku and share it with the world!
 
 **Congratulations! You have released your first application!**
+
+Resources
+---------
+
+* [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
+* [The Internet and WWW](pills/internet_web.md)
