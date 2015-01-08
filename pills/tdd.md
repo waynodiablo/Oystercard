@@ -13,4 +13,4 @@ A few folks in the agile community realised this a while ago and they found out 
 See Also
 --------
 
-* [Test Coverage Pill](pills/test_coverage.md) :pill:
+* [Test Coverage Pill](test_coverage.md) :pill:
