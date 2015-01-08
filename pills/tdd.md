@@ -9,3 +9,8 @@ Once your test is passing take a look at the code you just wrote and [refactor](
 The most challenging part of any software project is, if you think about it, the acquisition of knowledge. Assuming you know how to write software in the first place, but once you do, it is really only a matter of understanding the problem you are trying to solve.
 
 A few folks in the agile community realised this a while ago and they found out that while they were driving their code with [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)  they could make design decisions on the fly (*more or less*). This lead into a practice called [Emergent Design](https://en.wikipedia.org/wiki/Emergent_Design#Emergent_design_in_agile_software_development) (You definitely should read a little more about this and other practices in your own accord at some point).
+
+See Also
+--------
+
+* [Test Coverage Pill](pills/test_coverage.md) :pill:
