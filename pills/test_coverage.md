@@ -1,6 +1,8 @@
 Test Coverage
 ============
 
+[Video of session](https://www.youtube.com/watch?v=S6qV8vbjPu8)
+
 Test coverage is an automated metric that indicates the degree to which your code is being exercised by your tests.  For example, say that we have a short class like so:
 
 ```ruby
