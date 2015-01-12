@@ -2,15 +2,15 @@
 
 ### Completion time 3-4 days
 
-This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
+This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development:
 
-* Integration testing: Capybara (Monday)
-* Relational databases (Tuesday and Wednesday)
-* Security considerations (Thursday)
+* Acceptance testing: Capybara
+* Relational databases
+* Security considerations
 
 In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Battleships – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
-***As usual note that as with all Makers Academy materials, there may be subtle errors in the following.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As usual note that there may be subtle errors in the following walkthrough.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 ## High-level specification
 
@@ -18,27 +18,58 @@ We are going to build a bookmark manager, similar to pineapple.io or delicious.c
 
 A bookmark manager is a website to maintain a collection of links, organised by tags. You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse links other users have added.
 
-The website will have the following options:
+The website will have the following functionality:
 
 * Show a list of links from the database
 * Add new links
 * Add tags to the links
 * Filter links by a tag
 
+###Exercise
+
+* Write User stories/features in the Stakeholder/Motivation/Action format for each of the above capabilities, e.g.
+
+```
+As a time pressed computer user
+So that I can quickly find web sites I recently bookmarked
+I would like to see a reverse chronological list of links on the site homepage
+```
+
+
+User Interface Sketch (Hi-Fi)
+------
+
 This is the basic view of the website. This tutorial will discuss how to build it, step by step. At the end of the section there are multiple exercises challenging you to extend the functionality of this website.
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
+Note that every project you work on should start with user stories/features in the Stakeholder/Motivation/Action format, and a user interface experience sketch.  Usually that sketch will be Lo-Fi (Low Fidelity), rather than the Hi-Fi (High Fidelity) one that we show here.  In this case imagine that there was a quick Lo-Fi (pencil and paper) sketch that was done, agreed by the client, and was then mocked up in HTML and CSS only, or just using a graphics package like PhotoShop.  Now you have a Hi-Fi mockup and a few user stories you're ready to start!
+
+***As usual please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+
 ## First Steps
 
-As you'd do with every new project, create a new repository on Github. Create an empty Sinatra application with a Gemfile and config.ru.
+As you'd do with every new project, create a new repository on Github.  Please name your project 'bookmark_manager'. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru.
 
-## Outline
+Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
-To prevent this pad from getting very large, let's break it down into sections.
+## Bookmark Manager Outline
+
+* [Adding the database](#adding-the-database)
+* [Managing links and tags](#managing-links-and-tags)
+* [Adding user accounts](#adding-user-accounts)
+  * [Password confirmation](#password-confirmation)
+  * [Handling input errors](#tandling-input-errors)
+  * [Three level of data checks](#three-level-of-data-checks)
+  * [Preventing duplicate registrations](#preventing-duplicate-registrations)
+  * [Rake tasks for database management](#rake-tasks-for-database-management)
+  * [Signing in](#signing-in)
+  * [Signing out](#signing-out)
+  * [Forgotten password](#forgotten-password)
+* [Styling the website](#styling-the-website)
 
 
-##Bookmark manager – Adding the database
+##Adding the database
 
 In this project, we'll need to store the data in a database. Before we add any functionality, let's add a relational database to this project.
 
@@ -107,7 +138,7 @@ end
 
 This file describes the relationship between the table in the database (they don't exist yet) and this Ruby class. We'll see how it can be used in a minute.
 
-Then, add this code to ```server.rb```.
+Then, add this code to ```server.rb``` in the lib directory.
 
 
 ```ruby
@@ -286,7 +317,7 @@ This will make sure that the database is cleared after every test run.
 Current State on Github
 https://github.com/makersacademy/bookmark_manager/tree/15f77fecce729e2a9225f3ac2d369e201f6ce142
 
-# Bookmark manager – Managing links and tags
+# Managing links and tags
 
 Browsing links
 
@@ -322,7 +353,7 @@ Failures:
 
   1) User browses the list of links when opening the home page
      Failure/Error: expect(page).to have_content("Makers Academy")
-       expected to find text "Makers Academy" in "Welcome to the bookmark manager"
+       expected to find text "Makers Academy" in "Welcome to the "
      # ./spec/features/listing_all_links_spec.rb:11:in `block (2 levels) in <top (required)>'
 ```
 
@@ -466,7 +497,7 @@ Before adding the Tag model, let's review the process we're going through. We ha
 
 We'll be repeating this process several times over.
 
-This is the fundamental concept of test-driven development. You shouldn't merely have tests, instead they should actually drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example if there were no tags linked to the Link model, it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go. 
+This is the fundamental concept of test-driven development. You shouldn't merely have tests, instead they should actually drive the coding process. On many occasions you'll be able to predict the next error and you'll be tempted to fix a few things in one go. For example if there were no tags linked to the Link model, it was obvious that we should have created a many-to-many relationship and created the Tag model as well. However, be careful not to jump too far: the more code you write without the tests guiding you, the more likely you are to make an error. Some developers prefer to follow test messages very closely, doing the absolute minimum of work required to make them pass. Some move a few error messages at a time (like we've done before when we wrote our first test and wrote a dozen lines of code in one go.
 
 There isn't a one rule fits all approach. If you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
 
@@ -602,7 +633,7 @@ First we find the tag that we need (note the use of a named parameter in the rou
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/e45ed5d9c3289c8320632e6aadcc56c3d624fbcc
 
-##Bookmark manager – Adding user accounts
+##Adding user accounts
 
 Let's implement basic user account functionality using what we learned in Security. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user. This section will rely on your understanding of what we (will) have discussed in Security.
 
@@ -617,7 +648,8 @@ We will add the following functionality:
 
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
 
-Bookmark manager - Adding user accounts - signing up
+#Adding user accounts - signing up
+
 Let's begin with a test, as usual. The integration test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
 require 'spec_helper'
@@ -797,7 +829,7 @@ Let's clean the code up a little bit by extracting the helpers and datamapper-re
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd31ddf5d7706d139
 
-### Bookmark manager - Adding user accounts - Password confirmation
+### Adding user accounts - Password confirmation
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
 ```ruby
@@ -871,7 +903,7 @@ Now the test passes.
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/f41a3a2b35451eadd0773e0abbc8e85aba481e90
 
-### Bookmark manager - Adding user accounts - Handling input errors
+### Adding user accounts - Handling input errors
 
 Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
 
@@ -997,7 +1029,7 @@ Finished in 0.40513 seconds
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
 
-### Bookmark manager - Adding user accounts - Three level of data checks
+### Adding user accounts - Three level of data checks
 
 Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
 
@@ -1038,7 +1070,7 @@ validates_uniqueness_of :email
 
 would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
 
-### Bookmark manager - Adding user accounts - Preventing duplicate registrations
+### Adding user accounts - Preventing duplicate registrations
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 ```ruby
@@ -1110,7 +1142,7 @@ We have all the code we need to make our tests pass. (If your tests fail, the ch
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/44a6f6d79ab74d5da01487c14ac5929349e74651
 
-### Bookmark manager - Adding user accounts - Rake tasks for database management
+### Adding user accounts - Rake tasks for database management
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
 
@@ -1155,7 +1187,8 @@ This way you can upgrade or migrate your database manually after every change to
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/a97fbdb0d12210277d6dca158b03ce6c88d07677
 
-### Bookmark manager - Adding user accounts - Signing in
+### Adding user accounts - Signing in
+
 The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
 ```ruby
 feature "User signs in" do
@@ -1306,7 +1339,7 @@ end
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/3beb8ac44357ceedf643bcbc9fccd92459faa92d
 
-### Bookmark manager - Adding user accounts - Signing out
+### Adding user accounts - Signing out
 
 So far we learned how to create the users and sign them in. Let's see how we can log them out.
 
@@ -1375,7 +1408,7 @@ Now it's a good time to refactor our code a little bit. Let's install 'sinatra-p
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
 
-### Bookmark manager - Adding user accounts - Forgotten password
+### Adding user accounts - Forgotten password
 
 Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.
 
