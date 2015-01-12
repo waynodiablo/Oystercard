@@ -6,8 +6,6 @@ In the context of HTTP requests, parameters provide a way for information to be 
 
 Params are passed in the form of a hash, a series of key-value pairs.
 
-
-
 There are several types of parameters that you can use to submit information to your app:
 
 ### Form Params
@@ -46,6 +44,41 @@ Exercise:
   * create a small application with a form
   * upon form submission, display a new page to the user with the contents of the form
   * print the params hash to console
+
+### Query String Params
+
+Query string parameters are passed to the application through the address bar, using a ? as so:
+
+```
+http://localhost:9393/whatsup?name=bruce&surname=wayne
+```
+
+The application can handle these params in the controller as follows:
+
+```
+get '/whatsup' do
+  "Whats up " + params[:name] + " " + params[:surname]"
+end
+```
+### URL Path Parameters
+
+These parameters are passed to the application as a part of the URL Path:
+```
+http://localhost:9393/hello/clark/kent
+```
+
+This can then be handled in the controller as follows:
+
+```
+get '/hello/:name/:surname' do
+  "Hello " + params[:name] + " " + params[:surname]"
+end
+```
+
+
+
+
+
 
 
 
