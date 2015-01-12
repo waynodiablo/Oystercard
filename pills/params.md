@@ -102,6 +102,11 @@ Sinatra will actually take the splat values and put them into an array that is s
 ``` ruby
 {:splat => ['hello', 'snoopy']}
 ```
+### External resources
+[Sinatra route matching](http://www.sinatrarb.com/intro.html)
+
+
+
 
 ### Exercise: 
 *To-Do List*
