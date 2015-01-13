@@ -56,7 +56,7 @@ get '/whatsup' do
 end
 ```
 
-Query String params are fantastic because they allow you to have desc
+Query String params are fantastic because they allow you to have descriptive URLs
 
 ### URL Path Parameters
 
