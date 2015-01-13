@@ -58,6 +58,7 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 * [Adding the database](#adding-the-database)
 * [Managing links and tags](#managing-links-and-tags)
 * [Adding user accounts](#adding-user-accounts)
+  * [Signing up](#signing-up)
   * [Password confirmation](#password-confirmation)
   * [Handling input errors](#tandling-input-errors)
   * [Three level of data checks](#three-level-of-data-checks)
@@ -648,7 +649,7 @@ We will add the following functionality:
 
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
 
-#Adding user accounts - signing up
+# Signing up
 
 Let's begin with a test, as usual. The integration test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
@@ -829,7 +830,7 @@ Let's clean the code up a little bit by extracting the helpers and datamapper-re
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd31ddf5d7706d139
 
-### Adding user accounts - Password confirmation
+### Password confirmation
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
 ```ruby
@@ -903,7 +904,7 @@ Now the test passes.
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/f41a3a2b35451eadd0773e0abbc8e85aba481e90
 
-### Adding user accounts - Handling input errors
+### Handling input errors
 
 Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
 
@@ -1029,7 +1030,7 @@ Finished in 0.40513 seconds
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
 
-### Adding user accounts - Three level of data checks
+### Three level of data checks
 
 Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
 
@@ -1070,7 +1071,7 @@ validates_uniqueness_of :email
 
 would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
 
-### Adding user accounts - Preventing duplicate registrations
+### Preventing duplicate registrations
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 ```ruby
@@ -1142,7 +1143,7 @@ We have all the code we need to make our tests pass. (If your tests fail, the ch
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/44a6f6d79ab74d5da01487c14ac5929349e74651
 
-### Adding user accounts - Rake tasks for database management
+### Rake tasks for database management
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
 
@@ -1187,7 +1188,7 @@ This way you can upgrade or migrate your database manually after every change to
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/a97fbdb0d12210277d6dca158b03ce6c88d07677
 
-### Adding user accounts - Signing in
+### Signing in
 
 The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
 ```ruby
@@ -1339,7 +1340,7 @@ end
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/3beb8ac44357ceedf643bcbc9fccd92459faa92d
 
-### Adding user accounts - Signing out
+### Signing out
 
 So far we learned how to create the users and sign them in. Let's see how we can log them out.
 
@@ -1408,7 +1409,7 @@ Now it's a good time to refactor our code a little bit. Let's install 'sinatra-p
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
 
-### Adding user accounts - Forgotten password
+### Forgotten password
 
 Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.
 
