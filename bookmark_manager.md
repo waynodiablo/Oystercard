@@ -1,7 +1,5 @@
 # Bookmark manager
 
-### Completion time 3-4 days
-
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development:
 
 * Acceptance testing: Capybara
@@ -60,8 +58,8 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 * [Adding user accounts](#adding-user-accounts)
   * [Signing up](#signing-up)
   * [Password confirmation](#password-confirmation)
-  * [Handling input errors](#tandling-input-errors)
-  * [Three level of data checks](#three-level-of-data-checks)
+  * [Handling input errors](#handling-input-errors)
+  * [Three levels of data checks](#three-levels-of-data-checks)
   * [Preventing duplicate registrations](#preventing-duplicate-registrations)
   * [Rake tasks for database management](#rake-tasks-for-database-management)
   * [Signing in](#signing-in)
@@ -317,6 +315,8 @@ This will make sure that the database is cleared after every test run.
 
 Current State on Github
 https://github.com/makersacademy/bookmark_manager/tree/15f77fecce729e2a9225f3ac2d369e201f6ce142
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 # Managing links and tags
 
@@ -634,6 +634,8 @@ First we find the tag that we need (note the use of a named parameter in the rou
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/e45ed5d9c3289c8320632e6aadcc56c3d624fbcc
 
+[ [Return to outline](#bookmark-manager-outline) ]
+
 ##Adding user accounts
 
 Let's implement basic user account functionality using what we learned in Security. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user. This section will rely on your understanding of what we (will) have discussed in Security.
@@ -648,6 +650,8 @@ We will add the following functionality:
 * Every link and every tag will be linked to the user that created it, unless the user was anonymous
 
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 # Signing up
 
@@ -830,6 +834,8 @@ Let's clean the code up a little bit by extracting the helpers and datamapper-re
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd31ddf5d7706d139
 
+[ [Return to outline](#bookmark-manager-outline) ]
+
 ### Password confirmation
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
@@ -903,6 +909,8 @@ Now the test passes.
 
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/f41a3a2b35451eadd0773e0abbc8e85aba481e90
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 ### Handling input errors
 
@@ -1030,7 +1038,9 @@ Finished in 0.40513 seconds
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
 
-### Three level of data checks
+[ [Return to outline](#bookmark-manager-outline) ]
+
+### Three levels of data checks
 
 Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
 
@@ -1070,6 +1080,8 @@ validates_uniqueness_of :email
 ```
 
 would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 ### Preventing duplicate registrations
 
@@ -1143,6 +1155,8 @@ We have all the code we need to make our tests pass. (If your tests fail, the ch
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/44a6f6d79ab74d5da01487c14ac5929349e74651
 
+[ [Return to outline](#bookmark-manager-outline) ]
+
 ### Rake tasks for database management
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
@@ -1187,6 +1201,8 @@ This way you can upgrade or migrate your database manually after every change to
 
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/a97fbdb0d12210277d6dca158b03ce6c88d07677
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 ### Signing in
 
@@ -1340,6 +1356,8 @@ end
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/3beb8ac44357ceedf643bcbc9fccd92459faa92d
 
+[ [Return to outline](#bookmark-manager-outline) ]
+
 ### Signing out
 
 So far we learned how to create the users and sign them in. Let's see how we can log them out.
@@ -1409,6 +1427,8 @@ Now it's a good time to refactor our code a little bit. Let's install 'sinatra-p
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
 
+[ [Return to outline](#bookmark-manager-outline) ]
+
 ### Forgotten password
 
 Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.
@@ -1455,6 +1475,8 @@ end
 ```
 
 To test it locally it may be convenient to add the addon to Heroku to generate and API key and then create an environment variable in your .bash_profile to make it available locally.
+
+[ [Return to outline](#bookmark-manager-outline) ]
 
 ## Styling the website
 
