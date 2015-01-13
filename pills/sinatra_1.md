@@ -497,3 +497,4 @@ Resources
 * [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 * [Talk Slides on Sinatra Chat Server](http://obfusk.org/achatwithsinatra/#1)
 * [Detailed Talk Slides on Sinatra](http://www.slideshare.net/BobNadlerJr/sinatra-flatiron)
+* [Sinatra Book](http://shop.oreilly.com/product/0636920019664.do)
