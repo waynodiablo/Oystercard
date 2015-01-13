@@ -302,6 +302,8 @@ And that ends the intro! There's a lot more to look at (Cucumber loads its
 environment up from a file called `env.rb` inside `features/support` would be
 a good place to start)
 
+Note that if you like/prefer gherkin style 'given, when, then' syntax you can also use it for Rspec tests: [https://github.com/jimweirich/rspec-given](https://github.com/jimweirich/rspec-given)
+
 ###Further Reading
 
 - [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
