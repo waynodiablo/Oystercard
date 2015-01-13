@@ -1,6 +1,8 @@
 User Experience (UX)
 ====================
 
+[Video](https://www.youtube.com/watch?v=wJGReM7cie4)
+
 Resources
 ---------
 
