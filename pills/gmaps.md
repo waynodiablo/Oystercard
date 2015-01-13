@@ -1,7 +1,7 @@
 Google Maps
 ================
 
-:construction: UNDER CONSTRUCTION" :construction:
+:construction: UNDER CONSTRUCTION :construction:
 
 [Video](https://www.youtube.com/watch?v=rAH78ga58_c)
 
