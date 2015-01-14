@@ -98,6 +98,10 @@ However as you might imagine, GMaps is not tied to a Rails backend.  Here's an e
 
 https://github.com/ToastShaman/nodejs-socketio-gmaps
 
+Watch out that running the above node project will likely conflict with any running rails server:
+
+http://stackoverflow.com/questions/12181253/changing-node-js-listening-port
+
 [TODO: add notes on node setup]
 
 
