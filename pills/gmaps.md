@@ -1,6 +1,8 @@
 Google Maps
 ================
 
+:construction: UNDER CONSTRUCTION :construction:
+
 [Video](https://www.youtube.com/watch?v=rAH78ga58_c)
 
 Google Maps is a JavaScript library that makes use of a Google API to display an interactive map in the browser.  You can embed a Google Map in a simple static web page:
@@ -95,6 +97,8 @@ https://github.com/apneadiving/Google-Maps-for-Rails
 However as you might imagine, GMaps is not tied to a Rails backend.  Here's an example of a GMap application communicating with a Rails backend:
 
 https://github.com/ToastShaman/nodejs-socketio-gmaps
+
+[TODO: add notes on node setup]
 
 
 
