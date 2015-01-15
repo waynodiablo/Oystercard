@@ -1,6 +1,8 @@
 Stripe
 ========
 
+[Video](https://www.youtube.com/watch?v=gdmCNRNyeK4)
+
 Taking payments is clearly a critical part of many business operations.  There are a number of relatively simple payment gateway solutions, such as Stripe, GoCardless, BrainTree, PayMill etc.  Stripe is perhaps the most developer friendly and has good integration options for popular web application frameworks such as Rails, Django, Sinatra etc., and has javascript only solutions that easily integrate with JavaScript stacks.
 
 Using a 3rd party payment system relieves a huge burden on the developer in terms of not having to by not placing sensitive cardholder data on the developer's server. A 3rd party like Stripe will take care of the hardest parts of PCI (Payment Card Industry) compliance, like redacting logs and encrypting cardholder details.  The developer's site will still need to support https, and the 3rd party will be taking a percentage cut of any sales, but these overheads are very often worth it.
