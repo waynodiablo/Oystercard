@@ -215,7 +215,12 @@ Which allows us to donate to a specific charity.
 
 Note, that one could use stripe.js to get more flexibility with styling of forms.
 
-Exercises:
+Resources
+--------
+* [Instagram Marketplace Stripe Walkthrough (with video - see resources)](https://github.com/makersacademy/Walkthroughs/blob/master/stripe.md)
+
+Exercises
+--------
 
 * Try to implement different donation amounts
 * Try to implement user selected donation amount
