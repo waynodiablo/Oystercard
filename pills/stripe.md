@@ -218,6 +218,7 @@ Note, that one could use stripe.js to get more flexibility with styling of forms
 Resources
 --------
 * [Instagram Marketplace Stripe Walkthrough (with video - see resources)](https://github.com/makersacademy/Walkthroughs/blob/master/stripe.md)
+* [Multiple Payment Option Question](http://stackoverflow.com/questions/25778969/donations-on-stripe-with-rails)
 
 Exercises
 --------
