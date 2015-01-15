@@ -636,6 +636,7 @@ There is no point in repeating what's already out there. The point of this tutor
 - [Try Git](https://www.codeschool.com/courses/try-git) – interactive git game
 - [Pro Git book](http://git-scm.com/book) – a reference book on git.
 - [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys) – you'll need to do this before connecting to Github from the command line
+- [Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - An explanation of the sort of workflows you'll come across when using Git in the real world 
 
 
 ### Challenges 
