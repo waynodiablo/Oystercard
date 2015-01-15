@@ -41,8 +41,8 @@ In order to start working with Stripe in our Rails app we need to go to our Stri
 
 ```yml
 development:
-  stripe_secret_key: sk_test_4O7CTmoS1jwlDAX3z1abLYWm
-  stripe_public_key: pk_test_4O7CBxlnqMFgw0BAmpKmOjTn
+  stripe_secret_key: sk_test_2398yredh298qwehid128hd1
+  stripe_public_key: pk_test_w9fh2b98iybe9ibquyebn1oe
 ```
 
 To start with let's just put our 'test' keys in development so that we can get a tracer bullet to confirm that we can manage payments end to end.
