@@ -1,6 +1,6 @@
 # Taking Your Coding Further
 
-Once you have [cleaned up your GitHub](https://github.com/makersacademy/post_course/blob/master/Clean%20your%20Github.md) it's likely that you are going to want to take your coding skills even further while you are looking for your first job.
+[Video](https://www.youtube.com/watch?v=tJa73st5-Hc)
 
 ## What Can I Do?
 
