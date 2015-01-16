@@ -43,11 +43,11 @@ Hugely important to develop the right application for your customer. Which versi
 Having said that don't fall into a common trap - if you don't build a mobile site because you don't have much mobile traffic... you will never have mobile traffic because you are not catering for that demographic. 
 
 ## External resources
-[CSS Tricks - Media Queries](http://css-tricks.com/css-media-queries/)
-[CSS Tricks - Fluid Grids](http://css-tricks.com/dont-overthink-it-grids/)
-[Fluid Images](http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design)
-[RWD Bookmarklet](http://responsive.victorcoulon.fr/ - RWD bookmarklet)
-[This Is Responsive](http://bradfrost.github.io/this-is-responsive/)
-[mediaqueri.es](http://mediaqueri.es/)
+* [CSS Tricks - Media Queries](http://css-tricks.com/css-media-queries/)
+* [CSS Tricks - Fluid Grids](http://css-tricks.com/dont-overthink-it-grids/)
+* [Fluid Images](http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design)
+* [RWD Bookmarklet](http://responsive.victorcoulon.fr/ - RWD bookmarklet)
+* [This Is Responsive](http://bradfrost.github.io/this-is-responsive/)
+* [mediaqueri.es](http://mediaqueri.es/)
 
 Breakpoints are often set at around the size of a smart phone in landscape orientation, then again at a tablet in landscape, and then again at a large laptop screen. 
