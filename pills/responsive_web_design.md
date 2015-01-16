@@ -28,7 +28,26 @@ Scaling the size of various elements on the page can only go so far in terms of 
 ```
 Any CSS that is written underneath this @media tag will only be executed when the screen is at between 320px and 600px wide inclusive. CSS Tricks have a fantastic guide for how to make good use of this function - see the external resources at the end of this document. Typically, breakpoints are set between each of phone / tablet / laptop / desktop or 40em(640px) ; 64em(1025px) ; 90em(1441px).
 
+## Mobile First
+
+When developing a responsive site, it is good practice build your mobile site first and then scale it up. There are many good reasons for this: 
+
+* A small screen has no room for clutter
+* Touch screens cannot rely on ‘hover’ or ‘mouseover’
+* Much easier to scale up than shrink down - streamlined mobile pages become streamlined desktop pages, whereas scaled down desktop pages become cluttered and hard to read.
+
+## Know your customer!
+
+Hugely important to develop the right application for your customer. Which version of IE do you need to code for? What browsers are most common? It is important that you are able to answer these questions before building your responsive site. 
+
+Having said that don't fall into a common trap - if you don't build a mobile site because you don't have much mobile traffic... you will never have mobile traffic because you are not catering for that demographic. 
+
 ## External resources
 [CSS Tricks - Media Queries](http://css-tricks.com/css-media-queries/)
+[CSS Tricks - Fluid Grids](http://css-tricks.com/dont-overthink-it-grids/)
+[Fluid Images](http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design)
+[RWD Bookmarklet](http://responsive.victorcoulon.fr/ - RWD bookmarklet)
+[This Is Responsive](http://bradfrost.github.io/this-is-responsive/)
+[mediaqueri.es](http://mediaqueri.es/)
 
 Breakpoints are often set at around the size of a smart phone in landscape orientation, then again at a tablet in landscape, and then again at a large laptop screen. 
