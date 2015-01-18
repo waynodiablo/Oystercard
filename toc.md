@@ -32,6 +32,7 @@ Here you will find other, relevant materials and challenges that will help you o
 ![Andrew](https://avatars3.githubusercontent.com/u/6886844?v=3&s=128)
 
 - List of good places to work at the weekend
+  - [Trade Made](http://www.trade-made.co.uk/)
   - [Look Mum No Hands](http://www.lookmumnohands.com)
   - [Fix](http://www.fix-coffee.co.uk)
   - [Timber Yard](http://timberyardlondon.com)
