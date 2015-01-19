@@ -135,8 +135,9 @@ Function has multiple uses in Javascript - and since we are Rubyists first and f
 
 #### class
 ```javascript
-function Classname() {}
+var Classname = function () {};
 ```
+_Some debate exists on the best way to declare function this way, but this is the best practice according to [John Resig...](http://ejohn.org/blog/javascript-as-a-first-language/)_
 
 #### do
 ```javascript
@@ -280,7 +281,7 @@ ReferenceError: Javabuzz is not defined
 This is Jasmine's very dramatic way of saying that it doesn't know what we mean when we refer to `Javabuzz();` on line 8(ish) of our spec file. Well you and I both know we meant the Javabuzz class, so let's head on over to **src/Javabuzz.js** and create the class now:
 
 ```javascript
-function Javabuzz() {};
+var Javabuzz = function () {};
 ```
 
 Sweet, error message has been changed!
@@ -309,7 +310,7 @@ Whilst I would encourage you to learn this syntax and **not** rely on editor sho
 So we want to swap out `class_name` for the class we want to bind the method to, `method_name` becomes the name of the method and `first_argument` is pretty self-explanatory :p So we should end up with this:
 
 ```javascript
-function Javabuzz(){};
+var Javabuzz = function () {};
 
 Javabuzz.prototype.isDivisibleByThree = function(number) {
   return true;
