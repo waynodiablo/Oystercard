@@ -135,7 +135,7 @@ A free online book. I wouldn't recommend reading cover-to-cover, just skim throu
 
 These are starting to be a little dated, but they are awesome!  And they contain a lot of computer science history that you really should know.  They are not a great 'introduction' for novices, but once you've spent a few days coding in JavaScript they might make good sense.  Crockford also created the [JSLint JavaScript style checker](http://www.jslint.com/) which can be good for code review.
 
-* [Crockford on JavaScript](http://yuiblog.com/crockford/)
+* [Crockford on JavaScript](https://www.youtube.com/playlist?list=PL5586336C26BDB324)
 * [JSLint](http://www.jslint.com/)
 
 ### Jasmine
