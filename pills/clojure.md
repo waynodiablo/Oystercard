@@ -319,7 +319,7 @@ Bindings are evaluated in order, so later bindings can use earlier bindings.
 The *scope* of variables defined with let is defined by the the extent of the list. What would the happen with the following?
 
 ```clojure
-(let [name "Herminone])
+(let [name "Herminone"])
 
 (println name)
 ```
@@ -438,7 +438,7 @@ Some higher-order functions accept a sequence and return a particular value in r
 
 ## Now it's your turn!
 
-Let's use some real data from the Open Weather Map API.
+Let's use some real data from the Open Weather Map API!
 
 http://openweathermap.org/API
 
@@ -450,7 +450,6 @@ It's a free JSON api that provides current weather and forecasts.
 * What is the forecasted averages temperature of London, UK for the last 10 days?
 * How many of the next 10 days is it forecasted to be cloudy?
 * How many of the next 10 days is it forecasted not to be cloudy?
-
 
 ## Resources
 
