@@ -109,8 +109,8 @@ Catalan...
 ```cucumber
 Escenari: Cucumber diu OH HAI CUCUMNER
 	Donat una lulz salutació
-	Quan envío un missatge de benvinguda
-	Aleshores d'hauría de dir "OH HAI CUCUMNER!"
+	Quan envio un missatge de benvinguda
+	Aleshores hauria de dir "OH HAI CUCUMNER!"
 ```
 
 And LOL
