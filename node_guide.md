@@ -15,8 +15,8 @@ Check out the [Introduction to Node](https://github.com/makersacademy/Walkthroug
 
 Next, let's get a server running, with tests: [A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md).  
 
-![Hello world](https://raw.githubusercontent.com/makersacademy/course/master/images/hw.png?token=AG-Bb1foQ0JkMHjnxgpyGbSDcxZkXWI9ks5UkWpbwA%3D%3D)
-![Tests passing!](https://raw.githubusercontent.com/makersacademy/course/master/images/testpass.png?token=AG-BbzBqpKy1Nk8UTEIhVnvDfW1YfOtjks5UkWqfwA%3D%3D)
+![Hello world](/images/hw.png)
+![Tests passing!](/images/testpass.png)
 
 Now that we have a server, we want to be able to display dynamic content, as well as be able to configure our server's routes: 
 [Express, `ejs` and middleware](https://github.com/makersacademy/Walkthroughs/blob/master/express_ejs.md)
