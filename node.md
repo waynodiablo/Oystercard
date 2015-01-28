@@ -2,7 +2,7 @@
 
 **[UNDER CONSTRUCTION]**
 
-Welcome to Node! This week, you will be learning how to build realtime applications using JavaScript across the whole stack. At the end of the week you will have built your own version of the Github API (Application Programming Interface).
+Welcome to Node! This week, you will be learning how to build responsive applications using JavaScript across the whole stack. At the end of the week you will have built your own version of the remotely accessible Github API (Application Programming Interface), as well as used Ajax to access it dynamically from the browser.
 
 **Please note, as with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
@@ -23,7 +23,7 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 ##Version 3 - Let's get an API up and running
 
-[Intro to Websockets](https://github.com/makersacademy/Walkthroughs/blob/master/intro_to_websockets.md)
+...
 
 ##Version 4 - Let's consume that API dynamically with Ajax
 
@@ -31,14 +31,14 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 ###Related walkthroughs
 
-**Part 1:**  
-[Introduction to Node](https://github.com/makersacademy/Walkthroughs/blob/master/intro_to_node.md)  
-[Node good practices](https://github.com/makersacademy/Walkthroughs/blob/master/node_good_practices.md)  
-[A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md)
+**Version 1:**  
 
-**Part 2:**  
-[Express, `ejs` and middleware](https://github.com/makersacademy/Walkthroughs/blob/master/express_ejs.md)  
+... ensure these are in course repo ...
 
-**Part 3**:  
-[Intro to Websockets](https://github.com/makersacademy/Walkthroughs/blob/master/intro_to_websockets.md)
-[`socket.io`, tested]()  
+**Version 2:**  
+
+... ensure these are in course repo ...
+
+**Version 3**:  
+
+... ensure these are in course repo ... 
