@@ -2,7 +2,7 @@
 
 Clojure is a wonderfully contradictory language.
 
-It's an amazing, modern programming language that has been designed specifically for the concurrent multithread abilities and memory capacity of modern computers. But it is simultaneously rooted in traditions that are almost as old as computer science itself.
+It's a cutting edge programming language that has been designed specifically for the concurrent multithread abilities and memory capacity of modern computers. But it is simultaneously rooted in traditions that are almost as old as computer science itself.
 
 We'll see how part of its power is derived from an _interesting_ syntax many people struggle with when first coming to the language. Try not to let these superficial concerns get in the way. You'll come to understand how Clojure derives a lot of its power from its syntax.
 
@@ -176,8 +176,9 @@ If you try to execute this in Light Table something weird will happen.
 You'll get an error complaining that `java.lang.ClassCastException: java.lang.String cannot be cast to clojure.lang.IFn`.
 
 This is interesting for two reasons:
-1. I told you that Clojure didn't have classes, and you have a ClassCastException
-2. It's looking for a clojure.lang.IFn (IFn is an abbreviation of Function Interface)
+
+  1. I told you that Clojure didn't have classes, and you have a ClassCastException
+  2. It's looking for a clojure.lang.IFn (IFn is an abbreviation of Function Interface)
 
 The reason we're getting java.lang.ClassCastExceptions is because Clojure is built on top of Java. Much like a language like CoffeeScript is built on top of JavaScript, or Swift is built on top of C (and ruby, for that matter), we're seeing an error bubble up from the underlying implementation.
 
@@ -264,7 +265,7 @@ Hopefully the above seems very simple. We've covered lists, and how the first el
 Knowing that, can you see a problem with this code?
 
 ```clojure
-(when button-pressed
+(if button-pressed?
   (launch-the-missiles!))
 ```
 
@@ -272,12 +273,12 @@ Take a moment to think about this.
 
 ---
 
-The reason is that launch the missiles will be evaluated and the return value will be passed to when before it has a chance to test whether the button has been pressed! :(
+The reason is that launch the missiles will be evaluated and the return value will be passed to `if` before it has a chance to test whether the button has been pressed! :(
 
-Clojure gets around this by allowing functions to be defined in such a way (using macros) that arguments are *not* evaluated first. You can define your own that work this way too. Common functions defined this way are:
+Clojure gets around this by making *if a special form*. Arguments are *not* evaluated first. Phew!
 
 ```clojure
-; If statements
+;; "If" will evaluate the condition *before* subsequent arguments
 
 (if (suspicous-noise? outside)
   (release-the-hounds! "barking")
@@ -288,10 +289,12 @@ Clojure gets around this by allowing functions to be defined in such a way (usin
 (when (finished-homework?)
   (smugface))
   ```
+  
+`when` is defined internally by the language in terms of `if` using macros. We'll cover how you can write your own macros at a later date.
 
 ## Naming things
 
-To do much useful work we want to name things. There are two *special forms* that Clojure defines that allow us to name variables.
+To do much useful work we want to name things. There are two other *special forms* that Clojure defines that allow us to name variables.
 
 ### Let
 
@@ -423,7 +426,7 @@ Other higher-order functions that return a sequence are:
 ; => (1 3 5)
 
 (sort-by count ["bb" "aaa" "c"]
-; =>("c" "bb" "aaa")
+; => ("c" "bb" "aaa")
 ```
 
 Some higher-order functions accept a sequence and return a particular value in return:
@@ -435,6 +438,14 @@ Some higher-order functions accept a sequence and return a particular value in r
 (group-by even? [1 2 3 4])
 ; => {false [1 3], true [2 4]}
 ```
+
+## Making HTTP requests
+
+TODO
+
+## Parsing JSON
+
+TODO
 
 ## Now it's your turn!
 
