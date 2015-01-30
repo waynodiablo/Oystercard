@@ -14,9 +14,20 @@ Unlike Ruby, Clojure is a compiled language, and your code has to be compiled in
 
 ### Install Leiningen ###
 
-Follow the instructions at [http://leiningen.org](http://leiningen.org/#install) to install the `lein` command-line utility.
+[Leiningen](http://leiningen.org/#install) is a build tool that assists with writing Clojure code. It is accessed through the `lein` command-line utility.
+
+You can install Leiningen through homebrew in the usual way:
+```bash
+brew install leiningen
+```
 
 In addition to compiling Clojure code, Leiningen functions a lot like bundler does for Ruby. It manages a project's dependencies and we'll be using it a lot.
+
+### Install a JDK
+
+Clojure runs on the Java Virtual Machine (JVM). In order to compile Clojure code you'll need a working JDK.
+
+TODO: JDK installation walkthough
 
 **Make sure you run `lein` on the command-line before proceeding.**
 
@@ -38,15 +49,17 @@ lein deps
 
 to install dependencies. At this stage Clojure is the only project dependency. It will install the latest version of Clojure by default, which is normally what you want.
 
+![project.clj](https://github.com/makersacademy/course/blob/master/pills/images/clojure/project-clj.png)
+
 Notice how in the `project.clj` file Clojure is a _dependency_, just like any other. This is because code is compiled together with your other libraries into executable files that are run like applications on your computer. You can run the compiled code on a computer that doesn't have Clojure installed.
 
 ### Setting up your editor ###
 
 Working with Clojure is a lot more pleasant if you have great text editor integration.
 
-Make sure you follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Light Table](http://lighttable.com/), or [Emacs](http://www.gnu.org/software/emacs/)
+This walkthough will assume you are using the [Light Table](http://lighttable.com/) text editor. Take a look at [http://docs.lighttable.com/tutorials/full/](http://docs.lighttable.com/tutorials/full/) to get started.
 
-Unless you're particularly attached to your text extitor, [Light Table](http://lighttable.com/) is the recommended choice. Take a look at [http://docs.lighttable.com/tutorials/full/](http://docs.lighttable.com/tutorials/full/) to get started.
+It is **strongly recommended** that you use Lighttable for the walkthrough since Clojure integration is provided out of the box. Once you are comfortable with the basics of the language you can choose to follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Emacs](http://www.gnu.org/software/emacs/)
 
 ## Clojure REPL ##
 
@@ -184,9 +197,11 @@ The reason we're getting java.lang.ClassCastExceptions is because Clojure is bui
 
 The second error is because lists occupy a special place in Clojure. The first element of a list is assumed to be a function call.
 
+[[Indentation]]
+
 ## Calling Functions
 
-The code failed because "list" (the first element in the list) is not a function. Let's replace it with something that is.
+The code failed because "a" (the first element in the list) is not a function. Let's replace it with something that is.
 
 `println` is a function that we already saw above. It prints its arguments to the console.
 
@@ -242,7 +257,6 @@ You can next lists within lists. The result of one list is evaluated before bein
 ; => ?
 ```
 What's the value of the expression above? Think about it before moving on.
-
 
 ### Evaluation
 
@@ -307,7 +321,9 @@ The most common way of defining variables is with `let`.
 ; => 50
 ```
 
-You can supply as many *bindings* to let as you like, as long as there's an even number of variables to values.
+Let associates values to symbols in pairs. In the above example the value `5` is associated with the symbol `x`. The value `10` is associated with the symbol `y`. Becase the values are being bound to symbols, the associations are called *bindings*.
+
+You can supply as many bindings to let as you like, as long as there's an even number of values to symbols.
 
 Bindings are evaluated in order, so later bindings can use earlier bindings.
 
@@ -322,9 +338,9 @@ Bindings are evaluated in order, so later bindings can use earlier bindings.
 The *scope* of variables defined with let is defined by the the extent of the list. What would the happen with the following?
 
 ```clojure
-(let [name "Herminone"])
+(let [wizard "Hermione"])
 
-(println name)
+(println wizard)
 ```
 
 Unfortunately we get an error.
@@ -347,7 +363,7 @@ If you want to make use of variables more widely, you can **def**ine them to be 
 (println job-description)
 ```
 
-Unlike let, you can only define one thing at a time.
+**NB: unlike let, you can only define one thing at a time with `def`.**
 
 ## Creating functions
 
@@ -411,10 +427,20 @@ Higher-order functions are functions which accept or return functions.
 
 
 (map inc numbers)
-; => 2 3 4 5 6 7 8 9 10 11
+; => (2 3 4 5 6 7 8 9 10 11)
 ```
 
 The `inc` function increments a number by one, and we can pass it as an *argument* to map. `map` will iterate over a collection passed as its second argument and apply the function passed as its second argument to each element in turn.
+
+There is nothing special about higher order functions or the functions you pass to them! We could also use our `add-one` function in place of `inc`.
+
+```clojure
+(def numbers
+  [1 2 3 4 5 6 7 8 9 10])
+
+(map add-one numbers)
+; => (2 3 4 5 6 7 8 9 10 11)
+```
 
 Other higher-order functions that return a sequence are:
 
@@ -429,9 +455,11 @@ Other higher-order functions that return a sequence are:
 ; => ("c" "bb" "aaa")
 ```
 
-Some higher-order functions accept a sequence and return a particular value in return:
+Some higher-order functions accept a sequence and return something different in return:
 
 ```clojure
+; Reduce is just like Ruby's inject...
+
 (reduce + [1 2 3 4 5])
 ; => 15
 
@@ -439,25 +467,276 @@ Some higher-order functions accept a sequence and return a particular value in r
 ; => {false [1 3], true [2 4]}
 ```
 
-## Making HTTP requests
+## Installing Dependencies
 
-TODO
+Ruby has Gems, Node has Packages, and Clojure has *Jars* (short for Java archive).
 
-## Parsing JSON
+There are a huge number of Clojure libraries available. You can search for them at [Clojars](https://clojars.org/). Clojure can also run jars written for other languages such as Java, which means that although Clojure is a recent language you can make use of a wealth of software developed over the last several decades.
 
-TODO
+We can add jars as dependencies to your project in the `project.clj` file.
+
+```clojure
+(defproject clojure-intro "0.1.0-SNAPSHOT"
+  :description "FIXME: write description"
+  :url "http://example.com/FIXME"
+  :license {:name "Eclipse Public License"
+            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :dependencies [[org.clojure/clojure "1.6.0"]])
+
+```
+
+To make HTTP requests we're going to use a dependency called clj-http. The GitHub is here: [https://github.com/dakrone/clj-http](https://github.com/dakrone/clj-http). At the time of writing, the latest version is 1.0.1.
+
+```clojure
+[clj-http "1.0.1"]
+```
+
+This needs to be added to the project dependencies in the `project.clj`. This is just like adding it to a Gemfile in ruby, except we always need to specify the version we want.
+
+![clj-http](https://github.com/makersacademy/course/blob/master/pills/images/clojure/clj-http.png)
+
+The new dependency will be automatically downloaded, **but only once we restart our REPL**. To do this in Light Table, go to `View > Connections` and disconnect from the current connection.
+
+![connections](https://github.com/makersacademy/course/blob/master/pills/images/clojure/connections.png)
+
+Now, when you execute your code again, the latest dependencies will be downloaded.
+
+## Requiring & using dependencies
+
+Dependencies are required on a per-namespace basis. To access the functions provided by `clj-http`, we have to update our namespace declaration.
+
+```clojure
+(ns clojure-intro.core
+  (:require [clj-http.client]))
+```
+
+The `:require` clause tells the compiler that we want access to the functions defined in the `clj-http/client` namespace. The client namespace contains a function called `get` that gets an HTTP page.
+
+The `clj-http.client/get` function expects to recieve the URL to get as a string. We can execute it like so:
+
+```clojure
+(ns clojure-intro.core
+  (:require [clj-http.client]))
+
+(clj-http.client/get "http://google.com")
+
+```
+
+This should output something like the following:
+
+![Google respons](https://github.com/makersacademy/course/blob/master/pills/images/clojure/google.png)
+
+Hooray! We've just spoken to Google from Clojure.
+
+Our function call is a little long-winded, so we can choose to alias the required namespace with a shorter symbol. Try updating the namespace declaration and function call like so:
+
+```clojure
+(ns clojure-intro.core
+  (:require [clj-http.client :as http]))
+
+(http/get "http://google.com")
+
+```
+
+## HTTP requests and responses
+
+One of the things that makes Clojure so interesting is its emphasis on simple, reusable data structures. You might be able to see that the response we get back from `http/get` is a map. It's just like the map we created earlier `{:with "keys" :and "values"}`.
+
+We could ask what keys the map returns by executing:
+
+```clojure
+(keys (http/get "http://google.com"))
+
+; => (:cookies :orig-content-encoding :trace-redirects :request-time :status :headers :body)
+```
+
+We could ask what headers our map contains by calling:
+
+```clojure
+(:headers (http/get "http://google.com"))
+
+; => {"Server" "gws" "Content-Type" "text/html; charset=ISO-8859-1" "X-Frame-Options" "SAMEORIGIN"}
+```
+
+Notice how the headers are maps too! This is very common in Clojure code.
+
+We can make requests using maps as well, we can pass an optional map of configuration to our `http/get` request:
+
+```clojure
+(http/get "http://google.com" {:query-params {:q "Makers Academy"}})
+```
+
+You may not be able to see what this is doing, but take a look at the `:trace-redirects` in the response. This will show the URL that Google sent us to:
+
+```clojure
+; => ["http://google.com" "http://www.google.co.uk/?q=Makers+Academy"]
+```
+
+Notice how we have added a query parameter onto the end of the URL.
+
+## JSON responses and Open Weather Map
+
+This sort of maps in, maps out way of working with HTTP requests and responses is even more powerful when you are dealing with APIs.
+
+Instead of talking to Google, let's access the JSON API provided by openweathermap.com at http://api.openweathermap.org/data/2.5/.
+
+This API will allow us to search for locations using the `find` path, search for weather at a particular location using the `weather` path and see weather predictions with the `forecast` path.
+
+You can:
+
+* Find Londons with http://api.openweathermap.org/data/2.5/find?q=london
+* See the weather with http://api.openweathermap.org/data/2.5/weather?q=london
+* See the forecast with  http://api.openweathermap.org/data/2.5/forecast?q=london
+
+Each response will return a JSON document. For example, below is the response from the *find* query.
+
+```json
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 2,
+  "list": [
+    {
+      "id": 6058560,
+      "name": "London",
+      "coord": {
+        "lon": -81.23304,
+        "lat": 42.983391
+      },
+      "main": {
+        "temp": 265.819,
+        "temp_min": 265.819,
+        "temp_max": 265.819,
+        "pressure": 1014.61,
+        "sea_level": 1041.07,
+        "grnd_level": 1014.61,
+        "humidity": 88
+      },
+      "dt": 1422644988,
+      "wind": {
+        "speed": 8.76,
+        "deg": 327.001
+      },
+      "sys": {
+        "country": "CA"
+      },
+      "clouds": {
+        "all": 68
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "broken clouds",
+          "icon": "04d"
+        }
+      ]
+    },
+    {
+      "id": 2643743,
+      "name": "London",
+      "coord": {
+        "lon": -0.12574,
+        "lat": 51.50853
+      },
+      "main": {
+        "temp": 275.25,
+        "humidity": 89,
+        "pressure": 979.2,
+        "temp_min": 275.25,
+        "temp_max": 275.25
+      },
+      "dt": 1422644712,
+      "wind": {
+        "speed": 2,
+        "gust": 2.8,
+        "deg": 202
+      },
+      "sys": {
+        "country": "GB"
+      },
+      "rain": {
+        "3h": 0.5
+      },
+      "snow": {
+        "3h": 0.025
+      },
+      "clouds": {
+        "all": 68
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "light rain",
+          "icon": "10n"
+        }
+      ]
+    }
+  ]
+}
+```
+
+We can make the same request using Clojure by changing the URL that we request, and the query parameter to London.
+
+```clojure
+(:body (http/get "http://api.openweathermap.org/data/2.5/find"
+         {:query-params {:q "london"}
+          :as :json}))
+```
+
+We have added `:as :json` to the options map, and requested the `:body` from the response. Now our response will be a Clojure map that we can query and manipulate.
+
+```clojure
+{:message "accurate",
+ :cod "200",
+ :count 2,
+ :list
+ [{:coord {:lon -81.23304, :lat 42.983391},
+   :name "London",
+   :dt 1422645458,
+   :wind {:speed 8.76, :deg 327.001},
+   :id 6058560,
+   :weather
+   [{:id 803,
+     :main "Clouds",
+     :description "broken clouds",
+     :icon "04d"}],
+   :clouds {:all 68},
+   :sys {:country "CA"},
+   :main
+   {:temp 265.819,
+    :temp_min 265.819,
+    :temp_max 265.819,
+    :pressure 1014.61,
+    :sea_level 1041.07,
+    :grnd_level 1014.61,
+    :humidity 88}}
+  {:coord {:lon -0.12574, :lat 51.50853},
+   :name "London",
+   :dt 1422645312,
+   :wind {:speed 2, :gust 2.8, :deg 202},
+   :id 2643743,
+   :weather
+   [{:id 500, :main "Rain", :description "light rain", :icon "10n"}],
+   :clouds {:all 88},
+   :sys {:country "GB"},
+   :main
+   {:temp 275.05,
+    :humidity 90,
+    :pressure 979.2,
+    :temp_min 275.05,
+    :temp_max 275.05},
+   :rain {:3h 1.5}}]}
+```
 
 ## Now it's your turn!
 
-Let's use some real data from the Open Weather Map API!
+Use what you've learned to write functions that answer the following questions:
 
-http://openweathermap.org/API
-
-It's a free JSON api that provides current weather and forecasts.
-
-* How many cities called London are there? (hint: find?q=London)
+* How many cities called London are there?
 * What are the lat/long positions of all the Londons?
-* What is the forecasted average temperature for London, UK for the last 5 days? (hint: forecast?q=London)
+* What is the forecasted average temperature for London, UK for the last 5 days?
 * What is the forecasted averages temperature of London, UK for the last 10 days?
 * How many of the next 10 days is it forecasted to be cloudy?
 * How many of the next 10 days is it forecasted not to be cloudy?
