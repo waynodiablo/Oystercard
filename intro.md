@@ -2,13 +2,40 @@ Introduction
 ===========
 
 * New Office - main challenge is currently water
-* Makers Week
-  - challenges - review on Mondays, released on Friday
-  - simulation of employer tech test
-  
+
+Overview of the Makers Week
+-------------------------
+
+* Challenges - review on Mondays, released on Friday
+* Challenges are a simulation of employer tech tests
+
 ![Makers Week](https://github.com/makersacademy/course/blob/master/images/makers-week.png)
 
-* Makers week becomes less structured over time
+Each day there are morning and afternoon sessions.  
+
+![Makers Week Details](https://github.com/makersacademy/course/blob/master/images/makers-week-details.png)
+
+You can see the approximate weekly structure in the Calendar wiki:
+
+https://github.com/makersacademy/course/wiki/Calendar
+
+This structure is maintained consistenly for the first five weeks, but then gradually the structure is removed:
+
+**Junior Portion**
+
+1    |  2          | 3               | 4                | 5          | 6              |
+-----|-------------|-----------------|------------------|------------|----------------|
+Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | Lab Week |
+
+
+**Senior Portion**
+
+7    |  8    | 9                 | 10               | 11     | 12     |
+-----|-------|-------------------|------------------|--------|--------|
+Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Employment Week |
+
+
+
 
 * Office Hours (8am-9pm)
 * Access to coaches 
@@ -45,6 +72,8 @@ Drilling down even further we can see the names of the many technologies, langua
 ![Three Tier Detail](https://github.com/makersacademy/course/blob/master/images/3-tier.png)
 
 However note that there is far more complexity here than we can cover in 12 weeks.  Ultimately you will need to become a self-directed learner and drill down further in the areas that your agile process indicates you have greater need for knowledge.
+
+This is the Rosetta Stone of web development.  We want you to be great programmers and great project managers, and great team members, but critically we are focused on helping you become web developers, so understanding this architecture is key.
 
 
 Archive
