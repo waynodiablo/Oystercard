@@ -29,7 +29,15 @@ Run `lein` on the command line. You may be propmted to install a **JDK**. JDK st
 
 Clojure runs on the Java Virtual Machine (JVM). In order to compile Clojure code you'll need a working JDK.
 
-TODO: JDK installation walkthough
+If you run `lein` on the command line you will likely get a pop-up message saying that you need to install a JDK.
+
+![Install JDK](https://github.com/makersacademy/course/blob/master/pills/images/clojure/jdk.png)
+
+Hit the 'more info' button to go to Oracle's website. You'll need to click on the appropriate link to download a JDK for your system.
+
+![Oracle site](https://github.com/makersacademy/course/blob/master/pills/images/clojure/oracle-site.png)
+
+Run the JDK installer should work fine with all the default settings. Run this now.
 
 **Make sure you run `lein` on the command-line before proceeding.**
 
@@ -39,7 +47,7 @@ Working with Clojure is a lot more pleasant if you have great text editor integr
 
 This walkthough will assume you are using the [Light Table](http://lighttable.com/) text editor. Take a look at [http://docs.lighttable.com/tutorials/full/](http://docs.lighttable.com/tutorials/full/) to get started.
 
-It is **strongly recommended** that you use Lighttable for the walkthrough since Clojure integration is provided out of the box. Once you are comfortable with the basics of the language you can choose to follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Emacs](http://www.gnu.org/software/emacs/)
+It is **strongly recommended** that you use Light Table for the walkthrough since Clojure integration is provided out of the box. Once you are comfortable with the basics of the language you can choose to follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Emacs](http://www.gnu.org/software/emacs/)
 
 ### Create a test project ###
 
@@ -80,7 +88,7 @@ We've already seen Clojure code - the `project.clj` file is written in Clojure. 
 
 In Light Table, go to `File > Open Folder` and select the project folder you just created. You should see something like this:
 
-![welcome.png](https://github.com/makersacademy/course/blob/master/pills/images/clojure/welcome.png)
+![welcome.png](https://github.com/makersacademy/course/blob/master/pills/images/clojure/open-folder.png)
 
 Use the side bar to navigate to the `core.clj` file and open it. You should see something like this:
 
@@ -88,7 +96,7 @@ Use the side bar to navigate to the `core.clj` file and open it. You should see 
 
 This file contains a simple 'Hello World' example. Let's check we can run it. Type `CMD-SHIFT-Enter` to get Light Table to evaluate our code.
 
-This will *take a long time* the very first time you run it. It has to start up the java virtual machine in the background and download LightTable's dependencies.
+This will *take a long time* the very first time you run it. It has to start up the java virtual machine in the background and download Light Table's dependencies.
 
 Eventually, you should see the following:
 
@@ -413,6 +421,30 @@ Much more legible!
 
 ![defn](https://github.com/makersacademy/course/blob/master/pills/images/clojure/defn.png)
 
+We can also create functions that accept multiple arguments:
+
+```clojure
+(def numbers
+  [1 2 3 4 5 6 7 8 9 10])
+
+(defn first-n [n sequence]
+  (take n sequence))
+
+(first-n 5 numbers)
+; => (1 2 3 4 5)
+```
+
+...and chain function calls together...
+
+```clojure
+(defn mean [sequence]
+  (/ (sum sequence)
+     (count sequence)))
+
+(mean (first-n 5 numbers))
+; => 3
+```
+
 ## Return values
 
 Like Ruby, in Clojure a function returns the last thing it evaluated. There are no return statements. Each list will return the result of evaluating its arguments recursively. Clojure has very simple rules, consistently applied. This simplicity is a feature of the language, and becomes extremely valuable as programs grow in complexity.
@@ -421,7 +453,10 @@ Like Ruby, in Clojure a function returns the last thing it evaluated. There are 
 
 Clojure is a functional language, and functions are first-class entities. They can be passed to other functions, or returned from functions.
 
-Higher-order functions are functions which accept or return functions. `map` is a higher-order function that accepts (a minimum of) two arguments: a function to apply to each element in a sequence, and a sequence of elements.
+Higher-order functions are functions which accept or return functions. `map` is a higher-order function that accepts (a minimum of) two arguments:
+
+* a function to apply to each element in a sequence
+* a sequence of elements to have the function applied
 
 ```clojure
 (def numbers
@@ -560,7 +595,7 @@ This will extract the headers from the response map. We could ask what keys the 
 ; => (:cookies :orig-content-encoding :trace-redirects :request-time :status :headers :body)
 ```
 
-Somewhat surprisingly (perhaps) we can also use symbols *as a funcion*, which look themselves up in a map.
+Somewhat surprisingly perhaps we can also use symbols *as a function*, which look themselves up in a map.
 
 ```clojure
 (:headers (http/get "http://google.com"))
@@ -748,6 +783,47 @@ We have added `:as :json` to the options map, and requested the `:body` from the
 
 See how the above is just a series of nested maps, vectors, strings and numbers? You can use the functions defined in `clojure.core` and the ones you write yourself to process and query this data.
 
+## Macros
+
+I've mentioned macros in passing several times, without really covering what they are. Macros are a form of [metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming). They are code that manipulates code. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with a couple of them: the threading macros.
+
+One of the Macros I use most commonly is the *single-threading macro* `->`. This is a macro that will re-structure code like this and turn it into something more legible. It is best explained with an example.
+
+If we wanted to get the `:count` from the API response above, we could add it as a function call to our previous code like so:
+
+```clojure
+(:count (:body (http/get "http://api.openweathermap.org/data/2.5/find"
+                         {:query-params {:q "london"} :as :json})))
+
+```
+
+This code will work, but it's a little awkward. You can see how the *structure* of our code looks similar to the following pseudocode:
+
+```clojure
+(fn1 (fn2 (fn3 arg1 arg2)))
+```
+
+Using the single-threading macro `->` we can we-write this code as follows:
+
+```clojure
+(-> arg1
+    (fn3 arg2)
+    (fn2)
+    (fn1))
+```
+
+Each argument to `->` is passed as the first argument to the following expression. We could therefore convert our get request to:
+
+```clojure
+(-> "http://api.openweathermap.org/data/2.5/find"
+    (http/get {:query-params {:q "london"} :as :json})
+    :body
+    :count)
+```
+Isn't this code much clearer? It reads more like procedural code, and clearly describes the sequence of steps we want our code to perform. Behind the scenes, all the threading macro is doing is re-wiring our code. We get the best of both words: a functional language with very simple semantics, and more expressivity when we need it.
+
+Techniques such as these are used to provide powerful ways to avoid [callback hell](http://callbackhell.com/) using libraries such as [core.async](https://github.com/clojure/core.async), or capabilities that other languages just don't support such as [logic programming](https://github.com/clojure/core.logic).
+
 ## Time to practice what you've learned
 
 Use what you've learned to write functions that answer the following questions:
@@ -758,6 +834,8 @@ Use what you've learned to write functions that answer the following questions:
 * What is the forecasted averages temperature of London, UK for the last 10 days?
 * How many of the next 10 days is it forecasted to be cloudy?
 * How many of the next 10 days is it forecasted not to be cloudy?
+
+Try to write small, reusable functions and make use of Clojure's [standard library](http://clojure.org/cheatsheet) wherever possible.
 
 ## Resources
 
