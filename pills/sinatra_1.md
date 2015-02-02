@@ -2,9 +2,13 @@
 
 Sinatra is a simple no frills web application framework for Ruby. In contrast to more complex web application frameworks such as Ruby on Rails, Sinatra provides very little beyond making your ruby code accessible to requests that come over the HTTP protocol.
 
+Note that Sinatra is not the only simple Ruby web application framework.  You can read about some of the alternatives in this blog post:
+
+http://www.sitepoint.com/ruby-microframeworks-round/
+
 As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
 
-***As always there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests very welcome.***
+***As always there may be subtle errors in the following materials.  Please try to approach any of these as challenges on which to polish your debugging skills - pull requests very welcome.***
 
 ## What you will learn
 
