@@ -32,7 +32,7 @@ Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | 
 
 7    |  8    | 9                 | 10               | 11     | 12     |
 -----|-------|-------------------|------------------|--------|--------|
-Node | Makerthon (Teams) | Rails | Proj 1 | Proj 2 |   Employment Week |
+Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Employment Week |
 
 
 
@@ -72,6 +72,8 @@ Drilling down even further we can see the names of the many technologies, langua
 ![Three Tier Detail](https://github.com/makersacademy/course/blob/master/images/3-tier.png)
 
 However note that there is far more complexity here than we can cover in 12 weeks.  Ultimately you will need to become a self-directed learner and drill down further in the areas that your agile process indicates you have greater need for knowledge.
+
+This is the Rosetta Stone of web development.  We want you to be great programmers and great project managers, and great team members, but critically we are focused on helping you become web developers, so understanding this architecture is key.
 
 
 Archive
