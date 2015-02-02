@@ -42,7 +42,19 @@ Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Employment Week |
   - supporting you becoming active learners 
   - coach exhaustion
   - wean yourself off the coaches and alumni helpers
-* Weekly schedule - subject to change
+* Weekly schedule - subject to change, just like the world of technology
+*
+
+* be proactive - if you don't have something that you need, get it
+
+You: 
+
+* MUST install slack desktop client
+* MUST create StackOverflow account
+* MUST post or upvote on SO at least once a week
+* MUST use sequence of asking for help (pair partner, peer, senior, stack-overflow, alumni-helper, coach)
+* MUST do 121s and feedback
+* MUST show up
 
 Ultimately we want all of you to be able to manage the whole web development stack, completely independently of us.
 
