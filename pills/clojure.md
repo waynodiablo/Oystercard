@@ -6,11 +6,11 @@ It's a cutting edge programming language that has been designed specifically for
 
 We'll see how part of its power is derived from an _interesting_ syntax many people struggle with when first coming to the language. Try not to let these superficial concerns get in the way. You'll come to understand how Clojure derives a lot of its power from its syntax.
 
-## Getting started ##
+## Getting Started ##
 
 Clojure is a language that runs on the Java Virtual Machine (JVM). The JVM is responsible for running your code similar to how the `ruby` interpreter is responsible for running your .rb files, or a web browser is responsible for running your JavasScript code.
 
-Unlike Ruby, Clojure is a *compiled* language, and your code has to be compiled into JVM bytecode in order to run. To handle this process we'll install a program called **leiningen**.
+Unlike Ruby, which is *interpreted*, Clojure is a *compiled* language, and your code has to be compiled into JVM bytecode in order to run. To handle this process we'll install a program called **leiningen**.
 
 ### Install Leiningen ###
 
@@ -41,15 +41,15 @@ Run the JDK installer should work fine with all the default settings. Run this n
 
 **Make sure you run `lein` on the command-line before proceeding.**
 
-### Setting up your editor ###
+### Setting up your Editor ###
 
 Working with Clojure is a lot more pleasant if you have great text editor integration.
 
 This walkthough will assume you are using the [Light Table](http://lighttable.com/) text editor. Take a look at [http://docs.lighttable.com/tutorials/full/](http://docs.lighttable.com/tutorials/full/) to get started.
 
-It is **strongly recommended** that you use Light Table for the walkthrough since Clojure integration is provided out of the box. Once you are comfortable with the basics of the language you can choose to follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Emacs](http://www.gnu.org/software/emacs/)
+It is **strongly recommended** that you use Light Table for the walkthrough since Clojure integration is provided out of the box. Once you are comfortable with the basics of the language you can choose to follow these instructions for [Sublime Text](http://dev.clojure.org/display/doc/Getting+Started+With+Sublime+Text+2), [Atom](https://github.com/lsegal/atom-runner#configuring) or [Emacs](http://www.gnu.org/software/emacs/).
 
-### Create a test project ###
+### Create a Test Project ###
 
 In the directory on your computer where you keep your code, run
 
@@ -60,29 +60,28 @@ This will create a brand new Clojure project in a new directory of the same name
 
 Inside the directory will be a `project.clj` file which contains the project dependencies written in Clojure. Just like `.rb` is the suffix for Ruby files, `.clj` is the suffix for Clojure files.
 
-Next run
+Next, run:
 ```bash
 lein deps
 ```
-
 to install dependencies. At this stage Clojure is the only project dependency. It will install the latest version of Clojure by default, which is normally what you want.
 
 ![project.clj](https://github.com/makersacademy/course/blob/master/pills/images/clojure/project-clj.png)
 
-Notice how in the `project.clj` file Clojure is a _dependency_, just like any other. This is because code is compiled together with your other libraries into executable files that are run like applications on your computer. You can run the compiled code on a computer that doesn't have Clojure installed.
+Notice how in the `project.clj` file Clojure is a _dependency_, just like any other. This is because Leiningen compiles Clojure together with the other dependencies into executables that are run like applications on your computer. You can run the compiled code on a computer that doesn't already have Clojure installed.
 
 ## Clojure REPL ##
 
 The REPL (pronounced _REH-pull_) is the primary way of developing Clojure code. REPL stands for Read - Evaluate - Print - Loop.
 
 * Read - wait for you to write some code
-* Evaluate - interpret and run the code it reads
+* Evaluate - compile and evaluate the code it reads
 * Print - output the result of evaluating the code
 * Loop - go back to read and wait
 
-This is because Clojure is designed to be written _interactively_. You are positively encouraged to try things out and see what happens.
+This is because Clojure is designed to be written _interactively_. You are positively encouraged to try things out and see what happens. Although you can practice TDD in Clojure (and are actively encouraged to), REPL-driven development (RDD) is a great way of starting out.
 
-### Writing code in the REPL ###
+### Writing Code in the REPL ###
 
 We've already seen Clojure code - the `project.clj` file is written in Clojure. Let's open another source file that was created by leiningen: `src/clojure_intro/core.clj`.
 
@@ -122,7 +121,7 @@ Go to `View > Console` to see the LightTable console output.
 
 Hooray! You've just executed your first Clojure code in the REPL.
 
-## Clojure basics
+## Clojure Basics
 
 Delete everything from the file except the line at the top. Clojure doesn't have classes and objects. It has namespaces and functions.
 
@@ -178,7 +177,7 @@ In spite of not having classes and objects Clojure has all the data types you'd 
 #{"fish" "chips" "mushy peas"}
 ```
 
-Notice how there aren't any unneccesary commas between vector, map and set elements.
+Notice how there don't need to be commas between vector, map and set elements. You can add commas but Clojure will ignore them.
 
 ## Lists
 
@@ -221,7 +220,7 @@ If you execute the above you'll get something different:
 
 The println function will output each of the arguments it is given with a space between them to the console. You see `nil` next to the function in Light Table because the `println` function returns `nil`.
 
-## More functions
+## More Functions
 
 Other functions do return values such as `inc` that increments a number.
 
@@ -242,9 +241,7 @@ Let's look at some simple maths:
 (+ 1 3)
 ; => 4
 ```
-Clojure uses *prefix* notation rather than *infix* notation. This is not the sort of arithmetic you're probably used to seeing.
-
-An advantage is that you don't need to keep repeating the function name between multiple arguments.
+Clojure uses *prefix* notation rather than *infix* notation. This is not the sort of arithmetic you're probably used to seeing. An advantage is that you don't need to keep repeating the function name between multiple arguments.
 
 ```clojure
 (+ 1 2 3 4 5)
@@ -263,6 +260,8 @@ You can next lists within lists. The result of one list is evaluated before bein
 ; => ?
 ```
 What's the value of the expression above? Think about it before moving on.
+
+---
 
 ### Evaluation
 
@@ -293,7 +292,7 @@ Take a moment to think about this.
 
 ---
 
-The reason is that launch the missiles will be evaluated and the return value will be passed to `if` before it has a chance to test whether the button has been pressed! :(
+The reason is that `(launch-the-missiles)` will be evaluated and the return value will be passed to `if` before it has a chance to test whether the button has been pressed! :(
 
 Clojure gets around this by making *if a special form*. Arguments are *not* evaluated first. Phew!
 
@@ -310,15 +309,15 @@ Clojure gets around this by making *if a special form*. Arguments are *not* eval
   (smugface))
   ```
 
-`when` is defined internally by the language in terms of `if` using macros. [Macros](http://www.braveclojure.com/writing-macros/) are a powerful feature of the language that are able to control the evaluation of code. We won't cover writing macros in this pill, but it's important that you know they exist.
+`when` is defined internally by the language in terms of `if` using macros. [Macros](http://www.braveclojure.com/writing-macros/) are a powerful feature of the language that are able to control the evaluation of code and we'll talk a little more about them at the end of the pill.
 
-## Naming things
+## Naming Things
 
 To do much useful work we want to name things. There are two other *special forms* that Clojure defines that allow us to name variables.
 
 ### Let
 
-The most common way of defining variables is with `let`.
+One way of defining variables is with `let`.
 
 ```clojure
 (let [x 5
@@ -327,9 +326,7 @@ The most common way of defining variables is with `let`.
 ; => 50
 ```
 
-Let associates values to symbols in pairs. In the above example the value `5` is associated with the symbol `x`. The value `10` is associated with the symbol `y`. Becase the values are being bound to symbols, the associations are called *bindings*.
-
-You can supply as many bindings to let as you like, as long as there's an even number of values to symbols.
+Let associates values to symbols in pairs. In the above example the value `5` is associated with the symbol `x`. The value `10` is associated with the symbol `y`. Because the values are being bound to symbols, the associations are called *bindings*. You can supply as many bindings to let as you like, as long as there's an even number of values to symbols.
 
 Bindings are evaluated in order, so later bindings can use earlier bindings.
 
@@ -351,13 +348,13 @@ The *scope* of variables defined with let is defined by the the extent of the li
 (println wizard)
 ```
 
-Unfortunately we get an error.
+Unfortunately we get an error:
 
 ![scope error](https://github.com/makersacademy/course/blob/master/pills/images/clojure/scope-error.png)
 
 The reason is that the variable has ceased to exist outside of the scope of the let bindings.
 
-We'd need to move the use of the variable inside the let list in order to use it.
+We'd need to move the use of the variable inside the let list in order to use it:
 
 ![hermione](https://github.com/makersacademy/course/blob/master/pills/images/clojure/hermione.png)
 
@@ -371,24 +368,20 @@ If you want to make use of variables more widely, you can **def**ine them to be 
 (println job-description)
 ```
 
-**NB: unlike let, you can only define one thing at a time with `def`.**
+Unlike let, you can only define one thing at a time with `def`.
 
 For a little more detail about how `def` works in tandem with namespaces read [a librarian's tale](http://www.braveclojure.com/organization/#2__Storing_Objects_with_def)
 
-## Creating functions
+## Creating Functions
 
-We've been using functions already, but how do we create our own?
-
-We can use the `fn` special form.
+We've been using functions already, but to create our own we can use the `fn` special form.
 
 ```clojure
 (fn [a-number]
   (+ a-number 1))
   ```
 
-This function adds one to the number it is given.
-
-We could call it by including it as the first element in a list.
+This function adds one to the number it is given. We could call it by including it as the first element in a list.
 
 ```clojure
 ((fn [a-number]
@@ -396,7 +389,7 @@ We could call it by including it as the first element in a list.
 ; => 3
 ```
 
-This means we're defining a function and then immediately calling it with the number 2. All the nested brackets maked this hard to read, but we could `def` the function first and then use it afterwards.
+This means we're defining a function and then immediately calling it with the number 2. All the nested brackets maked this hard to read, but we could `def` the function first and then use it afterwards:
 
 ```clojure
 (def add-one
@@ -407,7 +400,7 @@ This means we're defining a function and then immediately calling it with the nu
 ; => 3
 ```
 
-This works, but it's such a common thing to there is a shorthand for creating and defining functions in one go called `defn`.
+This works, but it's such a common thing to there is a shorthand for creating and defining functions in one go called `defn`:
 
 ```clojure
 (defn add-one [a-number]
@@ -421,7 +414,7 @@ Much more legible!
 
 ![defn](https://github.com/makersacademy/course/blob/master/pills/images/clojure/defn.png)
 
-We can also create functions that accept multiple arguments:
+We can also create functions that accept multiple arguments by including more than one symbol in the vector arguments list:
 
 ```clojure
 (def numbers
@@ -437,8 +430,12 @@ We can also create functions that accept multiple arguments:
 ...and chain function calls together...
 
 ```clojure
+; apply takes a function and vector of arguments
+; (apply + [1 2 3]) is the same as
+; (+ 1 2 3)
+
 (defn mean [sequence]
-  (/ (sum sequence)
+  (/ (apply + sequence)
      (count sequence)))
 
 (mean (first-n 5 numbers))
@@ -458,6 +455,8 @@ Higher-order functions are functions which accept or return functions. `map` is 
 * a function to apply to each element in a sequence
 * a sequence of elements to have the function applied
 
+The `inc` function increments a number by one, and we can pass it as an *argument* to map. `map` will iterate over a collection passed as its second argument and apply the function passed as its second argument to each element in turn.
+
 ```clojure
 (def numbers
   [1 2 3 4 5 6 7 8 9 10])
@@ -467,9 +466,7 @@ Higher-order functions are functions which accept or return functions. `map` is 
 ; => (2 3 4 5 6 7 8 9 10 11)
 ```
 
-The `inc` function increments a number by one, and we can pass it as an *argument* to map. `map` will iterate over a collection passed as its second argument and apply the function passed as its second argument to each element in turn.
-
-There is nothing special about higher order functions or the functions you pass to them! We could also use our `add-one` function in place of `inc`.
+There is nothing special about higher order functions or the functions you pass to them. We could also use our `add-one` function in place of `inc`.
 
 ```clojure
 (def numbers
@@ -504,7 +501,7 @@ Some higher-order functions accept a sequence and return something different in 
 ; => {false [1 3], true [2 4]}
 ```
 
-Clojure makes heavy use of higher-order functions. Over time you will become comfortable with writing and making use of them for really expressive code.
+Clojure makes heavy use of higher-order functions. Over time you will become comfortable with writing and making use of them to write really expressive code.
 
 ## Installing Dependencies
 
@@ -540,7 +537,7 @@ The new dependency will be automatically downloaded, **but only once we restart 
 
 Now, when you execute your code again, the latest dependencies will be downloaded.
 
-## Requiring & using dependencies
+## Requiring & Using Dependencies
 
 Dependencies are required on a per-namespace basis. To access the functions provided by `clj-http`, we have to update our namespace declaration.
 
@@ -577,7 +574,7 @@ Our function call is a little long-winded, so we can choose to alias the require
 
 ```
 
-## HTTP requests and responses
+## HTTP Requests and Responses
 
 One of the things that makes Clojure so interesting is its emphasis on simple, reusable data structures. You might be able to see that the response we get back from `http/get` is a map. It's just like the map we created earlier `{:with "keys" :and "values"}`.
 
@@ -602,14 +599,21 @@ Somewhat surprisingly perhaps we can also use symbols *as a function*, which loo
 
 ; => {"Server" "gws" "Content-Type" "text/html; charset=ISO-8859-1" "X-Frame-Options" "SAMEORIGIN"}
 ```
+And maps can act as functions too, functions that will look up the provided key in themselves:
 
-[Read this](http://stackoverflow.com/questions/6915531/why-does-using-keywords-or-symbols-as-functions-to-lookup-values-from-maps-work) if you're curious why this works.
+```clojure
+((http/get "http://google.com") :headers)
 
-Notice also how the headers are maps too! Using simple data structures such as vectors and maps to represent more complex data is very common in Clojure. It embodies the principle that it is [better to have 100 functions operate on one data structure than 10 functions on 10 data structures ](http://stackoverflow.com/questions/6016271/why-is-it-better-to-have-100-functions-operate-on-one-data-structure-than-10-fun)
+; => {"Server" "gws" "Content-Type" "text/html; charset=ISO-8859-1" "X-Frame-Options" "SAMEORIGIN"}
+```
 
-Take a look at the [Clojure cheatsheet](http://clojure.org/cheatsheet) to see the variety of functions that have **already been written** to operate on Clojure's simple data structures.
+[Read this](http://stackoverflow.com/questions/6915531/why-does-using-keywords-or-symbols-as-functions-to-lookup-values-from-maps-work) if you're curious why data types can also behave like functions.
 
-## Maps as arguments
+Notice also how the returned headers are maps too! Using simple data structures such as vectors and maps to represent more complex data is very common in Clojure. It embodies the principle that it is [better to have 100 functions operate on one data structure than 10 functions on 10 data structures ](http://stackoverflow.com/questions/6016271/why-is-it-better-to-have-100-functions-operate-on-one-data-structure-than-10-fun)
+
+Take a look at the [Clojure cheatsheet](http://clojure.org/cheatsheet) to see the variety of functions that have **already been written** to operate on Clojure's simple data structures. Understanding how to use these will instantly make you a productive Clojure programmer.
+
+## Maps as Arguments
 
 Like ruby, passing a map of options is a very common way to configure the behaviour of a function. We can pass an optional map of configuration to our `http/get` request like so:
 
@@ -625,7 +629,7 @@ You may not be able to see what this is doing, but take a look at the `:trace-re
 
 Notice how we have added a query parameter onto the end of the URL.
 
-## JSON responses and Open Weather Map
+## JSON Responses and Open Weather Map
 
 This sort of maps-in, maps-out way of working with HTTP requests and responses is even more powerful when you are dealing with APIs.
 
@@ -728,7 +732,7 @@ Each response will return a JSON document. For example, below is the response fr
 }
 ```
 
-We can make the same request using Clojure by changing the URL that we request, and the query parameter to London.
+We can make the same request using Clojure by changing the URL to point at the Open Weather Map API and the query parameter to "London".
 
 ```clojure
 (:body (http/get "http://api.openweathermap.org/data/2.5/find"
@@ -736,7 +740,7 @@ We can make the same request using Clojure by changing the URL that we request, 
           :as :json}))
 ```
 
-We have added `:as :json` to the options map, and requested the `:body` from the response. Now our response will be a Clojure map that we can query and manipulate.
+We have added `:as :json` to the options map too, and requested the `:body` from the response. Now our response will be a Clojure map that we can query and manipulate using the standard library functions and those we write ourselves.
 
 ```clojure
 {:message "accurate",
@@ -785,9 +789,9 @@ See how the above is just a series of nested maps, vectors, strings and numbers?
 
 ## Macros
 
-I've mentioned macros in passing several times, without really covering what they are. Macros are a form of [metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming). They are code that manipulates code. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with a couple of them: the threading macros.
+I've mentioned macros in passing several times without really covering what they are. Macros are a form of [metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming). They are code that manipulates code. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with a couple of them: the threading macros.
 
-One of the Macros I use most commonly is the *single-threading macro* `->`. This is a macro that will re-structure code like this and turn it into something more legible. It is best explained with an example.
+One of the Macros I use most commonly is the *single-threading macro* `->`. This is a macro that will re-structure code and turn it into something more legible. It is best explained with an example.
 
 If we wanted to get the `:count` from the API response above, we could add it as a function call to our previous code like so:
 
@@ -808,8 +812,8 @@ Using the single-threading macro `->` we can we-write this code as follows:
 ```clojure
 (-> arg1
     (fn3 arg2)
-    (fn2)
-    (fn1))
+    fn2
+    fn1)
 ```
 
 Each argument to `->` is passed as the first argument to the following expression. We could therefore convert our get request to:
@@ -822,7 +826,7 @@ Each argument to `->` is passed as the first argument to the following expressio
 ```
 Isn't this code much clearer? It reads more like procedural code, and clearly describes the sequence of steps we want our code to perform. Behind the scenes, all the threading macro is doing is re-wiring our code. We get the best of both words: a functional language with very simple semantics, and more expressivity when we need it.
 
-Techniques such as these are used to provide powerful ways to avoid [callback hell](http://callbackhell.com/) using libraries such as [core.async](https://github.com/clojure/core.async), or capabilities that other languages just don't support such as [logic programming](https://github.com/clojure/core.logic).
+Techniques such as these are used to provide powerful ways to avoid [callback hell](http://callbackhell.com/) using libraries such as [core.async](https://github.com/clojure/core.async), or capabilities that other languages don't even support such as [logic programming](https://github.com/clojure/core.logic).
 
 ## Time to practice what you've learned
 
