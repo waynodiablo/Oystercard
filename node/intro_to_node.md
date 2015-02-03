@@ -1,11 +1,11 @@
 #Introduction to Node
 
-[Video of session](https://www.youtube.com/watch?v=4J3PCKjRH-8)
+[Many thanks to Spike for the original design of this walkthrough](http://github.com/Spike01)
 
 If you haven't heard of Node, here is a short list of what Node is and what Node isn't:
 
 * Node is a server-side implementation of JavaScript, using Google's extremely powerful V8 engine  
-* Node is extrememly good at handling large numbers of simultaneous requests or connections  
+* Node is extremely good at handling large numbers of simultaneous requests or connections  
 * Node is deliberately very minimal, encouraging users to write and use their own packages to extend functionality  
 * Node is growing at an incredible rate. Its ecosystem is massive, with the number of published `npm` packages rapidly overtaking Ruby's gems  
 * Node is NOT multi-threaded; it's just very smart with how it deals with these requests  
@@ -18,6 +18,7 @@ BUT
 * Node is a lot of fun  
 * Node is a different way to think about programming, so even if you don't find it fun, you will hopefully learn something!  
 
+**Please note, as with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
 Before we start, you should definitely read [Roi's introduction to Node](https://github.com/makersacademy/course/blob/master/pills/node.md), which explains the concepts behind non-blocking I/O and callbacks. Also, [Why the hell would I use Node?](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [Convincing the boss](http://nodeguide.com/convincing_the_boss.html) are great articles on what Node is good for.
 
@@ -35,6 +36,7 @@ Here is a broad outline of what we hope to cover this week:
 * Feature testing with `mocha-casperjs`
 * Starting a web server with Express
 * Building an API with node
+* Consuming that API with JQuery
 
 ##Setting up your Node environment/starting a project
 
@@ -198,9 +200,13 @@ _*compared to wrestling a lion._
 
 ##Tasks:
 
+* Try repeating the above steps from memory
 * Try to convert one of your existing front-end Javascript projects to `jasmine-node`, remembering to use `module.exports` and `require` correctly. Some good project to try converting are Boris Bikes or FAAST, as they have lots of moving parts that you'll need to fit together.  
 * Research how to export multiple functions from a module. Bear in mind that you should not use this technique to export multiple functions that require state - if you find yourself doing this, you probably need a new module.
 
 ###Further resources
-[jasmine-node](https://github.com/mhevery/jasmine-node)  
-[Understanding module.exports in Node.js](http://www.sitepoint.com/understanding-module-exports-exports-node-js/)
+* [jasmine-node](https://github.com/mhevery/jasmine-node)  
+* [Understanding module.exports in Node.js](http://www.sitepoint.com/understanding-module-exports-exports-node-js/)
+
+* [Video by Spike]([Video of session](https://www.youtube.com/watch?v=4J3PCKjRH-8)
+)
