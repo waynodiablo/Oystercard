@@ -1,6 +1,8 @@
 #A basic Node server
 
-[Video of session](https://www.youtube.com/watch?v=h5qyuyYIwt8)
+Many thanks to [Spike](http://github.com/Spike01) for the original design this component
+
+**As with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
 So, now that we can write unit tests and automate various tasks, it's time to take Node out on to the web. For this, we will be using the [Express framework](http://expressjs.com/), which has the same lightweight design philosophy as Sinatra. However, as Makers, we'll be wanting to write some tests first.  
 
@@ -155,11 +157,12 @@ Restart your server and run your test - it should go green!
 
 
 ###Resources
-[Mocha](http://mochajs.org/)  
-[Chai](http://chaijs.com/)  
-[PhantomJS](http://phantomjs.org/)  
-[CasperJS](http://casperjs.org/)  
-[mocha-casperjs](https://github.com/nathanboktae/mocha-casperjs)  
-[casper-chai](https://github.com/brianmhunt/casper-chai)  
-[grunt-mocha-casper](https://github.com/roman01la/grunt-mocha-casperjs)
+* [Mocha](http://mochajs.org/)  
+* [Chai](http://chaijs.com/)  
+* [PhantomJS](http://phantomjs.org/)  
+* [CasperJS](http://casperjs.org/)  
+* [mocha-casperjs](https://github.com/nathanboktae/mocha-casperjs)  
+* [casper-chai](https://github.com/brianmhunt/casper-chai)  
+* [grunt-mocha-casper](https://github.com/roman01la/grunt-mocha-casperjs)
+* [Video of Spike on Node Servers](https://www.youtube.com/watch?v=h5qyuyYIwt8)
 
