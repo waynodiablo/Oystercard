@@ -80,8 +80,8 @@ npm ERR! Test failed.  See above for more details.
 Interesting, but not very useful. Let's start adding some testing tools so we can start playing with Node.  
 
 ###Further resources
-[What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json)  
-[npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)  
+* [What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json)  
+* [npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)  
 
 ##Unit testing with `jasmine-node`/Node modules
 
