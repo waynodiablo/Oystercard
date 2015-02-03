@@ -56,7 +56,10 @@ This Gruntfile will run `jasmine-node` every time you type `grunt`.
 
 ###Tasks
 
-There are two more plugins that you should try to get working: `grunt-contrib-jshint` and `grunt-contrib-watch`. Try to get these installed and working, as well as setting up separate tasks so that you can run each one individually, as well as having `jshint` and `jasmine-node` running when you only type `grunt`.
+* Try repeating the above steps from memory (Athletic Reps)
+* Get the `grunt-contrib-jshint` module working and set up a separate task so you can run each one individually
+* Get the `grunt-contrib-watch`  module working and set up a separate task so you can run each one individually
+* Have the above and `jshint` and `jasmine-node` run when you only type `grunt`.
 
 ##JSHint and 'use strict'
 
