@@ -1,6 +1,6 @@
 #Introduction to Node
 
-[Many thanks to Spike for the original design of this walkthrough](http://github.com/Spike01)
+Many thanks to [Spike](http://github.com/Spike01) for the original design of this walkthrough
 
 If you haven't heard of Node, here is a short list of what Node is and what Node isn't:
 
