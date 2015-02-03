@@ -201,7 +201,7 @@ _*compared to wrestling a lion._
 ##Tasks:
 
 * Try repeating the above steps from memory
-* Try to convert one of your existing front-end Javascript projects to `jasmine-node`, remembering to use `module.exports` and `require` correctly. Some good project to try converting are Boris Bikes or FAAST, as they have lots of moving parts that you'll need to fit together.  
+* Try to convert one of your existing front-end Javascript projects to `jasmine-node`, remembering to use `module.exports` and `require` correctly. Some good project to try converting are Boris Bikes or airport, as they have lots of moving parts that you'll need to fit together.  
 * Research how to export multiple functions from a module. Bear in mind that you should not use this technique to export multiple functions that require state - if you find yourself doing this, you probably need a new module.
 
 ###Further resources
