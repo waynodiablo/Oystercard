@@ -2,6 +2,8 @@
 
 Many thanks to [Spike](http://github.com/Spike01) for the original design this component
 
+**As with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
+
 ##`npm`, `grunt` and JavaScript linters
 
 ##Grunt
