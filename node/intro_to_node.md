@@ -207,6 +207,4 @@ _*compared to wrestling a lion._
 ###Further resources
 * [jasmine-node](https://github.com/mhevery/jasmine-node)  
 * [Understanding module.exports in Node.js](http://www.sitepoint.com/understanding-module-exports-exports-node-js/)
-
-* [Video by Spike]([Video of session](https://www.youtube.com/watch?v=4J3PCKjRH-8)
-)
+* [Intro Video by Spike](https://www.youtube.com/watch?v=4J3PCKjRH-8)
