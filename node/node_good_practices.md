@@ -18,7 +18,18 @@ NPM is the node package manager, the equivalent of 'bundle' from the Ruby world.
 ###What is Grunt?
 Grunt is a task runner, similar to `rake`. Grunt has some [really good documentation](http://gruntjs.com/getting-started) (which is rare in the land of JavaScript), so do check it out, but here is a condensed walkthrough to help get you set up.
 
-First, install the Grunt-CLI tools with `npm install -g grunt-cli`. Then, install it locally for your project with `npm install --save-dev grunt`. 
+First, install the Grunt-CLI tools with:
+
+```sh
+npm install -g grunt-cli
+```
+
+Then, install it locally for your project with 
+
+```sh
+npm install --save-dev grunt
+```
+
 Now, we need a Gruntfile. These are just like a Rakefile, and live in the root directory of your project. To begin with, we will be building a Gruntfile that runs our `jasmine-node` tests. For this, we will need to install the relevant Grunt plugin, `grunt-jasmine-node`. Install that into your dev-dependencies and let's have a look at the insides of the Gruntfile we will be building. 
 
 `Gruntfile.js`
