@@ -9,7 +9,7 @@ Welcome to Node! This week, you will be learning how to build responsive applica
 ##Version 1 - Welcome to Node
 
 Before we get into APIs, we need to be able to build a basic server. But before we build a web server, we need to understand what Node is and how to get started.
-Check out the [Introduction to Node](https://github.com/makersacademy/Walkthroughs/blob/master/intro_to_node.md) walkthrough to get started, then, when you have finished, check out [Node good practices](https://github.com/makersacademy/Walkthroughs/blob/master/node_good_practices.md).
+Check out the [Introduction to Node](https://github.com/makersacademy/course/blob/master/node/intro_to_node.md) walkthrough to get started, then, when you have finished, check out [Node good practices](https://github.com/makersacademy/Walkthroughs/blob/master/node_good_practices.md).
 
 ##Version 2 - A basic server
 
@@ -33,12 +33,16 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 **Version 1:**  
 
-... ensure these are in course repo ...
+ * [Introduction to Node](https://github.com/makersacademy/course/blob/master/node/intro_to_node.md)
 
 **Version 2:**  
 
-... ensure these are in course repo ...
+* coming soon ...
 
 **Version 3**:  
 
-... ensure these are in course repo ... 
+* coming soon ...
+
+**Version 4**:  
+
+* coming soon ...
