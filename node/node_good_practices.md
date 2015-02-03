@@ -6,6 +6,13 @@ Many thanks to [Spike](http://github.com/Spike01) for the original design this c
 
 ##`npm`, `grunt` and JavaScript linters
 
+## NPM
+
+NPM is the node package manager, the equivalent of 'bundle' from the Ruby world.  Check out the [NPM web site](https://www.npmjs.com/) to see the trending node modules - there are now [more node modules that Ruby gems](http://www.modulecounts.com/)!
+
+* [npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)  
+* [What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json) 
+
 ##Grunt
 
 ###What is Grunt?
@@ -44,15 +51,10 @@ There are two more plugins that you should try to get working: `grunt-contrib-js
 
 JavaScript can be extremely temperamental, as you may have noticed(!!). Also, a lot of the code you will see online in tutorials is not very well written. But not all is lost! There are a few tricks you can use to ensure that your code meets certain standards, throws errors when expected and is a general pleasure to read and maintain. 
 
-__JSHint__  
-[JSHint](http://jshint.com/)  
-
-__'use strict'__  
-[JavaScript’s Strict Mode and Why You Should Use It](http://cjihrig.com/blog/javascripts-strict-mode-and-why-you-should-use-it/)  
-
-__Node style__  
-[Node style guide](https://github.com/felixge/node-style-guide)
-
 Resources:
 
+* [JSHint](http://jshint.com/)  
+* [JavaScript’s Strict Mode and Why You Should Use It](http://cjihrig.com/blog/javascripts-strict-mode-and-why-you-should-use-it/)  
+* [Node style](https://github.com/felixge/node-style-guide)
+* [NPM Packages](https://www.npmjs.com/)
 * [Spike on Node Good Practices](https://www.youtube.com/watch?v=-EaT-6rGNqI)
