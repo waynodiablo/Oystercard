@@ -13,7 +13,7 @@ Check out the [Introduction to Node](https://github.com/makersacademy/course/blo
 
 ##Version 2 - A basic server
 
-Next, let's get a server running, with tests: [A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md).  
+Next, let's get a server running, with tests: [A basic Node server](https://github.com/makersacademy/course/blob/master/node/basic_node_server.md).  
 
 ![Hello world](/images/hw.png)
 ![Tests passing!](/images/testpass.png)
@@ -38,7 +38,7 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 **Version 2:**  
 
-* [A basic Node server](https://github.com/makersacademy/Walkthroughs/blob/master/basic_node_server.md)
+* [A basic Node server](https://github.com/makersacademy/course/blob/master/node/basic_node_server.md)
 * [Express, `ejs` and middleware](https://github.com/makersacademy/course/blob/master/node/express_ejs.md)
 
 **Version 3**:  
