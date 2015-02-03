@@ -1,6 +1,6 @@
 #Node good practices 
 
-[Video of session](https://www.youtube.com/watch?v=-EaT-6rGNqI)
+Many thanks to [Spike](http://github.com/Spike01) for the original design this component
 
 ##`npm`, `grunt` and JavaScript linters
 
@@ -50,3 +50,7 @@ __'use strict'__
 
 __Node style__  
 [Node style guide](https://github.com/felixge/node-style-guide)
+
+Resources:
+
+* [Spike on Node Good Practices](https://www.youtube.com/watch?v=-EaT-6rGNqI)
