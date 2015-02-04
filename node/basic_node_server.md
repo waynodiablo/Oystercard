@@ -148,6 +148,7 @@ Restart your server and run your test - it should go green!
 
 ##Tasks
 
+* Try the above as an athletic workout - there are effectively two workouts here - one for casper and one for express - you can cross train between them! :-)
 * Try experimenting with different routes with Express - you'll notice it's a lot like Sinatra in many ways
 * See what happens if you replace `response.send` with `response.json` - can you see what this would be very useful for?
 * Write more tests and see if you can pass them! `casper-chai` has a [great page](https://github.com/brianmhunt/casper-chai/blob/master/docs/casper-chai.md) on the kind of matcher statements it supports - note that anything structured as `*.should.have.*` can be rewritten as `expect(*).to.*`
