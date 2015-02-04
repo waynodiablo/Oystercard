@@ -60,5 +60,6 @@ Since everything is being passed around as JavaScript objects, this means that w
 
 ###Resources
 * [Use EJS to template your Node application](http://scotch.io/tutorials/javascript/use-ejs-to-template-your-node-application)
+* [Getting started with the Github API](https://developer.github.com/guides/getting-started/)
 * [Spike on Express and EJS](https://www.youtube.com/watch?v=br4k2QnM0Rw)
 
