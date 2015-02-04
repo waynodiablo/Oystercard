@@ -1,4 +1,4 @@
-#Express, `ejs` and middleware
+#EJS Templating Engine
 
 Many thanks to [Spike](http://github.com/Spike01) for the original design this component
 
