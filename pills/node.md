@@ -31,6 +31,7 @@ Resources
 * [NodeJS Handbook](https://github.com/FredKSchott/NodeJS-Handbook)
 * [Art of Node](https://github.com/maxogden/art-of-node)
 * [Node Style Guide](https://github.com/felixge/node-style-guide)
+* [NodeJS in Action (Book)][http://www.manning.com/cantelon/]
 
 Advanced Resources
 ----------
