@@ -216,3 +216,9 @@ especially the first track on [Learning the Java Language], along with the
 [Scala]: http://www.scala-lang.org/
 [Sublime]: http://www.sublimetext.com/
 [Vim]: http://en.wikipedia.org/wiki/Vim_(text_editor)
+
+Other Resources
+---------------
+
+* [Udacity Online Course](https://www.udacity.com/course/cs046)
+* [Learning Java Resources](https://netbeans.org/kb/articles/learn-java.html)
