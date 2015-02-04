@@ -53,7 +53,7 @@ Since everything is being passed around as JavaScript objects, this means that w
 
 ##Tasks
 * You now have all the tools (other than a database) to build a fully functional website (note the public folder that was set up earlier on) - so build something!
-* See if you can build some API endpoints using Github API data, stored in a module, to build a Node backend for your Github API project. The profiles will be hardcoded, but if you're feeling adventurous look into hard parameters and query strings (you might need to set more settings).
+* See if you can build some API endpoints using Github API data, stored in a module, to build a Node backend simulation of the [Github API](https://developer.github.com/). You can hardcod to start with, but if you're feeling adventurous look into hard parameters and query strings (you might need to set more settings).
 * Check out Jade as an alternative templating engine
 
 
