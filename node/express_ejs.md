@@ -52,10 +52,10 @@ app.get('/greetings', function(request, response){
 Since everything is being passed around as JavaScript objects, this means that we can pass whole objects to our views, and specify what information within the object we want to display. 
 
 ##Tasks
-* You now have all the tools (other than a database) to build a fully functional website (note the public folder that was set up earlier on) - so build something!
-* See if you can build some API endpoints using Github API data, stored in a module, to build a Node backend simulation of the [Github API](https://developer.github.com/). You can hardcod to start with, but if you're feeling adventurous look into hard parameters and query strings (you might need to set more settings).
+* Get set up with https://github.com/ericclemmons/grunt-express-server to auto-reload your server
+* Build some API endpoints using Github API data, stored in a module, to build a Node backend simulation of the [Github API](https://developer.github.com/). You can hardcode to start with, but if you're feeling adventurous look into hard parameters and query strings (you might need to set more settings).
+* You now have all the tools (other than a database) to build a fully functional website (note the public folder that was set up earlier on) - so build something!  A Bowling Scorecard on node perhaps?  But where does the JavaScript go? Client side or server side? Think carefully ...
 * Check out Jade as an alternative templating engine
-
 
 
 ###Resources
