@@ -189,7 +189,20 @@ get '/' do
 end
 ```
 
-And now we can see the noticeable time delay before we get a response.  While we can do this easily in Ruby with Sinatra, the non-blocking nature of JavaScript means we cannot do the same so easily in Node.
+We could do similar in node like so (assuming we have installed the [sleep module](https://www.npmjs.com/package/sleep)):
+
+```javascript
+var sleep = require('sleep');
+
+app.get('/', function(req, res){
+  sleep.sleep(2);
+  res.header("Access-Control-Allow-Origin", "*")
+  res.json(new Date);
+});
+
+```
+
+And now we can see the noticeable time delay before we get a response.
 
 So AJAX is just a browser technology that allows the browser to make an HTTP request without having to do a page refresh.  Note that we can get a lot more information than just the time from the server, we can get all the details about the response such as status code, headers etc.
 
@@ -207,7 +220,7 @@ $(document).ready(function(){
 });
 ```
 
-Note that we are using the real Github API endpoint here, but we could just as easily be sending the AJAX request to an API of own creation.
+Note that we are using the real Github API endpoint here, but we could just as easily be sending the AJAX request to an API of own creation.  And in fact if we end up hitting the Github API [rate limit](https://developer.github.com/v3/#rate-limiting) it might be easier to just hit our own creation.
 
 Anyhow, what do we need to do in the AJAX callback here?  We need to merge the data coming from the remote API with the HTML that we have.  We could grab html elements and append or prepend things to do them but it's going to get messy.
 
