@@ -36,7 +36,8 @@ Please ensure that you are able to get something similar running.
 
 ##Version 4 - Let's consume that API dynamically with Ajax
 
-We can get data from the real Github API, or our own simulation, by opening a browser window and sending a request.  But what if we want to load that information dynamically into a web page without a page refresh?  One possibility is an Asynchronous JavaScript and XML (AJAX) request.  Follow the [Ajax Introduction](https://github.com/makersacademy/course/blob/master/node/ajax_introduction.md) to learn more.
+We can get data from the real Github API, or our own simulation, by opening a browser window and sending a request.  But what if we want to load that information dynamically into a web page without a page refresh?  One possibility is an Asynchronous JavaScript and XML (AJAX) request.  Follow the [Ajax Introduction](https://github.com/makersacademy/course/blob/master/node/ajax_introduction.md) to learn more.  Then make sure you complete [Ajax with Extra JQuery](https://github.com/makersacademy/course/blob/master/node/ajax_with_extra_jquery.md) and if you want more JQuery magic then check out [Ajax JQuery Spinners](https://github.com/makersacademy/course/blob/master/node/ajax_jquery_spinners.md).
+
 
 ###Related walkthroughs
 
