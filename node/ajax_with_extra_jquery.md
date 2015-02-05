@@ -244,4 +244,4 @@ In the meantime you should get really comfortable using the network element of t
 Resources:
 ---------
 
-* [Video of session](https://www.youtube.com/watch?v=pp1b4FqcNGA)
+* [Video of Sam on Ajax with Extra JQuery](https://www.youtube.com/watch?v=pp1b4FqcNGA)
