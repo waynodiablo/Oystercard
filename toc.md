@@ -7,11 +7,11 @@
 3. [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
 4. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 5. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
-6. [Github Profiles in JavaScript & Angular](https://github.com/makersacademy/course/blob/master/github_report.md)
+6. Lab
 7. [Building an API server in Node](https://github.com/makersacademy/course/blob/master/node.md)
-8. [Yelp](https://github.com/makersacademy/course/blob/master/yelp.md)
-9. [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
-10. [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
+8. Makerthon
+9. [Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
+10. Final Projects
 
 ## Supporting Materials
 
@@ -19,6 +19,12 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
 - [Pills](https://github.com/makersacademy/course/blob/master/pills.md)
+
+## Archive
+
+* [Github Profiles in JavaScript & Angular](https://github.com/makersacademy/course/blob/master/github_report.md)
+* [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
+* [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
 
 ## Resources
 
