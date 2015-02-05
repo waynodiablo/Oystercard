@@ -281,7 +281,10 @@ $(document).ready(function(){
 The above is correct code, but does not work for some reason.  Can you work out why?   Try running it and checking for console errors.
 
 The reason is that we haven't added the mustache library;
+
+```html
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+```
 
 and then that should work :-)
 
