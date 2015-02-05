@@ -28,11 +28,15 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 ##Version 3 - Let's get an API up and running
 
-Putting together all that we've done so far we should be able to create a tested API endpoint that simulates at least part of the Github API.
+Putting together all that we've done so far we should be able to create a tested API endpoint that simulates at least part of the Github API.  Below is an example set up with auto server restart dyanmic routes and ejs views.
+
+https://github.com/tansaku/github_api_simulation
+
+Please ensure that you are able to get something similar running.
 
 ##Version 4 - Let's consume that API dynamically with Ajax
 
-...
+We can get data from the real Github API, or our own simulation, by opening a browser window and sending a request.  But what if we want to load that information dynamically into a web page without a page refresh?  One possibility is an Asynchronous JavaScript and XML (AJAX) request.  Follow the [Ajax Introduction](https://github.com/makersacademy/course/blob/master/node/ajax_introduction.md) to learn more.
 
 ###Related walkthroughs
 
@@ -48,8 +52,10 @@ Putting together all that we've done so far we should be able to create a tested
 
 **Version 3**:  
 
-* coming soon ...
+* See commit log of https://github.com/tansaku/github_api_simulation/commits/master
 
 **Version 4**:  
 
-* coming soon ...
+* [Ajax Introduction](https://github.com/makersacademy/course/blob/master/node/ajax_introduction.md)
+* [Ajax with Extra JQuery](https://github.com/makersacademy/course/blob/master/node/ajax_with_extra_jquery.md)
+* [Ajax JQuery Spinners](https://github.com/makersacademy/course/blob/master/node/ajax_jquery_spinners.md)
