@@ -250,7 +250,7 @@ This is a great time to use a JavaScript templating system like [mustache.js](ht
         <div class="right">
           <h3>
             <a href="{{ html_url }}">
-              tansaku
+              {{ login }}
             </a>
           </h3>
           <h4>Repos: {{ public_repos }}</h4>
