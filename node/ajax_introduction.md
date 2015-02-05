@@ -115,7 +115,7 @@ or equivalently if we were using javascript server side via node, we might creat
 ```javascript
 var app = require('express')();
 var server = require('http').createServer(app);
-var port = 9999;
+var port = 4567;
 
 app.get('/', function(req, res){
   res.header("Access-Control-Allow-Origin", "*")
@@ -133,7 +133,7 @@ In either case we need the 'Access-Control-Allow-Origin' set so that we can rece
 XMLHttpRequest cannot load http://localhost:4567/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
 ```
 
-From the point of view of creating a micro-web service, the two alternative chunks of code above are completely identical.  They both create a simple time server, which we can see running in the browser if we fire them up and connect via the appropriate port.  If we are using Sinatra then by default we are on port 4567 and we browse to http://localhost:4567/.  The express app above runs on port 9999 so browse to http://localhost:9999/.
+From the point of view of creating a micro-web service, the two alternative chunks of code above are completely identical.  They both create a simple time server, which we can see running in the browser if we fire them up and connect via the appropriate port, e.g. http://localhost:4567/.  
 
 In order to see how we can make an AJAX request we can run JavaScript in the browser console and see the results. Before we do that, it's a good idea to add AJAX logging so we can view every request as it happens in the console. To do this in Chrome open the developer tools, click on the cog icon on the right-hand side and tick "Log XMLHttpRequests" (XMLHttpRequest is the old-fashioned name for AJAX):
 
@@ -173,11 +173,11 @@ Since that will give us 'undefined' and we've seen this issue before.  We're try
 The answer is callbacks as we've seen before. We need something like the following:
 
 ```javascript
-$.get('http://localhost:9393',function(responseText){
+$.get('http://localhost:4567',function(responseText){
   alert(responseText);
 })
 ```
-We can also tweak our server to see the effect of a slow network connection a little more prominently:
+We could also tweak our server to see the effect of a slow network connection a little more prominently:
 
 ```ruby
 require 'sinatra'
@@ -189,15 +189,15 @@ get '/' do
 end
 ```
 
-And now we can see the noticeable time delay before we get a response.  So AJAX is just a browser technology that allows the browser to make an HTTP request without having to do a page refresh.  Note that we can get a lot more information than just the time from the server, we can get all the details about the response such as status code, headers etc.
+And now we can see the noticeable time delay before we get a response.  While we can do this easily in Ruby with Sinatra, the non-blocking nature of JavaScript means we cannot do the same so easily in Node.
+
+So AJAX is just a browser technology that allows the browser to make an HTTP request without having to do a page refresh.  Note that we can get a lot more information than just the time from the server, we can get all the details about the response such as status code, headers etc.
 
 So now with AJAX we can have JavaScript consume remote APIs (Application Programming Interfaces).  An API can refer to both the public methods on a library that we've installed and we call directly, or those remote end points that we can reach via an HTTP request.  We can see an example of a remote API by looking at something like https://api.github.com/users/tansaku which will give us a JSON (JavaScript Object Notation) format view of data about user 'tansaku'.  Contrast this with the information that we get looking at https://github.com/tansaku.
 
 Note that we do need to be aware of the versions of APIs in that companies will often evolve their HTTP accessible APIs and so you won't be able to rely on things continuing to work indefinitely.
 
-To make our Github profile app dynamic, let's get our user profile information via jquery in a script tag after we've loaded our jQuery library:
-
-[TODO - break out into separate JavaScript file AND WHAT ABOUT TEST FIRST?]
+To make our Github profile app dynamic, let's get our user profile information via jquery in a JavaScript file that we'll refer to from our HTML document:
 
 ```javascript
 $(document).ready(function(){
@@ -207,7 +207,9 @@ $(document).ready(function(){
 });
 ```
 
-So what do we need to do in the AJAX callback here?  We need to merge the data coming from the remote API with the HTML that we have.  We could grab html elements and append or prepend things to do them but it's going to get messy.
+Note that we are using the real Github API endpoint here, but we could just as easily be sending the AJAX request to an API of own creation.
+
+Anyhow, what do we need to do in the AJAX callback here?  We need to merge the data coming from the remote API with the HTML that we have.  We could grab html elements and append or prepend things to do them but it's going to get messy.
 
 This is a great time to use a JavaScript templating system like [mustache.js](http://github.com/janl/mustachejs). So we need to take our profile and turn it into a mustache template that we can merge with the data that we get from our remote service:
 
@@ -246,15 +248,18 @@ This is a great time to use a JavaScript templating system like [mustache.js](ht
     </template>
 
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-    <script>
-    $(document).ready(function(){
-      $.get('https://api.github.com/users/tansaku',function(user){
-        // blah blah
-      })
-    });
-    </script>
+    <script src='load_user.js'></script>
   </body>
 </html>
+```
+'load_user.js'
+
+```javascript
+$(document).ready(function(){
+  $.get('https://api.github.com/users/tansaku',function(user){
+    // blah blah
+  })
+});
 ```
 
 The template tag will be ignored by the browser, and we've inserted moustaches "{{" and "}}" in the same way that we use "<%" tags in erb so that we can take the template and merge data with it to create HTML that can be displayed in the user's browser.
@@ -295,5 +300,4 @@ Resources
 * [AJAX Cross-Site Security Diagram](https://docs.google.com/drawings/d/1v5pmO8m9W7m5FvWmi4xZ4_72FWb2-JyQMKaPkk_0Y9I/edit)
 * [Updated Address Bar with JavaScript](http://stackoverflow.com/questions/3338642/updating-address-bar-with-new-url-without-hash-or-reloading-the-page)
 * [How to access GET params in JavaScript](http://stackoverflow.com/questions/5448545/how-to-retrieve-get-parameters-from-javascript)
-*
-[Video of Sam on Ajax](https://www.youtube.com/watch?v=zrnKg5TyXjY)
+* [Video of Sam on Ajax](https://www.youtube.com/watch?v=zrnKg5TyXjY)
