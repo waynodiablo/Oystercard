@@ -4,6 +4,11 @@
 
 Welcome to Node! This week, you will be learning how to build responsive applications using JavaScript across the whole stack. At the end of the week you will have built your own version of the remotely accessible Github API (Application Programming Interface), as well as used Ajax to access it dynamically from the browser.
 
+
+<a href='https://developer.github.com/'><img src='https://developer.github.com/images/gundamcat.png' align="left" height="128" width="128" alt='Gundam Cat'></a>
+<br clear='all'>
+
+
 **Please note, as with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
 ##Version 1 - Welcome to Node
@@ -23,7 +28,7 @@ Now that we have a server, we want to be able to display dynamic content, as wel
 
 ##Version 3 - Let's get an API up and running
 
-...
+Putting together all that we've done so far we should be able to create a tested API endpoint that simulates at least part of the Github API.
 
 ##Version 4 - Let's consume that API dynamically with Ajax
 
