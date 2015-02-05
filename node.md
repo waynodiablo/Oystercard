@@ -1,6 +1,6 @@
 #Node, APIs and Ajax
 
-**[UNDER CONSTRUCTION]**
+:construction: **[UNDER CONSTRUCTION]** :construction:
 
 Welcome to Node! This week, you will be learning how to build responsive applications using JavaScript across the whole stack. At the end of the week you will have built your own version of the remotely accessible Github API (Application Programming Interface), as well as used Ajax to access it dynamically from the browser.
 
