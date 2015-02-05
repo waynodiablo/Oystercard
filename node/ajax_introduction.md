@@ -294,6 +294,7 @@ Exercises
 --------
 
 * What are the drawbacks of using the AJAX approach compared to a full page refresh?  Discuss with your pair partner.
+* Adjust the page so that it grabs data from a local server of your own creation rather than from the main Github API
 * See if you can make the form work so that the user can request a github profile via the github user name
 * **Optional** See if you can do an AJAX request without jQuery
 
