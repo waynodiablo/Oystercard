@@ -240,6 +240,13 @@ Our github profile app is now pretty functional.  One thing we might like to add
 
 In the meantime you should get really comfortable using the network element of the inspector to watch Ajax requests going back and forth.
 
+Exercises:
+---------
+
+* Get all of the above working
+* Combine all the above into your node app so that your node app both delivers the skin and provides the Ajax API service
+* Cover the system in high level acceptance tests, and unit test your JQuery using the methods described here: [JavaScript Testability](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_testability.md)
+
 
 Resources:
 ---------
