@@ -40,7 +40,7 @@ We could try an on('submit') event listener on the form, but one issue we'll hav
         $.get('https://api.github.com/users/'+ username, function(user){
           var newProfile = Mustache.render($('#profile-template').html(), user);
           $('.profile-container').append(newProfile);
-        })
+        });
       }
       $(document).ready(function(){
         $('#add_profile').on('submit', function(event)){
@@ -57,7 +57,7 @@ This `event.preventDefault()` statement will prevent the page refresh from takin
         $.get('https://api.github.com/users/'+ username, function(user){
           var newProfile = Mustache.render($('#profile-template').html(), user);
           $(newProfile).appendTo('.profile-container').slideDown();
-        })
+        });
       }
       $(document).ready(function(){
         $('#add_profile').on('submit', function(event)){
@@ -77,7 +77,7 @@ Note that currently if our user types in a username that does not match any Gith
           $(newProfile).appendTo('.profile-container').slideDown();
         }).error(function(){
           alert('No such user with the username: ' + username);
-        })
+        });
       }
       $(document).ready(function(){
         $('#add_profile').on('submit', function(event)){
@@ -87,7 +87,7 @@ Note that currently if our user types in a username that does not match any Gith
       });
 ```
 
-The code above now gives the user some indication about what happens.  Another thing that we might want to change in the current system is to reset the text box so that we don't have to clear out the old username in order to type a new one and we can do that using an 'always' method using the Promises interface on jQuery [Deferred objects](http://api.jquery.com/category/deferred-object/):
+The code above now gives the user some indication about what happens.  Another thing that we might want to change in the current system is to reset the text box so that we don't have to clear out the old username in order to type a new one and we can do that using an 'always' method using the [Promises](https://github.com/makersacademy/course/blob/master/pills/js_promises.md) interface on jQuery [Deferred objects](http://api.jquery.com/category/deferred-object/):
 
  ```javascript
       function addProfileFromUsername(username){
@@ -98,7 +98,7 @@ The code above now gives the user some indication about what happens.  Another t
           alert('No such user with the username: ' + username);
         }).always(function(){
           $('#username').val('');
-        })
+        });
       }
       $(document).ready(function(){
         $('#add_profile').on('submit', function(event)){
