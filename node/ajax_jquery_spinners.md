@@ -1,7 +1,6 @@
 Spinners & Modals
 =================
 
-[Video of session](https://www.youtube.com/watch?v=xE2K-Tlzqi8)
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -85,7 +84,7 @@ with some styling
 }
 ```
 
-Let's see how that looks … 
+Let's see how that looks …
 
 ![first draft](https://www.dropbox.com/s/rao9r7fl7z6opoh/Screenshot%202014-12-03%2014.14.32.png?dl=1)
 
@@ -198,12 +197,19 @@ Note that the modal will appear over other profiles and we can adjust that using
 
 
 Exercises:
+------
 
 * Get your Github Profile app ready for poor network conditions
 * Get a nice modal error message
 * Change the profile to display information relevant to Makers Academy such as commits on projects and challenges
 
 Footnotes:
+------
 
 * Could be setting a default image in the method if we wanted
 * Could turn off the autocomplete on the form we could just of that in html with `autocomplete='off'`.
+
+Resources:
+------
+
+* [Video Sam on Spinners and Modals](https://www.youtube.com/watch?v=xE2K-Tlzqi8)
