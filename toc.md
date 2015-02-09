@@ -33,7 +33,6 @@ Here you will find other, relevant materials and challenges that will help you o
 - Your alumni helpers are [Nicole](https://github.com/NicolePell), [Tim](https://github.com/Scully87), [Andrew](https://github.com/snozza) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
 ![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128) 
-![Tim](https://avatars2.githubusercontent.com/u/8402445?v=3&s=128)
 ![Andrew](https://avatars3.githubusercontent.com/u/6886844?v=3&s=128)
 
 - List of good places to work at the weekend
