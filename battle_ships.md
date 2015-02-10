@@ -42,7 +42,6 @@ The **SRP** is one of five principles that make up **SOLID** ( _Single responsib
 1. Code the classes and their interactions ( _Test First!, and swap driver/navigator roles frequently :twisted_rightwards_arrows:._)
 2. Think about the classes you have created. Are they following the **SRP** ?
 3. Play with your code in `irb` ( _if you prefer `pry` go with it_ )
-4. Present one of the **SOLID** principles to your cohort.
 
 ## Version 2: The Game Engine
 
