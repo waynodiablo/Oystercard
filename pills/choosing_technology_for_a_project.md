@@ -1,8 +1,6 @@
 Choosing Technologies for Your Project
 ======================================
 
-:construction: UNDER CONSTRUCTION :construction:
-
 > It doesn't matter what technology you choose for your project ... probably -- Leo Allen
 
 Now clearly in the end the technology can make a difference, but the reason to turn this grey area into an extreme as Leo does in the quote above is to fight against the common tendency to believe that it is critical to select the correct technology up front.  Note that it is very uncommon that a technology project will fail because of the selected programming language; it is much more likely to fail due to database constraints, API access and other kinds of architectural issues.  This is because programming languages fundamentally do the same thing.  They have different syntaxes which will have relative pros and cons for expressing particular logic and domain models, but these differences tend to be outweighed by programmers experience in a particular language and framework.
