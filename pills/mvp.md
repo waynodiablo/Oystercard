@@ -1,10 +1,11 @@
 Minimum Viable Product
 =====================
 
-BattleShips MVP Sequence
-======================
+A minimum viable product (MVP) is the simplest system you can build to validate the fundamental concept of what you want to build.  An MVP sequence is a series of systems of gradually increasing complexity that take you slowly towards a more complex system that supports more features.  There is no absolute way of determining what an MVP should be as it depends on the domain, what you are trying to build, what the stakeholder needs are and so on.  However as shown in the diagram below, if you are building lots of components that do not work independently and are looking to hook them together later in order to build a complex system then you are probably doing things wrong.
 
 ![mvp sequence](https://pbs.twimg.com/media/ByjAazeCEAMKg0Q.png)
+
+Here's an example of a series of MVPs of gradually increasing complexity as one might use when trying to build a one-person version of Battleships:
 
 Version ‘Skateboard’:
 ------------
