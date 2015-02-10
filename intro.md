@@ -1,8 +1,6 @@
 Introduction
 ===========
 
-* New Office - main challenge is currently water
-
 Overview of the Makers Week
 -------------------------
 
