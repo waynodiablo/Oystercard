@@ -33,7 +33,7 @@ Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | 
 
 7    |  8    | 9                 | 10               | 11     | 12     |
 -----|-------|-------------------|------------------|--------|--------|
-Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Employment Week |
+Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Hiring Week |
 
 
 
