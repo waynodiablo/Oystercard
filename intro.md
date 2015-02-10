@@ -17,7 +17,10 @@ You can see the approximate weekly structure in the Calendar wiki:
 
 https://github.com/makersacademy/course/wiki/Calendar
 
-This structure is maintained consistenly for the first five weeks, but then gradually the structure is removed:
+Overview of the Course Week
+-------------------------
+
+The weekly structure is maintained consistenly for the first five weeks, but then gradually the structure is removed:
 
 **Junior Portion**
 
