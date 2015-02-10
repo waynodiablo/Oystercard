@@ -5,7 +5,7 @@ A minimum viable product (MVP) is the simplest system you can build to validate 
 
 <p align="center">
 
-![mvp sequence](https://pbs.twimg.com/media/ByjAazeCEAMKg0Q.png)
+<img src='https://pbs.twimg.com/media/ByjAazeCEAMKg0Q.png'>
 
 </p>
 
