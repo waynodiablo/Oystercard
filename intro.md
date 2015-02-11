@@ -1,8 +1,6 @@
 Introduction
 ===========
 
-* New Office - main challenge is currently water
-
 Overview of the Makers Week
 -------------------------
 
@@ -19,7 +17,10 @@ You can see the approximate weekly structure in the Calendar wiki:
 
 https://github.com/makersacademy/course/wiki/Calendar
 
-This structure is maintained consistenly for the first five weeks, but then gradually the structure is removed:
+Overview of the Course Week
+-------------------------
+
+The weekly structure is maintained consistenly for the first five weeks, but then gradually the structure is removed:
 
 **Junior Portion**
 
@@ -32,7 +33,7 @@ Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | 
 
 7    |  8    | 9                 | 10               | 11     | 12     |
 -----|-------|-------------------|------------------|--------|--------|
-Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Employment Week |
+Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Hiring Week |
 
 
 

@@ -40,7 +40,7 @@ Here is a broad outline of what we hope to cover this week:
 
 ##Setting up your Node environment/starting a project
 
-Please install Node with `brew install node` and follow any additional instructions.
+Please install Node with `brew install node` and follow any additional instructions.  Note that this can cause problems if you already have a node version manager (e.g. n, nvm, nodenv) installed.  Please contact a coach or alumni helper if you are having trouble with your node install.
 
 There are many ways to start a Node project - [Yeoman](http://yeoman.io/) and [Express generator](http://expressjs.com/starter/generator.html) are fairly common tools for scaffolding entire web apps, to name but two. For a basic app or messing around with Node, this is total overkill. The simplest way, much like creating a Gemfile, would be to use a `package.json` file created with `npm init`.
 

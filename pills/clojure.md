@@ -474,7 +474,7 @@ Other higher-order functions that return a sequence are:
 (remove even? [1 2 3 4 5 6])
 ; => (1 3 5)
 
-(sort-by count ["bb" "aaa" "c"]
+(sort-by count ["bb" "aaa" "c"])
 ; => ("c" "bb" "aaa")
 ```
 
@@ -597,7 +597,7 @@ And maps can act as functions too, looking up the provided key *in themselves*:
 
 [Read this](http://stackoverflow.com/questions/6915531/why-does-using-keywords-or-symbols-as-functions-to-lookup-values-from-maps-work) if you're curious why data types can also behave like functions.
 
-Notice also how the returned headers are maps too! Using simple data structures such as vectors and maps to represent more complex data is very common in Clojure. It embodies the principle that it is [better to have 100 functions operate on one data structure than 10 functions on 10 data structures ](http://stackoverflow.com/questions/6016271/why-is-it-better-to-have-100-functions-operate-on-one-data-structure-than-10-fun)
+Notice also how the returned headers are maps too! Using simple data structures such as vectors and maps to represent more complex data is very common in Clojure. It embodies the principle that it is [better to have 100 functions operate on one data structure than 10 functions on 10 data structures ](http://stackoverflow.com/questions/6016271/why-is-it-better-to-have-100-functions-operate-on-one-data-structure-than-10-fun).
 
 Take a look at the [Clojure cheatsheet](http://clojure.org/cheatsheet) to see the variety of functions that have **already been written** to operate on Clojure's simple data structures. Understanding how to use these will instantly make you a more productive Clojure programmer.
 
@@ -781,7 +781,7 @@ We've seen how the boundary between code and data is blurred with data (maps, ke
 
 Macros allow you to manipulate code-as-data to make your code more expressive. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with the ones provided by the language: in particular the threading macros.
 
-One of the Macros I use most commonly is the *single-threading macro* `->`. This is a macro that will re-structure code and turn it into something more legible. It is best explained with an example.
+One of the Macros I use most commonly is the *thread-first macro* `->`. This is a macro that will re-structure code and turn it into something more legible. It is best explained with an example.
 
 If we wanted to get the `:count` from the API response above, we could add it as a function call to our previous code like so:
 
@@ -797,7 +797,7 @@ This code will work, but it's a little awkward. You can see how the *structure* 
 (fn1 (fn2 (fn3 arg1 arg2)))
 ```
 
-Using the single-threading macro `->` we can we-write this code as follows:
+Using the thread-first macro `->` we can we-write this code as follows:
 
 ```clojure
 (-> arg1
