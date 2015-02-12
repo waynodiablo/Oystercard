@@ -68,6 +68,13 @@ At best, test coverage metrics are good indicators of places in your code that a
 
 There are actually lots of different kinds of test coverage methods, but it's as yet unclear if there is a strong reason to use the more rigorous kind that check whether every boolean subexpression in an if statement have been evaluated to every possible outcome.  In mission critical systems that control aircraft and power stations, yes; in your MVP to get feedback from potential customers, almost certainly not.
 
+Different Types of Tests
+-------
+
+There are many different types of tests that fit into a sort of pyramid.  The pyramid model suggests that we should have many small fast running unit tests (that test single methods on single objects), an intermediate number of integration tests (that test assemblies of objects) and then a relatively small number of high level GUI (or acceptance) tests, that correspond to high level user stories that deliver value to stakeholders.
+
+![Testing Pyramid](https://watirmelon.files.wordpress.com/2011/06/automatedtestingpyramid.png)
+
 Testing MVC (Model View Controller)
 --------
 
