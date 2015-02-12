@@ -24,6 +24,7 @@ describe Foo do
   end
 end
 ```
+([what are foo and bar?](http://en.wikipedia.org/wiki/Foobar))
 
 A simple test coverage metric could be the number of lines in the application code that are exercised by the test code.  There are 8 lines of code in the Foo class, and we run all but 3 of them from the test so we have 5/8 or 62.5% test coverage.
 
