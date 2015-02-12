@@ -1,7 +1,6 @@
 Test Coverage
 ============
 
-[Video of session](https://www.youtube.com/watch?v=S6qV8vbjPu8)
 
 Test coverage is an automated metric that indicates the degree to which your code is being exercised by your tests.  For example, say that we have a short class like so:
 
@@ -106,3 +105,4 @@ Resources
 * [Coveralls (Continuous Integration Testing Support)](https://coveralls.io)
 * [Martin Fowler on Test Coverage](http://martinfowler.com/bliki/TestCoverage.html)
 * [Wikipedia on Code Coverage](http://en.wikipedia.org/wiki/Code_coverage)
+* [Archive Video of Sam talking about Test Coverage](https://www.youtube.com/watch?v=S6qV8vbjPu8)
