@@ -842,7 +842,7 @@ Now we need to create the missing `edit` view.
 `app/views/restaurants/edit.html.haml`:
 
 ```haml
-=form_for @restaurant do |f|
+= form_for @restaurant do |f|
   = f.label :name
   = f.text_field :name
   = f.submit
@@ -1006,7 +1006,7 @@ Keep following the errors RSpec is giving you. Now we need a view:
 ```
 `app/views/reviews/new.html.haml`:
 
-```erb
+```haml
 = form_for [@restaurant, @review] do |f|
   = f.label :thoughts
   = f.text_area :thoughts
@@ -1084,7 +1084,7 @@ erb:
 ```
 haml:
 ```haml
-h3
+%h3
   Reviews for
   = restaurant.name
 
