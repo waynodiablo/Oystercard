@@ -458,8 +458,9 @@ def index
 end
 ```
 
-This creates an instance variable `@restaurants` that is accessible in our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb` or `app/views/restaurants/index.html.erb`:
+This creates an instance variable `@restaurants` that is accessible in our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb` or `app/views/restaurants/index.html.haml`:
 
+erb:
 ```erb
 <% if @restaurants.any? %>
   <% @restaurants.each do |restaurant| %>
@@ -470,6 +471,16 @@ This creates an instance variable `@restaurants` that is accessible in our `inde
 <% end %>
 
 <a href='#'>Add a restaurant</a>
+```
+haml:
+```haml
+- if @restaurants.any?
+  - @restaurants.each do |restaurant|
+    %h2= restaurant.name
+- else
+  No restaurants yet
+
+%a(href='#' Add a restaurant
 ```
 
 So in summary our URL http://localhost:3000/restaurants hits the Rails routing system, which passes the request to the index action in the restaurants controller, which queries the database for any restaurant models.  The controller then 'passes' (using some Rails magic) an instance variable containing all the restaurant models to the view, where they can be correctly formatted.  The controller returns the resulting HTML back to the browser for display to the end user.
@@ -639,6 +650,15 @@ Now let's clean up that form a bit – using `Restaurant.new` inside the view lo
 <% end %>
 ```
 
+`app/views/restaurants/new.html.haml`:
+
+```haml
+= form_for @restaurant do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
+```
+
 `app/controllers/restaurants_controller.rb`:
 
 ```ruby
@@ -711,12 +731,17 @@ Great: so we're expecting that a user can click on the restaurant's name on the 
 
 First, we need to update the view to show that link.
 
-In the `<% @restaurants.each do |restaurant| %>` loop in `app/views/restaurants/index.html.erb`, add this line (removing the existing `<%= restaurant.name %>`):
+In the `@restaurants.each do |restaurant|` loop in `app/views/restaurants/index.html.erb` or `app/views/restaurants/index.html.haml`, add this line (removing the existing `restaurant.name`):
 
+erb:
 ```erb
-<%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
+<%= link_to restaurant.name, restaurant_path(restaurant) %>
 ```
 
+haml:
+```haml
+= link_to restaurant.name, restaurant_path(restaurant)
+```
 Now each restaurant should have its name displayed as a clickable link. But we're still missing a 'show' method in the restaurants controller, so let's add one.
 
 `app/controllers/restaurants_controller.rb`:
@@ -738,6 +763,12 @@ Now all we need is a view for the restaurant show method. Let's make one.
 <p><%= @restaurant.description %></p>
 ```
 
+`app/views/restaurants/show.html.haml`:
+
+```haml
+%p= @restaurant.name
+%p= @restaurant.description
+```
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.  This is a good time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
 ##### Updating restaurants
@@ -769,10 +800,15 @@ end
 
 Run RSpec and follow the path it leads you down... Again, a quick look at `bin/rake routes` will show you that Rails has some built-in routes for you to use.
 
-First, we need to add an edit link for each restaurant. In `app/views/restaurants/index.html.erb` add to the code that loops through each restaurant:
+First, we need to add an edit link for each restaurant. In `app/views/restaurants/index.html.erb` or `app/views/restaurants/index.html.haml` add to the code that loops through each restaurant:
 
+erb:
 ```erb
 <%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
+```
+haml:
+```haml
+= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant)
 ```
 
 Note that `edit_restaurant_path` takes an argument – the restaurant you want to edit!
@@ -801,6 +837,15 @@ Now we need to create the missing `edit` view.
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>
+```
+
+`app/views/restaurants/edit.html.haml`:
+
+```haml
+=form_for @restaurant do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
 ```
 
 Cool. But we still haven't got an `update` action, as RSpec will tell you – so time to add that to `restaurants_controller.rb`.
@@ -850,6 +895,11 @@ If you look at `rake routes`, you'll see a `destroy` route that takes the verb `
 ```erb
 <%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %>
 ```
+`app/views/restaurants/index.html.haml`:
+
+```haml
+= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete
+```
 
 Again, `restaurant_path` takes a restaurant as an argument, but here we have to explicitly specify the `delete` method so that Rails knows we want to delete the item.
 
@@ -869,11 +919,15 @@ To the restaurants controller, add a destroy method:
 ...
 ```
 
-Don't forget to display the `flash[:notice]` in `application.html.erb`, by adding it above `<%= yield %>`
+Don't forget to display the `flash[:notice]` in `application.html.erb` or `application.html.haml` , by adding it above `<%= yield %>` or `= yield`
 
-```ruby
+```erb
 <%= notice %>
 <%= yield %>
+```
+```haml
+= notice
+= yield
 ```
 
 And now our tests pass and we've got all four CRUD methods!  Let's celebrate by  committing our latest code to git, and switching Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
@@ -950,6 +1004,16 @@ Keep following the errors RSpec is giving you. Now we need a view:
   <%= f.submit 'Leave Review' %>
 <% end %>
 ```
+`app/views/reviews/new.html.haml`:
+
+```erb
+= form_for [@restaurant, @review] do |f|
+  = f.label :thoughts
+  = f.text_area :thoughts
+  = f.label :rating
+  = f.select :rating, (1..5)
+  = f.submit 'Leave Review'
+```
 
 Cool. Now we need a model for reviews – currently they aren't being stored in the database!
 
@@ -1000,8 +1064,9 @@ redirect_to restaurants_path
 
 Now, once the method is run, Rails will take a user back to the list of restaurants.
 
-Finally, update `app/views/restaurants/index.html.erb` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.erb`. Use something like this inside of your each loop:
+Finally, update `app/views/restaurants/index.html.(erb/haml)` to display the actual reviews, which you can get at by calling `restaurants.reviews.each` and iterating over them. You'll want to do the same for `app/views/restaurants/show.html.(erb/haml)`. Use something like this inside of your each loop:
 
+erb:
 ```erb
 <h3>Reviews for <%= restaurant.name %></h3>
 
@@ -1017,7 +1082,22 @@ Finally, update `app/views/restaurants/index.html.erb` to display the actual rev
   <p>No reviews.</p>
 <% end %>
 ```
+haml:
+```haml
+h3
+  Reviews for
+  = restaurant.name
 
+- if restaurant.reviews.any?
+  %ul
+    - restaurant.reviews.each do |review|
+      %li
+        = review.thoughts
+        %strong= review.rating
+        /5
+-else
+  %p No reviews.
+```
 ##### `belongs_to` and dealing with orphan reviews
 
 Adding the following line to the `review.rb` model will tie the review to a restaurant:
@@ -1128,8 +1208,9 @@ end
 
 Here, `Restaurant.create` has been split up into its component parts – `Restaurant.new` and `Restaurant.save`. We're still not showing the user an error, though, even though one is being generated in the background (it's that error that's passing our unit test).
 
-To show an error, let's edit our view. Add this to the top of your `views/restaurants/new.html.erb` file:
+To show an error, let's edit our view. Add this to the top of your `views/restaurants/new.html.(erb/haml)` file:
 
+erb:
 ```erb
 <% if @restaurant.errors.any? %>
   <section id="errors" >
@@ -1141,6 +1222,17 @@ To show an error, let's edit our view. Add this to the top of your `views/restau
     </ul>
   </section>
 <% end %>
+```
+haml:
+```haml
+- if @restaurant.errors.any?
+  %section#errors
+    %h2
+        = pluralize @restaurant.errors.count, "error"
+        prohibited this restaurant from being saved:
+    %ul
+      - @restaurant.errors.full_messages.each do |message|
+        %li= message
 ```
 
 What does this do? Well, in the case that our restaurant has any errors on it (that is, something went wrong when trying to save it) those errors are displayed on screen in a `section`, along with a count of how many errors there are.
