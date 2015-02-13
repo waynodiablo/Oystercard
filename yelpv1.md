@@ -273,14 +273,12 @@ No restaurants yet!
 Cool – but now RSpec is telling us we need a link on the page.
 
 `app/views/restaurants/index.html.erb`:
-
-```html
+```erb
 No restaurants yet!
 <a href='#'>Add a restaurant</a>
 ```
 
 `app/views/restaurants/index.html.haml`:
-
 ```haml
 No restaurants yet!
 %a(href='#') Add a restaurant
@@ -296,7 +294,7 @@ bin/rails s
 http://localhost:3000/restaurants should now show the content of the index.html.erb file in the browser.  There's a bit more work to get here than with Sinatra, but Rails is providing a layout that we'll use again and again. Each view is automatically wrapped in a layout file that by default is 'app/views/layouts/application.html.erb' which has the following contents:
 
 erb:
-```html
+```erb
 <!DOCTYPE html>
 <html>
   <head>
@@ -425,19 +423,29 @@ Let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twi
 
 ##### Rendering restaurants in the view
 
-Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's do this in the wrong way first, but see if you can spot what we are doing wrong. Replace the contents of `restaurants/index.html.erb` with the following:
-
-```html
+Now, in `restaurants_controller.rb` we want to get all of the restaurants from the database. Let's do this in the wrong way first, but see if you can spot what we are doing wrong. Replace the contents of `restaurants/index.html.erb` or `restaurants/index.html.haml` with the following:  
+erb:
+```erb
 <% if Restaurant.all.any? %>
   <% Restaurant.all.each do |restaurant| %>
     <%= restaurant.name %>
   <% end %>
 <% else %>
   <h1>No restaurants yet</h1>
-  <a href="#">Add a restaurant</a>
 <% end %>
-```
 
+<a href="#">Add a restaurant</a>
+```
+haml:
+```haml
+- if Restaurant.all.any?
+  - Restaurant.all.each do |restaurant|
+    %h2= restaurant.name
+- else
+  %h1 No restaurants yet!
+
+%a(href='#') Add a restaurant
+```
 The tests should all pass now, but what cardinal sin have we committed?
 
 We're talking directly to our model from our view, and this can lead to dangerous spaghetti code.  We should prefer to have our controller mediate communication between the model and view.
@@ -450,7 +458,7 @@ def index
 end
 ```
 
-This creates an instance variable `@restaurants` that is accessible in our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb`:
+This creates an instance variable `@restaurants` that is accessible in our `index` view. Let's refer to it in `app/views/restaurants/index.html.erb` or `app/views/restaurants/index.html.erb`:
 
 ```erb
 <% if @restaurants.any? %>
@@ -464,7 +472,7 @@ This creates an instance variable `@restaurants` that is accessible in our `inde
 <a href='#'>Add a restaurant</a>
 ```
 
-So in summary our URL http://localhost:3000/restaurants hits the Rails routing system, which passes the request to the index action in the restaurants controller which queries the database for any restaurant models.  The controller then passes an instance variable containing all the restaurant models to the erb view, where they can be correctlt formatted and the resulting HTML is passed back to the browser for display to the end user.
+So in summary our URL http://localhost:3000/restaurants hits the Rails routing system, which passes the request to the index action in the restaurants controller, which queries the database for any restaurant models.  The controller then 'passes' (using some Rails magic) an instance variable containing all the restaurant models to the view, where they can be correctly formatted.  The controller returns the resulting HTML back to the browser for display to the end user.
 
 The tests should all now pass. A good time to commit our code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
@@ -525,7 +533,10 @@ Missing template restaurants/new, application/new with {:locale=>[:en], :formats
 
 The problem is that our `new` method doesn't have a view associated with it. Let's make one.
 
+erb:
 `$ touch app/views/restaurants/new.html.erb`
+haml:
+`$ touch app/views/restaurants/new.html.haml`
 
 This gives us a new test failure:
 
@@ -549,6 +560,15 @@ HTML forms are the common way to submit data through web applications and Rails 
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>
+```
+
+`app/views/restaurants/new.html.haml`
+
+```haml
+= form_for Restaurant.new do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
 ```
 
 Here, we're using Rails' built-in `form_for` helper to build a form, which takes care of a lot of things, including verifying the authenticity of the form. You can read more about that in [RailsGuides](http://guides.rubyonrails.org/form_helpers.html).
