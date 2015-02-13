@@ -246,7 +246,7 @@ This is because our controller index action is looking for an erb template to di
 
 ##### Creating views
 
-Much like in Sinatra, views tell your app how to present content on the page.
+Much like in Sinatra, views tell your app how to present content on the page.  You've already seen how to use erb as a templating language, but there are many more options.  If you're feeling brave, why not give [Haml](http://haml.info/) a try (N.B. you will need to install the gem...)?  There are examples given for both erb and Haml; you only need to use one.
 
 erb:
 `$ touch app/views/restaurants/index.html.erb`
