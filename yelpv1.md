@@ -428,7 +428,7 @@ erb:
 ```erb
 <% if Restaurant.all.any? %>
   <% Restaurant.all.each do |restaurant| %>
-    <%= restaurant.name %>
+    <h2><%= restaurant.name %></h2>
   <% end %>
 <% else %>
   <h1>No restaurants yet</h1>
