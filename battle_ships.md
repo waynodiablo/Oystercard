@@ -24,7 +24,6 @@ One of the things you have to keep in mind is to simplify as much as you can whe
 2. Create your **battleships** repository (use the name _battleships_) in Github.
 3. Add a description of your project into the `README.md` file.
 4. Add the domain model ( _the explanation of the classes and the interactions_ ) into the `README.md` file.
-5. Present your findings to your cohort and discuss why you chose the objects and the interactions the way you did ( _group discussion_ ).
 
 ## Version 1: The Model
 
@@ -43,7 +42,6 @@ The **SRP** is one of five principles that make up **SOLID** ( _Single responsib
 1. Code the classes and their interactions ( _Test First!, and swap driver/navigator roles frequently :twisted_rightwards_arrows:._)
 2. Think about the classes you have created. Are they following the **SRP** ?
 3. Play with your code in `irb` ( _if you prefer `pry` go with it_ )
-4. Present one of the **SOLID** principles to your cohort.
 
 ## Version 2: The Game Engine
 
@@ -92,6 +90,7 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 
 ### Resources
 
+- [An example MVP sequence for Battleships](https://github.com/makersacademy/course/blob/master/pills/mvp.md)
 - [Makers Lecture - Blocks, Procs and Lambdas](https://www.youtube.com/watch?v=2HTR4oOZ9iM)
 - [Battleships Game - Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
 - [SOLID - Wikipedia](https://en.wikipedia.org/wiki/Solid_(object-oriented_design))

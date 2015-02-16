@@ -1,7 +1,6 @@
 Test Coverage
 ============
 
-[Video of session](https://www.youtube.com/watch?v=S6qV8vbjPu8)
 
 Test coverage is an automated metric that indicates the degree to which your code is being exercised by your tests.  For example, say that we have a short class like so:
 
@@ -24,6 +23,7 @@ describe Foo do
   end
 end
 ```
+([what are foo and bar?](http://en.wikipedia.org/wiki/Foobar))
 
 A simple test coverage metric could be the number of lines in the application code that are exercised by the test code.  There are 8 lines of code in the Foo class, and we run all but 3 of them from the test so we have 5/8 or 62.5% test coverage.
 
@@ -67,6 +67,13 @@ At best, test coverage metrics are good indicators of places in your code that a
 
 There are actually lots of different kinds of test coverage methods, but it's as yet unclear if there is a strong reason to use the more rigorous kind that check whether every boolean subexpression in an if statement have been evaluated to every possible outcome.  In mission critical systems that control aircraft and power stations, yes; in your MVP to get feedback from potential customers, almost certainly not.
 
+Different Types of Tests
+-------
+
+There are many different types of tests that fit into a sort of pyramid.  The pyramid model suggests that we should have many small fast running unit tests (that test single methods on single objects), an intermediate number of integration tests (that test assemblies of objects) and then a relatively small number of high level GUI (or acceptance) tests, that correspond to high level user stories that deliver value to stakeholders.
+
+![Testing Pyramid](https://watirmelon.files.wordpress.com/2011/06/automatedtestingpyramid.png)
+
 Testing MVC (Model View Controller)
 --------
 
@@ -98,3 +105,4 @@ Resources
 * [Coveralls (Continuous Integration Testing Support)](https://coveralls.io)
 * [Martin Fowler on Test Coverage](http://martinfowler.com/bliki/TestCoverage.html)
 * [Wikipedia on Code Coverage](http://en.wikipedia.org/wiki/Code_coverage)
+* [Archive Video of Sam talking about Test Coverage](https://www.youtube.com/watch?v=S6qV8vbjPu8)
