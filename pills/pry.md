@@ -4,7 +4,7 @@
 
 Imagine you could see the world as Ruby sees it... REPLs give you EXACTLY that - __RUBY'S EYES!!!__
 
-![NeoVision](https://raw.githubusercontent.com/makersacademy/course/master/pills/images/code_vision.jpg?token=ACI6tS4_d5gX7L3kD7a7fwmHTC7WkkMiks5U3ce7wA%3D%3D)
+![NeoVision](https://raw.githubusercontent.com/makersacademy/course/master/pills/images/code_vision.jpg?token=ACI6tY6F41BUs0FM95qEDBZDqw-X4cuLks5U6urywA%3D%3D)
 
 That's right - you can see precisely what Ruby is seeing. How many real-life conflicts would be resolved by being able to see through the other party's eyes? This is why using a REPL is so useful.
 
