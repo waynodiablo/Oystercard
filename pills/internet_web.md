@@ -4,8 +4,7 @@
 
 Today we will be talking about the arrows in this digram. The HTTP request and response.
 
-![Three Tier Web Architecture](https://raw.githubusercontent.com/makersacademy/course/master/images/3-tier.png?token=AABf3D7xcLuEmQL0U7Csjo_eChFqknVkks5UtEHTwA%3D%3D
-)
+![Three Tier Web Architecture](https://raw.githubusercontent.com/makersacademy/course/master/images/3-tier-simple.png)
 
 ## Map of the Web
 
@@ -140,13 +139,13 @@ https://www.flickr.com/photos/girliemac/sets/72157628409467125
 
 You can view what's going on in Chrome by opening up the developer console `CMD-OPT-I`.
 
-![All Requests](https://raw.githubusercontent.com/makersacademy/course/master/images/console-requests.png?token=AABf3Ky-N9cV3BhzldzZkKeHQkwrfef6ks5UtSJ3wA%3D%3D)
+![All Requests](https://raw.githubusercontent.com/makersacademy/course/master/images/console-requests.png)
 
 Select the network tab and make a web request in the usual way. You will see all the requests that are made in response.
 
 You can click on a particular repsonse to see more information about it, including the headers, etc.
 
-![Specific request](https://raw.githubusercontent.com/makersacademy/course/master/images/console-request.png?token=AABf3I-Z7gX49rIZ3DQ_kWqcPWsGHeUnks5UtSImwA%3D%3D)
+![Specific request](https://raw.githubusercontent.com/makersacademy/course/master/images/console-request.png)
 
 Requests have headers and a body (which may be blank) in exactly the same way that responses do.
 
@@ -154,7 +153,7 @@ Requests have headers and a body (which may be blank) in exactly the same way th
 
 You can also select elements in the browser 'right click' (control click) and select 'inspect element'. This allows you to see the parsed HTML response.
 
-![Inspect element](https://raw.githubusercontent.com/makersacademy/course/master/images/inspect-element.png?token=AABf3G-0LmFGpCDzMgdiaNIZ7G9J0LoYks5UtSirwA%3D%3D)
+![Inspect element](https://raw.githubusercontent.com/makersacademy/course/master/images/inspect-element.png)
 
 HTML is what allows documents displayed in the browser to link to other documents.
 
@@ -189,3 +188,4 @@ To find out how to create your own web server look at the [Sinatra Pill](https:/
 # Resources
 
 * [A video from a talk on this subject](https://www.youtube.com/watch?v=Q8gE9dwgopE)
+* [Another one](https://www.youtube.com/watch?v=Xs9k0sPa27c)
