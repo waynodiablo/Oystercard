@@ -174,6 +174,11 @@ Now, let's add some code to the index page to display this average beside each r
 ...
 ```
 
+```haml
+...
+%h3 Average rating: #{restaurant.average_rating.to_i}
+...
+```
 This should make our acceptance test go green meaning that we have completed our acceptance test unit test cycle.
 
 ##### Stars make things pretty
@@ -206,6 +211,9 @@ Somewhere in the layout `head` section you'll need to have this `meta` tag:
 <meta charset="UTF-8">
 ```
 
+```haml
+%meta(charset="UTF-8")
+```
 We're restarting the acceptance test - unit test cycle again now since the above acceptance test will fail.  Let's follow on with a series of unit tests to get the low level functionality we need to make the high level acceptance test pass.
 
 ##### DIY helper methods
@@ -320,6 +328,11 @@ And that should pass those tests. We've completed our run of unit test ping pong
 ...
 ```
 
+```haml
+...
+= star_rating(restaurant.average_rating)
+...
+```
 Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](/pills/rails_helpers.md)** to learn more.
 
 **Exercise - having reviewed the helper pill see if you can ping pong pair through an acceptance test unit test cycle to get the reviews to display when they were created relative to now (e.g. '5 hours ago').**
@@ -436,10 +449,16 @@ We now need to update the view to show each review's endorsements. Have a look i
 <% @restaurant.reviews.each do |review| %>
 ```
 
+```haml
+- @restaurant.reviews.each do |review|
+```
 In that block you want to call the number of endorsements that each review has. Try using something like this:
 
 ```erb
-<p><%= review.endorsements.count %> endorsements</p>
+<p><%= pluralize review.endorsements.count, 'endorsement' %></p>
+```
+```haml
+%p= pluralize review.endorsements.count, 'endorsement'
 ```
 
 Note that because we are relying on basic rails functionality up to this point that we haven't had to write any unit tests yet - we are assuming that Rails own unit tests will already cover this functionality effectively and our acceptance test is sufficient for us to get the necessary test coverage.  We're also being a big naughty in that we're adding a display to the view without an acceptance test to cover it ...!
@@ -570,7 +589,18 @@ $(document).ready(function() {
   })
 })
 ```
+If you're interested to see what it would look like in CoffeeScript, here it is:
+```coffeescript
+$ ->
+  $('.endorsements-link').on 'click', (event) ->
+      event.preventDefault()
 
+      endorsementCount = $(this).siblings '.endorsements_count'
+
+      $.post this.href, ->
+        endorsementCount.text response.new_endorsement_count
+
+```
 There's a lot going on here, so let's break it down line by line.
 
 * `$(document).ready` is a jQuery method that makes sure the page is fully loaded before the JS fires.
@@ -608,20 +638,29 @@ The `create` method now serves up a JSON which has a single item, `new_endorseme
 
 Now we need to update the view so that the JS has something to actually modify when it gets a JSON from the server.
 
-In `app/views/restaurants/index.html.erb`, add this code replacing your existing code where appropriate:
+In `app/views/restaurants/index.html.(erb/haml)`, add this code replacing your existing code where appropriate:
 
 ```erb
 <ul>
   <% restaurant.reviews.each do |review| %>
     <li>
       <%= review.thoughts %> Average rating: <%= star_rating(restaurant.average_rating) %>
-        <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
-        <span class="endorsements_count"> <%= review.endorsements.count %> </span> endorsements
+      <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
+      <span class="endorsements_count"> <%= review.endorsements.count %> </span> <%= 'endorsement'.pluralize(review.endorsements.count) %>
     </li>
   <% end %>
 </ul>
 ```
 
+```haml
+%ul
+  - restaurant.reviews.each do |review|
+    %li
+      #{review.thoughts} Average rating: #{star_rating(restaurant.average_rating)}
+      = link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link'
+      %span.endorsements_count= review.endorsements.count 
+      = 'endorsement'.pluralize review.endorsements.count
+```
 Here, the `span` tag with class 'endorsements_count' is populated with the current review endorsements count when the page is first loaded. Then, when the user clicks on 'Endorse', our JS is fired and posts to the URL linked to by the 'Endorse' link. It takes the response and replaces the number in the `span` with it.
 
 Your tests should now be passing. Commit and :twisted_rightwards_arrows:.
@@ -700,30 +739,39 @@ and then run `rake db:migrate` to add the new column to your database.
 
 ##### Adding file uploads
 
-Have a look at `app/views/restaurant/_form.html.erb`. Change the form tag to the following – this lets you send files to the server using your HTML form:
+Have a look at `app/views/restaurant/_form.html.(erb/haml)`. Change the form tag to the following – this lets you send files to the server using your HTML form:
 
 ```erb
 <%= form_for @restaurant, html: {multipart: true} do |f| %>
 ```
 
+```haml
+= form_for @restaurant, html: {multipart: true} do |f|
+```
 and then add
 
 ```erb
 <%= f.file_field :image %>
 ```
 
+```haml
+= f.file_field :image
+```
 to your form, which will add a file picker for users to select an image from their local machine and upload it.
 
 Go to your restaurants controller and add `:image` to your `permit` statement, to tell Rails that it's okay that users are submitting forms with images.
 
 Now, when a user creates a restaurant and includes an image, it gets saved to the `/public` directory.
 
-In `views/restaurants/index.html.erb`, you now want to include a photo.
+In `views/restaurants/index.html.(erb/haml)`, you now want to include a photo.
 
 ```erb
 <%= image_tag restaurant.image.url(:thumb) %>
 ```
 
+```haml
+= image_tag restaurant.image.url(:thumb)
+```
 **Exercise – work out how to test this with Capybara!** Then commit and :twisted_rightwards_arrows:.
 
 #### Uploading images to Amazon Web Services S3
