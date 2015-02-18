@@ -4,7 +4,7 @@
 
 Today we will be talking about the arrows in this digram. The HTTP request and response.
 
-![Three Tier Web Architecture](https://raw.githubusercontent.com/makersacademy/course/master/images/3-tier-simple.png)
+![Three Tier Web Architecture](https://raw.githubusercontent.com/makersacademy/course/master/images/3-tier-simple.png?raw=true)
 
 ## Map of the Web
 
@@ -139,13 +139,13 @@ https://www.flickr.com/photos/girliemac/sets/72157628409467125
 
 You can view what's going on in Chrome by opening up the developer console `CMD-OPT-I`.
 
-![All Requests](https://raw.githubusercontent.com/makersacademy/course/master/images/console-requests.png)
+![All Requests](https://raw.githubusercontent.com/makersacademy/course/master/images/console-requests.png?raw=true)
 
 Select the network tab and make a web request in the usual way. You will see all the requests that are made in response.
 
 You can click on a particular repsonse to see more information about it, including the headers, etc.
 
-![Specific request](https://raw.githubusercontent.com/makersacademy/course/master/images/console-request.png)
+![Specific request](https://raw.githubusercontent.com/makersacademy/course/master/images/console-request.png?raw=true)
 
 Requests have headers and a body (which may be blank) in exactly the same way that responses do.
 
@@ -153,7 +153,7 @@ Requests have headers and a body (which may be blank) in exactly the same way th
 
 You can also select elements in the browser 'right click' (control click) and select 'inspect element'. This allows you to see the parsed HTML response.
 
-![Inspect element](https://raw.githubusercontent.com/makersacademy/course/master/images/inspect-element.png)
+![Inspect element](https://raw.githubusercontent.com/makersacademy/course/master/images/inspect-element.png?raw=true)
 
 HTML is what allows documents displayed in the browser to link to other documents.
 
