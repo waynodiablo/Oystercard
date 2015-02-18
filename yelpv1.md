@@ -320,7 +320,8 @@ haml:
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  = yield
+  %body
+    = yield
 ```
 where the yield statement is place that the controller specific template will be inserted.
 
