@@ -593,12 +593,12 @@ If you're interested to see what it would look like in CoffeeScript, here it is:
 ```coffeescript
 $ ->
   $('.endorsements-link').on 'click', (event) ->
-      event.preventDefault()
+    event.preventDefault()
 
-      endorsementCount = $(this).siblings '.endorsements_count'
+    endorsementCount = $(this).siblings '.endorsements_count'
 
-      $.post this.href, ->
-        endorsementCount.text response.new_endorsement_count
+    $.post this.href, (response) ->
+      endorsementCount.text response.new_endorsement_count
 
 ```
 There's a lot going on here, so let's break it down line by line.
