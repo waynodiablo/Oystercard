@@ -29,8 +29,8 @@ You can check your installation by running
 `psql`
 
 At first it can happen that you don't have a database named after your username
-(you will see a messags along the lines `database "gypsydave5" does not exist`). Let's
-create that database for you so that you can loging without having to specify which one:
+(you will see a message along the lines `database "gypsydave5" does not exist`). Let's
+create that database for you so that you can log in without having to specify which one:
 
 `psql postgres`
 
