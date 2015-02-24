@@ -1,6 +1,6 @@
 # PostgreSQL
 
-Postgres is a widely used open source [relational database] engine.
+Postgres is a widely used open source [relational database](http://en.wikipedia.org/wiki/Relational_database) engine.
 
 ### Installation
 
