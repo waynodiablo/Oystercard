@@ -27,6 +27,23 @@ $ npm install chai --save-dev
 $ npm install -g mocha 
 ```
 #####6. Example Setup
+`./views/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+  <title>Example Title</title>
+  
+<body>  
+
+  <h1>Hello Makers</h1>
+  
+</body>
+
+</html>
+```
+
 `./specs/features/homepageFeature.js`
 
 ```javascript
