@@ -68,11 +68,23 @@ $ selenium-standalone start
 ```
 - Start your node server
 ```sh
-$ nodemon or npm start
+$ nodemon 
+```
+or
+```sh
+$ npm start
 ```
 - Run your test suite
 ```sh
-$ npm test or mocha or grunt
+$ npm test
+```
+or
+```sh
+$ mocha
+```
+or
+```sh
+$ grunt
 ```
 - Bask in the glory of successful javascript testing.
 
