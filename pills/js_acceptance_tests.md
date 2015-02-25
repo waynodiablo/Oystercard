@@ -27,7 +27,7 @@ $ npm install chai --save-dev
 $ npm install -g mocha 
 ```
 - Example Setup
-```./specs/features/homepageFeature.js```
+`./specs/features/homepageFeature.js`
 
 ```javascript
 var webdriverio = require('webdriverio');
