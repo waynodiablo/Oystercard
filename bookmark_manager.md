@@ -573,8 +573,7 @@ It turns out we made a mistake in out test. Instead of expecting the link.tags a
 
 ```ruby
 
-expect(link.tags.map(&:text)).to include("education")
-expect(link.tags.map(&:text)).to include("ruby")
+expect(link.tags.map(&:text)).to include "education" and "ruby"
 
 ```
 Now all our tests pass.
