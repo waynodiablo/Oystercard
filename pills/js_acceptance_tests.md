@@ -6,26 +6,26 @@ Follow the steps below to get JS project setup for reliable acceptance testing:
 
 ###Setup
 
-1. [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-2. Download Selenium Standalone and Install
-...```
-...$ npm install -g selenium-standalone@latest
-...$ selenium-standalone install
-...```
-3. Download and Install webdriverio locally to your project
+- Download Selenium Standalone and Install
 ```
-...$ npm install webdriverio --save-dev
+$ npm install -g selenium-standalone@latest
+$ selenium-standalone install
 ```
-4. Download and Install chai locally to your project
+- Download and Install webdriverio locally to your project
+```
+$ npm install webdriverio --save-dev
+```
+- Download and Install chai locally to your project
 ```
 $ npm install chai --save-dev
 ```
-5. Download and Install mocha GLOBALLY 
+- Download and Install mocha GLOBALLY 
 ```
 $ npm install -g mocha 
 ```
-6. Example Setup
+- Example Setup
 
 ```javascript
 var webdriverio = require('webdriverio');
@@ -60,19 +60,19 @@ describe('Homepage Tests', function() {
 
 ###Testing
 
-1. Run selenium server in a new terminal window
-...```
-...$ selenium-standalone start
-...```
-2. Start your node server
+- Run selenium server in a new terminal window
 ```
-...nodemon or npm start
+$ selenium-standalone start
 ```
-3. Run your test suite
+- Start your node server
+```
+nodemon or npm start
+```
+- Run your test suite
 ```
 npm test or mocha or grunt
 ```
-4. Bask in the glory of successful javascript testing.
+- Bask in the glory of successful javascript testing.
 
 ###Resources
 [WebdriverIO API Docs](webdriver.io/api.html)
