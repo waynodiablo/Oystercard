@@ -10,20 +10,20 @@ Follow the steps below to get JS project setup for reliable acceptance testing:
 - [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 - Download Selenium Standalone and Install
-```
+```sh
 $ npm install -g selenium-standalone@latest
 $ selenium-standalone install
 ```
 - Download and Install webdriverio locally to your project
-```
+```sh
 $ npm install webdriverio --save-dev
 ```
 - Download and Install chai locally to your project
-```
+```sh
 $ npm install chai --save-dev
 ```
 - Download and Install mocha GLOBALLY 
-```
+```sh
 $ npm install -g mocha 
 ```
 - Example Setup
@@ -67,12 +67,12 @@ describe('Homepage Tests', function() {
 $ selenium-standalone start
 ```
 - Start your node server
-```
-nodemon or npm start
+```sh
+$ nodemon or npm start
 ```
 - Run your test suite
-```
-npm test or mocha or grunt
+```sh
+$ npm test or mocha or grunt
 ```
 - Bask in the glory of successful javascript testing.
 
