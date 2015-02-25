@@ -61,12 +61,12 @@ describe('Homepage Tests', function() {
 ###Testing
 
 1. Run selenium server in a new terminal window
-```
-$ selenium-standalone start
-```
+...```
+...$ selenium-standalone start
+...```
 2. Start your node server
 ```
-nodemon or npm start
+...nodemon or npm start
 ```
 3. Run your test suite
 ```
