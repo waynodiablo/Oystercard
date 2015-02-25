@@ -84,10 +84,9 @@ built around keywords that describe what the software is doing - above we
 have **Given**, **When** and **Then**. When we read this description of the
 program we have a good idea of what it ought to be doing.
 
-The whole *Given / When / Then* thing is a way of describing the internal state
-of the program before you do something ("Given"), what you're doing to it
-("When"), and then what it's like just after it happens ("Then"). You're
-doing similar things in Rspec, but less explicitly.
+**Given** describes the internal state of the program before you do something,
+**When** is what you're doing to it, and **Then** is what it's like just after
+the action occurs. You're doing similar things in Rspec, but less explicitly.
 
 **Given**, **When** and **Then** are *keywords* for Cucumber, as are **And** and
 **But**. They all mean the same things - they tell Cucumber to make a new test
