@@ -246,7 +246,7 @@ OK, our cukes (that's a common name to refer to cucumber features) are passing n
 
 **Exercises**
 
-* Allow the user the play against the computer by shooting at a randomly generated computer opponent board
+* Allow the user to play against the computer by shooting at a randomly generated computer opponent board
 
 ## Version 2: Making the game playable by two people
 
