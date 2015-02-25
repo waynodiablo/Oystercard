@@ -7,26 +7,26 @@ Follow the steps below to get JS project setup for reliable acceptance testing:
 
 ###Setup
 
-- [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+#####1. [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-- Download Selenium Standalone and Install
+#####2. Download Selenium Standalone and Install
 ```sh
 $ npm install -g selenium-standalone@latest
 $ selenium-standalone install
 ```
-- Download and Install webdriverio locally to your project
+#####3. Download and Install webdriverio locally to your project
 ```sh
 $ npm install webdriverio --save-dev
 ```
-- Download and Install chai locally to your project
+#####4. Download and Install chai locally to your project
 ```sh
 $ npm install chai --save-dev
 ```
-- Download and Install mocha GLOBALLY 
+#####5. Download and Install mocha GLOBALLY 
 ```sh
 $ npm install -g mocha 
 ```
-- Example Setup
+#####6. Example Setup
 `./specs/features/homepageFeature.js`
 
 ```javascript
@@ -62,11 +62,11 @@ describe('Homepage Tests', function() {
 
 ###Testing
 
-- Run selenium server in a new terminal window
+#####1. Run selenium server in a new terminal window
 ```
 $ selenium-standalone start
 ```
-- Start your node server
+#####2. Start your node server
 ```sh
 $ nodemon 
 ```
@@ -74,7 +74,7 @@ or
 ```sh
 $ npm start
 ```
-- Run your test suite
+#####3. Run your test suite
 ```sh
 $ npm test
 ```
@@ -86,7 +86,7 @@ or
 ```sh
 $ grunt
 ```
-- Bask in the glory of successful javascript testing.
+#####4. Bask in the glory of successful javascript testing.
 
 ###Resources
 [WebdriverIO API Docs](http://www.webdriver.io/api.html)
