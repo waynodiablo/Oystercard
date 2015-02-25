@@ -1,6 +1,7 @@
 #Javascript Acceptance/Integration/Feature Testing
 
-Listen up geeks.
+Listen up geeks. The tutorial below assumes you have done the pill on a
+[Basic Node Server](https://github.com/makersacademy/course/blob/master/node/basic_node_server.md).
 
 Follow the steps below to get JS project setup for reliable acceptance testing:
 
@@ -26,6 +27,7 @@ $ npm install chai --save-dev
 $ npm install -g mocha 
 ```
 - Example Setup
+```./specs/features/homepageFeature.js```
 
 ```javascript
 var webdriverio = require('webdriverio');
@@ -75,5 +77,5 @@ npm test or mocha or grunt
 - Bask in the glory of successful javascript testing.
 
 ###Resources
-[WebdriverIO API Docs](webdriver.io/api.html)
+[WebdriverIO API Docs](http://www.webdriver.io/api.html)
 
