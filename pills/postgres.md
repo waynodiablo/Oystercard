@@ -47,7 +47,7 @@ From now on you will be able to log in to postgresql without having to specify t
 | Function                                    | Command                         |
 | ------------------------------------------- | ------------------------------- |
 | Create Database                             | CREATE DATABASE database_name;  |
-| Drop (Delete) Database                      | DELETE DATABASE database_name;  |
+| Drop (Delete) Database                      | DROP DATABASE database_name;  |
 | List Databases                              | \l                              |
 | Leave list of Databases                     | q                               |
 | Connect to a Database                       | \c database_name                |
