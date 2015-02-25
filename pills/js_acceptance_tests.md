@@ -9,13 +9,13 @@ Follow the steps below to get JS project setup for reliable acceptance testing:
 1. [Download JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 2. Download Selenium Standalone and Install
-```
-$ npm install -g selenium-standalone@latest
-$ selenium-standalone install
-```
+...```
+...$ npm install -g selenium-standalone@latest
+...$ selenium-standalone install
+...```
 3. Download and Install webdriverio locally to your project
 ```
-$ npm install webdriverio --save-dev
+...$ npm install webdriverio --save-dev
 ```
 4. Download and Install chai locally to your project
 ```
