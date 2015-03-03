@@ -26,7 +26,11 @@ $ npm install chai --save-dev
 ```sh
 $ npm install -g mocha 
 ```
-#####6. Example Setup
+#####6. Download and Install mocha locally, so that it's in your `package.json` and future devs won't scratch their heads wondering why no tests are running 
+```sh
+$ npm install --save-dev mocha 
+```
+#####7. Example Setup
 `./views/index.html`
 
 ```html
@@ -91,14 +95,15 @@ or
 ```sh
 $ npm start
 ```
-#####3. Run your test suite
+#####3. Run your test suite (assuming your `package.json` is set up correctly)
 ```sh
 $ npm test
 ```
-or
+or 
 ```sh
 $ mocha
 ```
+(don't forget to set up `--recursive` in `mocha.opts` so that it can find your nested feature tests)
 or
 ```sh
 $ grunt
