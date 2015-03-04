@@ -1085,19 +1085,21 @@ erb:
 ```
 haml:
 ```haml
-%h3
-  Reviews for
-  = restaurant.name
+- if @restaurants.any?
+  - @restaurants.each do |restaurant|
+    %h3
+      Review for
+      = restaurant.name
 
-- if restaurant.reviews.any?
-  %ul
-    - restaurant.reviews.each do |review|
-      %li
-        = review.thoughts
-        %strong= review.rating
-        /5
--else
-  %p No reviews.
+    - if restaurant.reviews.any?
+      %ul
+        - restaurant.reviews.each do |review|
+          %li
+            = review.thoughts
+            %strong = review.rating
+            /5
+    - else
+      %p No reviews
 ```
 ##### `belongs_to` and dealing with orphan reviews
 
