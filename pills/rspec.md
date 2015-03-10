@@ -203,3 +203,4 @@ Resources
 
 * http://rspec.info
 * https://relishapp.com/rspec
+* http://betterspecs.org/
