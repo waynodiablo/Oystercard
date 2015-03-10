@@ -1,16 +1,4 @@
-
-## Version 1: Setting up the project & building the bike
-
-It's time to write some code. The first step should be describing what you will build using specs. Create a new repository in your projects directory (mine is called ~/makers) and add a `README.md` file to the repository.
-
-````
-mkdir boris_bikes
-cd boris_bikes
-git init
-…
-````
-
-By now you must have [rspec](http://rspec.info) installed. If you don't, install it now (:pill: [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md)).
+## Version 1: Building the bike
 
 We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy. What is the absolute minimum we could implement? What is central to the entire system? A bike.
 

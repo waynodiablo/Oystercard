@@ -1,16 +1,18 @@
 # OOD & OOP Basics: Boris Bikes
 
-The goal of this project is to introduce you to [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming)and show you the very basics of [Object-Oriented Design (OOD)](https://en.wikipedia.org/wiki/Object-oriented_design).
+:construction: UNDER CONSTRUCTION :construction:
+
+The goal of this project is to introduce you to [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming)and show you the very basics of [Object-Oriented Design (OOD)](https://en.wikipedia.org/wiki/Object-oriented_design). [Is the goal in fact to introduce TDD?]
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-We are creating a simple system for managing [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will keep track of a number of docking stations and the bikes. It will allow you to rent the bikes and return them. Occasionally the bikes will break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage.
+We are creating a simple system for managing [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will keep track of a number of docking stations and the bikes. It will allow you to rent the bikes and return them. Occasionally the bikes will break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage. [Do we need a more precise specification of how the end user would interact with the system? Should we give an example of irb interaction with the system - showing the end result so to speak?]
 
 A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent a bike or return it some objects get created somewhere in the system that tracks the usage of all bikes.
 
-***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (ping-pong, change the message), ensuring that the maximum time one person is driving is 15minutes, but as frequently as every minute.***
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (ping-pong, change the message), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
 
-## Version 0: Building a domain model
+## Version 0: Domain Model and Project Setup
 
 The first step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). The [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them. In other words, it helps us understand what classes we may have and what methods they may implement.
 
@@ -31,3 +33,46 @@ Our classes will implement a number of methods. To get an idea of what they may 
 > We are building a system that manages bikes that can be **rented** by users from docking stations and **returned** there at the end of the rental. The bikes can **break** while being **used**, in which case they will not be available for rental after they are **returned**. There is a garage that can **fix** broken bikes. A van is used to **move** broken bikes from the stations to the garage. It can also be used to **take** fixed bikes back to the station(s). The van, all stations and the garage have fixed capacity, so they cannot **take** more bikes that they can **hold**.
 
 Again, not all verbs will become methods and we'll have methods that don't correspond to any verbs in this description but that's ok. Right now we just need a idea of what they could be.
+
+## Setting up the project
+
+Once we have an idea of what we are building our first step will be describing some part of what we will build using 'specs' (short for specifications).  We'll also refer to these as 'tests'.  Our preferred Ruby testing tool is [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md), and each individual test of our code is a 'spec'.
+
+To get started fork and clone the Makers [Boris Bikes repo](https://github.com/makersacademy/boris-bikes) to create a place to work.
+
+If we were starting completely from scratch we could just create a new repository in our projects directory adding a `README.md` file and so forth.
+
+````
+mkdir boris-bikes
+cd boris-bikes
+git init
+touch README.md
+…
+````
+
+However, by forking and cloning the Makers [Boris Bikes repo](https://github.com/makersacademy/boris-bikes) we'll get a few extra pieces of support, such as set up for Continuous Integration (CI), which means that all our test specs can be checked when we push to GitHub.
+
+If you have correctly forked and cloned you should now have a boris-bikes directory.  Navigate there and run ```bundle``` (short for ```bundle install```) which will install all the gems (ruby libraries) in the Gemfile.  In this case the only gem in our Gemfile is  [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md).
+
+Whether we are forking and cloning, or creating a folder and initialising a git repository locally, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests.
+
+
+## Version 1: Bike
+
+[Version 1](boris_bikes_version_1.md)
+
+## Version 2: Refactoring
+
+[Version 2](boris_bikes_version_2.md)
+
+## Version 3: Docking Station
+
+[Version 3](boris_bikes_version_3.md)
+
+## Version 4: Van & Garage
+
+[Version 4](boris_bikes_version_4.md)
+
+## Version 5: Extracting Common Functionality
+
+# Supporting Material?
