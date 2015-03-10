@@ -197,3 +197,9 @@ rspec
 ````
 
 [RSpec](http://rspec.info) will figure out which files are in the *lib directory* and which are in the *spec directory* and will map those with each other (*with help of your requires of course*) so that you can run your specs.
+
+Resources
+--------
+
+* http://rspec.info
+* https://relishapp.com/rspec
