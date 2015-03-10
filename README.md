@@ -2,13 +2,13 @@
 
 Welcome to the first 12 weeks of the rest of your life...
 
-Every week, starting from the very beginning, we'll be building a project using Ruby. Most projects will take one week.
+Every week, starting from the very beginning, we'll be building a project using Ruby or JavaScript. Most projects will take one week.
 
-For the projects in the first half of the course we'll be providing very detailed tutorials that will guide you through the process of creating them from scratch. You will be asked to understand everything that the tutorials cover and to extend the projects by completing the exercises provided.
+For the projects in the first half of the course we'll be providing more detailed tutorials that will guide you through the process of creating them from scratch. You will be asked to understand everything that the tutorials cover and to extend the projects by completing the exercises provided.
 
-Because you will be extending the codebase as we go, your codebase will diverge from this tutorial. This should be expected, so if something doesn't work as expected, try to understand why it happens. Don't be afraid to modify the code to make it work.
+Because you will be extending the codebase as we go, your codebase will diverge from these tutorials. This should be expected, so if something doesn't work as expected, try to understand why it happens. Don't be afraid to modify the code to make it work.
 
-It's very important that you type everything in yourself and never copy-paste the code. It's much easier to learn something if you type it in yourself, even if the piece of code looks very simple. You will be making mistakes and typos along the way, don't worry, it will make you learn more about Ruby syntax.
+It is **very important** that you type everything in yourself and never copy-paste the code. It's much easier to learn something if you type it in yourself, even if the piece of code looks very simple. You will be making mistakes and typos along the way, don't worry, it will make you learn more about Ruby syntax.
 
 You're just starting to learn to code. It may be tempting to go straight to Ruby on Rails and start building beautiful web applications that use databases, latest HTML5 and CSS3 features, have several pages of content and maybe even process payments.
 
