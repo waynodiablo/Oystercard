@@ -23,6 +23,7 @@ BUT
 Before we start, you should definitely read [Roi's introduction to Node](https://github.com/makersacademy/course/blob/master/pills/node.md), which explains the concepts behind non-blocking I/O and callbacks. Also, [Why the hell would I use Node?](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [Convincing the boss](http://nodeguide.com/convincing_the_boss.html) are great articles on what Node is good for.
 
 It is also assumed that you have worked through the following:
+* :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
 * :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md)
 
 Additionally, [this Node style guide](https://github.com/felixge/node-style-guide) will help you write code that is clear and readable.
