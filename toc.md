@@ -3,16 +3,17 @@
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 0. [Introduction](intro.md)
-1. [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
-2. [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
-3. [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
-4. [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
-5. [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
-6. Lab
-7. [Building an API server in Node](https://github.com/makersacademy/course/blob/master/node.md)
-8. Makerthon
-9. [Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
-10. Final Projects
+1. Week 1: [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
+2. Week 2: [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
+3. Week 3: [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
+4. Week 4: [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
+5. Week 5: [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
+6. Week 6: Lab week
+7. Week 7: [Advanced JavaScript](https://github.com/makersacademy/course/blob/master/node.md)
+8. Week 8: Makerthon
+9. Week 9: [Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
+10. Weeks 10-11: Final Projects
+11. Week 12: Hiring week
 
 ## Supporting Materials
 
