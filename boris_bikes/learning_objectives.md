@@ -1,6 +1,6 @@
 ## Summary of learning objectives for the week
 
-*Under Construction - Sam and I have split the learning into Topics, and I have scaffolded learning objectives from 'basic' to 'complex' within each. I have highlighted which are <SCAFFOLD> learning objectives that students should be able to approach on their own (and provided some sample resources I'd give to students so they arrive proficient in those LOs), and which are <EXTENSION> learning objectives you might want to suggest for more advanced students. Using verbs like 'define', 'explain', 'outline' gives an idea as to how to assess a student's proficiency in a certain learning objective. The objectives are nowhere near exhaustive, but hopefully they offer a framework for **all students** so they are proceeding from week-to-week with no gaps in knowledge (which can make for nasty surprises later on!). Edits, feedback, etc, are super-welcome (I've asked questions in italics but please poke in if you feel something needs to be said anywhere). Sam J and I discussed sharing these learning objectives with students and encouraging them to submit PRs for changes if they don't feel the LOs are appropriate - more feedback for us, and a more tailored course for future cohorts. What do you think?*
+*Under Construction - Sam and I have split the learning into Topics, and I have scaffolded learning objectives from 'basic' to 'complex' within each. I have highlighted which are <SCAFFOLD> learning objectives that students should be able to approach on their own (and provided some sample resources I'd give to students so they arrive proficient in those LOs), and which are <EXTENSION> learning objectives you might want to suggest for more advanced students. Using verbs like 'define', 'explain', 'outline' gives an idea as to how to assess a student's proficiency in a certain learning objective. The objectives are nowhere near exhaustive, but hopefully they offer a framework for* **all students** *so they are proceeding from week-to-week with no gaps in knowledge (which can make for nasty surprises later on!). Edits, feedback, etc, are super-welcome (I've asked questions in italics but please poke in if you feel something needs to be said anywhere). Sam J and I discussed sharing these learning objectives with students and encouraging them to submit PRs for changes if they don't feel the LOs are appropriate - more feedback for us, and a more tailored course for future cohorts. What do you think?*
 
 Agile
 * <SCAFFOLD> define an 'Agile process' [[Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development) *(reading)*, [Agile Manifesto Principles](http://agilemanifesto.org/principles.html) *(reading)*]
@@ -21,9 +21,9 @@ BDD
 
 * can differentiate between 'unit', 'integration' and 'feature' tests
 * construct a feature/integration test
----
+
 * MVP? (*What is our thinking on this? Do students need to be able to define this, explain it to someone, argue why it's good...or just leave it as extension material?*)
----
+
 
 TDD 
 * <SCAFFOLD> remember that 'TDD' refers to 'Test-Driven Development'
