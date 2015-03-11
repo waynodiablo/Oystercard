@@ -1,6 +1,35 @@
 ## Version 1: Building the bike
 
-We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy [TODO: do we need to intro MVP here?]. What is the absolute minimum we could implement? What is central to the entire system? A bike.
+We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy [TODO: do we need to intro MVP here?]. What is the absolute minimum we could implement but still provide some value to the end user? Our first user story sounds promising:
+
+```
+As a member of the public,
+So that I can get across town,
+I'd like to access a bike that is not broken.
+```
+
+It's interesting to reflect that one could imagine a version of the boris bikes system that had no code or infrastructure at all.  There could simply be places where bikes could be left unlocked.  Bike rental would be free, and bikes would be returned or not on an honour policy.  One might argue that in London that would soon lead to all the bikes being stolen or broken, and so some system for managing fees and repairs and so forth was essential, but it's excellent practice to check your assumptions.  Could what the client wants be delivered without writing a line of code?  Every line of code you write is a line of code that you may have to maintain in future. Every line of code you write now will support certain features that the client currently wants, but the client may change their mind, or the market may evolve, or who knows what.
+
+To a certain extent you want to hold off writing any code for as long as possible, ensuring that you and your client agree on which user stories deliver value, and then pick the simplest one and exert the minimum effort to support it.  To the extent that a feature can be delivered without writing any code, then go for it and focus the code writing efforts on delivering features that can't be supported any other way.
+
+As regards our story, or feature, above, let us assume that we are going to have some way of delivering a working bike to a user.  In the real Boris Bikes system this might involve a real person entering their credit card, validation via a payment gateway and the unlocking of a physical lock to allow a bike to be removed from a real docking station.  In this tutorial let us assume that the interactive ruby (irb) environment is our user interface, and so if someone can type in something like docking_station.release_bike and that we can check that the bike released is not broken, then this corresponds to the high level feature we are looking for, something like this:
+
+```sh
+2.1.5 :001 > d = DockingStation.new
+=> #<DockingStation:0x007fcc849f03a0 @bikes=[#<Bike:0x007fcc849f3c80 @broken=false>]>
+2.1.5 :002 > b = d.release_bike
+=> #<Bike:0x007fcc849f3c80 @broken=false>
+2.1.5 :003 > b.broken?
+=> false
+```
+
+Our goal is that we can create the necessary classes to support the above functionality.  Now we don't want to have to test that by hand every time we change anything, so let's start by writing a feature test that will allow us to automatically check that the above is going to work.  As mentioned before, in this simple system this feature test will also be an 'integration-test' that checks that the DockingStation and the Bike can interact correctly.
+
+
+
+
+
+What is central to the entire system? A bike.
 
 How do we model a bike? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
 
