@@ -1,6 +1,6 @@
 ## Version 1: Building the bike
 
-We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy. What is the absolute minimum we could implement? What is central to the entire system? A bike.
+We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy [TODO: do we need to intro MVP here?]. What is the absolute minimum we could implement? What is central to the entire system? A bike.
 
 How do we model a bike? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
 
@@ -8,9 +8,9 @@ A bike has a great many properties. It has a number of gears, it has a certain w
 
 Let's write a specification for the bike that describes how we believe the bike should behave. We're intentionally keeping everything very simple right now. It's not because this is a tutorial for beginners but because it's a good thing to do. As you design the system, you should move in small steps regardless of your experience.
 
-Create a file `spec/bike_spec.rb`. We'll put our bike examples there. The name should end in "_spec" since this is the convention [rspec](http://rspec.info) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
+Create a file `spec/bike_spec.rb`. We'll put our bike examples there. The name should end in "_spec" since this is the convention :pill: [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
 
-Now let's write our first test in spec/bike_spec.rb.
+Now let's write our first test in spec/bike_spec.rb. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
 ````ruby
 #we're describing the functionality of a specific class, Bike
@@ -26,6 +26,10 @@ describe Bike do
 end
 ````
 
+[TODO: should the above be introducing 'subject already'?]
+
+Note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
+
 So, we begin by writing an example (`it`) that describes what we want to see happening. We tell [rspec](http://rspec.info) that we are describing the class Bike (`describe`) and we want our bike to have a single feature: _we are expecting it not to be broken when we create it_.
 
 `expect(the_bike).not_to be_broken` seems to be quite complex, let's break it down and analyse it.
@@ -33,6 +37,8 @@ So, we begin by writing an example (`it`) that describes what we want to see hap
 The `expect()` method is provided by [rspec](http://rspec.info). It takes the object under test as an argument and returns a special object that has different methods that make the example pass or fail, depending on their arguments. One of these methods is `not_to()` that takes yet another [rspec](http://rspec.info) method `be_broken()` as an argument. Then the `not_to()` method takes a look at its argument and realises that if we don't expect the bike to `be_broken`, we must have a method `broken?()` in the `Bike` class. So it calls this method on the bike object that we passed to the `expect()` method and if it returns true, fails the example because we expect it `not_to` be true (:pill: [RSpec - Predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)).
 
 The paragraph above is still complicated. Read through it several times but if it still seems unclear, don't worry, it's a bit advanced for now. We still want to explain it so that you know that this line of code is some crazy magic. Once you get more experience with [rspec](http://rspec.info), you'll get used to how it works.
+
+[TODO: This document is very wordy - can we pull that language into pills and have more diagrams here?]
 
 Why does it have to be so complicated? Because [rspec](http://rspec.info) is designed to write tests that read like English:
 

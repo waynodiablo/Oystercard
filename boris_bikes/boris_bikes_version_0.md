@@ -6,7 +6,35 @@ The goal of this project is to introduce you to [Object-Oriented Programming (OO
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-We are creating a simple system for managing [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will keep track of a number of docking stations and the bikes. It will allow you to rent the bikes and return them. Occasionally the bikes will break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage. [Do we need a more precise specification of how the end user would interact with the system? Should we give an example of irb interaction with the system - showing the end result so to speak?]
+We are creating a simple system for managing [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will keep track of a number of docking stations and the bikes. It will allow you to rent the bikes and return them. Occasionally the bikes will break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage.
+
+[Do we need a more precise specification of how the end user would interact with the system? Should we give an example of irb interaction with the system - showing the end result so to speak?]
+
+The way to start any project is to specify a few important User Stories.  In this case we have the following, in the common Stakeholder, Motivation, Task format:
+
+> As a member of the public,
+So that I can get across town
+I'd like to access a bike that is not broken
+
+> As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to only release working bikes.
+
+> As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to accept returning bikes (broken or not)
+
+> As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to not accept more bikes than their capacity.  
+
+> As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like vans to come to take broken bikes from docking stations, take them to be fixed and then bring them back to the docking stations.
+
+> As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
 
 A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent a bike or return it some objects get created somewhere in the system that tracks the usage of all bikes.
 
@@ -38,9 +66,9 @@ Again, not all verbs will become methods and we'll have methods that don't corre
 
 Once we have an idea of what we are building our first step will be describing some part of what we will build using 'specs' (short for specifications).  We'll also refer to these as 'tests'.  Our preferred Ruby testing tool is [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md), and each individual test of our code is a 'spec'.
 
-To get started fork and clone the Makers [Boris Bikes repo](https://github.com/makersacademy/boris-bikes) to create a place to work.
+[NOT SURE ABOUT FORKING VS CREATING OWN REPO - NIKESH SAYS ALL PRECOURSERS ARE DOING PULL REQUESTS WITH RUBY KICKSTARTER]
 
-If we were starting completely from scratch we could just create a new repository in our projects directory adding a `README.md` file and so forth.
+Create a new repository in your projects directory adding a `README.md` file like so.
 
 ````
 mkdir boris-bikes
@@ -50,11 +78,9 @@ touch README.md
 …
 ````
 
-However, by forking and cloning the Makers [Boris Bikes repo](https://github.com/makersacademy/boris-bikes) we'll get a few extra pieces of support, such as set up for Continuous Integration (CI), which means that all our test specs can be checked when we push to GitHub.
+Add some basic explanation of the project to the README and then create a Github repo called 'boris-bikes' (note: please please ensure that the repo on Github is called exactly this, please ensure you use a hypen '-' and not an underscore '_'), and then connect your local repo to the Github repo and push the changes to the README up to Github and confirm that they are visible on Github.  This is a critical backup of your local changes to a remote machine that you MUST repeat as regularly as possible, ideally each time you get your tests to go green.
 
-If you have correctly forked and cloned you should now have a boris-bikes directory.  Navigate there and run ```bundle``` (short for ```bundle install```) which will install all the gems (ruby libraries) in the Gemfile.  In this case the only gem in our Gemfile is  [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md).
-
-Whether we are forking and cloning, or creating a folder and initialising a git repository locally, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests.
+Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.
 
 
 ## Version 1: Bike

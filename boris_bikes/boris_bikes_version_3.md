@@ -1,5 +1,9 @@
 ## Version 3: The Docking Station
 
+[TODO: note that we break various of our own guides in this section, e.g. two expects in an it block, locking DockingStation test to Bike class]
+
+[TODO: feels weird that we start the fullness component passing in the 20 with the default value - get the fullness functionality first - then worry about wanting to pass in default values and test drive that separately, i.e. don't make two changes to the interface at the same time to avoid complexity explosion]
+
 If the bike is the only thing we've got, our system isn't going to be very functional. At the very least we'll need docking stations. Let's think about the functionality we need for the docking station.
 
 A docking station must be able to accept a bike and to release it. It should also have some capacity limit, because we shouldn't be able to put an infinite number of bikes into it. If a bike is broken, the docking station should not release it (or, rather, it should only release it to the van but we haven't got a van yet). Finally, a station must know how many bikes it has.

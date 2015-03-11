@@ -1,5 +1,9 @@
 ## Version 4: Van & Garage
 
+[TODO: I have a real problem with extracting out common functionality before we have actually got the functionality appearing in multiple places - it feels like premature refactoring to me - we are introducing a dependency when we don't know what kinds of client requests might be coming down the line.  Furthermore for learning developers, introducing that complexity before we actually see the code replication that it removes feels like we are loading on too much up front ...]
+
+[TODO: rather than exercises, perhaps we should have feature requests, even appearing in a backlog of some kind?  Would be awesome if we can could add them as issues to the repo the student was working on at the appropriate time ...]
+
 Before writing more code, let's discuss what the other classes are and why we need them, starting with the van.
 
 The van is moving broken bikes from the stations to the garage. Once they are fixed, the van moves them back to the stations. So the van must be able to accept the bikes at the source and release them at the destination. Obviously, the van must have some limit on the capacity, just like the station.

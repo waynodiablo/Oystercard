@@ -1,6 +1,8 @@
 
 ## Version 2: Refactoring
 
+[TODO: use of subjects would annull the second refactoring here - could use a context/describe to extract subject/bike.break from a couple of tests]
+
 Let's pause for a while before continuing implementing more features. Is our code really good? Is there any chance to refactor it?
 
 Refactoring is the process of changing the structure of the code in order to make it more readable, maintainable or extendable without adding any new functionality.
