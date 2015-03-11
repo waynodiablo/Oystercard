@@ -12,29 +12,31 @@ We are creating a simple system for managing [Boris Bikes in London](https://en.
 
 The way to start any project is to specify a few important User Stories.  In this case we have the following, in the common Stakeholder, Motivation, Task format:
 
-> As a member of the public,
-> So that I can get across town
-> I'd like to access a bike that is not broken
+```
+As a member of the public,
+So that I can get across town,
+I'd like to access a bike that is not broken.
 
-> As a maintainer of the system,
+As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like docking stations to only release working bikes.
 
-> As a maintainer of the system,
+As a maintainer of the system,
 So that members of the public can get usable bikes,
-I'd like docking stations to accept returning bikes (broken or not)
+I'd like docking stations to accept returning bikes (broken or not).
 
-> As a maintainer of the system,
+As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like docking stations to not accept more bikes than their capacity.  
 
-> As a maintainer of the system,
+As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like vans to come to take broken bikes from docking stations, take them to be fixed and then bring them back to the docking stations.
 
-> As a maintainer of the system,
+As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
+```
 
 A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent a bike or return it some objects get created somewhere in the system that tracks the usage of all bikes.
 
