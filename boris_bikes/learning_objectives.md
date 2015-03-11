@@ -1,21 +1,39 @@
 ## Summary of learning objectives for the week
 
+Agile
+* can explain why we do agile
+
+BDD
+* can define the meanings user story, domain model, class structure
+* understand how to translate between these concepts
+* build a class structure from a user story, translating through a domain model
+* can explain the difference between EDUF (enough design up front) over BDUF or NDUF  (big design up front/ no design up front
+* can differentiate between unit, integration and feature test
+* can construct a feature/integration test
+* MVP?
+
+TDD 
+* Can explain why we do TDD (e.g. code documentation, for quality, enabling emergent (incremental?) design)
 * Can initialize a new project for TDD with RSpec
 * Follows RSpec best practices for writing tests using describe/context/it
+Pairing
+* can explain why we always do the simplest thing first (Building incrementally using iterations, Fail fast and rapid feedback)
+
+Clean Code
+* Can follow style guidelines
+
+Doubles
+* Can explain what doubles are and what they do and why we use them
+* Can explain difference between London and Chicago Style
 * Can use doubles to test message expectations
 * Can use doubles to stub unpredictable behaviour
-* Can discuss the philosophy of TDD and understands its role in:
-    * Documenting code
-    * Ensuring quality
-    * Enabling emergent design
+
+Pair Programming
+* can explain why we pair program
+* can use git and github to share code with pair partner
 * Has pair-programmed every day, with a new partner each day
-* Can discuss the philosophy of pair programming and identify at least one individual learning that would not have happened without it.
-* Can use Git and GitHub to create and share repositories with a pair partner
-* Has a basic understanding of Agile principles, in particular:
-    * EDUF (enough design up front) over BDUF or NDUF  (big design up front/ no design up front)
-    * Fail fast and rapid feedback
-    * Building incrementally using iterations
-* Has a basic understanding of MVP
+
+
 
 ### Activities
 * Use TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
@@ -103,7 +121,7 @@ Weekly Challenge
 * Test driven development (TDD)
 
 
-##  FAAST
+## Tube
 
 **Learning Objectives**
 
