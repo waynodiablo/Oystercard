@@ -1,6 +1,6 @@
 ## Stage 6:  Dealing with Broken Bikes
 
-There two more user stories that are specific to just stations and bikes, but have to deal with broken bikes.
+There are two more user stories that are specific to just stations and bikes, but have to deal with broken bikes.
 
 ```
 As a maintainer of the system,
@@ -15,54 +15,72 @@ I'd like docking stations to accept returning bikes (broken or not).
 Let's start with one of these and create a feature test that will ultimately lead us to making the bikes broken? method work properly ...
 
 ```ruby
+describe 'member of public accesses bike' do
+  # other tests omitted for brevity
+  it 'and broken bikes are not considered available' do
+    docking_station = DockingStation.new
+    broken_bike = Bike.new
+    broken_bike.break
+    docking_station.dock bike
+    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
 
-ADD FEATURE TEST
 ```
 
+We should be getting used to the format of these test failures now :-)
 
-### Making the broken? method work properly
+```sh
+1) member of public accesses bike and broken bikes are not considered available
+   Failure/Error: docking_station.dock Bike.new.break
+   NoMethodError:
+     undefined method `break' for #<Bike:0x007ffe611a1c08>
+   # ./spec/feature/public_bike_access_spec.rb:19:in `block (2 levels) in <top (required)>'
+```
 
-You may feel suspicious that our unit test passes while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
+Again this is our feature test failing.  Naturally we'll want to create a unit-test for the missing low level functionality, that will go in our bike_spec.rb file.
 
 ````ruby
-it 'should be able to break' do
-  bike = Bike.new
-  bike.break!
-  expect(bike).to be_broken
+it 'can break' do
+  subject.break
+  expect(subject).to be_broken
 end
 ````
 
-So in our example we are creating a new bike, telling it to break and finally we expect it to be broken.
+We now have another pair of failing tests.  A failing feature test and a failing unit test.  Let's see if we can make them pass.
 
-Before you run the example, ask yourself again. What do you expect to see? Will it pass? Will it fail? Why? _It is a good practice if you get yourself into this mode of thinking_
-
-This is the test output:
-
-````ruby
-1) Bike should be able to break
-     Failure/Error: bike.break!
-     NoMethodError:
-       undefined method `break!' for #<Bike:0x007fe7a23fd7c0>
-     # ./spec/bike_spec.rb:16:in `block (2 levels) in <top (required)>'
-````
-
-If we run it, we find out that it fails on `bike.break!` statement because of the `break!` method has not been defined on `Bike`. Fair enough, let's add it to our `Bike` class. Again, [rspec](http://rspec.info) complained about the lack of method, so we're doing the absolute minimum to make our code work.
+As always, let's ensure we do the absolute minimum to make our code work.
 
 ````ruby
 class Bike
   def broken?
   end
 
-  def break!
+  def break
   end
 end
 ````
 
-_Will the test pass this time? If not, will the error be different? If yes, what will it be?_
+_Will the tests pass this time? If not, will the error be different? If yes, what will it be?_
 
-Ok, the example is telling us that we expect the bike to be broken but it isn't: the `broken?` method returns `nil` while we expect it to return `true`. _What does it tell us to do?_ If we just make it return `true`, the example will pass but then our first example will fail because it only works because `broken?` is returning nil at the moment ( _and `nil` happens to equal to `false`_ ).
+```sh
+Failures:
 
-Time to write some real code. Now we have two examples that force us to write some logic. Apparently, our bike should maintain some internal state that should be changed when we break it.
+  1) Bike can break
+     Failure/Error: expect(subject).to be_broken
+       expected `#<Bike:0x007fc534063410>.broken?` to return true, got nil
+     # ./spec/bike_spec.rb:9:in `block (2 levels) in <top (required)>'
+
+  2) member of public accesses bike and broken bikes are not considered available
+     Failure/Error: expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+       expected Exception with "No Bikes Available" but nothing was raised
+     # ./spec/feature/public_bike_access_spec.rb:20:in `block (2 levels) in <top (required)>'
+
+```
+
+Our two different tests fail in two different ways now.  Our unit test catches the problem at the lower level that our broken? method returns nil rather than true or false and our higher level feature test finds that a broken bike is still released by the docking station when it should be giving an error indicating that no working bikes are currently available.
+
+As was the case with the docking station needing an instance variable to store a docked bike, we have a combination of tests that force us to write some logic.  The simplest thing we can do to make the currently failing tests pass is to have the broken? method just return true.  Try it and see.  A different combination of tests will fail.  Apparently, our bike should maintain some internal state that should be changed when we break it.
 
 Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
 
@@ -83,7 +101,7 @@ class Bike
     @broken
   end
 
-  def break!
+  def break
     # and any instance method can update them
     @broken = true
   end
@@ -91,169 +109,124 @@ class Bike
 end
 ````
 
-**Now all our examples pass, a perfect time to commit our changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
-**
+Although RuboCop will ask us to use attr_reader to define trivial reader methods like broken?  Let's go ahead and do that:
 
-
-
-### Fixing the bike
-
-If a bike can be broken, it can be fixed too, right? Sounds like a test.
-
-````ruby
-it 'should be able to get fixed' do
-  bike = Bike.new
-  bike.break!
-  bike.fix!
-  expect(bike).not_to be_broken
-end
-````
-
-Why don't we assert that it's broken after we break but before we fix it? Also, why don't we assert that it's not broken before we break it? Because these cases are covered by other examples. We don't want to test the same thing again, it would be a waste of time. Other examples make sure that a new bike is not broken and, after we break it, it is broken.
-
-If we run the test, we'll find that the method `fix!()` is undefined.
-
-````ruby
-1) Bike should be able to get fixed
-     Failure/Error: bike.fix!
-     NoMethodError:
-       undefined method `fix!' for #<Bike:0x007fe9ed903010 @broken=true>
-     # ./spec/bike_spec.rb:23:in `block (2 levels) in <top (required)>'
-````
-
-Easy enough to fix it ( _pun intended_). Add the method to the class.
-
-````ruby
-def fix!
-end
-````
-
-Again, don't write the implementation even though it may be obvious to you. Run the example again. What message do you expect to see this time?
-
-````ruby
-1) Bike should be able to get fixed
-     Failure/Error: expect(bike).not_to be_broken
-       expected broken? to return false, got true
-     # ./spec/bike_spec.rb:24:in `block (2 levels) in <top (required)>'
-````
-
-As you can see the message changed. In fact this is one of the _little tricks_ you can use to learn your way around rspec. While you are in the TDD cycle, just make sure to change the message rspec gives you with every run of rspec.
-
-So, the example tells us that the bike should not be broken after we fix it but it actually is. Now it's a good time to implement the `fix!()` method.
-
-````ruby
-def fix!
-  @broken = false
-end
-````
-
-**Do you expect the tests to pass?** Check it to make sure they do.
-
-
-Now it's a good time to check in the code. Stage and commit the files that changed and push to Github. It's a good practice to commit every time you are _green_.  It's also a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, depending on your pairing methodology.
-
-
-## Version 2: Refactoring
-
-[TODO: use of subjects would annull the second refactoring here - could use a context/describe to extract subject/bike.break from a couple of tests]
-
-Let's pause for a while before continuing implementing more features. Is our code really good? Is there any chance to refactor it?
-
-Refactoring is the process of changing the structure of the code in order to make it more readable, maintainable or extendable without adding any new functionality.
-
-Software developers, even (and especially) experienced ones, don't write perfect code on their first attempt. First you write the code that works, then you refactor it to make it good. Let's refactor the code we have so far.
-
-Before starting refactoring, always make sure all the examples pass. If your examples fail or if you have no examples, you have no idea whether your refactored code is doing the same thing as before. Just hoping that it does is not enough: some changes in functionality are subtle and non-obvious even to experienced developers and may produce ripple effects. So, make sure the examples pass before you begin.
-
-Take a look at the `Bike` class. What is the most obvious thing that is wrong here? Think for yourself before reading the answer below.
-
-````ruby
+```ruby
 class Bike
+  attr_reader :broken
+  alias_method :broken?, :broken
 
-  def initialize
+  def intialize
     @broken = false
   end
 
-  def broken?
-    @broken
-  end
-
-  def break!
+  def break
     @broken = true
   end
-
-  def fix!
-    @broken = false
-  end
-
 end
-````
+```
 
-One of the problems is the code repetition. Lines 4 and 16 are the same. Code repetition violates the **DRY principle**: [Don't Repeat Yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Repeating anything in the code or system design is a possible source of nasty bugs.
+Now our bike's unit tests will all pass, but our feature test is still failing.  Nothing is stopping the docking station from releasing broken bikes.  Again we might be tempted to get straight in and fix code but note that it's a feature test that's failing, so we should respond by creating another unit test; this time for the docking station.  However we have a quandry, we need to write a unit test that will rely on a bike being in a particular state, i.e. broken.  We might be tempted to write a docking station unit test like so:
 
-Instead of setting the instance variable in the initialiser, let's call the `fix!()` method instead.
-
-Now run your tests to see if they pass. They should. This is how you know that the refactoring was successful: it didn't change the functionality while reducing the repetition in the code.
-
-Now take a look at the tests. What could be improved here?
-
-````ruby
-require './lib/bike'
-
-describe Bike do
-
-  it 'should not be broken after we create it' do
-    bike = Bike.new
-    expect(bike).not_to be_broken
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = Bike.new
+    broken_bike.break
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
   end
-
-  it 'should be able to break' do
-    bike = Bike.new
-    bike.break!
-    expect(bike).to be_broken
-  end
-
-  it 'should be able to get fixed' do
-    bike = Bike.new
-    bike.break!
-    bike.fix!
-    expect(bike).not_to be_broken
-  end
-
 end
-````
+```
 
-It should be obvious by now that lines 6, 11 and 17 are crying to be refactored. We're doing the same operation at the start of every test. Fortunately, rspec provides a way to define variables that are used by all tests. Try this:
+However our docking station unit test is now locked to the Bike class.  If we were using the Chicago style of testing this might be acceptable, but we prefer the London style of cleanly independent unit testing at Makers.  The problem is that the symbols that we've been using so far are not going to cut it for this kind of test.  The symbol :bike is a great stand in if we just want something to take a place in an array, but it won't respond to the 'broken?' method.  This is where we need to use a double.  A double is like a stunt double.  It can do a few things that the real actor can do, but not all.  We use doubles like so:
 
-````ruby
-require './lib/bike'
 
-describe Bike do
-
-  let(:bike) { Bike.new }
-
-  it 'should not be broken after we create it' do
-    expect(bike).not_to be_broken
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = double :bike, broken?: true
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
   end
-
-  it 'should be able to break' do
-    bike.break!
-    expect(bike).to be_broken
-  end
-
-  it 'should be able to get fixed' do
-    bike.break!
-    bike.fix!
-    expect(bike).not_to be_broken
-  end
-
 end
-````
+```
 
-Line 5 calls an rspec helper `let()` that defines a local variable "bike" using the block provided (`{ Bike.new }`) before every test. This makes our tests more DRY. Run them to see if they still work. They should.
+Here we use call the 'double' method to create something that will report it's name as :bike and will respond to the 'broken?' method with a true value.  It's a stand-in stunt double for a bike that ensures that we are not relying on the real Bike to work in order to test the DockingStation
 
-Even though there are other repeated lines (8 and 19), it doesn't make sense to extract them into their own methods for readability's sake. However, in some cases it may be better to extract them: always use your best judgement. The code should look and feel elegant to you.  
+A quick change to our docking station now allows us to exclude broken bikes from being considered when we are checking if the station is empty like so:
 
-Note also that each time that you extract a commonality that you are adding a dependency.  DRYing out your code is very important, but developing an intuition for when to do it is critical.
+```ruby
+def empty?
+  bikes.reject{|b| b.broken?}.length == 0
+end
+```
 
-Now that we've finished with refactoring, it's a good time to push to Github and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+Here we are using the Array reject method.  Look up [reject in the ruby Array documentation](http://ruby-doc.org/core-2.2.0/Array.html#method-i-reject) if you are unclear how it works.  Note that RuboCop insists we use an even more concise format:
+
+```ruby
+def empty?
+  bikes.reject(&:broken?).length == 0
+end
+```
+
+which means the same thing, but programmers love to be concise.  This simple change and all our tests should pass.
+
+We've done several cycles of red/green jumping back and forth between feature and unit test levels, but are there any more refactoring opportunities?  Take a look through the code to see if you can find any.
+
+Our feature test looks like is use some attention.  Check out public_bike_access_spec.rb:
+
+```ruby
+describe 'member of public accesses bike' do
+  it 'and it is not broken' do
+    docking_station = DockingStation.new
+    docking_station.dock Bike.new
+    bike = docking_station.release_bike
+    expect(bike).not_to be_broken
+  end
+  it 'and there are none available' do
+    docking_station = DockingStation.new
+    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+  end
+  it 'and broken bikes are not considered available' do
+    docking_station = DockingStation.new
+    broken_bike = Bike.new
+    broken_bike.break
+    docking_station.dock broken_bike
+    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+We're declaring DockingStations over and over.  We could make this feature test 'describe' DockingStation, but it's a feature (and in our case an integration) test that is testing both Bike and DockingStation so let's use an alternative.  A 'let' statement:
+
+```ruby
+describe 'member of public accesses bike' do
+  let(:docking_station) { DockingStation.new }
+  it 'and it is not broken' do
+    docking_station.dock Bike.new
+    bike = docking_station.release_bike
+    expect(bike).not_to be_broken
+  end
+  it 'and there are none available' do
+    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+  end
+  it 'and broken bikes are not considered available' do
+    broken_bike = Bike.new
+    broken_bike.break
+    docking_station.dock broken_bike
+    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+Notice how we've replaced three lines of identical code with a single let statement.  Each programmer has their own rule of thumb, but something being repeated three times is good time to consider DRYing out your code.  Although remember that every time you DRY out code you are introducing a dependency that may catch you out later.  It's important to consider if the set of identical elements you are consolidating may need to vary at some point in the future ...
+
+Every time you extract a commonality you are adding a dependency.  DRYing out your code is very important, but developing an intuition for just when to do it is also critical.
+
+:running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
+
+**Now all our examples pass and we've refactored, a perfect time to commit our changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
+**
