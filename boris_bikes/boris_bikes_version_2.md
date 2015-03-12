@@ -8,14 +8,29 @@ Let's write a specification for the bike that describes how we want the bike to 
 
 Create a file `spec/bike_spec.rb`. We'll put our bike examples there. The name should end in "_spec" since this is the convention :pill: [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
 
-Now let's write our first unit test in spec/bike_spec.rb. Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+Now let's write our first unit test in spec/bike_spec.rb. Note that we are placing our unit test in the spec folder, and our feature tests go in spec/feauture.  Our file structure should look like this:
+
+```sh
+→ tree
+.
+├── README.md
+├── Rakefile
+├── lib
+│   └── docking_station.rb
+└── spec
+    ├── bike_spec.rb
+    └── feature
+        └── public_bike_access_spec.rb
+```
+
+Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
 ````ruby
 #we're describing the functionality of a specific class, Bike
 describe Bike do
   # this is a specific feature (behaviour)
   # that we expect to be present
-  it 'should not be broken after we create it' do
+  it 'is not broken initially' do
     # expect an instance of the Bike class to have
     # a method "broken?" that should return false
     expect(subject).not_to be_broken
@@ -27,18 +42,28 @@ Again, note that the comments here are simply to help you first time around.  Pl
 
 So, we begin by writing an example (`it`) that describes what we want to see happening. We tell [rspec](http://rspec.info) that we are describing the class Bike (`describe`) and we want our bike to have a single feature: _we are expecting it not to be broken when we create it_.
 
-So, now that you have an idea of what this test does, let's run it. It will fail.
+So, now that you have an idea of what this test does, let's run it.  Assuming you have no RuboCop style offences it will fail with a new type of error.
 
 ````
-rspec spec/bike_spec.rb
-/Users/ecomba/dev/boris_bikes/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `load'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `each'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb:896:in `load_spec_files'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/command_line.rb:22:in `run'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/runner.rb:80:in `run'
-	from /usr/local/Cellar/rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/rspec-core-2.14.7/lib/rspec/core/runner.rb:17:in `block in autorun'
+→ rake
+Running RuboCop...
+Inspecting 4 files
+....
+
+4 files inspected, no offenses detected
+/Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+/Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/spec/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `load'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `block in load_spec_files'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1224:in `each'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1224:in `load_spec_files'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:97:in `setup'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:85:in `run'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:70:in `run'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:38:in `invoke'
+	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec:4:in `<main>'
+/Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
+
 ````
 
 What you see here is called a [stack trace](https://en.wikipedia.org/wiki/Stack_trace). We need to learn how to read it to understand where exactly the problem lies. If you can't read the [stack trace](https://en.wikipedia.org/wiki/Stack_trace), you won't be able to pinpoint and fix it.
@@ -46,91 +71,68 @@ What you see here is called a [stack trace](https://en.wikipedia.org/wiki/Stack_
 The first line is the most important one. It explains what the problem was and where it occurred:
 
 ````
-/Users/ecomba/dev/boris_bikes/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
+/Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/spec/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
 ````
 
-In this case, the problem is in the file `/Users/ecomba/dev/boris_bikes/bike_spec.rb` on line 1. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and it's human-readable explanation is _"uninitialized constant Bike"_.
+In this case, the problem is in the file `bike_spec.rb` on line 1. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and it's human-readable explanation is _"uninitialized constant Bike"_.
 
-The _"uninitialized constant Bike"_ means that Ruby doesn't know what `Bike` is.
+This is the same sort of error we had with the DockingStation in stage 1, however the format of the overall error is different.  RSpec has not been able to run completely, detect the error and present the error using it's own formatting.  This time a lower level Ruby error has been encountered that has preventing RSpec from completing its run.  We're seeing here a raw Ruby error, not an error that has been caught and formatted by RSpec as we saw with our feature test.
 
-Now, stop for a second and think about what could be the reason for the error. The answer may be obvious because this particular problem is so simple but it's important to take this step and ask yourself the question every time you see an error. Don't assume the first thing that comes to mind. Think about what is the most likely reason Ruby doesn't know about `Bike`.
-
-Other lines in the output show the path in the code Ruby went through before encountering the error on line 5 of `bike_spec.rb`. The second line was executed right before the line 5 was executed.
+Other lines in the output show the path in the code Ruby went through before encountering the error on line 1 of `bike_spec.rb`. The second line was executed right before the line 1 was executed.
 
 ````ruby
-from /Users/ecomba/.rvm/gems/ruby-2.0.0-p0/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `load'
+/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `load'
 ````
 
-This tells us that a line 896 in the file `configuration.rb` that is inside a method "load" called our line in bike_spec that ultimately caused an error. This file is part of the [rspec-core](https://github.com/rspec/rspec-core) gem, version 2.14.5 that's installed for the version of Ruby 2.0.0-p0 managed by rvm (hence these files are all in ~/.rvm). Normally you wouldn't go there unless you suspect a gem misbehaves or you want to really understand how it works. However, if this stack trace goes through your code for a while before raising an error, this information would be far more valuable.
+This tells us that a line 1226 in the file `configuration.rb` that is inside a method "load" called our line in bike_spec that ultimately caused an error. This file is part of the [rspec-core](https://github.com/rspec/rspec-core) gem, version 3.2.1 that's installed for the version of Ruby 2.1.5 managed by rvm (hence these files are all in ~/.rvm). Normally you wouldn't go there unless you suspect a gem misbehaves or you want to really understand how it works. However, if this stack trace goes through your code for a while before raising an error, this information would be far more valuable.
 
-The next line in the stack trace shows what was executed directly before `configuration.rb:896` and so on. Ruby only shows the top few lines in the stack trace because they are the most useful.
+The next line in the stack trace shows what was executed directly before `configuration.rb:1226` and so on. In this case the stack trace is showing the flow of execution through the underlying system code before the error was encountered.  In general you'll be hunting through stack traces to see if there are any parts of your code being hit and focusing on those.
 
-So, getting back to our error. If you guessed that `uninitialized constant Bike` error happened because we never defined what Bike is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
+Anyhow, the part of our code that is responsible is clear and since we've already solved this sort of error once for in our feature test for DockingStation you likely have a good idea about how to fix this one.  However you might be curious about why we get a Ruby error rather than an RSpec error.  Look closely at our Bike spec:
 
-This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
+````ruby
+describe Bike do
+  it 'is not broken initially' do
+    expect(subject).not_to be_broken
+  end
+end
+````
 
-Let's define the bike. Create `lib/bike.rb` and define an empty Bike class.
+Notice that on the first line we have `describe Bike do` where we are referring to the class Bike.  We're not using a string as we did in the feature test, where the string described the high level user story.  Here we are saying that our test will describe the Bike class.  As RSpec works on this file it has to go look for a Bike class before it can even run the tests specified in the 'it' blocks.  That's why we get the lower level Ruby error.
+
+This new error of course means its a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
+
+It seems likely we can fix this error by defining the bike. Create `lib/bike.rb` and define an empty Bike class.
 
 ````ruby
 class Bike
 end
-````
+```
 
-The name of the file is `bike.rb` for a reason. If we're defining a class Bike, we should put it in `bike.rb`. It's not required, strictly speaking but it's a really good idea to put only one class in a `.rb` file and name it accordingly.
-
-If you run the test right now, will it pass? Again, stop for a second and think before doing it. Right now you're predicting the result of a small experiment. If you have an expectation of whether it will pass or not, you will know whether everything is going according to your understanding of the program or not. So, will it pass or not and why? Then run it.
-
-You'll find out it doesn't. Same error again. Ruby still has no idea about the Bike class. But why, when we've just defined it in `bike.rb`?
-
-Think about it from Ruby's perspective. There are lots and lots of ruby files on your computer, defining hundreds if not thousands of different classes. Should all of them be available in every other Ruby file? Probably not. It's the programmer's responsibility to decide what should be available to Ruby code at what point. In other words, we haven't established any link between `bike_spec.rb` and `bike.rb`. That they are in the same repo or adjacent directories matters very little to Ruby. We need to explicitly link them together.
-
-Add a `require` statement to the spec.
+And what's the other thing we'll need?  Of course we'll also need a `require` statement in the spec.
 
 ````ruby
-# link to the Bike class
 require 'bike'
-
-# we're describing the functionality of a specific class, Bike
 describe Bike do
-
-  # this is a specific feature (behaviour) that we expect to be present
-  it 'should not be broken after we create it' do
-    bike = Bike.new # initialise a new object of Bike class
-    # expect an instance of this class to have a method "broken?" that should return false
-    expect(bike).not_to be_broken
+  it 'is not broken initially' do
+    expect(subject).not_to be_broken
   end
-
 end
 ````
-
-Requiring a file is almost equivalent to just copy-pasting the contents of `bike.rb` on line 2 of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.  Note also that `require 'bike'` works here because the bike.rb file is in the lib directory.  The Ruby convention is that require will automatically look in a projects lib directory for Ruby files.
 
 **Now our example fails.**
 
 There's a difference between an error and a failure. An error happens when Ruby cannot run the example at all. For example, before we create a Bike class and required it, we couldn't run the test in principle – there was no class under test.
 
-However, now the example is failing, which means that we can test the Bike class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output. There is only one: _"Bike should not be broken after we create it"_. Where does the message come from? Look at the structure of the example.
+However, now the example is failing, which means that we can test the Bike class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output.  We have two, one from our existing feature test and another from our unit test: _Bike is not broken initially_.
 
 ````ruby
-describe Bike do
-  it 'should not be broken after we create it' do
-    # the test goes here, omitted for brevity
-  end
-end
+Failure/Error: expect(subject).not_to be_broken
+  expected #<Bike:0x007f9d2c0b2ef0> to respond to `broken?`
+# ./spec/bike_spec.rb:5:in `block (2 levels) in <top (required)>'
 ````
 
-We describe Bike and we specify what it should do. [RSpec](http://rspec.info) simply concatenates "Bike" from the describe statement and the description of the feature from the "it" block.
-
-````ruby
-So, what's the failure of the test?
-
-Failure/Error: expect(bike).not_to be_broken
-     NoMethodError:
-       undefined method `broken?' for #<Bike:0x007f9ae30470b0>
-     # ./spec/bike_spec.rb:14:in `block (2 levels) in <top (required)>'
-````
-
-First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it tells us that the method `broken?` is undefined. (#<Bike:0x007f9ae30470b0> refers to the instance of the Bike class that we have in the "bike" variable. The long number is the memory address).
+First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it tells us that the method `broken?` is undefined. (As before with the Docking Station #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that we have in the "bike" variable).
 
 So, the test is almost telling us what to do. We don't have the method `broken?`, so let's create one. Update the Bike class to include this method.
 
@@ -141,10 +143,11 @@ class Bike
 end
 ````
 
-Note that the method is empty. Why? Because [rspec](http://rspec.info) didn't complain about anything else. It failed because there was no method? Let's do the minimum required to get over that failure: create the method. Now run the test again. Will it pass or fail? Why? Think about this question every time you run a test, don't just run it blindly.
+Note that the method is empty. Why? Because RSpec didn't complain about anything else. It failed because there was no method? Let's do the minimum required to get over that failure: create the method. Now run the test again. Will it pass or fail? Why? Think about this question every time you run a test, don't just run it blindly.
 
 So it passed. However, you may have expected it to fail. That would have been a reasonable assumption since there's no implementation of the method. However, in Ruby a nil value is treated as false if a boolean value is needed. Given that a method returns nil if nothing else is returned, an empty method always returns nil. So, by writing an empty method, we satisfy the test's expectation that the bike must not be broken.
 
+[TODO: policy on commiting with broken feature test?]
 Our code is still extremely basic but we're getting somewhere. This is a good time to commit the changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and it's also a good time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
 
 
