@@ -23,7 +23,7 @@ As regards our story, or feature, above, let us assume that we are going to have
 => false
 ```
 
-Our goal is that we can create the necessary classes to support the above functionality.  Now we don't want to have to test that by hand every time we change anything, so let's start by writing a feature test that will allow us to automatically check that the above is going to work.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as mini-test, cucumber and others.  RSpec provides a syntax that while pure Ruby, reads very like English.  The motivation is to make the tests as readable as possible, in order to make them comprehensible to other developers and ourselves 3 months later when we come back to look at them again.  The intention is that comprehensibility will lead to good maintainability, since most of the effort developing software comes from maintaining it rather than writing it in the first place.  When change comes, and it most likely will, we want to be able to simply and quickly comprehend what a test is doing and adapt it as necessary.
+Our goal is that we can create the necessary classes to support the above functionality.  Now we don't want to have to test that by hand every time we change anything.  It might seem like a trivial amount of effort in this case, but even small projects quickly have a lot of functionality that all might break due to small changes elsewhere in the code base, so to stop us going completely insane chasing bugs back and forth through the system let's start by writing a feature test that will allow us to automatically check that the above is going to work.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as MiniTest and Cucumber to name a couple of popular alternatives.  RSpec provides a syntax that while pure Ruby, reads very like English. It can also be described as a 'Domain Specific Language' (DSL).  In this case RSpec is a language specific to the domain of writing tests in an 'expect' style. The motivation is to make the tests as readable as possible, in order to make them comprehensible to other developers and ourselves 3 months later when we come back to look at them again.  The intention is that comprehensibility will lead to good maintainability, since most of the effort developing software comes from maintaining it rather than writing it in the first place.  When change comes, and it most likely will, we want to be able to simply and quickly comprehend what a test is doing and adapt it as necessary.
 
 As mentioned before, in this simple system our feature test will also be an 'integration-test' that checks that two objects in our domain (the DockingStation and the Bike) can interact correctly.
 
@@ -31,8 +31,8 @@ As mentioned before, in this simple system our feature test will also be an 'int
 #we're describing our high level feature
 describe 'member of public accesses bike' do
   # this is a specific outcome related to the feature
-  it 'bike is not broken' do
-    docking_station = DockingStation.new # initialise a new instance of a docking station
+  it 'is not broken' do
+    docking_station = DockingStation.new # initialise a new object, an instance of the DockingStation class
     bike = docking_station.release_bike  # ask the docking station to release a bike
     expect(bike).not_to be_broken        # expect that bike to respond to the method 'broken?' with false
   end
@@ -43,9 +43,9 @@ The above code should be placed in a file in a 'spec/feature' directory and name
 
 Note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
 
-Please also ensure that you have RuboCop operating as a browser plugin, or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the Ruby Style Guide (Makers Style Guide?) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or anything else at all.
+Please also ensure that you have [RuboCop](https://github.com/bbatsov/rubocop) operating as a browser plugin, or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) [TODO: update toMakers Style Guide?] for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or do anything else at all.
 
-The code above is quite complex - see the RSpec pill [TODO] if any aspect of it is unclear. The line `expect(the_bike).not_to be_broken` is especially complex, and you should work hard to ensure that how it works is clear.  There are more details in the RSpec predicate matchers pill [TODO].
+The code above is quite complex - see the RSpec pill [TODO] if any aspect of it is unclear. The line `expect(the_bike).not_to be_broken` is perhaps particularly tricky are more details in the RSpec predicate matchers pill [TODO].  For the rest of this stage we'll be focusing on the lines `docking_station = DockingStation.new` and `bike = docking_station.release_bike` and we'll come back to `expect(bike).not_to be_broken` in the next stage when we start writing unit tests.  For the moment the critical thing is that reading it we are clear about the intention of what we want to check, that the bike is not broken, rather than the precise Ruby syntax, but that should become clear by the end of the next stage on unit tests.  First up let's focus on getting this feature test up and running.
 
 Assuming you have the above code in a file in the following structure:
 
@@ -59,7 +59,7 @@ Assuming you have the above code in a file in the following structure:
 
 ```
 
-You should be able to run rspec on the base directory (i.e. the folder that holds the 'spec/' directory).  However if you are really keen on getting a job we recommend setting up your environment so that RuboCop does not detect any style violations before running any tests.  RSpec is a Ruby library or 'gem'.  In order to use RSpec we need to run 'gem install rspec'.  If we install two other gems, 'rake' a task management tool and 'rubocop' a style checker, we can add the following 'Rakefile' to the base of our project.
+You should be able to run rspec on the base directory (i.e. the folder that holds the 'spec/' directory).  However if you are really keen on getting a job we recommend setting up your environment so that RuboCop will check for style violations before running any tests.  RSpec is a Ruby library or 'gem'.  In order to use RSpec we need to run 'gem install rspec'.  If we install two other gems, 'rake' a task management tool and 'rubocop' a style checker, we can add the following 'Rakefile' to the base of our project.
 
 ```ruby
 require 'rubocop/rake_task'
@@ -71,7 +71,7 @@ RSpec::Core::RakeTask.new(:spec)
 task default: [:cop, :spec]
 ```
 
-and then all tests can be run using the command 'rake' which will do the equivalent of running first 'rubocop' and then 'rspec'.  The main advantage here is that you will not run your tests until you have fixed any style issues with your code.  Again please **DO NOT** copy and paste the above file, please type it out.  It may not make complete sense now, but this is pure Ruby and in time you will understand every component.
+and then all RSpec tests can be run using the command 'rake' which will do the equivalent of running first 'rubocop' and then 'rspec'.  The main advantage here is that you will not run your tests until you have fixed any style issues with your code.  Again please **DO NOT** copy and paste the above file, please type it out.  It may not make complete sense now, but this is pure Ruby and in time you will understand every component.
 
 So now our file structure looks like this:
 
@@ -108,7 +108,7 @@ member of public accesses bike
 
 Failures:
 
-  1) member of public accesses bike bike is not broken
+  1) member of public accesses bike is not broken
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation
@@ -119,12 +119,12 @@ Finished in 0.00049 seconds (files took 0.18432 seconds to load)
 
 Failed examples:
 
-rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike bike is not broken
+rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike is not broken
 ```
 
 There's a lot of information here, but it's important to work through it carefully.  There's nothing worse than seeing there's some sort of failure/error and then bashing a way a the code randomly in the hopes of fixing it.  The computer is giving you critical information about the precise nature of the underlying problem and you need to use that to work out what's wrong.  Now if you've worked through the RSpec pill this type of error and how to fix it should be clear. Do you know what to do?
 
-The very first output is just Rubocop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'describe' and 'it' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
+The very first output is just RuboCop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'describe' and 'it' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
 
 In this case, the problem is in the file `spec/feature/public_bike_access_spec.rb` on line 3. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and it's human-readable explanation is _"uninitialized constant DockingStation"_.
 
