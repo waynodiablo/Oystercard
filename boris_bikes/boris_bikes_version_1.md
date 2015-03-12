@@ -1,4 +1,4 @@
-## Version 1: Building the bike
+## Version 1: First Feature Test
 
 We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy [TODO: do we need to intro MVP here?]. What is the absolute minimum we could implement but still provide some value to the end user? Our first user story sounds promising:
 
@@ -23,12 +23,34 @@ As regards our story, or feature, above, let us assume that we are going to have
 => false
 ```
 
-Our goal is that we can create the necessary classes to support the above functionality.  Now we don't want to have to test that by hand every time we change anything, so let's start by writing a feature test that will allow us to automatically check that the above is going to work.  As mentioned before, in this simple system this feature test will also be an 'integration-test' that checks that the DockingStation and the Bike can interact correctly.
+Our goal is that we can create the necessary classes to support the above functionality.  Now we don't want to have to test that by hand every time we change anything, so let's start by writing a feature test that will allow us to automatically check that the above is going to work.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as mini-test, cucumber and others.  RSpec provides a syntax that while pure Ruby, reads very like English.  The motivation is to make the tests as readable as possible, in order to make them comprehensible to other developers and ourselves 3 months later when we come back to look at them again.  The intention is that comprehensibility will lead to good maintainability, since most of the effort developing software comes from maintaining it rather than writing it in the first place.  When change comes, and it most likely will, we want to be able to simply and quickly comprehend what a test is doing and adapt it as necessary.
+
+As mentioned before, in this simple system our feature test will also be an 'integration-test' that checks that two objects in our domain (the DockingStation and the Bike) can interact correctly.
+
+```ruby
+#we're describing our high level feature
+describe 'member of public accesses bike' do
+  # this is a specific outcome related to the feature
+  it 'bike is not broken' do
+    docking_station = DockingStation.new # initialise a new instance of a docking station
+    bike = docking_station.release_bike  # ask the docking station to release a bike
+    expect(bike).not_to be_broken        # expect that bike to respond to the method 'broken?' with false
+  end
+end
+
+```
+
+The above code should be placed in a file in a 'spec/feature' directory and named 'public_bike_access_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+
+Note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
+
+Please also ensure that you have RuboCop operating as a browser plugin, or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the Ruby Style Guide (Makers Style Guide?) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  This is a common message we have from Makers hiring partners, so make yourself employable and make sure you fix all RuboCop issues before you do anything else.
+
+... SO THIS IS A CHANCE TO MOVE THE WORDIER BITS BELOW INTO PILLS AND HIGHLIGHT THE BDD/TDD CYCLE ...
 
 
 
-
-
+========
 What is central to the entire system? A bike.
 
 How do we model a bike? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
