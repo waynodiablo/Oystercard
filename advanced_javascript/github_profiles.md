@@ -611,3 +611,34 @@ There's a couple of things to clean up:
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
 * If you haven't already created a Github Application, you are probably blowing through the limit of calls to the GitHub API at this point (especially as everyone in the room is doing a similar thing). Try generating a [personal access token](https://github.com/settings/applications#personal-access-tokens) for the app on your GitHub profile, and then add it to the API call using the URL parameter `access_token`. This should remove the GitHub limiting of your API requests.
+
+##Version 2 - Usability
+
+Let's adjust the simple profile application to ensure that it gives a good user experience even under poor network connectivity, and let's the user know when searches for users have failed or the network connection has timed out.
+
+Here's an example of a message indicating we can't find a particular user:
+
+![user not found](https://www.dropbox.com/s/r4gamssxfj3hgog/Screenshot%202014-12-02%2008.39.45.png?dl=1)
+
+And here's an example of an animated spinner that can be shown to indicate that the network connection is in progress:
+
+![spinner](http://traindaze.com/assets/images/loader.gif)
+
+##Version 3 - Deploying to Heroku
+
+Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - you could use Node Express or Sinatra.
+
+If you want to try Node, have a look at these resources:
+
+* :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
+* [Walkthrough: A basic Node server](https://github.com/makersacademy/course/blob/master/node/basic_node_server.md)
+
+
+##Version 4 - Report Card
+
+
+Adjust the application to display a Makers Academy progress report for the user in question, including at least #commits on each relevant Github Repo.
+
+##Version 5 - Bonus Level
+
+Include further checks such as creating %completion based on expected number of commits, code smells, SOLID principles etc.
