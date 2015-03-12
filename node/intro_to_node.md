@@ -25,6 +25,8 @@ Before we start, you should definitely read [Roi's introduction to Node](https:/
 It is also assumed that you have worked through the following:
 * :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
 * :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md)
+* :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
+* :pill: [jshint](https://github.com/makersacademy/course/blob/master/pills/jshint.md)
 
 Additionally, [this Node style guide](https://github.com/felixge/node-style-guide) will help you write code that is clear and readable.
 
