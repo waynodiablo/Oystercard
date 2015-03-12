@@ -92,6 +92,8 @@ We'll also need one system file that won't show up on a tree view like this.  Pl
 ```yml
 Documentation:
   Enabled: false
+Style/MethodDefParentheses:
+  Enabled: false
 ```
 
 Then we can type the command 'rake' at the command line in the directory with the 'spec' folder and assuming no style violations we get something like the following:
