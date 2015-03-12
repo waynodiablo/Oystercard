@@ -115,7 +115,29 @@ NoMethodError:
 
 First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it tells us that the method `release_bike` is undefined. (#<DockingStation:0x007ff3c306ea28> refers to the instance of the DockingStation class that we have in the "docking_station" variable. The long number is the memory address).
 
-So, the test is almost telling us what to do. We don't have the method `release_bike`, so let's create one. Update the DockingStation class to include this method.
+So, the test is almost telling us what to do. We don't have the method `release_bike`, and it's tempting to just go ahead and create one, however we are at the feature test level, and in general we should avoid adjusting the code in our application until we are at the unit test level.
+
+Instead let's create a unit test that checks that DockingStations have this method:
+
+```ruby
+require 'docking_station'
+describe DockingStation do
+  it { expect(subject).to respond_to :release_bike }
+end
+```
+
+This code should go in spec/docking_station_spec.rb, and should fail with an error like this:
+
+```sh
+1) DockingStation should respond to #release_bike
+   Failure/Error: it { expect(subject).to respond_to :release_bike }
+     expected #<DockingStation:0x007faf7c1a2c68> to respond to :release_bike
+   # ./spec/feature/docking_station_spec.rb:3:in `block (2 levels) in <top (required)>'
+```
+
+This test is using some more sophisticated RSpec features such as describing the DockingStation class directly, so that we can use the variable 'subject' to refer to an instance of a DockingStation.  Here RSpec is helping us out by doing the equivalent of 'subject = DockingStation.new' before the it block runs.  The respond_to method is doing one of the least rigorous checks that RSpec can do on a Ruby object - it just checks that their is a method of that name available to be called on the object in question. [TODO: add something on hierarchy of testing strategies on objects]
+
+In order to make this test pass we need to update the DockingStation class to include this method.
 
 ````ruby
 class DockingStation
