@@ -15,7 +15,7 @@ BDD
 * build a class structure from a user story, translating through a domain model
 * decide whether 'Agile' processes require a domain model first, or if a domain model can be used retrospectively (*Sam J does this fit with your Agile process we were discussing?*)
 
-* **SCAFFOLD** remember what Enough Design Up Front (EDUF), Big Design Up Front (BDUF), and No Design Up Front (NDUF) mean in the context of software design
+* **SCAFFOLD** remember what Enough Design Up Front (EDUF), Big Design Up Front (BDUF), and No Design Up Front (NDUF) mean in the context of software design [[Samm's brief introduction](http://blog.sjmog.co/2015/03/12/software-design-up-front-how-much/)]
 * explain the motives behind EDUF, BDUF, and NDUF
 * justify why EDUF is more valuable in an Agile context than BDUF or NDUF
 
