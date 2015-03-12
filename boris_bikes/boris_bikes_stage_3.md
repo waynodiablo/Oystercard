@@ -215,4 +215,6 @@ We can compare this with the original interface specification and see that we ar
 **However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
 **
 
+:running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
+
 [TODO link to stage 4 refactoring]

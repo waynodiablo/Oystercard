@@ -100,26 +100,102 @@ Add some basic explanation of the project to the README and then create a Github
 
 Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
 
+[NEED TO MENTION RED-GREEN-REFACTOR MORE]
+
 ## Stage 1: Creating a Feature Test
 
-Let's start with our first feature test
+Let's start with our first feature test, based on a single user story.
 
 [Stage 1](boris_bikes_stage_1.md)
 
 ## Stage 2: Creating a Docking Station via Unit Tests
 
-Red-Green-Refactor
+Given a failing feature test that is failing for the right reason we'll drop to the unit test level and start creating our docking station by specifying its low level behaviour
 
 [Stage 2](boris_bikes_stage_2.md)
 
 ## Stage 3: Creating a Bike via Unit Tests
 
+Our feature test involves both docking stations and bikes, so we'll have to drive creation of a Bike class with some more unit tests.  Ultimately this will allow our feature test to pass.
+
 [Stage 3](boris_bikes_stage_3.md)
 
 ## Stage 4: Refactoring Vs New Features
 
+Now we'll see that there is an opportunity to refactor our code to improve it's design, but is it premature?  Does it make more sense to first implement a feature that prevents the release of bikes when none are available?
+
 [Stage 4](boris_bikes_stage_4.md)
 
-## Stage 5: ??? Extracting Common Functionality
+## Stage 5: Giving Docking Stations Limited Capacities
 
-# Supporting Material?
+Moving on we work on tests to support user stories relating to docking stations having limited capacities.
+
+[Stage 5](boris_bikes_stage_5.md)
+
+## Stage 6: Dealing with Broken Bikes
+
+Bikes still can't break because we haven't looked at stories involving broken bikes.  In stage 5 we address two stories that are intimately tied to bikes being broken, i.e. those about preventing docking stations accepting broken bikes but not releasing them.
+
+[Stage 6](boris_bikes_stage_6.md)
+
+## Stage 7: Feature Tests for Van and Garage
+
+Finally we have two more user stories relating to the Van and the Garage.  You've seen how the BDD acceptance-unit test cycle works.  This stage is less structured - make your own feature tests, unit tests and application functionality and consider the refactoring hints we give you.
+
+[Stage 7](boris_bikes_stage_7.md)
+
+Now, just like a real project the client has come back to us with more requests:
+
+## More User Stories/Feature Requests from the Client
+
+1. Return real bikes.  Use this new story from the client to create the appropriate feature tests and unit-tests to drive the creation of the application code that will support this feature.  Ensure that you refactor where appropriate:
+
+```
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to ensure that returned entities are actually bikes
+```
+
+[Hint: in this context, something is a bike if it responds to the :broken? method. And the feature test for this user story will correspond to ensuring that if docking_station.dock(nil) or docking_station.dock(Elephant.new) is called then some kind of error should be given]
+
+2. The client asks for the whole system to be repurposed for petrol engine scooters.  Everything else stays the same - create BorisScooters.  How much of your existing code can you re-use?
+
+3. User interface request. Our users are getting tired of starting irb to access their bikes.  Help them out by providing a text interface that they can start via a command line call like 'ruby boris_bikes.rb':
+
+```
+As a member of the public,
+So that I can avoid the hassle of starting IRB,
+I'd like a text interface that can be run from the command line.
+```
+
+As you work on new features ensure to keep the following in mind:
+
+* Identify any corner cases that might cause the system to behave erratically. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
+* Identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 3-4 lines? Does anything look ugly to you?
+
+
+## Supporting Material
+
+### Pills
+
+- :pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
+- :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
+- :pill: [Understanding self, the current/default object](https://github.com/makersacademy/course/blob/master/pills/self.md)
+
+### Resources
+
+- [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
+- [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
+- [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
+- [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
+- [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
+
+### Related Videos
+
+- [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
+- [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
+- [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
+- [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
+- [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
+- [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
+- [The Ruby Way II](https://www.youtube.com/watch?v=bl2GhZMZeXg)

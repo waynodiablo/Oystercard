@@ -1,253 +1,259 @@
-## Version 4: Van & Garage
+## Stage 6:  Dealing with Broken Bikes
 
-[TODO: I have a real problem with extracting out common functionality before we have actually got the functionality appearing in multiple places - it feels like premature refactoring to me - we are introducing a dependency when we don't know what kinds of client requests might be coming down the line.  Furthermore for learning developers, introducing that complexity before we actually see the code replication that it removes feels like we are loading on too much up front ...]
+There two more user stories that are specific to just stations and bikes, but have to deal with broken bikes.
 
-[TODO: rather than exercises, perhaps we should have feature requests, even appearing in a backlog of some kind?  Would be awesome if we can could add them as issues to the repo the student was working on at the appropriate time ...]
+```
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to only release working bikes.
 
-Before writing more code, let's discuss what the other classes are and why we need them, starting with the van.
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to accept returning bikes (broken or not).
+```
 
-The van is moving broken bikes from the stations to the garage. Once they are fixed, the van moves them back to the stations. So the van must be able to accept the bikes at the source and release them at the destination. Obviously, the van must have some limit on the capacity, just like the station.
+Let's start with one of these and create a feature test that will ultimately lead us to making the bikes broken? method work properly ...
 
-However, the van isn't going to be very different from the station. It may have some additional methods to interact with the station and the garage but overall it's fairly similar to the station.
+```ruby
 
-The situation with the garage is very similar. What's the difference between a garage and a docking station? Only a van is supposed to take bikes out of a garage. Also, the bikes get fixed once they get to the garage. Otherwise, the garage is not much different from the station.
+ADD FEATURE TEST
+```
 
-## Version 5: Extracting the common functionality
 
-By now it should be obvious that if we just implement the Garage and the Van classes in the same way we've done the DockingStation class, we'll be duplicating significant amounts of code. In this situation you need to extract common functionality into a new class or module that will be reused later.
+### Making the broken? method work properly
 
-This week we'll be discussing two strategies for extracting common functionality: inheritance and composition. In this particular case we should use composition over inheritance.
-
-Inheritance is mostly useful when there is a clear **is-a** relationship. For example, an ElectricCar **is a** Car. A Cat **is a** Mammal. A Report **is a** Document.
-
-Composition is usually more suitable when there is a **has-a** relationship. A Car **has a** Gearbox. A Cat **has a** Tail. A Report **has a** Attachment.
-
-In our case three objects – docking station, van and garage – have common functionality. However, they are not the same thing conceptually. Even though the Garage is almost like a DockingStation with minor changes to functionality, we can't say that a garage is a docking station. A van is not a docking station either. We could invent an artificial ObjectThatCanDockBikes but that would be a really poor solution. We must show some compassion for the developers that will be maintaining this code base in the future, trying to make sense of what we've written.
-
-Instead, we need to use composition. A garage has a special area where to store the bikes. So do the docking station and the van. All of them have other things: a van has an engine, a docking station has a payment terminal and a garage has a set of tools but all that doesn't concern us right now. The common thing is that they all have a place to store the bikes. Let's call it a BikeContainer. So a Van has a BikeContainer, a DockingStation has a BikeContainer and a Garage has a Bike Container. Since it's a clear has-a relationship, we must be using composition, and not inheritance in this case.
-
-Let's begin by extracting the common functionality from the DockingStation to BikeContainer. Since we are not adding any new functionality, this process is refactoring. Therefore, we are not writing any new tests but using existing tests to make sure that we are not breaking anything in the process.
-
-Note that we might argue this is a case of 'premature refactoring'.  We haven't yet built the Van and the Garage and so we can't actually see the three replicated pieces of identical code that we will DRY out with this refactoring.  A cautious developer might write those classes first, and only refactor once they've been in use for a whole and it's clear that their functionality won't diverge.  In this simple artificial system it's easier to see that this will be a useful refactoring.  The important thing is to be aware of the tradeoffs regarding when to DRY out and when to hold off until you get more input from stakeholders in your project.  In this case let's create BikeContainer first to avoid writing the same code over and over.
-
-First, run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
+You may feel suspicious that our unit test passes while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
 
 ````ruby
-module BikeContainer
+it 'should be able to break' do
+  bike = Bike.new
+  bike.break!
+  expect(bike).to be_broken
+end
+````
 
-  DEFAULT_CAPACITY = 10
+So in our example we are creating a new bike, telling it to break and finally we expect it to be broken.
 
-  def bikes
-    @bikes ||= []
+Before you run the example, ask yourself again. What do you expect to see? Will it pass? Will it fail? Why? _It is a good practice if you get yourself into this mode of thinking_
+
+This is the test output:
+
+````ruby
+1) Bike should be able to break
+     Failure/Error: bike.break!
+     NoMethodError:
+       undefined method `break!' for #<Bike:0x007fe7a23fd7c0>
+     # ./spec/bike_spec.rb:16:in `block (2 levels) in <top (required)>'
+````
+
+If we run it, we find out that it fails on `bike.break!` statement because of the `break!` method has not been defined on `Bike`. Fair enough, let's add it to our `Bike` class. Again, [rspec](http://rspec.info) complained about the lack of method, so we're doing the absolute minimum to make our code work.
+
+````ruby
+class Bike
+  def broken?
   end
 
-  def capacity
-    @capacity ||= DEFAULT_CAPACITY
-  end
-
-  def capacity=(value)
-    @capacity = value
-  end
-
-  def bike_count
-    bikes.count
-  end
-
-  def dock(bike)
-    raise 'Station is full' if full?
-    bikes << bike
-  end
-
-  def release(bike)
-    bikes.delete(bike)
-  end
-
-  def full?
-    bike_count == capacity
-  end
-
-  def available_bikes
-    bikes.reject {|bike| bike.broken? }
+  def break!
   end
 end
 ````
 
-The first thing to note is that this is a module, not a class. A module is just like a class, except it cannot be instantiated, that is, you cannot do `BikeContainer.new`. The second interesting thing is that we have created "accessor" methods for `@capacity` and `@bikes` instance variables.
+_Will the test pass this time? If not, will the error be different? If yes, what will it be?_
+
+Ok, the example is telling us that we expect the bike to be broken but it isn't: the `broken?` method returns `nil` while we expect it to return `true`. _What does it tell us to do?_ If we just make it return `true`, the example will pass but then our first example will fail because it only works because `broken?` is returning nil at the moment ( _and `nil` happens to equal to `false`_ ).
+
+Time to write some real code. Now we have two examples that force us to write some logic. Apparently, our bike should maintain some internal state that should be changed when we break it.
+
+Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
 
 ````ruby
-def bikes
-  @bikes ||= []
-end
+class Bike
 
-def capacity
-  @capacity ||= DEFAULT_CAPACITY
-end
+  # the initialize method is always called when you create a new
+  # class by typing Bike.new
+  def initialize
+    # all instance variables begin with "@"
+    # this must be an instance variable because we'll need it
+    # in other methods
+    @broken = false
+  end
 
-def capacity=(value)
-  @capacity = value
-end
-````
+  def broken?
+    # instance variables are accessible in all methods
+    @broken
+  end
 
-This enables us to avoid working directly with the instance variables, [encapsulating](http://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)) the implementation inside the module. Because of this change, all other methods now use the accessor methods instead of manipulating the instance variables directly. Consider this method:
-
-````ruby
-def full?
-  bike_count == capacity
-end
-````
-
-Here, `capacity` refers to the accessor method `capacity()` that we defined above.
-
-The third interesting thing is the use of the `||=` operators to initialise values. Consider this method:
-
-````ruby
-def capacity
-  @capacity ||= DEFAULT_CAPACITY
-end
-````
-
-Whenever any other method calls `capacity()`, it will return the value of the instance variable `@capacity`. However, if `@capacity` is nil, it will assign `DEFAULT_CAPACITY` to it first. This operator is short for `@capacity = @capacity || DEFAULT_CAPACITY`.
-
-This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.  As with everything in Ruby please experiment with it in IRB to make sure you understand what's happening.
-
-The DockingStation now looks like this.
-
-````ruby
-# load BikeContainer
-require_relative 'bike_container'
-
-class DockingStation
-
-  # this gives us all the methods that used to be in this class
-  include BikeContainer
-
-  def initialize(options = {})
-    # self.capacity is calling the capacity=() method
-    # (note the equals sign) defined in BikeContainer
-    # capacity (the second argument to fetch()) is calling
-    # the capacity() method in BikeContainer
-    self.capacity = options.fetch(:capacity, capacity)
+  def break!
+    # and any instance method can update them
+    @broken = true
   end
 
 end
 ````
 
-Now our DockingStation class is very small because we extracted all methods (except the initialiser) into BikeContainer. We retain the initialiser, though, because we want to be able to set a custom capacity for the station, if we want to.
+**Now all our examples pass, a perfect time to commit our changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
+**
 
-The tests should still pass because the functionality is equivalent. However, we need to refactor the tests before we check them in. The problem is that all tests that cover the functionality of BikeContainer are in docking_station_spec.rb, which is misleading. Let's create a separate suite of tests for the bike container.
 
-Since we can't instantiate a module, we will need to create an artificial class for test purposes. The only job of that class will be to include BikeContainer. This is what the beginning of the test looks like (most tests omitted for brevity, refactor them on your own).
+
+### Fixing the bike
+
+If a bike can be broken, it can be fixed too, right? Sounds like a test.
 
 ````ruby
-require './lib/bike_container'
+it 'should be able to get fixed' do
+  bike = Bike.new
+  bike.break!
+  bike.fix!
+  expect(bike).not_to be_broken
+end
+````
 
-class ContainerHolder; include BikeContainer; end
+Why don't we assert that it's broken after we break but before we fix it? Also, why don't we assert that it's not broken before we break it? Because these cases are covered by other examples. We don't want to test the same thing again, it would be a waste of time. Other examples make sure that a new bike is not broken and, after we break it, it is broken.
 
-describe BikeContainer do
+If we run the test, we'll find that the method `fix!()` is undefined.
+
+````ruby
+1) Bike should be able to get fixed
+     Failure/Error: bike.fix!
+     NoMethodError:
+       undefined method `fix!' for #<Bike:0x007fe9ed903010 @broken=true>
+     # ./spec/bike_spec.rb:23:in `block (2 levels) in <top (required)>'
+````
+
+Easy enough to fix it ( _pun intended_). Add the method to the class.
+
+````ruby
+def fix!
+end
+````
+
+Again, don't write the implementation even though it may be obvious to you. Run the example again. What message do you expect to see this time?
+
+````ruby
+1) Bike should be able to get fixed
+     Failure/Error: expect(bike).not_to be_broken
+       expected broken? to return false, got true
+     # ./spec/bike_spec.rb:24:in `block (2 levels) in <top (required)>'
+````
+
+As you can see the message changed. In fact this is one of the _little tricks_ you can use to learn your way around rspec. While you are in the TDD cycle, just make sure to change the message rspec gives you with every run of rspec.
+
+So, the example tells us that the bike should not be broken after we fix it but it actually is. Now it's a good time to implement the `fix!()` method.
+
+````ruby
+def fix!
+  @broken = false
+end
+````
+
+**Do you expect the tests to pass?** Check it to make sure they do.
+
+
+Now it's a good time to check in the code. Stage and commit the files that changed and push to Github. It's a good practice to commit every time you are _green_.  It's also a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, depending on your pairing methodology.
+
+
+## Version 2: Refactoring
+
+[TODO: use of subjects would annull the second refactoring here - could use a context/describe to extract subject/bike.break from a couple of tests]
+
+Let's pause for a while before continuing implementing more features. Is our code really good? Is there any chance to refactor it?
+
+Refactoring is the process of changing the structure of the code in order to make it more readable, maintainable or extendable without adding any new functionality.
+
+Software developers, even (and especially) experienced ones, don't write perfect code on their first attempt. First you write the code that works, then you refactor it to make it good. Let's refactor the code we have so far.
+
+Before starting refactoring, always make sure all the examples pass. If your examples fail or if you have no examples, you have no idea whether your refactored code is doing the same thing as before. Just hoping that it does is not enough: some changes in functionality are subtle and non-obvious even to experienced developers and may produce ripple effects. So, make sure the examples pass before you begin.
+
+Take a look at the `Bike` class. What is the most obvious thing that is wrong here? Think for yourself before reading the answer below.
+
+````ruby
+class Bike
+
+  def initialize
+    @broken = false
+  end
+
+  def broken?
+    @broken
+  end
+
+  def break!
+    @broken = true
+  end
+
+  def fix!
+    @broken = false
+  end
+
+end
+````
+
+One of the problems is the code repetition. Lines 4 and 16 are the same. Code repetition violates the **DRY principle**: [Don't Repeat Yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Repeating anything in the code or system design is a possible source of nasty bugs.
+
+Instead of setting the instance variable in the initialiser, let's call the `fix!()` method instead.
+
+Now run your tests to see if they pass. They should. This is how you know that the refactoring was successful: it didn't change the functionality while reducing the repetition in the code.
+
+Now take a look at the tests. What could be improved here?
+
+````ruby
+require './lib/bike'
+
+describe Bike do
+
+  it 'should not be broken after we create it' do
+    bike = Bike.new
+    expect(bike).not_to be_broken
+  end
+
+  it 'should be able to break' do
+    bike = Bike.new
+    bike.break!
+    expect(bike).to be_broken
+  end
+
+  it 'should be able to get fixed' do
+    bike = Bike.new
+    bike.break!
+    bike.fix!
+    expect(bike).not_to be_broken
+  end
+
+end
+````
+
+It should be obvious by now that lines 6, 11 and 17 are crying to be refactored. We're doing the same operation at the start of every test. Fortunately, rspec provides a way to define variables that are used by all tests. Try this:
+
+````ruby
+require './lib/bike'
+
+describe Bike do
 
   let(:bike) { Bike.new }
-  let(:holder) { ContainerHolder.new }
 
-  it 'should accept a bike' do
-    # we expect the holder to have 0 bikes
-    expect(holder.bike_count).to eq(0)
-    # let's dock a bike into the holder
-    holder.dock(bike)
-    # now we expect the holder to have 1 bike
-    expect(holder.bike_count).to eq(1)
+  it 'should not be broken after we create it' do
+    expect(bike).not_to be_broken
   end
-end
-````
 
-This is pretty much the same test we used to have for the station, except that we're using an artificial class instead of a docking station. The DockingStation test now has only one test that checks that the initialiser is working correctly.
-
-````ruby
-require './lib/docking_station'
-
-describe DockingStation do
-
-  let(:station) { DockingStation.new(capacity: 123) }
-
-  it 'should allow setting default capacity on initialising' do
-    expect(station.capacity).to eq(123)
+  it 'should be able to break' do
+    bike.break!
+    expect(bike).to be_broken
   end
-end
-````
 
-Check that all tests still pass. If they do, push your code to Github, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
-
-Now you can create Van and Garage classes that will reuse BikeContainer. You'll need to think how to extend the functionality of the existing methods, though. For example, the garage must fix the bikes as they arrive. However, the dock() method knows nothing about fixing the bikes:
-
-````ruby
-def dock(bike)
-  raise "There is no more room for bikes" if full?
-  bikes << bike
-end
-````
-
-There are several way of doing this. The simplest would be to use a different method to put bikes in a garage:
-
-````ruby
-def accept(bike)
+  it 'should be able to get fixed' do
+    bike.break!
     bike.fix!
-    dock(bike)
+    expect(bike).not_to be_broken
+  end
+
 end
 ````
 
-The advantage is the simplicity. The disadvantage is that the interface for docking the bikes is different.
+Line 5 calls an rspec helper `let()` that defines a local variable "bike" using the block provided (`{ Bike.new }`) before every test. This makes our tests more DRY. Run them to see if they still work. They should.
 
-Another way would be to not to fix the bikes automatically in the first place. Then we'd call the fix_bikes() method (or similar) after we dock them.
+Even though there are other repeated lines (8 and 19), it doesn't make sense to extract them into their own methods for readability's sake. However, in some cases it may be better to extract them: always use your best judgement. The code should look and feel elegant to you.  
 
-````ruby
-garage.dock(bike)
-garage.fix_bikes
-````
+Note also that each time that you extract a commonality that you are adding a dependency.  DRYing out your code is very important, but developing an intuition for when to do it is critical.
 
-The advantage is that we have the same interface. The disadvantage is that we have to make two method calls (that's a big one).
-
-There's a really good overview of [potential strategies you could use on StackOverflow](http://stackoverflow.com/questions/4470108/when-monkey-patching-a-method-can-you-call-the-overridden-method-from-the-new-i_). Try using `alias_method` and `prepend` (and maybe others) and discuss their advantages and disadvantages with other students and coaches.
-
-## Exercises
-
-1. Make the `release()` method more robust. What if we try to release a bike that's not there? What if we pass an empty argument? What if we pass an argument that is not a bike at all? Anything else that can go wrong? Write tests for it and make them pass. Do the same for `dock()` method.
-2. Write the `empty?()` method for the docking station.
-3. How will the van check out broken bikes if the `available_bikes()` method doesn't return broken bikes? Extend the station to be able to interact with the van.
-4. If you chose to create methods that return broken bikes and working bikes separately, why do we need `bike_count()` method? Should we keep it or leave it? If we keep it, when will it be used?
-5. Design the methods that the van needs to have to move broken bikes from a station to the garage and back (once they are fixed). Implement them.
-6. Write the Garage class. Assume that the bikes are fixed instantly when they are put into the garage. See the discussion above on how to do it.
-7. Write the Van class. How is it different from other classes? What extra methods will it have? A van would normally take several bikes in one go. How do we do it? How will it take into account the space available in the van. Write tests for all use cases.
-8. The method that releases the bike takes an argument: a bike to release. Would in make sense to rewrite the method to not to take any arguments? What are the pros and cons? How will you release broken bikes in this case? Discuss with other students and update the code, if necessary.
-9. Go over your code and identify if there are any scenarios that are not covered with tests and write tests for them. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
-10. Finally, identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 1-2 lines? Does anything look ugly to you?
-
-## Additional Exercises
-
-1. Rework your code using the London Style with doubles to ensure each unit test only relies on one class
-2. Create Integration tests that specifically check for class interactions (Chicago Styles)
-3. Create a text interface to allow you to move bikes around - start by testing our how to interact with the sytem in IRB
-
-## Supporting Material
-
-### Pills
-
-- :pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
-- :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
-- :pill: [Understanding self, the current/default object](https://github.com/makersacademy/course/blob/master/pills/self.md)
-
-### Resources
-
-- [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
-- [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
-- [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
-- [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
-- [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
-
-### Related Videos
-
-- [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
-- [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
-- [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
-- [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
-- [The Ruby Way II](https://www.youtube.com/watch?v=bl2GhZMZeXg)
+Now that we've finished with refactoring, it's a good time to push to Github and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
