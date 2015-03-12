@@ -12,333 +12,210 @@ It follows that we should prevent more than one bike being docked, rather than w
 
 Say that we couldn't contact the client immediately, what should we do?  We've got a user story that indicates that docking stations should not accept more than their capacity.  The way that we've set up the DockingStation instance variables assumes a capacity of 1.  In order to do the least amount of work to support the user story, let's create a feature test that raises an error when trying to dock a bike in a station that already has a bike docked.  This corresponds to an initial capacity of 1.  Let's imagine that we've sent an email to our client asking for clarification but in the mean time let's push on with our minimal interpretation of a capacity of 1.
 
-[AFTER THIS CYCLE COME BACK WITH INFO FROM CLIENT ON USER STORY SAYING MOST DOCKING STATIONS HAVE A CAPACITY OF 20, BUT THAT SOMETIMES THEY ARE BIGGER --> FIRST IMPLEMENT THE 20 AND THEN MOVE ON TO ANOTHER STORY ABOUT SUPPORTING STATIONS WITH HIGHER CAPACITY]
+Let's start by creating a feature test:
 
+```ruby
+describe 'member of public or other docks bike' do
+  it 'and station is full' do
+    docking_station = DockingStation.new
+    docking_station.dock Bike.new
+    expect { docking_station.dock Bike.new }.to raise_error 'Station Full'
+  end
+end
+```
 
-[TODO: note that we break various of our own guides in this section, e.g. two expects in an it block, locking DockingStation test to Bike class]
+This should go in a new file spec/feature/public_bike_dock_spec.rb.  Check that this fails in the correct fashion.  Naturally you'll be inclined to immediately write a matching unit test:
 
-[TODO: feels weird that we start the fullness component passing in the 20 with the default value - get the fullness functionality first - then worry about wanting to pass in default values and test drive that separately, i.e. don't make two changes to the interface at the same time to avoid complexity explosion]
+```ruby
+require 'docking_station'
 
-If the bike is the only thing we've got, our system isn't going to be very functional. At the very least we'll need docking stations. Let's think about the functionality we need for the docking station.
-
-A docking station must be able to accept a bike and to release it. It should also have some capacity limit, because we shouldn't be able to put an infinite number of bikes into it. If a bike is broken, the docking station should not release it (or, rather, it should only release it to the van but we haven't got a van yet). Finally, a station must know how many bikes it has.
-
-Let's start with the most basic functionality: accepting the bikes. As usual, we need to start with the test describing what's going on. Put your test in `spec/docking_station_spec.rb`.
-
-````ruby
 describe DockingStation do
+  # other tests omitted for brevity
+  it 'raises an error when full' do
+    subject.dock Bike.new
+    expect { subject.dock Bike.new }.to raise_error 'Station Full'
+  end
+end
+```
 
-  it 'should accept a bike' do
-    bike = Bike.new
-    station = DockingStation.new
-    # we expect the station to have 0 bikes
-    expect(station.bike_count).to eq(0)
-    # let's dock a bike into the station
-    station.dock(bike)
-    # now we expect the station to have 1 bike
-    expect(station.bike_count).to eq(1)
+However in doing so you will have broken the independence of the docking station unit test.  It now requires knowledge of the Bike class.  If we think about things carefully we realise that we don't actually have to pass in a bike object at all in order to check this aspect of the DockingStation functionality.  We could just pass in symbols instead like so:
+
+```ruby
+require 'docking_station'
+
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'raises an error when full' do
+    subject.dock :bike
+    expect { subject.dock :bike }.to raise_error 'Station Full'
+  end
+end
+```
+
+This is also called the London style of unit-testing and we prefer it since it means our unit-tests are focused exclusively on testing a single class.  Our integration tests (that happen to be feature tests in this example) use the Chicago sytle of testing with multiple classes and check that our classes interact together effectively.
+
+Let's go on and make both levels of test pass with the following:
+
+```ruby
+class DockingStation
+  def dock bike
+    fail 'Station Full' if @bike
+    @bike = bike
   end
 
-end
-````
-
-Why did we choose to name the method that puts a bike into the station `dock()`. Naming things is one of [two hardest problems in Computer Science](http://martinfowler.com/bliki/TwoHardThings.html). We could have chosen a different name but this one seems good enough.
-
-Now let's run it. We'll get an error straight away.
-
-````ruby
-docking_station_spec.rb:1:in `<top (required)>': uninitialized constant DockingStation (NameError)
-````
-
-Unless the reason for this error is immediately obvious, stop and think for a second about why it happened. Why would uninitialised constant (whatever this means) be a problem? Why would Ruby expect DockingStation to be initialised? Which line in the file raises the error? Why would line one be a problem?
-
-It looks like we are referencing the class DockingStation on line one but since we never defined it, Ruby has no idea what DockingStation is. This is obviously a problem because in our test we're instantiating the class and calling its methods. So Ruby definitely needs it. However, it doesn't exist yet. Let's create it.
-
-Create an empty class in lib/docking_station.rb
-
-````ruby
-class DockingStation
-end
-````
-
-If you run the test now, you'll get the same an error again. Again, unless it's immediately obvious, think about what's going on. We created the class but Ruby can't link the test to the class definition because we never "required" the file. Remember, we had exactly the same problem with the Bike class? Fix the problem by requiring the class file just like we've done it in the Bike test (I'm omitting the exact line of code as a tiny exercise for you).
-
-If you've done it correctly, you should now see a test failure
-
-````
-1) DockingStation should accept a bike
-     Failure/Error: expect(station.bike_count).to eq(0)
-     NoMethodError:
-       undefined method `bike_count' for #<DockingStation:0x007fcab45c3678>
-     # ./spec/docking_station_spec.rb:9:in `block (2 levels) in <top (required)>'
-````
-
-Why do we get "undefined method 'bike_count'"? Because we haven't written it. Create an empty bike_count() method in the DockingStation class. Don't put any implementation because the test isn't asking us to do it yet. Let the test drive your code.
-
-If your method is empty, the next error you should see is
-
-````
-1) DockingStation should accept a bike
-     Failure/Error: expect(station.bike_count).to eq(0)
-
-       expected: 0
-            got: nil
-
-       (compared using ==)
-     # ./spec/docking_station_spec.rb:9:in `block (2 levels) in <top (required)>'
-````
-
-Can you explain why this is happening? An empty method always return nil, whereas we expect the bike_count to be 0 in our tests. Let's update the method to return 0.
-
-This may sound unnecessary. Why would you make the method return 0 if it's an obviously incorrect implementation that will be changed before the next commit? The reason we do this is that this approach forces us to write the absolute minimum necessary to make the test pass. It also ensures that we don't write the code that's not covered by the tests. Let the tests drive your code.
-
-In fact, please forgive me for digressing, I have yet to meet a developer who would use TDD really well, writing good tests and letting them to drive the code, who would be a bad coder. Quite the opposite, I've seen many programmers who ignored tests because they were "slowing them down" only to produce a piece of unmaintainable code that would be a pain to work with.
-
-You can argue that it's possible to take the tests too far, testing absolutely every possible scenario and not writing a single line without a test telling you to do it. Use your best judgement. If it were possible to tell exactly when and how to write tests, we'd have computers writing them for us. TDD isn't a silver bullet but it's a very powerful weapon in your arsenal. Let the tests drive your code. Trust the tests.
-
-So, our DockingStation isn't terribly useful right now.
-
-````ruby
-class DockingStation
-
-  def bike_count
-    0
+  def release_bike
+    fail 'No Bikes Available' unless @bike
+    @bike
   end
-
 end
-````
+```
 
-However, it gets us to the next error.
+Notice how in the process of making this functionality we've completely removed the alias_method and attr_* operations that were required by the ruby style guide?  This is a perfectly normal process of code revision that will take place time and time again.
 
-````
-  1) DockingStation should accept a bike
-     Failure/Error: station.dock(bike)
-     NoMethodError:
-       undefined method `dock' for #<DockingStation:0x007fd369c95bc8>
-     # ./spec/docking_station_spec.rb:11:in `block (2 levels) in <top (required)>'
-````
+[COULD TALK ABOUT PULLING OUT ERROR MESSAGES TO CONSTANTS]
 
-By now you know that you need to create the method `dock()` and rerun the test. Don't forget that the method `dock()` takes an argument, a bike. After you do it, you'll get to the error that finally forces you to write some real code:
+We just finish getting this working and in comes an email from our client, apparently docking stations should have a default capacity of 20, but sometimes they have a capacity of 30 or 40.  Hearing this we refrain from leaping in to the code base, or even the tests, but update our user stories and domain appropriately.
 
-````
-  1) DockingStation should accept a bike
-     Failure/Error: expect(station.bike_count).to eq(1)
+[SHOW UML DIAGRAM GOING FROM 1-1 to 1-N RELATION]
 
-       expected: 1
-            got: 0
+```
+As a system maintainer,
+So that a station can serve many members of the public,
+I want a docking station to have a default capacity of 20 bikes.
 
-       (compared using ==)
-     # ./spec/docking_station_spec.rb:13:in `block (2 levels) in <top (required)>'
-````
+As a system maintainer,
+So that busy areas can be served more effectively,
+I want to be able to specify a larger capacity when necessary.
+```
 
-Now we can't just make the method return 1 to get rid of this error because that would make the test break on a line above. So we need to write some real code.
+Reflecting on our domain model so far, we see that in response to several user stories we have created a bike which responds to the 'broken?' method, and a docking station that can dock an object, release that object and will raise errors if we try to dock an object in a station that already has one, and if we try to release an object when the docking station is empty.  Interestingly at the moment there is nothing that strongly ties the two objects together, although clearly we intend for bikes to the objects that docking stations hold.  Now it seems clear that we'd like to allow a docking station to hold multiple objects, specifically bikes.  Let's start implementing the user story that specifies a default capacity of 20.
 
-Our docking station needs to know how many bikes it's got. In principle, we could get away with creating a counter that just increments every time a bike is docked without actually storing a reference to the bike. The test would still pass. However, there's a difference between making a test return a constant instead of a real implementation and writing an obviously incorrect implementation that we'll need to change later. In this particular case, I choose to actually store the bike inside a station instead of just pretending to do it.
+We have some options now.  We could start creating a series of instance variables in our docking station class, e.g. @bike0, @bike1, @bike2; we could have an array instance variable, e.g. @bikes = []; or even a hash such as @bikes = {}.  Ideally we should choose the least complex data structure that supports what we need to achieve working user stories.  It is often temping to think, ooh, yes, bikes could have ids and so we could use a hash and then we could grab bike by id, e.g. {'BIKEID007': <#Bike>} etc., but we are not yet working on any users stories that require bikes to have ids.  I can't stress enough, but you will make faster progress if you keep your object models and data structures as simple as possible.  In this case the array seems like a good choice for keeping track of the maximum 20 bikes we need to be able to store in our docking station.  And we might be tempted to leap in and start hacking up our application code, adding an array and so on, but it is a much better practice to hold off deciding on the actual data structure or object model until the last minute.  Far better to allow the user stories to drive us to create tests that specify how our system operates.  Get that nailed down and then it should become clear which is the best choice of data structure of object model.
 
-We need to retain a reference to the bike inside the station. The best place for this would be an instance variable. Let's create an array of bikes and return its size and the number of bikes in the station.
+So let's adjust our existing feature test 'public_bike_doc_spec.rb' to support this new user story:
 
-````ruby
+```ruby
+describe 'member of public or other docks bike' do
+  it 'and station is full' do
+    docking_station = DockingStation.new
+    20.times { docking_station.dock Bike.new }
+    expect { docking_station.dock Bike.new }.to raise_error 'Station Full'
+  end
+end
+```
+
+Naturally this fails.  Note that we haven't updated our unit tests yet.  One step at a time.  It's a good idea to check that you get the errors and failures you expect to get after each change.  Let's now update our docking_stations_spec.rb unit test:
+
+```ruby
+require 'docking_station'
+
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'raises an error when full' do
+    20.times { subject.dock Bike.new }
+    expect { subject.dock Bike.new }.to raise_error 'Station Full'
+  end
+end
+```
+
+We should now have a pair of matching failures at the feature and unit test level.  Now it's time to start changing our application code.  An array seems like a good data structure for holding the bikes - let's try that out:
+
+```ruby
 class DockingStation
-
   def initialize
     @bikes = []
   end
 
-  def bike_count
-    @bikes.count
+  def dock bike
+    fail 'Station Full' if @bikes.length >= 20
+    @bikes << bike
   end
 
-  def dock(bike)
+  def release_bike
+    fail 'No Bikes Available' if @bikes.length == 0
+    @bikes.pop
   end
-
 end
-````
+```
 
-Let's now rerun the test to makes sure the error is still the same. Since the array is empty, the `bike_count()` method should return 0. The reason we're running the test now to see the same error is to make sure that we didn't introduce any other problems along the way.
+Both feature and unit tests should now pass and our docking station is starting to have some meat on it. There's also a A LOT of room for refactoring now.  Can you think of some?
 
-However, to make this error go away, we need to write a real implementation of the `dock()` method.
+One thing we could do is create some private helper methods 'empty?' and 'full?' to make our code a little more readable.  In general we don't write tests for private methods.  Private methods help keep the public interface of our class to a minimum.  We may choose to expose them later if necessary.
 
-````ruby
-def dock(bike)
-  @bikes << bike
-end
-````
-
-The << is called a shovel operator. [It puts an element in the array](http://ruby-doc.org/core-2.0.0/Array.html#method-i-3C-3C). Now our bike_count method will return the correct value after we dock a bike. All tests should pass.
-
-Now that our tests pass it's a good time to check the code in.
-
-If our docking station can accept bikes, it will need to release them at some point. Let's write a test to release a bike.
-
-````ruby
-it 'should release a bike' do
-  station.dock(bike)
-  station.release(bike)
-  expect(station.bike_count).to eq(0)
-end
-````
-
-To get rid of code repetition, I also put a couple `let()` statements at the very beginning of the "describe" block, just like we've done earlier in the Bike spec.
-
-````ruby
-let(:bike) { Bike.new }
-let(:station) { DockingStation.new }
-````
-
-Run rspec, create an empty `release()` method, run rspec again. Now the reason for the failure is that the method doesn't work. Let's implement it.
-
-````ruby
-def release(bike)
-  @bikes.delete(bike)
-end
-````
-
-Now all tests should pass. Great news: we can now dock bikes and release them! Let's check in the code
-
-Let's now make our docking stations more realistic. Right now you can dock any number of bikes in there and it'll be ok as long as you have available memory on your machine (that'll be many, many millions of bikes). Let's introduce some limit on the capacity, set when the station is being initialised. As always, first comes the example.
-
-````ruby
-it 'should know when it\'s full' do
-  expect(station).not_to be_full
-  20.times { station.dock(Bike.new) }
-  expect(station).to be_full
-end
-````
-
-Why 20? Let's pass the capacity as a a parameter to the initialiser.
-
-````ruby
-let(:station) { DockingStation.new(capacity: 20) }
-````
-
-So we're initialising the station as the station that has the capacity of 20 and we're filling it with 20 bikes. We expect it to be full after that. Run the test (it will complain about the wrong number of arguments for the initialiser). Let's fix the problem the test has uncovered.
-
-````ruby
-def initialize(options = {})
-  @capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-  @bikes = []
-end
-````
-
-Let's stop and discuss this code. The first question is why pass the capacity as a key-value pair of an options hash. We could have passed it as the first argument:
-
-````ruby
-def initialize(capacity=DEFAULT_CAPACITY)
-````
-
-However, then we'd have to use it like this:
-
-````ruby
-DockingStation.new(20)
-````
-
-The problem with this code is that it doesn't communicate what 20 is. Is it the capacity? Do we want to create 20 docking stations in one go? Is it the number of bikes a station should be initialised with? Our code must communicate the intent well.
-
-The second question is what this line does:
-
-````ruby
-@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-````
-
-This is a common pattern for passing optional arguments into Ruby. The [Hash.fetch method](http://www.ruby-doc.org/core-1.9.3/Hash.html#method-i-fetch) retrieves the value for the given key (`options[:capacity]` in this case) and if the key is not found, it returns the second argument (`DEFAULT_CAPACITY`). So if the capacity is passed, it's used, otherwise the default one will be assigned.
-
-Finally, you'll need to define the default capacity at the top of the `DockingStation` class.
-
-````ruby
+```ruby
 class DockingStation
-  DEFAULT_CAPACITY = 10
-````
+  def initialize
+    @bikes = []
+  end
 
-There's a different way of achieving the same effect: [named arguments in Ruby 2.0](http://brainspec.com/blog/2012/10/08/keyword-arguments-ruby-2-0/). However, since this is a relatively new feature, you're likely to see the pattern we're using in the real world.
+  def dock bike
+    fail 'Station Full' if full?
+    @bikes << bike
+  end
 
-Let's run rspec again...
+  def release_bike
+    fail 'No Bikes Available' if empty?
+    @bikes.pop
+  end
 
-Undefined method `full?()`. That's because we don't have it. Create it but leave it empty. Next error:
+  private
 
-````ruby
- 1) DockingStation should know when it's full
-     Failure/Error: expect(station).to be_full
-       expected full? to return true, got nil
-````
+  def full?
+    @bikes.length >= 20
+  end
 
-Now let's implement it. What does it mean for a station to be full? To have the number of bikes to be equal to the capacity.
-
-````ruby
-def full?
-  bike_count == @capacity
+  def empty?
+    @bikes.length == 0
+  end
 end
-````
+```
 
-Why are we using `bike_count` as opposed to `@bikes.count`? Doing so would lead to repetition. If we have a method for giving us the bike count, we must use it.
+We might also extract the default capacity to a constant, and use a private attr_reader to have all our references to the @bikes instance variable go through a single interface:
 
-Do you think the tests would pass now? Make a prediction, then run them. If they do, it's a good time to commit the code, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+interface of our class to a minimum.  We may choose to expose them later if necessary.
 
-However, what happens if we try to dock the bike into a station that's full?
+```ruby
+class DockingStation
+  DEFAULT_CAPACITY = 20
+  def initialize
+    @bikes = []
+  end
 
-````ruby
-it 'should not accept a bike if it\'s full' do
-  20.times { station.dock(Bike.new) }
-  expect(lambda { station.dock(bike) }).to raise_error(RuntimeError, 'Station is full')
+  def dock bike
+    fail 'Station Full' if full?
+    bikes << bike
+  end
+
+  def release_bike
+    fail 'No Bikes Available' if empty?
+    bikes.pop
+  end
+
+  private
+
+  attr_reader :bikes
+
+  def full?
+    bikes.length >= DEFAULT_CAPACITY
+  end
+
+  def empty?
+    bikes.length == 0
+  end
 end
-````
+```
 
-From now on I'll start skipping the test failures because you've seen quite of few of them now.
+:running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
-This test expects that docking a bike into a station should not [raise an error](https://www.relishapp.com/rspec/rspec-expectations/v/3-1/docs/built-in-matchers/raise-error-matcher). It will fail because this functionality isn't implemented yet. Let's update the `dock()` method.
 
-````ruby
-def dock(bike)
-  # if the capacity is reached, raise an exception
-  raise "Station is full" if full?
-  @bikes << bike
-end
-````
+We have a remaining user story here:
 
-Now our tests should pass but we have a long line of code in our tests that is repeated twice.
+```
+As a system maintainer,
+So that busy areas can be served more effectively,
+I want to be able to specify a larger capacity when necessary.
+```
 
-````ruby
-20.times { station.dock(Bike.new) }
-````
+Try to implement the necessary functionality through appropriate use of feature and unit tests.
 
-Let's refactor the code by extracting the method to a helper method (put it inside the `describe DockingStation` block), and referring to the constant in the DockingStation.
-
-````ruby
-def fill_station(station)
-  20.times { station.dock(Bike.new) }
-end
-````
-
-This helps make our test a little more readable.  Note that we can also drop the [lambda](pills/lambdas.md) :pill: keyword from the test syntax so that our test now looks like this.
-
-````ruby
-it 'should not accept a bike if it\'s full' do
-  fill_station station
-  expect{ station.dock(bike) }.to raise_error(RuntimeError, 'Station is full')
-end
-````
-
-If everything passes, it's a good time to check everything in, and to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
-
-When you need to get a bike from a station, you need to know what bikes are available. Some bikes can be broken and they shouldn't be available for rental. Let's create a method that will return the list of bikes that are available.
-
-````ruby
-it 'should provide the list of available bikes' do
-  working_bike, broken_bike = Bike.new, Bike.new
-  broken_bike.break!
-  station.dock(working_bike)
-  station.dock(broken_bike)
-  expect(station.available_bikes).to eq([working_bike])
-end
-````
-
-The implementation is fairly simple.
-
-````ruby
-def available_bikes
-  @bikes.reject {|bike| bike.broken? }
-end
-````
-
-Now that the tests pass, it's time to check the code in and of course to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
-
-Our station is mostly done but there are a few more things, listed in the Exercises section below for you to finish.
+[TODO: LINK TO STAGE 6]
