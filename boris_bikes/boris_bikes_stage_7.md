@@ -12,22 +12,9 @@ So that members of the public can get usable bikes,
 I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
 ```
 
-okay so I think the below is all back to front, but anyway it should definitely be here before we try and start refactoring out a container
+Follow the technique from the previous stages to design feature tests and then unit tests to drive the functionality of the first the Van and then the Garage.  The user stories above have multiple clauses in their Task components - perhaps we should break them out into separate features?
 
-2. Write the `empty?()` method for the docking station.
-3. How will the van check out broken bikes if the `available_bikes()` method doesn't return broken bikes? Extend the station to be able to interact with the van.
-4. If you chose to create methods that return broken bikes and working bikes separately, why do we need `bike_count()` method? Should we keep it or leave it? If we keep it, when will it be used?
-5. Design the methods that the van needs to have to move broken bikes from a station to the garage and back (once they are fixed). Implement them.
-6. Write the Garage class. Assume that the bikes are fixed instantly when they are put into the garage. See the discussion above on how to do it.
-7. Write the Van class. How is it different from other classes? What extra methods will it have? A van would normally take several bikes in one go. How do we do it? How will it take into account the space available in the van. Write tests for all use cases.
-
-8. The method that releases the bike takes an argument: a bike to release. Would in make sense to rewrite the method to not to take any arguments? What are the pros and cons? How will you release broken bikes in this case? Discuss with other students and update the code, if necessary.
-
-[TODO: I have a real problem with extracting out common functionality before we have actually got the functionality appearing in multiple places - it feels like premature refactoring to me - we are introducing a dependency when we don't know what kinds of client requests might be coming down the line.  Furthermore for learning developers, introducing that complexity before we actually see the code replication that it removes feels like we are loading on too much up front ...]
-
-[TODO: rather than exercises, perhaps we should have feature requests, even appearing in a backlog of some kind?  Would be awesome if we can could add them as issues to the repo the student was working on at the appropriate time ...]
-
-Before writing more code, let's discuss what the other classes are and why we need them, starting with the van.
+Also Before writing more code, let's think about what the other classes are and why we need them, starting with the van.
 
 The van is moving broken bikes from the stations to the garage. Once they are fixed, the van moves them back to the stations. So the van must be able to accept the bikes at the source and release them at the destination. Obviously, the van must have some limit on the capacity, just like the station.
 
@@ -35,30 +22,16 @@ However, the van isn't going to be very different from the station. It may have 
 
 The situation with the garage is very similar. What's the difference between a garage and a docking station? Only a van is supposed to take bikes out of a garage. Also, the bikes get fixed once they get to the garage. Otherwise, the garage is not much different from the station.
 
-## Version 5: Extracting the common functionality
+It seems likely that if we just implement the Garage and the Van classes in the same way we've done the DockingStation class, we'll be duplicating significant amounts of code. In this situation you need to extract common functionality into a new class or module that will be reused later.  However in order to see how this works, we recommend that you first implement the Van class in a similar way to the DockingStation, i.e. as a holder of bikes.  However once you've done so we recommend extracting the common 'container' functionality into a module.  If you're not feeling so confident please do go on and implement the Garage in the same way, and then extract the functionality that you can clearly see replicated three times over.
 
-By now it should be obvious that if we just implement the Garage and the Van classes in the same way we've done the DockingStation class, we'll be duplicating significant amounts of code. In this situation you need to extract common functionality into a new class or module that will be reused later.
+Assuming that you have completed the Van and/or Garage functionality, here's a walkthrough of how one would extract the common functionality.  We assume that you implemented the variable capacity functionality at the end of stage 5.
 
-This week we'll be discussing two strategies for extracting common functionality: inheritance and composition. In this particular case we should use composition over inheritance.
-
-Inheritance is mostly useful when there is a clear **is-a** relationship. For example, an ElectricCar **is a** Car. A Cat **is a** Mammal. A Report **is a** Document.
-
-Composition is usually more suitable when there is a **has-a** relationship. A Car **has a** Gearbox. A Cat **has a** Tail. A Report **has a** Attachment.
-
-In our case three objects – docking station, van and garage – have common functionality. However, they are not the same thing conceptually. Even though the Garage is almost like a DockingStation with minor changes to functionality, we can't say that a garage is a docking station. A van is not a docking station either. We could invent an artificial ObjectThatCanDockBikes but that would be a really poor solution. We must show some compassion for the developers that will be maintaining this code base in the future, trying to make sense of what we've written.
-
-Instead, we need to use composition. A garage has a special area where to store the bikes. So do the docking station and the van. All of them have other things: a van has an engine, a docking station has a payment terminal and a garage has a set of tools but all that doesn't concern us right now. The common thing is that they all have a place to store the bikes. Let's call it a BikeContainer. So a Van has a BikeContainer, a DockingStation has a BikeContainer and a Garage has a Bike Container. Since it's a clear has-a relationship, we must be using composition, and not inheritance in this case.
-
-Let's begin by extracting the common functionality from the DockingStation to BikeContainer. Since we are not adding any new functionality, this process is refactoring. Therefore, we are not writing any new tests but using existing tests to make sure that we are not breaking anything in the process.
-
-Note that we might argue this is a case of 'premature refactoring'.  We haven't yet built the Van and the Garage and so we can't actually see the three replicated pieces of identical code that we will DRY out with this refactoring.  A cautious developer might write those classes first, and only refactor once they've been in use for a whole and it's clear that their functionality won't diverge.  In this simple artificial system it's easier to see that this will be a useful refactoring.  The important thing is to be aware of the tradeoffs regarding when to DRY out and when to hold off until you get more input from stakeholders in your project.  In this case let's create BikeContainer first to avoid writing the same code over and over.
-
-First, run the tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
+First, run all tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
 
 ````ruby
 module BikeContainer
 
-  DEFAULT_CAPACITY = 10
+  DEFAULT_CAPACITY = 20
 
   def bikes
     @bikes ||= []
@@ -72,30 +45,29 @@ module BikeContainer
     @capacity = value
   end
 
-  def bike_count
-    bikes.count
-  end
-
-  def dock(bike)
-    raise 'Station is full' if full?
+  def dock bike
+    fail 'Station Full' if full?
     bikes << bike
   end
 
-  def release(bike)
-    bikes.delete(bike)
+  def release_bike
+    fail 'No Bikes Available' if empty?
+    bikes.pop
   end
+
+  private
 
   def full?
-    bike_count == capacity
+    bikes.length >= DEFAULT_CAPACITY
   end
 
-  def available_bikes
-    bikes.reject {|bike| bike.broken? }
+  def empty?
+    bikes.reject(&:broken?).length == 0
   end
 end
 ````
 
-The first thing to note is that this is a module, not a class. A module is just like a class, except it cannot be instantiated, that is, you cannot do `BikeContainer.new`. The second interesting thing is that we have created "accessor" methods for `@capacity` and `@bikes` instance variables.
+The first thing to note is that this is a module, not a class. A module is just like a class, except it cannot be instantiated, that is, you cannot do `BikeContainer.new`. The second interesting thing is that we have created an "accessor" methods for the `@bikes` instance variables.
 
 ````ruby
 def bikes
@@ -115,7 +87,7 @@ This enables us to avoid working directly with the instance variables, [encapsul
 
 ````ruby
 def full?
-  bike_count == capacity
+  bikes.length >= DEFAULT_CAPACITY
 end
 ````
 
@@ -133,7 +105,7 @@ Whenever any other method calls `capacity()`, it will return the value of the in
 
 This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.  As with everything in Ruby please experiment with it in IRB to make sure you understand what's happening.
 
-The DockingStation now looks like this.
+The DockingStation now looks something like this.
 
 ````ruby
 # load BikeContainer
@@ -189,17 +161,17 @@ require './lib/docking_station'
 
 describe DockingStation do
 
-  let(:station) { DockingStation.new(capacity: 123) }
+  subject { described_class.new(capacity: 123) }
 
-  it 'should allow setting default capacity on initialising' do
-    expect(station.capacity).to eq(123)
+  it 'can set a default capacity on initialising' do
+    expect(subject.capacity).to eq(123)
   end
 end
 ````
 
 Check that all tests still pass. If they do, push your code to Github, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
-Now you can create Van and Garage classes that will reuse BikeContainer. You'll need to think how to extend the functionality of the existing methods, though. For example, the garage must fix the bikes as they arrive. However, the dock() method knows nothing about fixing the bikes:
+Now you can create refactor your Van and/or Garage classes so that they will reuse BikeContainer. You'll need to think how to extend the functionality of the existing methods, though. For example, the garage must fix the bikes as they arrive. However, the dock() method knows nothing about fixing the bikes:
 
 ````ruby
 def dock(bike)
