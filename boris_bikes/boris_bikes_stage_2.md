@@ -1,6 +1,36 @@
 ## Stage 2: Creating a Docking Station
 
-The very first output is just RuboCop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'describe' and 'it' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
+So how would you deal with with error?
+
+```sh
+→ rake
+Running RuboCop...
+Inspecting 2 files
+..
+
+2 files inspected, no offenses detected
+/Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+
+member of public accesses bike
+  bike is not broken (FAILED - 1)
+
+Failures:
+
+  1) member of public accesses bike is not broken
+     Failure/Error: docking_station = DockingStation.new
+     NameError:
+       uninitialized constant DockingStation
+     # ./spec/feature/public_bike_access_spec.rb:3:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00049 seconds (files took 0.18432 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike is not broken
+```
+
+Let's look through it piece by piece.  The very first output is just RuboCop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'describe' and 'it' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
 
 In this case, the problem is in the file `spec/feature/public_bike_access_spec.rb` on line 3. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and it's human-readable explanation is _"uninitialized constant DockingStation"_.
 
