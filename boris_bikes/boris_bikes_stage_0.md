@@ -98,25 +98,25 @@ Add some basic explanation of the project to the README and then create a Github
 
 Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
 
-## Stage 1: First Feature Test
+## Stage 1: Creating a Feature Test
 
 Let's start with our first feature test
 
-[Version 1](boris_bikes_version_1.md)
+[Stage 1](boris_bikes_stage_1.md)
 
-## Stage 2: First Unit Test (and Refactoring?)
+## Stage 2: Creating a Docking Station via Unit Tests
 
 Red-Green-Refactor
 
-[Version 2](boris_bikes_version_2.md)
+[Stage 2](boris_bikes_stage_2.md)
 
-## Stage 3: ??? Bike
+## Stage 3: Creating a Bike via Unit Tests
 
-[Version 3](boris_bikes_version_3.md)
+[Stage 3](boris_bikes_stage_3.md)
 
-## Stage 4: ??? Van & Garage
+## Stage 4: Refactoring Vs New Features
 
-[Version 4](boris_bikes_version_4.md)
+[Stage 4](boris_bikes_stage_4.md)
 
 ## Stage 5: ??? Extracting Common Functionality
 

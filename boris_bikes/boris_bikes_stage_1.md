@@ -1,4 +1,4 @@
-## Stage 1: First Feature Test
+## Stage 1: Creating a Feature Test
 
 We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy [TODO: do we need to intro MVP here?]. What is the absolute minimum we could implement but still provide some value to the end user? Our first user story sounds promising:
 

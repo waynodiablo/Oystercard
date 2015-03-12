@@ -1,4 +1,4 @@
-## Stage 2: Creating a Docking Station
+## Stage 2: Creating a Docking Station via Unit Tests
 
 So how would you deal with with error?
 
@@ -167,7 +167,7 @@ Failed examples:
 rspec ./spec/feature/public_bike_access_spec.rb:4 # member of public accesses bike bike is not broken
 ```
 
-This error is a little more difficult to interpret.  At the moment out `release_bike` method on docking station returns nothing, a `nil` in fact, which gets represented as an empty string in the failure message "expected  to respond to `broken?`".  If we were writing a unit test of the Docking Station this would be a point that we might want to start using a Bike 'double' (a kind of stunt stand in - see doubles pill TODO) to ensure that this test was isolated from the particular implementation of Bike.  However we are writing a feature or integration test that does not want to 'stub out' the behaviour of collaborator classes unless it is to avoid randomness or interaction with 3rd party services (e.g. Twitter, Google and so on).
+This error is a little more difficult to interpret.  At the moment our `release_bike` method on docking station returns nothing, a `nil` in fact, which gets represented as an empty string in the failure message "expected  to respond to `broken?`".  If we were writing a unit test of the Docking Station this would be a point that we might want to start using a Bike 'double' (a kind of stunt stand in - see doubles pill TODO) to ensure that this test was isolated from the particular implementation of Bike.  However we are writing a feature or integration test that does not want to 'stub out' the behaviour of collaborator classes unless it is to avoid randomness or interaction with 3rd party services (e.g. Twitter, Google and so on).
 
 This is a great point to drop from the acceptance/feature test level to the unit test level.  It's clear we are going to need a Bike class that can respond to a `broken?` method.
 
