@@ -5,13 +5,13 @@
 * [Introduction](intro.md)
 * Week 1: [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
 * Week 2: [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
-* Week 3: [Playing Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
-* Week 4: [Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
-* Week 5: [Rock Paper Scissors in JavaScript](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
+* Week 3: [Welcome to the web: Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
+* Week 4: [Databases: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
+* Week 5: [Intro to Javascript: Rock Paper Scissors](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 * Week 6: Lab week
-* Week 7: [Advanced JavaScript](https://github.com/makersacademy/course/blob/master/node.md)
+* Week 7: [Advanced JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/advanced_javascript/github_profiles.md)
 * Week 8: Makerthon
-* Week 9: [Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
+* Week 9: [MVC in Ruby: Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
 * Weeks 10-11: Final Projects
 * Week 12: Hiring week
 
