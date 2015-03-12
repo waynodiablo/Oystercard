@@ -14,6 +14,7 @@ Angular is a front-end MVC framework designed to build web applications rather t
 ## Resources
 * [Introduction to Angular](https://docs.angularjs.org/guide/introduction)  
 * [The official Angular tutorial](https://docs.angularjs.org/tutorial)
+* [AngularJS Tutorial - 10,000 word guide](https://www.airpair.com/angularjs/posts/angularjs-tutorial) <-- recommended!
 
 ## Single Page Applications (SPAs)
 Angular is a framework that helps you build single page applications, the goal being that you have a web application that fits on a single page so that you can provide an experience more akin to a desktop application (think Gmail). Note that we're not going to be covering SPAs in this walkthrough - one step at a time young Padawan!
