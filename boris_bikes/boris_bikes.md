@@ -56,7 +56,9 @@ This pyramid diagram indicates the likely distribution of tests we have in anyth
 
 In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of classes that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike some objects get created somewhere in the system that tracks the usage of all bikes.
 
-[NEED TO MENTION RED-GREEN-REFACTOR MORE]
+[TODO: NEED TO MENTION RED-GREEN-REFACTOR MORE]
+[TODO: All stages need to be carefully checked for pair swap points and athletic coding waypoints]
+[CONCERN: stage 7 not sufficiently checked]
 
 ## Stage 0: Domain Model and Project Setup
 
