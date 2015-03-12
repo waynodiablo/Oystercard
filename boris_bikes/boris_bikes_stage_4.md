@@ -101,8 +101,8 @@ It follows that we should now drop down to the unit test level to ensure that ou
 ```ruby
 require 'docking_station'
 describe DockingStation do
-  it { expect(subject).to respond_to :release_bike }
-  it { expect(subject).to respond_to :dock }
+  it { is_expected.to respond_to :release_bike }
+  it { is_expected.to respond_to :dock }
 end
 ```
 
@@ -129,9 +129,11 @@ Now we just have a single failing integration/feature test and so it's tempting 
 require 'docking_station'
 
 describe DockingStation do
-  it { expect(subject).to respond_to :release_bike }
-  it { expect { subject.release_bike }.to raise_error 'No Bikes Available' }
-  it { expect(subject).to respond_to :dock }
+  it { is_expected.to respond_to :release_bike }
+  it { is_expected.to respond_to :dock }
+  it 'raises error when no bikes available' do
+     expect { subject.release_bike }.to raise_error 'No Bikes Available'
+  end
 end
 ```
 
@@ -141,10 +143,10 @@ We should now have a pair of failing tests that give very similar output:
 
 Failures:
 
-  1) DockingStation should raise Exception with "No Bikes Available"
-     Failure/Error: it { expect { subject.release_bike }.to raise_error 'No Bikes Available' }
-       expected Exception with "No Bikes Available" but nothing was raised
-     # ./spec/docking_station_spec.rb:5:in `block (2 levels) in <top (required)>'
+  1) DockingStation raises error when no bikes available
+      Failure/Error: expect { subject.release_bike }.to raise_error 'No Bikes Available'
+        expected Exception with "No Bikes Available" but nothing was raised
+      # ./spec/docking_station_spec.rb:7:in `block (2 levels) in <top (required)>'
 
   2) member of public accesses bike and there are none available
      Failure/Error: expect { docking_station.release_bike }.to raise_error 'No Bikes Available'

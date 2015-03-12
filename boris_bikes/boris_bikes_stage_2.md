@@ -122,7 +122,7 @@ Instead let's create a unit test that checks that DockingStations have this meth
 ```ruby
 require 'docking_station'
 describe DockingStation do
-  it { expect(subject).to respond_to :release_bike }
+  it { is_expected.to respond_to :release_bike }
 end
 ```
 
@@ -130,7 +130,7 @@ This code should go in spec/docking_station_spec.rb, and should fail with an err
 
 ```sh
 1) DockingStation should respond to #release_bike
-   Failure/Error: it { expect(subject).to respond_to :release_bike }
+   Failure/Error: it { is_expected.to respond_to :release_bike }
      expected #<DockingStation:0x007faf7c1a2c68> to respond to :release_bike
    # ./spec/feature/docking_station_spec.rb:3:in `block (2 levels) in <top (required)>'
 ```
