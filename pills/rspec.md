@@ -31,24 +31,26 @@ describe 'Greeter' do
 end
 ````
 
+[TODO: add note about requiring the file]
+
 Once we save and run this code with **rspec greeter_spec.rb** we will see the code fail. Don't get anxious about this, [RSpec](http://rspec.info) is just trying to tell you what has happened and give you a hint as of what you can do to sort this out.
 
 ```
  rspec greeter_spec.rb
-      
+
       Failures:
-        
+
         1) Greeter greets Rico
            Failure/Error: expect(greet('Rico')).to eq 'Hello, Rico, how are you today?'
            NoMethodError:
              undefined method `greet' for #<RSpec::Core::ExampleGroup::Nested_1:0x007f9b55073800>
            # ./greeter_spec.rb:3:in `block (2 levels) in <top (required)>'
-      
+
       Finished in 0.00036 seconds
       1 example, 1 failure
-        
+
       Failed examples:
-        
+
       rspec ./greeter_spec.rb:2 # Greeter greets Rico
 ````
 
@@ -129,23 +131,23 @@ Running [RSpec](http://rspec.info) will fail now (*and for the right reason*):
 ````ruby
 rspec -f p greeter_spec.rb
 .F
-      
+
 Failures:
-      
+
   1) Greeter greets Chloë
      Failure/Error: expect(greet('Chloë')).to eq 'Hello, Chloë, how are you today?'
-          
+
       expected: "Hello, Chloë, how are you today?"
            got: "Hello, Rico, how are you today?"
-              
+
              (compared using ==)
       # ./greeter_spec.rb:11:in `block (2 levels) in <top (required)>'
-            
+
       Finished in 0.00068 seconds
       2 examples, 1 failure
-          
+
       Failed examples:
-      
+
       rspec ./greeter_spec.rb:10 # Greeter greets Chloë
 ````
 
@@ -162,7 +164,7 @@ If we run our specs now we will see that our code works as expected:
 ````
 rspec -f p greeter_spec.rb
 ..
-      
+
 Finished in 0.0006 seconds
 2 examples, 0 failures
 ````

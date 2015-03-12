@@ -94,13 +94,13 @@ Add some basic explanation of the project to the README and then create a Github
 
 Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.
 
-## Version 1: Docking Station
+## Stage 1: First Feature Test
 
 Let's start with our first feature test
 
 [Version 1](boris_bikes_version_1.md)
 
-## Version 2: Refactoring
+## Stage 2: First Unit Test (and Refactoring?)
 
 Red-Green-Refactor
 
