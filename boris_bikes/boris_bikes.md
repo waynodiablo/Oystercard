@@ -59,6 +59,9 @@ In the process of creating individual objects through a test driven process we'l
 [TODO: NEED TO MENTION RED-GREEN-REFACTOR MORE]
 [TODO: All stages need to be carefully checked for pair swap points and athletic coding waypoints]
 [CONCERN: stage 7 not sufficiently checked]
+[TODO: UML DIAGRAMS]
+[TODO: OBJECT UNDER TEST DIAGRAMS - respond, call, return, state change]
+[TODO: ACCEPTANCE-UNIT TEST BOUNCE DIAGRAM]
 
 ## Stage 0: Domain Model and Project Setup
 
