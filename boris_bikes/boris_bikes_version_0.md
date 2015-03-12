@@ -50,7 +50,7 @@ This pyramid diagram indicates the likely distribution of tests we have in anyth
 
 In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of classes that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike some objects get created somewhere in the system that tracks the usage of all bikes.
 
-## Version 0: Domain Model and Project Setup
+## Stage 0: Domain Model and Project Setup
 
 Given that we have established the high level system behaviours, the next step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). As we started to describe above, the [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them.  In other words, it helps us understand what classes we may have and what methods they may implement.
 
@@ -92,7 +92,7 @@ touch README.md
 
 Add some basic explanation of the project to the README and then create a Github repo called 'boris-bikes' (note: please please ensure that the repo on Github is called exactly this, please ensure you use a hypen '-' and not an underscore '_'), and then connect your local repo to the Github repo and push the changes to the README up to Github and confirm that they are visible on Github.  This is a critical backup of your local changes to a remote machine that you MUST repeat as regularly as possible, ideally each time you get your tests to go green.
 
-Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.
+Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
 
 ## Stage 1: First Feature Test
 
@@ -106,14 +106,14 @@ Red-Green-Refactor
 
 [Version 2](boris_bikes_version_2.md)
 
-## Version 3: Bike
+## Stage 3: ??? Bike
 
 [Version 3](boris_bikes_version_3.md)
 
-## Version 4: Van & Garage
+## Stage 4: ??? Van & Garage
 
 [Version 4](boris_bikes_version_4.md)
 
-## Version 5: Extracting Common Functionality
+## Stage 5: ??? Extracting Common Functionality
 
 # Supporting Material?
