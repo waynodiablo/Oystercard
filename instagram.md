@@ -82,9 +82,9 @@ We have various options for geocoding (turning an address into latitude/longitud
 
 ## Walkthroughs
 
-* [Paperclip](https://github.com/makersacademy/Walkthroughs/blob/master/paperclip.md)
-* [S3](https://github.com/makersacademy/Walkthroughs/blob/master/S3.md)
-* [Devise](https://github.com/makersacademy/Walkthroughs/blob/master/devise.md)
-* [Bootstrap](https://github.com/makersacademy/Walkthroughs/blob/master/bootstrap.md)
-* [Tagging](https://github.com/makersacademy/Walkthroughs/blob/master/tags.md)
-* [More Tagging](https://github.com/makersacademy/Walkthroughs/blob/master/more_tags.md)
+* [Paperclip](https://github.com/makersacademy/course/blob/master/walkthroughs/paperclip.md)
+* [S3](https://github.com/makersacademy/course/blob/master/walkthroughs/S3.md)
+* [Devise](https://github.com/makersacademy/course/blob/master/walkthroughs/devise.md)
+* [Bootstrap](https://github.com/makersacademy/course/blob/master/walkthroughs/bootstrap.md)
+* [Tagging](https://github.com/makersacademy/course/blob/master/walkthroughs/tags.md)
+* [More Tagging](https://github.com/makersacademy/course/blob/master/walkthroughs/more_tags.md)

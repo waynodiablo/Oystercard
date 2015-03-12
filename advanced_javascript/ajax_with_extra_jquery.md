@@ -245,7 +245,7 @@ Exercises:
 
 * Ensure you have all of the above working
 * Combine all the above into your node app so that your node app both delivers the skin and provides the Ajax API service from the back end
-* Cover the system in high level acceptance tests (note that this is not currently well supported in the node stack, particularly as regards Ajax requests: selenium-webdriver is perhaps the best solution - see resource section), and unit test your JQuery using the methods described here: [JavaScript Testability](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_testability.md)
+* Cover the system in high level acceptance tests (note that this is not currently well supported in the node stack, particularly as regards Ajax requests: selenium-webdriver is perhaps the best solution - see resource section), and unit test your JQuery using the methods described here: [JavaScript Testability](https://github.com/makersacademy/course/blob/master/walkthroughs/javascript_testability.md)
 * Ensure that whenever you wrap any functionality in a test that you see the test fail - this is test last coded (not recommended) but necessary when handling legacy codebases - it requires more rigour than test first, and is much more dangerous - you have been warned!!!!!!
 
 

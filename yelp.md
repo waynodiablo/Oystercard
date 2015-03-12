@@ -45,7 +45,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - Restaurants can be edited and deleted
 - Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
-- [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
+- [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
 ### [V1 Walkthrough →](yelpv1.md)
 
@@ -53,7 +53,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 
 Although our initial version serves its purpose - it's limited in a few respects. First any visitor can freely delete or edit restaurants, leaving our site open to vandalism. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
 
-We can solve both of these problems by adding a user login system, as we did with Bookmark Manager. This time though, we'll use a popular gem - [Devise](https://github.com/makersacademy/Walkthroughs/blob/master/devise.md) - to accelarate the implementation of our user system.
+We can solve both of these problems by adding a user login system, as we did with Bookmark Manager. This time though, we'll use a popular gem - [Devise](https://github.com/makersacademy/course/blob/master/walkthroughs/devise.md) - to accelarate the implementation of our user system.
 
 *A note on testing: We generally want to avoid testing code we haven't written, so we won't write exhaustive tests for the functionality Devise provides. However, user login/registration are important features whose functionality we need to ensure - so it's worth adding a few high-level feature tests to make sure users can register and sign in.*
 
@@ -107,12 +107,12 @@ Finally, let's focus on creating a better user experience. This will introduce u
 
 ## Walkthroughs (DEPRECATED)
 
-* [Rails](https://github.com/makersacademy/Walkthroughs/blob/master/rails.md) <-- Under construction
-* [More Rails](https://github.com/makersacademy/Walkthroughs/blob/master/more_rails.md) <-- Under construction
-* [Validations](https://github.com/makersacademy/Walkthroughs/blob/master/validations.md) <-- Under construction
+* [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md) <-- Under construction
+* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) <-- Under construction
+* [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md) <-- Under construction
 * One-to-many
-* [Helpers](https://github.com/makersacademy/Walkthroughs/blob/master/helpers.md)
+* [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
 * Ajax
 * Devise
 * JBuilder
-* [Rails Create Update](https://github.com/makersacademy/Walkthroughs/blob/master/rails_create_update.md)  <-- Under construction
+* [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)  <-- Under construction
