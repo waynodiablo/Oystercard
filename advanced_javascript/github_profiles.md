@@ -14,3 +14,13 @@ This week's project involves using JavaScript to consume data available from thi
 
 [Note also that the initial code for this walkthrough is available in https://github.com/makersacademy/angularjs-intro]
 
+##Knowledge
+
+Make sure you have worked through these pills before commencing this walkthrough:
+
+* :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md)
+* :pill: [bower](https://github.com/makersacademy/course/blob/master/pills/bower.md)
+* :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
+* :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
+
+
