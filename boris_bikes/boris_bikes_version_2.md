@@ -1,7 +1,5 @@
-
 ## Stage 2: First Unit Test
 
-========
 So how do we model a bike, the subject of our first unit test? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
 
 A bike has a great many properties. It has a number of gears, it has a certain weight, etc. but all that is not relevant for the task of renting them from our system. Therefore, we shouldn't be concerned with those properties. Our feature test is indicating that the only thing about the bike that concerns us right now is whether it's broken or not. Our bikes can be broken but we don't care about anything else at the moment. This is not the only possible starting point but it's a good start, and since we have started with a user story and feature test it seems likely that this functionality will be relevant to the end user.
