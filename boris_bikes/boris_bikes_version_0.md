@@ -24,6 +24,10 @@ So that members of the public can get usable bikes,
 I'd like docking stations to accept returning bikes (broken or not).
 
 As a maintainer of the system,
+So that members of the public are not disappointed,
+I'd like docking stations to not release bikes when there are none available.  
+
+As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like docking stations to not accept more bikes than their capacity.  
 
