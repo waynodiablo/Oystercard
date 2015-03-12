@@ -62,19 +62,17 @@ Add a `require` statement to the spec.
 ```ruby
 require 'docking_station'
 
-#we're describing our high level feature
 describe 'member of public accesses bike' do
-  # this is a specific outcome related to the feature
   it 'bike is not broken' do
-    docking_station = DockingStation.new # initialise a new instance of a docking station
-    bike = docking_station.release_bike  # ask the docking station to release a bike
-    expect(bike).not_to be_broken        # expect that bike to respond to the method 'broken?' with false
+    docking_station = DockingStation.new
+    bike = docking_station.release_bike
+    expect(bike).not_to be_broken
   end
 end
 ```
 Requiring a file is almost equivalent to just copy-pasting the contents of `docking_station.rb` at the top of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.  Note also that `require 'docking_station'` works here because the bike.rb file is in the lib directory.  The Ruby convention is that require will automatically look in a projects lib directory for Ruby files.
 
-Now assuming no style violations and leaving out the RuboCop output we have a new failure.  This might feel like things are getting worse, but a new failure or error message is cause for celebration!  A new error or failure means more information that we can use to work out what is going on.  It might be hard to imagine it, but ultimately you will start to feel joy and excitement when you have a new error or failure to comprehend:
+Now assuming no style violations and leaving out the RuboCop output we have a new failure.  This might feel like things are getting worse, but a new failure or error message is cause for celebration!  A new error or failure means more information that we can use to work out what is going on.  It might be hard to imagine it, but ultimately you will start to feel joy and excitement when you have a new error or failure:
 
 ```sh
 member of public accesses bike
@@ -82,7 +80,7 @@ member of public accesses bike
 
 Failures:
 
-  1) member of public accesses bike bike is not broken
+  1) member of public accesses bike is not broken
      Failure/Error: bike = docking_station.release_bike
      NoMethodError:
        undefined method `release_bike' for #<DockingStation:0x007ff3c306ea28>
@@ -96,17 +94,17 @@ Failed examples:
 rspec ./spec/feature/public_bike_access_spec.rb:4 # member of public accesses bike bike is not broken
 ```
 
-Our example is failing, which means that we can test the DockingStation class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output. There is only one: _"member of public accesses bike bike is not broken"_. Where does the message come from? Look at the structure of the example.
+Our example is failing, which means that we can test the DockingStation class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output. There is only one: _"member of public accesses bike is not broken"_. Where does the message come from? Look at the structure of the example.
 
 ```ruby
 describe 'member of public accesses bike' do
-  it 'bike is not broken' do
+  it 'is not broken' do
     # the test goes here, omitted for brevity
   end
 end
 ```
 
-RSpec simply concatenates 'member of public accesses bike' from the describe statement and the 'bike is not broken' from the "it" block.  So, what's the failure of the test?
+RSpec simply concatenates 'member of public accesses bike' from the describe statement and the 'is not broken' from the "it" block.  So, what's the failure of the test?
 
 ````ruby
 Failure/Error: bike = docking_station.release_bike
@@ -126,7 +124,7 @@ class DockingStation
 end
 ````
 
-This should take us onto a new error 'Woohoo!'.  A great time to swap driver navigator roles:
+This should take us onto a new error 'Woohoo!'.  More information to help us work out what is going on:
 
 ```sh
 member of public accesses bike
@@ -152,3 +150,5 @@ This error is a little more difficult to interpret.  At the moment out `release_
 This is a great point to drop from the acceptance/feature test level to the unit test level.  It's clear we are going to need a Bike class that can respond to a `broken?` method.
 
 We've changed the error message again, so it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the change-the-message pairing methodology.
+
+[TODO link to stage 3]
