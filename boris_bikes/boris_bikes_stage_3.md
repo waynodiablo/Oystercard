@@ -1,4 +1,4 @@
-## Stage 3: First Unit Test
+## Stage 3: Creating a Bike via Unit Tests
 
 So how do we model a bike, the subject of our first unit test? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
 

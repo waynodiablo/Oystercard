@@ -4,6 +4,8 @@
 
 The goal of this project is to introduce you to [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development), how it relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development) and the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (also called [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  BDD and TDD are commonly selected as part of the Agile development process since they can help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.   OOP is a style of programming that breaks our code up into 'objects' which helps make our code flexible with regard to the changes that will be required as we discover that end users will derive more value from something different than what we have built so far. DDD emphasizes the development of the domain model which describes the relation between the objects we create.
 
+Please do refer to the detailed [learning objectives](learning_objectives.md) for this week.
+
 ***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (ping-pong, change the message), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
 
 We will create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to get bikes from docking stations and return them.  Occasionally the bikes may break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage in order to ensure that there are working bikes for members of the public to use.
@@ -98,25 +100,25 @@ Add some basic explanation of the project to the README and then create a Github
 
 Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
 
-## Stage 1: First Feature Test
+## Stage 1: Creating a Feature Test
 
 Let's start with our first feature test
 
-[Version 1](boris_bikes_version_1.md)
+[Stage 1](boris_bikes_stage_1.md)
 
-## Stage 2: First Unit Test (and Refactoring?)
+## Stage 2: Creating a Docking Station via Unit Tests
 
 Red-Green-Refactor
 
-[Version 2](boris_bikes_version_2.md)
+[Stage 2](boris_bikes_stage_2.md)
 
-## Stage 3: ??? Bike
+## Stage 3: Creating a Bike via Unit Tests
 
-[Version 3](boris_bikes_version_3.md)
+[Stage 3](boris_bikes_stage_3.md)
 
-## Stage 4: ??? Van & Garage
+## Stage 4: Refactoring Vs New Features
 
-[Version 4](boris_bikes_version_4.md)
+[Stage 4](boris_bikes_stage_4.md)
 
 ## Stage 5: ??? Extracting Common Functionality
 
