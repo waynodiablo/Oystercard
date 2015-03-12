@@ -147,80 +147,72 @@ Note that the method is empty. Why? Because RSpec didn't complain about anything
 
 So it passed. However, you may have expected it to fail. That would have been a reasonable assumption since there's no implementation of the method. However, in Ruby a nil value is treated as false if a boolean value is needed. Given that a method returns nil if nothing else is returned, an empty method always returns nil. So, by writing an empty method, we satisfy the test's expectation that the bike must not be broken.
 
-[TODO: policy on commiting with broken feature test?]
-Our code is still extremely basic but we're getting somewhere. This is a good time to commit the changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and it's also a good time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
+
+Our code is still extremely basic but we're getting somewhere.  Our Bike is not really complete, but it has suffcient functionality to now participate in our feature test.
+
+:twisted_rightwards_arrows:??
 
 
-### Making the broken? method work properly
+### Making the feature test pass
 
-You may feel suspicious that our test suite passes while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
+As usual we want to do the absolutely simplest thing possible to make our test pass.  In this case, that is to update our Docking Station as follows:
 
-````ruby
-it 'should be able to break' do
-  bike = Bike.new
-  bike.break!
-  expect(bike).to be_broken
-end
-````
-
-So in our example we are creating a new bike, telling it to break and finally we expect it to be broken.
-
-Before you run the example, ask yourself again. What do you expect to see? Will it pass? Will it fail? Why? _It is a good practice if you get yourself into this mode of thinking_
-
-This is the test output:
-
-````ruby
-1) Bike should be able to break
-     Failure/Error: bike.break!
-     NoMethodError:
-       undefined method `break!' for #<Bike:0x007fe7a23fd7c0>
-     # ./spec/bike_spec.rb:16:in `block (2 levels) in <top (required)>'
-````
-
-If we run it, we find out that it fails on `bike.break!` statement because of the `break!` method has not been defined on `Bike`. Fair enough, let's add it to our `Bike` class. Again, [rspec](http://rspec.info) complained about the lack of method, so we're doing the absolute minimum to make our code work.
-
-````ruby
-class Bike
-  def broken?
-  end
-
-  def break!
+```ruby
+class DockingStation
+  def release_bike
+    Bike.new
   end
 end
-````
+```
 
-_Will the test pass this time? If not, will the error be different? If yes, what will it be?_
+Assuming no style violations this change should ensure the feature test passes as well as the unit test.
 
-Ok, the example is telling us that we expect the bike to be broken but it isn't: the `broken?` method returns `nil` while we expect it to return `true`. _What does it tell us to do?_ If we just make it return `true`, the example will pass but then our first example will fail because it only works because `broken?` is returning nil at the moment ( _and `nil` happens to equal to `false`_ ).
+[Subtle problem relating to order of file loading]
 
-Time to write some real code. Now we have two examples that force us to write some logic. Apparently, our bike should maintain some internal state that should be changed when we break it.
+```sh
+→ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > d = DockingStation.new
+ => #<DockingStation:0x007ffd41275df8>
+2.1.5 :003 > d.release_bike
+NameError: uninitialized constant DockingStation::Bike
+	from /Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/lib/docking_station.rb:3:in `release_bike'
+	from (irb):3
+	from /Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/irb:11:in `<main>'
+```
 
-Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
 
-````ruby
-class Bike
+[probably too advanced ... bad habit?]
 
-  # the initialize method is always called when you create a new
-  # class by typing Bike.new
-  def initialize
-    # all instance variables begin with "@"
-    # this must be an instance variable because we'll need it
-    # in other methods
-    @broken = false
+```ruby
+Dir['./lib/*.rb'].each { |f| require f }
+```
+but does fix the above. Alternative is to ensure that the DockingStation knows about the Bike class:
+
+```ruby
+require_relative 'bike'
+
+class DockingStation
+  def release_bike
+    Bike.new
   end
-
-  def broken?
-    # instance variables are accessible in all methods
-    @broken
-  end
-
-  def break!
-    # and any instance method can update them
-    @broken = true
-  end
-
 end
-````
+```
 
-**Now all our examples pass, a perfect time to commit our changes, and to switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows:.
+```sh
+→ irb
+2.1.5 :001 > d = DockingStation.new
+ => #<DockingStation:0x007fe6ab15bb40>
+2.1.5 :002 > b = d.release_bike
+ => #<Bike:0x007fe6ab16b540>
+2.1.5 :003 > b.broken?
+ => nil
+```
+
+We can compare this with the original interface specification and see that we are getting approcimately the behavior we expect.  We get a nil instead of a false, but those are equivalent in Ruby.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
+
+**However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
 **
+
+[TODO link to stage 4 refactoring]

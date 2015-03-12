@@ -1,4 +1,82 @@
-##Stage 4???
+##Stage 4: Refactoring to remove a Design Smell
+
+
+
+
+### Making the broken? method work properly
+
+You may feel suspicious that our unit test passes while we don't have much code just yet. You're right, we're missing something. We're missing more examples! Let's write another one to enable the bike to be broken. After all, if the bike has both states, fixed and broken, it's fair to assume we'll need a method to break a bike as well.
+
+````ruby
+it 'should be able to break' do
+  bike = Bike.new
+  bike.break!
+  expect(bike).to be_broken
+end
+````
+
+So in our example we are creating a new bike, telling it to break and finally we expect it to be broken.
+
+Before you run the example, ask yourself again. What do you expect to see? Will it pass? Will it fail? Why? _It is a good practice if you get yourself into this mode of thinking_
+
+This is the test output:
+
+````ruby
+1) Bike should be able to break
+     Failure/Error: bike.break!
+     NoMethodError:
+       undefined method `break!' for #<Bike:0x007fe7a23fd7c0>
+     # ./spec/bike_spec.rb:16:in `block (2 levels) in <top (required)>'
+````
+
+If we run it, we find out that it fails on `bike.break!` statement because of the `break!` method has not been defined on `Bike`. Fair enough, let's add it to our `Bike` class. Again, [rspec](http://rspec.info) complained about the lack of method, so we're doing the absolute minimum to make our code work.
+
+````ruby
+class Bike
+  def broken?
+  end
+
+  def break!
+  end
+end
+````
+
+_Will the test pass this time? If not, will the error be different? If yes, what will it be?_
+
+Ok, the example is telling us that we expect the bike to be broken but it isn't: the `broken?` method returns `nil` while we expect it to return `true`. _What does it tell us to do?_ If we just make it return `true`, the example will pass but then our first example will fail because it only works because `broken?` is returning nil at the moment ( _and `nil` happens to equal to `false`_ ).
+
+Time to write some real code. Now we have two examples that force us to write some logic. Apparently, our bike should maintain some internal state that should be changed when we break it.
+
+Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
+
+````ruby
+class Bike
+
+  # the initialize method is always called when you create a new
+  # class by typing Bike.new
+  def initialize
+    # all instance variables begin with "@"
+    # this must be an instance variable because we'll need it
+    # in other methods
+    @broken = false
+  end
+
+  def broken?
+    # instance variables are accessible in all methods
+    @broken
+  end
+
+  def break!
+    # and any instance method can update them
+    @broken = true
+  end
+
+end
+````
+
+**Now all our examples pass, a perfect time to commit our changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
+**
+
 
 
 ### Fixing the bike
