@@ -114,7 +114,7 @@ member of public accesses bike
 
 Failures:
 
-  1) member of public accesses bike is not broken
+  1) member of public accesses bike and it is not broken
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation

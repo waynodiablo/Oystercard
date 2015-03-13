@@ -1,6 +1,6 @@
 ## Stage 2: Creating a Docking Station via Unit Tests
 
-So how would you deal with with error?
+So how did you try to deal with the error we saw at the end of stage 1?  Here it is again:
 
 ```sh
 → rake
@@ -16,7 +16,7 @@ member of public accesses bike
 
 Failures:
 
-  1) member of public accesses bike is not broken
+  1) member of public accesses bike and it is not broken
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation
