@@ -1,6 +1,6 @@
 ## Stage 1: Creating a Feature Test
 
-[Is the P in MVP product or prototype?!]
+>Is the P in MVP product or prototype?!
 We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy.  We'll often talk about a Minimum Viable Product (MVP) which is the minimum set of operating features needed for the client to test their business model, but before that we need to start with a single story.  Which story is the most likely to take us towards an MVP? What is the absolute minimum we could implement but still provide some value to the end user? Our first user story sounds promising:
 
 ```
@@ -21,15 +21,12 @@ So that members of the public can access usable bikes,
 I'd like docking stations to release working bikes.
 ```
 
-Let us assume that we are going to have some way of delivering a working bike to a user.  In the real Boris Bike's system this might involve a real person entering their credit card, validation via an online payment gateway and the unlocking of a physical lock to allow a bike to be removed from a real docking station.  In this tutorial let us assume that the interactive ruby (irb) environment is our user interface, and so if someone can type in something like docking_station.release_bike and that we can check that the bike released is not broken, then this corresponds to the high level feature we are looking for, something like this:
+In the real Boris Bike's system this might involve a real person entering their credit card, validation via an online payment gateway and the unlocking of a physical lock to allow a bike to be removed from a real docking station.  In this tutorial let us assume that the interactive ruby (irb) environment is our user interface, and so if someone can type in something like docking_station.release_bike and that we can check that the bike released is working, then this corresponds to the high level feature we are looking for, something like this:
 
 ```sh
 2.1.5 :001 > d = DockingStation.new
-=> #<DockingStation:0x007fcc849f03a0 @bikes=[#<Bike:0x007fcc849f3c80 @broken=false>]>
 2.1.5 :002 > b = d.release_bike
-=> #<Bike:0x007fcc849f3c80 @broken=false>
-2.1.5 :003 > b.broken?
-=> false
+2.1.5 :003 > b.working?
 ```
 
 Our goal is that we can create the necessary classes to support the above functionality.  Why did we choose to name the method that releases a bike into the station `release_bike()`. Naming things is one of [two hardest problems in Computer Science](http://martinfowler.com/bliki/TwoHardThings.html). We could have chosen a different name but this one seems good enough.
@@ -38,9 +35,9 @@ Now we don't want to have to test this functionality by hand every time we chang
 
 RSpec can also be described as a 'Domain Specific Language' (DSL).  In this case RSpec is a language specific to the domain of writing tests in an 'expect' style (note there are other styles - see the RSpec pill). The motivation is to make the tests as readable as possible, in order to make them comprehensible to other developers and ourselves 3 months later when we come back to look at them again.  In particular, the goal is that the tests are not only tests, but a dynamic specifications of the entire system.  The intention is that comprehensibility will lead to good maintainability, since most of the effort developing software comes from maintaining it rather than writing it in the first place.  When change comes, and it most likely will, we want to be able to simply and quickly comprehend what a test is doing and adapt it as necessary.
 
-As mentioned before, in this simple system our feature test will also be an 'integration-test' that checks that two objects in our domain (the DockingStation and the Bike) can interact correctly.
+As mentioned before, in this simple system our feature test is also an 'integration-test' that checks that objects in our domain (the DockingStation and the Bike) interact correctly.
 
-[The following style was particularly irksome for me.  It completely misses the point of well-written RSpec.  I have modified using the feature and scenario syntax to differentiate from unit tests.  Plus I've worded the test so that it reads properly]
+>The style of the original test was particularly irksome for me.  It completely misses the point of well-written RSpec.  I have modified using the feature and scenario syntax to differentiate from unit tests.  Plus I've worded the test so that it reads properly
 
 ```ruby
 # we've chosen to capture the user story under the higher level feature 'Accessing bikes'.
