@@ -20,6 +20,8 @@ Our classes will implement a number of methods. To get an idea of what they may 
 
 Again, not all verbs will become methods and we'll have methods that don't correspond to any verbs in this description but that's ok. Right now we just need a idea of what they could be.
 
+[CRC?  UML diagrams?]
+
 ## Setting up the project
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
@@ -40,4 +42,8 @@ touch README.md
 
 Add some basic explanation of the project to the README and then create a Github repo called 'boris-bikes' (note: please please ensure that the repo on Github is called exactly this, please ensure you use a hypen '-' and not an underscore '_'), and then connect your local repo to the Github repo and push the changes to the README up to Github and confirm that they are visible on Github.  This is a critical backup of your local changes to a remote machine that you MUST repeat as regularly as possible, ideally each time you get your tests to go green.
 
-Anyhow, this is all just throat clearing activity before we start specifying the behaviour of our system with rspec tests, but we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
+Also note that the contents of the README.md file are going to be extremely important.  You are putting your code in public repositories on Github and the README.md file is the first thing that other programmers and potential employers are going to see when they look at your repo.  It's okay to start with a placeholder at the moment, but you will want to keep updating your README as you go along, ensuring that it tells people about the project, how to get set up with it, how to contribute to it etc.
+
+Anyhow, this setup process is all just throat clearing activity before we start specifying the behaviour of our system with RSpec tests.  However it is very important in that we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
+
+[TODO: Link to stage 1]
