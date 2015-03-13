@@ -31,11 +31,14 @@ RSpec can also be described as a 'Domain Specific Language' (DSL).  In this case
 
 As mentioned before, in this simple system our feature test will also be an 'integration-test' that checks that two objects in our domain (the DockingStation and the Bike) can interact correctly.
 
+[NOTE will need gem install capybara - also don't worry about what capybara does yet - that'll come in the next few weeks]
+
 ```ruby
+require 'capybara/rspec' # this allows us to use the terms 'feature' and 'scenario' below -
 #we're describing our high level feature
-describe 'member of public accesses bike' do
+feature 'member of public accesses bike' do
   # this is a specific outcome related to the feature
-  it 'and it is not broken' do
+  scenario 'and it is not broken' do
     docking_station = DockingStation.new # initialize a new object, an instance of the DockingStation class
     bike = docking_station.release_bike  # ask the docking station to release a bike
     expect(bike).not_to be_broken        # expect that bike to respond to the method 'broken?' with false
