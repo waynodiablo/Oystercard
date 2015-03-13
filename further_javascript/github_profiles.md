@@ -1,4 +1,4 @@
-#Week 7 - Advanced JavaScript
+#Week 7 - Further JavaScript
 
 :construction: UNDER CONSTRUCTION :construction:
 
