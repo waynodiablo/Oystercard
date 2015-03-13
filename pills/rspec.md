@@ -31,8 +31,6 @@ describe 'Greeter' do
 end
 ````
 
-[TODO: add note about requiring the file]
-
 Once we save and run this code with **rspec greeter_spec.rb** we will see the code fail. Don't get anxious about this, [RSpec](http://rspec.info) is just trying to tell you what has happened and give you a hint as of what you can do to sort this out.
 
 ```
@@ -77,7 +75,7 @@ There is actually a lot going on here, let's look into it with more detail. Befo
 
 Examples, like this one, follow a common structure. First you prepare your data, then you perform some action and at the end you make sure what you where expecting did happen. We developers like to call that **Given, When, Then**.
 
-Did the example we wrote have these elements? It actually did, the only reason you didn't see them at first is because we wrote them *inline*. How would it look like if we actually separated the example into it's **Given,When, Then** parts?
+Did the example we wrote have these elements? It actually did, the only reason you didn't see them at first is because we wrote them *inline*. How would it look like if we actually separated the example into it's **Given, When, Then** parts?
 
 ````ruby
 it 'greets Rico' do
