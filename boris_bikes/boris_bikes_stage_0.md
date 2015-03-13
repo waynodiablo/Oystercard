@@ -46,4 +46,4 @@ Also note that the contents of the README.md file are going to be extremely impo
 
 Anyhow, this setup process is all just throat clearing activity before we start specifying the behaviour of our system with RSpec tests.  However it is very important in that we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
 
-[TODO: Link to stage 1]
+Let's start with [Stage 1](boris_bikes_stage_1.md).
