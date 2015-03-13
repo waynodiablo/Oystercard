@@ -25,10 +25,12 @@ Now let's write our first unit test in spec/bike_spec.rb. Note that we are placi
 
 Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
+[NOTE we could be talking about the  levels of tests - this unit test could start with responds_to rather than checking for a return value]
+
 ````ruby
 #we're describing the functionality of a specific class, Bike
 describe Bike do
-  # this is a specific feature (behaviour)
+  # this is a specific unit level behaviour
   # that we expect to be present
   it 'is not broken initially' do
     # expect an instance of the Bike class to have
