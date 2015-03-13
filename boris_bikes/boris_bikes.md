@@ -12,35 +12,58 @@ We will create a simple system to support [Boris Bikes in London](https://en.wik
 
 The way to start any project is to specify a few important "User Stories", usually in collaboration with a customer or client.  The stories below are in the commonly used Stakeholder, Motivation, Task format.  Let's imagine that we've just finished a discussion with a customer and identified these key stories that the client believes will deliver value to the end users of the system:
 
+[Some of these user stories don't really make sense as the feature and stakeholder don't seem to be consistent.  Also, they are not necessarily domain specific.  I would prefer:]
+
 ```
 As a member of the public,
-So that I can get across town,
-I'd like to access a bike that is not broken.
+So that I can cycle across town at any time,
+I'd like to have access to a bike that is not broken.
+
+As the owner of the system,
+So that members of the public can access usable bikes,
+I'd like docking stations to release working bikes.
+
+As the owner of the system,
+So that members of the public only get usable bikes,
+I'd like docking stations not to release broken bikes.
 
 As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like docking stations to only release working bikes.
-
-As a maintainer of the system,
-So that members of the public can get usable bikes,
+So that members of the public can return borrowed bikes,
 I'd like docking stations to accept returning bikes (broken or not).
 
+As a member of the public,
+So that I am not frustrated looking for a bike,
+I'd like to know when a docking stations does not have any working bikes.  
+
+As a member of the public,
+So that I am not frustrated returning a bike,
+I'd like to know when a docking station can't receive any more bikes.
+
+As a maintainer of the system,
+So that the maximum number of working bikes is available,
+I'd like vans to collect broken bikes from docking stations and take them to garages be fixed
+
+As a maintainer of the system,
+So that the maximum number of working bikes is available,
+I'd like garages to receive broken bikes from vans and fix them
+
+As a maintainer of the system,
+So that the maximum number of working bikes is available,
+I'd like vans to collect fixed bikes from garages and return them to docking stations
+```
+
+[I have removed the following because they simply don't make sense at this level or are inconsistent:]
+
+```
 As a maintainer of the system,
 So that members of the public are not disappointed,
-I'd like docking stations to not release bikes when there are none available.  
+I'd like docking stations to not release bikes when there are none available
 
 As a maintainer of the system,
 So that members of the public can get usable bikes,
-I'd like docking stations to not accept more bikes than their capacity.  
-
-As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like vans to come to take broken bikes from docking stations, take them to be fixed and then bring them back to the docking stations.
-
-As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
+I'd like docking stations to not accept more bikes than their capacity.
 ```
+And reworded the van and garage features so they are less presumptive of the solution
 
 As you can tell this is a simplified version of the user experience that members of the public and system maintainers have for the real Boris Bikes system in London.  We've left out details of payment and other things to make our first version of the system tractable.  This is often a sensible step in order to build something simple and manageable the first time round and check that things work at that level before adding in more complex interactions.  It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.
 
