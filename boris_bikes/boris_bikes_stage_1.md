@@ -126,7 +126,7 @@ Inspecting 2 files
 
 Failures:
 
-  1) Accessing bikes docking station releases working bike
+  1) Accessing bikes docking station releases a working bike
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation
