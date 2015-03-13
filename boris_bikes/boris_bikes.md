@@ -12,7 +12,7 @@ We will create a simple system to support [Boris Bikes in London](https://en.wik
 
 The way to start any project is to specify a few important "User Stories", usually in collaboration with a customer or client.  The stories below are in the commonly used Stakeholder, Motivation, Task format.  Let's imagine that we've just finished a discussion with a customer and identified these key stories that the client believes will deliver value to the end users of the system:
 
-[Some of these user stories don't really make sense as the feature and stakeholder don't seem to be consistent.  Also, they are not necessarily domain specific.  I would prefer:]
+>Some of these user stories don't really make sense as the feature and stakeholder don't seem to be consistent.  Also, they are not necessarily domain specific.  I would prefer:
 
 ```
 As a member of the public,
@@ -41,18 +41,18 @@ I'd like to know when a docking station can't receive any more bikes.
 
 As a maintainer of the system,
 So that the maximum number of working bikes is available,
-I'd like vans to collect broken bikes from docking stations and take them to garages be fixed
+I'd like vans to collect broken bikes from docking stations and take them to garages to be fixed.
 
 As a maintainer of the system,
 So that the maximum number of working bikes is available,
-I'd like garages to receive broken bikes from vans and fix them
+I'd like garages to receive broken bikes and fix them.
 
 As a maintainer of the system,
 So that the maximum number of working bikes is available,
 I'd like vans to collect fixed bikes from garages and return them to docking stations
 ```
 
-[I have removed the following because they simply don't make sense at this level or are inconsistent:]
+[I have removed the following because they simply don't make sense at this level of abstraction:]
 
 ```
 As a maintainer of the system,
