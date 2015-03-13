@@ -125,7 +125,6 @@ describe DockingStation do
   it { is_expected.to respond_to :release_bike }
 end
 ```
-
 This code should go in spec/docking_station_spec.rb, and should fail with an error like this:
 
 ```sh
@@ -135,7 +134,7 @@ This code should go in spec/docking_station_spec.rb, and should fail with an err
    # ./spec/feature/docking_station_spec.rb:3:in `block (2 levels) in <top (required)>'
 ```
 
-This test is using some more sophisticated RSpec features such as describing the DockingStation class directly, so that we can use the variable 'subject' to refer to an instance of a DockingStation.  Here RSpec is helping us out by doing the equivalent of 'subject = DockingStation.new' before the it block runs.  The respond_to method is doing one of the least rigorous checks that RSpec can do on a Ruby object - it just checks that their is a method of that name available to be called on the object in question. [TODO: add something on hierarchy of testing strategies on objects]
+This test is using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax). This relies on us describing the DockingStation class directly 'describe DockingStation', so that we can use the variables 'is_expected' and 'subject' as appropriate.  The variable 'subject' refers to an instance of a DockingStation.  RSpec is helping us out by doing the equivalent of 'subject = DockingStation.new' before the 'it' block runs.  The 'is_expected' variable is the equivalent of 'expect(subject)'.  The respond_to method is doing one of the least rigorous checks that RSpec can do on a Ruby object - it just checks that their is a method of that name available to be called on the object in question. [TODO: add something on hierarchy of testing strategies on objects]
 
 In order to make this test pass we need to update the DockingStation class to include this method.
 

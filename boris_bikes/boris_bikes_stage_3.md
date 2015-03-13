@@ -37,10 +37,9 @@ describe Bike do
   end
 end
 ````
-
 Again, note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
 
-So, we begin by writing an example (`it`) that describes what we want to see happening. We tell [rspec](http://rspec.info) that we are describing the class Bike (`describe`) and we want our bike to have a single feature: _we are expecting it not to be broken when we create it_.
+So, we begin by writing an example (`it`) that describes what we want to see happening. We tell [rspec](http://rspec.info) that we are describing the class Bike (`describe`) and we want our bike to have a single feature: _we are expecting it not to be broken when we create it_.  Here we are using [RSpec's 'implicitly defined subject' syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).
 
 So, now that you have an idea of what this test does, let's run it.  Assuming you have no RuboCop style offences it will fail with a new type of error.
 
