@@ -128,6 +128,6 @@ Failed examples:
 rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike is not broken
 ```
 
-There's a lot of information here, but it's important to work through it carefully.  There's nothing worse than seeing there's some sort of failure/error and then bashing a way a the code randomly in the hopes of fixing it.  The computer is giving you critical information about the precise nature of the underlying problem and you need to use that to work out what's wrong.  Now if you've worked through the RSpec pill this type of error and how to fix it should be clear. Do you know what to do?
+There's a lot of information here, but it's important to work through it carefully.  There's nothing worse than seeing there's some sort of failure/error and then bashing a way a the code randomly in the hopes of fixing it.  The computer is giving you critical information about the precise nature of the underlying problem and you need to use that to work out what's wrong.  Now if you've worked through the [RSpec pill&nbsp;:pill:](../pills/rspec.md) this type of error and how to fix it should be clear. Do you know what to do?
 
-[TODO link to stage 2]
+Have a go in your pair at fixing this, and then check out [Stage 2](boris_bikes_stage_1.md)
