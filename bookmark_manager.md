@@ -39,7 +39,7 @@ User Interface Sketch (Hi-Fi)
 
 This is the basic view of the website. This tutorial will discuss how to build it, step by step. At the end of the section there are multiple exercises challenging you to extend the functionality of this website.
 
-![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
+![](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
 Note that every project you work on should start with user stories/features in the Stakeholder/Motivation/Action format, and a user interface experience sketch.  Usually that sketch will be Lo-Fi (Low Fidelity), rather than the Hi-Fi (High Fidelity) one that we show here.  In this case imagine that there was a quick Lo-Fi (pencil and paper) sketch that was done, agreed by the client, and was then mocked up in HTML and CSS only, or just using a graphics package like PhotoShop.  Now you have a Hi-Fi mockup and a few user stories you're ready to start!
 
@@ -68,46 +68,14 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 * [Styling the website](#styling-the-website)
 
 
+
 ##Adding the database
 
-In this project, we'll need to store the data in a database. Before we add any functionality, let's add a relational database to this project.
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](https://github.com/makersacademy/course/blob/master/pills/postgres.md)
 
-Firstly, install PostgreSQL (unless you have installed it already). Postgres is a widely used open source relational database engine.
+##Talking to the database
 
-There are two ways of doing this. Downloading the app (2) will, sometimes, leave you with a non-working postgresql installation. We recommend using option 1.
-
-1) Install it through Homebrew with "brew install postgresql" (after it has installed postgres follow the on screen instructions).
-
-2)  In your terminal run
-
-`brew install postgresql`
-
-After homebrew has downloaded the software it will show you some installation instructions, follow them! Ok, they might not be that readable ;)
-
-Make sure you run these commands after installing postgresql with homebrew:
-
-`ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents`<br>
-`launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist`
-
-You can check your installation by running
-
-`psql`
-
-At first it can happen that you don't have a database named after your username (you will see a message along the lines "unknown database 'ecomba'"). Let's create that database for you so that you can login without having to specify the database:
-
-`psql postgres`
-
-`postgres# create database "ecomba";`
-
-`CREATE DATABASE`
-
-`postgres# \q`
-
-
-
-From now on you will be able to log in to postgresql without having to specify the database you want to log into.
-
-To talk to the database, we'll need the datamapper gem. It's an ORM (Object-relational mapper), which means that it's providing a convenient way to interact with our data using classes and objects instead of working with database tables directly.
+To talk to the database, we'll need the [DataMapper](http://datamapper.org/) gem. It's an ORM (Object-relational mapper), which means that it's providing a convenient way to interact with our data using classes and objects instead of working with database tables directly.
 
 Another advantage of datamapper is that is can be used with a variety of database engines, not only postgres. This implies that we'll need to install an adapter to work with postgres, apart from the datamapper itself. Add these gems to your Gemfile:
 
@@ -330,7 +298,7 @@ require 'capybara/rspec'
 Capybara.app = BookmarkManager
 ```
 
-Then, create ```spec/features``` folder where our integration tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
+Then, create ```spec/features``` folder where our integration(Capybara) tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
 ```ruby
 require 'spec_helper'
 
@@ -573,8 +541,7 @@ It turns out we made a mistake in out test. Instead of expecting the link.tags a
 
 ```ruby
 
-expect(link.tags.map(&:text)).to include("education")
-expect(link.tags.map(&:text)).to include("ruby")
+expect(link.tags.map(&:text)).to include "education","ruby"
 
 ```
 Now all our tests pass.

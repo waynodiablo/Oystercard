@@ -1,6 +1,6 @@
 # Bowling Scorecard Challenge
 
-__Test time__: Friday, the entire day + the weekend if you need it
+__Test time__: Friday, the entire day + the week if you need it.
 Feel free to use google, your notes, books, etc but work on your own
 Task:
 
