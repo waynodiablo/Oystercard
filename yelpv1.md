@@ -1229,8 +1229,8 @@ haml:
 - if @restaurant.errors.any?
   %section#errors
     %h2
-        = pluralize @restaurant.errors.count, "error"
-        prohibited this restaurant from being saved:
+      = pluralize @restaurant.errors.count, "error"
+      prohibited this restaurant from being saved:
     %ul
       - @restaurant.errors.full_messages.each do |message|
         %li= message
