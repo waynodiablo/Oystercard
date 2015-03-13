@@ -1,6 +1,7 @@
 ## Stage 1: Creating a Feature Test
 
 >Is the P in MVP product or prototype?!
+
 We cannot possibly implement all functionality at once. We need to start somewhere and then increase the number of features until we are happy.  We'll often talk about a Minimum Viable Product (MVP) which is the minimum set of operating features needed for the client to test their business model, but before that we need to start with a single story.  Which story is the most likely to take us towards an MVP? What is the absolute minimum we could implement but still provide some value to the end user? Our first user story sounds promising:
 
 ```
@@ -37,24 +38,27 @@ RSpec can also be described as a 'Domain Specific Language' (DSL).  In this case
 
 As mentioned before, in this simple system our feature test is also an 'integration-test' that checks that objects in our domain (the DockingStation and the Bike) interact correctly.
 
->The style of the original test was particularly irksome for me.  It completely misses the point of well-written RSpec.  I have modified using the feature and scenario syntax to differentiate from unit tests.  Plus I've worded the test so that it reads properly
+>The style of the original test was particularly irksome for me.  It completely misses the point of well-written RSpec.  I have modified using a nested describe which is important as it provides the subject of the following 'it'.  I've worded the test so that it reads sensibly
 
 ```ruby
-# we've chosen to capture the user story under the higher level feature 'Accessing bikes'.
-# this may change as we add more scenarios, but it is reasonable place to start
-feature 'Accessing bikes' do
+# we've chosen to describe the user story under the higher level feature 'Accessing bikes'.
+# this may change as we add more scenarios, but it's a reasonable place to start
+describe 'Accessing bikes' do
   # the scenario is directly related to the user story and contains
   # at least one specific expectation
-  scenario 'docking station releases working bike' do
-    docking_station = DockingStation.new # initialize a new object, an instance of a DockingStation class
-    bike = docking_station.release_bike  # ask the docking station to release a bike
-    # the following is our expectation.  This is the crucial part that determines if the test passes or fails.
-    expect(bike).to be_working        
+  # in this test, we are describing behaviour of the docking station
+  describe 'docking station'  do
+    it 'releases a working bike' do
+      docking_station = DockingStation.new # initialize a new object, an instance of a DockingStation class
+      bike = docking_station.release_bike  # ask the docking station to release a bike
+      # the following is our expectation.  This is the crucial part that determines if the test passes or fails.
+      expect(bike).to be_working        
+    end
   end
 end
 ```
 
-The above code should be placed in a file in a 'spec/feature' directory and named 'accessing_bikes_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+The above code should be placed in a file in a 'spec/features' directory and named 'accessing_bikes_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
 Note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
 
@@ -69,7 +73,7 @@ Assuming you have the above code in a file in the following structure:
 .
 ├── README.md
 └── spec
-    └── feature
+    └── features
         └── accessing_bikes_spec.rb
 
 ```
@@ -96,7 +100,7 @@ So now our file structure looks like this:
 ├── README.md
 ├── Rakefile
 └── spec
-    └── feature
+    └── features
         └── accessing_bikes_spec.rb
 ```
 
@@ -120,23 +124,20 @@ Inspecting 2 files
 2 files inspected, no offenses detected
 /Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
 
-member of public accesses bike
-  bike is not broken (FAILED - 1)
-
 Failures:
 
-  1) member of public accesses bike and it is not broken
+  1) Accessing bikes docking station releases working bike
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation
-     # ./spec/feature/public_bike_access_spec.rb:3:in `block (2 levels) in <top (required)>'
+     # ./spec/features/accessing_bikes_spec.rb:4:in `block (3 levels) in <top (required)>'
 
-Finished in 0.00049 seconds (files took 0.18432 seconds to load)
+Finished in 0.00055 seconds (files took 0.18941 seconds to load)
 1 example, 1 failure
 
 Failed examples:
 
-rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike is not broken
+rspec ./spec/features/accessing_bikes_spec.rb:3 # Accessing bikes docking station releases working bike
 ```
 
 There's a lot of information here, but it's important to work through it carefully.  There's nothing worse than seeing there's some sort of failure/error and then bashing away at the code randomly in the hopes of fixing it.  The computer is giving you critical information about the precise nature of the underlying problem and you need to use that to work out what's wrong.  Now if you've worked through the [RSpec pill&nbsp;:pill:](../pills/rspec.md) this type of error and how to fix it should be clear. Do you know what to do?
