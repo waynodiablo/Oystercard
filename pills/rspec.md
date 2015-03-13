@@ -15,9 +15,15 @@ Once you have installed [RSpec](http://rspec.info) you can see the different opt
 rspec --help
 ````
 
+Note that RSpec consists of three main components that are documented in detail here:
+
+* [RSpec Core Docs](http://www.relishapp.com/rspec/rspec-core/docs)
+* [RSpec Expectation Docs](http://www.relishapp.com/rspec/rspec-expectations/docs/)
+* [RSpec Mock Docs](http://www.relishapp.com/rspec/rspec-mocks/docs)
+
 ## Hello BDD, hello RSpec
 
-Let's write our first *test driven* program!
+Let's write our first *test driven* program!  In the first instance we'll focus on the RSpec core and RSpec expectations.
 
 We will start with something simple and work our way up from there. Imagine we want to create a method that will greet us. What we want is a method we can call, passing in a name, and have a personalised greeting in return.
 
@@ -85,7 +91,7 @@ it 'greets Rico' do
 end
 ````
 
-Did you notice the **eq**? This is a so called [Matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers). A [matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) is essentially a method that will match the operation inside the expect method (result) with the expectation ('Hello, Rico, how are you today?’). [RSpec](http://rspec.info) has a lot of [build in matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) that you can make use of while writing your specs (*you can even write your own matchers!*)
+Did you notice the **eq**? This is a so called [Matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers). A [matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) is essentially a method that will match the operation inside the expect method (result) with the expectation ('Hello, Rico, how are you today?’). [RSpec](http://rspec.info) has a lot of [built in matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) that you can make use of while writing your specs (*you can even write your own matchers!*)
 
 The next thing we need to do is implement this method, but remember, we only want to implement the **simplest code that could possibly work!**
 
@@ -202,5 +208,7 @@ Resources
 --------
 
 * http://rspec.info
-* https://relishapp.com/rspec
+* [RSpec Core Docs](http://www.relishapp.com/rspec/rspec-core/docs)
+* [RSpec Expectation Docs](http://www.relishapp.com/rspec/rspec-expectations/v/3-2/docs/)
+* [RSpec Mock Docs](http://www.relishapp.com/rspec/rspec-mocks/v/3-2/docs)
 * http://betterspecs.org/

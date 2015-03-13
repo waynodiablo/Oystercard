@@ -2,7 +2,7 @@
 
 Predicate matchers are a nice feature of RSpec to enhance the readability of your code.
 
-We can use predicate matchers any time we're working with methods that *end with a ?*.
+We can use predicate matchers any time we're working with methods that *end with a ?*.  By convention ruby methods that end with a question mark are expected to return a boolean (true or false) value.
 
 ## Expect to be_x
 
@@ -25,7 +25,21 @@ it 'is hairy' do
 end
 ```
 
-The problem here is that our expectation doesn't read like an English sentence. We can refactor our test to use a predicate matcher like so:
+Let's just review we are clear about how the above `expect(fido.hairy?).to eq true` works.  It is pure ruby code with parentheses omitted to make it more readable.  Here's what it would look like as ruby with all the parentheses added in:
+
+```ruby
+expect(fido.hairy?()).to(eq(true))
+```
+
+'expect', 'to' and 'eq' are all methods that RSpec provides.  'eq(true)' calls the RSpec method 'eq' with the single argument 'true', which returns an RSpec [Equality matcher object](http://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/equality-matchers), which is then passed an argument to the RSpec method 'to', which is being called on the the RSpec object that was returned as a result of calling 'expect(fido.hairy?())'.  This might seem hopelessly convoluted, but it is designed to make the end result more readable.
+
+```ruby
+expect(fido.hairy?).to eq true
+```
+
+It's also great practice of your Ruby skills to work out the series of calls and returning objects that support these kinds of statements.
+
+However even though with poetry mode and so forth, this expectation doesn't read like an English sentence. We can refactor our test to use a [predicate matcher](http://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/predicate-matchers) like so:
 
 ```ruby
 it 'is hairy' do
@@ -35,16 +49,6 @@ end
 ```
 
 This test is 100% equivalent to the previous version, but is much more readable. Behind the scenes, RSpec takes everything after the `be_` (`hairy`) - adds a question mark to make `hairy`, then calls that method (expecting it to return a [truthy](https://github.com/makersacademy/course/blob/master/pills/boolean.md) value).
-
-[TODO merge in the below in with the above]
-
-`expect(the_bike).not_to be_broken` seems to be quite complex, let's break it down and analyse it.
-
-The `expect()` method is provided by [rspec](http://rspec.info). It takes the object under test as an argument and returns a special object that has different methods that make the example pass or fail, depending on their arguments. One of these methods is `not_to()` that takes yet another [rspec](http://rspec.info) method `be_broken()` as an argument. Then the `not_to()` method takes a look at its argument and realises that if we don't expect the bike to `be_broken`, we must have a method `broken?()` in the `Bike` class. So it calls this method on the bike object that we passed to the `expect()` method and if it returns true, fails the example because we expect it `not_to` be true (:pill: [RSpec - Predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)).
-
-The paragraph above is still complicated. Read through it several times but if it still seems unclear, don't worry, it's a bit advanced for now. We still want to explain it so that you know that this line of code is some crazy magic. Once you get more experience with [rspec](http://rspec.info), you'll get used to how it works.
-
-[TODO: This document is very wordy - can we pull that language into pills and have more diagrams here?]
 
 Why does it have to be so complicated? Because [rspec](http://rspec.info) is designed to write tests that read like English:
 
@@ -91,7 +95,7 @@ end
 ```
 
 ```ruby
-it 'has no flease' do
+it 'has no fleas' do
   fido = Dog.new
   expect(fido.has_fleas?).to eq false
 end
@@ -100,7 +104,7 @@ end
 Again, we can rewrite this test to be much more readable:
 
 ```ruby
-it 'has no flease' do
+it 'has no fleas' do
   fido = Dog.new
   expect(fido).not_to have_fleas
 end
@@ -157,4 +161,5 @@ end
 
 ## Resources
 
-- [Official RSpec docs on predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/v/3-0/docs/built-in-matchers/predicate-matchers)
+- [Official RSpec docs on predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/
+docs/built-in-matchers/predicate-matchers)
