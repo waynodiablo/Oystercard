@@ -52,7 +52,7 @@ So that the maximum number of working bikes is available,
 I'd like vans to collect fixed bikes from garages and return them to docking stations
 ```
 
-[I have removed the following because they simply don't make sense at this level of abstraction:]
+>I have removed the following because they simply don't make sense at this level of abstraction:
 
 ```
 As a maintainer of the system,
@@ -63,7 +63,7 @@ As a maintainer of the system,
 So that members of the public can get usable bikes,
 I'd like docking stations to not accept more bikes than their capacity.
 ```
-And reworded the van and garage features so they are less presumptive of the solution
+>And reworded the van and garage features so they are less presumptive of the solution
 
 As you can tell this is a simplified version of the user experience that members of the public and system maintainers have for the real Boris Bikes system in London.  We've left out details of payment and other things to make our first version of the system tractable.  This is often a sensible step in order to build something simple and manageable the first time round and check that things work at that level before adding in more complex interactions.  It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.
 
