@@ -4,7 +4,7 @@
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-*Many thanks to [Alex Peattie](https://github.com/alexpeattie) for the original design of the Ajax material and [Antony Denyer](https://github.com/antonydenyer) for the Angular material*
+*Many thanks to [Alex Peattie](https://github.com/alexpeattie) and [Tansaku](https://github.com/tansaku) for the original design of the Ajax material and [Antony Denyer](https://github.com/antonydenyer) for the Angular material*
 
 Congratulations on reaching Week 7 and attaining senior cohort status! From this point on, you will notice that there is far less 'scaffolding' in the walkthroughs. It is assumed that on reaching this stage in the course you are more familiar with technical language, reading documentation and utilising resources such as [Stack Overflow](http://stackoverflow.com/), your byte group and your pair. Whilst we will still structure your learning with learning objectives, resources and challenges, we encourage you to go 'off the beaten track'. Feel free to explore interesting frameworks and side projects - as long as you are working in a pair, writing tests and writing clean code, (pretty much) anything goes!
 
@@ -18,7 +18,11 @@ The project will involve using JavaScript to consume data available from third p
 
 The project will need to be deployed to Heroku, and the choice of back-end server is up to you: Node for the brave, Ruby for the stable.
 
-**Experimentation is encouraged - the guides below are a suggested framework. How you achieve this is up to you.**
+Here's one interpretation of what this could look like:
+
+![GitHub profile viewer](/images/ghprofile.png)
+
+**Experimentation is encouraged - the guides below are a suggestion, not an absolute. How you achieve the final goal is up to you.**
 
 ###Knowledge
 
@@ -32,26 +36,17 @@ Make sure you have worked through these pills before starting:
 
 ##Version 1 - More jQuery
 
-Last week you queried a static weather API to get you started. Now, you can use that knowledge to grab information from the GitHub API.
+Last week you queried a static weather API to get you started. Now, you can use that knowledge to grab information from the GitHub API. If you want a refresher on AJAX with jQuery, the guides below can serve as a refresher:
+
+**These guides are currently not test-driven - how would you do this in a test-driven way?**
 
 - [AJAX Introduction](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_introduction.md)
 - [AJAX with extra jQuery](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_with_extra_jquery.md)
-- If you're interested in a bit of UX, you can also try working through [Spinners and Modals](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_jquery_spinners.md)
+- If you're interested in a bit of UX and how to deal with network latency, you can also try working through [Spinners and Modals](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_jquery_spinners.md)
 
-##Version 1 - Angular
+##Version 2 - Angular
+
 [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
-
-##Version 2 - Usability
-
-Let's adjust the simple profile application to ensure that it gives a good user experience even under poor network connectivity, and let's the user know when searches for users have failed or the network connection has timed out.
-
-Here's an example of a message indicating we can't find a particular user:
-
-![user not found](https://www.dropbox.com/s/r4gamssxfj3hgog/Screenshot%202014-12-02%2008.39.45.png?dl=1)
-
-And here's an example of an animated spinner that can be shown to indicate that the network connection is in progress:
-
-![spinner](http://traindaze.com/assets/images/loader.gif)
 
 ##Version 3 - Deploying to Heroku
 
