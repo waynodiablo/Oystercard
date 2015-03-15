@@ -57,6 +57,9 @@ If you want to try Node, have a look at these resources:
 * :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
 * [Node guide](https://github.com/makersacademy/course/blob/master/node_guide.md)
 
+If you are deploying with Sinatra, you may want to read this:
+
+* [Deploying your Sinatra/Angular application to Heroku](https://github.com/makersacademy/course/blob/master/pills/deploying_angular_sinatra.md)
 
 ##Version 4 - Report Card
 
