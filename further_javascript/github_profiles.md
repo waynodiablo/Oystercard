@@ -40,13 +40,13 @@ Last week you queried a static weather API to get you started. Now, you can use 
 
 **These guides are currently not test-driven - how would you do this in a test-driven way?**
 
-- [AJAX Introduction](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_introduction.md)
-- [AJAX with extra jQuery](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_with_extra_jquery.md)
-- If you're interested in a bit of UX and how to deal with network latency, you can also try working through [Spinners and Modals](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_jquery_spinners.md)
+* [AJAX Introduction](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_introduction.md)
+* [AJAX with extra jQuery](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_with_extra_jquery.md)
+* If you're interested in a bit of UX and how to deal with network latency, you can also try working through [Spinners and Modals](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_jquery_spinners.md)
 
 ##Version 2 - Angular
 
-[Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
+* [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
 
 ##Version 3 - Deploying to Heroku
 
@@ -55,11 +55,10 @@ Now we have a working, usable application, lets deploy to Heroku so that it can 
 If you want to try Node, have a look at these resources:
 
 * :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
-* [Walkthrough: A basic Node server](https://github.com/makersacademy/course/blob/master/node/basic_node_server.md)
+* [Node guide](https://github.com/makersacademy/course/blob/master/node_guide.md)
 
 
 ##Version 4 - Report Card
-
 
 Adjust the application to display a Makers Academy progress report for the user in question, including at least #commits on each relevant Github Repo.
 
