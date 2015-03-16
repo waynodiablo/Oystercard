@@ -3,7 +3,7 @@
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 * [Introduction](intro.md)
-* Week 1: [OOD & OOP Basics: Boris Bikes](https://github.com/makersacademy/course/blob/master/boris_bikes.md)
+* Week 1: [OOD & OOP Basics: Boris Bikes](boris_bikes/boris_bikes.md)
 * Week 2: [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
 * Week 3: [Welcome to the web: Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
 * Week 4: [Databases: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
@@ -34,7 +34,7 @@ Here you will find other, relevant materials and challenges that will help you o
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 - Your alumni helpers are [Nicole](https://github.com/NicolePell), [Tim](https://github.com/Scully87), [Andrew](https://github.com/snozza) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
-![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128) 
+![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128)
 ![Andrew](https://avatars3.githubusercontent.com/u/6886844?v=3&s=128)
 
 - List of good places to work at the weekend
@@ -43,4 +43,3 @@ Here you will find other, relevant materials and challenges that will help you o
   - [Fix](http://www.fix-coffee.co.uk)
   - [Timber Yard](http://timberyardlondon.com)
   - [Salvation Jane](www.salvationjanecafe.co.uk/)
-
