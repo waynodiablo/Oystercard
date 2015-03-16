@@ -111,11 +111,11 @@ Inspecting 2 files
 /Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
 
 member of public accesses bike
-  bike is not broken (FAILED - 1)
+  docking station releases a bike that is not broken (FAILED - 1)
 
 Failures:
 
-  1) member of public accesses bike and it is not broken
+  1) member of public accesses bike docking station releases a bike that is not broken
      Failure/Error: docking_station = DockingStation.new
      NameError:
        uninitialized constant DockingStation
