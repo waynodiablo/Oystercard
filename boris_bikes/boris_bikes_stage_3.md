@@ -134,23 +134,41 @@ Our code is still extremely basic but we're getting somewhere.  Our Bike is not 
 
 We've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
 
-Notice that this code still doesn't check that the Bike is initially not broken.   We can do that with:
+Notice that this code still doesn't check that the Bike is initially not broken.  This corresponds to a more rigorous test, actually checking what the method returns.  We can do that with the following [predicate](https://www.relishapp.com/rspec/rspec-expectations/
+docs/built-in-matchers/predicate-matchers) syntax:
 
 ````ruby
 require 'bike'
 describe Bike do
+  it { is_expected.to respond_to :broken? }
   context 'when created' do
     it { is_expected.to not_to be_broken}
   end
 end
 ````
 
-However interesting this test will just pass as is.  Can you work out why?
+However interestingly even though this is a more rigorous test it will just pass as is.  Can you work out why?
+
+Notice also that our first it statement is redundant.  Since we call the method 'broken?' in the second 'it' statement DockingStation is implicitly checked for responding to 'broken?'.  Arguably we could delete the first 'it' statement with no loss.  Let's do that.  It's good habit to get into; deleting code that is not doing anything for you.
 
 
 ### Making the feature test pass
 
-As usual we want to do the absolutely simplest thing possible to make our test pass.  In this case, that is to update our Docking Station as follows:
+So all our unit tests now pass, but still not our feature test.  As usual we want to do the absolutely simplest thing possible to make our test pass.  We might be tempted to bash away at application code, but it's our feature test that's failing, so we need a new unit test:
+
+```ruby
+describe DockingStation do
+  it { is_expected.to respond_to :release_bike }
+  it 'releases bikes that are not broken' do
+    bike = subject.release_bike
+    expect(bike).not_to be_broken
+  end
+end
+```
+
+Running our tests now we should have a matching unit and acceptance test.  BTW, can you see any code that could safely be deleted now?
+
+Now, assuming that we have no more unrevealed feature test errors, what's the simplest thing we could possibly do to make this unit test pass?  How about updating our Docking Station as follows:
 
 ```ruby
 class DockingStation
