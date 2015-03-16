@@ -18,9 +18,9 @@ The project will involve using JavaScript to consume data available from third p
 
 The project will need to be deployed to Heroku, and the choice of back-end server is up to you: Node for the brave, Ruby for the stable.
 
-Here's one interpretation of what this could look like:
+Here's a wireframe of one possible design:
 
-![GitHub profile viewer](/images/ghprofile.png)
+![GitHub profile viewer](https://makersacademy.mybalsamiq.com/mockups/2895691.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
 
 **Experimentation is encouraged - the guides below are a suggestion, not an absolute. How you achieve the final goal is up to you.**
 
