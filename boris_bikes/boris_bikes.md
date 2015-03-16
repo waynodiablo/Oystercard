@@ -12,7 +12,7 @@ The goal of this project is to introduce you to:
 
 For an overview of the baseline skills and concepts you will be learning during this project, see this week's [Learning Objectives](learning_objectives.md).
 
-***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](../pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
 
 ***Also watch out for the :running_shirt_with_sash: ATHLETIC WAYPOINTS.  We recommend you stop at these points to try re-creating the code so far from scratch without looking at the tutorial.  This is a great exercise at the start of a new day with a new pair partner***
 
