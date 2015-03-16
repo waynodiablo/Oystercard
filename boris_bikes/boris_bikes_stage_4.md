@@ -209,7 +209,7 @@ end
 
 Rubocop gets a bit antsy with methods like this that are just variations on getters and setters (see the [getters and setters pill&nbsp;](../pills/getters_and_setters.md)).  There is a simple fix that the RuboCop author suggests: https://github.com/bbatsov/rubocop/issues/251
 
-```
+```ruby
 class DockingStation
   attr_accessor :bike
   alias_method :release_bike, :bike
@@ -219,7 +219,7 @@ end
 
 However we find ourselves backing out of at least partly in order to throw an error when we have no bike.
 
-```
+```ruby
 class DockingStation
   attr_writer :bike
   alias_method :dock, :bike=
