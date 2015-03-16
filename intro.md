@@ -1,7 +1,7 @@
 Introduction
 ===========
 
-The Makers Academy experience is designed to emulate important aspects of getting hired and working as a software developer.  Software developers don't spend hours sitting in lectures. They have quick standup meetings each morning and then learn on the job, researching new things collaboratively with their peers.  To reflect this the Makers Academy week is divided into three essential components:
+The Makers Academy experience is designed to emulate important aspects of working as a software developer and applying for software developer jobs.  Software developers don't spend hours sitting in lectures, either in their jobs or during job search. At work they have quick standup meetings each morning and then learn on the job, researching new things collaboratively with their peers.  Hunting for jobs they do technical tests, attend interviews and work on open source projects. To reflect this the Makers Academy week is divided into three essential components:
 
 1. Coding Challenges
 2. Code Review
@@ -9,14 +9,14 @@ The Makers Academy experience is designed to emulate important aspects of gettin
 
 The coding challenges are a simulation of the kinds of technical tests you will need to pass to get a job with a software company.  The code reviews and pair programming projects are a replica of the activities you will need to excel at as part of your job in a software company.
 
-As part of the Makers experience you will be placed in a 'Byte' which consists of approximately 8 students.  You will be assigned a coach as LSB who will serve to help you organize and run 'Byte' meetings.  You will have a twice daily short 'standup' meeting with your Byte in order to identify common problems and solutions.  Standups traditionally have people stand up rather than sit in order to ensure that the meeting is short. More details below.
+As part of the Makers experience you will be placed in a 'Byte' which consists of approximately 8 students.  Think of this as your software engineering team.  You will be assigned a coach as LSB who will serve to help you organize and run 'Byte' meetings.  You will have a twice daily short 'standup' meeting with your Byte in order to identify common problems and solutions.  Standups traditionally have people stand up rather than sit in order to ensure that the meeting is short. More details below, but first let's look at an overview of a standard Makers week.
 
 Overview of the Makers Week
 -------------------------
 
 Coding challenges are released every Friday and your attempted solution must be submitted via pull request by Monday at 9am.  It does not matter if you complete the challenge or not.  Submit the challenge with however much or how little code you have working.  Mondays are code review days and you will receive both peer and coach feedback on your code.
 
-Tuesdays, Wednesday and Thursdays are pair programming project days.  You will work in a pair with another student to complete a coding project. The following diagram summarizes the flow of the week:
+Tuesdays, Wednesday and Thursdays are pair programming project days.  You will work in a pair with another student to work on a coding project. Ideally you will swap pair partners each day.  The following diagram summarizes the flow of the week:
 
 ![Makers Week](https://github.com/makersacademy/course/blob/master/images/makers-week.png)
 
