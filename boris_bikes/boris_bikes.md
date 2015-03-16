@@ -1,14 +1,12 @@
 # BDD, TDD & OOP Basics: Boris Bikes
 
-:construction: UNDER CONSTRUCTION :construction:
-
-The goal of this project is to introduce you to: 
+The goal of this project is to introduce you to:
 
 - [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development);
 - how BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
 - the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
 
-**BDD** and **TDD** are often used as part of an *Agile* development process. Agile and BDD work well together as they help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.   
+**BDD** and **TDD** are often used as part of an *Agile* development process. Agile and BDD work well together as they help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.
 
 **OOP** is a style of programming that encourages us to break code up into 'objects'. This 'modularization' leaves our code flexible, anticipating future changes.  Changes are guaranteed as a project progresses: inevitably, we will discover that end users derive more value from something different than what we have built so far. While we cannot plan for the specific changes they will require (because we don't know them yet!), OOP encourages us to write code that is easy to change in any circumstance. DDD emphasizes the development of a 'domain model', which describes the relations between objects in the language of the end user.
 
@@ -66,7 +64,7 @@ So that members of the public can get usable bikes,
 I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
 ```
 
-This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity. 
+This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
 
 *It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.*
 

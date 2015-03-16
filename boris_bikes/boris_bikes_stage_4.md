@@ -1,5 +1,8 @@
 ##Stage 4: Refactoring vs New Features
 
+
+:construction: UNDER CONSTRUCTION :construction:
+
 Our feature test is passing ensuring that we are delivering value to our client.  We've got a unit tests for the Bike and DockingStation classes.  However our DockingStation is very tightly coupled to the Bike class.  It might seem obvious that all a DockingStation ever needs to do is release Bikes, but Ruby programmers pride themselves on programming to interfaces (the way objects behave), not locking an implementation to a particular type of class.  All our feature test requires is that DockingStations provide objects that respond to the 'broken?' method.  Ultimately it doesn't care what the class of the object we are calling it on.  In the future our client might want docking stations to release objects of class MountainBike or Scooter or what have you, and we imagine our end user will continue to want objects that are not broken, or at least to be able to tell if they are broken or not.  
 
 [CONCERN - IS KLASS STUFF BELOW TOO COMPLEX FOR THIS STAGE --> SAVE TO WEEK 2?]
