@@ -24,7 +24,7 @@ Organizational meetings are designed to reflect those used in real software comp
 
 ![Makers Week Details](https://github.com/makersacademy/course/blob/master/images/makers-week-details.png)
 
-Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into a little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue"
+Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into a little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue".
 
 Overview of the Course Week
 -------------------------
@@ -33,16 +33,16 @@ The weekly structure is maintained consistently for the first five weeks, but th
 
 **Junior Portion**
 
-1    |  2          | 3               | 4                | 5          | 6              |
------|-------------|-----------------|------------------|------------|----------------|
-Boris Bikes   | BattleShips | Battleships Web | Bookmark Manager | JavaScript | Lab Week |
+1             |  2          | 3               | 4                | 5          | 6        |
+--------------|-------------|-----------------|------------------|------------|----------|
+Boris Bikes   | Tic Tac Toe | Tic Tac Toe Web | Bookmark Manager | JavaScript | Lab Week |
 
 
 **Senior Portion**
 
-7    |  8    | 9                 | 10               | 11     | 12     |
------|-------|-------------------|------------------|--------|--------|
-Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Hiring Week |
+7                  |  8                | 9      | 10        | 11        | 12              |
+-------------------|-------------------|--------|-----------|-----------|-----------------|
+Further JavaScript | Makerthon (Teams) | Rails  | Project 1 | Project 2 |   Hiring Week   |
 
 
 
