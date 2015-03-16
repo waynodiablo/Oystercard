@@ -105,7 +105,7 @@ feature 'member of public accesses bike' do
 end
 ```
 
-RSpec simply concatenates 'member of public accesses bike' from the describe statement and the 'is not broken' from the "it" block.  So, what's the failure of the test?
+RSpec simply concatenates 'member of public accesses bike' from the describe statement and the 'docking station releases a bike that is not broken' from the "it" block.  So, what's the failure of the test?
 
 ````ruby
 Failure/Error: bike = docking_station.release_bike
@@ -118,7 +118,7 @@ First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec
 
 So, the test is almost telling us what to do. We don't have the method `release_bike`, and it's tempting to just go ahead and create one, however we are at the feature test level, and in general we should avoid adjusting the code in our application until we are at the unit test level.
 
-Instead let's create a unit test that checks that DockingStations have this method:
+Instead let's use the more rigorous practice of creating a unit test that checks that DockingStations have this method:
 
 ```ruby
 require 'docking_station'
@@ -126,7 +126,8 @@ describe DockingStation do
   it { is_expected.to respond_to :release_bike }
 end
 ```
-This code should go in spec/docking_station_spec.rb, and should fail with an error like this:
+
+Notice that we are using the more common RSpec describe/it syntax here.  This code should go in spec/docking_station_spec.rb, and should fail with an error like this:
 
 ```sh
 1) DockingStation should respond to #release_bike
@@ -135,9 +136,24 @@ This code should go in spec/docking_station_spec.rb, and should fail with an err
    # ./spec/feature/docking_station_spec.rb:3:in `block (2 levels) in <top (required)>'
 ```
 
-This test is using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax). This relies on us describing the DockingStation class directly 'describe DockingStation', so that we can use the variables 'is_expected' and 'subject' as appropriate.  The variable 'subject' refers to an instance of a DockingStation.  RSpec is helping us out by doing the equivalent of 'subject = DockingStation.new' before the 'it' block runs.  The 'is_expected' variable is the equivalent of 'expect(subject)'.  The respond_to method is doing one of the least rigorous checks that RSpec can do on a Ruby object - it just checks that their is a method of that name available to be called on the object in question. [TODO: add something on hierarchy of testing strategies on objects]
+This test is using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax). Notice how it has constructed a label for the test: "DockingStation should respond to #release_bike".  We could just as easily write the test like so:
 
-In order to make this test pass we need to update the DockingStation class to include this method.
+```ruby
+require 'docking_station'
+describe DockingStation do
+  it 'DockingStation should respond to #release_bike' do
+    expect(subject).to respond_to :release_bike
+  end
+end
+```
+
+which uses the RSpec [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject) syntax. The advantage of the one liner syntax is that it DRYs out our code.  This is such a simple test that its descripton is completely predictable.  As a developer you must constantly ensure that your test descriptions match what is tested and that your method names describe what happens when they are called.
+
+Using either the 'implicitly defined subject' or the 'one_liner' syntaxes relies on us describing the DockingStation class directly via 'describe DockingStation', so that we can use the variables 'is_expected' and 'subject' as appropriate.  The variable 'subject' refers to an instance of a DockingStation.  RSpec is helping us out by doing the equivalent of 'subject = DockingStation.new' before the 'it' block runs.  The 'is_expected' variable is the equivalent of 'expect(subject)'.
+
+Note also that the respond_to method is doing one of the least rigorous checks that RSpec can do on a Ruby objects behaviour - it just checks that their is a method of that name available to be called on the object in question. More rigorous checks include actually calling a method, checking the return value from a method, and checking for changes of state after a method has been called.  Choosing the way in which we check an objects behaviour is a critical part of the testing process.  In this case we're choosing the lightest possible check as the absence of the method is what our feature test is complaining about.  We mustn't let our unit tests get ahead of what's needed in order to pass our feature test.
+
+In order to make this current unit-test to pass we need to update the DockingStation class to include this method.
 
 ````ruby
 class DockingStation
@@ -146,7 +162,7 @@ class DockingStation
 end
 ````
 
-This should take us onto a new error 'Woohoo!'.  More information to help us work out what is going on:
+Assuming no style isses, our DockingStation unit test will pass, and our acceptance test will move on to a new error: 'Woohoo!'.  More information to help us work out what is going on:
 
 ```sh
 member of public accesses bike
@@ -167,10 +183,8 @@ Failed examples:
 rspec ./spec/feature/public_bike_access_spec.rb:4 # member of public accesses bike bike is not broken
 ```
 
-This error is a little more difficult to interpret.  At the moment our `release_bike` method on docking station returns nothing, a `nil` in fact, which gets represented as an empty string in the failure message "expected  to respond to `broken?`".  If we were writing a unit test of the Docking Station this would be a point that we might want to start using a Bike 'double' (a kind of stunt stand in - see doubles pill TODO) to ensure that this test was isolated from the particular implementation of Bike.  However we are writing a feature or integration test that does not want to 'stub out' the behaviour of collaborator classes unless it is to avoid randomness or interaction with 3rd party services (e.g. Twitter, Google and so on).
+This error is a little more difficult to interpret.  At the moment our `release_bike` method on docking station returns nothing, a `nil` in fact, which gets represented as an empty string in the failure message "expected  to respond to `broken?`".  If we were writing a unit-test of the Docking Station this would be a point that we might want to start using a Bike 'double' (a kind of stunt stand in - see the [doubles pill&nbsp;:pill:](../pills/doubles.md)) to ensure that this test was isolated from the particular implementation of Bike.  However we are writing a feature or integration test that does not want to 'stub out' the behaviour of collaborator classes unless it is to avoid randomness or interaction with 3rd party services (e.g. Twitter, Google and so on).
 
-This is a great point to drop from the acceptance/feature test level to the unit test level.  It's clear we are going to need a Bike class that can respond to a `broken?` method.
+This is a great point to drop from the acceptance/feature test level to the unit-test level again.  One way to make progress here is to unit-test drive the creation of a Bike class that can respond to a `broken?` method.  Have a think about how that would work before going to [Stage 3](boris_bikes_stage_3.md).
 
-We've changed the error message again, so it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the change-the-message pairing methodology.
-
-[TODO link to stage 3]
+Also, since we've changed the error message again, it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the [change-the-message pairing methodology](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
