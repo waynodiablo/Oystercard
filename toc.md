@@ -32,10 +32,13 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
-- Your alumni helpers are [Nicole](https://github.com/NicolePell), [Tim](https://github.com/Scully87), [Andrew](https://github.com/snozza) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [Nicole](https://github.com/NicolePell), [Ptolemy](https://github.com/ptolemybarnes), [Jake](https://github.com/jacobmitchinson), [Emily](https://github.com/emilysas), [Kieran](https://github.com/kierangoodacre) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
 ![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128)
-![Andrew](https://avatars3.githubusercontent.com/u/6886844?v=3&s=128)
+![Ptolemy](https://avatars2.githubusercontent.com/u/9342866?v=3&s=128)
+![Jake](https://avatars0.githubusercontent.com/u/9607886?v=3&s=128)
+![Emily](https://avatars1.githubusercontent.com/u/7489940?v=3&s=128)
+![Kieran](https://avatars3.githubusercontent.com/u/9266294?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
