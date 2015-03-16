@@ -3,8 +3,8 @@
 The goal of this project is to introduce you to:
 
 - [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development);
-- how BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
-- the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
+- How BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
+- The process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
 
 **BDD** and **TDD** are often used as part of an *Agile* development process. Agile and BDD work well together as they help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.
 
@@ -108,13 +108,6 @@ This pyramid diagram indicates the likely distribution of tests we have in anyth
 
 In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of classes that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike some objects get created somewhere in the system that tracks the usage of all bikes.
 
-[TODO: NEED TO MENTION RED-GREEN-REFACTOR MORE]
-[TODO: All stages need to be carefully checked for pair swap points and athletic coding waypoints]
-[CONCERN: stage 7 not sufficiently checked]
-[TODO: UML DIAGRAMS]
-[TODO: OBJECT UNDER TEST DIAGRAMS - respond, call, return, state change]
-[TODO: ACCEPTANCE-UNIT TEST BOUNCE DIAGRAM - ABOVE?]
-
 ## Stage 0: Domain Model and Project Setup
 
 Let's begin by fleshing out our domain model and getting a base project set up.
@@ -169,59 +162,34 @@ Now, just like a real project the client has come back to us with more requests:
 
 1. Return real bikes.  Use this new story from the client to create the appropriate feature tests and unit-tests to drive the creation of the application code that will support this feature.  Ensure that you refactor where appropriate:
 
-```
-As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like docking stations to ensure that returned entities are actually bikes
-```
+  ```
+  As a maintainer of the system,
+  So that members of the public can get usable bikes,
+  I'd like docking stations to ensure that returned entities are actually bikes
+  ```
 
-[Hint: in this context, something is a bike if it responds to the :broken? method. And the feature test for this user story will correspond to ensuring that if docking_station.dock(nil) or docking_station.dock(Elephant.new) is called then some kind of error should be given]
+  [Hint: in this context, something is a bike if it responds to the :broken? method. And the feature test for this user story will correspond to ensuring that if docking_station.dock(nil) or docking_station.dock(Elephant.new) is called then some kind of error should be given]
 
 2. The client asks for the whole system to be repurposed for petrol engine scooters.  Everything else stays the same - create BorisScooters.  How much of your existing code can you re-use?
 
 3. User interface request. Our users are getting tired of starting irb to access their bikes.  Help them out by providing a text interface that they can start via a command line call like 'ruby boris_bikes.rb':
 
-```
-As a member of the public,
-So that I can avoid the hassle of starting IRB,
-I'd like a text interface that can be run from the command line.
-```
+  ```
+  As a member of the public,
+  So that I can avoid the hassle of starting IRB,
+  I'd like a text interface that can be run from the command line.
+  ```
 
 As you work on new features ensure to keep the following in mind:
 
 * Identify any corner cases that might cause the system to behave erratically. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
 * Identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 3-4 lines? Does anything look ugly to you?
 
-Other possible feature requests and system changes
-* Bikes now break with some random frequency, ensure you stub out that randomness to ensure your tests always pass
-* DockingStations can now fix bikes themselves
-* Garages can now release individual bikes to users
-* Vans can run out of petrol and have to be refill at petrol stations
-* Users must pay to release bikes, docking stations must check user credit levels
-
 
 ## Supporting Material
-
-### Pills
-
-- :pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
-- :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
-- :pill: [Understanding self, the current/default object](https://github.com/makersacademy/course/blob/master/pills/self.md)
-
-### Resources
 
 - [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
 - [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
 - [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
 - [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
 - [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
-
-### Related Videos
-
-- [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
-- [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
-- [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
-- [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
-- [The Ruby Way II](https://www.youtube.com/watch?v=bl2GhZMZeXg)
