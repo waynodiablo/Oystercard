@@ -5,7 +5,7 @@ We cannot possibly implement all functionality at once. We need to start somewhe
 ```
 As a member of the public,
 So that I can get across town,
-I'd like to access a bike that is not broken from a docking station.
+I'd like a docking station to release a bike that is not broken.
 ```
 
 It's interesting to reflect that one could imagine a version of the boris bikes system that had no code or infrastructure at all.  There could simply be places where bikes could be left unlocked.  Bike rental would be free, and bikes would be returned or not on an honour policy.  One might argue that in London that would soon lead to all the bikes being stolen or broken, and so some system for managing fees and repairs and so forth was essential.  An honour based Boris Bikes system might seem like a joke, but it's excellent practice to check your assumptions.  Could what the client wants be delivered without writing a line of code?  Every line of code you write is a line of code that you may have to maintain in future. Every line of code you write now will support certain features that the client currently wants, but the client may change their mind, or the market may evolve, or who knows what.

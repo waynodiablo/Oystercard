@@ -39,7 +39,7 @@ We identify User Stories by discussing with a customer and listening to or promp
 ```
 As a member of the public,
 So that I can get across town,
-I'd like to access a bike that is not broken from a docking station.
+I'd like a docking station to release a bike that is not broken.
 
 As a maintainer of the system,
 So that members of the public can get usable bikes,
