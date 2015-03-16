@@ -67,7 +67,8 @@ You:
 * MUST create StackOverflow account
 * REALLY SHOULD post or upvote on SO at least once a week
 * MUST use sequence of asking for help (pair partner, peer, senior, stack-overflow, alumni-helper, coach)
-* MUST do 121s and feedback
+* MUST submit code challenges
+* MUST do byte planning, standups and retrospectives
 * MUST show up
 
 Ultimately we want all of you to be able to manage the whole web development stack, completely independently of us.
