@@ -3,9 +3,9 @@ Introduction
 
 The Makers Academy experience is designed to emulate important aspects of getting hired and working as a software developer.  Software developers don't spend hours sitting in lectures. They have quick standup meetings each morning and then learn on the job, researching new things collaboratively with their peers.  To reflect this the Makers Academy week is divided into three essential components:
 
-1) Coding Challenges
-2) Code Review
-3) Pair Programming Projects
+1. Coding Challenges
+2. Code Review
+3. Pair Programming Projects
 
 The coding challenges are a simulation of the kinds of technical tests you will need to pass to get a job with a software company.  The code reviews and pair programming projects are a replica of the activities you will need to excel at as part of your job in a software company.
 
@@ -53,7 +53,7 @@ Each week there will be learning objectives relating to the particular project a
 
 
 * Office Hours (9am-9pm)
-* Access to coaches (9am-noon - 2:30pm-6pm)
+* Coach Availability (9am-noon - 2:30pm-6pm)
   - supporting you becoming active learners
   - wean yourself off the coaches and alumni helpers
 * Weekly schedule - subject to change, just like the world of technology
