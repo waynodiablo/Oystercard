@@ -30,17 +30,17 @@ Failed examples:
 rspec ./spec/feature/public_bike_access_spec.rb:2 # member of public accesses bike is not broken
 ```
 
-Let's look through it piece by piece.  The very first output is just RuboCop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'describe' and 'it' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
+Let's look through it piece by piece.  The very first output is just RuboCop checking for style violations.  After that we have the RSpec output.  Let's read through it carefully.  First we see the contents of the strings we passed to the RSpec 'feature' and 'scenario' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem 'docking_station = DockingStation.new', the type of error 'NameError' and even tells us the line number and the complete file path where the issue occurred.
 
 In this case, the problem is in the file `spec/feature/public_bike_access_spec.rb` on line 3. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and it's human-readable explanation is _"uninitialized constant DockingStation"_.
 
 The _"uninitialized constant DockingStation"_ means that Ruby doesn't know what `DockingStation` is.
 
-Now, stop for a second and think about what could be the reason for the error. The answer may be obvious because this particular problem is so simple but it's important to take this step and ask yourself the question every time you see an error. Don't assume the first thing that comes to mind. Think about what is the most likely reason Ruby doesn't know about `DockingStation`.
+Now, stop for a second and think about what could be the reason for the error. The answer may be obvious because this particular problem is relylative simple but it's important to take this step and ask yourself this question every time you see an error. Don't assume the first thing that comes to mind. Think about what is the most likely reason Ruby doesn't know about `DockingStation`.
 
-If you guessed that `uninitialized constant DockingStation` error happened because we never defined what a DockingStation is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
+If you guessed that the `uninitialized constant DockingStation` error happened because we never defined what a DockingStation is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
 
-This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has written this first test, and got a first error.  Errors are a great time to switch roles so you can work to the 'change-the-message' pairing protocol.
+This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has written this first test, and got a first error.  Errors are a great time to switch roles so you can work to the ['change-the-message' pairing protocol](https://github.com/makersacademy/course/blob/master/pills/pairing.md#change-the-message-between-programmer-a-and-b).
 
 Let's define the DockingStation class. Create `lib/docking_station.rb` and define an empty DockingStation class.
 
@@ -61,9 +61,10 @@ Add a `require` statement to the spec.
 
 ```ruby
 require 'docking_station'
+require 'capybara/rspec'
 
-describe 'member of public accesses bike' do
-  it 'bike is not broken' do
+feature 'member of public accesses bike' do
+  scenario 'docking station releases a bike that is not broken' do
     docking_station = DockingStation.new
     bike = docking_station.release_bike
     expect(bike).not_to be_broken
@@ -76,11 +77,11 @@ Now assuming no style violations and leaving out the RuboCop output we have a ne
 
 ```sh
 member of public accesses bike
-  bike is not broken (FAILED - 1)
+  docking station releases a bike that is not broken (FAILED - 1)
 
 Failures:
 
-  1) member of public accesses bike is not broken
+  1) member of public accesses bike docking station releases a bike that is not broken
      Failure/Error: bike = docking_station.release_bike
      NoMethodError:
        undefined method `release_bike' for #<DockingStation:0x007ff3c306ea28>
@@ -97,8 +98,8 @@ rspec ./spec/feature/public_bike_access_spec.rb:4 # member of public accesses bi
 Our example is failing, which means that we can test the DockingStation class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output. There is only one: _"member of public accesses bike is not broken"_. Where does the message come from? Look at the structure of the example.
 
 ```ruby
-describe 'member of public accesses bike' do
-  it 'is not broken' do
+feature 'member of public accesses bike' do
+  scenario 'docking station releases a bike that is not broken' do
     # the test goes here, omitted for brevity
   end
 end
