@@ -59,6 +59,6 @@ Adjust the application to display a Makers Academy progress report for the user 
 
 Include further checks such as creating %completion based on expected number of commits, code smells, SOLID principles etc.
 
-##Version 6 - You're a masochist
+##Version 5 - You're a masochist
 
 Redo everything in Coffeescript (or DogeScript)
