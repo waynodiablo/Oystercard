@@ -5,7 +5,7 @@ We cannot possibly implement all functionality at once. We need to start somewhe
 ```
 As a member of the public,
 So that I can get across town,
-I'd like to access a bike that is not broken.
+I'd like to access a bike that is not broken from a docking station.
 ```
 
 It's interesting to reflect that one could imagine a version of the boris bikes system that had no code or infrastructure at all.  There could simply be places where bikes could be left unlocked.  Bike rental would be free, and bikes would be returned or not on an honour policy.  One might argue that in London that would soon lead to all the bikes being stolen or broken, and so some system for managing fees and repairs and so forth was essential.  An honour based Boris Bikes system might seem like a joke, but it's excellent practice to check your assumptions.  Could what the client wants be delivered without writing a line of code?  Every line of code you write is a line of code that you may have to maintain in future. Every line of code you write now will support certain features that the client currently wants, but the client may change their mind, or the market may evolve, or who knows what.
@@ -38,7 +38,7 @@ require 'capybara/rspec' # this allows us to use the terms 'feature' and 'scenar
 #we're describing our high level feature
 feature 'member of public accesses bike' do
   # this is a specific outcome related to the feature
-  scenario 'and it is not broken' do
+  scenario 'docking station releases a bike that is not broken' do
     docking_station = DockingStation.new # initialize a new object, an instance of the DockingStation class
     bike = docking_station.release_bike  # ask the docking station to release a bike
     expect(bike).not_to be_broken        # expect that bike to respond to the method 'broken?' with false
@@ -46,11 +46,11 @@ feature 'member of public accesses bike' do
 end
 ```
 
-The above code should be placed in a file in a 'spec/feature' directory and named 'public_bike_access_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+The above code should be placed in a file in a 'spec/feature' directory and named 'public_bike_access_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.  Notice how the feature and scenario strings describe precisely what the test does.  You should work to ensure that this is always the case.
 
-Note that the comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
+In contrast the '#'-prefixed comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
 
-Please also ensure that you have [RuboCop](https://github.com/bbatsov/rubocop) operating as a browser plugin, or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or do anything else at all.
+Please also ensure that you have [RuboCop](https://github.com/bbatsov/rubocop) operating as an [editor plugin](https://github.com/bbatsov/rubocop#editor-integration), or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or do anything else at all.
 
 The code above is quite complex - see the [RSpec pill&nbsp;:pill:](../pills/rspec.md) if any aspect of it is unclear. The line `expect(the_bike).not_to be_broken` is perhaps particularly tricky and there are more details in the [RSpec predicate matchers pill&nbsp;:pill:](../pills/rspec_predicate.md).  For the rest of this stage we'll be focusing on the lines `docking_station = DockingStation.new` and `bike = docking_station.release_bike` and we'll come back to `expect(bike).not_to be_broken` in the next stage when we start writing unit tests.  For the moment the critical thing is that reading it we are clear about the intention of what we want to check, that the bike is not broken.  The intent is more important right now that the precise Ruby syntax, but that should become clear by the end of the next stage on unit tests.  First up let's focus on getting this feature test up and at least partly running.
 
