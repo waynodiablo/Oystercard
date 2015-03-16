@@ -8,4 +8,4 @@ Doubles or Mocks are a mechanism to fake out object behaviour so that we can tes
 Resources
 ---------
 
-* https://relishapp.com/rspec/rspec-mocks//docs
+* https://relishapp.com/rspec/rspec-mocks/docs
