@@ -9,7 +9,7 @@ The Makers Academy experience is designed to emulate important aspects of gettin
 
 The coding challenges are a simulation of the kinds of technical tests you will need to pass to get a job with a software company.  The code reviews and pair programming projects are a replica of the activities you will need to excel at as part of your job in a software company.
 
-As part of the Makers experience you will be placed in a 'Byte' which consists of approximately 8 students.  You will be assigned a coach as LSB who will serve to help you organize and run 'Byte' meetings.  You will have a twice daily short 'standup' meeting with your Byte in order to identify common problems and solutions.  More details below.
+As part of the Makers experience you will be placed in a 'Byte' which consists of approximately 8 students.  You will be assigned a coach as LSB who will serve to help you organize and run 'Byte' meetings.  You will have a twice daily short 'standup' meeting with your Byte in order to identify common problems and solutions.  Standups traditionally have people stand up rather than sit in order to ensure that the meeting is short. More details below.
 
 Overview of the Makers Week
 -------------------------
@@ -24,7 +24,10 @@ Organizational meetings are designed to reflect those used in real software comp
 
 ![Makers Week Details](https://github.com/makersacademy/course/blob/master/images/makers-week-details.png)
 
-Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into a little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue".
+Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into as little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue".  The idea is for everyone to be in the loop about where each other is and what they are stuck on.  Any longer discussion should be moved to another meeting - potentially immediately after the standup.  It's the responsibility of everyone in the standup to ensure that long discussions do not break out, and that if longer discussions are needed that these are scheduled for later.
+
+Once the quick standup is out the way there is time for an optional breakout session.  The LSB coach is there to help support this breakout session.  Starting the breakout sessions assumes that everyone in the standup has been able to answer their three questions, and now everyone is in the loop about where everyone is and what is blocking them.  The breakout session can then be less formal, sitting down, involving some or all of the students in the byte, using a whiteboard, using a projector.  Ideally the breakout session should not take too long, and some students may want to go straight off to pairing, but ultimately it is up to the LSB coach and students to coordinate what they do in a breakout session, if one happens at all.
+
 
 Overview of the Course Week
 -------------------------
@@ -45,22 +48,24 @@ Boris Bikes   | Tic Tac Toe | Tic Tac Toe Web | Bookmark Manager | JavaScript | 
 Further JavaScript | Makerthon (Teams) | Rails  | Project 1 | Project 2 |   Hiring Week   |
 
 
+Each week there will be learning objectives relating to the particular project and pre-reading materials based on the learning objectives.
 
-* Office Hours (8am-9pm)
-* Access to coaches
+
+
+* Office Hours (9am-9pm)
+* Access to coaches (9am-noon - 2:30pm-6pm)
   - supporting you becoming active learners
-  - coach exhaustion
   - wean yourself off the coaches and alumni helpers
 * Weekly schedule - subject to change, just like the world of technology
 
 
-* be proactive - if you don't have something that you need, get it
+* Be proactive - if you don't have something that you need, get it
 
 You:
 
 * MUST install slack desktop client
 * MUST create StackOverflow account
-* MUST post or upvote on SO at least once a week
+* REALLY SHOULD post or upvote on SO at least once a week
 * MUST use sequence of asking for help (pair partner, peer, senior, stack-overflow, alumni-helper, coach)
 * MUST do 121s and feedback
 * MUST show up
