@@ -127,7 +127,7 @@ server.listen(port, function(){
 });
 ```
 
-In either case we need the 'Access-Control-Allow-Origin' set so that we can receive requests from any site.  This is because yuo usually can't make AJAX requests except back to the site that originally served the page.  If we don't include this we'll get an error like the following:
+In either case we need the 'Access-Control-Allow-Origin' set so that we can receive requests from any site.  This is because you usually can't make AJAX requests except back to the site that originally served the page.  If we don't include this we'll get an error like the following:
 
 ```
 XMLHttpRequest cannot load http://localhost:4567/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
