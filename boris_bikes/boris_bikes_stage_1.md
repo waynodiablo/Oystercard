@@ -31,8 +31,6 @@ RSpec can also be described as a 'Domain Specific Language' (DSL).  In this case
 
 As mentioned before, in this simple system our feature test will also be an 'integration-test' that checks that two objects in our domain (the DockingStation and the Bike) can interact correctly.
 
-**NOTE** in order to get this example to run you will need to type ```gem install capybara``` to install the capybara library that allows us to write RSpec tests in terms of 'feature' and 'scenario' (instead of the more common 'describe' and 'it') - Capybara does more too, but we won't need to know about its other powers for a week or two.
-
 ```ruby
 require 'capybara/rspec' # this allows us to use the terms 'feature' and 'scenario' below -
 #we're describing our high level feature
@@ -46,9 +44,9 @@ feature 'member of public accesses bike' do
 end
 ```
 
-The above code should be placed in a file in a 'spec/feature' directory and named 'public_bike_access_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.  Notice how the feature and scenario strings describe precisely what the test does.  You should work to ensure that this is always the case.
+The above code should be placed in a file in a 'spec/feature' directory and named 'public_bike_access_spec.rb'. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.  Notice how the feature and scenario strings describe precisely what the test does.  You should work to ensure that this is always the case.  In contrast the '#'-prefixed comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
 
-In contrast the '#'-prefixed comments here are simply to help you first time around.  Please don't include them in your code, and in general avoid comments, preferring to write code that is comprehensible without comments.
+**NOTE** in order to get this example to run you will need to type ```gem install capybara``` to install the capybara library that allows us to write RSpec tests in terms of 'feature' and 'scenario' (instead of the more common 'describe' and 'it') - Capybara does more too, but we won't need to know about its other powers for a week or two.
 
 Please also ensure that you have [RuboCop](https://github.com/bbatsov/rubocop) operating as an [editor plugin](https://github.com/bbatsov/rubocop#editor-integration), or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or do anything else at all.
 
