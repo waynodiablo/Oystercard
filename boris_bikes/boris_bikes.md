@@ -2,15 +2,39 @@
 
 :construction: UNDER CONSTRUCTION :construction:
 
-The goal of this project is to introduce you to [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development), how it relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development) and the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  BDD and TDD are commonly selected as part of the Agile development process since they can help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.   OOP is a style of programming that breaks our code up into 'objects'. This 'modularization' makes our code flexible with regard to future changes.  All sorts of changes will be required as we discover that end users derive more value from something different than what we have built so far. DDD emphasizes the development of the domain model which describes the relations between the objects we create.
+The goal of this project is to introduce you to: 
 
-Please do refer to the detailed [learning objectives](learning_objectives.md) for this week.
+- [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development);
+- how BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
+- the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
+
+**BDD** and **TDD** are often used as part of an *Agile* development process. Agile and BDD work well together as they help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.   
+
+**OOP** is a style of programming that encourages us to break code up into 'objects'. This 'modularization' leaves our code flexible, anticipating future changes.  Changes are guaranteed as a project progresses: inevitably, we will discover that end users derive more value from something different than what we have built so far. While we cannot plan for the specific changes they will require (because we don't know them yet!), OOP encourages us to write code that is easy to change in any circumstance. DDD emphasizes the development of a 'domain model', which describes the relations between objects in the language of the end user.
+
+For an overview of the baseline skills and concepts you will be learning during this project, see this week's [Learning Objectives](learning_objectives.md).
 
 ***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
 
-We will create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to get bikes from docking stations and return them.  Occasionally the bikes may break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage in order to ensure that there are working bikes for members of the public to use.
+###Project Overview
 
-The way to start any project is to specify a few important "User Stories", usually in collaboration with a customer or client.  The stories below are in the commonly used Stakeholder, Motivation, Task format.  Let's imagine that we've just finished a discussion with a customer and identified these key stories that the client believes will deliver value to the end users of the system:
+######High-level Overview
+
+We are going to create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to remove and return bikes from docking stations.  Occasionally the bikes may break, and then they will be unavailable for rental. There will be a garage to fix broken bikes. Finally, there will be a van to move the bikes between the stations and the garage so there are working bikes for members of the public to use.
+
+######Identifying User Stories
+
+The way to start our project (and any good software project) is to specify a few important *User Stories*, usually in collaboration with a customer or client. User Stories get us thinking about the high-level problem **from the user's perspective**.  
+
+The stories below are arranged in a *Stakeholder, Motivation, Task* format, which is commonly used:
+
+```
+As a <Stakeholder>,
+So that <Motivation>,
+I'd like <Task>.
+```
+
+We identify User Stories by discussing with a customer and listening to or prompting for user requirements. Let's imagine that we've just finished a discussion with a customer. We have identified these key stories that the client believes will deliver value to the end users of the system:
 
 ```
 As a member of the public,
@@ -42,11 +66,37 @@ So that members of the public can get usable bikes,
 I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
 ```
 
-As you can tell this is a simplified version of the user experience that members of the public and system maintainers have for the real Boris Bikes system in London.  We've left out details of payment and other things to make our first version of the system tractable.  This is often a sensible step in order to build something simple and manageable the first time round and check that things work at that level before adding in more complex interactions.  It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.
+This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity. 
 
-Discussions with real clients often generate many more stories than the the few we have above, but the next step in Behaviour Driven Development (BDD) will be to choose a small number of stories to focus on - the ones that deliver the key value; and then one specific story to start with.  BDD gets its name from the fact that we are starting to describe the system in terms of its 'Behaviour'.  How will end users behave when they try to interact with the system; how will the system behave as users try to interact with it.  Let's assume we've selected the above stories from a larger set and the client (or at least we) are happy to start on these ones.
+*It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.*
 
-Given that we've agreed what our basic system needs to do, where do we go next?  It's helpful to start thinking about a domain model for our system; something that describes the kinds of objects in the system and how they interact.  We could spend a lot of time fleshing out that domain model in advance, but often it will emerge  as we switch from high level acceptance (or feature) tests to lower level unit tests (as shown in diagram below) whereby we specify the precise individual operations that the objects in our domain can perform.  Having written a specification for an individual object with a test, we'll implement part of the object itself and then jump back up to see if the system has the high level behaviour specified in our user story.  We'll keep fleshing out our domain with unit-tests, and then jumping back up to see the stories coming to life at the acceptance test level.  Sometimes we'll want to step back and consider 'refactoring' the domain model and the code that supports it in order to better support the delivery of value to the end user through user stories. It may sound complicated but you'll soon get used to it.
+######Using User Stories in BDD
+
+We are starting to describe our planned system in terms of its planned *Behaviour*: how users will behave when interacting with the system, and how the system will behave when users interact with it. The next step in a BDD process is to choose a small number of stories to focus on: the ones that deliver the **key value** (greatest value to users). Then, we decide on one specific story to start with.
+
+Once we've agreed on what our basic system should do, we can start to think about constructing a **Domain Model**. A Domain Model:
+
+- describes the objects in a system, and
+- describes how those objects interact.
+
+We *could* spend a lot of time fleshing out that domain model in advance. But remember: we're only dealing with a subset of all the user stories, and we're anticipating lots of change in future. As we construct *Tests* for our system, we'll see a clearer picture of the Domain Model start to **emerge**. This design philosophy is generally known as *Emergent Design*.
+
+For now, let's agree that we're definitely going to need *some* objects in our Domain Model. Once we start translating *Feature Tests* - tests that describe a feature extracted from a user story - into *Unit Tests* - tests that specif the precise individual operations that entities can perform - we'll quickly see that the nature of those objects, as well as interactions between them, will **emerge**.
+
+######The BDD Cycle
+
+```
+User Stories -> Feature Tests -> Unit Tests -> Features
+               <--- Emergent Domain Model --->
+```
+
+The process of moving from User Stories to Feature (more correctly *Acceptance*) Tests, then from Feature Tests to Unit Tests, and then from Unit Tests to Features, is what BDD is all about. Critically, though, BDD works as a **cycle**. The whole BDD process is designed to work *iteratively*, where the analysis of a previous round *feeds back* into the current one.
+
+Here is an example of the *BDD Cycle* in use:
+
+>We switch from high-level acceptance tests to lower-level unit tests, whereby we specify the precise individual operations that the objects in our domain can perform.  Having written a specification for an individual object with a test, we'll implement *part* of the object itself and then jump back up to see if the system has the high level behaviour specified in our user story.  
+
+>We'll keep fleshing out our domain with unit tests, and then jumping back up to see the stories coming to life at the acceptance test level.  Sometimes we'll want to step back and consider 'refactoring' the domain model and the code that supports it in order to better support the delivery of value to the end user through user stories.
 
 ![acceptance-test unit-test cycle](../images/bdd-cycle.png)
 
