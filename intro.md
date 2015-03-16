@@ -1,21 +1,30 @@
 Introduction
 ===========
 
+The Makers Academy experience is designed to emulate important aspects of getting hired and working as a software developer.  Software developers don't spend hours sitting in lectures. They have quick standup meetings each morning and then learn on the job, researching new things collaboratively with their peers.  To reflect this the Makers Academy week is divided into three essential components:
+
+1) Coding Challenges
+2) Code Review
+3) Pair Programming Projects
+
+The coding challenges are a simulation of the kinds of technical tests you will need to pass to get a job with a software company.  The code reviews and pair programming projects are a replica of the activities you will need to excel at as part of your job in a software company.
+
+As part of the Makers experience you will be placed in a 'Byte' which consists of approximately 8 students.  You will be assigned a coach as LSB who will serve to help you organize and run 'Byte' meetings.  You will have a twice daily short 'standup' meeting with your Byte in order to identify common problems and solutions.  More details below.
+
 Overview of the Makers Week
 -------------------------
 
-* Challenges - review on Mondays, released on Friday
-* Challenges are a simulation of employer tech tests
+Coding challenges are released every Friday and your attempted solution must be submitted via pull request by Monday at 9am.  It does not matter if you complete the challenge or not.  Submit the challenge with however much or how little code you have working.  Mondays are code review days and you will receive both peer and coach feedback on your code.
+
+Tuesdays, Wednesday and Thursdays are pair programming project days.  You will work in a pair with another student to complete a coding project. The following diagram summarizes the flow of the week:
 
 ![Makers Week](https://github.com/makersacademy/course/blob/master/images/makers-week.png)
 
-Each day there are morning and afternoon sessions.  
+Organizational meetings are designed to reflect those used in real software companies with a team meeting early every morning.  Real software companies often work in iterations of 2 to 4 weeks, however we have compressed that structure at Makers to accelerate your progress.  In a single week you will have approximately 6 short (<15 min) standup meetings to coordinate with other students in your Byte (morning and afternoon).  Meetings on Monday can run longer as part of code review and planning for the week.  Meetings on Fridays can also run a little longer for reflecting on the week (retrospectives).  The pattern of Plan, Execute (with coordination standups) and Reflect is the heart of Agile Software Development.  More details on that below, but first here is the more detailed structure of the week:
 
 ![Makers Week Details](https://github.com/makersacademy/course/blob/master/images/makers-week-details.png)
 
-You can see the approximate weekly structure in the Calendar wiki:
-
-https://github.com/makersacademy/course/wiki/Calendar
+Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into a little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue"
 
 Overview of the Course Week
 -------------------------
@@ -26,7 +35,7 @@ The weekly structure is maintained consistently for the first five weeks, but th
 
 1    |  2          | 3               | 4                | 5          | 6              |
 -----|-------------|-----------------|------------------|------------|----------------|
-Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | Lab Week |
+Boris Bikes   | BattleShips | Battleships Web | Bookmark Manager | JavaScript | Lab Week |
 
 
 **Senior Portion**
@@ -37,18 +46,17 @@ Node | Makerthon (Teams) | Rails | Project 1 | Project 2 |   Hiring Week |
 
 
 
-
 * Office Hours (8am-9pm)
-* Access to coaches 
-  - supporting you becoming active learners 
+* Access to coaches
+  - supporting you becoming active learners
   - coach exhaustion
   - wean yourself off the coaches and alumni helpers
 * Weekly schedule - subject to change, just like the world of technology
-*
+
 
 * be proactive - if you don't have something that you need, get it
 
-You: 
+You:
 
 * MUST install slack desktop client
 * MUST create StackOverflow account
@@ -72,6 +80,7 @@ Three Tier Web Architecture
 ----------------
 
 To be a successful web developer, you need to grasp this critical technical concept: Three Tier Web Architecture.
+
 It's all about a process of communication between a user's web browser and a server.  A server is just another computer, but it's often a computer with a dedicated internet connection and lots of resources.  It will usually consist of a web server (to serve web pages), an application engine (to allow dynamic generation of those pages), and a database (to reliably store data related to those pages):
 
 ![Three Tier Simple](https://github.com/makersacademy/course/blob/master/images/3-tier-simple.png)
