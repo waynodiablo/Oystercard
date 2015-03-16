@@ -203,8 +203,7 @@ Research the difference between require and require_relative.  Can you tell why 
 
 So now we have our working system, test driven and sanity checked. We can compare this with the original interface specification and see that we are getting apprxcimately the behavior we expect.  We get a nil instead of a false, but those are equivalent in Ruby.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
 
-**However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).
-**
+**However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
