@@ -122,12 +122,12 @@ Create a new file called **js/app.js** and put in the following.
 var githubUserSearch = angular.module('GitUserSearch', ['ngResource']);
 ```
 
-What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the `ngResource` module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out.  
-
 Now lets reference the script from our HTML.  
 ```html
 <script src="js/app.js"></script>
 ```
+
+What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the `ngResource` module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out. Do you think this is the right place for this to be?
 
 Now that we've created an app we need to wire it up to the HTML. Place `ng-app="GitUserSearch"` inside the `html` tag so it looks like this:
 
@@ -141,7 +141,7 @@ Notice that Angular uses the **string** to wire up the app and not the **variabl
 
 ### Setting up our test environment
 
-Before going any further we need to setup our test environment - since we want to be practising TDD we'll need to write some tests before we write any more angular code. Fortunately as we'll see Angular provides plenty of options for testing your code, but first we need to get our environment set up with some boilerplate.
+Before going any further we need to setup our test environment - since we want to be practising TDD we'll need to write some tests before we write any more Angular code. Fortunately as we'll see Angular provides plenty of options for testing your code, but first we need to get our environment set up with some boilerplate.
 
 ```shell
 bower install angular-mocks --save-dev
@@ -246,7 +246,7 @@ Now you can run fire up your test runner and watch your tests pass and fail.
 karma start test/karma.conf.js
 ```
 
-Notice how we haven't got any tests!
+Notice that this will throw an error since we haven't got any tests!
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/e5c1d5229211a1670b8b19515cffb3df94fa5f6a)
 
@@ -268,7 +268,6 @@ describe('GitUserSearchController', function() {
             $scope: scope
         });
     }));
-
 });
 ```
 
@@ -431,7 +430,6 @@ Finally our tests are passing again!
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/1a5973574543c56690e74cb77a5585399f69d83a)
 
-
 ### Data Binding (Again)
 
 How are we going to get the input that was entered into the text box?
@@ -580,7 +578,7 @@ Now what we'd like to do is search when the user types something in. There are t
 
 The first part is simple: we just need to bind `ng-change` to our `doSearch` function inside our text value.
 
-```js
+```html
 <input type="text" ng-model="searchTerm" ng-change="doSearch()">
 ```
 
@@ -600,4 +598,3 @@ There's a couple of things to clean up:
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
 * If you haven't already created a Github Application, you are probably blowing through the limit of calls to the GitHub API at this point (especially as everyone in the room is doing a similar thing). Try generating a [personal access token](https://github.com/settings/applications#personal-access-tokens) for the app on your GitHub profile, and then add it to the API call using the URL parameter `access_token`. This should remove the GitHub limiting of your API requests.
-
