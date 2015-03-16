@@ -3,9 +3,9 @@
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 * [Introduction](intro.md)
-* Week 1: [OOD & OOP Basics: Boris Bikes](boris_bikes/boris_bikes.md)
-* Week 2: [More advanced OO with games: Battle Ships](https://github.com/makersacademy/course/blob/master/battle_ships.md)
-* Week 3: [Welcome to the web: Battleships in the browser](https://github.com/makersacademy/course/blob/master/battle_ships_web.md)
+* Week 1: [BDD, TDD and OOP/D: Boris Bikes](boris_bikes/boris_bikes.md)
+* Week 2: More advanced OO with games: Tic Tac Toe(TTT)
+* Week 3: Welcome to the web: TTT in the browser
 * Week 4: [Databases: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Rock Paper Scissors](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 * Week 6: Lab week
