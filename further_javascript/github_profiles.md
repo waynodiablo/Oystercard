@@ -34,21 +34,11 @@ Make sure you have worked through these pills before starting:
 * :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
 * :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
 
-##Version 1 - More jQuery
-
-Last week you queried a static weather API to get you started. Now, you can use that knowledge to grab information from the GitHub API. If you want a refresher on AJAX with jQuery, the guides below can serve as a refresher:
-
-**These guides are currently not test-driven - how would you do this in a test-driven way?**
-
-* [AJAX Introduction](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_introduction.md)
-* [AJAX with extra jQuery](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_with_extra_jquery.md)
-* If you're interested in a bit of UX and how to deal with network latency, you can also try working through [Spinners and Modals](https://github.com/makersacademy/course/blob/master/further_javascript/ajax/ajax_jquery_spinners.md)
-
-##Version 2 - Angular
+##Version 1 - Angular
 
 * [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
 
-##Version 3 - Deploying to Heroku
+##Version 2 - Deploying to Heroku
 
 Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - you could use Node Express or Sinatra.
 
@@ -61,10 +51,10 @@ If you are deploying with Sinatra, you may want to read this:
 
 * [Deploying your Sinatra/Angular application to Heroku](https://github.com/makersacademy/course/blob/master/pills/deploying_angular_sinatra.md)
 
-##Version 4 - Report Card
+##Version 3 - Report Card
 
 Adjust the application to display a Makers Academy progress report for the user in question, including at least #commits on each relevant Github Repo.
 
-##Version 5 - Bonus Level
+##Version 4 - Bonus Level
 
 Include further checks such as creating %completion based on expected number of commits, code smells, SOLID principles etc.
