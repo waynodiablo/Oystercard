@@ -1,4 +1,4 @@
-AngularJS 1.3 Introduction
+GitHub profiles (AngularJS 1.3 Introduction)
 ==========================
 
 [Video of session](https://www.youtube.com/watch?v=72KRFITGGts)
