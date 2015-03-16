@@ -160,9 +160,9 @@ Finally we have two more user stories relating to the Van and the Garage.  You'v
 
 Now, just like a real project the client has come back to us with more requests:
 
-## More User Stories/Feature Requests from the Client
+## More User Stories/Feature Requests from the Client (OPTIONAL)
 
-[Stage 8][boris_bikes_stage_8.md]
+[Stage 8](boris_bikes_stage_8.md)
 
 
 ## Supporting Material
