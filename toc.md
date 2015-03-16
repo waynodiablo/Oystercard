@@ -9,7 +9,7 @@
 * Week 4: [Databases: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Rock Paper Scissors](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 * Week 6: Lab week
-* Week 7: [Advanced JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
+* Week 7: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
 * Week 8: Makerthon
 * Week 9: [MVC in Ruby: Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
 * Weeks 10-11: Final Projects
