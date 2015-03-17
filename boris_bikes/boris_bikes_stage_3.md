@@ -1,6 +1,6 @@
 ## Stage 3: Creating a Bike via Unit Tests
 
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 So how do we model a bike, the subject of our first unit test? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
 

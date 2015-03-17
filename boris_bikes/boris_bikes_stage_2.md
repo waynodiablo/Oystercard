@@ -1,6 +1,6 @@
 ## Stage 2: Creating a Docking Station via Unit Tests
 
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 So how did you try to deal with the error we saw at the end of stage 1?  Here it is again:
 

@@ -1,6 +1,6 @@
 ## Stage 6:  Dealing with Broken Bikes
 
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 There are two more user stories that are specific to just stations and bikes, but have to deal with broken bikes.
 

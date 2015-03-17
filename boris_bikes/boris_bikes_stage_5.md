@@ -1,6 +1,6 @@
 ## Stage 5: Giving Docking Stations Limited Capacities
 
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 At any point in the development process there is a judgement call to make about whether to refactor or to start working on new features.  There is no hard and fast rule.  You may be particularly offended by the design smells coming from your code.  You may feel that they will be naturally resolved as part of the process of implementing the next user story.  Spend a little time reflecting on the code you have so far.  It should be pretty lean :-) Time for another user story:
 
