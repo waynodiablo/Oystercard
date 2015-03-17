@@ -25,26 +25,26 @@ So how do I remove the arbitrary dependencies on `ObjectB`?  Here are some examp
 Instead of testing `ObjectA` against an instance of `ObjectB`, I use a stand in (a stuntman if you like) for `ObjectB` instead.  `ObjectA` doesn't know the difference, it simply treats the double as if were an instance of `ObjectB`, but it's not - it's a dummy that I've set up with static (and therefore _not variable_) values.
 
 ### Stubs
-I want to test some behaviour of `ObjectA`, but during the execution of that behaviour, `ObjectA` calls a method on `ObjectB`.  In my test, I don't particularly care that the method on `ObjectB` gets called, but when it does I want to be sure it returns a specific value.
+I want to test some behaviour of `ObjectA`, but during the execution of that behaviour, `ObjectA` calls a method on `ObjectB`.  I don't need to test that the method on `ObjectB` gets called, but I do want to make sure that the method on `ObjectB` always returns a specific value.
 
 ### Mocks
-I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments.  In my test, I don't particularly care what happens afterwards, just that _in the following code_ the specific method is called with the correct arguments.
+I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments.  In my test, I don't particularly care what happens afterwards, but I want to test that _in the subsequent test code_ the specific method _is_ called with the correct arguments.
 
 ### Spies
-I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments  (sound familiar?).  In my test, I don't particularly care what happens next, just that _in the code that just executed_ the specific method was called with the correct arguments.
+I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments  (sound familiar?).  In my test, I don't particularly care what else happened during the test, just that _in the test code that was executed_ the specific method _was_ called with the correct arguments.
 
 ### Summary
-Actually, I may have misled you a bit there.  Many of these terms are interchangable depending on the testing framework; it's the concepts that are important.
+Actually, I may have misled you a bit there.  Many of these terms are interchangable depending on the testing framework and mocks and doubles are pretty much the same thing; it's the concepts that are important.
 
-So can these techniques really improve your design also?
+But can these techniques really improve your design also?
 
-Absoutely.  And here's why:
+Absolutely.  And here's why:
 
 * Good code is always easy to test.
 * Bad code is sometimes easy to test.
 * Hard code to test is never any good.
 
-So, if you've made your code testable using doubles, mocks, stubs and spies; the better it's likely to be.
+So, if you've made your code easily testable using doubles, mocks, stubs and spies; the better it's likely to be.
 
 Resources
 ---------
