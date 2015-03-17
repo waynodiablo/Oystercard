@@ -71,7 +71,7 @@ feature 'member of public accesses bike' do
   end
 end
 ```
-Requiring a file is almost equivalent to just copy-pasting the contents of `docking_station.rb` at the top of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.  Note also that `require 'docking_station'` works here because the bike.rb file is in the lib directory.  The Ruby convention is that require will automatically look in a projects lib directory for Ruby files.
+Requiring a file is almost equivalent to just copy-pasting the contents of `docking_station.rb` at the top of the test from Ruby's perspective. However, since copy-pasting is a really bad idea, we require the file instead.  Note also that `require 'docking_station'` works here because the `docking_station.rb` file is in the lib directory.  The Ruby convention is that require will automatically look in a projects lib directory for Ruby files.
 
 Now assuming no style violations and leaving out the RuboCop output we have a new failure.  This might feel like things are getting worse, but a new failure or error message is cause for celebration!  A new error or failure means more information that we can use to work out what is going on.  It might be hard to imagine it, but ultimately you will start to feel joy and excitement when you have a new error or failure:
 
