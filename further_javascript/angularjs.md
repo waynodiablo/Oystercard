@@ -485,9 +485,9 @@ var searchResource = $resource('https://api.github.com/search/users');
 and then inside our `doSearch` function replace the dummy data we set to:
 
 ```js
-$scope.searchResult = searchResource.get({
-  q: $scope.searchTerm
-});
+$scope.searchResult = searchResource.get(
+  { q: $scope.searchTerm }
+);
 ```
 
 The `get` method takes an object and uses the key-value pairs as the URI parameter string - hence `q`.
@@ -512,9 +512,9 @@ beforeEach(inject(function($httpBackend) {
   httpBackend = $httpBackend
   httpBackend
     .when("GET", "https://api.github.com/search/users?q=hello")
-    .respond({
-      items: items
-    });
+    .respond(
+      { items: items }
+    );
 }));
 ```
 
@@ -536,9 +536,7 @@ describe('GitUserSearchController', function() {
 
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
-    ctrl = $controller('GitUserSearchController', {
-      $scope: scope
-    });
+    ctrl = $controller('GitUserSearchController', { $scope: scope });
   }));
 
   it('should initialise with an empty search result and term', function() {
@@ -553,9 +551,9 @@ describe('GitUserSearchController', function() {
       httpBackend = $httpBackend
       httpBackend
         .when("GET", "https://api.github.com/search/users?q=hello")
-        .respond({
-          items: items
-        });
+        .respond(
+        { items: items }
+      );
     }));
 
     var items = [
