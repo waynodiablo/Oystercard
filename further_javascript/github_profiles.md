@@ -50,7 +50,7 @@ While you're here, also check out:
 
 ##Version 2 - More info
 
-Try to get your version looking more like the mockup. What kind of tests can you add to
+Try to get your version looking more like the mockup. Get some styling in there!
 
 ##Version 3 - Deploying to Heroku
 
