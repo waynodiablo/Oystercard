@@ -278,7 +278,7 @@ You'll also notice we have this thing called `$scope` being set. In Angular we u
 Now let's add a test place this below the beforeEach with the describe callback.
 
 ```js
-it('should initialise with an empty search result and term', function() {
+it('initialises with an empty search result and term', function() {
   expect(scope.searchResult).toBeUndefined();
   expect(scope.searchTerm).toBeUndefined();
 });
@@ -326,7 +326,7 @@ describe('when searching for a user', function() {
     }
   ];
 
-  it('should display search results', function() {
+  it('displays search results', function() {
     expect(scope.searchResult.items).toEqual(items);
   });
 });
@@ -428,7 +428,7 @@ $scope.doSearch = function (){
 Now we need to update our tests so that they call our `doSearch()` method before we check for the dummy data:
 
 ```javascript
-it('should display search results', function() {
+it('displays search results', function() {
   scope.searchTerm = 'hello';
   scope.doSearch();
   expect(scope.searchResult.items).toEqual(items);
@@ -539,7 +539,7 @@ describe('GitUserSearchController', function() {
     ctrl = $controller('GitUserSearchController', { $scope: scope });
   }));
 
-  it('should initialise with an empty search result and term', function() {
+  it('initialises with an empty search result and term', function() {
     expect(scope.searchResult).toBeUndefined();
     expect(scope.searchTerm).toBeUndefined();
   });
@@ -569,7 +569,7 @@ describe('GitUserSearchController', function() {
       }
     ];
 
-    it('should display search results', function() {
+    it('displays search results', function() {
       scope.searchTerm = 'hello';
       scope.doSearch();
       scope.$apply();
