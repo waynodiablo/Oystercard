@@ -38,7 +38,7 @@ Make sure you have worked through these pills before starting:
 
 Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals: 
 
-* [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jquery.md)
+* [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jQuery.md)
 
 ##Version 1 - Intro to Angular
 
