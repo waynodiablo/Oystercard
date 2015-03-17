@@ -278,7 +278,7 @@ You'll also notice we have this thing called `$scope` being set. In Angular we u
 Now let's add a test place this below the beforeEach with the describe callback.
 
 ```js
-it('should initialise with an empty search result and term', function() {
+it('initialises with an empty search result and term', function() {
   expect(scope.searchResult).toBeUndefined();
   expect(scope.searchTerm).toBeUndefined();
 });
@@ -326,7 +326,7 @@ describe('when searching for a user', function() {
     }
   ];
 
-  it('should display search results', function() {
+  it('displays search results', function() {
     expect(scope.searchResult.items).toEqual(items);
   });
 });
@@ -428,7 +428,7 @@ $scope.doSearch = function (){
 Now we need to update our tests so that they call our `doSearch()` method before we check for the dummy data:
 
 ```javascript
-it('should display search results', function() {
+it('displays search results', function() {
   scope.searchTerm = 'hello';
   scope.doSearch();
   expect(scope.searchResult.items).toEqual(items);
@@ -485,9 +485,9 @@ var searchResource = $resource('https://api.github.com/search/users');
 and then inside our `doSearch` function replace the dummy data we set to:
 
 ```js
-$scope.searchResult = searchResource.get({
-  q: $scope.searchTerm
-});
+$scope.searchResult = searchResource.get(
+  { q: $scope.searchTerm }
+);
 ```
 
 The `get` method takes an object and uses the key-value pairs as the URI parameter string - hence `q`.
@@ -512,9 +512,9 @@ beforeEach(inject(function($httpBackend) {
   httpBackend = $httpBackend
   httpBackend
     .when("GET", "https://api.github.com/search/users?q=hello")
-    .respond({
-      items: items
-    });
+    .respond(
+      { items: items }
+    );
 }));
 ```
 
@@ -536,12 +536,10 @@ describe('GitUserSearchController', function() {
 
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
-    ctrl = $controller('GitUserSearchController', {
-      $scope: scope
-    });
+    ctrl = $controller('GitUserSearchController', { $scope: scope });
   }));
 
-  it('should initialise with an empty search result and term', function() {
+  it('initialises with an empty search result and term', function() {
     expect(scope.searchResult).toBeUndefined();
     expect(scope.searchTerm).toBeUndefined();
   });
@@ -553,9 +551,9 @@ describe('GitUserSearchController', function() {
       httpBackend = $httpBackend
       httpBackend
         .when("GET", "https://api.github.com/search/users?q=hello")
-        .respond({
-          items: items
-        });
+        .respond(
+        { items: items }
+      );
     }));
 
     var items = [
@@ -571,7 +569,7 @@ describe('GitUserSearchController', function() {
       }
     ];
 
-    it('should display search results', function() {
+    it('displays search results', function() {
       scope.searchTerm = 'hello';
       scope.doSearch();
       scope.$apply();
