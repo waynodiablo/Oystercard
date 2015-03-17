@@ -240,11 +240,11 @@ Furthermore, you never know when your customer is going to come back to you and 
 ```sh
 As a member of the public
 So that I can get across town
-I'd like a docking station to release a bike that is not broken
+I"d like a docking station to release a bike that is not broken
 
 As a maintainer of the system,
 So that members of the public are not disappointed,
-I'd like docking stations to not release bikes when there are none available.
+I"d like docking stations to not release bikes when there are none available.
 ```
 
 Then time to move on to [Stage 5](boris_bikes_stage_5.md)!
