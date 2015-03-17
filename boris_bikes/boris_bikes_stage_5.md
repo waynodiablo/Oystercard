@@ -2,6 +2,8 @@
 
 :construction: UNDER CONSTRUCTION :construction:
 
+At any point in the development process it is a judgement call about whether to refactor or to start working on new features.  There is no hard and fast rule.  You may be particularly offended by the design smells coming from your code.  You may 
+
 Given this next user story:
 
 ```

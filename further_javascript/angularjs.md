@@ -1,11 +1,11 @@
-AngularJS 1.3 Introduction
+GitHub profiles (AngularJS 1.3 Introduction)
 ==========================
 
 [Video of session](https://www.youtube.com/watch?v=72KRFITGGts)
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-[Note also that the initial code for this walkthrough is available in https://github.com/makersacademy/angularjs-intro]
+(Note also that the initial code for this walkthrough is available in https://github.com/makersacademy/angularjs-intro)
 
 ## What is Angular?
 
@@ -122,12 +122,12 @@ Create a new file called **js/app.js** and put in the following.
 var githubUserSearch = angular.module('GitUserSearch', ['ngResource']);
 ```
 
-What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the `ngResource` module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out.  
-
 Now lets reference the script from our HTML.  
 ```html
 <script src="js/app.js"></script>
 ```
+
+What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the `ngResource` module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out. Do you think this is the right place for this to be?
 
 Now that we've created an app we need to wire it up to the HTML. Place `ng-app="GitUserSearch"` inside the `html` tag so it looks like this:
 
@@ -141,7 +141,7 @@ Notice that Angular uses the **string** to wire up the app and not the **variabl
 
 ### Setting up our test environment
 
-Before going any further we need to setup our test environment - since we want to be practising TDD we'll need to write some tests before we write any more angular code. Fortunately as we'll see Angular provides plenty of options for testing your code, but first we need to get our environment set up with some boilerplate.
+Before going any further we need to setup our test environment - since we want to be practising TDD we'll need to write some tests before we write any more Angular code. Fortunately as we'll see Angular provides plenty of options for testing your code, but first we need to get our environment set up with some boilerplate.
 
 ```shell
 bower install angular-mocks --save-dev
@@ -174,69 +174,69 @@ Then you need to set up your karma config. This can be done with the command `ka
 // Generated on Thu Nov 27 2014 10:43:21 GMT+0000 (GMT)
 
 module.exports = function(config) {
-    config.set({
+  config.set({
 
-        // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '../',
-
-
-        // frameworks to use
-        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine'],
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: '../',
 
 
-        // list of files / patterns to load in the browser
-        files: [
-            'bower_components/angular/angular.js',
-            'bower_components/angular-route/angular-route.js',
-            'bower_components/angular-resource/angular-resource.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'js/**/*.js',
-            'test/**/*.spec.js'
-        ],
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
 
 
-        // list of files to exclude
-        exclude: [],
+    // list of files / patterns to load in the browser
+    files: [
+      'bower_components/angular/angular.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'js/**/*.js',
+      'test/**/*.spec.js'
+    ],
 
 
-        // preprocess matching files before serving them to the browser
-        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+    // list of files to exclude
+    exclude: [],
 
 
-        // test results reporter to use
-        // possible values: 'dots', 'progress'
-        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {},
 
 
-        // web server port
-        port: 9876,
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress'],
 
 
-        // enable / disable colors in the output (reporters and logs)
-        colors: true,
+    // web server port
+    port: 9876,
 
 
-        // level of logging
-        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_INFO,
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
 
 
-        // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: true,
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
 
-        // start these browsers
-        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'],
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
 
 
-        // Continuous Integration mode
-        // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false
-    });
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['PhantomJS'],
+
+
+    // Continuous Integration mode
+    // if true, Karma captures browsers, runs the tests and exits
+    singleRun: false
+  });
 };
 ```
 
@@ -246,7 +246,7 @@ Now you can run fire up your test runner and watch your tests pass and fail.
 karma start test/karma.conf.js
 ```
 
-Notice how we haven't got any tests!
+Notice that this will throw an error since we haven't got any tests!
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/e5c1d5229211a1670b8b19515cffb3df94fa5f6a)
 
@@ -258,17 +258,16 @@ But first let's write a unit test. Don't worry if this test doesn't entirely mak
 
 ```js
 describe('GitUserSearchController', function() {
-    beforeEach(module('GitUserSearch'));
+  beforeEach(module('GitUserSearch'));
 
-    var scope, ctrl;
+  var scope, ctrl;
 
-    beforeEach(inject(function($rootScope, $controller) {
-        scope = $rootScope.$new();
-        ctrl = $controller('GitUserSearchController', {
-            $scope: scope
-        });
-    }));
-
+  beforeEach(inject(function($rootScope, $controller) {
+    scope = $rootScope.$new();
+    ctrl = $controller('GitUserSearchController', {
+        $scope: scope
+    });
+  }));
 });
 ```
 
@@ -280,8 +279,8 @@ Now let's add a test place this below the beforeEach with the describe callback.
 
 ```js
 it('should initialise with an empty search result and term', function() {
-    expect(scope.searchResult).toBeUndefined();
-    expect(scope.searchTerm).toBeUndefined();
+  expect(scope.searchResult).toBeUndefined();
+  expect(scope.searchTerm).toBeUndefined();
 });
 ```
 
@@ -314,15 +313,18 @@ Let's now spec out the next bit of our code:
 ```js
 describe('when searching for a user', function() {
 
-  var items = [{
+  var items = [
+    {
       "login": "tansaku",
       "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
       "html_url": "https://github.com/tansaku"
-    }, {
+    }, 
+    {
       "login": "stephenlloyd",
       "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
       "html_url": "https://github.com/stephenlloyd"
-  }];
+    }
+  ];
 
   it('should display search results', function() {
     expect(scope.searchResult.items).toEqual(items);
@@ -335,15 +337,18 @@ Now in your controller let's add this mock data as our search results:
 
 ```js
 $scope.searchResult = {
-  "items": [{
+  "items": [
+    {
       "login": "tansaku",
       "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
       "html_url": "https://github.com/tansaku"
-    }, {
+    }, 
+    {
       "login": "stephenlloyd",
       "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
       "html_url": "https://github.com/stephenlloyd"
-  }]
+    }
+  ]
 };
 ```
 
@@ -404,15 +409,18 @@ Now we can see that `doSearch()` is being triggered when we click on the search 
 ```js
 $scope.doSearch = function (){
   $scope.searchResult = {
-    items: [{
-      "login": "tansaku",
-      "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
-      "html_url": "https://github.com/tansaku"
-    }, {
-      "login": "stephenlloyd",
-      "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
-      "html_url": "https://github.com/stephenlloyd"
-    }]
+    items: [
+      {
+        "login": "tansaku",
+        "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
+        "html_url": "https://github.com/tansaku"
+      }, 
+      {
+        "login": "stephenlloyd",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
+        "html_url": "https://github.com/stephenlloyd"
+      }
+    ]
   };
 };
 ```
@@ -430,7 +438,6 @@ it('should display search results', function() {
 Finally our tests are passing again!
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/1a5973574543c56690e74cb77a5585399f69d83a)
-
 
 ### Data Binding (Again)
 
@@ -469,6 +476,8 @@ To use the GitHub API we can hit `https://api.github.com/search/users` with a qu
 
 So now all we need to do put it all together. Let's create a `searchResource` at the top of our controller.
 
+**If you haven't already created a Github Application, you are probably blowing through the limit of calls to the GitHub API at this point (especially as everyone in the room is doing a similar thing). Try generating a [personal access token](https://github.com/settings/applications#personal-access-tokens) for the app on your GitHub profile, and then add it to the API call using the URL parameter `access_token`. This should remove the GitHub limiting of your API requests.**
+
 ```js
 var searchResource = $resource('https://api.github.com/search/users');
 ```
@@ -477,7 +486,7 @@ and then inside our `doSearch` function replace the dummy data we set to:
 
 ```js
 $scope.searchResult = searchResource.get({
-    q: $scope.searchTerm
+  q: $scope.searchTerm
 });
 ```
 
@@ -500,12 +509,12 @@ Stubs allow us to mock the return value we get back from a method, this allows u
 ```js
 var httpBackend;
 beforeEach(inject(function($httpBackend) {
-    httpBackend = $httpBackend
-    httpBackend
-      .when("GET", "https://api.github.com/search/users?q=hello")
-      .respond({
-        items: items
-      });
+  httpBackend = $httpBackend
+  httpBackend
+    .when("GET", "https://api.github.com/search/users?q=hello")
+    .respond({
+      items: items
+    });
 }));
 ```
 
@@ -549,15 +558,18 @@ describe('GitUserSearchController', function() {
         });
     }));
 
-    var items = [{
-      "login": "tansaku",
-      "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
-      "html_url": "https://github.com/tansaku"
-    }, {
-      "login": "stephenlloyd",
-      "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
-      "html_url": "https://github.com/stephenlloyd"
-    }];
+    var items = [
+      {
+        "login": "tansaku",
+        "avatar_url": "https://avatars.githubusercontent.com/u/30216?v=3",
+        "html_url": "https://github.com/tansaku"
+      }, 
+      {
+        "login": "stephenlloyd",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
+        "html_url": "https://github.com/stephenlloyd"
+      }
+    ];
 
     it('should display search results', function() {
       scope.searchTerm = 'hello';
@@ -580,7 +592,7 @@ Now what we'd like to do is search when the user types something in. There are t
 
 The first part is simple: we just need to bind `ng-change` to our `doSearch` function inside our text value.
 
-```js
+```html
 <input type="text" ng-model="searchTerm" ng-change="doSearch()">
 ```
 
@@ -599,5 +611,3 @@ There's a couple of things to clean up:
 * Notice how when you clear the text box you're still trying to search.
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
-* If you haven't already created a Github Application, you are probably blowing through the limit of calls to the GitHub API at this point (especially as everyone in the room is doing a similar thing). Try generating a [personal access token](https://github.com/settings/applications#personal-access-tokens) for the app on your GitHub profile, and then add it to the API call using the URL parameter `access_token`. This should remove the GitHub limiting of your API requests.
-

@@ -34,11 +34,25 @@ Make sure you have worked through these pills before starting:
 * :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
 * :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
 
-##Version 1 - Angular
+##Version 0 - jQuery prototype & warmup
+
+Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals: 
+
+* [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jQuery.md)
+
+While you're here, also check out:
+* [This article on things you should know about JavaScript](http://skim.la/2012/02/06/things-you-should-know-about-javascript/)
+* Amuse yourself with [this video on some of the fun surprises JavaScript has up its sleeve](https://www.destroyallsoftware.com/talks/wat)
+
+##Version 1 - Intro to Angular
 
 * [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
 
-##Version 2 - Deploying to Heroku
+##Version 2 - More info
+
+Try to get your version looking more like the mockup. Get some styling in there!
+
+##Version 3 - Deploying to Heroku
 
 Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - you could use Node Express or Sinatra.
 
@@ -51,10 +65,11 @@ If you are deploying with Sinatra, you may want to read this:
 
 * [Deploying your Sinatra/Angular application to Heroku](https://github.com/makersacademy/course/blob/master/pills/deploying_angular_sinatra.md)
 
-##Version 3 - Report Card
-
-Adjust the application to display a Makers Academy progress report for the user in question, including at least #commits on each relevant Github Repo.
 
 ##Version 4 - Bonus Level
 
-Include further checks such as creating %completion based on expected number of commits, code smells, SOLID principles etc.
+Keep extending the profile - can you list all of a user's repos? How about the commit count per repo? Language distribution? How can you use Angular to display this information?
+
+##Version 5 - You're a masochist
+
+Redo everything in Coffeescript (or DogeScript)

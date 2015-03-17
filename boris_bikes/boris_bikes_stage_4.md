@@ -1,7 +1,5 @@
 ##Stage 4: Refactoring vs New Features
 
-:construction: UNDER CONSTRUCTION :construction:
-
 Our feature test is passing ensuring that we are delivering value to our client.  We've got a unit tests for the Bike and DockingStation classes.  However our DockingStation is very tightly coupled to the Bike class.  It might seem obvious that all a DockingStation ever needs to do is release Bikes, but Ruby programmers pride themselves on programming to interfaces (the way objects behave), not locking an implementation to a particular type of class.  All our feature test requires is that DockingStations provide objects that respond to the 'broken?' method.  Ultimately it doesn't care what the class of the object we are calling it on.  In the future our client might want docking stations to release objects of class MountainBike or Scooter or what have you, and we imagine our end user will continue to want objects that are not broken, or at least to be able to tell if they are broken or not.  You can see an example of how we might de-couple our objects in the [dependency injection pill&nbsp;:pill:](../pills/dependency_injection.md).
 
 However this sort of refactoring might be considered premature in that we may naturally evolve our code away from this unpleasant tightly coupled state of affairs.  So rather than rushing to refactor, let's consider some other user stories, which imply that DockingStations should have a limited capacity for storing bikes.
@@ -90,7 +88,7 @@ describe DockingStation do
 end
 ```
 
-Note that the above test does not even have an expect statement.  Not ideal, but it is checking that we can call the dock method with an argument.  Here we are using the symbol :bike as a placeholder.  We could use a double, but that power is not required.  
+Note that the above test does not even have an expect statement.  Not ideal, but it is checking that we can call the dock method with an argument.  Here we are using the symbol :bike as a placeholder.  We could use a double, but we currently don't need a stand in that does anything at all, so a symbol is sufficient.  In this case either a double or a symbol keeps our docking station unit tests nicely isolated from the Bike class.
 
 We might think that the following code would pass this test:
 
@@ -106,7 +104,7 @@ class DockingStation
 end
 ```
 
-And it would if not for RuboCop.  RuboCop won't less us have unused arguments so we'll have to use bike in the dock method to satisfy RuboCop.  In doing so let's first update our test to use an expect statement and check the return value:
+And it would if not for RuboCop.  RuboCop won't less us have unused arguments in a method so we'll have to use bike in the dock method to satisfy RuboCop.  In doing so let's first update our test to use an expect statement and check the return value:
 
 ```ruby
 require 'docking_station'
@@ -148,9 +146,9 @@ Failures:
      # ./spec/docking_station_spec.rb:9:in `block (2 levels) in <top (required)>'
 ```
 
-but please stick with rake and RuboCop!
+but please stick with rake and RuboCop!  
 
-Updating the dock method to return the bike argument we should satisfy both RuboCop and RSpec.  Now we have just a single failing integration/feature test:
+Having double checked we got the correct fail, we can update the dock method to return the bike argument and thus satisfy both RuboCop and RSpec.  Now we have just a single failing integration/feature test:
 
 ```sh
 1) member of public accesses bike docking station unable to release as none available
@@ -159,7 +157,7 @@ Updating the dock method to return the bike argument we should satisfy both Rubo
    # ./spec/feature/public_bike_access_spec.rb:13:in `block (2 levels) in <top (required)>'
 ```
 
-And so it's tempting again to just go ahead and fix the application code, but what we should really be doing here is adjusting the unit test for our DockingStation so that we have a unit test check of the error being raised when the station is empty.
+And again it's tempting to just go ahead and fix the application code, but what we should really be doing here is adjusting the unit test for our DockingStation so that we have a unit test check of the error being raised when the station is empty.
 
 ```ruby
 require 'docking_station'
@@ -192,7 +190,7 @@ Finished in 0.00574 seconds (files took 0.18372 seconds to load)
 6 examples, 2 failures
 ```
 
-One is a failing unit test and the other is a failing feature test.  Now finally to change some application code.  We know we may want to store multiple bikes, but let's do the simplest thing - just store one bike:
+One is a failing unit test and the other is a failing feature test.  Now finally we can change some application code.  We know we may want to store multiple bikes, but let's do the simplest thing first - just store one bike:
 
 ```ruby
 class DockingStation
@@ -207,7 +205,7 @@ class DockingStation
 end
 ```
 
-Rubocop gets a bit antsy with methods like this that are just variations on getters and setters (see the [getters and setters pill&nbsp;](../pills/getters_and_setters.md)).  There is a simple fix that the RuboCop author suggests: https://github.com/bbatsov/rubocop/issues/251
+RuboCop gets a bit antsy with methods like this that are just variations on getters and setters (see the [getters and setters pill&nbsp;](../pills/getters_and_setters.md)).  There is a simple fix that the RuboCop author suggests: https://github.com/bbatsov/rubocop/issues/251
 
 ```ruby
 class DockingStation
@@ -233,8 +231,9 @@ end
 
 And now we should have the joy of seeing both our unit test and feature test both go green at the same time.
 
-It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that they'll need to store more bikes in future, but particularly when learning it is highly instructive to work carefully through much simpler versions of a system.  Also surprisingly even for experts it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a working simple base.
+It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that we'll probably need to store more bikes in future, but particularly when learning it is highly instructive to work carefully through much simpler versions of a system.  Also surprisingly even for experts it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a working simple base.
 
+Furthermore, you never know when your customer is going to come back to you and say - actually we don't need that extra functionality.  Always build the simplest possible thing and get that working as a baseline - have progress through a set of user stories and ongoing interaction with the customer drive the addition of functionality to your system at the slowest possible rate.
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
