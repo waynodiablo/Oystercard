@@ -43,7 +43,6 @@ Add the following to `gitprofile.html`:
         </section>
       </article>
     </template>
-  </main>
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
