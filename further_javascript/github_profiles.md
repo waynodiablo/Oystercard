@@ -34,6 +34,12 @@ Make sure you have worked through these pills before starting:
 * :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
 * :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
 
+##Version 0 - jQuery prototype
+
+Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals: 
+
+* [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jquery.md)
+
 ##Version 1 - Angular
 
 * [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
