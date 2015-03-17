@@ -34,17 +34,19 @@ Make sure you have worked through these pills before starting:
 * :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
 * :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
 
-##Version 0 - jQuery prototype
+##Version 0 - jQuery prototype & warmup
 
 Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals: 
 
 * [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jQuery.md)
 
+While you're here, also check out [this article on things you should know about JavaScript](http://skim.la/2012/02/06/things-you-should-know-about-javascript/), and amuse yourself with [this video on some of the fun surprises JavaScript has up its sleeve](https://www.destroyallsoftware.com/talks/wat)
+
 ##Version 1 - Intro to Angular
 
 * [Github profiles with Angular walkthrough](https://github.com/makersacademy/course/blob/master/further_javascript/angularjs.md)  
 
-##Version 2 - More info & Protractor
+##Version 2 - More info
 
 Try to get your version looking more like the mockup. What kind of tests can you add to
 
