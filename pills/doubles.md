@@ -25,13 +25,13 @@ So how do I remove the arbitrary dependencies on `ObjectB`?  Here are some examp
 Instead of testing `ObjectA` against an instance of `ObjectB`, I use a stand in (a stuntman if you like) for `ObjectB` instead.  `ObjectA` doesn't know the difference, it simply treats the double as if were an instance of `ObjectB`, but it's not - it's a dummy that I've set up with static (and therefore _not variable_) values.
 
 ### Stubs
-I want to test some behaviour of `ObjectA`, but during the execution of that behaviour, `ObjectA` calls a method on `ObjectB`.  I don't need to test that the method on `ObjectB` gets called, but I do want to make sure that the method on `ObjectB` always returns a specific value.
+I want to test some behaviour of `ObjectA`, but during the execution of that behaviour, `ObjectA` calls a method on `ObjectB`.  I don't need to test that the method on `ObjectB` gets called, but I do want to make sure that when it does, the method on `ObjectB` always returns a specific value.
 
 ### Mocks
-I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments.  In my test, I don't particularly care what happens afterwards, but I want to test that _in the subsequent test code_ the specific method _is_ called with the correct arguments.
+I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments.  In my test, I don't particularly care what happens afterwards, but I want to test that in the test code _that is about to be executed_ the specific method _is_ called with the correct arguments.
 
 ### Spies
-I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments  (sound familiar?).  In my test, I don't particularly care what else happened during the test, just that _in the test code that was executed_ the specific method _was_ called with the correct arguments.
+I want to test some behaviour of `ObjectA` and, critially, during the execution of that behaviour, `ObjectA` must call a method on `ObjectB` with specific arguments  (sound familiar?).  In my test, I don't particularly care what else happened during the test, just that _in the test code that was just executed_ the specific method _was_ called with the correct arguments.
 
 ### Summary
 Actually, I may have misled you a bit there.  Many of these terms are interchangable depending on the testing framework and mocks and doubles are pretty much the same thing; it's the concepts that are important.
