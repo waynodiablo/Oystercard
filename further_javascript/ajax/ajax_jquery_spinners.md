@@ -4,7 +4,17 @@ Spinners & Modals
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-*Many thanks to [Alex Peattie](https://github.com/alexpeattie) for the design of this walkthrough*
+*Many thanks to [Alex Peattie](https://github.com/alexpeattie) and [Tansaku](https://github.com/tansaku) for the design of this walkthrough*
+
+Let's adjust the simple profile application to ensure that it gives a good user experience even under poor network connectivity, and let's the user know when searches for users have failed or the network connection has timed out.
+
+Here's an example of a message indicating we can't find a particular user:
+
+![user not found](https://www.dropbox.com/s/r4gamssxfj3hgog/Screenshot%202014-12-02%2008.39.45.png?dl=1)
+
+And here's an example of an animated spinner that can be shown to indicate that the network connection is in progress:
+
+![spinner](http://traindaze.com/assets/images/loader.gif)
 
 So we might worry about the user experience when the network connection is slow.  On mac we have a handy tool to simulate that situation.  Open Xcode --> Open developer tools --> More developer tools; there is a package available from Apple called "Hardware IO Tools for Xcode".  We're interested in the network link conditioner.  Let's try the github profile app with a high latency network connection - the user is left hanging.
 

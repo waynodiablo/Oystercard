@@ -51,10 +51,10 @@ Include further checks such as creating %completion based on expected number of 
 Related Walkthoughs
 ---------------
 
-* [AJAX Introduction](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_introduction.md)
-* [AJAX and More jQuery](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_with_extra_jquery.md)
-* [AJAX and Even More jQuery](https://github.com/makersacademy/Walkthroughs/blob/master/ajax_jquery_spinners.md)
-* [AngularJS](https://github.com/makersacademy/Walkthroughs/blob/master/angularjs.md)
+* [AJAX Introduction](https://github.com/makersacademy/course/blob/master/advanced_javascript/ajax_introduction.md)
+* [AJAX and More jQuery](https://github.com/makersacademy/course/blob/master/advanced_javascript/ajax_with_extra_jquery.md)
+* [AJAX and Even More jQuery](https://github.com/makersacademy/course/blob/master/advanced_javascript/ajax_jquery_spinners.md)
+* [AngularJS](https://github.com/makersacademy/course/blob/master/advanced_javascript/angularjs.md)
 * [APIs and Angular](https://www.youtube.com/watch?v=Z0ZERKkhOec)
 
 ## Resources

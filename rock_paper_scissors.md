@@ -95,16 +95,16 @@ git push heroku master
 ## Related Walkthroughs
 
 * Part 1: JavaScript and Jasmine
-  * [JavaScript Intro](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_intro.md)
-  * [More JavaScript](https://github.com/makersacademy/Walkthroughs/blob/master/more_javascript.md)
+  * [JavaScript Intro](https://github.com/makersacademy/course/blob/master/walkthroughs/javascript_intro.md)
+  * [More JavaScript](https://github.com/makersacademy/course/blob/master/walkthroughs/more_javascript.md)
 * Part 2: JQuery
-  * [jQuery Intro](https://github.com/makersacademy/Walkthroughs/blob/master/jquery_intro.md) 
-  * [jQuery animations](https://github.com/makersacademy/Walkthroughs/blob/master/jquery_animations.md) 
+  * [jQuery Intro](https://github.com/makersacademy/course/blob/master/walkthroughs/jquery_intro.md) 
+  * [jQuery animations](https://github.com/makersacademy/course/blob/master/walkthroughs/jquery_animations.md) 
 * Part 3: JS Templating
-  * [Mustache](https://github.com/makersacademy/Walkthroughs/blob/master/mustache.md)
-  * [Heroku](https://github.com/makersacademy/Walkthroughs/blob/master/heroku_sinatra_javascript.md)
+  * [Mustache](https://github.com/makersacademy/course/blob/master/walkthroughs/mustache.md)
+  * [Heroku](https://github.com/makersacademy/course/blob/master/walkthroughs/heroku_sinatra_javascript.md)
 * Part 4: JS Refactoring
-  * [JS Refactoring](https://github.com/makersacademy/Walkthroughs/blob/master/javascript_testability.md)
+  * [JS Refactoring](https://github.com/makersacademy/course/blob/master/walkthroughs/javascript_testability.md)
 
 ## Related Pills
 

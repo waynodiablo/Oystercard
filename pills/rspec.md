@@ -15,9 +15,15 @@ Once you have installed [RSpec](http://rspec.info) you can see the different opt
 rspec --help
 ````
 
+Note that RSpec consists of three main components that are documented in detail here:
+
+* [RSpec Core Docs](http://www.relishapp.com/rspec/rspec-core/docs)
+* [RSpec Expectation Docs](http://www.relishapp.com/rspec/rspec-expectations/docs/)
+* [RSpec Mock Docs](http://www.relishapp.com/rspec/rspec-mocks/docs)
+
 ## Hello BDD, hello RSpec
 
-Let's write our first *test driven* program!
+Let's write our first *test driven* program!  In the first instance we'll focus on the RSpec core and RSpec expectations.
 
 We will start with something simple and work our way up from there. Imagine we want to create a method that will greet us. What we want is a method we can call, passing in a name, and have a personalised greeting in return.
 
@@ -35,20 +41,20 @@ Once we save and run this code with **rspec greeter_spec.rb** we will see the co
 
 ```
  rspec greeter_spec.rb
-      
+
       Failures:
-        
+
         1) Greeter greets Rico
            Failure/Error: expect(greet('Rico')).to eq 'Hello, Rico, how are you today?'
            NoMethodError:
              undefined method `greet' for #<RSpec::Core::ExampleGroup::Nested_1:0x007f9b55073800>
            # ./greeter_spec.rb:3:in `block (2 levels) in <top (required)>'
-      
+
       Finished in 0.00036 seconds
       1 example, 1 failure
-        
+
       Failed examples:
-        
+
       rspec ./greeter_spec.rb:2 # Greeter greets Rico
 ````
 
@@ -75,7 +81,7 @@ There is actually a lot going on here, let's look into it with more detail. Befo
 
 Examples, like this one, follow a common structure. First you prepare your data, then you perform some action and at the end you make sure what you where expecting did happen. We developers like to call that **Given, When, Then**.
 
-Did the example we wrote have these elements? It actually did, the only reason you didn't see them at first is because we wrote them *inline*. How would it look like if we actually separated the example into it's **Given,When, Then** parts?
+Did the example we wrote have these elements? It actually did, the only reason you didn't see them at first is because we wrote them *inline*. How would it look like if we actually separated the example into it's **Given, When, Then** parts?
 
 ````ruby
 it 'greets Rico' do
@@ -85,7 +91,7 @@ it 'greets Rico' do
 end
 ````
 
-Did you notice the **eq**? This is a so called [Matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers). A [matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) is essentially a method that will match the operation inside the expect method (result) with the expectation ('Hello, Rico, how are you today?’). [RSpec](http://rspec.info) has a lot of [build in matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) that you can make use of while writing your specs (*you can even write your own matchers!*)
+Did you notice the **eq**? This is a so called [Matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers). A [matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) is essentially a method that will match the operation inside the expect method (result) with the expectation ('Hello, Rico, how are you today?’). [RSpec](http://rspec.info) has a lot of [built in matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers) that you can make use of while writing your specs (*you can even write your own matchers!*)
 
 The next thing we need to do is implement this method, but remember, we only want to implement the **simplest code that could possibly work!**
 
@@ -129,23 +135,23 @@ Running [RSpec](http://rspec.info) will fail now (*and for the right reason*):
 ````ruby
 rspec -f p greeter_spec.rb
 .F
-      
+
 Failures:
-      
+
   1) Greeter greets Chloë
      Failure/Error: expect(greet('Chloë')).to eq 'Hello, Chloë, how are you today?'
-          
+
       expected: "Hello, Chloë, how are you today?"
            got: "Hello, Rico, how are you today?"
-              
+
              (compared using ==)
       # ./greeter_spec.rb:11:in `block (2 levels) in <top (required)>'
-            
+
       Finished in 0.00068 seconds
       2 examples, 1 failure
-          
+
       Failed examples:
-      
+
       rspec ./greeter_spec.rb:10 # Greeter greets Chloë
 ````
 
@@ -162,7 +168,7 @@ If we run our specs now we will see that our code works as expected:
 ````
 rspec -f p greeter_spec.rb
 ..
-      
+
 Finished in 0.0006 seconds
 2 examples, 0 failures
 ````
@@ -197,3 +203,12 @@ rspec
 ````
 
 [RSpec](http://rspec.info) will figure out which files are in the *lib directory* and which are in the *spec directory* and will map those with each other (*with help of your requires of course*) so that you can run your specs.
+
+Resources
+--------
+
+* http://rspec.info
+* [RSpec Core Docs](http://www.relishapp.com/rspec/rspec-core/docs)
+* [RSpec Expectation Docs](http://www.relishapp.com/rspec/rspec-expectations/v/3-2/docs/)
+* [RSpec Mock Docs](http://www.relishapp.com/rspec/rspec-mocks/v/3-2/docs)
+* http://betterspecs.org/

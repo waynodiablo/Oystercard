@@ -3,7 +3,7 @@ AJAX Introduction
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-*Many thanks to [Alex Peattie](https://github.com/alexpeattie) for the design of this walkthrough*
+*Many thanks to [Alex Peattie](https://github.com/alexpeattie) and [Tansaku](https://github.com/tansaku) for the design of this walkthrough*
 
 AJAX is a browser technology that allows the browser to request data from a server without involving a page refresh:
 
@@ -127,7 +127,7 @@ server.listen(port, function(){
 });
 ```
 
-In either case we need the 'Access-Control-Allow-Origin' set so that we can receive requests from any site.  This is because yuo usually can't make AJAX requests except back to the site that originally served the page.  If we don't include this we'll get an error like the following:
+In either case we need the 'Access-Control-Allow-Origin' set so that we can receive requests from any site.  This is because you usually can't make AJAX requests except back to the site that originally served the page.  If we don't include this we'll get an error like the following:
 
 ```
 XMLHttpRequest cannot load http://localhost:4567/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
@@ -224,7 +224,7 @@ Note that we are using the real Github API endpoint here, but we could just as e
 
 Anyhow, what do we need to do in the AJAX callback here?  We need to merge the data coming from the remote API with the HTML that we have.  We could grab html elements and append or prepend things to do them but it's going to get messy.
 
-This is a great time to use a JavaScript templating system like [mustache.js](http://github.com/janl/mustachejs). So we need to take our profile and turn it into a mustache template that we can merge with the data that we get from our remote service:
+This is a great time to use a JavaScript templating system like [mustache.js](http://github.com/janl/mustache.js). So we need to take our profile and turn it into a mustache template that we can merge with the data that we get from our remote service:
 
 ```html
 <html>
