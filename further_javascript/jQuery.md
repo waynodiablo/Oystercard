@@ -82,7 +82,7 @@ Make sure everything runs as expected.
 
 ##Discuss with your pair (and your byte)
 
-* Make sure you undertand what each and every line of code is doing.
+* Make sure you understand what each and every line of code is doing.
 * Have a look at the `info` that is coming back from the `$.get` request. What information does this contain?
 * Do you understand why we have to pass `info` into `function(info) { .... }`? What construct in Ruby does this resemble?
 * Try using `cURL` to obtain the same data in the command line.
