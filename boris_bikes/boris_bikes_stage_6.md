@@ -1,6 +1,6 @@
 ## Stage 6:  Dealing with Broken Bikes
 
-:construction: UNDER CONSTRUCTION :construction:
+***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 There are two more user stories that are specific to just stations and bikes, but have to deal with broken bikes.
 
@@ -17,9 +17,9 @@ I'd like docking stations to accept returning bikes (broken or not).
 Let's start with one of these and create a feature test that will ultimately lead us to making the bikes broken? method work properly ...
 
 ```ruby
-describe 'member of public accesses bike' do
+feature 'member of public accesses bike' do
   # other tests omitted for brevity
-  it 'and broken bikes are not considered available' do
+  scenario 'docking station will not include any broken bikes in those available' do
     docking_station = DockingStation.new
     broken_bike = Bike.new
     broken_bike.break
@@ -181,18 +181,18 @@ We've done several cycles of red/green jumping back and forth between feature an
 Our feature test looks like is use some attention.  Check out public_bike_access_spec.rb:
 
 ```ruby
-describe 'member of public accesses bike' do
-  it 'and it is not broken' do
+feature 'member of public accesses bike' do
+  scenario 'docking station releases a bike that is not broken' do
     docking_station = DockingStation.new
     docking_station.dock Bike.new
     bike = docking_station.release_bike
     expect(bike).not_to be_broken
   end
-  it 'and there are none available' do
+  scenario 'docking station unable to release as none available' do
     docking_station = DockingStation.new
     expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
   end
-  it 'and broken bikes are not considered available' do
+  scenario 'docking station will not include any broken bikes in those available' do
     docking_station = DockingStation.new
     broken_bike = Bike.new
     broken_bike.break
@@ -205,17 +205,17 @@ end
 We're declaring DockingStations over and over.  We could make this feature test 'describe' DockingStation, but it's a feature (and in our case an integration) test that is testing both Bike and DockingStation so let's use an alternative.  A 'let' statement:
 
 ```ruby
-describe 'member of public accesses bike' do
+feature 'member of public accesses bike' do
   let(:docking_station) { DockingStation.new }
-  it 'and it is not broken' do
+  scenario 'docking station releases a bike that is not broken' do
     docking_station.dock Bike.new
     bike = docking_station.release_bike
     expect(bike).not_to be_broken
   end
-  it 'and there are none available' do
+  scenario 'docking station unable to release as none available' do
     expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
   end
-  it 'and broken bikes are not considered available' do
+  scenario 'docking station will not include any broken bikes in those available' do
     broken_bike = Bike.new
     broken_bike.break
     docking_station.dock broken_bike
@@ -230,5 +230,7 @@ Every time you extract a commonality you are adding a dependency.  DRYing out yo
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
-**Now all our examples pass and we've refactored, a perfect time to commit our changes. Since our repository is not empty anymore, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
+**Now all our examples pass and we've refactored, a perfect time to commit our changes. Push them to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
 **
+
+Time to move on to [Stage 7](boris_bikes_stage_7.md)!

@@ -1,8 +1,8 @@
 ## Stage 7: Feature Tests for Van & Garage
 
-:construction: UNDER CONSTRUCTION :construction:
+***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-The relevent user stories here are:
+The relevant user stories here are:
 
 ```
 As a maintainer of the system,
@@ -26,7 +26,7 @@ The situation with the garage is very similar. What's the difference between a g
 
 It seems likely that if we just implement the Garage and the Van classes in the same way we've done the DockingStation class, we'll be duplicating significant amounts of code. In this situation you need to extract common functionality into a new class or module that will be reused later.  However in order to see how this works, we recommend that you first implement the Van class in a similar way to the DockingStation, i.e. as a holder of bikes.  However once you've done so we recommend extracting the common 'container' functionality into a module.  If you're not feeling so confident please do go on and implement the Garage in the same way, and then extract the functionality that you can clearly see replicated three times over.
 
-Assuming that you have completed the Van and/or Garage functionality, here's a walkthrough of how one would extract the common functionality.  We assume that you implemented the variable capacity functionality at the end of stage 5.
+Assuming that you have completed the Van and/or Garage functionality, here's a walkthrough of how one would extract the common functionality.  We assume that you implemented the variable capacity functionality mentioned at the end of stage 5.
 
 First, run all tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
 
@@ -203,3 +203,5 @@ garage.fix_bikes
 The advantage is that we have the same interface. The disadvantage is that we have to make two method calls (that's a big one).
 
 There's a really good overview of [potential strategies you could use on StackOverflow](http://stackoverflow.com/questions/4470108/when-monkey-patching-a-method-can-you-call-the-overridden-method-from-the-new-i_). Try using `alias_method` and `prepend` (and maybe others) and discuss their advantages and disadvantages with other students and coaches.
+
+Once you've finished up here check out the [Stage 8](boris_bikes_stage_8.md) extension!

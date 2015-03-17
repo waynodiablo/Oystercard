@@ -1,5 +1,7 @@
 ## More User Stories/Feature Requests from the Client
 
+A series of extensions you might care to try.
+
 1. Return real bikes.  Use this new story from the client to create the appropriate feature tests and unit-tests to drive the creation of the application code that will support this feature.  Ensure that you refactor where appropriate:
 
   ```
