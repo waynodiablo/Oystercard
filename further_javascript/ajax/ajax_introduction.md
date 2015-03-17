@@ -224,7 +224,7 @@ Note that we are using the real Github API endpoint here, but we could just as e
 
 Anyhow, what do we need to do in the AJAX callback here?  We need to merge the data coming from the remote API with the HTML that we have.  We could grab html elements and append or prepend things to do them but it's going to get messy.
 
-This is a great time to use a JavaScript templating system like [mustache.js](http://github.com/janl/mustachejs). So we need to take our profile and turn it into a mustache template that we can merge with the data that we get from our remote service:
+This is a great time to use a JavaScript templating system like [mustache.js](http://github.com/janl/mustache.js). So we need to take our profile and turn it into a mustache template that we can merge with the data that we get from our remote service:
 
 ```html
 <html>
