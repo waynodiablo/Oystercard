@@ -106,7 +106,7 @@ class DockingStation
 end
 ```
 
-And it would if not for RuboCop.  RuboCop won't less us have unused arguments in a method so we'll have to use bike in the dock method to satisfy RuboCop.  In doing so let's first update our test to use an expect statement and check the return value:
+And it would if not for RuboCop.  RuboCop won't let us have unused arguments in a method so we'll have to use bike in the dock method to satisfy RuboCop.  In doing so let's first update our test to use an expect statement and check the return value:
 
 ```ruby
 require 'docking_station'
