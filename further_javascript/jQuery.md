@@ -16,7 +16,6 @@ Add the following to `gitprofile.html`:
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <base href='../'>
     <meta charset="utf-8">
   </head>
 
@@ -36,7 +35,7 @@ Add the following to `gitprofile.html`:
         </section>
 
         <section class="stats">
-        <a href={{http_url}}>{{login}}</a>
+        <a href={{html_url}}>{{login}}</a>
 
         Repos: {{public_repos}}
         Followers: {{followers}}
