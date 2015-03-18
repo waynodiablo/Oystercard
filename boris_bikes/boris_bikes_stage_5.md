@@ -239,9 +239,9 @@ Have a go in your pair at implementing the necessary functionality through appro
 
 Think about the sequence of steps you might use, e.g.
 
-1. think about the irb interaction
-2. create a feature test that fails
-3. create a minimal unit test
+1. think about the user experience (in this case irb)
+2. create a corresponding feature test that fails
+3. create a minimal matching unit test
 4. see the paired failing feature and unit tests
 5. create the functionality in the application
 6. see the unit test pass and the feature test move to next fail
