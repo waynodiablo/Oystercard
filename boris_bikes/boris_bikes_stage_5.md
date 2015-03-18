@@ -169,6 +169,7 @@ class DockingStation
   def dock bike
     fail 'Station Full' if full?
     @bikes << bike
+    nil
   end
 
   def release_bike
@@ -200,6 +201,7 @@ class DockingStation
   def dock bike
     fail 'Station Full' if full?
     bikes << bike
+    nil
   end
 
   def release_bike
@@ -225,7 +227,7 @@ We prefer to reference our instance variable within our class via getter methods
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
-We have a remaining user story here:
+We have a remaining user story relating to capacity:
 
 ```
 As a system maintainer,
@@ -234,5 +236,59 @@ I want to be able to specify a larger capacity when necessary.
 ```
 
 Have a go in your pair at implementing the necessary functionality through appropriate use of feature and unit tests.
+
+Think about the sequence of steps you might use, e.g.
+
+1) think about the irb interaction
+2) create a feature test that fails
+3) create a minimal unit test
+4) see the paired failing feature and unit tests
+5) create the functionality in the application
+6) see the unit test pass and the feature test move to next fail
+7) loop back to step 3 until feature test passes
+
+The key question is how will a new capacity be passed to the docking station. And can docking stations change their capacity over time?  Hmm, another question for the client, we can send another email, but in the mean time what should we assume?  That docking station capacities can change over time, or that they are fixed once?  Depending on what we assume we might choose a different route to pass the new capacity to a docking station.  If fixed once then we might well pass through an initialize method like so:
+
+```sh
+→ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > docking_station = DockingStation.new 50
+  => #<DockingStation:0x007fa37eba3be0 @bikes=[], @capacity=50>
+```
+
+which would rely on an initialize method in our class
+
+```ruby
+class DockingStation
+  def initialize capacity
+    @capacity = capacity
+  end
+end
+```
+
+however if docking station capacities can vary over their lifetime them perhaps we could create a setter method like so:
+
+```ruby
+class DockingStation
+  attr_writer :capacity
+end
+```
+
+so that we can update the docking station capacity at will:
+
+```sh
+→ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > docking_station = DockingStation.new
+=> #<DockingStation:0x007fa37eb90338 @bikes=[], @capacity=20>
+2.1.5 :003 > docking_station.capacity = 25
+=> #<DockingStation:0x007fa37eb90338 @bikes=[], @capacity=25>
+2.1.5 :004 > docking_station.capacity = 55
+=> #<DockingStation:0x007fa37eb90338 @bikes=[], @capacity=55>
+```
+
+In the absence of input from the client which is the best place to start?  You decide.  If you go for the former consider how you'll handle the case when no capacity is initially set [Hint: the POODR book has come great tips on these kinds of things - check out chapter 3 on defaults for initializers as well as researching Ruby's ability to set default values for arguments on any method].
 
 Then time to move on to [Stage 6](boris_bikes_stage_6.md)!

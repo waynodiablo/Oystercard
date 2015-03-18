@@ -11,7 +11,7 @@ I'd like vans to come to take broken bikes from docking stations, take them to b
 
 As a maintainer of the system,
 So that members of the public can get usable bikes,
-I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
+I'd like garages to receive broken bikes, fix them, and make them available for pickup.
 ```
 
 Follow the technique from the previous stages to design feature tests and then unit tests to drive the functionality of the first the Van and then the Garage.  The user stories above have multiple clauses in their Task components - perhaps we should break them out into separate features?

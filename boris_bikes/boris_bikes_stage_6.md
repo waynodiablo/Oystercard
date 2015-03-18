@@ -14,12 +14,12 @@ So that members of the public can get usable bikes,
 I'd like docking stations to accept returning bikes (broken or not).
 ```
 
-Let's start with one of these and create a feature test that will ultimately lead us to making the bikes broken? method work properly ...
+Let's start with one of these and create a feature test that will ultimately lead us to making the bikes' 'broken?' method work properly ...
 
 ```ruby
 feature 'member of public accesses bike' do
   # other tests omitted for brevity
-  scenario 'docking station will not include any broken bikes in those available' do
+  scenario 'docking station will not make broken bikes available' do
     docking_station = DockingStation.new
     broken_bike = Bike.new
     broken_bike.break
@@ -27,8 +27,9 @@ feature 'member of public accesses bike' do
     expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
   end
 end
-
 ```
+
+:twisted_rightwards_arrows:
 
 We should be getting used to the format of these test failures now :-)
 
@@ -40,7 +41,10 @@ We should be getting used to the format of these test failures now :-)
    # ./spec/feature/public_bike_access_spec.rb:19:in `block (2 levels) in <top (required)>'
 ```
 
-Again this is our feature test failing.  Naturally we'll want to create a unit-test for the missing low level functionality, that will go in our bike_spec.rb file.
+:twisted_rightwards_arrows:
+
+
+Again this is our feature test failing.  Naturally we'll want to create a unit-test for the missing low level functionality.  As you might expect, that will go in our bike_spec.rb file.
 
 ````ruby
 it 'can break' do

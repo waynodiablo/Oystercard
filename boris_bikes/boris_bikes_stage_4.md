@@ -269,16 +269,16 @@ It might seem trivial, but what we've done here is model a docking station that 
 
 Furthermore, you never know when your customer is going to come back to you and say - actually we don't need that extra functionality.  Always build the simplest possible thing and get that working as a baseline. Allow your progress through a set of user stories and your ongoing interaction with the customer drive the addition of functionality to your system at the slowest possible rate.
 
-:running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial. Here is a reminder of the the User Stories you have completed now, for your reference:
+:running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial. Here is a reminder of the the User Stories we have completed so far:
 
 ```sh
 As a member of the public
 So that I can get across town
-I"d like a docking station to release a bike that is not broken
+I'd like a docking station to release a bike that is not broken
 
 As a maintainer of the system,
 So that members of the public are not disappointed,
-I"d like docking stations to not release bikes when there are none available.
+I'd like docking stations to not release bikes when there are none available.
 ```
 
 Then time to move on to [Stage 5](boris_bikes_stage_5.md)!

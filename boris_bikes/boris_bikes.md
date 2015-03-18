@@ -65,7 +65,7 @@ I'd like vans to come to take broken bikes from docking stations, take them to b
 
 As a maintainer of the system,
 So that members of the public can get usable bikes,
-I'd like garages to receive broken bikes from vans, fix them, and then pass them back to vans for distribution.
+I'd like garages to receive broken bikes, fix them, and make them available for pickup.
 ```
 
 This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
