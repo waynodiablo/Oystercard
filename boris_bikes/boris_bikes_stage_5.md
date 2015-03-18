@@ -239,13 +239,13 @@ Have a go in your pair at implementing the necessary functionality through appro
 
 Think about the sequence of steps you might use, e.g.
 
-1) think about the irb interaction
-2) create a feature test that fails
-3) create a minimal unit test
-4) see the paired failing feature and unit tests
-5) create the functionality in the application
-6) see the unit test pass and the feature test move to next fail
-7) loop back to step 3 until feature test passes
+1. think about the irb interaction
+2. create a feature test that fails
+3. create a minimal unit test
+4. see the paired failing feature and unit tests
+5. create the functionality in the application
+6. see the unit test pass and the feature test move to next fail
+7. loop back to step 3 until feature test passes
 
 The key question is how will a new capacity be passed to the docking station. And can docking stations change their capacity over time?  Hmm, another question for the client, we can send another email, but in the mean time what should we assume?  That docking station capacities can change over time, or that they are fixed once?  Depending on what we assume we might choose a different route to pass the new capacity to a docking station.  If fixed once then we might well pass through an initialize method like so:
 
