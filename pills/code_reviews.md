@@ -1,8 +1,19 @@
-# How To Code Review
+# Preparing Your Code For Review
 
 >This pill is basically a summary of [this talk](https://youtu.be/uqf4vG2L95Q). The [slides for the talk](https://slides.com/leoallen/code-reviews) are available if you want a brief overview of the talk. 
 
-This pill is designed to give you an insight into how to review other people's code. At the same time it is intended to act as a valuable tool for writing your challenges/tech tests, as when doing them you **should always be thinking about your code from the perspective of someone reviewing it**. Below are the main questions that CTOs/coaches at Maker's Academy ask themselves when looking over your code:
+This pill is designed to act as a set of guidelines for writing your challenges/tech tests.
+
+Below are the main questions that CTOs/coaches at Maker's Academy ask themselves when looking over your code. Remember when writing your code that you **should always be thinking about your code from the perspective of someone reviewing it**.
+
+## Summary of Guidelines
+
+Use this summary to check off your code when reviewing it before submission to make sure it's ready for review:
+
+* Has it matched the specification?
+* Is it clean code?
+* 
+
 
 ## Has it matched the specification?
 
@@ -26,7 +37,7 @@ This is only the very basic minimum of what it means to be a clean coder, but it
 
 * [A summary of the Clean Coder book](http://www.integralist.co.uk/posts/clean-coder.html)
 
-## CI - Has it passed Continuous Integration)?
+## CI - Has it passed Continuous Integration?
 
 We use [Travis](https://travis-ci.org) to make sure your tests are passing - make sure you've got a `travis.yml` set up and configured. You should also have set up Travis on your own repo and added a [status badge](http://docs.travis-ci.com/user/status-images/) to your README.
 
@@ -36,7 +47,7 @@ We want to see that your code has been well-thought through in terms of design. 
 
 ### Resources
 
-* ([This article] explains the importance of modelling as a way of thinking
+* ([This article](http://www.chris-granger.com/2015/01/26/coding-is-not-the-new-literacy/) explains the importance of modelling as a way of thinking
 * [POODR](poodr.info) by Sandi Metz is the best resource out there for understanding OOD
 
 ## OOP - Are your objects SOLID?
