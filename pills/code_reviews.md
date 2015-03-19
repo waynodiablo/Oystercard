@@ -8,8 +8,6 @@ Below are the main questions that CTOs/coaches at Maker's Academy ask themselves
 
 ## Summary of Guidelines
 
-Use this summary to check off your code when reviewing it before submission to make sure it's ready for review:
-
 * [Has it matched the specification?](#has-it-matched-the-specification)
 * [Is it clean code?](#is-it-clean-code)
 * [CI - Has it passed Continuous Integration](#ci---has-it-passed-continuous-integration)
@@ -21,7 +19,6 @@ Use this summary to check off your code when reviewing it before submission to m
 * [KISS](#other-considerations)
 * [You Aren't Gonna Need It](#other-considerations)
 * [Principle of Least Astonishment](#other-considerations)
-
 
 ## Has it matched the specification?
 
