@@ -10,7 +10,7 @@ Below are the main questions that CTOs/coaches at Maker's Academy ask themselves
 
 Use this summary to check off your code when reviewing it before submission to make sure it's ready for review:
 
-* Has it matched the specification?
+* [Has it matched the specification?](#has-it-matched-the-specification)
 * Is it clean code?
 * 
 
