@@ -11,8 +11,16 @@ Below are the main questions that CTOs/coaches at Maker's Academy ask themselves
 Use this summary to check off your code when reviewing it before submission to make sure it's ready for review:
 
 * [Has it matched the specification?](#has-it-matched-the-specification)
-* Is it clean code?
-* 
+* [Is it clean code?](#is-it-clean-code)
+* [CI - Has it passed Continuous Integration](#ci---has-it-passed-continuous-integration)
+* [OOD - How well-designed is it?](#ood---how-well-designed-is-it)
+* [OOP - Are your objects SOLID?](#oop---are-your-objects-solid)
+* [TDD - How well tested is it?](#tdd---how-well-tested-is-it)
+* [MVC - Have you understood how to build an MVC app properly?](#mvc---have-you-understood-how-to-build-an-mvc-app-properly)
+* [DRY](#other-considerations)
+* [KISS](#other-considerations)
+* [You Aren't Gonna Need It](#other-considerations)
+* [Principle of Least Astonishment](#other-considerations)
 
 
 ## Has it matched the specification?
