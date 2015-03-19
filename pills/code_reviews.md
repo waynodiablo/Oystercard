@@ -1,6 +1,6 @@
 # How To Code Review
 
->This pill is basically a summary of [this talk]((https://youtu.be/uqf4vG2L95Q). The [slides for the talk](https://slides.com/leoallen/code-reviews) are available if you want a brief overview of the talk. 
+>This pill is basically a summary of [this talk](https://youtu.be/uqf4vG2L95Q). The [slides for the talk](https://slides.com/leoallen/code-reviews) are available if you want a brief overview of the talk. 
 
 This pill is designed to give you an insight into how to review other people's code. At the same time it is intended to act as a valuable tool for writing your challenges/tech tests, as when doing them you **should always be thinking about your code from the perspective of someone reviewing it**. Below are the main questions that CTOs/coaches at Maker's Academy ask themselves when looking over your code:
 
@@ -9,6 +9,22 @@ This pill is designed to give you an insight into how to review other people's c
 This is crucial and should be the first thing you think about. Look over the specification and as you go about the process of designing your submission, constantly think about what is being asked of you and whether you are fulfilling the criteria specified. Your tests will help you here - the specs you should be writing (particularly your feature tests) should be fulfilling exactly what the brief asks us.
 
 Once you're sure of this, make sure you've explained in your README (only briefly, it doesn't have to be an essay) how you answered the brief and explain any decisions you made when desigining/building your code.
+
+## Is it clean code?
+
+Being a clean coder is what every coder aspires to be - Uncle Bob [wrote a whole book about it](http://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882). There are many things to consider as a clean coder, but at a minimum take a look through your code and ask yourself:
+
+* Is this code presentable? Am I proud to show it off to others?
+* Have I cleaned up things like whitespace, commented-out code, debugger statements from my code?
+* Does the indentation look right?
+* Have I conformed my code to styleguide rules (Hound will help you out here)?
+* Is it clear to someone unfamiliar with my codebase what's going on?
+
+This is only the very basic minimum of what it means to be a clean coder, but it's a great start and you'd be surprised how much things like this are appreciated by your fellow coders!
+
+### Resources
+
+* [A summary of the Clean Coder book](http://www.integralist.co.uk/posts/clean-coder.html)
 
 ## CI - Has it passed Continuous Integration)?
 
@@ -58,15 +74,25 @@ Also ensure that you are correctly using [doubles/mocks](https://github.com/make
 ### Resources
 
 * [Better specs guidelines](http://betterspecs.org/)
+* [Testing from the outside in](https://robots.thoughtbot.com/testing-from-the-outsidein)
 
 ## MVC - Have you understood how to build an MVC app properly?
 
-To consider how to build an app properly, generally you need to be just applying to the Single Responsibility Principle
-* OOD
-* OOP
-* TDD
-* MVC
-* DRY
-* KISS
-* YAGNI
-* POLA
+To consider how to build an app properly, generally you need to be just applying to the Single Responsibility Principle to each component. This means that:
+
+* **Views** - Only handle things to do with presenting your output to the user (basically the HTML), minimise as much as possible logic in the views.
+* **Controllers** - The controller should be as skinny as possible, it should ideally take any request params, pass them to your models/libraries, and pass those to the view **and nothing else**. This is extremely important, fat controllers are one of the surest signs that someone has failed to grasp MVC.
+* **Models** - The model should contain everything related to your data-layer. Remember these don't have to be just for accessing a database, you could and should write model objects for accessing APIs. And remember to encapsulate (see above) all logic that relates to your model **inside** the model and **unit test** it.
+
+### Resources
+
+* You can go even further than fat models/skinny controllers and aim for [skinny controllers, skinny models](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
+* One way we sometimes useto take our code even further is using [Service Objects](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
+* There's even more solutions to improving your approach to MVC [in this article on 7 ways to decompose fat models](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
+
+## Other considerations
+
+* [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) - Avoid repetition in your code, extract into functions/objects/modules and refactor whenever you see this in your code.
+* [KISS](http://www.computerhope.com/jargon/k/kiss.htm) - Always aim for the simplest solution to your problem, it is almost always the best solution.
+* [You Aren't Gonna Need It](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) - Only add things to your code that you're actually doing and solve the problem at hand, don't add anything more than you need to, we are always looking for people who can KISS and build an MVP rather than build unneccesary things that don't solve anything.
+* [Principle of Least Astonishment](http://programmers.stackexchange.com/a/187462) - Does your code do what someone would expect it to? Are you finding there a lots of comments where you have to explain yourself? If so you need to refactor your code so it is self-evident what is going on wherever possible.
