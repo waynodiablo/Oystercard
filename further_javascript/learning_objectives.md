@@ -2,17 +2,17 @@
 
 
 * Increase competency in JavaScript
-  * Modular structure
-  * Callbacks / Asynchronicity
-  * Feature tests
-  * Unit tests
-  * Why use JavaScript
-  * Scope
-  * Hoisting
-  * Anonymous functions
-  * Manipulating and Traversing the DOM
-  * Style guides
-  * Dependency injection
+ * Modular structure
+ * Callbacks / Asynchronicity
+ * Feature tests
+ * Unit tests
+ * Why use JavaScript
+ * Scope
+ * Hoisting
+ * Anonymous functions
+ * Manipulating and Traversing the DOM
+ * Style guides
+ * Dependency injection
 * Become familiar with a JS Framework
  * Angular
  * ~~M~~EAN stack (all except Mongo)
