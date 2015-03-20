@@ -88,7 +88,7 @@ Make sure everything runs as expected.
 * What is a template?
 * How does the template interact with the data that we receive from the API call?
 * What is the point of the `.fail` and `.always` methods? What happens if you take them away?
-* Could we refactor the functions passed to `fail` and `always` into separate, more clearly named functions?
+* Could we refactor the anonymous functions that are passed as arguments to `fail` and `always` into separate, more clearly named functions?
 * How could we test this?
 * The external libraries used here are being loaded over a CDN. What is a CDN?
 * Can you adapt this to another API? What would you have to change to make it work?
