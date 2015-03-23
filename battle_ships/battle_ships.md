@@ -12,6 +12,8 @@ When all of one player's ships have been sunk the game finishes and the player w
 
 ***Please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
+Please also see the [Learning Objectives](learning_objectives.md) for this project.
+
 ## Version 0: The User Stories
 
 If one thinks about what a player wants from a game of battleships, one can imagine a set of user stories like the following:
