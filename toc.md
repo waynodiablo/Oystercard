@@ -10,7 +10,7 @@
 * Week 5: [Intro to Javascript: Rock Paper Scissors](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 * Week 6: Lab week
 * Week 7: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
-* Week 8: Makerthon
+* Week 8: [Makerthon](https://github.com/makersacademy/course/blob/master/makerthon_objectives.md)
 * Week 9: [MVC in Ruby: Yelp on Rails](https://github.com/makersacademy/course/blob/master/yelp.md)
 * Weeks 10-11: Final Projects
 * Week 12: Hiring week
