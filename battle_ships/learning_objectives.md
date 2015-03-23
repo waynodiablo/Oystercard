@@ -19,7 +19,6 @@ In general this week should consolidate all of the learning objectives from week
 * Can assess appropriate use of encapsulation within an OO system
 * Can develop an appropriately encapsulated OO system
 * Can describe what polymorphism is
-* Can use polymorphic approaches to support the open/closed principle
 
 ## Class Methods, Single Responsibility Principle
 
