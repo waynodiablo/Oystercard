@@ -23,3 +23,11 @@ Makerthon is technology agnostic - we don't mind what tech stack you use, althou
 * Scrums
 * Pairing
 * Delegating workload
+
+> Comments from Ben
+Agile - the key target learnings here are EDUF and the difference between increments and iterations.
+Kanban - Kanban IS NOT putting sticky notes on a board - that's just tracking a project using sticky notes on a board.  If we call it Kanban, then we should explain WIP limits and pull-not-push.  Otherwise it explicitly is not Kanban.
+Git branches - every project team I've seen so far has messed up git branches.  Let's ensure everyone has the right pattern from the start.  One of the objectives of Makerthon is to practice using git branches properly.
+Testing - specifically using outside-in testing.  Not a line of code should be written until there is a feature test in place to enable it.
+User stories - how a user story is structured and how it can be used to create a feature test.
+Pairing/Scrums/Teamwork etc.  - These are all now at the Apply, Analyze, Evaluate etc. level - so the objectives are to practice these correctly.
