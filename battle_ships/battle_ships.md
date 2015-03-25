@@ -142,6 +142,7 @@ The idea of the UI ( _or user interface_ ) is to provide the player a good UX ( 
 - [Battleships Game - Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
 - [SOLID - Wikipedia](https://en.wikipedia.org/wiki/Solid_(object-oriented_design))
 - [Principles of OOD - Robert C. Martin (unclebob)](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
+- [Terminal Table Gem](https://github.com/tj/terminal-table)
 - [User experience design - Wikipedia](https://en.wikipedia.org/wiki/User_experience_design)
 - [User interface design - Wikipedia](https://en.wikipedia.org/wiki/User_interface_design)
 - [UX Myths](http://uxmyths.com)
