@@ -1,4 +1,4 @@
-#Git Workflow
+#Github Workflow
 
 Using Git branches can make your life much easier when developing a project as a group. Ensuring separation from the master branch creates opportunity to review and reflect upon code before you are commited to it. It allows for a team to divide into pairs and work asynchronously on different features, each pair working on their own feature branch. Using pull requests creates a space in your team's workflow for code reviews and reflection.
 
