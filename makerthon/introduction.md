@@ -8,6 +8,7 @@ It is not a test. It is not a challenge to see how many features you can cram in
 
 Makerthon is technology agnostic - we don't mind what tech stack you use, although it would probably be easier on you to use a language or framework that you have learned here!
 
-Here are the learning objectives to guide your learning process this week:
+Here are some resources to help you to structure your week:
 
 * [Learning Objectives](https://github.com/makersacademy/course/blob/master/makerthon/makerthon_objectives.md)
+* :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
