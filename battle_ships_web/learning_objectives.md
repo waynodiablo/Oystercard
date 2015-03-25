@@ -1,18 +1,31 @@
 ##Learning Objectives: BattleShips
 
-*Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved.*
+*Learning Objectives are organised by topic and subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
-### Three-Tier Web Architecture
+## The Web
+
+### Servers and Clients
+* Define 'server' as 'something that receives requests and issues responses'
+* Define 'client' as 'something that issues requests and receives responses'
+* Explain how servers and clients interact
 
 ### HTTP
 
-### Feature/Acceptance testing using Capybara
+## Web technologies
 
-### Sinatra
+### Indirect and direct links
+
+### HTML
+
+### CSS
+
+## Web Frameworks
 
 ### Web Application Development
 
-### Server/Client
+### Sinatra
+
+### Feature/Acceptance testing using Capybara
 
 ### Parameters
 
@@ -22,11 +35,6 @@
 
 ### REST
 
-### Indirect and direct links
-
-### HTML
-
-### CSS
 
 # SOLID Principles
 ## O - Open/Closed Principle
