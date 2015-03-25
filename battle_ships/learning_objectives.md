@@ -14,7 +14,7 @@ In general this week should consolidate all of the learning objectives from week
 * Create Minimum Viable Prototypes (MVps)
 * Construct an MVP using MVps, via BDD/TDD
 
-## Inheritance vs Composition, Polymorphism, Open/Closed Principle
+## Inheritance vs Composition
 
 * Define Inheritance
 * Define Composition
@@ -56,6 +56,14 @@ In general this week should consolidate all of the learning objectives from week
 * Explain why minimising dependencies is good for code maintainability
 * Use Dependency Injection to minimise dependencies
 * Use Dependency Inversion to minimise dependencies
+
+## SOLID principles
+
+* Know that 'S' is the Single Responsibility Principle (SRP)
+* Know that 'O' is the Open Closed Principle (OCP)
+* Know that 'L' is the Liskov Substitution Principle (LSP)
+* Know that 'I' is the Single Responsibility Principle (SRP)
+* Know that 'D' is the Dependency Injection/Inversion (DIP)
 
 ## Gems
 
