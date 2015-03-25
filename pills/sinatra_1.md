@@ -279,7 +279,9 @@ The second line contains the text and an embedded ruby tag. The code that begins
 </div>
 ````
 
-Technically, the **erb()** method reads the input file, processes Ruby that is inside and returns resulting HTML. This HTML is then returned by the block passed to the **get()** method.
+Technically, the **erb()** method reads the input file, processes Ruby that is inside and returns resulting HTML. This HTML is then returned by the block passed to the **get()** method:
+
+![Rendering erb in Sinatra](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/rendering_erb.jpg)
 
 So, we've just learned how to extract HTML into separate files and how to transfer data from Ruby code into templates. Naturally you'll want to commit the code, push it to Github and switch Driver/Navigator Roles &nbsp;:twisted_rightwards_arrows: but once we've done that let's add some more sophistication to our kitten website.
 
