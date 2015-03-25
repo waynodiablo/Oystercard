@@ -9,3 +9,21 @@
 ### Feature/Acceptance testing using Capybara
 
 ### Sinatra
+
+### Web Application Development
+
+### Server/Client
+
+### Parameters
+
+### Sessions
+
+### Routing
+
+### REST
+
+### Indirect and direct links
+
+### HTML
+
+### CSS
