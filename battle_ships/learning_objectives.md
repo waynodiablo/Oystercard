@@ -1,8 +1,10 @@
 ##Learning Objectives: BattleShips
 
-*Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved.*
+*Learning Objectives are organised by topic, and then by subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
 In general this week should consolidate all of the learning objectives from week 1 and the student should be able to apply all of them to an Object-Oriented system of intermediate complexity.
+
+# Design and Practice
 
 ## Domain Model and Minimum Viable Product (MVP)/prototype (MVp)
 
@@ -21,25 +23,54 @@ In general this week should consolidate all of the learning objectives from week
 * Differentiate between Inheritance and Composition in an OO system
 * Use both inheritance and composition in OO design
 
-## Encapsulation and Polymorphism
+## Encapsulation
 * Define Encapsulation
-* Define Polymorphism
 * Explain why encapsulation is useful
 * Assess appropriate use of encapsulation within an OO system
 * Develop an appropriately encapsulated OO system
 
-## Class Methods
+## Polymorphism
+* Define Polymorphism (in Ruby) as being able to send the same message to different objects and get different results
+* Give an example of Polymorphism in Ruby [[Thoughtbot](https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby) (reading)]
 
-* Remember that a class method can be called directly on a class, without class instantiation
-* Define a class method in Ruby
-* Decide when to use class methods
-* Use a class method to get rid of "magic numbers" from code
-* Use a class method to make instantiation of an object more readable
+# UX/UI Design
 
-## Single Responsibility Principle (SRP)
+* Define UX design as User Experience design
+* Define UI design as User Interface design
+* Explain what UX and UI are
+* Link UX and UI design processes
+* Link UX and UI design processes with the development process
+* Discuss some challenges involved in UX and UI design
+
+# Object-Oriented Programming ([*SOLID*](http://blog.rubybestpractices.com/posts/gregory/055-issue-23-solid-design.html))
+
+## S - Single Responsibility Principle (SRP)
 * Paraphrase the SRP
 * Explain how SRP makes for more maintainable systems
 * Discuss the SRP's importance in development
+
+## O - Open/Closed Principle
+* Explain what "an object should be open for extension, but closed for modification" means
+* Give reasons why the Open/Closed Principle makes for more easily extensible applications
+* Apply the Open/Closed Principle to the design of the weekly project
+
+## L - Liskov Substitution Principle
+* Paraphrase "functions that are designed to operate on _objects of a given class_ should work when they operate on _objects of a subclass of that class_"
+* Explain why the Liskov Substitution Principle makes for more predictable application structures
+* Obey the Liskov Substitution Principle in this week's project
+
+## I - Interface Segregation Principle
+* Define an interface as a way to interact with application objects
+* Remember that SOLID code should avoid interfaces requiring objects to be of a specific type
+* Link 'duck typing' with avoiding Interface Segregation Principle violations
+
+## D - Dependency Inversion Principle
+* Define a dependency in OOD
+* Explain why minimising dependencies is good for code maintainability
+* Use Dependency Injection to minimise dependencies
+* Use Dependency Inversion to minimise dependencies
+
+# Ruby
 
 ## Blocks, Procs & Lambdas
 
@@ -50,20 +81,13 @@ In general this week should consolidate all of the learning objectives from week
 * Pass `Proc`s and `lambda`s as arguments
 * Construct tests using `Proc`s and `lambda`s (e.g `expect { x }.to raise_error`)
 
-## Dependency Injection/Inversion
+## Class Methods
 
-* Define a dependency in OOD
-* Explain why minimising dependencies is good for code maintainability
-* Use Dependency Injection to minimise dependencies
-* Use Dependency Inversion to minimise dependencies
-
-## SOLID principles
-
-* Know that 'S' is the Single Responsibility Principle (SRP)
-* Know that 'O' is the Open Closed Principle (OCP)
-* Know that 'L' is the Liskov Substitution Principle (LSP)
-* Know that 'I' is the Single Responsibility Principle (SRP)
-* Know that 'D' is the Dependency Injection/Inversion (DIP)
+* Remember that a class method can be called directly on a class, without class instantiation
+* Define a class method in Ruby
+* Decide when to use class methods
+* Use a class method to get rid of "magic numbers" from code
+* Use a class method to make instantiation of an object more readable
 
 ## Gems
 
@@ -74,19 +98,12 @@ In general this week should consolidate all of the learning objectives from week
 * Explain how the `Gemfile.lock` file ensures consistent use of libraries
 * Use a Gemfile and Bundler to control gems for a project
 
+# Technologies
+
 ## APIs
 * Define an API as an Application Program Interface
 * Give ways in which APIs are used in programming
 * Diagram how a program might use an online API
-
-# UX/UI Design
-
-* Define UX design as User Experience design
-* Define UI design as User Interface design
-* Explain what UX and UI are
-* Link UX and UI design processes
-* Link UX and UI design processes with the development process
-* Discuss some challenges involved in UX and UI design
 
 
 Weekly Challenge
