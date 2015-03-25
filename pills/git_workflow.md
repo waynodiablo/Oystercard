@@ -1,6 +1,6 @@
 #Github Workflow
 
-Using Git branches can make your life much easier when developing a project as a group. Ensuring separation from the master branch creates opportunity to review and reflect upon code before you are commited to it. It allows for a team to divide into pairs and work asynchronously on different features, each pair working on their own feature branch. Using pull requests creates a space in your team's workflow for code reviews and reflection.
+When developing a project as a group, using Git branches and Github's pull request feature can make your life much easier. Ensuring separation from the master branch creates opportunity to review and reflect upon code before you are commited to it. It allows for a team to divide into pairs and work asynchronously on different features, each pair working on their own feature branch. Using pull requests creates a space in your team's workflow for code reviews and reflection.
 
 There are many different best practices, these are by no means "the right way". However, we find this is a relatively simple workflow that uses Git to facilitate the development of your project.
 
@@ -15,7 +15,7 @@ There are many different best practices, these are by no means "the right way". 
 5. Assuming all happy and tests pass, merge the pull request on Github and run tests again. At this stage it is a good idea to push to staging to ensure nothing unexpected occurs.
 6. Assuming all tests pass and staging looks fine, push to master and then push master to production. Congratulations your code is now live.
 
-##Further resources
+##External resources
 
 * [Git Flow - a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
