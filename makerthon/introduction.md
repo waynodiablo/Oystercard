@@ -10,4 +10,4 @@ Makerthon is technology agnostic - we don't mind what tech stack you use, althou
 
 Here are the learning objectives to guide your learning process this week:
 
-* [Learning Objectives](/makerthon_objectives)
+* [Learning Objectives](https://github.com/makersacademy/course/blob/master/makerthon/makerthon_objectives.md)
