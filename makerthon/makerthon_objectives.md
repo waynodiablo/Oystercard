@@ -1,33 +1,33 @@
-##Learning Objectives
+#Learning Objectives
 
-* Agile
-  * Create a design using Enough Design Up Front (EDUF) principles
-  * Link 'Incremental Development' with TDD principles
-  * Discuss whether Incremental Development is the best way to build software
-  * Link iteration planning with planning an Agile Sprint
-  * Structure the team's week in an Agile way
-* Kanban
-  * Define Kanban as a process for managing workflow
-  * Explain the Kanban process
-  * Use Kanban boards including 'Work in Progress limits' in a project
-  * Reflect on the benefits of Pull rather than Push-based workflow.
-* Teamwork
-  * Develop good teamworking practices
-* Git branches
-  * Link manageable teamworking with Git branching
-  * Decide how to use branches in a team
-  * Explain Git flow and/or other branching approaches
-* Testing
-  * Develop a team project using a BDD approach
-  * Build a high level of test coverage in a team project environment
-* User stories
-  * Create comprehensive, structured user stories
-  * Use stories to create feature tests  
-* Minimum Viable Product
-  * Define MVP
-  * Build an MVP with a team
-* Scrums
- * Discuss why scrums are essential to the Agile process 
+## Agile methodologies
+  * Evaluate what constitutes Enough Design Up Front (EDUF) for the project.
+  * Compare EDUF with BDUF and NDUF and discuss how these might affect the outcome of the project.
+  * Link 'Incremental Development' with the concept of user stories and BDD.
+  * Link 'Iterative Development' with the concept of Agile planning.
+  * Apply Agile methodologies throughout the project.
+  * Identify a Minumum Viable Product (/Prototype) for your project.
 
+## Kanban
+  * Define Kanban as a process for managing workflow.
+  * Reflect on the benefits of pull- rather than push-based workflow.
+  * Explain how 'Work in Progress' (WIP) limits are necessary to enable pull systems.
 
+## User stories
+  * Express the application as a set of user stories before writing a line of code.
 
+## Testing
+  * Use user stories as the basis for writing feature tests.
+  * Apply outside-in testing using feature- and unit-testing frameworks.
+  * Achieve a high level of test coverage using a coverage framework.
+
+## Using source code control
+  * Implement a successful workflow pattern using a git branching strategy.
+  * Link source code control with successful teamworking.
+
+## Teamworking
+  * Evaluate the effectiveness of pair programming in your project.
+  * Evaluate how pair programming supports reduction of WIP.
+
+## Fun
+  * Have some!
