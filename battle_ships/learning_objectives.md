@@ -52,12 +52,10 @@ In general this week should consolidate all of the learning objectives from week
 ## O - Open/Closed Principle
 * Explain what "an object should be open for extension, but closed for modification" means
 * Give reasons why the Open/Closed Principle makes for more easily extensible applications
-* Apply the Open/Closed Principle to the design of the weekly project
 
 ## L - Liskov Substitution Principle
 * Paraphrase "functions that are designed to operate on _objects of a given class_ should work when they operate on _objects of a subclass of that class_"
 * Explain why the Liskov Substitution Principle makes for more predictable application structures
-* Obey the Liskov Substitution Principle in this week's project
 
 ## I - Interface Segregation Principle
 * Define an interface as a way to interact with application objects
