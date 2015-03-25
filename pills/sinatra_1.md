@@ -18,11 +18,11 @@ As with every pill and project please do type in the code examples instead of co
 
 ## Prerequisites
 
-You should have a good understanding of Ruby, including how blocks work.
+You should have a good understanding of Ruby, including how [blocks&nbsp;:pill:](pills/blocks.md) work.
 
 ## Sinatra Installation
 
-***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
+***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pills/pairing.md).***
 
 As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called 'sinatra-test'.
 
@@ -46,7 +46,7 @@ Once you have installed Sinatra, you are ready to create the "hello, world" appl
 
 Let's create the most basic web application using Sinatra. It will have only one page and on this page there will be "hello!" text. This is what it will look like.
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_1.png)
+![alt text](images/sinatra/sinatra_basic_1.png)
 
 Now, let's make it happen. Create a new file _hello.rb_ and type the following:
 
@@ -123,7 +123,7 @@ end
 
 Having done this on your Sinatra application and gone to http://localhost:4567/secret on your browser, you found the following page:
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_2.png)
+![alt text](images/sinatra/sinatra_basic_2.png)
 
 Another good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
@@ -175,7 +175,7 @@ Note that the **&lt;img&gt;** tag doesn't need the closing tag as it is a 'self-
 
 If you put this html in a web page, it will be rendered by the browser like this:
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_3.png)
+![alt text](images/sinatra/sinatra_basic_3.png)
 
 Let's try it:
 
@@ -191,7 +191,7 @@ end
 
 Now go to the webpage: _http://localhost:4567/_ (if you aren't using shotgun, don't forget to restart the your web server: press Ctrl-C in the terminal and start it again).
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_4.png)
+![alt text](images/sinatra/sinatra_basic_4.png)
 
 A good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
@@ -210,7 +210,7 @@ end
 
 Now our web page looks like this:
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_5.png)
+![alt text](images/sinatra/sinatra_basic_5.png)
 
 To achieve this effect we added an **attribute** called **style** to the **div** element. Its **value** is "border: 3px dashed red". It defines what style is applied to the element, in this case a border, 3 pixels wide, dashed (as opposed to solid, for example), and red in colour.
 
@@ -236,7 +236,7 @@ It works but you can already guess a problem: it doesn't scale. Web pages usuall
 
 A better solution is to separate our Ruby and HTML code. Let's create a folder called **views**, located in the same directory as our _hello.rb_ file. Then create **views/index.erb**. Let's move the HTML code into the file we just created, so your project structure and the new file look like this:
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_6.png)
+![alt text](images/sinatra/sinatra_basic_6.png)
 
 In our _hello.rb_ file we'll just put this instead:
 
@@ -281,7 +281,7 @@ The second line contains the text and an embedded ruby tag. The code that begins
 
 Technically, the **erb()** method reads the input file, processes Ruby that is inside and returns resulting HTML. This HTML is then returned by the block passed to the **get()** method:
 
-![Rendering erb in Sinatra](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/rendering_erb.jpg)
+![Rendering erb in Sinatra](images/sinatra/rendering_erb.jpg)
 
 So, we've just learned how to extract HTML into separate files and how to transfer data from Ruby code into templates. Naturally you'll want to commit the code, push it to Github and switch Driver/Navigator Roles &nbsp;:twisted_rightwards_arrows: but once we've done that let's add some more sophistication to our kitten website.
 
@@ -326,7 +326,7 @@ Notice that we're not just printing the name of the visitor on the screen, we're
 
 Now, if we go to _http://localhost:4567/hello?name=James_, we'll get the welcome message.
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_7.png)
+![alt text](images/sinatra/sinatra_basic_7.png)
 
 Github and switch! :twisted_rightwards_arrows:
 
@@ -352,7 +352,7 @@ It's inconvenient to enter the visitor's name directly in the URL. Let's create 
 
 This is what it's going to look like:
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_8.png)
+![alt text](images/sinatra/sinatra_basic_8.png)
 
 So, what is happening in this code? First, we check if we have a value in @visitor. If we do, we greet the user. If we don't we display a form, described by yet another HTML tag.
 
@@ -368,7 +368,7 @@ Since the second input tag doesn't have any data in it (it's a button, after all
 
 So, when you click the submit button, your browser sends a request to the URL specified in the **action** attribute of the form tag and sends all input fields from the **form** as parameters. That's why when you enter your name a click the button, you get redirected to /hello?name=YourName.
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_9.png)
+![alt text](images/sinatra/sinatra_basic_9.png)
 
 Github and switch! :twisted_rightwards_arrows:
 
@@ -378,7 +378,7 @@ Earlier we've linked to an external image in our HTML. This is fine but it would
 
 Let's put our image into **public/images/kitten.png** file in our project. The **public** folder doesn't exist, so create it as well as the images folder inside it. Now our file structure looks like this.
 
-![alt text](https://github.com/makersacademy/course/blob/master/pills/images/sinatra/sinatra_basic_10.png)
+![alt text](images/sinatra/sinatra_basic_10.png)
 
 Please note that the only file in the views folder so far is _index.erb. Gemfile, Gemfile.lock_ and _hello.rb_ are in the top-level project directory.
 
@@ -493,7 +493,7 @@ Having completed this pill you should have a reasonable understanding of a basic
 Exercises
 --------
 
-* Try recreating this app without referring to the pill
+* :running_shirt_with_sash: Try recreating this app without referring to the pill
 * Try recreating this app but with a different image and generating a different sort of text rather than a greeting, e.g. answering a simple question that ruby can answer, like is this string a number?
 
 Resources
