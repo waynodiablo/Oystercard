@@ -1,8 +1,10 @@
 ##Learning Objectives: BattleShips
 
-*Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved.*
+*Learning Objectives are organised by topic, and then by subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
 In general this week should consolidate all of the learning objectives from week 1 and the student should be able to apply all of them to an Object-Oriented system of intermediate complexity.
+
+# Design and Practice
 
 ## Domain Model and Minimum Viable Product (MVP)/prototype (MVp)
 
@@ -14,32 +16,48 @@ In general this week should consolidate all of the learning objectives from week
 * Create Minimum Viable Prototypes (MVps)
 * Construct an MVP using MVps, via BDD/TDD
 
-## Inheritance vs Composition, Polymorphism, Open/Closed Principle
+## Inheritance vs Composition
 
 * Define Inheritance
 * Define Composition
 * Differentiate between Inheritance and Composition in an OO system
 * Use both inheritance and composition in OO design
 
-## Encapsulation and Polymorphism
+## Encapsulation
 * Define Encapsulation
-* Define Polymorphism
 * Explain why encapsulation is useful
 * Assess appropriate use of encapsulation within an OO system
 * Develop an appropriately encapsulated OO system
 
-## Class Methods
+## Polymorphism
+* Define Polymorphism (in Ruby) as being able to send the same message to different objects and get different results
+* Give an example of Polymorphism in Ruby [[Thoughtbot](https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby) (reading)]
 
-* Remember that a class method can be called directly on a class, without class instantiation
-* Define a class method in Ruby
-* Decide when to use class methods
-* Use a class method to get rid of "magic numbers" from code
-* Use a class method to make instantiation of an object more readable
+# UX/UI Design
 
-## Single Responsibility Principle (SRP)
+* Define UX design as User Experience design
+* Define UI design as User Interface design
+* Explain what UX and UI are
+* Link UX and UI design processes
+* Link UX and UI design processes with the development process
+* Discuss some challenges involved in UX and UI design
+
+# Object-Oriented Programming ([*SOLID*](http://blog.rubybestpractices.com/posts/gregory/055-issue-23-solid-design.html))
+## Principles
+* Be aware of the O, L, and I components for more detailed study in subsequent weeks
+
+## S - Single Responsibility Principle (SRP)
 * Paraphrase the SRP
 * Explain how SRP makes for more maintainable systems
 * Discuss the SRP's importance in development
+
+## D - Dependency Inversion Principle
+* Define a dependency in OOD
+* Explain why minimising dependencies is good for code maintainability
+* Use Dependency Injection to minimise dependencies
+* Use Dependency Inversion to minimise dependencies
+
+# Ruby
 
 ## Blocks, Procs & Lambdas
 
@@ -50,12 +68,13 @@ In general this week should consolidate all of the learning objectives from week
 * Pass `Proc`s and `lambda`s as arguments
 * Construct tests using `Proc`s and `lambda`s (e.g `expect { x }.to raise_error`)
 
-## Dependency Injection/Inversion
+## Class Methods
 
-* Define a dependency in OOD
-* Explain why minimising dependencies is good for code maintainability
-* Use Dependency Injection to minimise dependencies
-* Use Dependency Inversion to minimise dependencies
+* Remember that a class method can be called directly on a class, without class instantiation
+* Define a class method in Ruby
+* Decide when to use class methods
+* Use a class method to get rid of "magic numbers" from code
+* Use a class method to make instantiation of an object more readable
 
 ## Gems
 
@@ -66,19 +85,12 @@ In general this week should consolidate all of the learning objectives from week
 * Explain how the `Gemfile.lock` file ensures consistent use of libraries
 * Use a Gemfile and Bundler to control gems for a project
 
+# Technologies
+
 ## APIs
 * Define an API as an Application Program Interface
 * Give ways in which APIs are used in programming
 * Diagram how a program might use an online API
-
-# UX/UI Design
-
-* Define UX design as User Experience design
-* Define UI design as User Interface design
-* Explain what UX and UI are
-* Link UX and UI design processes
-* Link UX and UI design processes with the development process
-* Discuss some challenges involved in UX and UI design
 
 
 Weekly Challenge
