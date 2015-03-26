@@ -1,140 +1,117 @@
-## Summary of learning objectives for the week
+##Learning Objectives: Boris Bikes
 
-*Under Construction - Sam and I have split the learning into Topics, and I have scaffolded learning objectives from 'basic' to 'complex' within each. I have highlighted which are <SCAFFOLD> learning objectives that students should be able to approach on their own (and provided some sample resources I'd give to students so they arrive proficient in those LOs), and which are <EXTENSION> learning objectives you might want to suggest for more advanced students. Using verbs like 'define', 'explain', 'outline' gives an idea as to how to assess a student's proficiency in a certain learning objective. The objectives are nowhere near exhaustive, but hopefully they offer a framework for* **all students** *so they are proceeding from week-to-week with no gaps in knowledge (which can make for nasty surprises later on!). Edits, feedback, etc, are super-welcome (I've asked questions in italics but please poke in if you feel something needs to be said anywhere). Sam J and I discussed sharing these learning objectives with students and encouraging them to submit PRs for changes if they don't feel the LOs are appropriate - more feedback for us, and a more tailored course for future cohorts. What do you think?*
+*Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved. The section of the course that addresses a learning objective is appended to to each, in parentheses.*
 
-Agile
-* **SCAFFOLD** define an 'Agile process' [[Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development) *(reading)*, [Agile Manifesto Principles](http://agilemanifesto.org/principles.html) *(reading)*]
-* **SCAFFOLD** discriminate between 'Agile' and 'non-Agile' processes, such as 'Waterfall' [[Scrum Reference Card](http://scrumreferencecard.com/scrum-reference-card/) *(reading, visual)*]
-* explain why **Makers Academy** do Agile
+######BDD
+- Define BDD (intro)
+- Explain how BDD works (intro)
+- Explain how BDD and TDD are related (intro)
 
-BDD
-* **SCAFFOLD** define 'user story' [[Wikipedia](http://en.wikipedia.org/wiki/User_story) *(reading)*, [Agile Modelling: User Stories Introduction](http://www.agilemodeling.com/artifacts/userStory.htm) *(reading)*]
-* **SCAFFOLD** define 'domain model' [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/a-brief-introduction-to-domain-modelling/) *(reading)*, [Scaled Agile Framework: Domain Modelling](http://www.scaledagileframework.com/domain-modeling/) *(reading)*]
-* **SCAFFOLD** define 'class structure' [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/whats-a-class-structure/)]
-* illustrate links between user stories, domain models, and class structures
-* build a class structure from a user story, translating through a domain model
-* decide whether 'Agile' processes require a domain model first, or if a domain model can be used retrospectively (*Sam J does this fit with your Agile process we were discussing?*)
+######Domain Modeling
+- Define 'Domain' as the abstract area in which the problem is defined (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/a-brief-introduction-to-domain-modelling/) *(reading)*, [Scaled Agile Framework: Domain Modelling](http://www.scaledagileframework.com/domain-modeling/) *(reading)*]
+- Define 'class structure' (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/whats-a-class-structure/)]
+- Recall that a Domain Model describes key concepts in the domain and the relationships between them (0)
+- Explain that defining the problem in plain English is a good first step to a Domain Model (0)
+- Explain how to extract a Domain Model by analysing the nouns and verbs in a plain English description of the problem (0)
+- Illustrate links between User Stories, Domain Models, and Class Structures
 
-* **SCAFFOLD** remember what Enough Design Up Front (EDUF), Big Design Up Front (BDUF), and No Design Up Front (NDUF) mean in the context of software design [[Samm's brief introduction](http://blog.sjmog.co/2015/03/12/software-design-up-front-how-much/)]
-* explain the motives behind EDUF, BDUF, and NDUF
-* justify why EDUF is more valuable in an Agile context than BDUF or NDUF
+######RSpec
+- Know what RSpec is (0)
+- Know to use `_spec` in filenames if they include tests (3)
+- Explain that RSpec provides a natural, English-like syntax (1)
+- Explain how RSpec is a DSL (1)
+- Explain why RSpec's syntax is helpful for developers (1)
+- Fail an RSpec test (1)
+- Debug code to pass an RSpec test (1)
+- Use `describe`, `it`, and expectation syntax (2)
+- Use `respond_to` syntax (2)
+- Use RSpec implicitly-defined subject syntax (2)
+- Use RSpec 'predicate' syntax
+- Use RSpec 'context' syntax
+- Select the lightest useful testing method (2)
+- Assess when is appropriate to use RSpec's one-liner syntax (3)
+- Analyse why sometimes tests pass when it seems like they shouldn't (3)
+- Evaluate the difference between RSpec failures and Ruby errors (3)
+- Refactor tests (3)
 
-* can differentiate between 'unit', 'integration' and 'feature' tests
-* construct a feature/integration test
+######Doubles
+- Define doubles as a kind of 'stunt stand-in' for objects in testing (2)
+- Explain that doubles are useful to avoid interacting with 3rd-party services (2)
 
-* MVP? (*What is our thinking on this? Do students need to be able to define this, explain it to someone, argue why it's good...or just leave it as extension material?*)
+######TDD
+- Know what an 'acceptance' (or 'feature') test is (intro)
+- Know what an 'integration' test is (1)
+- Know what a 'unit' test is (intro)
+- Explain that starting with tests helps us to avoid going mad (1)
+- Organise a spec-driven filesystem (1)
+- Set up a unit test (3)
+- Link RSpec failures to progress in TDD (2)
+- Assess which properties to implement into objects using TDD as a guide (3)
+- Move between unit and feature tests (3)
+- Analyse why code should be written in a TDD manner (3)
+- Analyse why passing tests does not guarantee fully-working code (3)
 
+######Debugging
+- Define a 'stack trace' (3)
+- Explain how to use a stack trace to debug errors (3)
+- Debug errors using a stack trace (3)
 
-TDD 
-* **SCAFFOLD** remember that 'TDD' refers to 'Test-Driven Development'
-* **SCAFFOLD** explain what TDD is
-* identify why we do TDD at Makers Academy
-* defend TDD against alternative development methods
+######OOP
+- Define OOP (intro)
+- Explain that OOP allows us to write more flexible code (intro)
+- Explain why modular code is useful for future code maintainers (intro)
 
-* **SCAFFOLD** define RSpec as a testing framework that encourages TDD (*What do we think of this definition? Should this be broader - i.e. 'recall what RSpec is' with articles?*)
-* state RSpec 'best practices' using `describe`, `context`, and `it`
-* illustrate links between TDD and RSpec
-* initialize a new project for TDD with RSpec
-* implement RSpec best practices
-* infer why we always do the simplest thing first
+######Agile
+- Define an 'Agile' process (intro) [[Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development) *(reading)*, [Agile Manifesto Principles](http://agilemanifesto.org/principles.html) *(reading)*]
+- Explain how to apply Agile methodology to development (intro) [[Scrum Reference Card](http://scrumreferencecard.com/scrum-reference-card/) *(reading, visual)*]
+- Differentiate between BDUF, NDUF, and EDUF [[Samm's brief introduction](http://blog.sjmog.co/2015/03/12/software-design-up-front-how-much/)]
+- Work in an Agile way (0 onwards)
+- Link Agile methodology and TDD (1 onwards)
+- Evaluate why Agile methodology is so popular
 
-Clean Code
-* **SCAFFOLD** know how to access style guidelines
-* use style guidelines in practices
-* **EXTENSION** compare different style guidelines
-* **EXTENSION** criticize a non-Makers styleguide
+######Pair Programming
+- Define 'pair programming', 'driver', and 'navigator' (intro)
+- Explain why pair programming is so useful in development (intro)
+- Use pair programming techniques (0 onwards)
+- Argue for why pair programming is often better for code quality than solo programming
+- Evaluate how pair programming with a new partner every day has developed their proficiency in other topics, and more generally
 
-Doubles
-* **SCAFFOLD** recall what a double is
-* **SCAFFOLD** explain what a double does
-* outline why doubles are used
-* use doubles to test message expectations
-* use doubles to stub unpredictable behaviour
+######Style Guides
+- Give an example of a style guide (intro)
+- Recall that it is better to write self-explanatory code than fill code with comments (1)
+- Install and run RuboCop (1)
+- Analyse why 'linters' like RuboCop are useful when developing (1)
+- Correct style violations (1)
 
-* compare and contrast 'London' and 'Chicago' styles (*Does this belong better in the TDD topic?*)
+######User Stories
+- Recall the structure of a user story (intro) [[Wikipedia](http://en.wikipedia.org/wiki/User_story) *(reading)*, [Agile Modelling: User Stories Introduction](http://www.agilemodeling.com/artifacts/userStory.htm) *(reading)*]
+- Elicit user stories from clients (intro)
+- Select high-value user stories (1)
 
-Pair Programming
-* **SCAFFOLD** define 'pair programming'
-* explain how pair programming works
-* argue why pair programming is often better than solo programming
-* use git and GitHub to share code with pair partner
-* evaluate how pair programming with a new partner every day has developed their proficiency in other topics, and more generally
+######Interfaces
+- Define an interface as a way to interact with a system (1)
+- Recognize that IRB is an interface (1)
 
+######Setting up a project
+- Recall how to set up a simple project (0)
+- Explain why a complete README is important (0)
+- Initialize and push a git project (0)
 
+######MVP
+- Define an MVP as a Minimum Viable Product (1)
+- Explain that an MVP is the minimum set of operating features for a client to test a business model (1)
+
+######Ruby
+- Know to include files in other files using `require` (2)
+- Outline Ruby convention for `require` (2)
+- `require` a file in another (2)
+- Differentiate between `require` and `require_relative` (3)
+- `require_relative` one file into another (3)
 
 ### Activities
-* Use TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
-* Use TDD and pair programming together to approach a slightly more complex model (e.g. Airports) which requires wider use of doubles.
+* Use BDD/TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
+* Use BDD/TDD and solo programming to approach a slightly more complex model (e.g. Airports) which requires wider use of doubles.
 
-### Talks
-
-
-## Agile/TDD
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
-
-## CRC/Rspec/Doubles
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
-
-
-## Classes/Objects
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
-
-
-## Inheritance/Composition
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
-
-
-
-## Getters & Setters
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
-
-
-
-
-## Encapsulation and Polymorphism
-
-**Learning Objectives**
-
-* ...
-
-**Lesson Plan**
-
-* ...
 
 Weekly Challenge
 ===========

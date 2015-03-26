@@ -20,15 +20,12 @@ Our classes will implement a number of methods. To get an idea of what they may 
 
 Again, not all verbs will become methods and we'll have methods that don't correspond to any verbs in this description but that's ok. Right now we just need a idea of what they could be.
 
-[CRC?  UML diagrams?]
-
 ## Setting up the project
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 Once we have an idea of what we are building our first step will be describing some part of what we will build using 'specs' (short for specifications).  We'll also refer to these as 'tests'.  Our preferred Ruby testing tool is [RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md), and each individual test of our code is a 'spec'.  We can use RSpec to specify all kinds of tests; feature, integration and unit.  Let's get our project setup and we'll start with a feature test.
 
-[NOT SURE ABOUT FORKING VS CREATING OWN REPO - NIKESH SAYS ALL PRECOURSERS ARE DOING PULL REQUESTS WITH RUBY KICKSTARTER]
 
 Create a new repository in your projects directory adding a `README.md` file like so.
 

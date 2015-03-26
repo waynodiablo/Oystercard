@@ -15,7 +15,7 @@ The irb is a Ruby [REPL (read-evaluate-print loop)](http://en.wikipedia.org/wiki
 => 4
 ````
 
-Irb is very useful for playing with Ruby. Whenever you think "Hey, what would this code do?", try it in irb and see if it does what you think it should do. Sometimes you'll be surprised. For example, what will this code do? 
+Irb is very useful for playing with Ruby. Whenever you think "Hey, what would this code do?", try it in irb and see if it does what you think it should do. Sometimes you'll be surprised. For example, what will this code do?
 
 ````ruby
 5 / 2
@@ -67,3 +67,14 @@ If, however, we forget to close the string by omitting the double quote, irb wil
 Note that lines 7 to 12 (when the string was still not "closed"), there was a quote character before the prompt (:002">) instead of a space (:001 >). This was an indication that irb is waiting for the closing quote.
 
 When you want to quit irb, just type `exit`.
+
+Advanced IRB
+------------
+
+You can control what happens when you start irb using a .irbirc file placed in your home directory, e.g.
+
+```ruby
+Dir['./lib/*.rb'].each { |f| require f }
+```
+
+will autoload ruby files from your lib directory

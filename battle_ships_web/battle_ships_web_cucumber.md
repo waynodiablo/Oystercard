@@ -3,7 +3,7 @@
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 In this project we are going to improve on our battleships game.
-In [the last project](https://github.com/makersacademy/course/blob/master/battle_ships.md) we implemented the battleships game for the terminal.
+In [the last project](../battle_ships/battle_ships.md) we implemented the battleships game for the terminal.
 
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with computers for people in general. Before you even knew there was a terminal you likely did almost everything on a computer via a graphical interface of some sort; either through a dedicated desktop application or through a browser.
 
@@ -29,7 +29,7 @@ Despite its simplicity, Sinatra is very powerful. A large number of websites and
 
 ## Prerequisites
 
-Please ensure you have a good understanding of [Sinatra](pills/sinatra_1.md) :pill:, [Cucumber](pills/cucumber.md) :pill: and [Capybara](pills/capybara.md) :pill: before starting this project.  Cucumber is an alternative testing framework to RSpec, that also works with RSpec; Capybara is a ruby library that supports grabbing pieces of HTML web pages and taking actions like clicking links and filling in forms - please refer to the pills for details.
+Please ensure you have a good understanding of [Sinatra](../pills/sinatra_1.md) :pill:, [Cucumber](../pills/cucumber.md) :pill: and [Capybara](../pills/capybara.md) :pill: before starting this project.  Cucumber is an alternative testing framework to RSpec, that also works with RSpec; Capybara is a ruby library that supports grabbing pieces of HTML web pages and taking actions like clicking links and filling in forms - please refer to the pills for details.
 
 ## Version 0: Setting up
 
@@ -37,7 +37,7 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here is a [version](https://github.com/makersacademy/battle_ships_september) of battleships game engine you can use as an alternative.**
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](https://github.com/makersacademy/course/blob/master/pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
+First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
 .
@@ -60,7 +60,7 @@ We will review what all these files and directories do as we come to them.
 
  **First things first! We need a Gemfile!**
 
-Before we go off creating lots of directories, let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](https://github.com/makersacademy/course/blob/master/pills/gems.md) ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
+Before we go off creating lots of directories, let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](../pills/gems.md) ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
 
 ```ruby
 source 'https://rubygems.org'
@@ -91,7 +91,7 @@ Everything is setup and ready, but how do we start? If you have been following b
 
 One of the gems you should have in your system now is ``cucumber-sinatra``. This gem will help you setting up cucumber.
 
-Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](https://github.com/makersacademy/course/blob/master/pills/cucumber.md)).
+Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](../pills/cucumber.md)).
 
 Within your projects directory, create a Battleships directory and navigate into it, then run:
 
@@ -190,7 +190,7 @@ When we initialised cucumber with sinatra-cucumber we told it to generate our ap
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are: 
+- tell our `BattleShips` controller where the views are:
 ```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleShips class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
 
@@ -269,7 +269,7 @@ Up until now our application has been running only for two players at a time. Ca
 
 It would be nice if our battleships game looked like something that people wanted to play with, maybe we should be looking at it :wink:
 
-Once we have added some CSS goodness let's deploy our application to :pill: [heroku](https://github.com/makersacademy/course/blob/master/pills/heroku.md) and share it with the world!
+Once we have added some CSS goodness let's deploy our application to :pill: [heroku](../pills/heroku.md) and share it with the world!
 
 **Congratulations! You have released your first application!**
 
@@ -278,4 +278,4 @@ Resources
 
 * [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
 * [Sinatra/Cucumber Cont](https://www.youtube.com/watch?v=_ptHGBh9sys)
-* [The Internet and WWW](pills/internet_web.md)
+* [The Internet and WWW](../pills/internet_web.md)

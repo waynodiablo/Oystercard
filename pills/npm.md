@@ -49,7 +49,7 @@ Error: no test specified
 npm ERR! Test failed.  See above for more details.
 ```
 
-To install a package into your project, for instance if you wanted to use express in your application, you would use ``` npm install express --save ```. The --save option tells npm to install the package into the project inside a folder called node_modules, and will also update your package.json. 
+To install a package into your project, for instance if you wanted to use a package called hapi in your application, you would use ``` npm install hapi --save ```. The --save option tells npm to install the package into the project inside a folder called node_modules, and will also update your package.json. 
 
 If you want to install a package that is needed by anyone developing your app, but is not needed to run the app, then you have another option. For example, if you wanted to use the test framework 'jasmine-node', you would enter ``` npm install jasmine-node --save-dev ```. The --save-dev option will save the files to your node_modules and update the package.json with the new dev-only dependencies.
 
@@ -69,7 +69,7 @@ Your package.json should now look like this:
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.12.2"
+    "hapi": "^8.4.0"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"

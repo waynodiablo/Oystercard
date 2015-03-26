@@ -1,75 +1,104 @@
 # BDD, TDD & OOP Basics: Boris Bikes
 
-:construction: UNDER CONSTRUCTION :construction:
+The goal of this project is to introduce you to:
 
-The goal of this project is to introduce you to [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development), how it relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development) and the process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  BDD and TDD are commonly selected as part of the Agile development process since they can help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.   OOP is a style of programming that breaks our code up into 'objects'. This 'modularization' makes our code flexible with regard to future changes.  All sorts of changes will be required as we discover that end users derive more value from something different than what we have built so far. DDD emphasizes the development of the domain model which describes the relations between the objects we create.
+- [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development);
+- How BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
+- The process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
 
-Please do refer to the detailed [learning objectives](learning_objectives.md) for this week.
+**BDD** and **TDD** are often used as part of an *Agile* development process. Agile and BDD work well together as they help us quickly deliver prototypes to end users, which can be rapidly checked to see if they are delivering something of value, and then revised as necessary.
 
-***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
+**OOP** is a style of programming that encourages us to break code up into 'objects'. This 'modularization' leaves our code flexible, anticipating future changes.  Changes are guaranteed as a project progresses: inevitably, we will discover that end users derive more value from something different than what we have built so far. While we cannot plan for the specific changes they will require (because we don't know them yet!), OOP encourages us to write code that is easy to change in any circumstance. DDD emphasizes the development of a 'domain model', which describes the relations between objects in the language of the end user.
 
-We will create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to get bikes from docking stations and return them.  Occasionally the bikes may break and then they will be unavailable for rental. There will also be a garage to fix the bikes and a van to move the bikes between the stations and the garage in order to ensure that there are working bikes for members of the public to use.
+For an overview of the baseline skills and concepts you will be learning during this project, see this week's [Learning Objectives](learning_objectives.md).
 
-The way to start any project is to specify a few important "User Stories", usually in collaboration with a customer or client.  The stories below are in the commonly used Stakeholder, Motivation, Task format.  Let's imagine that we've just finished a discussion with a customer and identified these key stories that the client believes will deliver value to the end users of the system:
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](../pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
 
->Some of these user stories don't really make sense as the feature and stakeholder don't seem to be consistent.  Also, they are not necessarily domain specific.  I would prefer:
+***Also watch out for the :running_shirt_with_sash: ATHLETIC WAYPOINTS.  We recommend you stop at these points to try re-creating the code so far from scratch without looking at the tutorial.  This is a great exercise at the start of a new day with a new pair partner***
+
+***Finally, please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+
+###Project Overview
+
+######High-level Overview
+
+We are going to create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to remove and return bikes from docking stations.  Occasionally the bikes may break, and then they will be unavailable for rental. There will be a garage to fix broken bikes. Finally, there will be a van to move the bikes between the stations and the garage so there are working bikes for members of the public to use.
+
+######Identifying User Stories
+
+The way to start our project (and any good software project) is to specify a few important *User Stories*, usually in collaboration with a customer or client. User Stories get us thinking about the high-level problem **from the user's perspective**.  
+
+The stories below are arranged in a *Stakeholder, Motivation, Task* format, which is commonly used:
+
+```
+As a <Stakeholder>,
+So that <Motivation>,
+I'd like <Task>.
+```
+
+We identify User Stories by discussing with a customer and listening to or prompting for user requirements. Let's imagine that we've just finished a discussion with a customer. We have identified these key stories that the client believes will deliver value to the end users of the system:
 
 ```
 As a member of the public,
-So that I can cycle across town at any time,
-I'd like to have access to a bike that is not broken.
-
-As the owner of the system,
-So that members of the public can access usable bikes,
-I'd like docking stations to release working bikes.
-
-As the owner of the system,
-So that members of the public only get usable bikes,
-I'd like docking stations not to release broken bikes.
-
-As a maintainer of the system,
-So that members of the public can return borrowed bikes,
-I'd like docking stations to accept returning bikes (broken or not).
-
-As a member of the public,
-So that I am not frustrated looking for a bike,
-I'd like to know when a docking stations does not have any working bikes.  
-
-As a member of the public,
-So that I am not frustrated returning a bike,
-I'd like to know when a docking station can't receive any more bikes.
-
-As a maintainer of the system,
-So that the maximum number of working bikes is available,
-I'd like vans to collect broken bikes from docking stations and take them to garages to be fixed.
-
-As a maintainer of the system,
-So that the maximum number of working bikes is available,
-I'd like garages to receive broken bikes and fix them.
-
-As a maintainer of the system,
-So that the maximum number of working bikes is available,
-I'd like vans to collect fixed bikes from garages and return them to docking stations
-```
-
->I have removed the following because they simply don't make sense at this level of abstraction:
-
-```
-As a maintainer of the system,
-So that members of the public are not disappointed,
-I'd like docking stations to not release bikes when there are none available
+So that I can get across town,
+I'd like a docking station to release a bike that is not broken.
 
 As a maintainer of the system,
 So that members of the public can get usable bikes,
-I'd like docking stations to not accept more bikes than their capacity.
+I'd like docking stations to only release working bikes.
+
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to accept returning bikes (broken or not).
+
+As a maintainer of the system,
+So that members of the public are not disappointed,
+I'd like docking stations to not release bikes when there are none available.  
+
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like docking stations to not accept more bikes than their capacity.  
+
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like vans to come to take broken bikes from docking stations, take them to be fixed and then bring them back to the docking stations.
+
+As a maintainer of the system,
+So that members of the public can get usable bikes,
+I'd like garages to receive broken bikes, fix them, and make them available for pickup.
 ```
->And reworded the van and garage features so they are less presumptive of the solution
 
-As you can tell this is a simplified version of the user experience that members of the public and system maintainers have for the real Boris Bikes system in London.  We've left out details of payment and other things to make our first version of the system tractable.  This is often a sensible step in order to build something simple and manageable the first time round and check that things work at that level before adding in more complex interactions.  It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.
+This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
 
-Discussions with real clients often generate many more stories than the the few we have above, but the next step in Behaviour Driven Development (BDD) will be to choose a small number of stories to focus on - the ones that deliver the key value; and then one specific story to start with.  BDD gets its name from the fact that we are starting to describe the system in terms of its 'Behaviour'.  How will end users behave when they try to interact with the system; how will the system behave as users try to interact with it.  Let's assume we've selected the above stories from a larger set and the client (or at least we) are happy to start on these ones.
+*It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.*
 
-Given that we've agreed what our basic system needs to do, where do we go next?  It's helpful to start thinking about a domain model for our system; something that describes the kinds of objects in the system and how they interact.  We could spend a lot of time fleshing out that domain model in advance, but often it will emerge  as we switch from high level acceptance (or feature) tests to lower level unit tests (as shown in diagram below) whereby we specify the precise individual operations that the objects in our domain can perform.  Having written a specification for an individual object with a test, we'll implement part of the object itself and then jump back up to see if the system has the high level behaviour specified in our user story.  We'll keep fleshing out our domain with unit-tests, and then jumping back up to see the stories coming to life at the acceptance test level.  Sometimes we'll want to step back and consider 'refactoring' the domain model and the code that supports it in order to better support the delivery of value to the end user through user stories. It may sound complicated but you'll soon get used to it.
+######Using User Stories in BDD
+
+We are starting to describe our planned system in terms of its planned *Behaviour*: how users will behave when interacting with the system, and how the system will behave when users interact with it. The next step in a BDD process is to choose a small number of stories to focus on: the ones that deliver the **key value** (greatest value to users). Then, we decide on one specific story to start with.
+
+Once we've agreed on what our basic system should do, we can start to think about constructing a **Domain Model**. A Domain Model:
+
+- describes the objects in a system, and
+- describes how those objects interact.
+
+We *could* spend a lot of time fleshing out that domain model in advance. But remember: we're only dealing with a subset of all the user stories, and we're anticipating lots of change in future. As we construct *Tests* for our system, we'll see a clearer picture of the Domain Model start to **emerge**. This design philosophy is generally known as *Emergent Design*.
+
+For now, let's agree that we're definitely going to need *some* objects in our Domain Model. Once we start translating *Feature Tests* - tests that describe a feature extracted from a user story - into *Unit Tests* - tests that specif the precise individual operations that entities can perform - we'll quickly see that the nature of those objects, as well as interactions between them, will **emerge**.
+
+######The BDD Cycle
+
+```
+User Stories -> Feature Tests -> Unit Tests -> Features
+               <--- Emergent Domain Model --->
+```
+
+The process of moving from User Stories to Feature (more correctly *Acceptance*) Tests, then from Feature Tests to Unit Tests, and then from Unit Tests to Features, is what BDD is all about. Critically, though, BDD works as a **cycle**. The whole BDD process is designed to work *iteratively*, where the analysis of a previous round *feeds back* into the current one.
+
+Here is an example of the *BDD Cycle* in use:
+
+>We switch from high-level acceptance tests to lower-level unit tests, whereby we specify the precise individual operations that the objects in our domain can perform.  Having written a specification for an individual object with a test, we'll implement *part* of the object itself and then jump back up to see if the system has the high level behaviour specified in our user story.  
+
+>We'll keep fleshing out our domain with unit tests, and then jumping back up to see the stories coming to life at the acceptance test level.  Sometimes we'll want to step back and consider 'refactoring' the domain model and the code that supports it in order to better support the delivery of value to the end user through user stories.
 
 ![acceptance-test unit-test cycle](../images/bdd-cycle.png)
 
@@ -82,13 +111,6 @@ To be specific about the types of tests we'll be writing; unit tests check very 
 This pyramid diagram indicates the likely distribution of tests we have in anything other than a small project.  It's not prescriptive but its common to have a small number of relatively slow running acceptance tests, a slightly larger number of integration tests and then a large number of small fast unit tests.  Having a balanced testing pyramid is about getting the right amount of benefit from each type of test.  Unit tests are fast so we can have a lot of them, and then they are great at checking individual behaviour, but won't check the system does what the user wants, or that objects are interacting correctly. That's what the slower running integration and acceptance tests do, but because they run more slowly we can't afford to run so many each time we make any change to our code.
 
 In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of classes that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike some objects get created somewhere in the system that tracks the usage of all bikes.
-
-[TODO: NEED TO MENTION RED-GREEN-REFACTOR MORE]
-[TODO: All stages need to be carefully checked for pair swap points and athletic coding waypoints]
-[CONCERN: stage 7 not sufficiently checked]
-[TODO: UML DIAGRAMS]
-[TODO: OBJECT UNDER TEST DIAGRAMS - respond, call, return, state change]
-[TODO: ACCEPTANCE-UNIT TEST BOUNCE DIAGRAM - ABOVE?]
 
 ## Stage 0: Domain Model and Project Setup
 
@@ -140,63 +162,15 @@ Finally we have two more user stories relating to the Van and the Garage.  You'v
 
 Now, just like a real project the client has come back to us with more requests:
 
-## More User Stories/Feature Requests from the Client
+## More User Stories/Feature Requests from the Client (OPTIONAL)
 
-1. Return real bikes.  Use this new story from the client to create the appropriate feature tests and unit-tests to drive the creation of the application code that will support this feature.  Ensure that you refactor where appropriate:
-
-```
-As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like docking stations to ensure that returned entities are actually bikes
-```
-
-[Hint: in this context, something is a bike if it responds to the :broken? method. And the feature test for this user story will correspond to ensuring that if docking_station.dock(nil) or docking_station.dock(Elephant.new) is called then some kind of error should be given]
-
-2. The client asks for the whole system to be repurposed for petrol engine scooters.  Everything else stays the same - create BorisScooters.  How much of your existing code can you re-use?
-
-3. User interface request. Our users are getting tired of starting irb to access their bikes.  Help them out by providing a text interface that they can start via a command line call like 'ruby boris_bikes.rb':
-
-```
-As a member of the public,
-So that I can avoid the hassle of starting IRB,
-I'd like a text interface that can be run from the command line.
-```
-
-As you work on new features ensure to keep the following in mind:
-
-* Identify any corner cases that might cause the system to behave erratically. Think of things that could go wrong. What if the capacity is not a number? What if it's negative?
-* Identify any places in your code that could be refactored and refactor them. Is there any duplication anywhere? Is any method longer than 3-4 lines? Does anything look ugly to you?
-
-Other possible feature requests and system changes
-* Bikes now break with some random frequency, ensure you stub out that randomness to ensure your tests always pass
-* DockingStations can now fix bikes themselves
-* Garages can now release individual bikes to users
-* Vans can run out of petrol and have to be refill at petrol stations
-* Users must pay to release bikes, docking stations must check user credit levels
+[Stage 8](boris_bikes_stage_8.md)
 
 
 ## Supporting Material
-
-### Pills
-
-- :pill: [Inheritance](https://github.com/makersacademy/course/blob/master/pills/inheritance.md)
-- :pill: [Composition vs. Inheritance](https://github.com/makersacademy/course/blob/master/pills/composition_vs_inheritance.md)
-- :pill: [Understanding self, the current/default object](https://github.com/makersacademy/course/blob/master/pills/self.md)
-
-### Resources
 
 - [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
 - [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
 - [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
 - [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
 - [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
-
-### Related Videos
-
-- [First Week Intro](https://www.youtube.com/watch?v=eq4fbus_9TQ)
-- [OOD CRC](https://www.youtube.com/watch?v=l-k21H2mVxQ)
-- [RSpec (no sound)](https://www.youtube.com/watch?v=3GM793XcUOQ)
-- [Inheritance and Composition](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [Doubles](https://www.youtube.com/watch?v=pQHOysslTlI)
-- [The Ruby Way](https://www.youtube.com/watch?v=oh3ZOdewHu8)
-- [The Ruby Way II](https://www.youtube.com/watch?v=bl2GhZMZeXg)
