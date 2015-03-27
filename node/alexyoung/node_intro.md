@@ -60,7 +60,7 @@ function jortSort(array) {
 }
 ```
 
-### Usage:
+Usage:
 
 ```javascript
 var stuff = require('./stuff');
@@ -78,7 +78,7 @@ module.exports = function(n) {
 };
 ```
 
-### Usage:
+Usage:
 
 ```
 var fib = require('./fib');
