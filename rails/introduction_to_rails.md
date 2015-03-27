@@ -4,6 +4,14 @@ Welcome to Rails week!
 
 Rails is a widely used framework that provides tools to quickly build a maintainable web app. It favours convention over configuration, meaning you can really focus on writing well tested, clean, readable code. 
 
+## Learning Objectives
+
+* [learning objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
+
+## Walkthrough
+
+* [Yelp clone](https://github.com/makersacademy/course/blob/master/rails/yelp.md)
+
 ## Resources
 
 * [Michael Hartl's Rails tutorial](http://www.railstutorial.org/book)
@@ -21,14 +29,14 @@ Rails is a widely used framework that provides tools to quickly build a maintain
 * :pill: [Rails console](../pills/rails_console.md)
 * :pill: [Active Record](../pills/activerecord.md)
 
-## Walkthroughs (DEPRECATED)
+## Old Walkthroughs (DEPRECATED - provided for reference purposes only)
 
-* [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md) <-- Under construction
-* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) <-- Under construction
-* [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md) <-- Under construction
+* [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md)
+* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) 
+* [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md)
 * One-to-many
 * [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
 * Ajax
 * Devise
 * JBuilder
-* [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)  <-- Under construction
+* [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)
