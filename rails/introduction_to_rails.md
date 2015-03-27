@@ -8,6 +8,12 @@ Rails is a widely used framework that provides tools to quickly build a maintain
 
 * [learning objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
 
+## Related Pills
+
+* :pill: [MVC](../pills/mvc.md)
+* :pill: [Rails console](../pills/rails_console.md)
+* :pill: [Active Record](../pills/activerecord.md)
+
 ## Walkthrough
 
 * [Yelp clone](https://github.com/makersacademy/course/blob/master/rails/yelp.md)
@@ -22,12 +28,6 @@ Rails is a widely used framework that provides tools to quickly build a maintain
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
-
-## Related Pills
-
-* :pill: [MVC](../pills/mvc.md)
-* :pill: [Rails console](../pills/rails_console.md)
-* :pill: [Active Record](../pills/activerecord.md)
 
 ## Old Walkthroughs (DEPRECATED - provided for reference purposes only)
 
