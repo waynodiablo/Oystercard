@@ -34,9 +34,5 @@ Rails is a widely used framework that provides tools to quickly build a maintain
 * [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md)
 * [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) 
 * [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md)
-* One-to-many
 * [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
-* Ajax
-* Devise
-* JBuilder
 * [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)
