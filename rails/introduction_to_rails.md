@@ -2,7 +2,7 @@
 
 Welcome to Rails week! 
 
-Rails is a widely used framework that provides tools to quickly build a maintainable web app. It favours convention over configuration, meaning you can really focus on writing well tested, clean, readable code. 
+Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration, meaning you can really focus on writing well tested, clean, readable code.
 
 ## Learning Objectives
 
