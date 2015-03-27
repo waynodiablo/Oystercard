@@ -6,7 +6,7 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 
 ## Learning Objectives
 
-* [learning objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
+* [Learning Objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
 
 ## Related Pills
 
