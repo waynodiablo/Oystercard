@@ -16,12 +16,12 @@
   * Deleting migrations.
   * Using models in a migration.
 * Apply the following features of ActiveRecord:
-  * Validations
-  * Associations
-  * Scopes
+  * Validations.
+  * Associations.
+  * Scopes.
 * Understand the following features of ActiveRecord:
-  * Callbacks
-  * Query interface
+  * Callbacks.
+  * Query interface.
 
 ### Working with controllers
 * Understand the relationship between `resources` and REST.
@@ -41,6 +41,6 @@
 
 ### Rails community
 * Evaluate and implement some of the most popular Rails gems, e.g.:
-  * Devise
-  * FactoryGirl
-  * Shoulda
+  * Devise.
+  * FactoryGirl.
+  * Shoulda.
