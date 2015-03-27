@@ -7,8 +7,6 @@
 * Describe the asset pipeline.
 * Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
 
-
-
 ### Working with models
 * Discuss the role of migrations in relation to source code control and application versioning.
 * Identify the issues that can arise when doing the following:
