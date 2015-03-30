@@ -1,10 +1,10 @@
 # Sinatra
 
-Sinatra is a simple no frills web application framework for Ruby. In contrast to more complex web application frameworks such as Ruby on Rails, Sinatra provides very little beyond making your ruby code accessible to requests that come over the HTTP protocol.
+[Sinatra](http://www.sinatrarb.com/) is a simple, no-frills web application framework for Ruby. It allows you to integrate applications written in Ruby with a web interface, so anyone with a browser can use them. In contrast to more complex web application frameworks such as [Ruby on Rails](http://rubyonrails.org), Sinatra provides very little beyond making your ruby code accessible to requests that come over the HTTP protocol.
 
-Note that Sinatra is not the only simple Ruby web application framework.  You can read about some of the alternatives in this blog post:
-
-http://www.sitepoint.com/ruby-microframeworks-round/
+<aside>
+  Sinatra is one of many simple web application frameworks.  You can read about some of the alternatives in [this blog post](http://www.sitepoint.com/ruby-microframeworks-round/).
+</aside>
 
 As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
 
@@ -18,35 +18,43 @@ As with every pill and project please do type in the code examples instead of co
 
 ## Prerequisites
 
-You should have a good understanding of Ruby, including how [blocks&nbsp;:pill:](pills/blocks.md) work.
+You should be fully proficient in Ruby (post-precourse standard), including [blocks&nbsp;:pill:](pills/blocks.md). For later parts of this walkthrough, you will also need to be proficient with [HTML&nbsp;:pill:](pills/html.md) and [CSS&nbsp;:pill:](pills/css.md).
 
 ## Sinatra Installation
 
 ***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pills/pairing.md).***
 
-As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called 'sinatra-test'.
+As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called `sinatra-test`.
 
-As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual.
+As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual:
 
 `$ gem install sinatra`
 
-However, a better way would be to put it in your Gemfile and install using [bundler](pills/bundler.md) :pill:. There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help shotgun (we'll discuss it in a minute) to load sinatra.
+<aside>
+  Where does this install the Sinatra gem?
+</aside>
+
+However, a better way would be to put it in your Gemfile:
 
 ````ruby
-# this is Gemfile
+# Gemfile
 source 'https://rubygems.org'
 gem 'sinatra'
 ````
 
+and install using [bundler](pills/bundler.md) :pill::
+
 `$ bundle install`
 
-Once you have installed Sinatra, you are ready to create the "hello, world" application.
+There are two advantages to this approach. Firstly, you'll be keeping a record of what gems are used in the project for other developers to see. Secondly, it will help Shotgun (we'll discuss it in a minute) to load Sinatra.
 
-## "Hello, world" application
+Once you have installed Sinatra, you are ready to create a web-accessible _Hello World_ application.
 
-Let's create the most basic web application using Sinatra. It will have only one page and on this page there will be "hello!" text. This is what it will look like.
+## _Hello World_ application
 
-![alt text](images/sinatra/sinatra_basic_1.png)
+Let's create a basic web application using Sinatra. It will have only one page and on this page there will be "hello!" text. This is what it will look like:
+
+![What we're making](images/sinatra/sinatra_basic_1.png)
 
 Now, let's make it happen. Create a new file _hello.rb_ and type the following:
 
@@ -57,6 +65,7 @@ get '/' do
   'hello!'
 end
 ````
+<aside>Why are we requiring `sinatra.rb` in this file?</aside>
 
 Now, run this file.
 
@@ -71,29 +80,13 @@ You should see this:
 >> Listening on localhost:4567, CTRL+C to stop
 ```
 
-Now, open this address (http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
+Open [this address](http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
 
 This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
-### What does localhost:4567 mean?
+<aside>:pill: [`localhost` and web host addresses](https://github.com/makersacademy/course/blob/master/pills/localhost_web_addresses.md)</aside>
 
-This means that Sinatra started running making your web application available on the address _http://localhost:4567_. The address looks different from most web addresses but in fact it's a normal web address. The 'localhost' is a reserved word that always refers to the computer it's used on. So, localhost on my machine means my machine and localhost on your machine means your machine. Technically, it corresponds to the IP address 127.0.0.1, or 0.0.0.0, both of which always points to the current machine. The 4567 is the number of the port that is used to connect to localhost. Every internet connection always needs at least two parameters: the address of the machine (localhost, google.com or an IP address) and a port (80, 3000, 4567 or some other). So, in this case Sinatra is listening for connections on localhost and on port 4567.
-
-You may ask why you don't normally specify a port when you connect to a web server? Why can you type google.com in the address bar and it will work without the port? The reason is that by convention, web servers usually run on port 80, so your browser assumes you want to use port 80 if you don't specify any. So, when you type this in the address bar
-
-`www.google.com`
-
-your browser actually opens the connection to
-
-`www.google.com:80`
-
-You can try putting the port in the browser bar, it will work just as fine. If you try to put a port number that google.com doesn't expect, you won't get a response. For example, you'll get an error if you do this
-
-`www.google.com:22`
-
-As we mentioned, the port 80 is reserved for web (HTTP) connections but there are many more. For example, ssh (secure shell connection) uses port 22 and https (encrypted HTTP connection) usually run on port 443. However, all of those are just conventions. Nothing prevents you from running an ssh server on port 80, if you insist on it.
-
-## How does it work?
+## How does _Hello World_ work?
 
 So, let's take a look at the source code again.
 
@@ -105,9 +98,18 @@ get '/' do
 end
 ````
 
-First, we require Sinatra, the gem, to be available in our application. Then we call the _get()_ method, provided by Sinatra, passing '/' as an argument - this could therefore be re-written get('/') but the convention is to ignore the brackets. What you're telling the Sinatra to do is to _get_ whatever the block returns, in this case the string 'hello!' whenever someone requests it by calling the page at the address '/'.
+- First, we require Sinatra, the gem, to be available in our application. 
+- Then we call the `get()` method, provided by Sinatra, passing `'/'` as an argument (this could therefore be re-written `get('/')` but the convention is to ignore the brackets). 
+- What you're telling the Sinatra to do is to _get_ whatever the block returns, in this case the string 'hello!' whenever someone requests it by calling the page at the address '/':
 
-The '/' part of the address is the last slash in _http://localhost:4567/_. If we wanted to have another page at http://localhost:4567/secret, then we'd do the following
+```
+User requests page '/' ->
+get() block activated ->
+'hello' string returned to get() block ->
+get() block returns 'hello' string to User
+```
+
+The '/' part of the address is the last slash in `http://localhost:4567/`. If we wanted to have another page at `http://localhost:4567/secret`, then we'd do the following:
 
 ````ruby
 require 'sinatra'
@@ -120,64 +122,47 @@ get '/secret' do
   'This is a secret page'
 end
 ````
-
-Having done this on your Sinatra application and gone to http://localhost:4567/secret on your browser, you found the following page:
+But wait! Having done this in your Sinatra application, visiting `http://localhost:4567/secret` in a browser gives you this page:
 
 ![alt text](images/sinatra/sinatra_basic_2.png)
 
-Another good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+An error! Another good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
-### What's happening?
+### Reload your code
 
-Nothing to worry about. What Sinatra is telling you is that it doesn't know what '/secret' is all about, despite you've written this in your app.
+What's happening here? Nothing bad: Sinatra is telling you that it doesn't know what '/secret' is all about, despite you having written this in your app.
 
-What's happening is that you haven't re-loaded the application server, so the server doesn't know about this new '/secret' address is all about.
+The problem: we haven't rebooted the server after making our changes. The running server has a `/` route, but no `/secret` one.
 
-First things first, go back to terminal and press Ctrl-C to stop the server. Then re-start it by writing:
+To stop the server, head to the terminal tab in which the server is running and hit `Ctrl-C`. Then restart the server just like you started it in the first place:
 
 `$ ruby hello.rb`
 
-Now go back to _http://localhost:4567/secret_ and magic: it now works... but what a painful process.
+Head back to _http://localhost:4567/secret_: it now works! But restarting the server manually every time we change the code is going to get very painful.
 
 ## Automatic code reloading
 
 What we've been doing is restarting our server every time we made a change to the files because Sinatra needed to reload them. There's a way to reload the files without restarting the entire process.
 
-Firstly, install a gem called **shotgun** by putting in your Gemfile and running 'bundle install'.
+Firstly, install a gem called **Shotgun** within this project. You already know how to require and install gems.
 
 Secondly, load your application like this:
 
 `$ shotgun hello.rb -p 4567`
 
-The -p switch tells shotgun what port to use. Use this switch to keep the port consistent with the default Sinatra port. By default shotgun will use port 9393.
+The `-p` switch tells shotgun what port to use. Use this switch to keep the port consistent with the default Sinatra port. By default shotgun will use port 9393.
 
-If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the _Gemfile_ and ran "bundle install" afterwards.
+If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the `Gemfile`, and have run `bundle install` afterwards.
 
-Assuming that you get shotgun working you can now make changes to your 'hello.rb' file and see the changes with a simple browser refresh.  Try adjusting the strings in the do ... end blocks and reload in the browser to confirm this.
+<aside>What does `bundle install` do? Are there any other uses for `bundle`?</aside>
 
-## Basics of HTML and CSS
+Assuming that you get Shotgun working you can now make changes to your `hello.rb` file and see the changes with a simple browser refresh.  Try adjusting the strings in the `do ... end` blocks and reload the browser.
 
-Now, let's make our website slightly more interesting. Let's add some HTML and CSS to the page. I assume you've already have a basic grasp of what they are but if not, here's a reminder.
+##From Strings to HTML
 
-HTML stands for HyperText Markup Language. It is the language that is used to create webpages. Every web page that you see in your browser is built using HTML. If you right-click the page you're reading right now and select 'View source', you'll see the HTML code for the current page.
+"hello" is a boring thing to send to our users. We can do better!
 
-HTML language consists of tags, enclosed in angle brackets. They usually come in pairs but sometimes they don't. For example, below is an example of an HTML code for an image inside a div tag - it stands for 'division'. A div tag usually signifies a section, a division of a document. The first **&lt;div&gt;** is called the _opening tag_ and the last **&lt;/div&gt;** is called the _closing tag_. Note that the closing tag has a slash after the angle bracket.
-
-BTW, in HTML5 best practice indicates that we should avoid using non-semantic tags such as **&lt;div&gt;**.  HTML5 will treat **&lt;div&gt;** in a very similar way to **&lt;cat-pictures&gt;** with the advantage that the latter tells us something about the expected content, whereas a whole sea of **&lt;div&gt;**'s can be very difficult to work with.
-
-````
-<div>
-  <img src='http://bit.ly/1eze8aE'>
-</div>
-````
-
-Note that the **&lt;img&gt;** tag doesn't need the closing tag as it is a 'self-closing tag'. The **src** bit is called an attribute. Its value determines what image will be displayed. In this case, _http://bit.ly/1eze8aE_ is a direct link to a kitten image.
-
-If you put this html in a web page, it will be rendered by the browser like this:
-
-![alt text](images/sinatra/sinatra_basic_3.png)
-
-Let's try it:
+Behind the scenes, Sinatra was actually sending "hello" as an [HTML](pills/html.md) file. Now we know that, we can just substitute our "hello" string for some cool HTML:
 
 ````ruby
 require 'sinatra'
@@ -189,7 +174,7 @@ get '/' do
 end
 ````
 
-Now go to the webpage: _http://localhost:4567/_ (if you aren't using shotgun, don't forget to restart the your web server: press Ctrl-C in the terminal and start it again).
+Now go to the webpage at the `localhost` address and check out the fruits of your labour. If the page isn't showing as you expect - are you using Shotgun?
 
 ![alt text](images/sinatra/sinatra_basic_4.png)
 
