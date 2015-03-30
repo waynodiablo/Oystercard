@@ -10,20 +10,44 @@
 * Explain how servers and clients interact
 
 ### HTTP
+* Recall that 'HTTP' means 'HyperText Transfer Protocol'
+* Recall that HTTP is the _de facto_ way of getting and sending information across the web
+* Remember some common HTTP status codes: 403, 404, 200, 500.
+
+### REST
+* Know that 'REST' means 'Representational State Transfer'
+* Explain that REST is made up of `POST`, `GET`, `PUT`, and `DELETE` commands
+* Explain how HTTP and REST are related
 
 ## Web technologies
 
 ### Indirect and direct links
+* Know that the anchor tag is written as `<a></a>`
+* Explain how to use the `href` attribute to set a destination for a hyperlink
+* Use the `target` attribute in an anchor tag
 
 ### HTML
+* Know that 'HTML' means 'HyperText Markup Language'
+* Recognise that HTML establishes the **semantic structure** of a web page
+* Explain that HTML is made up of structured tags
+* Differentiate between self-closing and normal ('block') tags
+* Use HTML tags such as `<div>`, `<img />` and `<a>`
 
 ### CSS
+* Know that 'CSS' means 'Cascading Style Sheets'
+* Remember a bunch of often-used CSS properties
+* Explain how to use CSS selectors to target specific HTML structures
+* Explain how CSS selectors and HTML classes go hand-in-hand
+* Diagram the CSS 'box model'
+* Use some simple CSS properties to style an HTML webpage
 
 ## Web Frameworks
 
 ### Web Application Development
+* Explain how servers and clients interact
 
 ### Sinatra
+* Know that Sinatra is a Ruby gem to make application code accessible across the web
 
 ### Feature/Acceptance testing using Capybara
 
@@ -32,8 +56,6 @@
 ### Sessions
 
 ### Routing
-
-### REST
 
 
 # SOLID Principles
