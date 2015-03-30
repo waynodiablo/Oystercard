@@ -28,7 +28,7 @@ You should be fully proficient in Ruby (post-precourse standard), including [blo
 
 As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called `sinatra-test`.
 
-As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual:
+As mentioned above, Sinatra is just a Ruby [gem](gems.md) :pill:, so you'll need to install it as usual:
 
 `$ gem install sinatra`
 
@@ -44,7 +44,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 ````
 
-and install using [bundler](pills/bundler.md) :pill::
+and install using [bundler](bundler.md) :pill::
 
 `$ bundle install`
 
