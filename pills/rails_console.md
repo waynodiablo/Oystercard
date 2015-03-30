@@ -24,7 +24,7 @@ $ rails console
 > User.find(1) # gets user with id = 1
 ```
 
-Technically, these are Active Record queries – more on those in the :pill: [Active Record pill](pills/activerecord.md).
+Technically, these are Active Record queries – more on those in the :pill: [Active Record pill](activerecord.md).
 
 ### Manipulating database entries
 
