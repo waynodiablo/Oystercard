@@ -18,7 +18,7 @@ As with every pill and project please do type in the code examples instead of co
 
 ## Prerequisites
 
-You should be fully proficient in Ruby (post-precourse standard), including [blocks&nbsp;:pill:](pills/blocks.md). For later parts of this walkthrough, you will also need to be proficient with [HTML&nbsp;:pill:](pills/html.md) and [CSS&nbsp;:pill:](pills/css.md).
+You should be fully proficient in Ruby (post-precourse standard), including [blocks&nbsp;:pill:](blocks.md). For later parts of this walkthrough, you will also need to be proficient with [HTML&nbsp;:pill:](html.md) and [CSS&nbsp;:pill:](css.md).
 
 ## Sinatra Installation
 
