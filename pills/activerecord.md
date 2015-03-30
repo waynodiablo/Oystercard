@@ -1,6 +1,6 @@
 # Active Record
 
-Web frameworks typically include a friendly of getting your web app talking to a database. These are called **ORMs**, short for *object-relational mapping*. 
+Web frameworks typically include a friendly way of getting your web app talking to a database. These are called **ORMs**, short for *object-relational mapping*. 
 
 In Sinatra, you've used DataMapper to perform this task. In Rails, the built-in ORM is **Active Record**.
 
