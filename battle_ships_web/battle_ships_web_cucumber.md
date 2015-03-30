@@ -37,7 +37,7 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here are some versions of a battleships game engine you can use as an alternative.**:
 
-* [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
+* [Steve's BattleShips](https://github.com/stephenlloyd/battleships-march)
 * [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
