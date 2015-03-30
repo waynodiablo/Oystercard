@@ -2,9 +2,8 @@
 
 [Sinatra](http://www.sinatrarb.com/) is a simple, no-frills web application framework for Ruby. It allows you to integrate applications written in Ruby with a web interface, so anyone with a browser can use them. In contrast to more complex web application frameworks such as [Ruby on Rails](http://rubyonrails.org), Sinatra provides very little beyond making your ruby code accessible to requests that come over the HTTP protocol.
 
-<aside>
-  Sinatra is one of many simple web application frameworks.  You can read about some of the alternatives in [this blog post](http://www.sitepoint.com/ruby-microframeworks-round/).
-</aside>
+> Sinatra is one of many simple web application frameworks.  You can read about some of the alternatives in [this blog post](http://www.sitepoint.com/ruby-microframeworks-round/).
+
 
 As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
 
@@ -32,9 +31,7 @@ As mentioned above, Sinatra is just a Ruby [gem](gems.md) :pill:, so you'll need
 
 `$ gem install sinatra`
 
-<aside>
-  Where does this install the Sinatra gem?
-</aside>
+> Where does this install the Sinatra gem?
 
 However, a better way would be to put it in your Gemfile:
 
@@ -67,7 +64,7 @@ get '/' do
   'hello!'
 end
 ````
-<aside>Why are we requiring `sinatra.rb` in this file?</aside>
+> Why are we requiring `sinatra.rb` in this file?
 
 Now, run this file.
 
@@ -86,7 +83,7 @@ Open [this address](http://localhost:4567) in the browser and you should see a w
 
 This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
-<aside>:pill: [`localhost` and web host addresses](localhost_web_addresses.md)</aside>
+> :pill: [`localhost` and web host addresses](localhost_web_addresses.md)
 
 ## How does _Hello World_ work?
 
@@ -156,7 +153,7 @@ The `-p` switch tells shotgun what port to use. Use this switch to keep the port
 
 If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the `Gemfile`, and have run `bundle install` afterwards.
 
-<aside>What does `bundle install` do? Are there any other uses for `bundle`?</aside>
+> What does `bundle install` do? Are there any other uses for `bundle`?
 
 Assuming that you get Shotgun working you can now make changes to your `hello.rb` file and see the changes with a simple browser refresh.  Try adjusting the strings in the `do ... end` blocks and reload the browser.
 
