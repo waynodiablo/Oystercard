@@ -24,7 +24,7 @@ You should be fully proficient in Ruby (post-precourse standard), including [blo
 
 ## Sinatra Installation
 
-***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pills/pairing.md).***
+***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pairing.md).***
 
 As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called `sinatra-test`.
 
