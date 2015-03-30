@@ -14,7 +14,9 @@ As with every pill and project please do type in the code examples instead of co
 
 * How to set-up and use Sinatra
 * Routes
-* Introduction to HTML & CSS
+* Templates
+* Forms
+* Parameters
 
 ## Prerequisites
 
