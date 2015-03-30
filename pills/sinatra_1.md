@@ -24,11 +24,11 @@ You should be fully proficient in Ruby (post-precourse standard), including [blo
 
 ## Sinatra Installation
 
-***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pills/pairing.md).***
+***Note, we recommend working through this pill with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill&nbsp;:pill:](pairing.md).***
 
 As with every bit of non-trivial code you write it's a good idea to initialise a git repository and push your code to Github in order to back it up.  Put the following code in a Github repo called `sinatra-test`.
 
-As mentioned above, Sinatra is just a Ruby [gem](pills/gems.md) :pill:, so you'll need to install it as usual:
+As mentioned above, Sinatra is just a Ruby [gem](gems.md) :pill:, so you'll need to install it as usual:
 
 `$ gem install sinatra`
 
@@ -44,7 +44,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 ````
 
-and install using [bundler](pills/bundler.md) :pill::
+and install using [bundler](bundler.md) :pill::
 
 `$ bundle install`
 
@@ -84,9 +84,9 @@ You should see this:
 
 Open [this address](http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
 
-This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
-<aside>:pill: [`localhost` and web host addresses](https://github.com/makersacademy/course/blob/master/pills/localhost_web_addresses.md)</aside>
+<aside>:pill: [`localhost` and web host addresses](localhost_web_addresses.md)</aside>
 
 ## How does _Hello World_ work?
 
@@ -128,7 +128,7 @@ But wait! Having done this in your Sinatra application, visiting `http://localho
 
 ![alt text](images/sinatra/sinatra_basic_2.png)
 
-An error! Another good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+An error! Another good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
 ### Reload your code
 
@@ -164,7 +164,7 @@ Assuming that you get Shotgun working you can now make changes to your `hello.rb
 
 "hello" is a boring thing to send to our users. We can do better!
 
-Behind the scenes, Sinatra was actually sending "hello" as an [HTML](pills/html.md) file. Now we know that, we can just substitute our "hello" string for some cool HTML:
+Behind the scenes, Sinatra was actually sending "hello" as an [HTML](html.md) file. Now we know that, we can just substitute our "hello" string for some cool HTML:
 
 ````ruby
 require 'sinatra'
@@ -180,7 +180,7 @@ Now go to the webpage at the `localhost` address and check out the fruits of you
 
 ![alt text](images/sinatra/sinatra_basic_4.png)
 
-A good time to commit your code, push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+A good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
 However, this image, as lovely as it is, is a bit dull. Real web pages have something else in them that makes them look good: CSS.
 
