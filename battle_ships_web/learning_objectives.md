@@ -45,18 +45,35 @@
 
 ### Web Application Development
 * Explain how servers and clients interact
+* Explain how templates are filled with application content to render webpages
+* Develop a simple web application
 
 ### Sinatra
 * Know that Sinatra is a Ruby gem to make application code accessible across the web
+* Explain how Sinatra's routing and parameters work
+* Use Sinatra's template rendering capabilities to create pages for a web application
+* Build an application using Sinatra
 
 ### Feature/Acceptance testing using Capybara
+* Recall what Capybara is
+* Describe links between Capybara and RSpec
+* Discuss why Capybara is more useful than RSpec in certain cases
 
 ### Parameters
+* Know that parameters are are way to query a server for specific information
+* Explain how to access parameters from a server environment in Ruby (using Sinatra)
+* Construct parameters within a URL, using `?x=y` and `&`
+* Build a Sinatra application that uses parameters
 
 ### Sessions
+* Describe a session as a way to persist information between webpages
+* Explain how to set and get the session within a Sinatra application
+* Suggest more appropriate methods for long-term storage (i.e. databases)
 
 ### Routing
-
+* Diagram the routing layer within a server
+* Relate REST principles with Routing principles
+* Construct a simple router in a Sinatra application
 
 # SOLID Principles
 ## O - Open/Closed Principle
