@@ -1,0 +1,66 @@
+## Sinatra 3: reloading code
+
+If we wanted to have another page at `http://localhost:4567/secret`, then we'd do the following:
+
+````ruby
+require 'sinatra'
+
+get '/' do
+  'hello!'
+end
+
+get '/secret' do
+  'This is a secret page'
+end
+````
+But wait! Having done this in your Sinatra application, visiting `http://localhost:4567/secret` in a browser gives you this page:
+
+![alt text](images/sinatra/sinatra_basic_2.png)
+
+An error! Another good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
+
+### Reload your code
+
+What's happening here? Nothing bad: Sinatra is telling you that it doesn't know what '/secret' is all about, despite you having written this in your app.
+
+The problem: we haven't rebooted the server after making our changes. The running server has a `/` route, but no `/secret` one.
+
+To stop the server, head to the terminal tab in which the server is running and hit `Ctrl-C`. Then restart the server just like you started it in the first place:
+
+`$ ruby hello.rb`
+
+Head back to _http://localhost:4567/secret_: it now works! But restarting the server manually every time we change the code is going to get very painful.
+
+## Automatic code reloading
+
+What we've been doing is restarting our server every time we made a change to the files because Sinatra needed to reload them. There's a way to reload the files without restarting the entire process.
+
+Firstly, install a gem called **Shotgun** within this project. You already know how to require and install gems.
+
+Secondly, load your application like this:
+
+`$ shotgun hello.rb -p 4567`
+
+The `-p` switch tells shotgun what port to use. Use this switch to keep the port consistent with the default Sinatra port. By default shotgun will use port 9393.
+
+If you see a "Boot Error" when you're starting the application using shotgun, double check that you have required the _sinatra_ gem in the `Gemfile`, and have run `bundle install` afterwards.
+
+> What does `bundle install` do? Are there any other uses for `bundle`?
+
+Assuming that you get Shotgun working you can now make changes to your `hello.rb` file and see the changes with a simple browser refresh.  Try adjusting the strings in the `do ... end` blocks and reload the browser.
+
+Next up, let's add some [HTML](html.md) to the mix.
+
+[Go to part 4](sinatra_4.md)
+
+[Go to exercises](sinatra_exercises.md)
+
+Resources
+--------
+
+* [Sinatra Main Site](http://www.sinatrarb.com/)
+* [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
+* [Talk Slides on Sinatra Chat Server](http://obfusk.org/achatwithsinatra/#1)
+* [Detailed Talk Slides on Sinatra](http://www.slideshare.net/BobNadlerJr/sinatra-flatiron)
+* [Sinatra Up and Running (Book)](http://shop.oreilly.com/product/0636920019664.do)
+* [Jump Start Sinatra (Book)](http://www.sitepoint.com/store/jump-start-sinatra/)
