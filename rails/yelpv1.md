@@ -1096,7 +1096,7 @@ haml:
         - restaurant.reviews.each do |review|
           %li
             = review.thoughts
-            %strong = review.rating
+            %strong= review.rating
             /5
     - else
       %p No reviews
