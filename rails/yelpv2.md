@@ -53,7 +53,7 @@ This does the following:
 * *creates a database migration to add a Users table*
 * *adds a User model*, which tells Rails about the properties that our users should have
 * *updates `config/routes.rb`* with the relevant user signin, signout and signup routes
-* *adds a Users controller* (really the Devise controller) which gives Rails the commands to deal with users.
+* *configures a set of controllers* (initially contained within devise) which gives Rails the commands to deal with users.
 
 Make sure you then follow the on-screen instructions to finish setting up devise, but change the root declaration in **routes.rb** to:
 
