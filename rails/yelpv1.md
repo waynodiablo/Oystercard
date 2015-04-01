@@ -1041,17 +1041,37 @@ end
 
 RSpec will now complain that we don't have an association between restaurants and reviews. Bummer. Time to fix that.
 
+TDD in Rails is sometimes difficult as there is so much 'magic', it is often difficult to know what to test.  Fortunately, the guys over at [Thoughtbot](thoughtbot.com) have written a fantastic gem called [shoulda](https://github.com/thoughtbot/shoulda) to help us test some of those hard to reach parts.
+
+Add `shoulda` to your Gemfile and run `bundle install`
+
+Create `spec/models/restaurant_spec.rb`:
+```
+require 'spec_helper'
+
+describe Restaurant, type: :model do
+  it { is_expected.to have_many :reviews }
+end
+```
+Now run `rspec`.  What just happened?
+
+If you haven't come across RSpec's [one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax) before, now is the time to go and investigate.
+
+Let's pass this test:
+
 To `app/models/restaurant.rb`, add:
 
 `has_many :reviews`
+
+Is RSpec passing?
 
 Finally, we need to modify our database to join together reviews and restaurants. Time for a migration:
 
 `$ bin/rails g migration AddRestaurantIdToReviews restaurant:belongs_to`
 
-`$ bin/rake db:migrate`
+This does some Rails magic.  But in the words of Uncle Vernon, "There's no such thing as magic!"  Study the migration file that Rails has just created.  What is it doing?  Why do we need to add restaurant_id to reviews?  (Wait, doesn't that sound familiar...?).  Now would be a good time to investigate [ActiveRecord Associations](http://guides.rubyonrails.org/association_basics.html).
 
-This does some Rails magic – it interprets AddRestaurantIdToReviews and parses it, so it understands that it needs to add 'RestaurantId' to the Reviews model. Then, Rake runs the migration.
+Run `$ bin/rake db:migrate`.
 
 Now, if you look at your `schema.rb` you'll see the new association between restaurants and reviews.
 
@@ -1103,6 +1123,8 @@ haml:
 ```
 ##### `belongs_to` and dealing with orphan reviews
 
+*In the following section up to the exercise, use what you've read in the previous section to TDD all of the following using `shoulda`.  We've given you the final code - please decide how to write the tests first.*
+
 Adding the following line to the `review.rb` model will tie the review to a restaurant:
 
 ```ruby
@@ -1149,22 +1171,16 @@ context 'creating restaurants' do
 
 As we haven't got any length limits on restaurant name, the test will fail. Let's fix that – by writing another test, this time for the restaurant model (this is distinct from the restaurant feature spec). Here, we're testing the way that restaurants are actually represented by our code, rather than what the user sees on our website.
 
-##### Unit testing a model
+##### Unit testing a validation
 
-`spec/models/restaurant_spec.rb`:
+In `spec/models/restaurant_spec.rb`:
 
 ```ruby
-require 'spec_helper'
-
-describe Restaurant, :type => :model do
-  it 'is not valid with a name of less than three characters' do
-    restaurant = Restaurant.new(name: "kf")
-    expect(restaurant).not_to be_valid
-  end
+it 'is not valid with a name of less than three characters' do
+  restaurant = Restaurant.new(name: "kf")
+  expect(restaurant).not_to be_valid
 end
 ```
-
-Specifying `:type => :model` ensures that your test has methods appropriate for a model (unlike Capybara, which is specifically for web feature testing).
 
 But our expectation of `not_to be_valid` is pretty vague – a restaurant might be invalid for a variety of reasons. Let's narrow it down:
 
