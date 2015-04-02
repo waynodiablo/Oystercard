@@ -1,4 +1,4 @@
-# Active Record Associations and Encapsulating business logic in models
+# Active Record associations and encapsulating business logic in the model
 
 In [YelpV2](yelpv2.md), we are challenged with the following feature:
 
@@ -72,3 +72,34 @@ Firstly, we haven't specified that it needs to join through the `reviews` associ
 ```
 has_many :reviewed_restaurants, through: :reviews
 ```
+Still not working?
+
+ActiveRecord does not know what model to build the association with.  We've told it to use `reviews`, but we need also to specify which of `Review`'s associations to go through.  In another context, we might have declared:
+```
+has_many :restaurants, through: :reviews
+```
+and this would have worked as `reviews` has an association called `restaurants` and ActiveRecord just uses this.  But we can't do that here because `User` _already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurants` is not an association in `Review`.
+So we have to declare it this way:
+```
+has_many :reviewed_restaurants, through: :reviews, source: :restaurants
+```
+
+Maybe time for a break to review all that again and have a look at [Active Record Associations](http://guides.rubyonrails.org/association_basics.html).
+
+
+So now we have an association called `reviewed_restaurants` on `User`, we can use this to test whether a user has already reviewed a restaurant.  However, _we do not want the logic for this test to be in our controller_!  So let's encapsulate it in our `User` model:
+```
+def has_reviewed?(restaurant)
+  reviewed_restaurants.include? restaurant
+end
+```
+And in our controller, we can now write this, which is very satisfying:
+```
+if current_user.has_reviewed? @restaurant
+  # some error handling goes here!
+end
+```
+You could also pre-empt this by using `current_user.has_reviewed?(@restaurant)` to decide whether or not to render the Review button in your views...
+
+
+Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
