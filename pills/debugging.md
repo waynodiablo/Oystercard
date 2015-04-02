@@ -17,6 +17,8 @@ Whether you are printing data out, or using a debugger, fundamentally you are ju
 
 In Ruby [byebug](https://github.com/deivid-rodriguez/byebug) is a great debugging tool, and in JavaScript the Chrome development tools.  See the resources below for more specifics.
 
+Rails has its own [magic stuff](http://edgeguides.rubyonrails.org/debugging_rails_applications.html) to assist in debugging. And, since Rails 4.2, Rails has included the [Web Console gem](https://github.com/rails/web-console) by default. This means you get a debugging console on every error page - handy for checking those errant instance variables!
+
 Resources:
 ---------
 
