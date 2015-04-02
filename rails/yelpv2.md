@@ -197,20 +197,22 @@ The proper way of saving secrets is to abstract them out into a separate file.
 
 Add your Facebook keys to the Rails `secrets.yml` file. They can then get called into the above code without needing to check them into version control. Call them using the following:
 
-`Rails.application.secrets.NAME_OF_SECRET`
+`Rails.application.secrets.[name_of_secret]`
 
-Make sure that `config/secrets.yml` is in your `.gitignore` file to prevent it being picked up by version control. (Bear in mind that at this point it's already in your Git history, so it's not actually gone. To remove secrets from a repo's history, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/).)
+**Never commit production secrets to public git repositories. Especially when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
 
-Alternatively you can have your secrets.yml file pull in from environment variables like so:
+To avoid this, have your secrets.yml file pull in secrets from environment variables like so:
 
 ```yml
 production:
   secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  facebook_app_id: 12345678910987654321
+  facebook_app_secret: <%= ENV["FACEBOOK_APP_SECRET"] %>
 ```
+Then set these environment variables using the relevant shell commands.
 
-which allows the `config/secrets.yml` file to be committed to git, which smoothes Heroku deploy.
+If you accidentally commit secrets to your git repository, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/) - but be warned, it's not for the faint-hearted!
 
-**Whichever method you use please please please never commit production secrets to open git repositories. Especially when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
 
 #### Setting limits on users
 
@@ -234,7 +236,7 @@ before_action :authenticate_user!, :except => [:index, :show]
 
 As you can guess, this will apply to all of the methods in the controller except for `index` and `show`, so guests will still be able to see the list of restaurants and the individual restaurant pages.
 
-Now try adding tests/code for the following scenarios:
+Now try adding tests/code for the following scenarios:  (Before attempting this, we strongly recommend you read up on [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)).  To see how this relates to the following features, read [this pill](reviewed_restaurants.md)
 
 * **Users can only edit/delete restaurants which they've created**
 * **Users can only leave one review per restaurant**
