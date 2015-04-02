@@ -55,7 +55,7 @@ has_many :reviews
 
 Now for the cool part.  Let's write the following test in `user_spec.rb`:
 ```
-it { is_exepected.to have_many :reviewed_restaurants}
+it { is_expected.to have_many :reviewed_restaurants}
 ```
 There are no special tricks here - it's just the code I wish I had.  Now, how do we make this pass?
 
