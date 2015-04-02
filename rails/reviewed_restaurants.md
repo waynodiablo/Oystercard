@@ -93,13 +93,44 @@ def has_reviewed?(restaurant)
   reviewed_restaurants.include? restaurant
 end
 ```
-And in our controller, we can now write this, which is very satisfying:
+And in our controller, we could write this, which is quite satisfying:
 ```
 if current_user.has_reviewed? @restaurant
   # some error handling goes here!
 end
 ```
-You could also pre-empt this by using `current_user.has_reviewed?(@restaurant)` to decide whether or not to render the Review button in your views...
+Plus, we could also pre-empt this by using `current_user.has_reviewed?(@restaurant)` to decide whether or not to render the Review button in the view...
+
+
+However, I'm still not satisfied.  While we now have a clean way to potentially show or hide the Review button and a way for the controller to check that a user has reviewed a restaurant, it is still possible to create additional reviews for the same user and restaurant _directly through the models_.
+
+To prevent this from happening, we need a validation.  Before we allow a `Review` to be saved, we need to validate that the user and restaurant combination is unique.
+
+Ideally, we should TDD this, but shoulda currently doesn't support the following:
+```
+it { is_expected.to validate_uniqueness_of(:user).scoped_to(:restaurant) }
+```
+
+So until I've worked out a satisfactory way of doing this, let's put the following in `Review`:
+```
+validates :user, uniqueness: { scope: :restaurant, message: "has reviewed this restaurant already" }
+```
+
+Now in our controller, we don't need to check `current_user.reviewed_restaurants` because the review validation takes care of it.  So we should have something like this in `ReviewsController`:
+```
+def create
+  @restaurant = Restaurant.find review_params[:restaurant_id]
+  @review = @restaurant.build_review current_user, review_params
+
+  if @review.save
+    redirect_to restaurants_path
+  else
+    render 'new'
+  end
+end
+```
+
+What is `build_review` and what does it do?  I'll leave you to figure that out for yourselves...
 
 
 Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
