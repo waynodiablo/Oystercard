@@ -116,7 +116,7 @@ So until I've worked out a satisfactory way of doing this, let's put the followi
 validates :user, uniqueness: { scope: :restaurant, message: "has reviewed this restaurant already" }
 ```
 
-Now in our controller, we don't need to check `current_user.has_reviewed?(@restaurants)` because the review validation takes care of it.  So we should have something like this in `ReviewsController`:
+Now in our controller, we don't need to check `current_user.has_reviewed?(@restaurant)` because the review validation takes care of it.  So we should have something like this in `ReviewsController`:
 ```
 def create
   @restaurant = Restaurant.find review_params[:restaurant_id]
