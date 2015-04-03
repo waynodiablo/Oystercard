@@ -16,7 +16,7 @@ The first thing to recognize is that a user has _two separate associations_ with
 1. A user creates a restaurant.
 2. A user can review a restaurant.
 
-Whe have already modelled the first in `Restaurant`:
+We have already modelled the first in `Restaurant`:
 
 ```
 belongs_to :user
