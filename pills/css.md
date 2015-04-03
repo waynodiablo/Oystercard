@@ -3,7 +3,7 @@ CSS
 
 'CSS' stands for 'Cascading Style Sheets'. It is a language used to change the way [HTML](html.md) appears across different devices. HTML and CSS should always be maintained within separate files, a philosophy referred to as 'the separation of structure and presentation'.
 
-- _Cascading_: CSS is designed to declare high-level rules for often-used HTML elements, like `<div>` and `<a>`, and become more granular by applying more specific styles by using _selectors_. In this way, styles declared at higher levels 'cascade' down to more specific elements.
+- _Cascading_: CSS is designed to declare high-level rules for often-used HTML elements, like `<div>` and `<a>`, and become more granular by applying more specific styles by using _selectors_. In this way, styles declared at higher levels 'cascade' down to more specific elements. Since HTML files can include multiple CSS files, styles declared in one file also 'cascade' down through all others.
 - _Style_: CSS is used to make HTML look good. Where HTML defines the **structure** of a page, CSS defines the **style** applied to that structure. CSS can therefore be thought of as the 'paint' applied to the structural HTML scaffold.
 - _Sheets_: CSS styles should always be separate from HTML structure, and CSS files should always be **imported into** HTML files. HTML uses the `<link>` tag to do this, usually (but not necessarily) within the `<head>` element.
 
@@ -18,7 +18,7 @@ Before CSS, it was common to declare how HTML elements should look by using HTML
 This raises many problems. As HTML files grew in size, their structure was littered with, and strongly coupled to, ways of presenting that structure. As a result:
 
 1. HTML files were very difficult to read
-2. Serving the same content styled differently for different devices meant building HTML files specific to those devices
+2. Serving the same content styled differently for different devices (mobiles, tablets, screen readers, printers, Braille readers, etc.) meant building HTML files specific to those devices
 3. Changing HTML styles meant changing every element that used that style one-by-one.
 
 CSS proposed splitting the presentation layer from the HTML structure. Nowadays, we include a separate CSS file - exclusively for presentation information - within HTML pages via a `<link>` tag:
@@ -145,6 +145,8 @@ The main CSS properties include: `display`, `position`, `height`, `width`, and `
 
 CSS is fairly easy to pick up, but extremely hard to master. To make matters worse, the field is constantly changing. Some fundamental things any front-end developer _must_ know include:
 
+- CSS [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+- CSS [Inheritance](http://reference.sitepoint.com/css/inheritance)
 - The CSS [Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - CSS [Positioning](http://learnlayout.com/position.html)
 - CSS [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm) and [how to deal with them](https://css-tricks.com/how-to-deal-with-vendor-prefixes/)
