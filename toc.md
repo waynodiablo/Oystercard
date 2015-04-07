@@ -6,7 +6,7 @@
 * Week 1: [BDD, TDD and OOP/D: Boris Bikes](boris_bikes/boris_bikes.md)
 * Week 2: [More advanced OO with games: BattleShips](battle_ships/battle_ships.md)
 * Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_cucumber.md)
-* Week 4: [Databases: Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager.md)
+* Week 4: [Databases: Bookmark Manager](bookmark_manager/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Rock Paper Scissors](https://github.com/makersacademy/course/blob/master/rock_paper_scissors.md)
 * Week 6: Lab week
 * Week 7: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
