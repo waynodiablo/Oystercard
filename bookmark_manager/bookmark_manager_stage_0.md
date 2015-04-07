@@ -1,6 +1,6 @@
 ##Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](https://github.com/makersacademy/course/blob/master/pills/postgres.md)
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
 
 ##Talking to the database
 
@@ -13,9 +13,10 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 ```
 
-Don't forget to run "bundle install" every time you update your Gemfile.
+Don't forget to run "bundle" every time you update your Gemfile.
 
-Then let's create our first model. Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in lib/link.rb.
+Then let's create our first model. Usually we would test drive its creation, but let's have a look at what a database mapped model looks like first.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in lib/link.rb.
+
 ```ruby
 # This class corresponds to a table in the database
 # We can use it to manipulate the data
@@ -35,7 +36,6 @@ end
 This file describes the relationship between the table in the database (they don't exist yet) and this Ruby class. We'll see how it can be used in a minute.
 
 Then, add this code to ```server.rb``` in the lib directory.
-
 
 ```ruby
 require 'data_mapper'
@@ -75,7 +75,7 @@ Finally, type
 `\q`
 to exit psql.
 
-Now we have everything we need to use datamapper in our code. Let's see how we could do it by writing an rspec test.
+Now we have everything we need to use datamapper in our code. Let's see how we could do it by writing an RSpec test.
 
 **RSpec demonstration**
 
@@ -103,6 +103,7 @@ require 'server'
 ```
 
 Finally, create the ```spec/link_spec.rb```:
+
 ```ruby
 require 'spec_helper'
 
@@ -157,15 +158,16 @@ Why two databases?
 A web project usually has at least three environments: development, test and production. An environment is the "mode" the project is running in, determined by the set of the environment variables (the environment the shell variables are in and the environment the project is running in are two different concepts that share the same name).
 
 The environment the project is running in determines the behaviour of the project. For example, if we have an e-commerce project, our payment processing would be different for the three environment:
-in production (when real customers use it), all credit cards would be charged for real
-in development (when writing code), we would use special "development" credit cards that behave like real ones, except that no money is actually spent
-in test (when running automated tests), we wouldn't even connect to the card processing centre to not slow down the tests
 
-Depending on the environment, we may do or not do certain things: send real emails in production but only pretend to do it in a test environment. Our code can print extensive debugging information in development but only show succinct error messages in production.
+1. in production all credit cards would be charged for real (when real customers use it)
+2. in development (when writing code), we would use special "development" credit cards that behave like real ones, except that no money is actually spent
+3. in test (when running automated tests), we wouldn't even connect to the card processing centre so as not to slow down the tests
 
-So, getting back to the databases: we don't want to use the same database in different environments. Imagine you have one million users registered on your website. You don't want to use the same database for development. When you launch the website locally you only want to have a database with a few users that you control manually. And when you run your tests, you want your database to be empty because every test assumes that there is nothing there that wasn't created explicitely. What happens if your test deletes all data from the database and you run in on a production or development database? You'd lose data. So, we really need to use one database per environment.
+Depending on the environment, we may or may not do certain things: e.g. send real emails in production but only pretend to do it in a test environment. Our code can print extensive debugging information in development but only show succinct error messages in production.
 
-That is why we are checking what environment we're in, defaulting to development.
+So, getting back to the databases: we don't want to use the same database in different environments. Imagine you have one million users registered on your website. You don't want to use the same database for development. When you launch the website locally you only want to have a database with a few users that you control manually. And when you run your tests, you want your database to be empty because every test assumes that there is nothing there that wasn't created explicitly. What happens if your test deletes all data from the database and you run in on a production or development database? You'd lose data. So, we really need to use one database per environment.
+
+That is why we are checking what environment we're in, and defaulting to development.
 
 ```ruby
 env = ENV['RACK_ENV'] || 'development'
@@ -189,6 +191,7 @@ https://github.com/makersacademy/bookmark_manager/tree/24321e022f78f1275b77dcdff
 ## Cleaning the database
 
 When a test runs, it assumes that the database is empty. The test is not obliged to leave the database clean, though. We need to take care of this ourselves. Add the ```database_cleaner``` gem to the ```Gemfile``` and install it. Then, require it in ```spec_helper.rb``` and configure RSpec to use it.
+
 ```ruby
 RSpec.configure do |config|
 

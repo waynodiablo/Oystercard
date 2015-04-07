@@ -3,7 +3,7 @@
 
 Browsing links
 
-Let's write our first integration test using Capybara first. First, add capybara to your Gemfile and install it. Then, require and configure it in spec_helper as instructed on the capybara github page.
+Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it. Then, require and configure it in spec_helper as instructed on the capybara github page.
 
 ```ruby
 require 'capybara/rspec'
