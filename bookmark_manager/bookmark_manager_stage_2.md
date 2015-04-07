@@ -1,5 +1,3 @@
-
-
 ##Adding user accounts
 
 Let's implement basic user account functionality using what we learned in Security. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user. This section will rely on your understanding of what we (will) have discussed in Security.
@@ -14,8 +12,6 @@ We will add the following functionality:
 * Every link and every tag will be linked to the user that created it, unless the user was anonymous
 
 We want to have a separate database table for all our users. For this we'll need to have a User model that will store the email and password-related information (hash, salt).
-
-[ [Return to outline](#bookmark-manager-outline) ]
 
 # Signing up
 
