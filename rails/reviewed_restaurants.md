@@ -140,3 +140,5 @@ end
 What is `build_review` and what does it do?  I'll leave you to figure that out for yourselves...
 
 Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
+
+Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto [Extending Active Record Associations](extending_associations.md).
