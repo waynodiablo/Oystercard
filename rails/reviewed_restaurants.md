@@ -16,7 +16,7 @@ The first thing to recognize is that a user has _two separate associations_ with
 1. A user creates a restaurant.
 2. A user can review a restaurant.
 
-Whe have already modelled the first in `Restaurant`:
+We have already modelled the first in `Restaurant`:
 
 ```
 belongs_to :user
@@ -55,7 +55,7 @@ has_many :reviews
 
 Now for the cool part.  Let's write the following test in `user_spec.rb`:
 ```
-it { is_exepected.to have_many :reviewed_restaurants}
+it { is_expected.to have_many :reviewed_restaurants}
 ```
 There are no special tricks here - it's just the code I wish I had.  Now, how do we make this pass?
 
