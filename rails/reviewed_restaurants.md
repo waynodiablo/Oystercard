@@ -78,7 +78,7 @@ ActiveRecord does not know what model to build the association with.  We've told
 ```
 has_many :restaurants, through: :reviews
 ```
-and this would have worked as `reviews` has an association called `restaurants` and ActiveRecord just uses this.  But we can't do that here because `User` _already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurants` is not an association in `Review`.
+and this would have worked as `reviews` has an association called `restaurant` and ActiveRecord just infers the association from this.  But we can't do that here because `User` _already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurant` is not an association in `Review`.
 So we have to declare it this way:
 ```
 has_many :reviewed_restaurants, through: :reviews, source: :restaurant
@@ -125,7 +125,14 @@ def create
   if @review.save
     redirect_to restaurants_path
   else
-    render 'new'
+    if @review.errors[:user]
+      # Note: if you have correctly disabled the review button where appropriate,
+      # this should never happen...
+      redirect_to restaurants_path, alert: 'You have already reviewed this restaurant'
+    else
+      # Why would we render new again?  What else could cause an error?
+      render :new
+    end
   end
 end
 ```
