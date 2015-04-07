@@ -167,3 +167,9 @@ id |     title      |           url
 ```
 
 So that's a whirlwind tour of PostgreSQL. Hopefully this should shed some light on what's going on under the hood, and help you appreciate what an ORM like [DataMapper](http://datamapper.org/) gives us in terms of functionality. Always remember to check in with your databases as your projects grow to make sure you are understanding what's really going on in the dark corners of your database! :)
+
+Resources
+---------
+
+* http://www.w3schools.com/sql/
+* http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/
