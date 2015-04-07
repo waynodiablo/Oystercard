@@ -173,3 +173,10 @@ Resources
 
 * http://www.w3schools.com/sql/
 * http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/
+
+Related Videos
+--------------
+
+* [Stephen on Whiteboard](https://www.youtube.com/watch?v=dIq_E-HSje8)
+* [Stephen on Projector](https://www.youtube.com/watch?v=C7EKjnFCyeQ)
+* [Enrique on Whiteboard](https://www.youtube.com/watch?v=QlDE4kYzvjU)
