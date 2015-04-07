@@ -4,7 +4,7 @@ For instructions on how to install your database (and learn some basic interacti
 
 ##Talking to the database
 
-To talk to the database, we'll need the [DataMapper](../pill/datamapper.md) gem. It's an ORM (Object-relational mapper), which means that it's providing a convenient way to interact with our data using classes and objects instead of working with database tables directly.
+To talk to the database, we'll need the [DataMapper](../pills/datamapper.md) gem. It's an ORM (Object-relational mapper), which means that it's providing a convenient way to interact with our data using classes and objects instead of working with database tables directly.
 
 Another advantage of datamapper is that is can be used with a variety of database engines, not only postgres. This implies that we'll need to install an adapter to work with postgres, apart from the datamapper itself. Add these gems to your Gemfile:
 
