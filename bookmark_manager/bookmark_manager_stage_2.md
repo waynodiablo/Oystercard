@@ -19,7 +19,7 @@ Let's begin with a test, as usual. The integration test should go to ```spec/fea
 ```ruby
 require 'spec_helper'
 
-feature "User signs up" do
+feature 'User signs up' do
 
   # Strictly speaking, the tests that check the UI
   # (have_content, etc.) should be separate from the tests
@@ -32,19 +32,19 @@ feature "User signs up" do
   # to keep the example simple.
 
 
-scenario "when being a new user visiting the site" do
+scenario 'when being a new user visiting the site' do
     expect{ sign_up }.to change(User, :count).by(1)
-    expect(page).to have_content("Welcome, alice@example.com")
-    expect(User.first.email).to eq("alice@example.com")
+    expect(page).to have_content('Welcome, alice@example.com')
+    expect(User.first.email).to eq('alice@example.com')
   end
 
-  def sign_up(email = "alice@example.com",
-              password = "oranges!")
+  def sign_up(email = 'alice@example.com',
+              password = 'oranges!'')
     visit '/users/new'
     expect(page.status_code).to eq(200)
-    fill_in :email, :with => email
-    fill_in :password, :with => password
-    click_button "Sign up"
+    fill_in :email, with: email
+    fill_in :password, with: password
+    click_button 'Sign up'
   end
 
 end
@@ -81,7 +81,7 @@ get '/users/new' do
   # we need the quotes because otherwise
   # ruby would divide the symbol :users by the
   # variable new (which makes no sense)
-  erb :"users/new"
+  erb :'users/new'
 end
 
 ```
@@ -93,10 +93,10 @@ and ```views/users/new.erb```.
 
 <h1>Please sign up</h1>
 
-<form action="/users" method="post">
-  Email: <input name="email" type="text">
-  Password: <input name="password" type="password">
-  <input type="submit" value="Sign up">
+<form action='/users' method='post'>
+  Email: <input name='email' type='text'>
+  Password: <input name='password' type='password'>
+  <input type='submit' value='Sign up'>
 </form>
 
 ```
@@ -105,8 +105,8 @@ Now the test will be able to fill out the form but the form submits to the route
 
 ```ruby
 post '/users' do
-  User.create(:email => params[:email],
-              :password => params[:password])
+  User.create(email: params[:email],
+              password: params[:password])
   redirect to('/')
 end
 ```
@@ -155,8 +155,8 @@ Then, let's save the user id in the session after it's created within ```server.
 
 ```ruby
 post '/users' do
-  user = User.create(:email => params[:email],
-                     :password => params[:password])
+  user = User.create(email: params[:email],
+                     password: params[:password])
   session[:user_id] = user.id
   redirect to('/')
 end
@@ -168,7 +168,7 @@ Then, let's create a helper that will give us access to the current user, if log
 helpers do
 
   def current_user
-    @current_user ||=User.get(session[:user_id]) if session[:user_id]
+    @current_user ||= User.get(session[:user_id]) if session[:user_id]
   end
 
 end
