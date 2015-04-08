@@ -105,8 +105,6 @@ require 'server'
 Finally, create the ```spec/link_spec.rb```:
 
 ```ruby
-require 'spec_helper'
-
 describe Link do
 
   context 'Demonstration of how datamapper works' do
