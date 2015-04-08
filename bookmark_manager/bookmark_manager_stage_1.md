@@ -225,7 +225,7 @@ Next error:
 ```
 
 Failure/Error: expect(link.tags).to include('education')
-       expected [] to include 'education'
+       expected [] to include "education"
 ```
 
 So, the test is filling out the form correctly since we added a new input fields but the data doesn't end up in the database. Time to fix it in server.rb.
@@ -244,7 +244,7 @@ Note that we're searching for a tag record in the database (or creating an insta
 However, if we run the test, we'll still get an error.
 
 ```
-Failure/Error: expect(link.tags).to include("education")
+Failure/Error: expect(link.tags).to include('education')
        expected [#<Tag @id=1 @text="education" @link_id=4>, #<Tag @id=2 @text="ruby" @link_id=4>] to include "education"
        Diff:
        @@ -1,2 +1,2 @@
@@ -252,7 +252,7 @@ Failure/Error: expect(link.tags).to include("education")
        +[#<Tag @id=1 @text="education" @link_id=4>, #<Tag @id=2 @text="ruby" @link_id=4>]
 ```
 
-It turns out we made a mistake in out test. Instead of expecting the link.tags array to contain strings, we should expect it to contain instances of Tag object. Let's fix the test by mapping the Tag instances to the text they contain.
+It turns out we made a mistake in our test. Instead of expecting the link.tags array to contain strings, we should expect it to contain instances of Tag object. Let's fix the test by mapping the Tag instances to the text they contain.
 
 ```ruby
 
