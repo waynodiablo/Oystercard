@@ -1,5 +1,3 @@
-
-
 ### Forgotten password
 
 Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.

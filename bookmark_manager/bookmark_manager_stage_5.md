@@ -1,5 +1,3 @@
-
-
 ### Three levels of data checks
 
 Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
@@ -35,6 +33,7 @@ CREATE UNIQUE INDEX "unique_users_email" ON "users" ("email")
 This unique index on users.email will make sure that no records with duplicate emails will ever be saved to the database.
 
 In datamapper's case, creating a unique index automatically implies the necessity of the validation, so this code
+
 ```ruby
 validates_uniqueness_of :email
 ```

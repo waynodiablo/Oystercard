@@ -17,8 +17,6 @@ We want to have a separate database table for all our users. For this we'll need
 
 Let's begin with a test, as usual. The integration test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
-require 'spec_helper'
-
 feature 'User signs up' do
 
   # Strictly speaking, the tests that check the UI
@@ -32,14 +30,14 @@ feature 'User signs up' do
   # to keep the example simple.
 
 
-scenario 'when being a new user visiting the site' do
-    expect{ sign_up }.to change(User, :count).by(1)
+  scenario 'when being a new user visiting the site' do
+    expect { sign_up }.to change(User, :count).by(1)
     expect(page).to have_content('Welcome, alice@example.com')
     expect(User.first.email).to eq('alice@example.com')
   end
 
   def sign_up(email = 'alice@example.com',
-              password = 'oranges!'')
+              password = 'oranges!')
     visit '/users/new'
     expect(page.status_code).to eq(200)
     fill_in :email, with: email
@@ -86,11 +84,9 @@ end
 
 ```
 
-
 and ```views/users/new.erb```.
 
 ```html
-
 <h1>Please sign up</h1>
 
 <form action='/users' method='post'>
@@ -98,7 +94,6 @@ and ```views/users/new.erb```.
   Password: <input name='password' type='password'>
   <input type='submit' value='Sign up'>
 </form>
-
 ```
 
 Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist. Let's fix this in ```app/server.rb```.
@@ -139,7 +134,6 @@ class User
   end
 
 end
-
 ```
 
 Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session (we looked at how sessions work in Battleships – web version).
@@ -172,7 +166,6 @@ helpers do
   end
 
 end
-
 ```
 
 Finally, let's use this helper in the layout file (/views/layout.erb)
@@ -184,7 +177,6 @@ Finally, let's use this helper in the layout file (/views/layout.erb)
   <% end %>
   <%= yield %>
 </body>
-
 ```
 
 Finally, make sure 'bcrypt-ruby' is in your Gemfile and it's installed. Our test finally passes.

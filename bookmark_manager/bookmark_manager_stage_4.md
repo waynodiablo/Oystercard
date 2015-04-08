@@ -3,22 +3,22 @@
 Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
 
 ```ruby
-post '/users' do
-  user = User.create(email: params[:email],
-                     password: params[:password],
-                     password_confirmation: params[:password_confirmation])
-  # the user.id will be nil if the user wasn't saved
-  # because of password mismatch
-  session[:user_id] = user.id
-  redirect to('/')
-end
+  post '/users' do
+    user = User.create(email: params[:email],
+                       password: params[:password],
+                       password_confirmation: params[:password_confirmation])
+    # the user.id will be nil if the user wasn't saved
+    # because of password mismatch
+    session[:user_id] = user.id
+    redirect to('/')
+  end
 ```
 
 Let's extend the test to expect a redirection back to the sign up form if the passwords don't match.
-```ruby
 
+```ruby
   scenario 'with a password that does not match' do
-    expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
+    expect { sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
     expect(current_path).to eq('/users')
     expect(page).to have_content('Sorry, your passwords do not match')
   end
@@ -29,6 +29,7 @@ This test expects the website to stay at /users, instead of navigating to the ho
 Let's suppose we have a longer sign up form. A user fills out 20 fields but makes a mistake in password_confirmation. If we refresh the page by doing a redirect, we'll lose all information that was entered in the form because it was never saved to the database. This information only exists in memory, as properties of the invalid User model that is alive only for the duration of this request.
 
 So, instead of redirecting the user, let's show the same form but this time we'll populate it using our invalid User object.
+
 ```ruby
 
 post '/users' do
@@ -71,7 +72,6 @@ end
 ```
 
 ```html
-
 Email: <input name='email' type='text' value='<%= @user.email %>'>
 ```
 
@@ -84,24 +84,25 @@ get '/users/new' do
   @user = User.new
   erb :'users/new'
 end
-
 ```
-An new instance of the user will simply return nil for @user.email.
+
+A new instance of the user will simply return nil for @user.email.
 
 Finally, let's display a flash message at the top of the page which notifies the user of the error.
 
 Begin by adding ```rack-flash3``` to the ```Gemfile```. Now add the flash line to ```server.rb```:
 
 ```ruby
-
-if @user.save
-  session[:user_id] = @user.id
-  redirect to('/')
-else
-  flash[:notice] = 'Sorry, your passwords do not match'
-  erb :'users/new'
-end
+  if @user.save
+    session[:user_id] = @user.id
+    redirect to('/')
+  else
+    flash[:notice] = 'Sorry, your passwords do not match'
+    erb :'users/new'
+  end
 ```
+
+You'll need to make a couple more changes to the server file - see https://github.com/nakajima/rack-flash#sinatra for details.
 
 Finally, add the following code to ```layout.erb``` allow the flash message to appear on the page.
 

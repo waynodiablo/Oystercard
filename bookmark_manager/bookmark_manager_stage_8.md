@@ -1,4 +1,3 @@
-
 ### Signing in
 
 The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
