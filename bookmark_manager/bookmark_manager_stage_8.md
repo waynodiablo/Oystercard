@@ -3,32 +3,32 @@
 
 The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
 ```ruby
-feature "User signs in" do
+feature 'User signs in' do
 
   before(:each) do
-    User.create(:email => "test@test.com",
-                :password => 'test',
-                :password_confirmation => 'test')
+    User.create(email: 'test@test.com',
+                password: 'test',
+                password_confirmation:'test')
   end
 
-  scenario "with correct credentials" do
+  scenario 'with correct credentials' do
     visit '/'
-    expect(page).not_to have_content("Welcome, test@test.com")
+    expect(page).not_to have_content('Welcome, test@test.com')
     sign_in('test@test.com', 'test')
-    expect(page).to have_content("Welcome, test@test.com")
+    expect(page).to have_content('Welcome, test@test.com')
   end
 
-  scenario "with incorrect credentials" do
+  scenario 'with incorrect credentials' do
     visit '/'
-    expect(page).not_to have_content("Welcome, test@test.com")
+    expect(page).not_to have_content('Welcome, test@test.com')
     sign_in('test@test.com', 'wrong')
-    expect(page).not_to have_content("Welcome, test@test.com")
+    expect(page).not_to have_content('Welcome, test@test.com')
   end
 
   def sign_in(email, password)
     visit '/sessions/new'
-    fill_in 'email', :with => email
-    fill_in 'password', :with => password
+    fill_in 'email', with: email
+    fill_in 'password', with: password
     click_button 'Sign in'
   end
 
@@ -66,16 +66,16 @@ To make this work, we'll need a form in sessions/new
 ```html
 Please sign in.
 
-<form method="post" action="/sessions">
-  Email: <input type="text" name='email'>
-  Password: <input type="password" name='password'>
-  <input type="submit" value="Sign in">
+<form method='post' action='/sessions'>
+  Email: <input type='text' name='email'>
+  Password: <input type='password' name='password'>
+  <input type='submit' value='Sign in'>
 </form>
 ```
 a method to show this form:
 ```ruby
 get '/sessions/new' do
-  erb :"sessions/new"
+  erb :'sessions/new'
 end
 ```
 
@@ -89,8 +89,8 @@ post '/sessions' do
     session[:user_id] = user.id
     redirect to('/')
   else
-    flash[:errors] = ["The email or password is incorrect"]
-    erb :"sessions/new"
+    flash[:errors] = ['The email or password is incorrect']
+    erb :'sessions/new'
   end
 end
 ```
@@ -104,7 +104,7 @@ Finally, we need a class method to authenticate a user.
 ```ruby
 def self.authenticate(email, password)
   # that's the user who is trying to sign in
-  user = first(:email => email)
+  user = first(email: email)
   # if this user exists and the password provided matches
   # the one we have password_digest for, everything's fine
   #
@@ -163,16 +163,16 @@ Since "signed in" only means that there's a user_id in the session, logging the 
 feature 'User signs out' do
 
   before(:each) do
-    User.create(:email => "test@test.com",
-                :password => 'test',
-                :password_confirmation => 'test')
+    User.create(email: 'test@test.com',
+                password: 'test',
+                password_confirmation: 'test')
   end
 
   scenario 'while being signed in' do
     sign_in('test@test.com', 'test')
-    click_button "Sign out"
-    expect(page).to have_content("Good bye!") # where does this message go?
-    expect(page).not_to have_content("Welcome, test@test.com")
+    click_button 'Sign out'
+    expect(page).to have_content('Good bye!') # where does this message go?
+    expect(page).not_to have_content('Welcome, test@test.com')
   end
 
 end
@@ -193,9 +193,9 @@ We will now need to display the Sign Out button that the test expects. The layou
 ```html
   <% if current_user %>
     Welcome, <%= current_user.email %>
-    <form method="post" action="/sessions">
-      <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="Sign out">
+    <form method='post' action='/sessions'>
+      <input type='hidden' name='_method' value='delete'>
+      <input type='submit' value='Sign out'>
     </form>
   <% end %>
 
@@ -209,7 +209,7 @@ You need to add this line to the Sinatra server
 Finally, let's add support for flash[:notice] in our layout.
 ```html
   <% if flash[:notice] %>
-    <div id="notice">
+    <div id='notice'>
       <%= flash[:notice] %>
     </div>
   <% end %>

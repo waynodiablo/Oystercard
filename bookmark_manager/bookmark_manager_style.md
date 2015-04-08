@@ -11,13 +11,13 @@ As with Ruby code, you're strongly encouraged to use the code provided only as a
 
 This is our starting point. There is no styling except the background colour.
 
-![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380200452467_Screen%20Shot%202013-09-26%20at%2014.00.29.png "styling")
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380200452467_Screen%20Shot%202013-09-26%20at%2014.00.29.png 'styling')
 
 First, add a css reset file to your project. You can get one from www.cssreset.com. The goal of this file is to define the look of the elements that we didn't write CSS for. The reason CSS reset is necessary is that every browser uses its own defaults, so if you don't specify some property, your CSS may look slightly different in different browsers.
 
 After we add Eric Meyer's CSS reset, our page looks very different.
 
-![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380201547369_Screen%20Shot%202013-09-26%20at%2014.18.53.png "styling")
+![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380201547369_Screen%20Shot%202013-09-26%20at%2014.18.53.png 'styling')
 
 ## Front page
 
@@ -25,16 +25,16 @@ Let's start by creating a black header line that will have the logo and the sign
 
 ```ruby
 <header>
-  <div id="logo">Bookmark Manager</div>
-  <div id="user-links">
+  <div id='logo'>Bookmark Manager</div>
+  <div id='user-links'>
     <% if current_user %>
-      <span id="welcome-message">
+      <span id='welcome-message'>
         Welcome, <%= current_user.email %>
       </span>
 
-      <form id="sign-out" method="post" action="/sessions">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Sign out">
+      <form id='sign-out' method='post' action='/sessions'>
+        <input type='hidden' name='_method' value='delete'>
+        <input type='submit' value='Sign out'>
       </form>
   </div>
 </header>
@@ -70,11 +70,12 @@ https://github.com/makersacademy/bookmark_manager/tree/3f393ebd1c36c290cc545f7d1
 
 The logo of the website is usually a link to the frontpage. Let's make it a link by wrapping the text in the anchor element. We'll need to update our css to specify that all links in the header are white and have no text-decoration (by default, links are underlined).
 
-It's also a good time to get rid of the "Welcome to the bookmark manager" message.
+It's also a good time to get rid of the 'Welcome to the bookmark manager' message.
 
 Let's now add a button to submit a new link to the header. We already have a route for it, /links/new, so it will simply be a link between #logo and #user-links.
+
 ```html
-<a href="/links/new" class="button highlighted">Add link</a>
+<a href='/links/new' class='button highlighted'>Add link</a>
 ```
 
 This link has two classes, though. It's a button because we want it to look like a button but we give it a different class to override background colour.
@@ -102,7 +103,7 @@ Let's now style the links list. First, let's put them into a container and move 
 <div id='links-container'>
   <ul id='links'>
     <% @links.each do |link| %>
-      <%= partial :link, :locals => {:link => link}  %>
+      <%= partial :link, locals: {link: link}  %>
     <% end %>
   </ul>
 </div>
@@ -116,13 +117,13 @@ Now let's make the links look better. First, let's create the elements we want t
 
 ```html
 <li class='link'>
-  <a class='title' href="<%= link.url %>"><%= link.title %></a>
+  <a class='title' href='<%= link.url %>'><%= link.title %></a>
   <div class='description'>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
   <span class='source'>
     added yesterday by
-    <a href="#">evgeny@makersacademy.com</a>
+    <a href='#'>evgeny@makersacademy.com</a>
   </span>
 </li>
 ```
@@ -170,15 +171,15 @@ Now let's add a footer to the page to give it completeness (and include a refere
 
 ```html
 <footer>
-  <div id="makersacademy-logo">
-    <a href="http://www.makersacademy.com/">
-      <img src="http://www.makersacademy.com/images/logo.png">
+  <div id='makersacademy-logo'>
+    <a href='http://www.makersacademy.com/'>
+      <img src='http://www.makersacademy.com/images/logo.png'>
     </a>
   </div>
-  <div id="technologies">
+  <div id='technologies'>
     <p>
       I built this page at
-      <a href="http://www.makersacademy.com">Makers Academy,
+      <a href='http://www.makersacademy.com'>Makers Academy,
       a highly selective 12 week coding course in London</a>.
     </p>
     <p>
@@ -189,7 +190,7 @@ Now let's add a footer to the page to give it completeness (and include a refere
 </footer>
 ```
 
-Let's style it using display="flex", as we've done in the header.
+Let's style it using display='flex', as we've done in the header.
 ```css
 footer {
   display: flex;
@@ -220,11 +221,11 @@ This produces the following effect.
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380216944437_Screen%20Shot%202013-09-26%20at%2018.33.15.png)
 
-The footer is not "sticky", that is, if the window is larger than the content available, then the footer will not be at the bottom of the page.
+The footer is not 'sticky', that is, if the window is larger than the content available, then the footer will not be at the bottom of the page.
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217103005_Screen%20Shot%202013-09-26%20at%2018.38.15.png)
 
-There are various techniques of making the footer "sticky". Feel free to try this one.
+There are various techniques of making the footer 'sticky'. Feel free to try this one.
 
 github
 https://github.com/makersacademy/bookmark_manager/tree/27a54fced01e6c140d9040340c11e12709c57635
@@ -233,7 +234,7 @@ Let's now get back to the header and write some CSS for the case when the user i
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380217495035_Screen%20Shot%202013-09-26%20at%2018.44.07.png)
 
-The first step would be to give all children of #user-links the display: inline-block property. The second step would be to replace the default button with a beautiful button. Just add the class "button" and update the CSS because right now all relevant CSS declarations only apply to links with the class button, whereas we have an input element in the form. Also, we'll need to explicitely set font-size: 16px for the "button" class.
+The first step would be to give all children of #user-links the display: inline-block property. The second step would be to replace the default button with a beautiful button. Just add the class 'button' and update the CSS because right now all relevant CSS declarations only apply to links with the class button, whereas we have an input element in the form. Also, we'll need to explicitely set font-size: 16px for the 'button' class.
 
 However, we've just got an unexpected problem. Because the box model for a link and an input element differ, setting the width of 80px for the button class produces different results. A good solution would be to set the same box model rules for all elements, as we discussed in HTML & CSS. We should have done it at the very beginning but it's not too late to change the rules. Let's set it now:
 
@@ -297,7 +298,7 @@ https://github.com/makersacademy/bookmark_manager/tree/cc1cbffa1314f36021293376e
 
 Now let's make the /links/new view look better. Note that we're using placeholders (text inside the input that disappears on focus) instead of labels.
 ```html
-<input type="text" name="url" placeholder="Url">
+<input type='text' name='url' placeholder='Url'>
 ```
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_HrmLraJclly_p.52567_1380271885168_Screen%20Shot%202013-09-27%20at%2009.51.17.png)
@@ -335,15 +336,15 @@ By applying Ryan's CSS directly, we achieve the desired effect with minimal chan
 
 ```html
 <body>
-  <div class="wrapper">
+  <div class='wrapper'>
     <%= partial :header %>
     <%= partial :flash %>
     <div id='container'>
       <%= yield %>
     </div>
-    <div class="push"></div>
+    <div class='push'></div>
   </div>
-  <div class="footer">
+  <div class='footer'>
     <%= partial :footer %>
   </div>
 </body>
@@ -354,4 +355,4 @@ By applying Ryan's CSS directly, we achieve the desired effect with minimal chan
 github
 https://github.com/makersacademy/bookmark_manager/tree/10f47e97815b73dc0d75dcbb4eb9a79686f9576f
 
-We will add more advanced functionality using Javascript and more advanced HTML&CSS techniques next week. If you haven't done so yet, it's a good time to deploy your website to Heroku.
+We will add more advanced functionality using Javascript and more advanced HTML&CSS techniques next week. If you haven't done so yet, it's a good time to deploy your website to [Heroku](../pills/heroku.md).

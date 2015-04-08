@@ -23,7 +23,7 @@ This datamapper validation will check if a record with this email exists before 
 Finally, you should introduce database-level constraints. This is a safety check that protects the database in case any data is written directly, bypassing the model. For example, if you need to batch-add 10,000 new users from a text file, you may not want to initialise your User model for every record for performance reasons. Instead, you'll write to the database directly bypassing datamapper. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level contraints.
 
 ```ruby
-property :email, String, :unique => true
+property :email, String, unique: true
 ```
 
 This will generate SQL that will create a unique index on that field.

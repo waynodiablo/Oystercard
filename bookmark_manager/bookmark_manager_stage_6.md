@@ -1,21 +1,18 @@
-
-
 ### Preventing duplicate registrations
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 ```ruby
-  scenario "with an email that is already registered" do
-    expect{ sign_up }.to change(User, :count).by(1)
-    expect{ sign_up }.to change(User, :count).by(0)
-    expect(page).to have_content("This email is already taken")
-  end
-
-  ```
+scenario 'with an email that is already registered' do
+  expect{ sign_up }.to change(User, :count).by(1)
+  expect{ sign_up }.to change(User, :count).by(0)
+  expect(page).to have_content('This email is already taken')
+end
+```
 
 We need to do two things. Firstly, we need to put constrains on the email field.
 
 ```ruby
-property :email, String, :unique => true, :message => "This email is already taken"
+property :email, String, unique: true, message: 'This email is already taken'
 ```
 
 We're setting the error message datamapper is going to return explicitely even though a very similar message would be used by default if we didn't specify it.
@@ -27,8 +24,8 @@ if @user.save
   session[:user_id] = @user.id
   redirect to('/')
 else
-  flash[:notice] = "Sorry, your passwords don't match"
-  erb :"users/new"
+  flash[:notice] = 'Sorry, your passwords do not match'
+  erb :'users/new'
 end
 ```
 
@@ -36,12 +33,12 @@ The problem is that the only error message that this controller can show is the 
 
 ```ruby
 if @user.save
-    session[:user_id] = @user.id
-    redirect to('/')
-  else
-    flash.now[:errors] = @user.errors.full_messages
-    erb :"users/new"
-  end
+  session[:user_id] = @user.id
+  redirect to('/')
+else
+  flash.now[:errors] = @user.errors.full_messages
+  erb :'users/new'
+end
 ```
 
 Note that we're switching to using flash[:errors] instead of flash[:notice]. Given that these errors prevent us from proceeding further, it's more appropriate to call them errors.
@@ -53,7 +50,7 @@ The @user.errors object contains all validation errors. It can be used to get er
 ```html
 <% if flash[:errors] && !flash[:errors].empty? %>
   Sorry, there were the following problems with the form.
-  <ul id="errors">
+  <ul id='errors'>
     <% flash[:errors].each do |error| %>
       <li><%= error %></li>
     <% end %>

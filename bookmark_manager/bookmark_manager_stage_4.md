@@ -4,9 +4,9 @@ Right now our code has no logic for handling the situation when the user enters 
 
 ```ruby
 post '/users' do
-  user = User.create(:email => params[:email],
-              :password => params[:password],
-              :password_confirmation => params[:password_confirmation])
+  user = User.create(email: params[:email],
+                     password: params[:password],
+                     password_confirmation: params[:password_confirmation])
   # the user.id will be nil if the user wasn't saved
   # because of password mismatch
   session[:user_id] = user.id
@@ -17,10 +17,10 @@ end
 Let's extend the test to expect a redirection back to the sign up form if the passwords don't match.
 ```ruby
 
-  scenario "with a password that doesn't match" do
+  scenario 'with a password that does not match' do
     expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
     expect(current_path).to eq('/users')
-    expect(page).to have_content("Sorry, your passwords don't match")
+    expect(page).to have_content('Sorry, your passwords do not match')
   end
 ```
 
@@ -34,9 +34,9 @@ So, instead of redirecting the user, let's show the same form but this time we'l
 post '/users' do
   # we just initialize the object
   # without saving it. It may be invalid
-  user = User.new(:email => params[:email],
-              :password => params[:password],
-              :password_confirmation => params[:password_confirmation])
+  user = User.new(email: params[:email],
+                  password: params[:password],
+                  password_confirmation: params[:password_confirmation])
   # let's try saving it
   # if the model is valid,
   # it will be saved
@@ -47,7 +47,7 @@ post '/users' do
     # we'll show the same
     # form again
   else
-    erb :"users/new"
+    erb :'users/new'
   end
 end
 ```
@@ -58,21 +58,21 @@ However, how will the data (in our case the email the user entered) make its way
 
 ```ruby
 post '/users' do
-  @user = User.new(:email => params[:email],
-              :password => params[:password],
-              :password_confirmation => params[:password_confirmation])
+  @user = User.new(email: params[:email],
+                  password: params[:password],
+                  password_confirmation: params[:password_confirmation])
   if @user.save
     session[:user_id] = @user.id
     redirect to('/')
   else
-    erb :"users/new"
+    erb :'users/new'
   end
 end
 ```
 
 ```html
 
-Email: <input name="email" type="text" value="<%= @user.email %>">
+Email: <input name='email' type='text' value='<%= @user.email %>'>
 ```
 
 Now the email will be part of the form when it's rendered again.
@@ -82,7 +82,7 @@ Because the view now expects @user instance variable, we must make sure that it'
 ```ruby
 get '/users/new' do
   @user = User.new
-  erb :"users/new"
+  erb :'users/new'
 end
 
 ```
@@ -98,8 +98,8 @@ if @user.save
   session[:user_id] = @user.id
   redirect to('/')
 else
-  flash[:notice] = "Sorry, your passwords don't match"
-  erb :"users/new"
+  flash[:notice] = 'Sorry, your passwords do not match'
+  erb :'users/new'
 end
 ```
 
@@ -107,7 +107,7 @@ Finally, add the following code to ```layout.erb``` allow the flash message to a
 
 ```ruby
 <% if flash[:notice] %>
-  <div id="notice"><%= flash[:notice] %></div>
+  <div id='notice'><%= flash[:notice] %></div>
 <% end %>
 ```
 

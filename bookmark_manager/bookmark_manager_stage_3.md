@@ -2,18 +2,18 @@
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
 ```ruby
-  scenario "with a password that doesn't match" do
+  scenario 'with a password that does not match' do
     expect{ sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
   end
 
-  def sign_up(email = "alice@example.com",
-              password = "oranges!",
-              password_confirmation = "oranges!")
+  def sign_up(email = 'alice@example.com',
+              password = 'oranges!',
+              password_confirmation = 'oranges!')
     visit '/users/new'
-    fill_in :email, :with => email
-    fill_in :password, :with => password
-    fill_in :password_confirmation, :with => password_confirmation
-    click_button "Sign up"
+    fill_in :email, with: email
+    fill_in :password, with: password
+    fill_in :password_confirmation, with: password_confirmation
+    click_button 'Sign up'
   end
 
 ```
@@ -41,9 +41,9 @@ The reason we need the writer for :password_confirmation is that we're now passi
 
 ```ruby
 post '/users' do
-  user = User.create(:email => params[:email],
-              :password => params[:password],
-              :password_confirmation => params[:password_confirmation])
+  user = User.create(email: params[:email],
+                     password: params[:password],
+                     password_confirmation: params[:password_confirmation])
   session[:user_id] = user.id
   redirect to('/')
 end
