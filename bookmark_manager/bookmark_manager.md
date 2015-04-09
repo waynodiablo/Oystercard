@@ -47,18 +47,16 @@ Note that every project you work on should start with user stories/features in t
 
 ## First Steps
 
-As you'd do with every new project, create a new repository on Github.  Please name your project 'bookmark_manager'. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop, RSpec and Cucumber:
+As you'd do with every new project, create a new repository on Github.  Please name your project 'bookmark_manager'. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop and RSpec:
 
 ```rb
-require 'cucumber/rake/task'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new :cop
 RSpec::Core::RakeTask.new :spec
-Cucumber::Rake::Task.new :cuke
 
-task default: [:cop, :spec, :cuke]
+task default: [:cop, :spec]
 ```
 
 Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:

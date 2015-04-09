@@ -4,7 +4,7 @@ Since we are changing the schema of the database in a destructive way (creating 
 
 Right now our `data_upgrade!` call is in `data_mapper_setup` but this creates two problems. First, we don't want to edit this file every time we want to run `data_migrate!` instead. Second, we don't want to run `data_upgrade` every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
 
-Rake is a tool for running automated tasks. The tasks are defined in `Rakefile` (with capital R). Put this Rakefile in the root folder of the project.
+As we've seen before Rake is a tool for running automated tasks. The tasks are defined in `Rakefile` (with capital R). Add the following to the end of Rakefile in the root folder of the project.
 
 ```ruby
 require 'data_mapper'
