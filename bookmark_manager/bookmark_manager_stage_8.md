@@ -219,6 +219,8 @@ The tests should now pass, so we know that the user can now be signed out.  Alth
 
 Now it's a good time to refactor our code a little bit. Let's install 'sinatra-partial' gem and use it like we did in BattleShip – web version to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder. After we do this, our server.rb is nice and clean, containing only require statements and high-level configuration. Let's also move the models from /lib to /app/models to make sure that the models, views and controllers are in one place (incidentally, we're following Ruby on Rails naming conventions to some extent).
 
+It's also a good time to consider to deploying our code to cloud hosting service like [Heroku](../pills/heroku.md).  Actually in a real project it would be good to deploy as early as possible to Heroku or similar to ensure that all the gems and techniques we are using work smoothly on a remote server.  If you do too much development locally, without checking the remote operation of the system you may lull yourself into a false sense of security about how many features you can deliver to your customers.  
+
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
 

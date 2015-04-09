@@ -30,7 +30,7 @@ user = User.first(password_token: token)
 
 ### Sending the email
 
-To send an email, you will need an external SMTP server that will do it for you. There are several companies provided these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku, making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
+To send an email, you will need an external SMTP server that will do it for you. There are several companies provided these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku (the cloud hosting service), making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
 
 First, you'll need to add the addon to heroku. This will make the API key that you need to send an email available in your env variables (you can read them by typing "heroku config" in the project folder).
 
