@@ -402,9 +402,9 @@ And with that, all your tests should be passing. Glorious, isn't it? This should
 
 The second thing to be aware of, is the `return` keyword. That one's a deal-breaker and it's essential that we use it - notice how much more specific we need to be with Javascript over Ruby?
 
-Given that by now, we all know our Fizz from our Buzz, it would be rather wasteful for me to go through the steps for the rest of the division methods, so let's instead make out like we're on Saturday Morning Kitchen, and I'm going to open the oven door to reveal a pre-baked pie with the next batch of steps cooked in. Our spec file now has 6 tests (2 tests for each method to make sure a number IS divisible by n, and NOT divisible by n).
+Given that by now, we all know our Fizz from our Buzz, we'll leave it up to you to create the rest of the tests. By the time you are finished the spec file should have 6 tests (2 tests for each method to make sure a number IS divisible by n, and NOT divisible by n).
 
-The eagle-eyed among you will notice there is a lot of repetition in the spec file - namely the instantiation of our Javabuzz class in each `it` statement. Remember the `let` syntax in Ruby? Jasmine affords us the same luxury! Just after we declare `var javabuzz` at the top level of our spec file, add the following:
+You may find you have a lot of repetition in the spec file - namely the instantiation of our Javabuzz class in each `it` statement. Remember the `let` syntax in Ruby? Jasmine affords us the same luxury! Just after we declare `var javabuzz` at the top level of our spec file, add the following:
 
 ```javascript
  beforeEach(function() {
