@@ -6,24 +6,46 @@ I felt strangely codeblind - unable to make sense of all the curly brackets, par
 
 Despite my incredible prejudice against Javascript I was unable to deny the cool things this ugly little duckling could do in a browser. It made my webpages shimmer and sparkle- and I knew I had to get over this.
 
-The first step to recovery, was to implement our beloved friend Fizzbuzz in this [confusingly-named new language](http://www.quora.com/Why-is-JavaScript-called-Java) - although we are going to call it 'Javabuzz' in homage to our new friend Javascript. You should be familiar with FizzBuzz from your introduction to Rspec with Ruby. If that isn't the case, now might be a good time to find an adult.
+The first step to recovery, was to implement our beloved friend Fizzbuzz in this [confusingly-named new language](http://www.quora.com/Why-is-JavaScript-called-Java) - although we are going to call it 'Javabuzz' in homage to our new friend Javascript. You should be familiar with FizzBuzz from your introduction to RSpec with Ruby. If that isn't the case, now might be a good time to find an adult.
 
 ## Testing with Jasmine
 
-Jasmine is a testing framework built by the wonderful people over at [Pivotal labs](). To get started, go to the [latest build page for Jasmine](https://github.com/pivotal/jasmine/releases) and download the most recent *standalone* version in a zip file. The version I will be using in this tutorial is [v2.0.2](https://github.com/pivotal/jasmine/releases/download/v2.0.2/jasmine-standalone-2.0.2.zip).
+Jasmine is a testing framework built by the wonderful people over at [Pivotal labs](http://pivotallabs.com/). To get started, go to the [latest build page for Jasmine](https://github.com/pivotal/jasmine/releases) and download the most recent *standalone* version in a zip file. The version I will be using in this tutorial is [v2.0.2](https://github.com/pivotal/jasmine/releases/download/v2.0.2/jasmine-standalone-2.0.2.zip).
 
-Once you have downloaded the .zip archive and unpacked it, it's time to rename the directory (in this case from 'jasmine-standalone-2.0.2') to whatever your project is called. there are some files that I like to delete, since they are not particularly interesting to me:
+Once you have downloaded the .zip archive and unpacked it, open the 'SpecRunner.html' file in your browser as a sanity check.  It should look like this:
 
-* MIT.LICENSE
-* All files in spec directory
-* All files in src directory
+![Jasmine Sanity](../images/jquery-sanity-check.png)
 
-Now we need to create a test file, and a file for our code. Time to touch a couple of files!
+This runs a suite of Jasmine tests on a demo Song project.  Feel free to inspect the files in the spec and src directories to see what's going on, but it might make a lot more sense if we work through creating our own project from scratch.
+
+To use Jasmine in your own project create a new directory with the appropriate name, e.g. JavaBuzz and transfer over the lib directory intact, e.g. from your project dir
+
+```sh
+cp -r ~/Downloads/jasmine-standalone-2.0.2/lib .
+```
+
+Your file structure within your project directory should now look like this:
+
+```sh
+→ tree
+.
+└── lib
+    └── jasmine-2.0.2
+        ├── boot.js
+        ├── console.js
+        ├── jasmine-html.js
+        ├── jasmine.css
+        ├── jasmine.js
+        └── jasmine_favicon.png
+
+```
+
+Now we need to create a test file, and a file for our code. Create a spec and a src directory and then let's touch a couple of files!
 
 * spec/JavabuzzSpec.js
 * src/Javabuzz.js
 
-There's one last step before we can make sure our Jasmine setup is complete: configure the SpecRunner.html
+There's one last step before we can make sure our Jasmine setup is complete: copy over the SpecRunner.html to the root of our project directory.  SpecRunner.html includes the following code
 
 ```html
    <!-- include source files here... -->
@@ -33,11 +55,9 @@ There's one last step before we can make sure our Jasmine setup is complete: con
   <!-- include spec files here... -->
   <script type="text/javascript" src="spec/SpecHelper.js"></script>
   <script type="text/javascript" src="spec/PlayerSpec.js"></script>
-
 ```
 
-
-Change to:
+Which needs to be changed over to the following:
 
 ```html
    <!-- include source files here... -->
@@ -48,9 +68,30 @@ Change to:
 
 ```
 
+Our directory structure now looks like this:
+
+```sh
+→ tree
+.
+├── SpecRunner.html
+├── lib
+│   └── jasmine-2.0.2
+│       ├── boot.js
+│       ├── console.js
+│       ├── jasmine-html.js
+│       ├── jasmine.css
+│       ├── jasmine.js
+│       └── jasmine_favicon.png
+├── spec
+│   └── JavabuzzSpec.js
+└── src
+    └── Javabuzz.js
+
+```
+
 Now we need to start writing our tests. YAY TESTING! <3
 
-The first thing to remember with Jasmine, is it lacks the 'context' method that Rspec provides for Ruby. But don't cry little ones - we can simply reuse the 'describe' method. At this point, we're going to zoom in to the creation of the describe method. Why? Because it's an excellent way to get used to building methods in Javascript - and it's also how you start a Jasmine test file :zap:
+The first thing to remember with Jasmine, is it lacks the 'context' method that RSpec provides for Ruby. But don't cry little ones - we can simply reuse the 'describe' method. At this point, we're going to zoom in to the creation of the describe method. Why? Because it's an excellent way to get used to building methods in Javascript - and it's also how you start a Jasmine test file :zap:
 
 ## The first rule of Javascript is...
 
@@ -465,6 +506,13 @@ and then throw some numbers at it:
 ```
 
 Here endeth the lesson. Hope you had as much fun as I did - enjoy Javascript and go make something cool! <3
+
+### Related Pills
+
+* [js_functions pill](js_functions.md)
+* [js_arrays pill](js_arrays.md)
+* [js_conventions pill](js_conventions.md)
+* [JQuery events pill](jquery_events.md)
 
 ### External Resources
 
