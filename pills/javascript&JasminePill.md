@@ -172,27 +172,28 @@ If you can drill this and make it habit when you're typing your code, you will h
 
 ## An aside on function(){}
 
-Function has multiple uses in Javascript - and since we are Rubyists first and foremost, let's consider that this one keyword effectively equates to the following in Ruby:
+Function has multiple uses in Javascript - and since we are Rubyists first and foremost, let's consider that this one keyword can be used to create versions of all the following in Ruby:
 
-#### class
+#### Ruby 'class' creation of object factories becomes:
 ```javascript
 var Classname = function () {};
 ```
-_Some debate exists on the best way to declare function this way, but this is the best practice according to [John Resig...](http://ejohn.org/blog/javascript-as-a-first-language/)_
+_Some debate exists on the best way to declare function this way, but this is the best practice according to [John Resig ...](http://ejohn.org/blog/javascript-as-a-first-language/)_  Note also that JavaScript does not have 'classes' in the same way as Ruby, however for the moment you can think of the functions as being able to act as 'object factories' in the same way that classes are 'object factories' in Ruby.
 
-#### do
+#### Ruby 'do ... end' blocks becomes:
 ```javascript
 methodName(function() {
 // codeblock goes here
 });
 ```
 
-#### def
+#### Ruby 'def' definition of methods becomes:
 ```javascript
 Classname.prototype.methodName(function() {
 // codeblock goes here
 });
 ```
+
 When you consider that, is it any wonder that Javascript code seems littered with the word 'function'? If you would like more background reading, now would be an excellent time to peruse the [js_functions pill](https://github.com/makersacademy/course/blob/master/pills/js_functions.md) in the Makers Course repository.
 
 ### Back to Javabuzz
@@ -221,7 +222,7 @@ Oooh, look - a new keyword! What does `var` do when it's at home? Well there's a
 
 Basically it's an issue of scope and clarity. `var` means that within a function, you are declaring a **local variable.** This means that in the example above, `var javabuzz` is available only between the nearest `{}`.
 
-What happens if you don't specify `var`? Basically Javascript looks up the scope chain - that is to say, it looks in every parent function, until it finds the variable (in this case `javabuzz`). Once it hits the uppermost level, if it still can't find `javabuzz` it will create it for you - and because it has been created at the top level, it becomes a global variable, available to every function in the program. So if you want to be sure where your variables are reaching, use `var`!
+What happens if you don't specify `var`? Basically Javascript looks up the scope chain - that is to say, it looks in every parent function, until it finds the variable (in this case `javabuzz`). Once it hits the uppermost level, if it still can't find `javabuzz` it will create it for you - and because it has been created at the top level, it becomes a global variable, available to every function in the program, which is generally considered a 'bad thing'. It's bad because if other JavaScript libraries use the same name in the global variable space, your program will break, so use `var`!
 
 #### Contextual healing
 
@@ -322,7 +323,7 @@ ReferenceError: Javabuzz is not defined
 This is Jasmine's very dramatic way of saying that it doesn't know what we mean when we refer to `Javabuzz();` on line 8(ish) of our spec file. Well you and I both know we meant the Javabuzz class, so let's head on over to **src/Javabuzz.js** and create the class now:
 
 ```javascript
-var Javabuzz = function () {};
+var Javabuzz = function(){};
 ```
 
 Sweet, error message has been changed!
@@ -476,9 +477,15 @@ Almost there - all we need to do now, is a straight conversion of what worked fo
 
 ```javascript
 Javabuzz.prototype.says = function(number) {
-  if (this.isDivisibleByFifteen(number)) return "Javabuzz";
-  if (this.isDivisibleByThree(number)) return "Java";
-  if (this.isDivisibleByFive(number)) return "Buzz";
+  if (this.isDivisibleByFifteen(number)) {
+    return "Javabuzz";
+  }
+  if (this.isDivisibleByThree(number)) {
+    return "Java";
+  }
+  if (this.isDivisibleByFive(number)) {
+     return "Buzz";
+  }
   return number;
 };
 ```
