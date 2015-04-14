@@ -10,7 +10,8 @@ The project this week is to create a simple interface for a digital thermostat, 
 
 Use the specifications below (hint: this could help you plan your Jasmine expectations).
 
-## Specifications
+## Stage 1
+### Specifications
 
 - Thermostat starts at 20 degrees
 - You can increase the temp with the up button
@@ -23,6 +24,14 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 - The thermostat should color the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 - After every temperature change, the thermostat makes a POST request to localhost:4567/temperature_change, with the new temperature
 
-## Bonus Level
+## Stage 2
 
-* Get the thermostat talking to a remote API to work out the temperature
+* Get the thermostat talking to a remote API to work out the temperature in order to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API)
+
+## Stage 3
+
+* Style your thermostat using CSS
+
+## Stage 4
+
+* Display the weather and temperature for cities around the world (http://weather-api.herokuapp.com/)
