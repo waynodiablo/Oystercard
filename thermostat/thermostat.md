@@ -2,6 +2,8 @@
 
 This week we're looking at JavaScript, a very important language, since it is the only language that runs natively in client browsers.  It can also run on the server side, but as the de-facto client language it is hugely important.  Designed in 10 days in the 1990's by Brendan Eich since "if I didn't design it in less than 10 days, something much worse than JavaScript would have happened", JavaScript is a somewhat querky language that combines various elements from different existing languages, and has both great power and some dangerous pitfalls.
 
+Do check out the [Learning Objectives for this week](learning_objectives.md)
+
 To get started learning JavaScript please work through the [JavaScript & Jasmine Pill](../pills/javascript&JasminePill.md).
 
 The project this week is to create a simple interface for a digital thermostat, using JavaScript, jQuery and Jasmine.  
@@ -35,3 +37,11 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 ## Stage 4
 
 * Display the weather and temperature for cities around the world (http://weather-api.herokuapp.com/)
+
+
+Resources
+---------
+
+* https://jquery.com/
+* http://jasmine.github.io/
+* https://github.com/velesin/jasmine-jquery
