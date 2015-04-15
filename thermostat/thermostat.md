@@ -32,7 +32,7 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 
 ## Stage 3
 
-* Style your thermostat using CSS
+* Style your thermostat using CSS.  Go to town and make it look beautiful!
 
 ## Stage 4
 
