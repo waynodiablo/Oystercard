@@ -26,9 +26,13 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 - The thermostat should color the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 - After every temperature change, the thermostat makes a POST request to localhost:4567/temperature_change, with the new temperature
 
+**Make sure you make some feature tests**
+
+See: https://github.com/tansaku/ThermostatBDD  and note you may need to use an older version of jQuery to have the tests play well with the document.ready operation: load jquery fro this CDN rather than locally --> https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js (good catch James Miller!)
+
 ## Stage 2
 
-* Get the thermostat talking to a remote API to work out the temperature in order to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API)
+* Get the thermostat talking to a remote API to work out the temperature in order to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API) - see the video overview of Ajax for how to talk to a remote API with JQuery: https://www.youtube.com/watch?v=QDsrErWpizI
 
 ## Stage 3
 
@@ -43,5 +47,6 @@ Resources
 ---------
 
 * https://jquery.com/
+* https://learn.jquery.com/ 
 * http://jasmine.github.io/
 * https://github.com/velesin/jasmine-jquery
