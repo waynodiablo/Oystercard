@@ -12,7 +12,6 @@ The project this week is to create a simple interface for a digital thermostat, 
 
 Use the specifications below (hint: this could help you plan your Jasmine expectations).
 
-## Stage 1
 ### Specifications
 
 - Thermostat starts at 20 degrees
@@ -26,13 +25,17 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 - The thermostat should color the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 - After every temperature change, the thermostat makes a POST request to localhost:4567/temperature_change, with the new temperature
 
+## Stage 1
+
+Split the specifications into those that are specific to the thermostat "engine" and those that are specific to the web interface and those that require interaction with the server.  You can start with either the engine or the interface, but stage 1 is to get the engine and interface working
+
 **Make sure you make some feature tests**
 
 See: https://github.com/tansaku/ThermostatBDD  and note you may need to use an older version of jQuery to have the tests play well with the document.ready operation: load jquery fro this CDN rather than locally --> https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js (good catch James Miller!)
 
 ## Stage 2
 
-* Get the thermostat talking to a remote API to work out the temperature in order to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API) - see the video overview of Ajax for how to talk to a remote API with JQuery: https://www.youtube.com/watch?v=QDsrErWpizI
+* In order to support recording user changes to the thermostat persistently, and to get the current temperature, create a remote API that the thermostat can talk to. Storing the thermostat settings allows us to ensure that user commands are not lost, and getting the current temperature allows us to display that information to the user and to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API) - see the video overview of Ajax for how to talk to a remote API with JQuery: https://www.youtube.com/watch?v=QDsrErWpizI
 
 ## Stage 3
 
