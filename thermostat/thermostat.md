@@ -27,7 +27,7 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 
 ## Stage 1
 
-Split the specifications into those that are specific to the thermostat "engine" and those that are specific to the web interface and those that require interaction with the server.  You can start with either the engine or the interface, but stage 1 is to get the engine and interface working
+* Split the specifications into those that are specific to the thermostat "engine" and those that are specific to the web interface and those that require interaction with the server.  You can start with either the engine or the interface, but stage 1 is to get the engine and interface working
 
 **Make sure you make some feature tests**
 
