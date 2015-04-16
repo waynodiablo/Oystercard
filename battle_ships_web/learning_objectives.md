@@ -55,9 +55,10 @@
 * Build an application using Sinatra
 
 ### Feature/Acceptance testing using Capybara
-* Recall what Capybara is
+* Recall that Capybara is a library for testing web interfaces via a 'headless browser'
+* Remember what a 'headless browser' is
 * Describe links between Capybara and RSpec
-* Discuss why Capybara is more useful than RSpec in certain cases
+* Discuss why Capybara is a useful extension to RSpec's testing abilities
 
 ### Parameters
 * Know that parameters are are way to query a server for specific information
