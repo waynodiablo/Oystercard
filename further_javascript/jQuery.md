@@ -1,6 +1,6 @@
-# jQuery protoype
+# jQuery prototype
 
-This is a quick and simple prototype you can use to explore some of the concepts we will be looking at this week.
+This is a quick and simple prototype you can use to explore some of the concepts we will be looking at this week. You can build the prototype as suggested here, and use the questions below to better understand what's going on within it.
 
 Set up a new folder and create the following structure:
 
