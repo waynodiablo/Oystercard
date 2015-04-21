@@ -8,8 +8,8 @@
 - Analyse a plan for the appropriate number of stand-ups, meetings, etc.
 - Create and structure a plan for the week
 
-##### StandUp management
-- Manage stand-up meetings efficiently and with a solutions-focus
+##### Stand-up management
+- Manage stand-up meetings efficiently and with a solution focus
 
 ##### Retrospectives
 - Analyse daily progress to elicit weaker topic area focus
