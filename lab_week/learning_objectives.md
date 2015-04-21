@@ -4,10 +4,16 @@
 
 :construction: UNDER CONSTRUCTION :construction:
 
-### Planning
+## Developer Skills
 
-### StandUp management
+##### Planning
+- Analyse a plan for the appropriate number of stand-ups, meetings, etc.
+- Create and structure a plan for the week
 
-### Retrospectives
+##### StandUp management
+- Manage stand-up meetings efficiently and with a solutions-focus
 
-### Consolidation
+##### Retrospectives
+- Analyse daily progress to elicit weaker topic area focus
+- Evaluate own progress throughout the week
+- Create a repository containing the week's activity and retrospective notes
