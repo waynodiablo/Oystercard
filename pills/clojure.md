@@ -80,7 +80,7 @@ This is because Clojure is designed to be written _interactively_. You are posit
 
 ### Writing Code in the REPL ###
 
-We've already seen Clojure code - the `project.clj` file is written in Clojure. Let's open another source file that was created by leiningen: `src/clojure_intro/core.clj`.
+We have already seen some Clojure code.  The `project.clj` file itself is pure Clojure. Let's open another source file that was created by leiningen: `src/clojure_intro/core.clj`.
 
 In Light Table, go to `File > Open Folder` and select the project folder you just created. You should see something like this:
 
