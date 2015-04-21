@@ -191,7 +191,7 @@ This is interesting for two reasons:
   1. I told you that Clojure didn't have classes, and you have a ClassCastException
   2. It's looking for a clojure.lang.IFn (IFn is an abbreviation of Function Interface)
 
-The reason we're getting java.lang.ClassCastExceptions is because Clojure is built on top of Java. Much like a language like CoffeeScript is built on top of JavaScript, or Swift is built on top of C (and ruby, for that matter), we're seeing an error bubble up from the underlying implementation.
+The reason we're getting java.lang.ClassCastExceptions is because Clojure is built on top of Java. Much like a language like CoffeeScript is built on top of JavaScript, or Swift is built on top of C (and Ruby, for that matter), we're seeing an error bubble up from the underlying implementation.
 
 The second error is because lists occupy a special place in Clojure. The first element of a list is assumed to be a function call.
 
@@ -516,7 +516,7 @@ To make HTTP requests we're going to use a dependency called clj-http. The GitHu
 [clj-http "1.0.1"]
 ```
 
-This needs to be added to the project dependencies in the `project.clj`. This is just like adding it to a Gemfile in ruby, except we always need to specify the version we want.
+This needs to be added to the project dependencies in the `project.clj`. This is just like adding it to a Gemfile in Ruby, except we always need to specify the version we want.
 
 ![clj-http](https://github.com/makersacademy/course/blob/master/pills/images/clojure/clj-http.png)
 
@@ -603,7 +603,7 @@ Take a look at the [Clojure cheatsheet](http://clojure.org/cheatsheet) to see th
 
 ## Maps as Arguments
 
-Like ruby, passing a map of options is a very common way to configure the behaviour of a function. We can pass an optional map of configuration to our `http/get` request like so:
+Like Ruby, passing a map of options is a very common way to configure the behaviour of a function. We can pass an optional map of configuration to our `http/get` request like so:
 
 ```clojure
 (http/get "http://google.com" {:query-params {:q "Makers Academy"}})
