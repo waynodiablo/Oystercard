@@ -537,7 +537,7 @@ Dependencies are required on a per-namespace basis. To access the functions prov
 
 The `:require` clause tells the compiler that we want access to the functions defined in the `clj-http/client` namespace inside our own `clojure-intro.core` namspace. The `clj-http/client` defines a function called `get` that gets the contents of an HTTP page.
 
-The `clj-http.client/get` function expects to recieve the URL to get as a string. We can execute it like so:
+The `clj-http.client/get` function expects to receive the URL to get as a string. We can execute it like so:
 
 ```clojure
 (ns clojure-intro.core
