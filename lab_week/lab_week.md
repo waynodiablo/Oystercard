@@ -3,7 +3,7 @@ Lab Week
 
 :construction: UNDER CONSTRUCTION :construction:
 
-The purpose of lab week is to help students develop further as self directed learners, taking the practices of planning, standups and retrospectices from the first five weeks and using them to achieve their own goals in terms of small projects and consolidation of the existing material.
+The purpose of lab week is to help students develop further as self directed learners, taking the practices of planning, standups and retrospectives from the first five weeks and using them to achieve their own goals in terms of small projects and consolidation of the existing material.
 
 During lab week coaches are generally not available as they are conducting their own retrospective and planning activities related to developing the course and related materials.  To help with planning and retrospectives coaches will usually be available for Monday 9am and Friday 9am standups, as well as spending significant time with students on the Friday before lab week helping the students plan lab week activities.
 
