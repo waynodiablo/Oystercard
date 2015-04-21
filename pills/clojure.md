@@ -65,7 +65,7 @@ to install dependencies. At this stage Clojure is the only project dependency. I
 
 ![project.clj](https://github.com/makersacademy/course/blob/master/pills/images/clojure/project-clj.png)
 
-Notice how in the `project.clj` file Clojure is a _dependency_, just like any other. This is because Leiningen compiles Clojure together with the other dependencies into executables that run like applications on your computer. You can run the compiled code on a computer that doesn't already have Clojure installed.
+Notice how Clojure is included as a dependency in the `project.clj` file.  This is exactly the fashion in which other project dependencies will be included. This is because Leiningen compiles Clojure together with the other dependencies into executables that run like applications on your computer. You can run the compiled code on a computer that doesn't already have Clojure installed.
 
 ## Clojure REPL ##
 
@@ -325,7 +325,7 @@ Bindings are evaluated in order, so later bindings can use earlier bindings.
 (let [cats 3
       legs (* 4 cats)]
   (str legs " legs all together"))
-      
+
 ; => "12 legs all together"
 ```
 
@@ -777,7 +777,7 @@ See how the above is just a series of nested maps, vectors, strings and numbers?
 
 I've mentioned macros in passing several times without really covering what they are. Macros are a form of [metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming). They are code that manipulates code as if it were data.
 
-We've seen how the boundary between code and data is blurred with data (maps, keywords) acting as functions. You may have noticed how defining a function `(fn [x] (...))` looks like a list containing a vector of arguments and then a nested list. It's not just that it *looks* like it. It actually **is**. 
+We've seen how the boundary between code and data is blurred with data (maps, keywords) acting as functions. You may have noticed how defining a function `(fn [x] (...))` looks like a list containing a vector of arguments and then a nested list. It's not just that it *looks* like it. It actually **is**.
 
 Macros allow you to manipulate code-as-data to make your code more expressive. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with the ones provided by the language: in particular the threading macros.
 
