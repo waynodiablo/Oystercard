@@ -80,11 +80,13 @@ Commit your changes with a suitable message:
 $ git add .
 $ git commit -m 'initializes rspec'
 ```
-We are going to need somewhere to put our tests.  So let's create a `spec` file:
+We are going to need somewhere to write our tests.  So let's create a `spec` file:
 ```
 $ touch spec/fizzbuzz_spec.rb
 $ git commit -am 'adds fizzbuzz_spec.rb'
 ```
+
+Notice the file is in the `./spec` folder and has the suffix `_spec.rb`.  Discuss the reasons for this with your pair partner.
 
 Finally, run RSpec and ensure 'everything is green'.
 
@@ -151,7 +153,10 @@ It should be clear now that we have two objectives in TDD:
 
 Once we have achieved both of those objectives, we know with absolute confidence that we are 'code complete' and that our program works exactly as it should.  And what's more, as an added and incredibly valuable bonus, anyone new to our codebase does not need to trawl through our production code trying to understand what it does.  They can simply read our tests and (assuming the tests all pass) know exactly what the code *should* do and also that *it does*.
 
-Commit your code to git then discuss with your partner what the next test should be.  Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.  When you are finished, please find a coach or [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) to verify what you have done.
+Commit your code to git then discuss with your partner what the next test should be.
+
+## Finishing Fizzbuzz
+Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.  When you are finished, please find a coach or [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) to verify what you have done.
 
 ## Further exercises :running_shirt_with_sash:
 Once you have completed Fizzbuzz, please delete your `fizzbuzz` directory and start over from scratch with opposite roles.  (You read that correctly - please delete the entire directory and start again.)  Do as much of it as you can from memory.  Practicing repeatedly this way will accelerate your learning.
