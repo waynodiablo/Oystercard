@@ -17,11 +17,11 @@ You may often find user stories written similarly to the above but with the thre
 We identify User Stories by discussing with a customer and listening to or prompting for user requirements.
 
 Here's what a user story might look like if it were used to describe a user story (see footnote 1):
-
+```
 As a conscientious software developer
 So that I can understand the needs of the user and communicate effectively with my client
 I'd like a recognized technique for capturing and defining requirements in plain English
-
+```
 
 ## Footnote
 1. You might call this a meta user story (see footnote 2).
