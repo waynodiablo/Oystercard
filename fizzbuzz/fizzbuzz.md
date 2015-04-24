@@ -158,9 +158,9 @@ Commit your code to git then discuss with your partner what the next test should
 ## Finishing Fizzbuzz
 Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.
 
-Use IRB to run further tests.  Are there any edge cases that you have missed?  If so, write a test to cover each edge case.  Why is this so important?
+Use `irb` to run further tests.  Are there any edge cases that you have missed?  If so, write a test to cover each edge case.  Why is this so important?
 
-Try running Fizzbuzz for all numbers from 1 to 100 in IRB.  Discuss with your pair partner different ways to do this.  Can you use Ruby to do this in one line of code (N.B. it must be elegant and readable)?
+Try running Fizzbuzz for all numbers from 1 to 100 in `irb`.  Discuss with your pair partner different ways to do this.  Can you use Ruby to do this in one line of code (N.B. it must be elegant and readable)?
 
 When you are finished, please find a coach or [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) to verify what you have done.
 
