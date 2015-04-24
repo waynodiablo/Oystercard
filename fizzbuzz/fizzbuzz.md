@@ -156,7 +156,13 @@ Once we have achieved both of those objectives, we know with absolute confidence
 Commit your code to git then discuss with your partner what the next test should be.
 
 ## Finishing Fizzbuzz
-Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.  When you are finished, please find a coach or [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) to verify what you have done.
+Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.
+
+Use IRB to run further tests.  Are there any edge cases that you have missed?  If so, write a test to cover each edge case.  Why is this so important?
+
+Try running Fizzbuzz for all numbers from 1 to 100 in IRB.  Discuss with your pair partner different ways to do this.  Can you use Ruby to do this in one line of code (N.B. it must be elegant and readable)?
+
+When you are finished, please find a coach or [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) to verify what you have done.
 
 ## Further exercises :running_shirt_with_sash:
 Once you have completed Fizzbuzz, please delete your `fizzbuzz` directory and start over from scratch with opposite roles.  (You read that correctly - please delete the entire directory and start again.)  Do as much of it as you can from memory.  Practicing repeatedly this way will accelerate your learning.
