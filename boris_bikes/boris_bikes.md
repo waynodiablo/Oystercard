@@ -1,80 +1,78 @@
-# BDD and OOP Basics: Boris Bikes
+# BDD and OOD Basics: Boris Bikes
 
 The goal of this project is to introduce you to:
 
-- [Behaviour Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior-driven_development);
-- How BDD relates to [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development), and
-- The process of domain modeling for [Object-Oriented Programming (OOP) ](https://en.wikipedia.org/wiki/Object-oriented_programming) (which is strongly related to [DDD - Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design)).  
-
-**OOP** is a style of programming that encourages us to break code up into 'objects'. This 'modularization' leaves our code flexible, anticipating future changes.  Changes are guaranteed as a project progresses: inevitably, we will discover that end users derive more value from something different than what we have built so far. While we cannot plan for the specific changes they will require (because we don't know them yet!), OOP encourages us to write code that is easy to change in any circumstance. DDD emphasizes the development of a 'domain model', which describes the relations between objects in the language of the end user.
+- Behaviour Driven Development (BDD)
+- How BDD relates to Test Driven Development (TDD)
+- The process of domain modeling for Object-Oriented Design (OOD)
 
 For an overview of the baseline skills and concepts you will be learning during this project, see this week's [Learning Objectives](learning_objectives.md).
 
-***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](../pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but as frequently as every minute.***
+***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](../pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but it can be as frequently as every minute.***
+
 
 ***Also watch out for the :running_shirt_with_sash: ATHLETIC WAYPOINTS.  We recommend you stop at these points to try re-creating the code so far from scratch without looking at the tutorial.  This is a great exercise at the start of a new day with a new pair partner***
 
 ***Finally, please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-###Project Overview
-
-######High-level Overview
+## Project Overview
 
 We are going to create a simple system to support [Boris Bikes in London](https://en.wikipedia.org/wiki/Barclays_Cycle_Hire). Our system will allow members of the public to remove and return bikes from docking stations.  Occasionally the bikes may break, and then they will be unavailable for rental. There will be a garage to fix broken bikes. Finally, there will be a van to move the bikes between the stations and the garage so there are working bikes for members of the public to use.
 
-######Identifying User Stories
+### Identifying User Stories
 
-The way to start our project (and any good software project) is to specify a few important *User Stories*, usually in collaboration with a customer or client. User Stories get us thinking about the high-level problem **from the user's perspective**.  
+The way to start our project is to specify a few important *user stories*.  Begin by reading the [User stories pill :pill:](../pills/user_stories.md).
 
-The stories below are arranged in a *Stakeholder, Motivation, Task* format, which is commonly used:
-
-```
-As a <Stakeholder>,
-So that <Motivation>,
-I'd like <Task>.
-```
-
-We identify User Stories by discussing with a customer and listening to or prompting for user requirements. Let's imagine that we've just finished a discussion with a customer. We have identified these key stories that the client believes will deliver value to the end users of the system:
+Let's imagine that we've just finished a discussion with the customer. We have identified these key stories that the client believes will deliver value to the end users of the system:
 
 ```
 As a member of the public,
 So that I can get across town,
-I'd like a docking station to release a bike that is not broken.
+I'd like to get a working bike from a docking station.
+
+As a member of the public,
+So that I am not charged for longer than necessary,
+I'd like to return a bike to a docking station.
+
+As a member of the public,
+So that I reduce the chance of getting a broken bike in future,
+I'd like to report a bike as broken when I return it.
 
 As a maintainer of the system,
-So that members of the public can get usable bikes,
+So that I can manage broken bikes and not disappoint users,
 I'd like docking stations to only release working bikes.
 
 As a maintainer of the system,
-So that members of the public can get usable bikes,
+So that I can manage broken bikes and not disappoint users,
 I'd like docking stations to accept returning bikes (broken or not).
 
-As a maintainer of the system,
-So that members of the public are not disappointed,
-I'd like docking stations to not release bikes when there are none available.  
+As a member of the public,
+So that I am not frustrated trying to find a bike,
+I'd like to know if a docking station has working bikes available.
+
+As a member of the public,
+So that I am not frustrated trying to return a bike,
+I'd like to know if a docking station has reached capacity and cannot receive any more bikes.
 
 As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like docking stations to not accept more bikes than their capacity.  
+So that I can manage broken bikes and not disappoint users,
+I'd like vans to take broken bikes from docking stations and deliver them to garages to be fixed.
 
 As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like vans to come to take broken bikes from docking stations, take them to be fixed and then bring them back to the docking stations.
-
-As a maintainer of the system,
-So that members of the public can get usable bikes,
-I'd like garages to receive broken bikes, fix them, and make them available for pickup.
+So that I can manage broken bikes and not disappoint users,
+I'd like vans to collect working bikes from garages and distribute them to docking stations.
 ```
 
-This is clearly a simplified version of the user requirements that Stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
+This is clearly a simplified version of the user requirements that stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
 
-*It is generally a mistake to try to model everything you need in the system on the first go.  It is much easier to manage a complex system if you have ensured that small portions of it work correctly.*
+*It is generally a mistake to try to model everything you need in the system on the first go.  It has been proven many times that *successful* designs for complex systems can only **emerge**.*
 
-
-
-In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of classes that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike some objects get created somewhere in the system that tracks the usage of all bikes.
 
 ## Stage 0: Domain Model and Project Setup
+
+*Domain* is a general term for the problem space.  In our case, the domain is Boris Bikes.  A model is an abstract and often simplified representation of a real-world concept that we are attempting to understand or test.  In software development then, a *domain model* is some sort of abstract representation of the domain that helps us to design and build the code.
+
+In Object Oriented Design (OOD), the domain model is conceived as a collection of objects that can interact with one another and that each have discreet attributes and behaviours.
 
 Let's begin by fleshing out our domain model and getting a base project set up.
 

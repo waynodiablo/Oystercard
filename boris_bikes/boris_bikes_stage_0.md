@@ -1,6 +1,8 @@
 ## Stage 0: Domain Model and Project Setup
 
-Given that we have established the high level system behaviours, the next step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). As we started to describe above, the [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them.  In other words, it helps us understand what classes we may have and what methods they may implement.
+In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of *classes* that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike, some code objects get created somewhere in the system that tracks the usage of all bikes.
+
+Given that we have established the high-level user stories, the next step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). As we started to describe above, the [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them.  In other words, it helps us understand what classes we may have and what methods they may implement.
 
 Remember that a class is a collection of data and related methods that operate on this data. In order to build a [domain model](https://en.wikipedia.org/wiki/Domain_model) we need to understand what data we'll have in the system and what operations will be performed on that data.
 

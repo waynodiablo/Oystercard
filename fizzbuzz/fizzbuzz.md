@@ -48,7 +48,7 @@ Now spend at least five or ten minutes discussing TDD with your pair partner.  F
 ## Starting Fizzbuzz
 Open up the terminal, and use Unix commands to move to and/or create a folder somewhere in which to place projects.
 Now type the following:
-```
+```sh
 $ mkdir fizzbuzz
 $ cd fizzbuzz
 $ git init
@@ -56,32 +56,32 @@ $ git init
 Discuss with your pair partner what you just did, then switch roles :twisted_rightwards_arrows:
 
 You will need the [RSpec gem](https://github.com/rspec/rspec) installed:
-```
+```sh
 $ gem install rspec
 ```
 Next, have a look at the options RSpec provides:
-```
+```sh
 $ rspec --h
 ```
 RSpec provides a convenient command-line option to initialize your project.  Type the following:
-```
+```sh
 $ rspec --init
 ```
 Have a look at the structure that's been created and read the `./spec/spec_helper.rb` file.  How much of it can you understand?  Discuss with your pair partner what the different configuration sections might mean.
 
 We have reached a suitable commit point, so let's check our repository status:
-```
+```sh
 $ git status
 ```
 Did you notice anything strange?  Is there a `.rspec` file that you hadn't noticed before?  Why doesn't it show when you do `ls`?  Try `ls -a` instead.
 
 Commit your changes with a suitable message:
-```
+```sh
 $ git add .
 $ git commit -m 'initializes rspec'
 ```
 We are going to need somewhere to write our tests.  So let's create a `spec` file:
-```
+```sh
 $ touch spec/fizzbuzz_spec.rb
 $ git commit -am 'adds fizzbuzz_spec.rb'
 ```
@@ -94,7 +94,7 @@ Finally, run RSpec and ensure 'everything is green'.
 Switch roles again :twisted_rightwards_arrows:.  In your favourite editor, type the following code in `./spec/fizzbuzz_spec.rb`:
 
 ***You must type all code in these walkthroughs by hand.  DO NOT copy and paste.  Speed is not the objective and you will learn more effectively by manually typing code.***
-```
+```ruby
 describe 'fizzbuzz' do
   it 'returns "fizz" when passed 3' do
     expect(fizzbuzz(3)).to eq 'fizz'
@@ -104,7 +104,7 @@ end
 Discuss this code with your pair partner.  What does each line mean?  Read the [RSpec pill :pill:](../pills/rspec.md) and ensure you understand exactly what is going on.
 
 ## Running the first test
-```
+```sh
 $ rspec
 ```
 RSpec should now report that you have one failing test.  If not, carefully check you have correctly followed the steps.  If you need further help, please ask an [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources).
@@ -113,12 +113,12 @@ Discuss the RSpec output with your partner.  What does it mean?  How would you u
 
 ## Passing the first test :twisted_rightwards_arrows:
 Now we have a failing test, we can actually write some production code.  To keep our production files and test files separate, we will put our production code in a folder called `lib`.
-```
+```sh
 $ mkdir lib
 $ touch lib/fizzbuzz.rb
 ```
 Now, in your text editor, edit `lib/fizzbuzz.rb`:
-```
+```ruby
 def fizzbuzz
 
 end
@@ -126,19 +126,19 @@ end
 What are we doing here?  Our RSpec output told us `undefined method 'fizzbuzz'`, so we are simply attempting to change that message - nothing more.  Run `$ rspec` again.  Have we changed the message?
 
 Although we have now defined the method `fizzbuzz`, RSpec is still unable to see it.  This is because RSpec knows nothing about the file `fizzbuzz.rb`.  We have to tell it.  In `fizzbuzz_spec.rb`, add the following line to the top of the file:
-```
+```ruby
 require_relative '../lib/fizzbuzz.rb'
 ```
 Now run RSpec again.  Have we changed the message?  Discuss the output with your pair partner.  You may or may not wish to switch roles at this stage :twisted_rightwards_arrows:.
 
 You should be seeing the message `wrong number of arguments (1 for 0)`.  We have not specified the arguments in our method definition.  When doing TDD for real, you would probably not stoop to this level unless you were practicing 'One-undermanship'.  Nevertheless, let's fix the message:
-```
+```ruby
 def fizzbuzz(number)
 
 end
 ```
 Run RSpec again.  Still failing?  Good.  Now let's pass the test :twisted_rightwards_arrows:
-```
+```ruby
 def fizzbuzz(number)
   'fizz'
 end
@@ -168,7 +168,7 @@ When you are finished, please find a coach or [Alumni Helper](https://github.com
 Once you have completed Fizzbuzz, please delete your `fizzbuzz` directory and start over from scratch with opposite roles.  (You read that correctly - please delete the entire directory and start again.)  Do as much of it as you can from memory.  Practicing repeatedly this way will accelerate your learning.
 
 To make it more interesting, try to solve the Fizzbuzz problem in different ways.  For example, here's an alternate version of the first test:
-```
+```ruby
 it 'returns "fizz" for the number 3' do
   expect(3.fizzbuzz).to eq 'fizz'
 end
