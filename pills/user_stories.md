@@ -14,7 +14,7 @@ I'd like <Task>.
 
 You may find user stories written similarly to the above but with the three sections in a different order, or with different headings, but that's fine.
 
-We identify User Stories by discussing with a customer and listening to or prompting for user requirements.
+We identify user stories by discussing with a customer and listening to or prompting for user requirements.
 
 Here's what a user story might look like if it were used to describe a user story (see footnote 1):
 ```
