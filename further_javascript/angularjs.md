@@ -1,6 +1,8 @@
 GitHub profiles (AngularJS 1.3 Introduction)
 ==========================
 
+Many thanks to [Tony](http://github.com/antonydenyer) and [Leo](http://github.com/pitchinvasion) for the original design of this component
+
 [Video of session](https://www.youtube.com/watch?v=72KRFITGGts)
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
