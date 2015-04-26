@@ -1,76 +1,66 @@
 #A basic Node server
 
-Many thanks to [Spike](http://github.com/Spike01) for the original design this component
+Many thanks to [Spike](http://github.com/Spike01) for the original design of this component
 
 **As with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
 So, now that we can write unit tests and automate various tasks, it's time to take Node out on to the web. For this, we will be using the [Express framework](http://expressjs.com/), which has the same lightweight design philosophy as Sinatra. However, as Makers, we'll be wanting to write some tests first.  
 
-##Testing with `mocha-casperjs`
+##Testing with `webdriver-io`
 
-To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using CasperJS, which is based on PhantomJS and provides us with Capybara-like syntax.  
+To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using `webdriver-io`, which is based on Selenium (much like Protractor) and provides us with the ability to automate page navigation in a real browser.  
 
-We will also be using Mocha (Node's most popular test harness), Chai (an expectation library), and some packages that tie all of these elements nicely together (`mocha-casperjs` and `chai-casper`).  
+We will also be using Mocha (Node's most popular test harness) and Chai (an expectation library).  
 
 > __Why so many different packages?__    
-> As stated before, part of the Node philosophy is to have lots of small modules that do one thing well, and can be easily combined and recombined. In this case, Mocha is described as a test harness/test runner, meaning that it only provides the ability to run tests, nothing more. Chai only provides expectations, such as "should", "assert" or "expect", `casper-chai` provides a nice set of matchers and `mocha-casperjs` runs everything together. Oh, and we can also use `grunt-mocha-casperjs` to run everything with Grunt!
+> As stated before, part of the Node philosophy is to have lots of small modules that do one thing well, and that can be easily combined and recombined. In this case, Mocha is a test harness/test runner, meaning that it only provides the ability to run tests, nothing more. Chai only provides expectations, such as "should", "assert" or "expect". You should already have a Selenium standalone server available from the Angular tutorial, but otherwise we can use a different package to acheive the same result: selenium-standalone. Webdriver, as stated above, simply provides more user-friendly bindings to write your tests with.
 
 First of all: set up a new project with `npm init` (or adapt an exisiting one). Get Grunt set up with as much or little configuration as wanted - JSHint and watch are definitely recommended to speed up development. Then, we will need to install quite a few packages:
 
 ```shell
 npm install --save-dev mocha
 npm install --save-dev chai
-npm install --save-dev phantomjs
-npm install --save-dev casperjs
-npm install --save-dev mocha-casperjs
-npm install --save-dev casper-chai
+npm install --save-dev selenium-standalone 
+npm install --save-dev webdriver-io
 ```
 
-You will need to install phantomjs globally as well:
+Make sure you follow all the instructions for [selenium-standalone](https://www.npmjs.com/package/selenium-standalone) if for some reason you don't have the JDK installed yet.
+
+And finally, for Grunt:
 
 ```shell
-npm install -g phantomjs
+npm install --save-dev grunt-webdriver
 ```
 
-And finally, if using Grunt:
-
-```shell
-npm install --save-dev grunt-mocha-casperjs
-```
-
-Configure your Gruntfile (the code below omits any other tasks you may have set up, make sure your syntax is valid when adding the `mocha_casperjs` task.
+Configure your Gruntfile (the code below omits any other tasks you may have set up, make sure your syntax is valid when adding the `grunt-webdriver` task.
 
 `Gruntfile.js`
 ```javascript
 module.exports = function(grunt) {
-
- grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    mocha_casperjs: {
-      options: {
+  pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    webdriver: {
+      helloWorld: {
+        tests: 'test/**/*'
       },
-      files: {
-        src: ['test/**/*']
+      options: {
+        desiredCapabilities: {
+          browserName: 'chrome'
       }
-    }
+    },
   })
-  grunt.loadNpmTasks('grunt-mocha-casperjs');
 
-  grunt.registerTask('default', ['mocha_casperjs']);
+  grunt.loadNpmTasks('grunt-webdriver');
+
+  grunt.registerTask('default', ['webdriver']);
 };
 ```
 
-Time to run a test. This should give the following error message, which should be expected:
+Make a `test` directory, and a `homepageFeature.js` file. Let's write the first failing test:
 
-```shell
-No tests specified. List them in the console, or add your tests to a "test" or "tests" folder in the current working directory.
-```
+TODO: continue
 
->If you see some crazy error messages about 'Unsafe JavaScript' and '255/252 tests failing', don't worry! JavaScript is unsafe, and mocha-casperjs is freaking out because it hasn't found any tests to run.
-
-Awesome. Make a `test` directory, and a `homepage_features.js` file. Let's write the first test:
-
-`homepage_features.js`
+`homepageFeature.js`
 ```javascript
 describe('homepage', function(){
   before(function(){
