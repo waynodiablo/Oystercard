@@ -30,13 +30,17 @@ Our classes will implement a number of methods. To get an idea of what they may 
 
 Again, not all verbs will become methods and we'll have methods that don't correspond to any verbs in this description but that's ok. Right now we just need a idea of what they could be.
 
+With your pair partner, have a go at producing a domain model on paper.  Don't worry too much about the format, just try to identify the key objects, their properties and/or methods and how they might interact with other objects.
+
+
+
 ## Setting up the project
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 Once we have an idea of what we are building, our first step will be describing some part of what we will build using a Feature Test.  Our preferred Ruby testing tool is [RSpec :pill:](../pills/rspec.md).  We can use RSpec to specify all kinds of tests; feature, integration and unit.
 
-Let's get our project set up and we'll start with a feature test.  Create a new repository in your projects directory adding a `README.md` file like so:
+Let's get our project set up.  Create a new repository in your projects directory adding a `README.md` file like so:
 
 ```sh
 $ mkdir boris-bikes
@@ -50,5 +54,25 @@ Add some basic explanation of the project to the `README.md` and then create a G
 Also note that the contents of the README.md file are going to be extremely important.  You are putting your code in public repositories on Github and the README.md file is the first thing that other programmers and potential employers are going to see when they look at your repo.  It's okay to start with a placeholder at the moment, but you will want to keep updating your README as you go along, ensuring that it tells people about the project, how to get set up with it, how to contribute to it etc.
 
 Anyhow, this setup process is all just boilerplate activity before we start specifying the behaviour of our system with RSpec tests.  However it is very important in that we want to ensure we are set up to carefully backup the detailed history of the work we are doing.  Now we are going to iterate through a series of stages creating our first feature test, our first unit test, refactoring and so forth.
+
+To finish the set up and get ready to write our first feature test, let's initialize RSpec:
+```sh
+$ rspec --init
+```
+
+We are going to use a library called Capybara to help us with our feature tests.  You'll be getting to know Capybara much better in the next few weeks, so don't worry too much about this extra detail at this stage.
+
+Ensure you have run the following command:
+
+```sh
+$ gem install capybara
+```
+
+Then edit the `.rspec` file in your root project folder (`boris-bikes`) and add the following line to the end of the file:
+```
+--require capybara/rspec
+```
+
+Commit the changes to git then push your changes up to Github.
 
 Let's start with [Stage 1](boris_bikes_stage_1.md).
