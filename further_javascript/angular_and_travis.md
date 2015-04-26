@@ -1,3 +1,5 @@
+:construction: This is not working yet. Attempt at your own peril.
+
 #Angular and Travis CI
 
 Getting Angular tests to work on Travis can be difficult - here's a basic guide to set up CI.
