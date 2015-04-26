@@ -30,6 +30,7 @@
 * Describe the relationship between Angular's scope and globalScope objects.
 * Compare Angular controllers to the controllers in Sinatra.
 * Explain the purpose of Services and Factories in an Angular application.
+* Write meaningful unit and feature tests using Karma and Protractor
  
 ##Server side JavaScript
 
