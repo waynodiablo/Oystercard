@@ -1,7 +1,5 @@
 #Week 7 - Further JavaScript
 
-:construction: UNDER CONSTRUCTION :construction:
-
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 *Many thanks to [Alex Peattie](https://github.com/alexpeattie) and [Tansaku](https://github.com/tansaku) for the original design of the Ajax material and [Antony Denyer](https://github.com/antonydenyer) for the Angular material*
@@ -13,6 +11,8 @@ Congratulations on reaching Week 7 and attaining senior cohort status! From this
 ##Github Profiles
 
 This week's project is to create a simple Github Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
+
+Before you start, please ensure you are familiar with the [learning objectives](https://github.com/makersacademy/course/blob/master/further_javascript/learning_objectives.md)
 
 The project will involve using JavaScript to consume data available from third parties over the network (e.g. Github API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS. 
 
