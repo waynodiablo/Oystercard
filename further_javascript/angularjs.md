@@ -331,7 +331,7 @@ describe('when searching for a user', function() {
   it('displays search results', function() {
     expect(scope.searchResult.items).toEqual(items);
   });
-});
+});pr
 ```
 Here we've set up some dummy results that mock the kind of results we expect to get back from the API. If you run Karma again you should see that this test is now failing.
 
@@ -456,7 +456,7 @@ So on your text box you need to add:
 
 Inside the controller you can now access the input value using `$scope.searchTerm`. Try doing a `console.log($scope.searchTerm);` inside the `doSearch` function.  
 
-> Ideally we'd test this rather than just use a console.log, but for that we'd need to use [Protractor](https://github.com/angular/protractor)  Angular's answer to Capybara. Unfortunately that's outside the scope of this walkthrough but by all means explore it in your own time.
+> Ideally we'd test this rather than just use a console.log, but for that we'd need to use [Protractor](https://github.com/angular/protractor) - Angular's answer to Capybara. Unfortunately that's outside the scope of this walkthrough, so [we've added a bonus subwalkthrough](/further_javascript/protractor.md).
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/464976bf46eda18e2cc6392a070d01d576bd1912)
 
