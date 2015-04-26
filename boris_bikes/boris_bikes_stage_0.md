@@ -1,5 +1,15 @@
 ## Stage 0: Domain Model and Project Setup
 
+
+Once we've agreed on what our basic system should do, we can start to think about constructing a **Domain Model**. A Domain Model:
+
+- describes the objects in a system, and
+- describes how those objects interact.
+
+We *could* spend a lot of time fleshing out that domain model in advance. But remember: we're only dealing with a subset of all the user stories, and we're anticipating lots of change in future. As we construct *Tests* for our system, we'll see a clearer picture of the Domain Model start to **emerge**. This design philosophy is generally known as *Emergent Design*.
+
+For now, let's agree that we're definitely going to need *some* objects in our Domain Model. Once we start translating *Feature Tests* - tests that describe a feature extracted from a user story - into *Unit Tests* - tests that specif the precise individual operations that entities can perform - we'll quickly see that the nature of those objects, as well as interactions between them, will **emerge**.
+
 In the process of creating individual objects through a test driven process we'll gradually create an implementation in code of our domain model.  Over the course of this tutorial we'll fashion a series of *classes* that allow us to create bike objects, van objects, docking station objects and so on.  A system like this (in a much more complex form) is actually used by the real Boris bikes system in London. Every time you rent or return a bike, some code objects get created somewhere in the system that tracks the usage of all bikes.
 
 Given that we have established the high-level user stories, the next step of the process (even before we think about a single line of code) is to create the [domain model](https://en.wikipedia.org/wiki/Domain_model). As we started to describe above, the [domain model](https://en.wikipedia.org/wiki/Domain_model) describes key concepts in the domain and the relationships between them.  In other words, it helps us understand what classes we may have and what methods they may implement.

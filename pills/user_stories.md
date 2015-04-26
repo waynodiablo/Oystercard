@@ -1,6 +1,6 @@
 # User stories
 
-**User stories** are a mechanism for capturing, defining and communicating the requirements of a system using a ubiquitous and plain-english format.  The user in a particular user story is generally a stakeholder of the system and could be an end-user, an administrator, a Finance super-user and so on.
+**User stories** are a mechanism for capturing, defining and communicating the requirements of a system using a ubiquitous and plain-english format.  The user in a particular user story is generally a stakeholder of the system and could be an end-user, an administrator, a technical-support superuser and so on.
 
 As a way to start any good software project, user stories are created in collaboration with the customer or client and get us thinking about the high-level problem **from the user's perspective**.
 
@@ -12,7 +12,7 @@ So that <Motivation>,
 I'd like <Task>.
 ```
 
-You may often find user stories written similarly to the above but with the three sections in a different order, which is fine.
+You may find user stories written similarly to the above but with the three sections in a different order, or with different headings, but that's fine.
 
 We identify User Stories by discussing with a customer and listening to or prompting for user requirements.
 

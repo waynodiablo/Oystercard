@@ -72,7 +72,7 @@ This is clearly a simplified version of the user requirements that stakeholders 
 
 *Domain* is a general term for the problem space.  In our case, the domain is Boris Bikes.  A model is an abstract and often simplified representation of a real-world concept that we are attempting to understand or test.  In software development then, a *domain model* is some sort of abstract representation of the domain that helps us to design and build the code.
 
-In Object Oriented Design (OOD), the domain model is conceived as a collection of objects that can interact with one another and that each have discreet attributes and behaviours.
+In Object Oriented Design (OOD), the domain model is a representation of the domain as a collection of objects that can interact with one another and that each have discreet attributes and behaviours.
 
 Let's begin by fleshing out our domain model and getting a base project set up.
 
