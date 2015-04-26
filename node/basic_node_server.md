@@ -1,6 +1,6 @@
 #A basic Node server
 
-Many thanks to [Spike](http://github.com/Spike01) for the original design of this component
+Many thanks to [Spike](http://github.com/spike01) for the original design of this component
 
 **As with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
@@ -24,7 +24,7 @@ npm install --save-dev selenium-standalone
 npm install --save-dev webdriver-io
 ```
 
-Make sure you follow all the instructions for [selenium-standalone](https://www.npmjs.com/package/selenium-standalone) if for some reason you don't have the JDK installed yet.
+Make sure you follow all the instructions for [selenium-standalone](https://www.npmjs.com/package/selenium-standalone) if for some reason you don't have the JDK installed yet. Have a Selenium server running somewhere in the background.
 
 And finally, for Grunt:
 
@@ -58,33 +58,33 @@ module.exports = function(grunt) {
 
 Make a `test` directory, and a `homepageFeature.js` file. Let's write the first failing test:
 
-TODO: continue
-
 `homepageFeature.js`
 ```javascript
-describe('homepage', function(){
-  before(function(){
-    casper.start('http://localhost:3000/');
-  });
+var chai = require('chai');
+var expect = chai.expect;
 
-  it('hello worlds', function(){
-    casper.then(function(){
-      expect("body").to.have.text("Hello world");
+describe('homepage', function () {
+
+  it('hello worlds', function(done) {
+    browser
+      .url('http://localhost:3000')
+      .getText('body', function(err, text) {
+        expect(text).to.equal('Hello world')
+      })
+      .call(done);
     });
-  });
 
 });
 ```
 
-Next error, which should be expected as we don't have a server:
+We get an error, which should be expected as we don't have a server:
 
 ```shell
-1) homepage hello worlds:
-     AssertionError: expected 'body' to be Hello world, but it was ""
+Uncaught AssertionError: expected 'This webpage is not available\nERR_CONNECTION_REFUSED\nReload\nDetails' to equal 'Hello world'
 ```
 
-> __"Wait a second, where are all the `require` statements?"__  
-> Good point. One thing that hasn't been mentioned is that `mocha-casperjs` contains quite a bit of magic, which is great for moving quickly and writing nice tests. If you want to see some examples of other testing frameworks, check out [Leo's node-mocha example](https://github.com/pitchinvasion/node-mocha) and Tony's [express-cucumber example](https://github.com/antonydenyer/express-cucumber). Remember to run `npm install` if you clone them to install dependencies. Leo's tests run with `npm test`, and Tony's with `make cucumber`.
+> __"Wait a second, where do you `require('webdriver-io)`?"__  
+> Good point. One thing that hasn't been mentioned is that `grunt-webdriver` contains quite a bit of magic, which is great for moving quickly, but maybe not for understanding. If we were to write these tests without the Grunt task, we would have to require and configure Webdriver manually in our test file. 
 
 At this stage, this test will be red for a little while, as we will need to set up Express. 
 
@@ -113,7 +113,7 @@ module.exports = server;
 
 Check that everything is "working" (in other words, giving an expected error) by running `npm start` and pointing your browser at [http://localhost:3000](http://localhost:3000) - You should see something the lines of "Cannot GET /", which means that Express is up and running.
 
-At this point, start a new Terminal/iTerm window - `mocha-casperjs` doesn't start your server automagically, so you will have to manually run it in the background to run tests (or maybe use Grunt...?) 
+At this point, start a new Terminal/iTerm window - your server doesn't start automagically, so you will have to manually run it in the background to run tests (or maybe find a way to use Grunt...?) 
 
 The test should still fail as we aren't sending anything to the browser - let's fix that:
 
@@ -138,11 +138,11 @@ Restart your server and run your test - it should go green!
 
 ##Tasks
 
-* Try the above as an athletic workout - there are effectively two workouts here - one for casper and one for express - you can cross train between them! :-)
+* Try the above as an athletic workout - there are effectively two workouts here - one for Webdriver and one for express - you can cross train between them! :-)
 * Try experimenting with different routes with Express - you'll notice it's a lot like Sinatra in many ways
 * See what happens if you replace `response.send` with `response.json` - can you see what this would be very useful for?
-* Write more tests and see if you can pass them! `casper-chai` has a [great page](https://github.com/brianmhunt/casper-chai/blob/master/docs/casper-chai.md) on the kind of matcher statements it supports - note that anything structured as `*.should.have.*` can be rewritten as `expect(*).to.*`
-* If you're feeling really bold, go back to [Leo's node-mocha example](https://github.com/pitchinvasion/node-mocha) and try to figure out why Zombie is unreliable and difficult to test with  
+* Write more tests and see if you can pass them! The documentation for Webdriver is [here](http://www.webdriver.io/guide.html)
+* If you want to see some examples of other testing frameworks, check out [Leo's node-mocha example](https://github.com/pitchinvasion/node-mocha) and Tony's [express-cucumber example](https://github.com/antonydenyer/express-cucumber). Remember to run `npm install` if you clone them to install dependencies. Leo's tests run with `npm test`, and Tony's with `make cucumber`.
 * Go to [the npm site](https://www.npmjs.com/browse/depended) and explore the packages there.
 * Have a look at how to use `response.render` - if you have any problems, don't worry, everything will be explained in the next walkthrough
 
@@ -150,10 +150,7 @@ Restart your server and run your test - it should go green!
 ###Resources
 * [Mocha](http://mochajs.org/)  
 * [Chai](http://chaijs.com/)  
-* [PhantomJS](http://phantomjs.org/)  
-* [CasperJS](http://casperjs.org/)  
-* [mocha-casperjs](https://github.com/nathanboktae/mocha-casperjs)  
-* [casper-chai](https://github.com/brianmhunt/casper-chai)  
-* [grunt-mocha-casper](https://github.com/roman01la/grunt-mocha-casperjs)
-* [Video of Spike on Node Servers](https://www.youtube.com/watch?v=h5qyuyYIwt8)
-
+* [Selenium](http://www.seleniumhq.org/)
+* [Webdriver(https://github.com/webdriverio/webdriverio)
+* [grunt-webdriver](https://github.com/webdriverio/grunt-webdriver)
+* [Video of Spike on Node Servers](https://www.youtube.com/watch?v=h5qyuyYIwt8) (slightly out of date, now that we use Selenium)
