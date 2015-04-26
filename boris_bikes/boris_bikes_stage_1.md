@@ -14,7 +14,7 @@ It's interesting to reflect that one could imagine a version of the boris bikes 
 
 To a certain extent you want to hold off writing any code for as long as possible, ensuring that you and your client agree on which user stories deliver value, and then pick the simplest one and exert the minimum effort to support it.
 
-As regards our user story, or feature, above, let us assume that we are going to have some way of delivering a working bike to a user.  In the real Boris Bike's system this might involve a real person entering their credit card, validation via an online payment gateway and the unlocking of a physical lock to allow a bike to be removed from a real docking station.  In this tutorial let us assume that the interactive ruby (`irb`) environment is our user interface, and so if someone can type in something like `docking_station.release_bike` and that we can check that only a working bike is released, then this corresponds to the high-level feature we are looking for, something like this:
+As regards our user story, or feature, above, let us assume that we are going to have some way of delivering a working bike to a user.  In the real Boris Bike's system this might involve a real person entering their credit card, validation via an online payment gateway and the unlocking of a physical lock to allow a bike to be removed from a real docking station.  In this tutorial let us assume that the interactive ruby (`irb`) environment is our *user interface*, and so if someone can type in something like `docking_station.release_bike` and we can check that a working bike is released, then this corresponds to the high-level feature we are looking for.  Something like this:
 
 ```sh
 2.0.0-p195 :003 > station = DockingStation.new
@@ -29,7 +29,7 @@ Our goal is to create the necessary code to support the above functionality.  Wh
 
 Now we don't want to have to re-check this functionality manually every time we change any code in our system.  It might seem like a trivial amount of effort in this case, but even small projects quickly accumulate a lot of functionality that might break due to small changes elsewhere in the codebase.  To stop us going completely insane(!) chasing bugs back and forth through the system let's start by writing a feature test that will allow us to *automatically* check that the above code continues to work.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as MiniTest and Cucumber to name a couple of popular alternatives.  RSpec provides a syntax that, while pure Ruby, reads very like English.
 
-Create the file `./spec/features/public_bike_access_spec.rb` with the following code. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+Create the file `./spec/features/public_accesses_bike_spec.rb` with the following code. Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
 ```ruby
 feature 'member of public accesses bike' do
