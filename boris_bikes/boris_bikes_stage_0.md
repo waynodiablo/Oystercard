@@ -34,17 +34,15 @@ Again, not all verbs will become methods and we'll have methods that don't corre
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-Once we have an idea of what we are building, our first step will be describing some part of what we will build using a Feature Test.
-
-Our preferred Ruby testing tool is [RSpec :pill:](../pills/rspec.md).  We can use RSpec to specify all kinds of tests; feature, integration and unit.
+Once we have an idea of what we are building, our first step will be describing some part of what we will build using a Feature Test.  Our preferred Ruby testing tool is [RSpec :pill:](../pills/rspec.md).  We can use RSpec to specify all kinds of tests; feature, integration and unit.
 
 Let's get our project set up and we'll start with a feature test.  Create a new repository in your projects directory adding a `README.md` file like so:
 
 ```sh
 $ mkdir boris-bikes
 $ cd boris-bikes
-% git init
-% touch README.md
+$ git init
+$ touch README.md
 ```
 
 Add some basic explanation of the project to the `README.md` and then create a Github repo called 'boris-bikes' (note: please please ensure that the repo on Github is called exactly this, please ensure you use a hyphen '-' and not an underscore '_'), and then connect your local repo to the Github repo and push the changes to the README up to Github and confirm that they are visible on Github.  This is a critical backup of your local changes to a remote machine that you MUST repeat as regularly as possible, ideally each time you get your tests to go green.
