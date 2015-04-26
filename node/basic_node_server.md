@@ -4,7 +4,7 @@ Many thanks to [Spike](http://github.com/spike01) for the original design of thi
 
 **As with all Makers Academy materials, there may be subtle errors in the following materials. Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.**
 
-**There is a condensed version of this walkthrough in the :pill:[JS Acceptance test pill](https://github.com/makersacademy/course/blob/master/pills/js_acceptance_tests.md), for ye of little patience**
+**There is a very, very condensed version of this walkthrough in the :pill:[JS Acceptance test pill](https://github.com/makersacademy/course/blob/master/pills/js_acceptance_tests.md), for ye of little patience**
 
 So, now that we can write unit tests and automate various tasks, it's time to take Node out on to the web. For this, we will be using the [Express framework](http://expressjs.com/), which has the same lightweight design philosophy as Sinatra. However, as Makers, we'll be wanting to write some tests first.  
 
