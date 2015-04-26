@@ -27,9 +27,9 @@
 * Link dependency injection to testing in Angular.
 * Construct http requests to pull data from an external RESTful API.
 * Utilise 2-way binding to synchronise data sets.
-* Describe the relationship between Angular's scope and globalScope objects.
+* Describe the relationship between Angular's [scope](https://docs.angularjs.org/guide/scope) and [rootScope](https://docs.angularjs.org/api/ng/service/$rootScope) objects.
 * Compare Angular controllers to the controllers in Sinatra.
-* Explain the purpose of Services and Factories in an Angular application.
+* Explain the purpose of Services in an Angular application.
 * Write meaningful unit and feature tests using Karma and Protractor
  
 ##Server side JavaScript

@@ -129,7 +129,7 @@ Now lets reference the script from our HTML.
 <script src="js/app.js"></script>
 ```
 
-What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the `ngResource` module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out. Do you think this is the right place for this to be?
+What is all this? We're doing a couple of things: first we're creating our application called 'GitUserSearch' and then we're also pulling in the [ngResource](https://docs.angularjs.org/api/ngResource) module as an external dependency. What scope is the variable `githubUserSearch` in? Refresh `index.html` and use your console to find out. Do you think this is the right place for this to be?
 
 Now that we've created an app we need to wire it up to the HTML. Place `ng-app="GitUserSearch"` inside the `html` tag so it looks like this:
 
@@ -262,47 +262,42 @@ But first let's write a unit test. Don't worry if this test doesn't entirely mak
 describe('GitUserSearchController', function() {
   beforeEach(module('GitUserSearch'));
 
-  var scope, ctrl;
+  var ctrl;
 
-  beforeEach(inject(function($rootScope, $controller) {
-    scope = $rootScope.$new();
-    ctrl = $controller('GitUserSearchController', {
-        $scope: scope
-    });
+  beforeEach(inject(function($controller) {
+    ctrl = $controller('GitUserSearchController');
   }));
 });
 ```
 
 This just sets up our test - the interesting things to look at here are the `beforeEach` and `inject`. `beforeEach` is running before each test. `inject` is a built-in Angular function that allows us to access the Angular app and our controller from inside our tests.
 
-You'll also notice we have this thing called `$scope` being set. In Angular we use this object to set values to in  our controller that we want to make available throughout our entire application. Some frameworks do this using things like global variables, but that's considered bad practice so we use `$scope` instead.
-
-Now let's add a test place this below the beforeEach with the describe callback.
+Now let's add a test - place this below the beforeEach with the describe callback.
 
 ```js
 it('initialises with an empty search result and term', function() {
-  expect(scope.searchResult).toBeUndefined();
-  expect(scope.searchTerm).toBeUndefined();
+  expect(ctrl.searchResult).toBeUndefined();
+  expect(ctrl.searchTerm).toBeUndefined();
 });
 ```
 
 Restart karma by running `karma start test/karma.conf.js`. You should be getting a failed test now, this is because we need to define a controller. Create a file named **gitUserSearchController.js** and define a controller inside the file:
 
 ```js
-githubUserSearch.controller('GitUserSearchController', function($scope) {
+githubUserSearch.controller('GitUserSearchController', [function() {
 
-});
+}]);
 ```
 
 In the view we're going to need to tell Angular that this is the controller we want to use. This can also be achieved using routing, but we're not going to cover that here.
 
 Go ahead and reference the controller inside the opening `body` tag.
 ```html
-<body ng-controller="GitUserSearchController">
+<body ng-controller="GitUserSearchController as searchCtrl">
 ```
-We're indicating that everything inside the `body` tag is handled by the `GitUserSearchController`.
+We're indicating that everything inside the `body` tag is handled by the `GitUserSearchController`, and we are setting an alias `searchCtrl` that will be used in the view to refer to this controller.
 
-We've forgotten to do something, try and figure it out before looking at the Git Diff - and careful as it won't be picked up in our tests.
+We've forgotten to do something, try and figure it out - and careful as it won't be picked up in our tests.
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/23e1f0e4a32fa507a7f78045e4afe7b1b42d4a18)
 
@@ -329,7 +324,7 @@ describe('when searching for a user', function() {
   ];
 
   it('displays search results', function() {
-    expect(scope.searchResult.items).toEqual(items);
+    expect(ctrl.searchResult.items).toEqual(items);
   });
 });pr
 ```
@@ -338,7 +333,9 @@ Here we've set up some dummy results that mock the kind of results we expect to 
 Now in your controller let's add this mock data as our search results:
 
 ```js
-$scope.searchResult = {
+var self = this;
+
+self.searchResult = {
   "items": [
     {
       "login": "tansaku",
@@ -354,16 +351,16 @@ $scope.searchResult = {
 };
 ```
 
-What we're doing here is creating a property `searchResult` in our controller with a hash containing our dummy search results. Setting this hash to `$scope.searchResult` allows us to use `searchResult` in our views, as we'll see later.
+What we're doing here is creating a property `searchResult` in our controller with a hash containing our dummy search results. Setting this hash to `self.searchResult` allows us to use `searchCtrl.searchResult` in our views, as we'll see later. Why do you think we are declaring the variable `var self = this;` ?
 
-Check your tests again. This time the second test is passing but the original one is failing - this is because `$scope.searchResult` is no longer undefined when we first initialise the app. We will fix this in the next section!
+Check your tests again. This time the second test is passing but the original one is failing - this is because `ctrl.searchResult` is no longer undefined when we first initialise the app. We will fix this in the next section!
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/1ed66b9cda1e05a88f2a90ec6385538bb93d48d3)
 
 To get the data we've just added to our controller into your view, amend your `index.html`, replacing the `ul.list-group` with the following:
 
 ```html
-<ul class="list-group" ng-repeat="user in searchResult.items">
+<ul class="list-group" ng-repeat="user in searchCtrl.searchResult.items">
   <li>
     <img ng-src="{{user.avatar_url}}&s=50">
     <a ng-href="{{user.html_url}}">{{user.login}}</a>
@@ -373,7 +370,7 @@ To get the data we've just added to our controller into your view, amend your `i
 
 Look upon my works, ye Mighty, and despair! We've polluted our html with a load of Angular [cruft](http://en.wikipedia.org/wiki/Cruft). This is one of the downsides of using a framework like Angular. Let's look at some of the details:
 
-* Mustache `{{your_variable_here}}` - you need to use a mustache to get access to the scope. In our example we are using `{{user.login}}` to access the `login` property on the `user` object. However notice inside `ng-repeat` we don't use them.
+* Mustache `{{your_variable_here}}` - you need to use a mustache to get access to the [scope](https://docs.angularjs.org/guide/scope). In our example we are using `{{user.login}}` to access the `login` property on the `user` object. However notice inside `ng-repeat` we don't use them.
 * [ng-repeat](https://docs.angularjs.org/api/ng/directive/ngRepeat) is an Angular directive that behaves like a for loop. Basically we're going to iterate for every user in the items array. Notice that we've called the variable `user`.
 * [ng-src](https://docs.angularjs.org/api/ng/directive/ngSrc) just sets the `src` attribute on the `img` after everything has loaded. If we didn't do this and set `src="{{user.avatar_url}}"` (as opposed to `ng-src`) then the page would show a broken image link. This is because it takes a short while after the page has loaded for Angular to replace strings like `{{user.avatar_url}}` with the dynamically generated value.  
 * [ng-href](https://docs.angularjs.org/api/ng/directive/ngHref) similarly just sets the `href` once Angular has replaced any markup.  
@@ -389,12 +386,12 @@ open index.html
 Looks good, but our tests are still failing. This is because our search results are magically appearing when we visit the page, before we've even done a search. This was fine for us testing that the styling and markup works as expected, but now we want Angular to dynamically render our search results.
 
 To do this we need to wire up the button to do something. We want to perform a search when the user clicks on it. To do this we're going to use the [ng-click](https://docs.angularjs.org/api/ng/directive/ngClick) directive.
-First we need to define a function on `$scope` so that when we click the button we actually do something.
+First we need to define a function in the controller so that when we click the button we actually do something.
 
 In your controller add the following code:
 
 ```js
-$scope.doSearch = function() {
+self.doSearch = function() {
   console.log("Hello World");
 };
 ```
@@ -402,15 +399,15 @@ $scope.doSearch = function() {
 Now in your view code you can wire up the button using `ng-click` like this:
 
 ```html
-<button class="btn" ng-click="doSearch()">Search</button>
+<button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
 ```
 Open up your browser console and make sure "Hello World," is being output when you click on the search button.
 
-Now we can see that `doSearch()` is being triggered when we click on the search button, we can replace the `console.log` statement with the code that assigns our dummy data hash to `$scope.searchResult`:
+Now we can see that `doSearch()` is being triggered when we click on the search button, we can replace the `console.log` statement with the code that assigns our dummy data hash to `self.searchResult`:
 
 ```js
-$scope.doSearch = function (){
-  $scope.searchResult = {
+self.doSearch = function (){
+  self.searchResult = {
     items: [
       {
         "login": "tansaku",
@@ -431,9 +428,9 @@ Now we need to update our tests so that they call our `doSearch()` method before
 
 ```javascript
 it('displays search results', function() {
-  scope.searchTerm = 'hello';
-  scope.doSearch();
-  expect(scope.searchResult.items).toEqual(items);
+  ctrl.searchTerm = 'hello';
+  ctrl.doSearch();
+  expect(ctrl.searchResult.items).toEqual(items);
 });
 ```
 
@@ -447,14 +444,14 @@ How are we going to get the input that was entered into the text box?
 
 We're going to use data binding again. Yes, we've already done some data binding! When we wired up the search button to our controller we bound the click action to the function `doSearch`.
 
-This time we're going to bind the input text box to our controller using `ng-model`. This means any  value entered into that input will be immediately assigned to the `$scope.searchTerm` variable.
+This time we're going to bind the input text box to our controller using `ng-model`. This means any  value entered into that input will be immediately assigned to the `self.searchTerm` variable.
 
 So on your text box you need to add:
 ```html
-<input type="text" ng-model="searchTerm">
+<input type="text" ng-model="searchCtrl.searchTerm">
 ```
 
-Inside the controller you can now access the input value using `$scope.searchTerm`. Try doing a `console.log($scope.searchTerm);` inside the `doSearch` function.  
+Inside the controller you can now access the input value using `self.searchTerm`. Try doing a `console.log(self.searchTerm);` inside the `doSearch` function.
 
 > Ideally we'd test this rather than just use a console.log, but for that we'd need to use [Protractor](https://github.com/angular/protractor) - Angular's answer to Capybara. Unfortunately that's outside the scope of this walkthrough, so [we've added a bonus subwalkthrough](/further_javascript/protractor.md).
 
@@ -469,10 +466,10 @@ Now all we have to do is wire up the GitHub API to return the results. To do thi
 First we need to inject `$resource` into our controller so that we can make use of it. Simply add the `$resource` to the list of arguments in your controller function.
 
 ```js
-githubUserSearch.controller('GitUserSearchController', function($scope, $resource) {
+githubUserSearch.controller('GitUserSearchController', ['$resource', function($resource) {
 ```
 
-This concept is called [Dependency Injection](http://c2.com/cgi/wiki?DependencyInjection). Essentially Angular is looking up what the controller needs by looking at the parameters and their names. It then calls the function with these parameters and the arguments it requires already instantiated. You don't need to worry too much about this at this stage but just know that it's there and that it works.
+This concept is called [Dependency Injection](http://c2.com/cgi/wiki?DependencyInjection). Essentially Angular is looking up what the controller needs by looking at the parameters and their names. It then calls the function with these parameters and the arguments it requires already instantiated. The injector will compare the name of each dependency in the strings to the variables called in the function's arguments - if you hav more than one dependency these must be in the same order within the array and the function.You don't need to worry too much about this at this stage but just know that it's there and that it works.
 
 To use the GitHub API we can hit `https://api.github.com/search/users` with a query parameter `q` and a value. For example `https://api.github.com/search/users?q=antony`.
 
@@ -487,22 +484,16 @@ var searchResource = $resource('https://api.github.com/search/users');
 and then inside our `doSearch` function replace the dummy data we set to:
 
 ```js
-$scope.searchResult = searchResource.get(
-  { q: $scope.searchTerm }
+self.searchResult = searchResource.get(
+  { q: self.searchTerm }
 );
 ```
 
-The `get` method takes an object and uses the key-value pairs as the URI parameter string - hence `q`.
+The `get` method takes an object and uses the key-value pairs as the URI parameter string - hence `q`. How would you add your access token to the request?
 
-If we run our tests we will see them now failing, although the error probably doesn't really explain much. To get a more meaningful error we can add a call to `scope.$apply();` which forces Angular to complete any unfinished requests. And now we get a error message we can work with:
+If we run our tests we will see them now failing.
 
-```
-Error: Unexpected request: GET https://api.github.com/search/users?q=hello
-  No more request expected
-      at $httpBackend
-```
-
-This makes a bit more sense. We included when setting up our tests a module called `angular-mocks` which stops us making HTTP requests in our unit tests. This is particularly useful in this case because Github imposes a limit on API requests which we could quickly go over if we are constantly running our tests.
+We included when setting up our tests a module called `angular-mocks` which stops us making HTTP requests in our unit tests. This is particularly useful in this case because Github imposes a limit on API requests which we could quickly go over if we are constantly running our tests.
 
 So how do we stub out our request? Well first we need to set up our `httpBackend` stub in a beforeEach block (this goes in the part of the test where we `describe` "when searching for a user").
 
@@ -534,16 +525,15 @@ This is because you need to call `flush()` on `httpBackend` after you have calle
 describe('GitUserSearchController', function() {
   beforeEach(module('GitUserSearch'));
 
-  var scope, ctrl;
+  var ctrl;
 
-  beforeEach(inject(function($rootScope, $controller) {
-    scope = $rootScope.$new();
-    ctrl = $controller('GitUserSearchController', { $scope: scope });
+  beforeEach(inject(function($controller) {
+    ctrl = $controller('GitUserSearchController');
   }));
 
   it('initialises with an empty search result and term', function() {
-    expect(scope.searchResult).toBeUndefined();
-    expect(scope.searchTerm).toBeUndefined();
+    expect(ctrl.searchResult).toBeUndefined();
+    expect(ctrl.searchTerm).toBeUndefined();
   });
 
   describe('when searching for a user', function() {
@@ -572,11 +562,10 @@ describe('GitUserSearchController', function() {
     ];
 
     it('displays search results', function() {
-      scope.searchTerm = 'hello';
-      scope.doSearch();
-      scope.$apply();
+      ctrl.searchTerm = 'hello';
+      ctrl.doSearch();
       httpBackend.flush();
-      expect(scope.searchResult.items).toEqual(items);
+      expect(ctrl.searchResult.items).toEqual(items);
     });
   });
 });

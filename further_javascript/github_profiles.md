@@ -6,13 +6,13 @@
 
 Congratulations on reaching Week 7 and attaining senior cohort status! From this point on, you will notice that there is far less 'scaffolding' in the walkthroughs. It is assumed that on reaching this stage in the course you are more familiar with technical language, reading documentation and utilising resources such as [Stack Overflow](http://stackoverflow.com/), your byte group and your pair. Whilst we will still structure your learning with learning objectives, resources and challenges, we encourage you to go 'off the beaten track'. Feel free to explore interesting frameworks and side projects - as long as you are working in a pair, writing tests and writing clean code, (pretty much) anything goes!
 
+Here are this week's [learning objectives](https://github.com/makersacademy/course/blob/master/further_javascript/learning_objectives.md).
+
 ![Gundam Cat](https://developer.github.com/images/gundamcat.png)
 
 ##Github Profiles
 
 This week's project is to create a simple Github Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
-
-Before you start, please ensure you are familiar with the [learning objectives](https://github.com/makersacademy/course/blob/master/further_javascript/learning_objectives.md)
 
 The project will involve using JavaScript to consume data available from third parties over the network (e.g. Github API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS. 
 
