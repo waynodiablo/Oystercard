@@ -151,6 +151,6 @@ Restart your server and run your test - it should go green!
 * [Mocha](http://mochajs.org/)  
 * [Chai](http://chaijs.com/)  
 * [Selenium](http://www.seleniumhq.org/)
-* [Webdriver(https://github.com/webdriverio/webdriverio)
+* [Webdriver](https://github.com/webdriverio/webdriverio)
 * [grunt-webdriver](https://github.com/webdriverio/grunt-webdriver)
 * [Video of Spike on Node Servers](https://www.youtube.com/watch?v=h5qyuyYIwt8) (slightly out of date, now that we use Selenium)
