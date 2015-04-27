@@ -3,6 +3,7 @@
 The BDD Cycle lives at the heart of crafting well-designed, stable applications. As a process, it:
 
 - covers the entire development cycle, from client request to delivery of the application;
+- guides developers in what to build next;
 - results in applications that are easy to change later, when clients inevitably change their mind, and
 - ensures the final delivery is fully-tested and highly robust.
 
