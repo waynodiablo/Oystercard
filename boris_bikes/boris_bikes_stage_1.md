@@ -47,6 +47,7 @@ Notice how the strings passed to both the `feature` and `scenario` sections prec
 
 Notice also that none of the objects we are referencing actually exist in code.  We are using our domain model as a guide and then **writing the code we wish we had.** You might think that some of the above code is too good to be true!  For example, `expect(bike).to be_working` is particularly tricky.  Now would be a good time to read the [RSpec predicate matchers pill :pill:](../pills/rspec_predicate.md) and discuss this with your pair partner.
 
+
 You should now have code in the following structure:
 
 ```sh

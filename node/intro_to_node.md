@@ -7,7 +7,7 @@ If you haven't heard of Node, here is a short list of what Node is and what Node
 * Node is a server-side implementation of JavaScript, using Google's extremely powerful V8 engine  
 * Node is extremely good at handling large numbers of simultaneous requests or connections  
 * Node is deliberately very minimal, encouraging users to write and use their own packages to extend functionality  
-* Node is growing at an incredible rate. Its ecosystem is massive, with the number of published `npm` packages rapidly overtaking Ruby's gems  
+* Node is growing at an incredible rate. Its ecosystem is massive, with the number of published `npm` packages rapidly overtaking Ruby's gems - though fewer are regularly maintained
 * Node is NOT multi-threaded; it's just very smart with how it deals with these requests  
 * Node is NOT mature - while currently stable, it is nowhere near a 1.0 release  
 * Node is NOT a magic bullet - despite what the Internet may say, Node is not suited to every task  
@@ -39,7 +39,7 @@ Here is a broad outline of what we hope to cover this week:
 * Setting up your Node environment/starting a project
 * Unit testing with `jasmine-node`/Node modules
 * Node good practices: `npm`, `grunt`, JavaScript linters
-* Feature testing with `mocha-casperjs`
+* Feature testing with `webdriver-io`
 * Starting a web server with Express
 * Building an API with node
 * Consuming that API with JQuery
