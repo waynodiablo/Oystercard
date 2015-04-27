@@ -25,7 +25,7 @@ As regards our user story, or feature, above, let us assume that we are going to
  => true
 ```
 
-Our goal is to create the necessary code to support the above functionality.  Why did we choose to name the method that releases a bike from the station `release_bike()`? Naming things is one of [two hardest problems in Computer Science](http://martinfowler.com/bliki/TwoHardThings.html). We could have chosen a different name but this one seems good enough.
+Our goal is to create the necessary code to support the above functionality.  Why did we choose to name the method that releases a bike from the station `release_bike`? Naming things is one of [two hardest problems in Computer Science](http://martinfowler.com/bliki/TwoHardThings.html). We could have chosen a different name but this one seems good enough.
 
 Now we don't want to have to re-check this functionality manually every time we change any code in our system.  It might seem like a trivial amount of effort in this case, but even small projects quickly accumulate a lot of functionality that might break due to small changes elsewhere in the codebase.  To stop us going completely insane(!) chasing bugs back and forth through the system let's start by writing a feature test that will allow us to *automatically* check that the above code continues to work.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as MiniTest and Cucumber to name a couple of popular alternatives.  RSpec provides a syntax that, while pure Ruby, reads very like English.
 
