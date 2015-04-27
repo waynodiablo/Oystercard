@@ -39,7 +39,7 @@ Here is a broad outline of what we hope to cover this week:
 * Setting up your Node environment/starting a project
 * Unit testing with `jasmine-node`/Node modules
 * Node good practices: `npm`, `grunt`, JavaScript linters
-* Feature testing with `mocha-casperjs`
+* Feature testing with `webdriver-io`
 * Starting a web server with Express
 * Building an API with node
 * Consuming that API with JQuery
