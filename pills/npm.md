@@ -4,7 +4,7 @@
 
 npm is a node based package manager, that will help you to organise and version control Node Packages on your machine and in your projects.
 
-npm is the equivalent of [Bundler](http://bundler.io/) from the Ruby world.  Node packages function in a similar way to Ruby's Gems. Check out the [npm web site](https://www.npmjs.com/) to see the trending node modules - there are now [more node modules that Ruby gems](http://www.modulecounts.com/)!
+npm is the equivalent of [Bundler](http://bundler.io/) from the Ruby world.  Node packages function in a similar way to Ruby's Gems. Check out the [npm web site](https://www.npmjs.com/) to see the trending node modules - there are now [more node modules than Ruby gems](http://www.modulecounts.com/)!
 
 It is possible to install a package globally (i.e. to make a command available to you on the command line), locally within a project, and locally within a dev environment.
 
