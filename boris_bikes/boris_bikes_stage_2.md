@@ -59,7 +59,6 @@ Add a `require` statement to the spec.
 
 ```ruby
 require 'docking_station'
-require 'capybara/rspec'
 
 feature 'member of public accesses bike' do
   scenario 'docking station releases a bike that is not broken' do
