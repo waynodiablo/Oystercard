@@ -33,7 +33,7 @@ CSS proposed splitting the presentation layer from the HTML structure. Nowadays,
 This means that:
 
 1. HTML files are not littered with presentation attributes
-2. The same content can be served to different devices simply by changing the CSS file referenced in the `<link>` tag, and 
+2. The same content can be served to different devices simply by changing the CSS file referenced in the `<link>` tag, and
 3. Multiple HTML elements can be styled at the same time.
 
 > You can still use HTML attributes like `width` and `height`, and you can also 'inline' CSS styles using the HTML `style` attribute. Both of these practices are frowned upon. Why?
@@ -157,3 +157,8 @@ Some things that are _very handy_ to know include:
 
 - CSS [Preprocessors](http://www.sitepoint.com/6-current-options-css-preprocessors/)
 - CSS [Design Patterns](http://www.sitepoint.com/css-architectures-scalable-and-modular-approaches/)
+
+## Related
+
+* http://html5doctor.com/lets-talk-about-semantics/
+* http://heydonworks.com/practical_aria_examples/

@@ -8,7 +8,7 @@
 * Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_cucumber.md)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Thermostat](thermostat/thermostat.md)
-* Week 6: Lab week
+* Week 6: [Lab week](lab_week/lab_week.md)
 * Week 7: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
 * Week 8: [Makerthon](https://github.com/makersacademy/course/blob/master/makerthon/introduction.md)
 * Week 9: [Intro to Rails](https://github.com/makersacademy/course/blob/master/rails/introduction_to_rails.md)
@@ -32,13 +32,14 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
-- Your alumni helpers are [Nicole](https://github.com/NicolePell), [Ptolemy](https://github.com/ptolemybarnes), [Jake](https://github.com/jacobmitchinson), [Emily](https://github.com/emilysas), [Kieran](https://github.com/kierangoodacre) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [Nicole](https://github.com/NicolePell), [Mishal](https://github.com/mishal1), [Chris](https://github.com/wardymate), [Vanessa](https://github.com/vvirgitti), [Tom](https://github.com/tomcoakes) and [Kate](katebeavis) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
 ![Nicole](https://avatars0.githubusercontent.com/u/7798054?v=3&s=128)
-![Ptolemy](https://avatars2.githubusercontent.com/u/9342866?v=3&s=128)
-![Jake](https://avatars0.githubusercontent.com/u/9607886?v=3&s=128)
-![Emily](https://avatars1.githubusercontent.com/u/7489940?v=3&s=128)
-![Kieran](https://avatars3.githubusercontent.com/u/9266294?v=3&s=128)
+![Mishal](https://avatars0.githubusercontent.com/u/8863744?v=3&s=128)
+![Chris](https://avatars0.githubusercontent.com/u/6054003?v=3&s=128)
+![Vanessa](https://avatars0.githubusercontent.com/u/10236105?v=3&s=128)
+![Tom](https://avatars2.githubusercontent.com/u/7912200?v=3&s=128)
+![Kate](https://avatars2.githubusercontent.com/u/10133018?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)

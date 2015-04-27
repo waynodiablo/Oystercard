@@ -65,7 +65,7 @@ to install dependencies. At this stage Clojure is the only project dependency. I
 
 ![project.clj](https://github.com/makersacademy/course/blob/master/pills/images/clojure/project-clj.png)
 
-Notice how in the `project.clj` file Clojure is a _dependency_, just like any other. This is because Leiningen compiles Clojure together with the other dependencies into executables that run like applications on your computer. You can run the compiled code on a computer that doesn't already have Clojure installed.
+Notice how Clojure is included as a dependency in the `project.clj` file.  This is exactly the fashion in which other project dependencies will be included. This is because Leiningen compiles Clojure together with the other dependencies into executables that run like applications on your computer. You can run the compiled code on a computer that doesn't already have Clojure installed.
 
 ## Clojure REPL ##
 
@@ -80,7 +80,7 @@ This is because Clojure is designed to be written _interactively_. You are posit
 
 ### Writing Code in the REPL ###
 
-We've already seen Clojure code - the `project.clj` file is written in Clojure. Let's open another source file that was created by leiningen: `src/clojure_intro/core.clj`.
+We have already seen some Clojure code.  The `project.clj` file itself is pure Clojure. Let's open another source file that was created by leiningen: `src/clojure_intro/core.clj`.
 
 In Light Table, go to `File > Open Folder` and select the project folder you just created. You should see something like this:
 
@@ -191,7 +191,7 @@ This is interesting for two reasons:
   1. I told you that Clojure didn't have classes, and you have a ClassCastException
   2. It's looking for a clojure.lang.IFn (IFn is an abbreviation of Function Interface)
 
-The reason we're getting java.lang.ClassCastExceptions is because Clojure is built on top of Java. Much like a language like CoffeeScript is built on top of JavaScript, or Swift is built on top of C (and ruby, for that matter), we're seeing an error bubble up from the underlying implementation.
+The reason we're getting java.lang.ClassCastExceptions is because Clojure is built on top of Java. Much like a language like CoffeeScript is built on top of JavaScript, or Swift is built on top of C (and Ruby, for that matter), we're seeing an error bubble up from the underlying implementation.
 
 The second error is because lists occupy a special place in Clojure. The first element of a list is assumed to be a function call.
 
@@ -325,7 +325,7 @@ Bindings are evaluated in order, so later bindings can use earlier bindings.
 (let [cats 3
       legs (* 4 cats)]
   (str legs " legs all together"))
-      
+
 ; => "12 legs all together"
 ```
 
@@ -516,7 +516,7 @@ To make HTTP requests we're going to use a dependency called clj-http. The GitHu
 [clj-http "1.0.1"]
 ```
 
-This needs to be added to the project dependencies in the `project.clj`. This is just like adding it to a Gemfile in ruby, except we always need to specify the version we want.
+This needs to be added to the project dependencies in the `project.clj`. This is just like adding it to a Gemfile in Ruby, except we always need to specify the version we want.
 
 ![clj-http](https://github.com/makersacademy/course/blob/master/pills/images/clojure/clj-http.png)
 
@@ -537,7 +537,7 @@ Dependencies are required on a per-namespace basis. To access the functions prov
 
 The `:require` clause tells the compiler that we want access to the functions defined in the `clj-http/client` namespace inside our own `clojure-intro.core` namspace. The `clj-http/client` defines a function called `get` that gets the contents of an HTTP page.
 
-The `clj-http.client/get` function expects to recieve the URL to get as a string. We can execute it like so:
+The `clj-http.client/get` function expects to receive the URL to get as a string. We can execute it like so:
 
 ```clojure
 (ns clojure-intro.core
@@ -603,7 +603,7 @@ Take a look at the [Clojure cheatsheet](http://clojure.org/cheatsheet) to see th
 
 ## Maps as Arguments
 
-Like ruby, passing a map of options is a very common way to configure the behaviour of a function. We can pass an optional map of configuration to our `http/get` request like so:
+Like Ruby, passing a map of options is a very common way to configure the behaviour of a function. We can pass an optional map of configuration to our `http/get` request like so:
 
 ```clojure
 (http/get "http://google.com" {:query-params {:q "Makers Academy"}})
@@ -777,7 +777,7 @@ See how the above is just a series of nested maps, vectors, strings and numbers?
 
 I've mentioned macros in passing several times without really covering what they are. Macros are a form of [metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming). They are code that manipulates code as if it were data.
 
-We've seen how the boundary between code and data is blurred with data (maps, keywords) acting as functions. You may have noticed how defining a function `(fn [x] (...))` looks like a list containing a vector of arguments and then a nested list. It's not just that it *looks* like it. It actually **is**. 
+We've seen how the boundary between code and data is blurred with data (maps, keywords) acting as functions. You may have noticed how defining a function `(fn [x] (...))` looks like a list containing a vector of arguments and then a nested list. It's not just that it *looks* like it. It actually **is**.
 
 Macros allow you to manipulate code-as-data to make your code more expressive. Although only advanced Clojure programmers will ever write their own macros, to get the most out of the language it's important to be familiar with the ones provided by the language: in particular the threading macros.
 

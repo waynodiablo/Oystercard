@@ -16,12 +16,12 @@ If you haven't already, install Node with `brew install node` and follow any add
 
 There are many ways to start a Node project - [Yeoman](http://yeoman.io/) and [Express generator](http://expressjs.com/starter/generator.html) are fairly common tools for scaffolding entire web apps, to name but two. For a basic app or messing around with Node, this is total overkill. The simplest way, much like creating a Gemfile, would be to use a `package.json` file created with `npm init`.
 
-Here's what we get if we run `npm init` in a folder called `temp` and follow the on-screen instructions, hitting enter every time:
+Here's what we get if we run `npm init` in a folder called `testProject` and follow the on-screen instructions, hitting enter every time:
 
 `package.json`
 ```json
 {
-  "name": "temp",
+  "name": "testProject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -59,7 +59,7 @@ Your package.json should now look like this:
 
 ``` json
 {
-  "name": "temp",
+  "name": "testProject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

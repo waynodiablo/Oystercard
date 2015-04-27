@@ -65,8 +65,8 @@ You should be able to run 'rspec' command in the base directory (i.e. the folder
 require 'rubocop/rake_task'
 require 'rspec/core/rake_task'
 
-RuboCop::RakeTask.new(:cop)
-RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new :cop
+RSpec::Core::RakeTask.new :spec 
 
 task default: [:cop, :spec]
 ```

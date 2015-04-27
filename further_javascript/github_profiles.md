@@ -1,12 +1,12 @@
 #Week 7 - Further JavaScript
 
-:construction: UNDER CONSTRUCTION :construction:
-
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 *Many thanks to [Alex Peattie](https://github.com/alexpeattie) and [Tansaku](https://github.com/tansaku) for the original design of the Ajax material and [Antony Denyer](https://github.com/antonydenyer) for the Angular material*
 
 Congratulations on reaching Week 7 and attaining senior cohort status! From this point on, you will notice that there is far less 'scaffolding' in the walkthroughs. It is assumed that on reaching this stage in the course you are more familiar with technical language, reading documentation and utilising resources such as [Stack Overflow](http://stackoverflow.com/), your byte group and your pair. Whilst we will still structure your learning with learning objectives, resources and challenges, we encourage you to go 'off the beaten track'. Feel free to explore interesting frameworks and side projects - as long as you are working in a pair, writing tests and writing clean code, (pretty much) anything goes!
+
+Here are this week's [learning objectives](https://github.com/makersacademy/course/blob/master/further_javascript/learning_objectives.md).
 
 ![Gundam Cat](https://developer.github.com/images/gundamcat.png)
 
