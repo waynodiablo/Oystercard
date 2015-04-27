@@ -1,5 +1,7 @@
 Using Rubocop
 
+:construction: UNDER CONSTRUCTION :construction:
+
 Please also ensure that you have [RuboCop](https://github.com/bbatsov/rubocop) operating as an [editor plugin](https://github.com/bbatsov/rubocop#editor-integration), or at the very least from the command line so that you can check every line of Ruby for any stylistic errors.  See the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) for details - it is particularly important to ensure that your Ruby files have a consistent style in terms of indentation etc.  It makes it easier to find errors in your code, and employers will be turned off by inconsistent coding style.  So make yourself employable and make sure you fix all RuboCop issues before you try to write more code, fix tests, or do anything else at all.
 
 
@@ -39,5 +41,3 @@ Style/MethodDefParentheses:
 ```
 
 These are Makers specific customizations of the Ruby style guide.  Once this is in place we can type the command 'rake' at the command line in the directory with the 'spec' folder and assuming no style violations we get something like the following:
-
-:construction: UNDER CONSTRUCTION :construction:

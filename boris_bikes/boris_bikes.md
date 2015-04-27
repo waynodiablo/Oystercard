@@ -80,13 +80,13 @@ Let's begin by fleshing out our domain model and getting a base project set up.
 
 ## Stage 1: Creating a Feature Test
 
-Now we have a domain model and a project setup, let's introduce BDD and continue with our first feature test, based on a single user story.
+Now we have a domain model and a project setup, let's continue with our first feature test, based on a single user story.
 
 [Stage 1](boris_bikes_stage_1.md)
 
 ## Stage 2: Creating a Docking Station via Unit Tests
 
-Given a failing feature test that is failing for the right reason we'll drop to the unit test level and start creating our docking station by specifying its low level behaviour
+Given a failing feature test, let's introduce BDD and drop to the unit test level to create our docking station.
 
 [Stage 2](boris_bikes_stage_2.md)
 
