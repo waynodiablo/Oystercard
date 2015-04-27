@@ -24,20 +24,20 @@ Failed examples:
 rspec ./spec/features/public_accesses_bike_spec.rb:2 # member of public accesses bike docking station releases a working bike
 ```
 
-Let's look through it piece by piece.  First we see the contents of the strings we passed to the RSpec 'feature' and 'scenario' methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem `docking_station = DockingStation.new`, the type of error `NameError` and even tells us the line number and the complete file path where the issue occurred ` ./spec/features/public_accesses_bike_spec.rb:3:`.
+Let's look through it piece by piece.  First we see the contents of the strings we passed to the RSpec `feature` and `scenario` methods that tell us what feature is under test.  Next we have information about a single failure.  RSpec helpfully prints out the precise code that is causing the problem `docking_station = DockingStation.new`, the type of error `NameError` and even tells us the line number and the complete file path where the issue occurred ` ./spec/features/public_accesses_bike_spec.rb:3:`.
 
-In this case, the problem is in the file `spec/feature/public_accesses_bike_spec.rb` on line 3. The error that occurred is [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and its explanation is _"uninitialized constant DockingStation"_.
+In this case, the problem is in the file `spec/feature/public_accesses_bike_spec.rb` on line 3. The error that occurred is [NameError](http://www.ruby-doc.org/core-2.1.2/NameError.html) and its explanation is `uninitialized constant DockingStation`.
 
-The _"uninitialized constant DockingStation"_ means that Ruby doesn't know what `DockingStation` is.
+The `uninitialized constant DockingStation` means that Ruby doesn't know what `DockingStation` is.
 
 Stop for a second and think about what could be the reason for this error. The answer may be obvious, but think about the most likely reason Ruby doesn't know about `DockingStation`.
 
 If you guessed that the `uninitialized constant DockingStation` error happened because we never defined what a DockingStation is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
 
-You may be tempted now to jump in and fix the error.  However, **we have now reached the crux of Behaviour Driven Development (BDD).  Before progressing any further, please read the [BDD pill&nbsp;:pill:](../pills/bdd.md) and use this understanding to anticipate the next move.  Discuss the next move with your pair partner - do you have the same idea?**
+You may be tempted now to jump in and fix the error.  However, **we have reached the crux of Behaviour Driven Development (BDD).  Before progressing any further, please read the [BDD pill&nbsp;:pill:](../pills/bdd.md).  In fact, we think BDD it's so important, we've written two pills, so please read the [BDD Cycle pill&nbsp;:pill:](../pills/bdd.md) as well and use this understanding to anticipate the next move.  Discuss the next move with your pair partner - do you have the same idea?**
 
 
-What we have here is a failing *feature test*.  Ideally, we want to test-drive our code using *unit tests.  Take a moment to discuss this with your pair partner.  What is the difference between a feature test and a unit test?  How does this relate to TDD?
+What we have here is a failing *feature test*.  Ideally, we want to test-drive our code using *unit tests*.  Take a moment to discuss this with your pair partner.  What is the difference between a feature test and a unit test?  How does this relate to TDD?
 
 
 This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has written this first test, and got the first error.  Errors are a great time to switch roles so you can work to the ['change-the-message' pairing protocol](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
@@ -102,7 +102,7 @@ end
 
 Now run RSpec again - do you expect it will work?
 
-You should be getting an RSpec failure again now, rather than a Ruby error.  Compare the failure with the failure we started with at the beginning of the stage.  Is it the same?  If not, why is it different?  Take some time to discuss this with you pair partner.  What will you do next?
+You should be getting an RSpec failure again now, rather than a Ruby error.  Compare the failure with the failure we started with at the beginning of the stage.  Is it the same?  If not, why is it different?  Take some time to discuss this with your pair partner.  What will you do next?
 
 It might feel like things are getting worse, but a new failure or error message is cause for celebration!  A new error or failure means more information that we can use to work out what is going on.  It might be hard to imagine it, but ultimately you will start to feel joy and excitement when you have a new error or failure:
 
@@ -125,7 +125,7 @@ Failed examples:
 rspec ./spec/features/public_accesses_bike_spec.rb:4 # member of public accesses bike docking station releases a working bike
 ```
 
-Our example is failing, which means that although we can now test the DockingStation class, it doesn't have the behaviour our scenario expects. Take a look at the list of failures in the output. There is only one: _"member of public accesses bike docking station releases a working bike"_. Where does the message come from? Look at the structure of the scenario.
+Our example is failing, which means that although we can now test the DockingStation class, it doesn't have the behaviour our scenario expects. Take a look at the list of failures in the output. There is only one: `member of public accesses bike docking station releases a working bike`. Where does the message come from? Look at the structure of the scenario.
 
 ```ruby
 feature 'member of public accesses bike' do
@@ -148,7 +148,7 @@ First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec
 
 So, the test is almost telling us what to do. We don't have the method `release_bike`, and it's tempting to just go ahead and create one, however we are at the *feature test* level, and we want to test-drive our code at the *unit test* level right?
 
-It might seem as though we are writing the same tests twice over.  After all, so far adding the unit test for `DockingStation` has not made any difference.  But remember that the tests have a different *purpose*.  The feature test is intended to test an overall outcome of a sequence of *integrations* (i.e. a number of objects working together) and is not concerned with the detail of each component within that test.  A unit test is concerned with the detail of a *single component* and is not concerned with how it might be used in the wider program.  In a trivial example such as this, these tests do look very familiar, but in a more complex system - as we will be building later in the course - they will not.
+It might seem as though we are writing the same tests twice over.  After all, so far adding the unit test for `DockingStation` has not made any difference.  But remember that the tests have a different *purpose*.  The feature test is intended to test an overall outcome of a sequence of *integrations* (i.e. a number of objects working together) and is not concerned with the detail of each component within that test.  A unit test is concerned with the detail of a *single component* and is not concerned with how it might be used in the wider program.  In a trivial example such as this, these tests do look very similar, but in a more complex system - as we will be building later in the course - they will not.
 
 Let's create a unit test for `release_bike` in `spec/docking_station_spec.rb`:
 
@@ -160,7 +160,7 @@ describe DockingStation do
 end
 ```
 
-Notice that we are using the more common RSpec `describe`/`it` syntax here.  The test is remarkably succinct; but does it not describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it is for.
+Notice that we are using the more common RSpec `describe`/`it` syntax here.  The test is remarkably succinct; but does it not also describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it does.
 
 We are using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax).  We could just as easily have written the test like so:
 
@@ -204,7 +204,7 @@ rspec ./spec/docking_station_spec.rb:4 # DockingStation should respond to #relea
 rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
 ```
 
-Let's pass this unit test by updatng the DockingStation class:
+Let's pass this unit test by updating the DockingStation class:
 
 ```ruby
 class DockingStation
