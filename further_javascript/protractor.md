@@ -84,7 +84,7 @@ This configuration tells Protractor where your test files (`specs`) are, and whe
 
 Now run the test with
 
-    protractor test/e2e/config.js
+    protractor test/e2e/conf.js
 
 You should see a Chrome browser window open up and navigate to the app, then close itself (this should be very fast!).
 
@@ -135,7 +135,7 @@ This uses the globals `element` and `by`, which are also created by Protractor. 
 
 Run the tests with
 
-    protractor test/e2e/config.js
+    protractor test/e2e/conf.js
 
 You should see the test fail - figure out why and fix it. Also, take a moment to think about why you should always see a test fail first before making it pass, both when doing TDD and covering a legacy app with tests (and yes, we haven't been totally  strict about this due to trying to rush you through new material!)
 
