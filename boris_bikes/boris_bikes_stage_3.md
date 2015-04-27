@@ -21,6 +21,7 @@ Now let's write our first unit test in spec/bike_spec.rb. Note that we are placi
 │   └── docking_station.rb
 └── spec
     ├── bike_spec.rb
+    ├── docking_station_spec.rb
     └── feature
         └── public_bike_access_spec.rb
 ```
