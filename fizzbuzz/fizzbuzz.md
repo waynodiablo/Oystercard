@@ -127,9 +127,18 @@ What are we doing here?  Our RSpec output told us `undefined method 'fizzbuzz'`,
 
 Although we have now defined the method `fizzbuzz`, RSpec is still unable to see it.  This is because RSpec knows nothing about the file `fizzbuzz.rb`.  We have to tell it.  In `fizzbuzz_spec.rb`, add the following line to the top of the file:
 ```ruby
-require_relative '../lib/fizzbuzz.rb'
+require 'fizzbuzz'
 ```
-Now run RSpec again.  Have we changed the message?  Discuss the output with your pair partner.  You may or may not wish to switch roles at this stage :twisted_rightwards_arrows:.
+Notice we did not specify the `lib` folder or the `.rb` extension.  Should we have done?  Discuss this with your pair partner.  Note also that the following two alternatives are also valid:
+```ruby
+require './lib/fizzbuzz'
+require_relative '../lib/fizzbuzz'
+```
+Discuss these three alternatives with your pair partner.  Which one do you prefer?  Why?
+
+Now run RSpec again.  Have we changed the message?  Do all three of the above alternatives result in the same message?  Discuss the output with your pair partner.  You may or may not wish to switch roles at this stage :twisted_rightwards_arrows:.
+
+It's important to question scenarios like the one above and not simply accept that they work 'by magic'.  Do some research online - try to understand what's happening behind the scenes.  In this case, RSpec actually adds `lib` to its `LOAD_PATH` by default.  This means that it will look for required files in `lib` automatically, which is why we can simply `require 'fizzbuzz'`.  Ruby will infer the `.rb` extension if it is omitted, so this is optional too.
 
 You should be seeing the message `wrong number of arguments (1 for 0)`.  We have not specified the arguments in our method definition.  When doing TDD for real, you would probably not stoop to this level unless you were practicing 'One-undermanship'.  Nevertheless, let's fix the message:
 ```ruby
