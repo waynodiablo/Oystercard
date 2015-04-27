@@ -326,7 +326,7 @@ describe('when searching for a user', function() {
   it('displays search results', function() {
     expect(ctrl.searchResult.items).toEqual(items);
   });
-});pr
+});
 ```
 Here we've set up some dummy results that mock the kind of results we expect to get back from the API. If you run Karma again you should see that this test is now failing.
 
