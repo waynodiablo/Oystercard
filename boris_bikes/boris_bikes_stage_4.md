@@ -41,6 +41,9 @@ feature 'member of public accesses bike' do
 end
 ```
 
+Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.** When we tell you something is important it's for a reason.
+
+
 Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **writing the code we wish we had**.
 
 ```ruby
