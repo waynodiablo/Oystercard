@@ -15,6 +15,35 @@ Fizzbuzz is a simple coding challenge, often described as a [code kata](http://c
 * When passed a number that is a multiple of *both* 3 and 5, the program ignores the previous 2 rules and returns the message 'Fizzbuzz'.
 * In all other cases, the program simply returns the given number.
 
+When complete we should be able to play in irb like so:
+
+```sh
+irb
+2.2.1 :001 > require './lib/fizzbuzz'
+ => true
+2.2.1 :002 > (1..20).each {|number| puts "#{number} --> #{fizzbuzz(number)}"}
+1 --> 1
+2 --> 2
+3 --> fizz
+4 --> 4
+5 --> buzz
+6 --> 6
+7 --> 7
+8 --> 8
+9 --> 9
+10 --> 10
+11 --> 11
+12 --> 12
+13 --> 13
+14 --> 14
+15 --> fizzbuzz
+16 --> 16
+17 --> 17
+18 --> 18
+19 --> 19
+20 --> 20
+```
+
 This exercise is ideal for discovering both TDD and pair programming.
 
 ## Introducing TDD
@@ -154,6 +183,20 @@ end
 ```
 Seriously?  Yes.  The critical point to understand here is that our production code *now fully meets the expectations defined in our tests*.  But we clearly haven't satisfied the specification of the program.
 
+We can see this by running the program in irb:
+
+```sh
+→ irb
+2.2.1 :001 > require './lib/fizzbuzz'
+ => true
+2.2.1 :002 > fizzbuzz(3)
+ => "fizz"
+2.2.1 :003 > fizzbuzz(4)
+ => "fizz"
+```
+
+We strongly recommend that you regularly check the functionality of your code in IRB as you go along.  We can see clearly here that we 'fizz' for 3, but we also do so for every number.  We need more tests!
+
 ## Writing the next test :twisted_rightwards_arrows:
 It should be clear now that we have two objectives in TDD:
 
@@ -167,7 +210,7 @@ Commit your code to git then discuss with your partner what the next test should
 ## Finishing Fizzbuzz
 Continue with the RED - GREEN - REFACTOR (commit) process until you have completely specified and coded Fizzbuzz.
 
-Use `irb` to run further tests.  Are there any edge cases that you have missed?  If so, write a test to cover each edge case.  Why is this so important?
+Use `irb` to run further manual tests.  Are there any edge cases that you have missed?  If so, write a test to cover each edge case.  Why is this so important?
 
 Try running Fizzbuzz for all numbers from 1 to 100 in `irb`.  Discuss with your pair partner different ways to do this.  Can you use Ruby to do this in one line of code (N.B. it must be elegant and readable)?
 
