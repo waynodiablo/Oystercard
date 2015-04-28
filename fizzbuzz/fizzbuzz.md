@@ -27,21 +27,21 @@ irb
 3 --> fizz
 4 --> 4
 5 --> buzz
-6 --> 6
+6 --> fizz
 7 --> 7
 8 --> 8
-9 --> 9
-10 --> 10
+9 --> fizz
+10 --> buzz
 11 --> 11
-12 --> 12
+12 --> fizz
 13 --> 13
 14 --> 14
 15 --> fizzbuzz
 16 --> 16
 17 --> 17
-18 --> 18
+18 --> fizz
 19 --> 19
-20 --> 20
+20 --> buzz
 ```
 
 This exercise is ideal for discovering both TDD and pair programming.
