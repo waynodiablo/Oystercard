@@ -10,7 +10,7 @@ So that I am not confused and charged unnecessarily,
 I'd like docking stations not to release bikes when there are none available.
 ```
 
-Let's imagine the `irb` interaction for this story.  For simplicity, we'll expect an exception to be raised when there are No bikes available.  Something like this perhaps:
+Let's imagine the `irb` interaction for this story.  For simplicity, we'll expect an exception to be raised when there are no bikes available.  Something like this perhaps:
 
 ```
 2.1.5 :001 > require './lib/docking_station'
@@ -22,7 +22,7 @@ RuntimeError: No bikes available
 	.... stack trace omitted ....
 ```
 
-Can you imagine the corresponding feature test?  Note that moving forward the walkthrough will fill in fewer and fewer of the gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.  Let's get you started:
+Can you imagine the corresponding feature test?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.  Let's get you started:
 
 ```ruby
 require 'docking_station'
@@ -41,7 +41,7 @@ feature 'member of public accesses bike' do
 end
 ```
 
-Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also writing the code we wish we had.
+Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **writing the code we wish we had**.
 
 ```ruby
 require 'docking_station'
@@ -61,24 +61,24 @@ feature 'member of public accesses bike' do
 end
 ```
 
-It follows that we should now drop down to the unit-test level to ensure that our docking station has the necessary dock method to initially receive a bike:
+It follows that we should now drop down to the unit-test level to ensure that our docking station has the necessary `dock` method to initially receive a bike:
 
 ```ruby
 require 'docking_station'
 
 describe DockingStation do
-  # existing test omitted for brevity
+  # existing tests omitted for brevity
 
   it { is_expected.to respond_to :dock }
 end
 ```
 
-However this isn't going to help our acceptance test too much, because we are calling dock with an argument.  We'll need a more rigorous test.  Fortunately, RSpec allows you to specify arguments:
+However this isn't going to help our acceptance test much, because we are calling dock *with an argument*.  We'll need a more rigorous test.  Fortunately, RSpec allows us to specify arguments:
 
 ```ruby
 require 'docking_station'
 describe DockingStation do
-  # existing test omitted for brevity
+  # existing tests omitted for brevity
 
   it { is_expected.to respond_to(:dock).with(1).argument }
 end
@@ -130,7 +130,7 @@ describe DockingStation do
 end
 ```
 
-Notice the nested `describe` block.  Why have we introduced this?  Until now, we have been describing behaviour in a general sense.  However, we are now describing behaviour specific to a particular method.  By nesting this in another `describe` block, we are able to DRY out our descriptions.
+Notice the nested `describe` block.  Why have we introduced this?  Until now, we have been describing behaviour in a general sense.  However, we are now describing behaviour *specific to a particular method*.  By nesting this in another `describe` block, we are able to DRY out our descriptions.
 
 Again we should now have a pair of failing tests that give very similar output:
 
@@ -172,7 +172,7 @@ end
 ```
 But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed two tests, but broken two others.
 
-We cannot really proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `release_bike` is called.
+We cannot proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `release_bike` is called.
 
 At a future point, `DockingStation` is going to need to manage multiple bikes.  However, at the moment we are only interested in passing our tests.  Let's do the simplest thing possible:
 
@@ -188,7 +188,7 @@ class DockingStation
   end
 end
 ```
-Great, now we've got three failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our previously-passing unit test now failing?
+Great, now we've got *three* failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our previously-passing unit test now failing?
 
 ```
 1) DockingStation releases working bikes
@@ -197,7 +197,7 @@ Great, now we've got three failing tests!  Let's take a moment to reflect on wha
    # ./spec/docking_station_spec.rb:8:in `block (2 levels) in <top (required)>'
 ```
 
-By default, our `@bike` instance variable in `DockingStation` is nil.  All Ruby instance variables are initially nil by default.  In order to have this DockingStation test pass we need to fix it as we did our feature test:
+By default, our `@bike` instance variable in `DockingStation` is `nil`.  All Ruby instance variables are initially `nil` by default.  In order to have this DockingStation test pass we need to fix it as we did our feature test:
 ```ruby
 describe DockingStation do
   # other tests omitted for brevity
