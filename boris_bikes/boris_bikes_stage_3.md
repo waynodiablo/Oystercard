@@ -53,7 +53,7 @@ describe Bike do
 end
 ````
 
-Notice that on the first line we have `describe Bike do` where we are referring directly to the class Bike.  We're not using a string description as we did in the feature test.  This is a feature of RSpec that gives us some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower level Ruby error.
+Notice that on the first line we have `describe Bike do` where we are referring directly to the class Bike.  We're not using a string description as we did in the feature test.  This is a feature of RSpec that gives us some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower-level Ruby error.
 
 This new error of course means its a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
 
@@ -84,7 +84,7 @@ Bike should respond to #working?
    # ./spec/bike_spec.rb:4:in `block (2 levels) in <top (required)>'
 ```
 
-First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)
+First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)  Where does this instance of the `Bike` class come from.  Discuss this with your pair parter.  Did we just read about it?
 
 So, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
 
@@ -118,7 +118,7 @@ Failed examples:
 rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
 ```
 
-We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to `working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.
+We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to 'working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.
 
 You should have ascertained that it is the `bike` variable.  But why?  Have a look at the code that assigns the bike variable `bike = docking_station.release_bike`.  What is returned by `docking_station.release_bike`?
 
@@ -154,7 +154,7 @@ class DockingStation
 end
 ```
 Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  Does it fail?  Discuss the output with your pair partner.  With this line still removed from your file, try running Boris Bikes in `irb`:
-'''sh
+```sh
 2.0.0-p195 :001 > require './lib/docking_station.rb'
  => true
 2.0.0-p195 :002 > station = DockingStation.new
@@ -165,12 +165,12 @@ NameError: uninitialized constant DockingStation::Bike
 	from (irb):3
 	from /Users/silvabox/.rvm/rubies/ruby-2.0.0-p195/bin/irb:16:in `<main>'
 2.0.0-p195 :004 >
-'''
+```
 What is going on here?  **It is very important that you understand this error message**.  Your code is running in two different environments.  One is provided by RSpec, the other by `irb`.  Take some time to discuss this with your pair partner.  Ask an [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) or coach to explain it if you don't understand.
 
 Add the `require_relative 'bike'` back in and repeat the test in `irb`.  **It's extremely good practice to break out and test in `irb` at appropriate intervals.**  Research the difference between `require` and `require_relative`.  Can you tell why we needed `require_relative` in this instance?
 
-Ironically, given how carefully we have test-driven our code via feature and unit tests, there is a problem it does not catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bullet proof.  A sanity check of the actual user interface is always recommended.
+Ironically, given how carefully we have test-driven our code via feature and unit tests, there is a problem it does not catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bulletproof.  A sanity check of the actual user interface is always recommended.
 
 Anyway, back to our tests.  Are they passing?  Why?
 
@@ -182,12 +182,12 @@ class Bike
   end
 end
 ```
-This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
+This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
 
 So now we have our working system, test-driven and sanity checked. We can compare this with the original interface specification and see that we are getting approximately the behavior we expect.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
 
-**However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
+**However all our examples pass, so it's a perfect time to commit our changes and push it to Github ([Version Control with Git&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
