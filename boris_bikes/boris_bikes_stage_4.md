@@ -195,7 +195,7 @@ end
 Great, now we've got three failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our previously-passing unit test now failing?
 
 ```
-1) DockingStation releases bikes that are not broken
+1) DockingStation releases working bikes
    Failure/Error: expect(bike).to be_working
      expected  to respond to `working?`
    # ./spec/docking_station_spec.rb:8:in `block (2 levels) in <top (required)>'
@@ -214,23 +214,36 @@ describe DockingStation do
 end
 ```
 
+Now we can finally create the functionality we expect:
+```ruby
+class DockingStation
 
-And now we should have the joy of seeing both our unit test and feature test both go green at the same time.
+  def release_bike
+    fail 'No bikes available' unless @bike
+    @bike
+  end
 
-It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that we'll probably need to store more bikes in future, but particularly when learning it is highly instructive to work carefully through much simpler versions of a system.  Also surprisingly even for experts it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a working simple base.
+  def dock bike
+    @bike = bike
+  end
+end
+```
+And we should have the joy of seeing both our unit test and feature test both go green at the same time.
 
-Furthermore, you never know when your customer is going to come back to you and say - actually we don't need that extra functionality.  Always build the simplest possible thing and get that working as a baseline. Allow your progress through a set of user stories and your ongoing interaction with the customer drive the addition of functionality to your system at the slowest possible rate.
+It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that we'll probably need to store more bikes in future but, particularly when learning, it is highly instructive to work carefully through much simpler versions of a system.  Also, surprisingly even for experts, it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a simple base.
+
+Notice also how the design of `DockingStation` and `Bike` has *emerged*.  We haven't directly considered the design of these classes at all - they have simply emerged from our tests.  This is a powerful feature of TDD and while there might seem like a lot of to-ing and fro-ing initially, we are constantly learning about the domain and finding the simplest way to model it.
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial. Here is a reminder of the the User Stories we have completed so far:
 
 ```
 As a member of the public
 So that I can get across town
-I'd like a docking station to release a bike that is not broken
+I'd like to get a working bike from a docking station.
 
-As a maintainer of the system,
-So that members of the public are not disappointed,
-I'd like docking stations to not release bikes when there are none available.
+As a member of the public,
+So that I am not confused and charged unnecessarily,
+I'd like docking stations not to release bikes when there are none available.
 ```
 
 Then time to move on to [Stage 5](boris_bikes_stage_5.md)!
