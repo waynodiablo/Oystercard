@@ -1,12 +1,8 @@
-##Stage 4: Refactoring vs New Features
+##Stage 4: Add the next Feature Test
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-Our feature test is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  However our DockingStation is very tightly coupled to the Bike class.  It might seem obvious that all a DockingStation ever needs to do is release Bikes, but Ruby programmers pride themselves on removing dependencies between objects.
-
-Our feature test requires an object that responds to the 'working?' method.  Ultimately, it doesn't care what the *class* of the object is.  In the future our client might want docking stations to release objects of class `MountainBike` or `Scooter` and we expect our user will continue to want objects that are working.  You can see an example of how we might decouple our objects in the [dependency injection pill&nbsp;:pill:](../pills/dependency_injection.md).
-
-However, this sort of refactoring might be considered premature as we may naturally evolve our code away from this tight coupling in due course.  Rather than rushing to refactor, let's consider another user story in the same part of the problem space:
+Our feature test is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
 
 ```
 As a member of the public,

@@ -42,6 +42,10 @@ Notice also that our first it statement is redundant.  Since we call the method 
 
 
 # Boris Bikes Stage 4
+Our feature test is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  However our DockingStation is very tightly coupled to the Bike class.  It might seem obvious that all a DockingStation ever needs to do is release Bikes, but Ruby programmers pride themselves on removing dependencies between objects.
+
+Our feature test requires an object that responds to the 'working?' method.  Ultimately, it doesn't care what the *class* of the object is.  In the future our client might want docking stations to release objects of class `MountainBike` or `Scooter` and we expect our user will continue to want objects that are working.  You can see an example of how we might decouple our objects in the [dependency injection pill&nbsp;:pill:](../pills/dependency_injection.md).
+
 
 Here is the corresponding test:
 

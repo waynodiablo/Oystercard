@@ -96,9 +96,9 @@ Our feature test involves both docking stations and bikes, so we'll have to driv
 
 [Stage 3](boris_bikes_stage_3.md)
 
-## Stage 4: Refactoring Vs New Features
+## Stage 4: Adding the next Feature Test
 
-Now we'll see that there is an opportunity to refactor our code to improve it's design, but is it premature?  Does it make more sense to first implement a feature that prevents the release of bikes when none are available?
+We'll implement the next feature, which prevents the release of bikes when none are available.
 
 [Stage 4](boris_bikes_stage_4.md)
 
