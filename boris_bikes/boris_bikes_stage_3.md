@@ -47,11 +47,11 @@ The output you can see here is called a [stack trace;&nbsp;:pill:](../pills/stac
 
 This is the same sort of error we had with the DockingStation in Stage 2. The part of our code that is responsible is clear and since we've already solved this sort of error once in our unit test for DockingStation you likely have a good idea about how to fix this one.  However you might be curious about why we get a Ruby error rather than an RSpec error.  Look closely at our Bike spec:
 
-````ruby
+```ruby
 describe Bike do
   it { is_expected.to respond_to :broken?}
 end
-````
+```
 
 Notice that on the first line we have `describe Bike do` where we are referring directly to the class Bike.  We're not using a string description as we did in the feature test.  This is a feature of RSpec that gives us some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower-level Ruby error.
 
@@ -93,8 +93,8 @@ class Bike
   def working?
 
   end
-en
-````
+end
+```
 
 Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.
 
