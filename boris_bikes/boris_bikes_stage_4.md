@@ -41,7 +41,7 @@ feature 'member of public accesses bike' do
 end
 ```
 
-Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.  When we tell you something is important, it's for a reason.**
+Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**  When we tell you something is important, it's for a reason.
 
 
 Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **writing the code we wish we had**.
@@ -175,7 +175,7 @@ end
 ```
 But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed two tests, but broken two others.
 
-That's the last time you need to be told to run `rspec`.  Every time you make a change to your tests or your production code, run `rspec`.  Did you try this example and run `rspec` as suggested, or did you read through?  **Take every available opportunity to explore the code and different outcomes.  Follow every path suggested.  Experimentation is the most powerful learning tool available to you.**
+That's the last time you need to be told to run `rspec`.  Every time you make a change to your tests or your production code, run `rspec`.  Did you try the above example and run `rspec` as suggested, or did you read through?  **Take every available opportunity to explore the code and different outcomes.  Follow every path suggested.  Experimentation is the most powerful learning tool available to you.**
 
 We cannot proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `release_bike` is called.
 
