@@ -34,7 +34,7 @@ Stop for a second and think about what could be the reason for this error. The a
 
 If you guessed that the `uninitialized constant DockingStation` error happened because we never defined what a DockingStation is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
 
-You may be tempted now to jump in and fix the error.  However, **we have reached the crux of Behaviour Driven Development (BDD).  Before progressing any further, please read the [BDD pill&nbsp;:pill:](../pills/bdd.md).  In fact, we think BDD it's so important, we've written two pills, so please read the [BDD Cycle pill&nbsp;:pill:](../pills/bdd.md) as well and use this understanding to anticipate the next move.  Discuss the next move with your pair partner - do you have the same idea?**
+You may be tempted now to jump in and fix the error.  However, **we have reached the crux of Behaviour Driven Development (BDD).  Before progressing any further, please read the [BDD pill&nbsp;:pill:](../pills/bdd.md).  In fact, we think BDD is so important, we've written two pills, so please read the [BDD Cycle pill&nbsp;:pill:](../pills/bdd.md) as well and use this understanding to anticipate the next move.  Discuss the next move with your pair partner - do you have the same idea?**
 
 
 What we have here is a failing *feature test*.  Ideally, we want to test-drive our code using *unit tests*.  Take a moment to discuss this with your pair partner.  What is the difference between a feature test and a unit test?  How does this relate to TDD?

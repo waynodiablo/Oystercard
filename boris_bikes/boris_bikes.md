@@ -31,6 +31,10 @@ So that I can get across town,
 I'd like to get a working bike from a docking station.
 
 As a member of the public,
+So that I am not confused and charged unnecessarily,
+I'd like docking stations not to release bikes when there are none available.
+
+As a member of the public,
 So that I am not charged for longer than necessary,
 I'd like to return a bike to a docking station.
 
@@ -46,13 +50,9 @@ As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like docking stations to accept returning bikes (broken or not).
 
-As a member of the public,
-So that I am not frustrated trying to find a bike,
-I'd like to know if a docking station has working bikes available.
-
-As a member of the public,
-So that I am not frustrated trying to return a bike,
-I'd like to know if a docking station has reached capacity and cannot receive any more bikes.
+As a maintainer of the system,
+So that I can control the distribution of bikes,
+I'd like docking stations not to accept more bikes than their capacity.
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
@@ -96,9 +96,9 @@ Our feature test involves both docking stations and bikes, so we'll have to driv
 
 [Stage 3](boris_bikes_stage_3.md)
 
-## Stage 4: Refactoring Vs New Features
+## Stage 4: Adding the next Feature Test
 
-Now we'll see that there is an opportunity to refactor our code to improve it's design, but is it premature?  Does it make more sense to first implement a feature that prevents the release of bikes when none are available?
+We'll implement the next feature, which prevents the release of bikes when none are available.
 
 [Stage 4](boris_bikes_stage_4.md)
 
