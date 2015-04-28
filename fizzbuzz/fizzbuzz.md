@@ -232,3 +232,6 @@ Can you do the whole of Fizzbuzz this way?
 * [Code kata](http://codekata.com/)
 * [RSpec pill :pill:](../pills/rspec.md)
 * [RSpec gem](https://github.com/rspec/rspec)
+
+Related Videos
+* [April 2015 intro to Fizzbuzz](https://www.youtube.com/watch?v=OaDSK3G8474)
