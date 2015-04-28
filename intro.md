@@ -104,8 +104,8 @@ Note, though, that there is far more complexity here than we can cover in 12 wee
 The Three Tier Architecture is the Rosetta Stone of web development.  We want you to be great programmers and great project managers, and great team members, but critically we are focused on helping you become web developers. Understanding this architecture is key.
 
 
-Archive
--------
+Related Videos
+--------------
 
 * [Video of April 2015 Intro Session](https://www.youtube.com/watch?v=TlSskjGryK4)
   - [Bonus "Learning to Learn" with Sam Morgan](https://www.youtube.com/watch?v=_NSQkqOk5x0)
