@@ -108,6 +108,6 @@ Archive
 -------
 
 * [Video of April 2015 Intro Session](https://www.youtube.com/watch?v=TlSskjGryK4)
-  - [Learning to Learn](https://www.youtube.com/watch?v=_NSQkqOk5x0)
+  - [Bonus "Learning to Learn" with Sam Morgan](https://www.youtube.com/watch?v=_NSQkqOk5x0)
 * [Video of March 2015 Intro Session](https://www.youtube.com/watch?v=zRb1WLbV_Sk)
 * [Video of December 2014 Intro Session](https://www.youtube.com/watch?v=eq4fbus_9TQ)
