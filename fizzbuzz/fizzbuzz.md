@@ -186,12 +186,12 @@ Seriously?  Yes.  The critical point to understand here is that our production c
 We can see this by running the program in irb:
 
 ```sh
-→ irb
+$ irb
 2.2.1 :001 > require './lib/fizzbuzz'
  => true
-2.2.1 :002 > fizzbuzz(3)
+2.2.1 :002 > fizzbuzz 3
  => "fizz"
-2.2.1 :003 > fizzbuzz(4)
+2.2.1 :003 > fizzbuzz 4
  => "fizz"
 ```
 
