@@ -457,7 +457,7 @@ Inside the controller you can now access the input value using `self.searchTerm`
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/464976bf46eda18e2cc6392a070d01d576bd1912)
 
-Delete the `console.log()`, once you're done testing. It's always a good idea to tidy up your code as you go along!
+Delete the `console.log()`, once you're done testing. It's always a good idea to tidy up your code as you go along! Note that we are leaving searchCtrl.searchTerm in our html, but we have not yet declared that in our controller. We will proceed to wire that up to the controller in the next section.
 
 ### Github API
 
