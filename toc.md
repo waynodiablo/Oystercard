@@ -3,7 +3,8 @@
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 * [Introduction](intro.md)
-* Week 1: [BDD, TDD and OOP/D: Boris Bikes](boris_bikes/boris_bikes.md)
+* Day 1: [TDD and Pair Programming: Fizzbuzz](fizzbuzz/fizzbuzz.md)
+* Week 1: [BDD, OOD: Boris Bikes](boris_bikes/boris_bikes.md)
 * Week 2: [More advanced OO with games: BattleShips](battle_ships/battle_ships.md)
 * Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_cucumber.md)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/bookmark_manager.md)
