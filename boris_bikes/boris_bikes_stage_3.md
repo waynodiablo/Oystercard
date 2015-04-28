@@ -2,87 +2,50 @@
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-So how do we model a bike, the subject of our first unit test? We need to distill everything that could be said about the bike to the most essential information about it that is relevant to the system we are building.
+So how do we model a bike?
 
-A bike has a great many properties. It has a number of gears, it has a certain weight, etc. but all that is not relevant for the task of renting them from our system. Therefore, we shouldn't be concerned with those properties. Our feature test is indicating that the only thing about the bike that concerns us right now is whether it's broken or not. Our bikes can be broken but we don't care about anything else at the moment. This is not the only possible starting point but it's a good start, and since we have started with a user story and feature test it seems likely that this functionality will be relevant to the end user.
+A bike has a great many properties. It has a number of gears, it has a certain weight, etc. but none of that is relevant to the task of renting a bike from our system. Therefore, we shouldn't be concerned with those properties. Our feature test is indicating that the only thing about the bike that concerns us right now is whether it's working or not.
 
-Let's write a specification for the bike that describes how we want the bike to behave. We're intentionally keeping everything very simple right now. It's not because this is a tutorial for beginners but because it's a good thing to do. As you design the system, you should move in small steps regardless of your experience.
+Let's write a specification for the bike that describes how we want the bike to behave. We're intentionally keeping everything very simple right now. It's not because this is a tutorial; it's just a good thing to do. As you design the system, you should move in small steps regardless of your experience.
 
-Create a file `spec/bike_spec.rb`. We'll put our bike examples there. The name should end in "_spec" since this is the convention :pill: [rspec](https://github.com/makersacademy/course/blob/master/pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
+Create a file `spec/bike_spec.rb`. The name should end in "_spec" since this is the convention [RSpec&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
 
-Now let's write our first unit test in spec/bike_spec.rb. Note that we are placing our unit test in the spec folder, and our feature tests go in spec/feauture.  Our file structure should look like this:
+Now let's write our first unit test in spec/bike_spec.rb. Note that we are placing our unit tests in the spec folder, and our feature tests in spec/features.  Our file structure should look like this:
 
 ```sh
-→ tree
+$ tree
 .
 ├── README.md
-├── Rakefile
 ├── lib
 │   └── docking_station.rb
 └── spec
     ├── bike_spec.rb
     ├── docking_station_spec.rb
     └── feature
-        └── public_bike_access_spec.rb
+        └── public_accesses_bike_spec.rb
 ```
 
 Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
 
 ```ruby
 describe Bike do
-  it { is_expected.to respond_to :broken?}
+  it { is_expected.to respond_to :working?}
 end
 ```
 
-Note that as before we are again starting with the least demanding kind of test, simple that bikes can respond to the 'broken?' method. So, we begin by writing an example (`it`) that describes what we want to see happening. We tell [rspec](http://rspec.info) that we are describing the class Bike (`describe`) and we want our bike to have a single feature: _we are expecting it to be able to respond to the broken? method_.  Here again we are using [RSpec's 'one liner' syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax).
+Note that as before we are simply starting with the least demanding kind of test; that bikes respond to the 'working?' method using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax).
 
-Given we have an idea of what this test does, let's run it.  Assuming you have no RuboCop style offences it will fail with a new type of error.
+```
+$ rspec
+/Users/silvabox/source/makers_academy/boris-bikes/spec/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
+	from /Users/silvabox/.rvm/gems/ruby-2.0.0-p195/gems/rspec-core-3.2.2/lib/rspec/core/configuration.rb:1226:in `load'
+	from /Users/silvabox/.rvm/gems/ruby-2.0.0-p195/gems/rspec-core-3.2.2/lib/rspec/core/configuration.rb:1226:in `block in load_spec_files'
+	...and so on
+```
 
-````
-→ rake
-Running RuboCop...
-Inspecting 5 files
-.....
+The output you can see here is called a [stack trace;&nbsp;:pill:](../pills/stack_trace.md). We need to learn how to read it to understand exactly where the problem lies. If you can't read the stack trace, you won't be able to pinpoint the error and fix it.
 
-5 files inspected, no offenses detected
-/Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
-/Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/spec/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `load'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `block in load_spec_files'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1224:in `each'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1224:in `load_spec_files'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:97:in `setup'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:85:in `run'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:70:in `run'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/runner.rb:38:in `invoke'
-	from /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec:4:in `<main>'
-/Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/ruby -I/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib:/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-support-3.2.2/lib /Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb failed
-
-````
-
-What you see here is called a [stack trace](https://en.wikipedia.org/wiki/Stack_trace). We need to learn how to read it to understand where exactly the problem lies. If you can't read the [stack trace](https://en.wikipedia.org/wiki/Stack_trace), you won't be able to pinpoint and fix it.
-
-The first line is the most important one. It explains what the problem was and where it occurred:
-
-````
-/Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/spec/bike_spec.rb:1:in `<top (required)>': uninitialized constant Bike (NameError)
-````
-
-In this case, the problem is in the file `bike_spec.rb` on line 1. The `<top (required)>` means that the code causing trouble is not part of any specific method. The error that occurred is of the type [NameError](http://www.ruby-doc.org/core-2.1.5/NameError.html) and it's human-readable explanation is _"uninitialized constant Bike"_.
-
-This is the same sort of error we had with the DockingStation in stage 1, however the format of the overall error is different.  RSpec has not been able to run completely, detect the error and present the error using it's own formatting.  This time a lower level Ruby error has been encountered that has preventing RSpec from completing its run.  We're seeing here a raw Ruby error, not an error that has been caught and formatted by RSpec as we saw with our feature test.
-
-Other lines in the output show the path in the code Ruby went through before encountering the error on line 1 of `bike_spec.rb`. The second line was executed right before the line 1 was executed.
-
-````ruby
-/Users/tansaku/.rvm/gems/ruby-2.1.5/gems/rspec-core-3.2.1/lib/rspec/core/configuration.rb:1226:in `load'
-````
-
-This tells us that a line 1226 in the file `configuration.rb` that is inside a method "load" called our line in bike_spec that ultimately caused an error. This file is part of the [rspec-core](https://github.com/rspec/rspec-core) gem, version 3.2.1 that's installed for the version of Ruby 2.1.5 managed by the Ruby Version Manager rvm (hence these files are all in ~/.rvm). Normally you wouldn't go there unless you suspect a gem is misbehaving or you want to really understand how it works. However, if this stack trace goes through your code for a while before raising an error, this information would be far more valuable.
-
-The next line in the stack trace shows what was executed directly before `configuration.rb:1226` and so on. In this case the stack trace is showing the flow of execution through the underlying system code before the error was encountered.  In general you'll be hunting through stack traces to see if there are any parts of your code being hit and focusing on those.
-
-Anyhow, the part of our code that is responsible is clear and since we've already solved this sort of error once for in our feature test for DockingStation you likely have a good idea about how to fix this one.  However you might be curious about why we get a Ruby error rather than an RSpec error.  Look closely at our Bike spec:
+This is the same sort of error we had with the DockingStation in Stage 2. The part of our code that is responsible is clear and since we've already solved this sort of error once in our unit test for DockingStation you likely have a good idea about how to fix this one.  However you might be curious about why we get a Ruby error rather than an RSpec error.  Look closely at our Bike spec:
 
 ````ruby
 describe Bike do
@@ -90,116 +53,97 @@ describe Bike do
 end
 ````
 
-Notice that on the first line we have `describe Bike do` where we are referring to the class Bike.  We're not using a string as we did in the feature test, where the string described the high level user story.  Here we are saying that our test will describe the Bike class.  As RSpec works on this file it has to go look for a Bike class before it can even run the tests specified in the 'it' blocks.  That's why we get the lower level Ruby error.
+Notice that on the first line we have `describe Bike do` where we are referring directly to the class Bike.  We're not using a string description as we did in the feature test.  This is a feature of RSpec that gives us some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower level Ruby error.
 
 This new error of course means its a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
 
 It seems likely we can fix this error by defining the bike. Create `lib/bike.rb` and define an empty Bike class.
 
-````ruby
+```ruby
 class Bike
+
 end
 ```
 
 And what's the other thing we'll need?  Of course we'll also need a `require` statement in the spec.
 
-````ruby
+```ruby
 require 'bike'
+
 describe Bike do
   it { is_expected.to respond_to :broken?}
 end
-````
+```
 
 **Now our example fails.**
 
-There's a difference between an error and a failure. An error happens when Ruby cannot run the example at all. For example, before we create a Bike class and required it, we couldn't run the test in principle – there was no class under test.
+```
+Bike should respond to #working?
+   Failure/Error: it { is_expected.to respond_to :working? }
+     expected #<Bike:0x007fb053c828b8> to respond to :working?
+   # ./spec/bike_spec.rb:4:in `block (2 levels) in <top (required)>'
+```
 
-However, now the example is failing, which means that we can test the Bike class but it doesn't have the behaviour our example expects. Take a look at the list of failures in the output.  We have two, one from our existing feature test and another from our unit test: _Bike should respond to #broken?_.
+First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)
 
-````ruby
-   Failure/Error: it { is_expected.to respond_to :broken? }
-     expected #<Bike:0x007fe2e92369b8> to respond to :broken?
-   # ./spec/bike_spec.rb:3:in `block (2 levels) in <top (required)>'
-````
+So, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
 
-First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it tells us that the method `broken?` is undefined. (As before with the Docking Station #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that we have in the "bike" variable).
-
-So, the test is almost telling us what to do. We don't have the method `broken?`, so let's create one. Update the Bike class to include this method.
-
-````ruby
+```ruby
 class Bike
-  def broken?
+  def working?
+
   end
-end
+en
 ````
 
-Our code is still extremely basic but we're getting somewhere.  Our Bike is not really complete, but it has suffcient functionality to now participate in our feature test.
+Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.
 
 We've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+```
+$ rspec
+..F
 
-Notice that this code still doesn't check that the Bike is initially not broken.  This corresponds to a more rigorous test, actually checking what the method returns.  We can do that with the following [predicate](https://www.relishapp.com/rspec/rspec-expectations/
-docs/built-in-matchers/predicate-matchers) syntax:
+Failures:
 
-````ruby
-require 'bike'
-describe Bike do
-  it { is_expected.to respond_to :broken? }
-  context 'when created' do
-    it { is_expected.not_to be_broken}
-  end
-end
-````
+  1) member of public accesses bike docking station releases a working bike
+     Failure/Error: expect(bike).to be_working
+       expected  to respond to `working?`
+     # ./spec/features/public_accesses_bike_spec.rb:6:in `block (2 levels) in <top (required)>'
 
-However interestingly even though this is a more rigorous test it will just pass as is.  Can you work out why?
+Finished in 0.00431 seconds (files took 1.27 seconds to load)
+3 examples, 1 failure
 
-Notice also that our first it statement is redundant.  Since we call the method 'broken?' in the second 'it' statement DockingStation is implicitly checked for responding to 'broken?'.  Arguably we could delete the first 'it' statement with no loss.  Let's do that.  It's good habit to get into; deleting code that is not doing anything for you.
+Failed examples:
 
+rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
+```
 
-### Making the feature test pass
+We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to `working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.
 
-So all our unit tests now pass, but still not our feature test.  As usual we want to do the absolutely simplest thing possible to make our test pass.  We might be tempted to bash away at application code, but it's our feature test that's failing, so we need a new unit test:
+You should have ascertained that it is the `bike` variable.  But why?  Have a look at the code that assigns the bike variable `bike = docking_station.release_bike`.  What is returned by `docking_station.release_bike`?
+
+Do we just go ahead and fix this now?  Or do we need to write some sort of test?  What sort of test?
+
 
 ```ruby
 describe DockingStation do
   it { is_expected.to respond_to :release_bike }
-  it 'releases bikes that are not broken' do
+
+  it 'releases working bikes' do
     bike = subject.release_bike
-    expect(bike).not_to be_broken
+    expect(bike).to be_working
   end
 end
 ```
 
-Running our tests now we should have a matching unit and acceptance test.  BTW, can you see any code that could safely be deleted now?
-
-Now, assuming that we have no more unrevealed feature test errors, what's the simplest thing we could possibly do to make this unit test pass?  How about updating our Docking Station as follows:
-
-```ruby
-class DockingStation
-  def release_bike
-    Bike.new
-  end
-end
+Argh!  We now have two failing tests!  But don't worry - that's progress and one of those tests is a unit test, so we can focus our attention there:
 ```
-
-Assuming no style violations this change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the absolutely simplest thing to do in order to get this test to pass.  Sometimes in the name of simplicity we will write code that we will refactor away later.  This code basically allows a DockingStation to be an unlimited generator of new Bikes.  This may not be how real Boris Bike docking stations work, however our feature and unit tests are not currently specifying anything different.  Any new functionality that you create in your system should be created through the process of writing new feature-tests and then unit-tests.  If you are tempted to add more complexity than is demanded by your tests then you are in a dangerous area.  You are creating code that will not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
-
-Ironically given how we have carefully test driven our code via feature and unit tests, there is actually a problem that it does not catch.  This is a fairly common experience for developers.  Even with great care, the best laid tests can fail to catch something that a user will then experience through the real interface.  Tests are great for taming complex systems but they are not bullet proof.  A sanity check of the actual user interface is always recommended.  For example if we try to run our system in IRB we get the following result:
-
-```sh
-→ irb
-2.1.5 :001 > require './lib/docking_station'
- => true
-2.1.5 :002 > d = DockingStation.new
- => #<DockingStation:0x007ffd41275df8>
-2.1.5 :003 > d.release_bike
-NameError: uninitialized constant DockingStation::Bike
-	from /Users/tansaku/Documents/Github/MakersAcademy/bdd_boris_bikes/lib/docking_station.rb:3:in `release_bike'
-	from (irb):3
-	from /Users/tansaku/.rvm/rubies/ruby-2.1.5/bin/irb:11:in `<main>'
+DockingStation releases working bikes
+     Failure/Error: expect(bike).to be_working
+       expected  to respond to `working?`
+     # ./spec/docking_station_spec.rb:8:in `block (2 levels) in <top (required)>'
 ```
-
-The problem is that RSpec, has eagerly loaded all the necessary files, and so our tests all pass.  Outside of the Rspec environment however, the DockingStation does not know about the Bike class.  If we fix that like so:
-
+So `release_bike` needs to return *something*.  We've already defined the `Bike` class, so let's return an *instance* of `Bike`:
 ```ruby
 require_relative 'bike'
 
@@ -209,20 +153,39 @@ class DockingStation
   end
 end
 ```
+Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  Does it fail?  Discuss the output with your pair partner.  With this line still removed from your file, try running Boris Bikes in `irb`:
+'''sh
+2.0.0-p195 :001 > require './lib/docking_station.rb'
+ => true
+2.0.0-p195 :002 > station = DockingStation.new
+ => #<DockingStation:0x007fe2241b2700>
+2.0.0-p195 :003 > bike = station.release_bike
+NameError: uninitialized constant DockingStation::Bike
+	from /Users/silvabox/source/makers_academy/boris-bikes/lib/docking_station.rb:3:in `release_bike'
+	from (irb):3
+	from /Users/silvabox/.rvm/rubies/ruby-2.0.0-p195/bin/irb:16:in `<main>'
+2.0.0-p195 :004 >
+'''
+What is going on here?  **It is very important that you understand this error message**.  Your code is running in two different environments.  One is provided by RSpec, the other by `irb`.  Take some time to discuss this with your pair partner.  Ask an [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) or coach to explain it if you don't understand.
 
-Research the difference between require and require_relative.  Can you tell why we needed require_relative in this instance?
+Add the `require_relative 'bike'` back in and repeat the test in `irb`.  **It's extremely good practice to break out and test in `irb` at appropriate intervals.**  Research the difference between `require` and `require_relative`.  Can you tell why we needed `require_relative` in this instance?
 
-```sh
-→ irb
-2.1.5 :001 > d = DockingStation.new
- => #<DockingStation:0x007fe6ab15bb40>
-2.1.5 :002 > b = d.release_bike
- => #<Bike:0x007fe6ab16b540>
-2.1.5 :003 > b.broken?
- => nil
+Ironically, given how carefully we have test-driven our code via feature and unit tests, there is a problem it does not catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bullet proof.  A sanity check of the actual user interface is always recommended.
+
+Anyway, back to our tests.  Are they passing?  Why?
+
+Let's do the simplest thing we can to pass our unit test:
+```ruby
+class Bike
+  def working?
+    true
+  end
+end
 ```
+This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
-So now we have our working system, test driven and sanity checked. We can compare this with the original interface specification and see that we are getting apprxcimately the behavior we expect.  We get a nil instead of a false, but those are equivalent in Ruby.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
+
+So now we have our working system, test-driven and sanity checked. We can compare this with the original interface specification and see that we are getting approximately the behavior we expect.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
 
 **However all our examples pass, so it's a perfect time to commit our changes and push it to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 
