@@ -154,7 +154,7 @@ class DockingStation
 end
 ```
 Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  Does it fail?  Discuss the output with your pair partner.  With this line still removed from your file, try running Boris Bikes in `irb`:
-```sh
+```
 2.0.0-p195 :001 > require './lib/docking_station.rb'
  => true
 2.0.0-p195 :002 > station = DockingStation.new
