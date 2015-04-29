@@ -81,3 +81,51 @@ class DockingStation
   end
 end
 ```
+# Boris Bikes stage 5
+
+Notice anything wrong here? We've just broken the independence of the docking station unit test.  It now requires knowledge of the Bike class.  If we think about things carefully we realise that we don't actually have to pass in a bike object at all in order to check this aspect of the DockingStation functionality.  We could just pass in symbols but we should probably switch to making consistent use of doubles since they will report any unexpected usage in a more consistent fashion:
+
+```ruby
+require 'docking_station'
+
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'raises an error when full' do
+    subject.dock double :bike
+    expect { subject.dock double :bike }.to raise_error 'Docking station full'
+  end
+end
+```
+
+This is also called the London style of unit-testing and we prefer it since it means our unit-tests are focused exclusively on testing a single class.  Our integration tests (that happen to be feature tests in this example) use the Chicago style of testing with multiple classes and check that our classes interact together effectively.
+
+Let's go on and make both levels of test pass with the following:
+
+
+
+Notice how in the process of making this functionality we've completely removed the alias_method and attr_* operations that were required by the ruby style guide?  This is a perfectly normal process of code revision that will take place time and time again.  We're not expecting our code to be perfect first time round.  We'll do the minimum to support an individual feature test, and then refactor and add more features as appropriate.
+
+
+Reflecting on our domain model so far, we see that in response to several user stories, we have created a bike which responds to the 'working?' method; a docking station that can dock a bike, release that bike and will raise errors if we try to dock a bike in a station that already has one, or release a bike when the docking station is empty.  Interestingly at the moment there is nothing that strongly ties the two objects together, although clearly we intend for bikes to the objects that docking stations hold.  Now it seems clear that we'd like to allow a docking station to hold multiple objects, specifically bikes.  Let's start implementing the user story that specifies a default capacity of 20.
+
+Both feature and unit tests should now pass, but something else fails:
+
+```sh
+1) DockingStation can dock a bike
+   Failure/Error: expect(subject.dock :bike).to eq :bike
+
+     expected: :bike
+          got: [:bike]
+
+     (compared using ==)
+```
+
+One of our earlier tests that relied on dock returning an instance of the bike that was docked is now getting an array of bikes as a side effect.  We can fix that easily, but this is a great example of the unexpected changes that we can get when we update code.  In the absence of the test, we might not have realized the change.  The 'can dock a bike' test starts to seem a little redundant (we test it implicitly when testing the docking station gets full) - should we delete it?  However it also seems like returning the entire array of bikes when docked is poor form - we're exposing internal state of the docking station that ideally we keep concealed unless absolutely necessary.  Let's fix that :
+
+```ruby
+it 'can dock a bike' do
+  expect(subject.dock :bike).to be nil
+end
+```
+
+Can you fix the DockingStation code to make this updated test pass.  Once you have, we should be all green and our docking station is starting to have some meat on it. There's also a some room for refactoring now.  Can you think of any possible changes to the DockingStation class?

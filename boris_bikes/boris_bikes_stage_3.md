@@ -49,7 +49,7 @@ This is the same sort of error we had with the DockingStation in Stage 2. The pa
 
 ```ruby
 describe Bike do
-  it { is_expected.to respond_to :broken?}
+  it { is_expected.to respond_to :working?}
 end
 ```
 
@@ -71,7 +71,7 @@ And what's the other thing we'll need?  Of course we'll also need a `require` st
 require 'bike'
 
 describe Bike do
-  it { is_expected.to respond_to :broken?}
+  it { is_expected.to respond_to :working?}
 end
 ```
 
@@ -184,10 +184,7 @@ end
 ```
 This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
-
-So now we have our working system, test-driven and sanity checked. We can compare this with the original interface specification and see that we are getting approximately the behavior we expect.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
-
-**However all our examples pass, so it's a perfect time to commit our changes and push it to Github ([Version Control with Git&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
+**All our examples pass, so it's a perfect time to commit our changes and push it to Github ([Version Control with Git&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
