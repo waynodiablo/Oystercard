@@ -593,7 +593,142 @@ ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur':
 
 [Git Diff](https://github.com/makersacademy/angularjs-intro/commit/90df9da42204112d8c2edb4efc4c120aa3e92cef)
 
-### Almost Finished
+### Adding a service.
+
+So we now have a functioning application that can query the github api and return results in a useable format. Let's think about making our code more maintainable.
+
+Looking at our code, we are currently performing an http request directly from our controller. Bearing in mind that the controllers responsibility is to provide an interface between the view and the view-model, it seems that making a request to an external API does not fall within that single responsibility. So let's look at refactoring that functionality into a type of service called a factory.
+
+As always, let's start with the tests. We're planning to extract the http request into a separate service, so let's start by ensuring that HttpBackend is testing that a get request would be sent:
+
+``` javascript
+  beforeEach(inject(function($httpBackend) {
+      httpBackend = $httpBackend
+      httpBackend
+        .expectGET("https://api.github.com/search/users?access_params=yourtoken&q=hello")
+        .respond(
+          { items: items }
+        );
+  }));
+```
+This is simply setting an expectation that a get request will be sent. Don't worry, HttpBackend will automatically stub that request before it is sent to github. Let's just make absolutely sure that these expectations will be met:
+
+```javascript
+  afterEach(function() {
+    httpBackend.verifyNoOutstandingExpectation();
+    httpBackend.verifyNoOutstandingRequest();
+   });
+```
+This will check after every test that the expected requests have been made, and that no extra requests have been made. At this stage, your tests should still pass. Now let's create a test for our new factory, in a new file ```spec/searchfactory.spec.js```:
+
+```javascript
+describe('factory: Search', function() {
+
+  var search;
+
+  beforeEach(module('GitUserSearch'));
+
+  beforeEach(inject(function(Search) {
+    search = Search;
+  }));
+
+  it('responds to query', function() {
+    expect(search.query).toBeDefined();
+  });
+
+});
+```
+
+So what is going on here?
+
+We are describing a new factory called 'Search'. We are instantiating a new angular module before every test. Then we are instantiating a new instance of Search factory that will be injected into the test. By instantiating a new angular module and a new factory before every test, we ensure that no state is maintained between each test - so each test runs in isolation.
+
+if you run your tests now, you should see something like:
+
+```
+PhantomJS 1.9.8 (Mac OS X) factory: Search responds to query FAILED
+  Error: [$injector:unpr] Unknown provider: SearchProvider <- Search
+```
+So, our tests are now driving us to create a new service called Search. 
+
+``` javascript
+githubUserSearch.factory('Search', ['$http', function($http) {
+
+}]);
+```
+
+If we run our tests, we now see ``` Error: [$injector:undef] Provider 'Search' must return a value from $get factory method. ```.
+
+This is prompting us to return a response to the method 'query'. Factories expose their API by returning a block or a function - this block provides the interface. To add the smallest possible amount of code to pass the test, add something like this to our factory:
+
+```javascript
+  return {
+    query: 'foo'
+  }
+```
+
+All we are doing here is returning an object, thus defining .query as a message that can be called on the factory. The tests should now pass, but we still haven't got any functionality.
+
+So, lets start moving http functionality over from the controller to the service. Start by injecting the $httpBackend service into our tests in a beforeEach function, exactly as we did for the controller:
+
+```
+beforeEach(inject(function($httpBackend) {
+    httpBackend = $httpBackend
+    httpBackend
+      .when("https://api.github.com/search/users?q=hello")
+      .respond(
+        { items: items }
+      );
+  }));
+```
+
+This creates some duplication, but we'll refactor that later. The next step is to test the promise that is returned by our http request:
+
+```javascript
+it('returns search results', function() {
+  search.query('hello')
+    .then(function(response) {
+      expect(response.data).toEqual(items)
+    })
+})
+```
+So what is all this? HTTP requests in angular return a promise. This means you have to wait for the request to be fulfilled in order for that promise to contain the data you need. The .then method will wait for a promise to be completed before executing the code - in this case, our expectation. Watch the test fail, then let's fix the code:
+
+```javascript
+githubUserSearch.factory('Search', ['$http', function($http) {
+  var queryUrl = 'https://api.github.com/search/users';
+  return {
+    query: function(searchTerm) {
+      return $http({
+        url: queryUrl,
+        method: 'GET',
+        params: {
+          'q': searchTerm
+        }
+      }); 
+    }
+  }
+}]);
+```
+Now we are using the $http service to make an http request. The details of the request are in a config block. Where do you think we might add our github access token?
+
+We should now have 4 passing tests, but we still haven't wired up our factory to our controller:
+
+```javascript
+githubUserSearch.controller('GitUserSearchController', ['Search', function(Search) {
+  var self = this;
+ 
+  self.doSearch = function() {
+    Search.query(self.searchTerm)
+      .then(function(response) {
+        self.searchResult = response.data;
+      })
+  };
+}]);
+```
+This basically collects the promise from the factory, and when the request completes, it updates the viewmodel. 
+
+Our tests should still all pass.
 
 There's a couple of things to clean up:
 
