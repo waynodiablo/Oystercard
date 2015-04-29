@@ -71,7 +71,7 @@ And what's the other thing we'll need?  Of course we'll also need a `require` st
 require 'bike'
 
 describe Bike do
-  it { is_expected.to respond_to :broken?}
+  it { is_expected.to respond_to :working?}
 end
 ```
 
