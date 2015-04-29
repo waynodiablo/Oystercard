@@ -21,11 +21,11 @@ $ tree
 └── spec
     ├── bike_spec.rb
     ├── docking_station_spec.rb
-    └── feature
+    └── features
         └── public_accesses_bike_spec.rb
 ```
 
-Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively.
+Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself.  It is essential that you type the code out yourself or you will not learn effectively.
 
 ```ruby
 describe Bike do
@@ -49,7 +49,7 @@ This is the same sort of error we had with the DockingStation in Stage 2. The pa
 
 ```ruby
 describe Bike do
-  it { is_expected.to respond_to :broken?}
+  it { is_expected.to respond_to :working?}
 end
 ```
 
@@ -86,7 +86,9 @@ Bike should respond to #working?
 
 First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)  Where does this instance of the `Bike` class come from.  Discuss this with your pair parter.  Did we just read about it?
 
-So, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
+Note also that RSpec will generate two failures here - one from the feature test and one from the unit test; both related to the absence of the 'working?' method - this is good and reassures us that our unit test is going to help us fix our feature test.
+
+Further, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
 
 ```ruby
 class Bike
@@ -96,9 +98,10 @@ class Bike
 end
 ```
 
-Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.
+Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.  Running RSpec we should see that our unit test passes, but our feature test does not.  It is still stuck on the same error as before, indicating there is more work to do :-/
 
-We've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+However we've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+
 ```
 $ rspec
 ..F
@@ -118,7 +121,7 @@ Failed examples:
 rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
 ```
 
-We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to 'working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.
+We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to 'working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.  Try manually running the feature test in irb if you are having trouble working it out.
 
 You should have ascertained that it is the `bike` variable.  But why?  Have a look at the code that assigns the bike variable `bike = docking_station.release_bike`.  What is returned by `docking_station.release_bike`?
 
@@ -136,14 +139,17 @@ describe DockingStation do
 end
 ```
 
-Argh!  We now have two failing tests!  But don't worry - that's progress and one of those tests is a unit test, so we can focus our attention there:
+Now we have a matched pair of failing tests again (one feature and one unit) but don't worry - that's progress; we're chipping away at the functionality needed for the feature with a succession of unit tests.  Let's focus our attention on the unit test:
+
 ```
 DockingStation releases working bikes
      Failure/Error: expect(bike).to be_working
        expected  to respond to `working?`
      # ./spec/docking_station_spec.rb:8:in `block (2 levels) in <top (required)>'
 ```
+
 So `release_bike` needs to return *something*.  We've already defined the `Bike` class, so let's return an *instance* of `Bike`:
+
 ```ruby
 require_relative 'bike'
 
@@ -153,7 +159,9 @@ class DockingStation
   end
 end
 ```
+
 Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  Does it fail?  Discuss the output with your pair partner.  With this line still removed from your file, try running Boris Bikes in `irb`:
+
 ```
 2.0.0-p195 :001 > require './lib/docking_station.rb'
  => true
@@ -175,6 +183,7 @@ Ironically, given how carefully we have test-driven our code via feature and uni
 Anyway, back to our tests.  Are they passing?  Why?
 
 Let's do the simplest thing we can to pass our unit test:
+
 ```ruby
 class Bike
   def working?
@@ -182,10 +191,10 @@ class Bike
   end
 end
 ```
-This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not be completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instancce always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
+This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instance always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
-So now we have our working system, test-driven and sanity checked. We can compare this with the original interface specification and see that we are getting approximately the behavior we expect.  More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
+So now we have our working system, test-driven and sanity checked. We can compare this with the original specification of what we wanted the user to experience via the irb interface and see that we are getting approximately the behavior we expect. **Please ensure you do run the feature test manually in IRB before proceeding.** More seriously, doing the simplest thing possible has introduced a nasty design smell into our code.  DockingStation is now very tightly coupled to the Bike class.  It now can't be tested independently of Bike, and we are missing an opportunity to make our classes more flexible and maintainable.  Let's see how we can improve on our existing design with a refactoring step.
 
 **However all our examples pass, so it's a perfect time to commit our changes and push it to Github ([Version Control with Git&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 

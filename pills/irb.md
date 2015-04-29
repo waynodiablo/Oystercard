@@ -71,7 +71,7 @@ When you want to quit irb, just type `exit`.
 Advanced IRB
 ------------
 
-You can control what happens when you start irb using a .irbirc file placed in your home directory, e.g.
+You can control what happens when you start irb using a .irbrc file placed in your home directory, e.g.
 
 ```ruby
 Dir['./lib/*.rb'].each { |f| require f }
