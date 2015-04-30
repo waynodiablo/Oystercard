@@ -13,6 +13,7 @@ I'd like docking stations not to release bikes when there are none available.
 Let's imagine the `irb` interaction for this story.  For simplicity, we'll expect an exception to be raised when there are no bikes available.  Something like this perhaps:
 
 ```
+$ irb
 2.1.5 :001 > require './lib/docking_station'
  => true
 2.1.5 :002 > docking_station = DockingStation.new
@@ -44,7 +45,7 @@ end
 Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**  When we tell you something is important, it's for a reason.
 
 
-Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **writing the code we wish we had**.
+Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.
 
 ```ruby
 require 'docking_station'
@@ -193,9 +194,11 @@ class DockingStation
   end
 end
 ```
+
 ```sh
 $ rspec
 ```
+
 Great, now we've got *three* failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our previously-passing unit test now failing?
 
 
@@ -207,6 +210,7 @@ Great, now we've got *three* failing tests!  Let's take a moment to reflect on w
 ```
 
 By default, our `@bike` instance variable in `DockingStation` is `nil`.  All Ruby instance variables are initially `nil` by default.  In order to have this DockingStation test pass we need to fix it as we did our feature test:
+
 ```ruby
 describe DockingStation do
   # other tests omitted for brevity
@@ -233,6 +237,7 @@ class DockingStation
   end
 end
 ```
+
 And we should have the joy of seeing both our unit test and feature test both go green at the same time.
 
 It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that we'll probably need to store more bikes in future but, particularly when learning, it is highly instructive to work carefully through much simpler versions of a system.  Also, surprisingly even for experts, it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a simple base.
