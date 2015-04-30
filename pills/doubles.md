@@ -5,7 +5,7 @@ What makes a good test?
 
 Well, if we want to get scientific about it (and we do), then it's ensuring that a test has _only one variable_.
 
-You can write beautifully worded tests (and you should), with exquisitly succinct code (and you should), but how can you be absolutely sure that your beautifully succinct tests are not passing by mistake?  Or failing by accident?
+You can write beautifully worded tests (and you should), with exquisitely succinct code (and you should), but how can you be absolutely sure that your beautifully succinct tests are not passing by mistake?  Or failing by accident?
 
 Enter doubles, mocks stubs and spies.
 
