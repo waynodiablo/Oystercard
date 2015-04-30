@@ -22,11 +22,11 @@ Tuesdays, Wednesday and Thursdays are pair programming project days.  You will w
 
 Organizational meetings are designed to reflect those used in real software companies with a team meeting early every morning.  Real software companies often work in iterations of 2 to 4 weeks, however we have compressed that structure at Makers to accelerate your progress.  In a single week you will have between 6-10 short (<15 min) standup meetings to coordinate with other students in your Byte (morning and afternoon).  Meetings on Monday can run a little longer as part of code review and planning for the week.  Meetings on Fridays can also run a little longer for reflecting on the week (retrospectives).  The pattern of Plan, Execute (with coordination standups) and Reflect is the heart of Agile Software Development.  More details on that below, but first here is the more detailed structure of the week:
 
-![Makers Week Details](images/makers-week-details.png)
+![Makers Week Details](images/makers-week-details-v2.png)
 
 Note that each byte standup should consist of going round every member of the byte, and having them answer to the group three questions of the form 'what did you do yesterday?', 'what, if anything, is blocking you?', and 'what is your plan for the day?'.  The idea with a standup is to go into as little detail as possible, for example.  "Yesterday I worked with my pair on test-driving the creation of a Van class, and we got stuck on RSpec shared examples.  Today we are going to continue on that and hopefully resolve the issue".  The idea is for everyone to be in the loop about where each other is and what they are stuck on.  Any longer discussion should be moved to another meeting - potentially immediately after the standup.  It's the responsibility of everyone in the standup to ensure that long discussions do not break out, and that if longer discussions are needed that these are scheduled for later.
 
-Once the quick standup is out the way there is time for an optional breakout session.  The coach is there to help support this breakout session.  Starting the breakout sessions assumes that everyone in the standup has been able to answer their three questions, and now everyone is in the loop about where everyone is and what is blocking them.  The breakout session can then be less formal, sitting down, involving some or all of the students in the byte, using a whiteboard, or using a projector.  Ideally the breakout session should not take too long, and some students may want to go straight off to pairing, but ultimately it is up to the coach and students to coordinate what they do in a breakout session, if one happens at all.
+Once the quick standup is out the way there is time for a content deliver session in the morning.  This will usually be with the whole cohort to set the agenda for the day.  In the afternoon there are optional breakout sessions. Starting these assumes that everyone in the standup has been able to answer their three questions, and now everyone is in the loop about where everyone is and what is blocking them.  The breakout session can then be less formal, sitting down, involving some or all of the students in the byte, using a whiteboard, or using a projector.  Ideally the breakout session should not take too long, and some students may want to go straight off to pairing, but ultimately it is up to the coach and students to coordinate what they do in a breakout session, if one happens at all.
 
 
 Overview of the Course Week
@@ -104,8 +104,10 @@ Note, though, that there is far more complexity here than we can cover in 12 wee
 The Three Tier Architecture is the Rosetta Stone of web development.  We want you to be great programmers and great project managers, and great team members, but critically we are focused on helping you become web developers. Understanding this architecture is key.
 
 
-Archive
--------
+Related Videos
+--------------
 
-* [Video of March Intro Session](https://www.youtube.com/watch?v=zRb1WLbV_Sk)
-* [Video of December Intro Session](https://www.youtube.com/watch?v=eq4fbus_9TQ)
+* [Video of April 2015 Intro Session](https://www.youtube.com/watch?v=TlSskjGryK4)
+  - [Bonus "Learning to Learn" with Sam Morgan](https://www.youtube.com/watch?v=_NSQkqOk5x0)
+* [Video of March 2015 Intro Session](https://www.youtube.com/watch?v=zRb1WLbV_Sk)
+* [Video of December 2014 Intro Session](https://www.youtube.com/watch?v=eq4fbus_9TQ)

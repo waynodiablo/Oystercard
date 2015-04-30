@@ -65,7 +65,7 @@ Because we don't want to commit those dependencies we need to add `bower_compone
 
 Right then - maybe now would be a good time to commit your work.
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/b83f1590c990ad64cc5e89daa1a01498b85c3167)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/6c6ded23e91066f1972c60e08e9de4a963c7dbae)
 
 ### Let's sketch out some HTML
 
@@ -112,7 +112,7 @@ What we're doing here is stubbing out what we want the page to look like with so
 
 Go ahead and `open index.html`. Have a play and get it looking how you want.
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/68bb5c01a7e3a6b84ca5bfa220a9b21121171bf0)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/a68c6fb0773778375c6c26cf115e2ec512f18160)
 
 ### Creating the Angular module
 
@@ -139,7 +139,7 @@ Now that we've created an app we need to wire it up to the HTML. Place `ng-app="
 
 Notice that Angular uses the **string** to wire up the app and not the **variable**; it's `'GitUserSearch'` and not `githubUserSearch`.
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/f83c6bad7adc3b3de60b3c29f59119fa8b7cf449)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/f236ebbda39f9d06a2a764c3f5e68c0dc2b1170c)
 
 ### Setting up our test environment
 
@@ -250,7 +250,7 @@ karma start test/karma.conf.js
 
 Notice that this will throw an error since we haven't got any tests!
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/e5c1d5229211a1670b8b19515cffb3df94fa5f6a)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/5987e7e327639a37ddc98669d2bf9d21010c71ee)
 
 ### Adding a controller
 
@@ -299,7 +299,7 @@ We're indicating that everything inside the `body` tag is handled by the `GitUse
 
 We've forgotten to do something, try and figure it out - and careful as it won't be picked up in our tests.
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/23e1f0e4a32fa507a7f78045e4afe7b1b42d4a18)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/a1c7ab0221d575e7a76a540042facf104a3c26b8)
 
 > Make sure your tests are now passing before moving on with the walkthrough!
 
@@ -355,7 +355,7 @@ What we're doing here is creating a property `searchResult` in our controller wi
 
 Check your tests again. This time the second test is passing but the original one is failing - this is because `ctrl.searchResult` is no longer undefined when we first initialise the app. We will fix this in the next section!
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/1ed66b9cda1e05a88f2a90ec6385538bb93d48d3)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/938c5273d7037a3a44ad455cca7eb6057ba3f492)
 
 To get the data we've just added to our controller into your view, amend your `index.html`, replacing the `ul.list-group` with the following:
 
@@ -436,7 +436,7 @@ it('displays search results', function() {
 
 Finally our tests are passing again!
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/1a5973574543c56690e74cb77a5585399f69d83a)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/f211d830e06d56a89287f7904e32927dca97c27d)
 
 ### Data Binding (Again)
 
@@ -455,9 +455,9 @@ Inside the controller you can now access the input value using `self.searchTerm`
 
 > Ideally we'd test this rather than just use a console.log, but for that we'd need to use [Protractor](https://github.com/angular/protractor) - Angular's answer to Capybara. Unfortunately that's outside the scope of this walkthrough, so [we've added a bonus subwalkthrough](/further_javascript/protractor.md).
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/464976bf46eda18e2cc6392a070d01d576bd1912)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/058b57c1071bc51d4ba9669dd338b28fe096c701)
 
-Delete the `console.log()`, once you're done testing. It's always a good idea to tidy up your code as you go along!
+Delete the `console.log()`, once you're done testing. It's always a good idea to tidy up your code as you go along! Note that we are leaving searchCtrl.searchTerm in our html, but we have not yet declared that in our controller. We will proceed to wire that up to the controller in the next section.
 
 ### Github API
 
@@ -573,13 +573,13 @@ describe('GitUserSearchController', function() {
 
 Try changing the search term. What happens to your tests?
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/fbb25ba4d7289bb074affe79c85c7214cf2657ba)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/91909c9d580dce3d9c3fa4d4ef295e7c8e953eb8)
 
 ### Auto-Search
 
 Now what we'd like to do is search when the user types something in. There are two parts to this: [ng-change](https://docs.angularjs.org/api/ng/directive/ngChange) and [ng-model-options](https://docs.angularjs.org/api/ng/directive/ngModelOptions). The first part  `ng-change` defines what you want to do when the element you've bound it to changes. But the question remains - when to fire the change event? On every key press? On `blur`? This is where `ng-model-options` comes in.
 
-The first part is simple: we just need to bind `ng-change` to our `doSearch` function inside our text value.
+The first part is simple: we just need to bind `ng-change` to our `doSearch` function inside our text value. There is a deliberate mistake in the code below - can you figure out what is wrong?
 
 ```html
 <input type="text" ng-model="searchTerm" ng-change="doSearch()">
@@ -591,7 +591,7 @@ The second part needs a bit more thought. On our text box we want to fire the ch
 ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }"
 ```
 
-[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/3c52b375db930c8f45ecae6e2d5a8d168c008bd0)
+[Git Diff](https://github.com/makersacademy/angularjs-intro/commit/90df9da42204112d8c2edb4efc4c120aa3e92cef)
 
 ### Almost Finished
 

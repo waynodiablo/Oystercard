@@ -58,6 +58,11 @@ attributed to Sam Livingston Gray
 
 ![OneUndermanship](/images/OneUndermanShip.png)
 
+Articles on Pair Programming
+-------------
+
+* [Pairing with Junior Developers](https://devmynd.com/blog/2015-1-pairing-with-junior-developers)
+
 Pair Programming Research
 -------------
 

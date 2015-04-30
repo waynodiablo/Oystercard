@@ -204,6 +204,8 @@ rspec ./spec/docking_station_spec.rb:4 # DockingStation should respond to #relea
 rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
 ```
 
+That the feature test and the unit test are getting stuck on the same point (the absence of the 'release_bike' method), is good.  It is telling us that if we can make the unit test pass, that it should help the feature test pass.  We're breaking down the larger problem of implementing the whole feature into little slices.
+
 Let's pass this unit test by updating the DockingStation class:
 
 ```ruby
@@ -236,7 +238,24 @@ rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses
 
 This error is a little more difficult to interpret.  At the moment our `release_bike` method returns nothing; a `nil` in fact.  `nil` is represented as an empty string in the failure message `expected  to respond to 'working?'`.  It might have been better if RSpec had reported `expected NilClass to respond to 'working?'` and maybe in a future release it will.
 
+Let's just check our code in irb, manually stepping through our feature test:
 
-Again, we need to drop from our feature test level into our unit test level.  Also, since we've changed the error message, it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the [change-the-message pairing methodology](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
+```sh
+$ irb
+2.2.1 :001 > require './lib/docking_station'
+ => true
+2.2.1 :002 > station = DockingStation.new
+ => #<DockingStation:0x007f8433082578>
+2.2.1 :003 > bike = station.release_bike
+ => nil
+2.2.1 :004 > bike.working?
+NoMethodError: undefined method `working?' for nil:NilClass
+	from (irb):4
+	from /Users/tansaku/.rvm/rubies/ruby-2.2.1/bin/irb:11:in `<main>'
+```
+
+Note that we can see exactly the same problem as is identified by the tests.  If we didn't have feature tests we'd have to be manually checking this by hand every time, and you can imagine how laborious that would become as the system grows in size.
+
+Anyhow, to fix this issue, we need to drop from our feature test level into our unit test level again.  Also, since we've changed the error message, it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the [change-the-message pairing methodology](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
 
 Before progressing to [Stage 3](boris_bikes_stage_3.md), discuss with your pair partner what you need to test next.  What needs to respond to `working?`?

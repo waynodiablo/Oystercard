@@ -131,7 +131,7 @@ This uses the globals `element` and `by`, which are also created by Protractor. 
   - `by.class('btn')` to find the element with the given class. This finds `<button class="btn">`.
   - `by.binding('user.login')` to find the element bound to the variable `user.login`. This finds the element containing `{{user.login}}`
 
-  [Learn more about locators and ElementFinders](/docs/locators.md).
+  [Learn more about locators and ElementFinders](http://angular.github.io/protractor/#/locators/).
 
 Run the tests with
 
