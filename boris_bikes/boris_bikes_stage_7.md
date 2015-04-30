@@ -31,8 +31,7 @@ describe DockingStation do
 
   describe 'dock' do
     it 'raises an error when full' do
-      capacity = DockingStation::DEFAULT_CAPACITY
-      capacity.times { subject.dock Bike.new }
+      subject.capacity.times { subject.dock Bike.new }
       expect { subject.dock Bike.new }.to raise_error 'Docking station full'
     end
   end
@@ -51,8 +50,7 @@ Let's take a look at our `dock` test:
 ```ruby
 describe 'dock' do
   it 'raises an error when full' do
-    capacity = DockingStation::DEFAULT_CAPACITY
-    capacity.times { subject.dock Bike.new }
+    subject.capacity.times { subject.dock Bike.new }
     expect { subject.dock Bike.new }.to raise_error 'Docking station full'
   end
 end
@@ -62,8 +60,7 @@ We are actually creating 21 instances of `Bike` in this test.  However, the test
 ```ruby
 describe 'dock' do
   it 'raises an error when full' do
-    capacity = DockingStation::DEFAULT_CAPACITY
-    capacity.times { subject.dock double :bike }
+    subject.capacity.times { subject.dock double :bike }
     expect { subject.dock double :bike }.to raise_error 'Docking station full'
   end
 end
