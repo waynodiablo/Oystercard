@@ -110,7 +110,7 @@ Now take some time to review the user stories with your pair partner.  Write a n
 
 Make sure all of your feature and unit tests are passing.
 
-Let's consider some refactoring.  Our feature test looks like it could use some attention.  Check out public_accesses_bike_spec.rb:
+Let's consider some refactoring.  Our feature test looks like it could use some attention.  Check out `public_accesses_bike_spec.rb`:
 
 ```ruby
 feature 'member of public accesses bike' do
@@ -136,37 +136,39 @@ feature 'member of public accesses bike' do
 end
 ```
 
-
-
-We're declaring DockingStations over and over.  We could make this feature test 'describe' DockingStation, but it's a feature (and in our case an integration) test that is testing both Bike and DockingStation so let's use an alternative.  A 'let' statement:
+We're declaring `DockingStation.new` three times.  We could make this feature test `describe DockingStation` and use RSpec's implicitly defined subject, but it's a feature test that is testing both Bike and DockingStation so let's use an alternative.  A `let` statement:
 
 ```ruby
 feature 'member of public accesses bike' do
+
   let(:docking_station) { DockingStation.new }
-  scenario 'docking station releases a bike that is not broken' do
+
+  scenario 'docking station releases a working bike' do
     docking_station.dock Bike.new
     bike = docking_station.release_bike
-    expect(bike).not_to be_broken
+    expect(bike).to be_working
   end
-  scenario 'docking station unable to release as none available' do
-    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+
+  scenario 'docking station does not release a bike when there are none available' do
+    expect { docking_station.release_bike }.to raise_error 'No bikes available'
   end
-  scenario 'docking station will not include any broken bikes in those available' do
-    broken_bike = Bike.new
-    broken_bike.break
-    docking_station.dock broken_bike
-    expect { docking_station.release_bike }.to raise_error 'No Bikes Available'
+
+  scenario 'docking station does not release broken bikes' do
+    bike = Bike.new
+    bike.report_broken
+    docking_station.dock bike
+    expect { docking_station.release_bike }.to raise_error 'No bikes available'
   end
 end
 ```
 
-Notice how we've replaced three lines of identical code with a single let statement.  Each programmer has their own rule of thumb, but something being repeated three times is good time to consider DRYing out your code.  Although remember that every time you DRY out code you are introducing a dependency that may catch you out later.  It's important to consider if the set of identical elements you are consolidating may need to vary at some point in the future ...
+Notice how we've replaced three lines of identical code with a single `let` statement.  Each programmer has their own rule of thumb, but something being repeated three times is good time to consider DRYing out your code.  Although remember that every time you DRY out code you are introducing a dependency that may catch you out later.  It's important to consider if the set of identical elements you are consolidating may need to vary at some point in the future ...
 
 Every time you extract a commonality you are adding a dependency.  DRYing out your code is very important, but developing an intuition for just when to do it is also critical.
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
-**Now all our examples pass and we've refactored, a perfect time to commit our changes. Push them to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someones been driving for too long.
+**Now all our examples pass and we've refactored, a perfect time to commit our changes. Push them to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someone's been driving for too long.
 **
 
 Time to move on to [Stage 7](boris_bikes_stage_7.md)!
