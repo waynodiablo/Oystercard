@@ -599,7 +599,7 @@ So we now have a functioning application that can query the github api and retur
 
 Looking at our code, we are currently performing an http request directly from our controller. Bearing in mind that the controllers responsibility is to provide an interface between the view and the view-model, it seems that making a request to an external API does not fall within that single responsibility. So let's look at refactoring that functionality into a type of service called a factory.
 
-As always, let's start with the tests. We're planning to extract the http request into a separate service, so let's start by ensuring that HttpBackend is testing that a get request would be sent:
+As always, let's start with the tests. We're planning to extract the http request into a separate service, so let's start by ensuring that HttpBackend is testing that a get request would be sent. Change the following code in test/gitUserSearchController.spec.js:
 
 ``` javascript
   beforeEach(inject(function($httpBackend) {
@@ -611,7 +611,7 @@ As always, let's start with the tests. We're planning to extract the http reques
         );
   }));
 ```
-This is simply setting an expectation that a get request will be sent. Don't worry, HttpBackend will automatically stub that request before it is sent to github. Let's just make absolutely sure that these expectations will be met:
+This is simply setting an expectation that a get request will be sent. Don't worry, HttpBackend will automatically stub that request before it is sent to github. Let's just make absolutely sure that these expectations will be met, by adding the following code into the same describe block:
 
 ```javascript
   afterEach(function() {
@@ -641,7 +641,7 @@ describe('factory: Search', function() {
 
 So what is going on here?
 
-We are describing a new factory called 'Search'. We are instantiating a new angular module before every test. Then we are instantiating a new instance of Search factory that will be injected into the test. By instantiating a new angular module and a new factory before every test, we ensure that no state is maintained between each test - so each test runs in isolation.
+We are describing a new factory called 'Search'. We are instantiating a new angular module before every test. Then we are instantiating a new instance of Search factory for each test and injecting it in. By instantiating a new angular module and a new factory before every test, we ensure that no state is maintained between each test - so each test runs in isolation.
 
 if you run your tests now, you should see something like:
 
@@ -649,7 +649,7 @@ if you run your tests now, you should see something like:
 PhantomJS 1.9.8 (Mac OS X) factory: Search responds to query FAILED
   Error: [$injector:unpr] Unknown provider: SearchProvider <- Search
 ```
-So, our tests are now driving us to create a new service called Search. 
+So, our tests are now driving us to create a new service called Search. Make a file ``` js/searchFactory.js ``` and add the following code.
 
 ``` javascript
 githubUserSearch.factory('Search', ['$http', function($http) {
@@ -659,7 +659,7 @@ githubUserSearch.factory('Search', ['$http', function($http) {
 
 If we run our tests, we now see ``` Error: [$injector:undef] Provider 'Search' must return a value from $get factory method. ```.
 
-This is prompting us to return a response to the method 'query'. Factories expose their API by returning a block or a function - this block provides the interface. To add the smallest possible amount of code to pass the test, add something like this to our factory:
+This is prompting us to return a response to the method 'query'. Factories expose their API by returning an object or a function to provides the interface. To add the smallest possible amount of code to pass the test, add something like this to our factory:
 
 ```javascript
   return {
@@ -682,7 +682,7 @@ beforeEach(inject(function($httpBackend) {
   }));
 ```
 
-This creates some duplication, but we'll refactor that later. The next step is to test the promise that is returned by our http request:
+This creates some duplication, which you should refactor later. The next step is to test the promise that is returned by our http request:
 
 ```javascript
 it('returns search results', function() {
@@ -732,6 +732,8 @@ Our tests should still all pass.
 
 There's a couple of things to clean up:
 
+* Although our tests pass, the website doesn't work. Why might that be?
+* We left some duplications in the test, with HttpBackend - how can we refactor that?
 * Notice how when you clear the text box you're still trying to search.
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
