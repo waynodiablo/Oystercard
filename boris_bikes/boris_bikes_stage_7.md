@@ -1,4 +1,4 @@
-## Stage 6.5 - Doubles
+## Stage 7 - Introducing Doubles
 
 Take a look at the unit tests for docking station:
 
@@ -141,3 +141,5 @@ end
 Of course, we are introducing doubles retrospectively and normally we would use doubles from the very start, so issues like this would be less likely to arise.
 
 This particular style of testing - where every dependency is mocked out using doubles is called the 'London' style.  There is another style called the 'Chicago' style.  Research these two styles with your pair partner and discuss each approach.  Which do you prefer?  Why?
+
+Now move on to [Stage 8](boris_bikes_stage_8.md)

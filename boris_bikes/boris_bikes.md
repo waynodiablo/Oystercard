@@ -114,17 +114,23 @@ Bikes still can't break because we haven't looked at stories involving broken bi
 
 [Stage 6](boris_bikes_stage_6.md)
 
-## Stage 7: Feature Tests for Van and Garage
+## Stage 7: Introducing Doubles
+
+Bikes still can't break because we haven't looked at stories involving broken bikes.  In stage 5 we address two stories that are intimately tied to bikes being broken, i.e. those about preventing docking stations accepting broken bikes but not releasing them.
+
+[Stage 7](boris_bikes_stage_7.md)
+
+## Stage 8: Feature Tests for Van and Garage
 
 Finally we have two more user stories relating to the Van and the Garage.  You've seen how the BDD acceptance-unit test cycle works.  This stage is less structured - make your own feature tests, unit tests and application functionality and consider the refactoring hints we give you.
 
-[Stage 7](boris_bikes_stage_7.md)
+[Stage 8](boris_bikes_stage_8.md)
 
 Now, just like a real project the client has come back to us with more requests:
 
 ## More User Stories/Feature Requests from the Client (OPTIONAL)
 
-[Stage 8](boris_bikes_stage_8.md)
+[Stage 9](boris_bikes_stage_9.md)
 
 
 ## Supporting Material

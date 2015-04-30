@@ -1,4 +1,4 @@
-## Stage 7: Feature Tests for Van & Garage
+## Stage 8: Feature Tests for Van & Garage
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -204,4 +204,4 @@ The advantage is that we have the same interface. The disadvantage is that we ha
 
 There's a really good overview of [potential strategies you could use on StackOverflow](http://stackoverflow.com/questions/4470108/when-monkey-patching-a-method-can-you-call-the-overridden-method-from-the-new-i_). Try using `alias_method` and `prepend` (and maybe others) and discuss their advantages and disadvantages with other students and coaches.
 
-Once you've finished up here check out the [Stage 8](boris_bikes_stage_8.md) extension!
+Once you've finished up here check out the [Stage 9](boris_bikes_stage_9.md) extension!
