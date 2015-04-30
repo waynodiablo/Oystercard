@@ -240,7 +240,7 @@ This error is a little more difficult to interpret.  At the moment our `release_
 
 Let's just check our code in irb, manually stepping through our feature test:
 
-```sh
+```
 $ irb
 2.2.1 :001 > require './lib/docking_station'
  => true
