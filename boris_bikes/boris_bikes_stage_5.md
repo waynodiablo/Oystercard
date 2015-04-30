@@ -187,7 +187,7 @@ class DockingStation
 end
 ```
 
-This is a good start, but it still doesn't feel right.  Is a docking station full if the count of bikes exceeds the default capacity or the specific capacity for the particular station?
+This is a good start, but it still doesn't feel right.  Is a docking station full if the count of bikes exceeds the default capacity; or the specific capacity for that station?
 
 It feels like we need a `capacity` attribute for our docking station.  But we can't introduce one without a unit test:
 ```ruby
@@ -199,14 +199,6 @@ describe DockingStation do
   end
 end
 ```
-
-This is a good opportunity to introduce `context`.  Can you infer what a context is by reading the code above?  `context` is another RSpec convenience.  It allows us to create a block of related tests that happen within a certain context; in this case, when the docking station is initialized.  We could have written it like this:
-```ruby
-it 'has a default capacity when initialized' do
-  ...
-end
-```
-...but it was a nice opportunity to introduce you to contexts.
 
 See if you can make this test pass.  Hint: use `attr_reader` to create the `capacity` method and use `initialize` to set its initial value.  Don't forget to change the `full?` method to use our new `capacity`.
 
@@ -249,17 +241,13 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No bikes available' if working_bikes.empty?
-    bikes.delete working_bikes.pop
+    fail 'No bikes available' ifcbikes.empty?
+    bikes.pop
   end
 
   private
 
   attr_reader :bikes
-
-  def working_bikes
-    bikes.reject { |bike| bike.broken? }
-  end
 
   def full?
     bikes.count >= capacity
@@ -273,11 +261,6 @@ end
 
 We prefer to reference our instance variable within our class via getter methods in order to DRY out the '@' symbols, and so also that if we need to make some consistent initialization or change to our instance variable, then we can do it in one place, rather than having to update a series of scattered references to instance variables throughout the class.
 
-You may have implemented your docking station differently.  However, take a moment to examine `release_bike`:
-```ruby
-  fail 'No bikes available' if working_bikes.empty?
-  bikes.delete working_bikes.pop
-```
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
