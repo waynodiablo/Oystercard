@@ -81,3 +81,152 @@ class DockingStation
   end
 end
 ```
+# Boris Bikes stage 5
+
+Notice anything wrong here? We've just broken the independence of the docking station unit test.  It now requires knowledge of the Bike class.  If we think about things carefully we realise that we don't actually have to pass in a bike object at all in order to check this aspect of the DockingStation functionality.  We could just pass in symbols but we should probably switch to making consistent use of doubles since they will report any unexpected usage in a more consistent fashion:
+
+```ruby
+require 'docking_station'
+
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'raises an error when full' do
+    subject.dock double :bike
+    expect { subject.dock double :bike }.to raise_error 'Docking station full'
+  end
+end
+```
+
+This is also called the London style of unit-testing and we prefer it since it means our unit-tests are focused exclusively on testing a single class.  Our integration tests (that happen to be feature tests in this example) use the Chicago style of testing with multiple classes and check that our classes interact together effectively.
+
+Let's go on and make both levels of test pass with the following:
+
+
+
+Notice how in the process of making this functionality we've completely removed the alias_method and attr_* operations that were required by the ruby style guide?  This is a perfectly normal process of code revision that will take place time and time again.  We're not expecting our code to be perfect first time round.  We'll do the minimum to support an individual feature test, and then refactor and add more features as appropriate.
+
+
+Reflecting on our domain model so far, we see that in response to several user stories, we have created a bike which responds to the 'working?' method; a docking station that can dock a bike, release that bike and will raise errors if we try to dock a bike in a station that already has one, or release a bike when the docking station is empty.  Interestingly at the moment there is nothing that strongly ties the two objects together, although clearly we intend for bikes to the objects that docking stations hold.  Now it seems clear that we'd like to allow a docking station to hold multiple objects, specifically bikes.  Let's start implementing the user story that specifies a default capacity of 20.
+
+Both feature and unit tests should now pass, but something else fails:
+
+```sh
+1) DockingStation can dock a bike
+   Failure/Error: expect(subject.dock :bike).to eq :bike
+
+     expected: :bike
+          got: [:bike]
+
+     (compared using ==)
+```
+
+One of our earlier tests that relied on dock returning an instance of the bike that was docked is now getting an array of bikes as a side effect.  We can fix that easily, but this is a great example of the unexpected changes that we can get when we update code.  In the absence of the test, we might not have realized the change.  The 'can dock a bike' test starts to seem a little redundant (we test it implicitly when testing the docking station gets full) - should we delete it?  However it also seems like returning the entire array of bikes when docked is poor form - we're exposing internal state of the docking station that ideally we keep concealed unless absolutely necessary.  Let's fix that :
+
+```ruby
+it 'can dock a bike' do
+  expect(subject.dock :bike).to be nil
+end
+```
+
+Can you fix the DockingStation code to make this updated test pass.  Once you have, we should be all green and our docking station is starting to have some meat on it. There's also a some room for refactoring now.  Can you think of any possible changes to the DockingStation class?
+
+# Stage 6
+
+
+Our two different tests fail in two different ways now.  Our unit test catches the problem at the lower level that our broken? method returns nil rather than true or false and our higher level feature test finds that a broken bike is still released by the docking station when it should be giving an error indicating that no working bikes are currently available.
+
+As was the case with the docking station needing an instance variable to store a docked bike, we have a combination of tests that force us to write some logic.  The simplest thing we can do to make the currently failing tests pass is to have the broken? method just return true.  Try it and see.  A different combination of tests will fail.  Apparently, our bike should maintain some internal state that should be changed when we break it.
+
+Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
+
+````ruby
+class Bike
+
+  # the initialize method is always called when you create a new
+  # class by typing Bike.new
+  def initialize
+    # all instance variables begin with "@"
+    # this must be an instance variable because we'll need it
+    # in other methods
+    @broken = false
+  end
+
+  def broken?
+    # instance variables are accessible in all methods
+    @broken
+  end
+
+  def break
+    # and any instance method can update them
+    @broken = true
+  end
+
+end
+````
+
+Although RuboCop will ask us to use attr_reader to define trivial reader methods like broken?  Let's go ahead and do that:
+
+```ruby
+class Bike
+  attr_reader :broken
+  alias_method :broken?, :broken
+
+  def intialize
+    @broken = false
+  end
+
+  def break
+    @broken = true
+  end
+end
+```
+
+Now our bike's unit tests will all pass, but our feature test is still failing.  Nothing is stopping the docking station from releasing broken bikes.  Again we might be tempted to get straight in and fix code but note that it's a feature test that's failing, so we should respond by creating another unit test; this time for the docking station.  However we have a quandary, we need to write a unit test that will rely on a bike being in a particular state, i.e. broken.  We might be tempted to write a docking station unit test like so:
+
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = Bike.new
+    broken_bike.break
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+However our docking station unit test is now locked to the Bike class.  If we were using the Chicago style of testing this might be acceptable, but we prefer the London style of cleanly independent unit testing at Makers.  The problem is that the symbols that we've been using so far are not going to cut it for this kind of test.  The symbol :bike is a great stand in if we just want something to take a place in an array, but it won't respond to the 'broken?' method.  This is where we need to use a double.  A double is like a stunt double.  It can do a few things that the real actor can do, but not all.  We use doubles like so:
+
+
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = double :bike, broken?: true
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+Here we use call the 'double' method to create something that will report it's name as :bike and will respond to the 'broken?' method with a true value.  It's a stand-in stunt double for a bike that ensures that we are not relying on the real Bike to work in order to test the DockingStation
+
+A quick change to our docking station now allows us to exclude broken bikes from being considered when we are checking if the station is empty like so:
+
+```ruby
+def empty?
+  bikes.reject{|b| b.broken?}.length == 0
+end
+```
+
+Here we are using the Array reject method.  Look up [reject in the ruby Array documentation](http://ruby-doc.org/core-2.2.0/Array.html#method-i-reject) if you are unclear how it works.  Note that RuboCop insists we use an even more concise format:
+
+```ruby
+def empty?
+  bikes.reject(&:broken?).length == 0
+end
+```
+
+which means the same thing, but programmers love to be concise.  This simple change and all our tests should pass.
+
+We've done several cycles of red/green jumping back and forth between feature and unit test levels, but are there any more refactoring opportunities?  Take a look through the code to see if you can find any.
