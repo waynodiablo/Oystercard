@@ -129,3 +129,104 @@ end
 ```
 
 Can you fix the DockingStation code to make this updated test pass.  Once you have, we should be all green and our docking station is starting to have some meat on it. There's also a some room for refactoring now.  Can you think of any possible changes to the DockingStation class?
+
+# Stage 6
+
+
+Our two different tests fail in two different ways now.  Our unit test catches the problem at the lower level that our broken? method returns nil rather than true or false and our higher level feature test finds that a broken bike is still released by the docking station when it should be giving an error indicating that no working bikes are currently available.
+
+As was the case with the docking station needing an instance variable to store a docked bike, we have a combination of tests that force us to write some logic.  The simplest thing we can do to make the currently failing tests pass is to have the broken? method just return true.  Try it and see.  A different combination of tests will fail.  Apparently, our bike should maintain some internal state that should be changed when we break it.
+
+Let's introduce an instance variable that holds this information. This must be an instance variable because this data is applicable only to a specific instance of the `Bike` class. One bike (instance of `Bike`) may be broken, whereas another one may not be. So we need an instance variable to save it.
+
+````ruby
+class Bike
+
+  # the initialize method is always called when you create a new
+  # class by typing Bike.new
+  def initialize
+    # all instance variables begin with "@"
+    # this must be an instance variable because we'll need it
+    # in other methods
+    @broken = false
+  end
+
+  def broken?
+    # instance variables are accessible in all methods
+    @broken
+  end
+
+  def break
+    # and any instance method can update them
+    @broken = true
+  end
+
+end
+````
+
+Although RuboCop will ask us to use attr_reader to define trivial reader methods like broken?  Let's go ahead and do that:
+
+```ruby
+class Bike
+  attr_reader :broken
+  alias_method :broken?, :broken
+
+  def intialize
+    @broken = false
+  end
+
+  def break
+    @broken = true
+  end
+end
+```
+
+Now our bike's unit tests will all pass, but our feature test is still failing.  Nothing is stopping the docking station from releasing broken bikes.  Again we might be tempted to get straight in and fix code but note that it's a feature test that's failing, so we should respond by creating another unit test; this time for the docking station.  However we have a quandary, we need to write a unit test that will rely on a bike being in a particular state, i.e. broken.  We might be tempted to write a docking station unit test like so:
+
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = Bike.new
+    broken_bike.break
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+However our docking station unit test is now locked to the Bike class.  If we were using the Chicago style of testing this might be acceptable, but we prefer the London style of cleanly independent unit testing at Makers.  The problem is that the symbols that we've been using so far are not going to cut it for this kind of test.  The symbol :bike is a great stand in if we just want something to take a place in an array, but it won't respond to the 'broken?' method.  This is where we need to use a double.  A double is like a stunt double.  It can do a few things that the real actor can do, but not all.  We use doubles like so:
+
+
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+  it 'does not release broken bikes' do
+    broken_bike = double :bike, broken?: true
+    subject.dock broken_bike
+    expect { subject.release_bike }.to raise_error 'No Bikes Available'
+  end
+end
+```
+
+Here we use call the 'double' method to create something that will report it's name as :bike and will respond to the 'broken?' method with a true value.  It's a stand-in stunt double for a bike that ensures that we are not relying on the real Bike to work in order to test the DockingStation
+
+A quick change to our docking station now allows us to exclude broken bikes from being considered when we are checking if the station is empty like so:
+
+```ruby
+def empty?
+  bikes.reject{|b| b.broken?}.length == 0
+end
+```
+
+Here we are using the Array reject method.  Look up [reject in the ruby Array documentation](http://ruby-doc.org/core-2.2.0/Array.html#method-i-reject) if you are unclear how it works.  Note that RuboCop insists we use an even more concise format:
+
+```ruby
+def empty?
+  bikes.reject(&:broken?).length == 0
+end
+```
+
+which means the same thing, but programmers love to be concise.  This simple change and all our tests should pass.
+
+We've done several cycles of red/green jumping back and forth between feature and unit test levels, but are there any more refactoring opportunities?  Take a look through the code to see if you can find any.
