@@ -182,19 +182,41 @@ class DockingStation
   # other code omitted for brevity
 
   def full?
-    bikes.length >= DEFAULT_CAPACITY
+    bikes.count >= DEFAULT_CAPACITY
   end
 end
 ```
 
-Is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?
+This is a good start, but it still doesn't feel right.  Is a docking station full if the count of bikes exceeds the default capacity or the specific capacity for the particular station?
+
+It feels like we need a `capacity` attribute for our docking station.  But we can't introduce one without a unit test:
+```ruby
+describe DockingStation do
+  # other tests omitted for brevity
+
+  it 'has a default capacity' do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+end
+```
+
+This is a good opportunity to introduce `context`.  Can you infer what a context is by reading the code above?  `context` is another RSpec convenience.  It allows us to create a block of related tests that happen within a certain context; in this case, when the docking station is initialized.  We could have written it like this:
+```ruby
+it 'has a default capacity when initialized' do
+  ...
+end
+```
+...but it was a nice opportunity to introduce you to contexts.
+
+See if you can make this test pass.  Hint: use `attr_reader` to create the `capacity` method and use `initialize` to set its initial value.  Don't forget to change the `full?` method to use our new `capacity`.
+
+Is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?  Actually, since docking station is already taking care of this, we can use the `capacity` that's already defined:
 
 ```ruby
 describe DockingStation do
   describe 'dock' do
     it 'raises an error when full' do
-      capacity = DockingStation::DEFAULT_CAPACITY
-      capacity.times { subject.dock Bike.new }
+      subject.capacity.times { subject.dock Bike.new }
       expect { subject.dock Bike.new }.to raise_error 'Docking station full'
     end
   end
@@ -203,19 +225,22 @@ end
 feature 'member of public returns bike' do
   scenario 'bike cannot be docked when station is full' do
     docking_station = DockingStation.new
-    capacity = DockingStation::DEFAULT_CAPACITY
-    capacity.times { docking_station.dock Bike.new }
+    docking_station.capacity.times { docking_station.dock Bike.new }
     expect { docking_station.dock Bike.new }.to raise_error 'Docking station full'  
   end
 end
 ```
-We might also use a private attr_reader to have all our references to the `@bikes` instance variable go through a single interface:
+We might also use a private `attr_reader` to have all our references to the `@bikes` instance variable go through a single interface:
 
 ```ruby
 class DockingStation
   DEFAULT_CAPACITY = 20
+
+  attr_reader :capacity
+
   def initialize
     @bikes = []
+    @capacity = DEFAULT_CAPACITY
   end
 
   def dock bike
@@ -224,16 +249,20 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No Bikes Available' if empty?
-    bikes.pop
+    fail 'No bikes available' if working_bikes.empty?
+    bikes.delete working_bikes.pop
   end
 
   private
 
   attr_reader :bikes
 
+  def working_bikes
+    bikes.reject { |bike| bike.broken? }
+  end
+
   def full?
-    bikes.length >= DEFAULT_CAPACITY
+    bikes.count >= capacity
   end
 
   def empty?
@@ -243,6 +272,12 @@ end
 ```
 
 We prefer to reference our instance variable within our class via getter methods in order to DRY out the '@' symbols, and so also that if we need to make some consistent initialization or change to our instance variable, then we can do it in one place, rather than having to update a series of scattered references to instance variables throughout the class.
+
+You may have implemented your docking station differently.  However, take a moment to examine `release_bike`:
+```ruby
+  fail 'No bikes available' if working_bikes.empty?
+  bikes.delete working_bikes.pop
+```
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
@@ -286,7 +321,7 @@ class DockingStation
 end
 ```
 
-however if docking station capacities can vary over their lifetime them perhaps we could create a writeable attribute like so:
+however if docking station capacities can vary over their lifetime then perhaps we could create a writeable attribute like so:
 
 ```ruby
 class DockingStation
