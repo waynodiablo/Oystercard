@@ -100,8 +100,7 @@ This is because your app is not being served anywhere (especially not at the htt
 
 * create a Node server to host your app (difficulty: hard - at this stage)
 * strap it to a Sinatra server (difficulty: medium)
-* `npm install --save http-server`, then run `http-server` (difficulty: you just did it!)
-
+* `npm install --save http-server`, `npm install http-server -g`, then run `http-server` (difficulty: you just did it!)
 
 Run your tests again. The test output should be `1 tests, 1 assertion, 0 failures`. Congratulations, you've run your first Protractor test!
 
