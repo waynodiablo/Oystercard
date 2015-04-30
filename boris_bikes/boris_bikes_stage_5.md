@@ -14,7 +14,20 @@ This is a great user story to pick next as it introduces an entirely new concept
 
 Does the client want docking stations that store just 1 bike or should they store 20, 50, 100?  This would be a good time to check with the client what the storage capacity requirements are for docking stations.  Perhaps they weren't discussed in the initial client meeting.  
 
-In the meantime, let's assume a capacity of 1.  It's a fairly unreasonable assumption; but in order to do the least amount of work to support the user story, let's create a feature test that raises an error when trying to dock a bike into a station that already has a bike.
+In the meantime, let's assume a capacity of 1.  It's a fairly unreasonable assumption; but in order to do the least amount of work to support the user story, let's create a feature test that raises an error when trying to dock a bike into a station that already has a bike.  Remember that all we are doing here is writing out the code that we would like to be able to run in irb:
+
+```
+$ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > docking_station = DockingStation.new
+ => #<DockingStation:0x007fe022230258 ...>
+2.1.5 :003 > docking_station.dock Bike.new
+RuntimeError: DockingStation
+	.... stack trace omitted ....
+```
+
+becomes:
 
 `spec/features/public_returns_bike_spec.rb`:
 ```ruby
@@ -26,7 +39,9 @@ feature 'member of public returns bike' do
   end
 end
 ```
-Now drop into the unit test:
+
+Ensure this fails in the correct and fashion and then drop into a unit test:
+
 ```ruby
 require 'docking_station'
 
@@ -41,6 +56,7 @@ describe DockingStation do
   end
 end
 ```
+
 Let's make our two failing tests pass:
 
 ```ruby
@@ -56,6 +72,8 @@ class DockingStation
   end
 end
 ```
+
+**Once passing please ensure that you do a manual test in IRB.  Is everything as we expect?**
 
 We just finish getting this working and in comes an email from our client.  Docking stations should have a default capacity of 20, but sometimes they have a capacity of 30 or 40.  Hearing this, we refrain from leaping in to the code base, or even the tests, but update our user stories and domain model appropriately.
 
