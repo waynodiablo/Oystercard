@@ -60,11 +60,11 @@ module BikeContainer
   private
 
   def full?
-    bikes.length >= DEFAULT_CAPACITY
+    bikes.count >= DEFAULT_CAPACITY
   end
 
   def empty?
-    bikes.reject(&:broken?).length == 0
+    bikes.reject(&:broken?).empty?
   end
 end
 ```
@@ -89,7 +89,7 @@ This enables us to avoid working directly with the instance variables, [encapsul
 
 ```ruby
 def full?
-  bikes.length >= DEFAULT_CAPACITY
+  bikes.cunt >= DEFAULT_CAPACITY
 end
 ```
 
