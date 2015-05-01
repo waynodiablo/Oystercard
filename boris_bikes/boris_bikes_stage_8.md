@@ -89,7 +89,7 @@ This enables us to avoid working directly with the instance variables, [encapsul
 
 ```ruby
 def full?
-  bikes.cunt >= DEFAULT_CAPACITY
+  bikes.count >= DEFAULT_CAPACITY
 end
 ```
 
