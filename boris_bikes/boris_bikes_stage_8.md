@@ -106,9 +106,7 @@ Let's add another test to `bike_container_spec.rb`:
 ```ruby
 shared_examples_for BikeContainer do
   # other tests omitted for brevity
-  describe '' do
-
-  end
+  
   describe 'add_bike' do
     it 'receives a bike' do
       subject.add_bike double :bike
