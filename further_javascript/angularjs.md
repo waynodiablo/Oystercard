@@ -682,7 +682,7 @@ beforeEach(inject(function($httpBackend) {
   }));
 ```
 
-This creates some duplication, which you should refactor later. The next step is to test the promise that is returned by our http request:
+We will also need to define items in our new test - however, this creates some duplication, remember to refactor this later. The next step is to test the promise that is returned by our http request:
 
 ```javascript
 it('returns search results', function() {
@@ -733,7 +733,7 @@ Our tests should still all pass.
 There's a couple of things to clean up:
 
 * Although our tests pass, the website doesn't work. Why might that be?
-* We left some duplications in the test, with HttpBackend - how can we refactor that?
+* We left some duplications in the test, using 'items' twice - how can we refactor that?
 * Notice how when you clear the text box you're still trying to search.
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
