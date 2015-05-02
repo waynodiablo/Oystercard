@@ -230,3 +230,189 @@ end
 which means the same thing, but programmers love to be concise.  This simple change and all our tests should pass.
 
 We've done several cycles of red/green jumping back and forth between feature and unit test levels, but are there any more refactoring opportunities?  Take a look through the code to see if you can find any.
+
+# Stage 8
+
+```ruby
+class DockingStation
+  DEFAULT_CAPACITY = 20
+
+  attr_reader :capacity
+
+  def initialize capacity = DEFAULT_CAPACITY
+    @bikes = []
+    @capacity = capacity
+  end
+
+  def release_bike
+    fail 'No bikes available' if working_bikes.empty?
+    bikes.delete working_bikes.pop
+  end
+
+  def dock bike
+    fail 'Docking station full' if full?
+    bikes << bike
+  end
+
+  private
+
+  attr_accessor :bikes
+
+  def full?
+    bikes.count >= capacity
+  end
+
+  def working_bikes
+    bikes.reject { |bike| bike.broken? }
+  end
+
+  def empty?
+    bikes.empty?
+  end
+end
+```
+
+First, run all tests to make sure they pass. Then create `lib/bike_container.rb` file for our new module. Let's extract all methods from the docking station into the bike container. We'll discuss this code in more detail shortly.
+
+```ruby
+module BikeContainer
+
+  DEFAULT_CAPACITY = 20
+
+  def bikes
+    @bikes ||= []
+  end
+
+  def capacity
+    @capacity ||= DEFAULT_CAPACITY
+  end
+
+  def capacity=(value)
+    @capacity = value
+  end
+
+  def dock bike
+    fail 'Station Full' if full?
+    bikes << bike
+  end
+
+  def release_bike
+    fail 'No Bikes Available' if empty?
+    bikes.pop
+  end
+
+  private
+
+  def full?
+    bikes.count >= DEFAULT_CAPACITY
+  end
+
+  def empty?
+    bikes.reject(&:broken?).empty?
+  end
+end
+```
+
+The first thing to note is that this is a module, not a class. A module is just like a class, except it cannot be instantiated, that is, you cannot do `BikeContainer.new`. The second interesting thing is that we have created an "accessor" methods for the `@bikes` instance variables.
+
+```ruby
+def bikes
+  @bikes ||= []
+end
+
+def capacity
+  @capacity ||= DEFAULT_CAPACITY
+end
+
+def capacity=(value)
+  @capacity = value
+end
+```
+
+This enables us to avoid working directly with the instance variables, [encapsulating](http://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)) the implementation inside the module. Because of this change, all other methods now use the accessor methods instead of manipulating the instance variables directly. Consider this method:
+
+```ruby
+def full?
+  bikes.count >= DEFAULT_CAPACITY
+end
+```
+
+Here, `capacity` refers to the accessor method `capacity()` that we defined above.
+
+The third interesting thing is the use of the `||=` operators to initialise values. Consider this method:
+
+```ruby
+def capacity
+  @capacity ||= DEFAULT_CAPACITY
+end
+```
+
+Whenever any other method calls `capacity()`, it will return the value of the instance variable `@capacity`. However, if `@capacity` is nil, it will assign `DEFAULT_CAPACITY` to it first. This operator is short for `@capacity = @capacity || DEFAULT_CAPACITY`.
+
+This trick enables us to call the method `capacity()` before the value was set: it will be set to the default the first time it's accepted.  As with everything in Ruby please experiment with it in IRB to make sure you understand what's happening.
+
+The DockingStation now looks something like this.
+
+```ruby
+# load BikeContainer
+require_relative 'bike_container'
+
+class DockingStation
+
+  # this gives us all the methods that used to be in this class
+  include BikeContainer
+
+  def initialize(options = {})
+    # self.capacity is calling the capacity=() method
+    # (note the equals sign) defined in BikeContainer
+    # capacity (the second argument to fetch()) is calling
+    # the capacity() method in BikeContainer
+    self.capacity = options.fetch(:capacity, capacity)
+  end
+
+end
+```
+
+Now our DockingStation class is very small because we extracted all methods (except the initialiser) into BikeContainer. We retain the initialiser, though, because we want to be able to set a custom capacity for the station, if we want to.
+
+The tests should still pass because the functionality is equivalent. However, we need to refactor the tests before we check them in. The problem is that all tests that cover the functionality of BikeContainer are in docking_station_spec.rb, which is misleading. Let's create a separate suite of tests for the bike container.
+
+Since we can't instantiate a module, we will need to create an artificial class for test purposes. The only job of that class will be to include BikeContainer. This is what the beginning of the test looks like (most tests omitted for brevity, refactor them on your own).
+
+```ruby
+require './lib/bike_container'
+
+class ContainerHolder; include BikeContainer; end
+
+describe BikeContainer do
+
+  let(:bike) { Bike.new }
+  let(:holder) { ContainerHolder.new }
+
+  it 'should accept a bike' do
+    # we expect the holder to have 0 bikes
+    expect(holder.bike_count).to eq(0)
+    # let's dock a bike into the holder
+    holder.dock(bike)
+    # now we expect the holder to have 1 bike
+    expect(holder.bike_count).to eq(1)
+  end
+end
+```
+
+This is pretty much the same test we used to have for the station, except that we're using an artificial class instead of a docking station. The DockingStation test now has only one test that checks that the initialiser is working correctly.
+
+```ruby
+require './lib/docking_station'
+
+describe DockingStation do
+
+  subject { described_class.new(capacity: 123) }
+
+  it 'can set a default capacity on initialising' do
+    expect(subject.capacity).to eq(123)
+  end
+end
+```
+
+Check that all tests still pass. If they do, push your code to Github, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
