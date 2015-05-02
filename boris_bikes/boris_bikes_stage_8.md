@@ -55,8 +55,9 @@ end
 # class that includes `BikeContainer`, to initially run tests against
 class BikeContainerTest; include BikeContainer; end
 
+# it_behaves_like BikeContainer imports all the tests in the shared example
 describe BikeContainerTest do
-  it behaves_like BikeContainer
+  it_behaves_like BikeContainer
 end
 ```
 
