@@ -48,7 +48,7 @@ it 'is hairy' do
 end
 ```
 
-This test is much more readable than the previous version and is almost equivalent. Behind the scenes, RSpec takes everything after the `be_` (`hairy`) - adds a question mark to make `hairy`, then calls that method, expecting it to return a [truthy](https://github.com/makersacademy/course/blob/master/pills/boolean.md) value.  Note that the following expressions *are not equivalent*:
+This test is much more readable than the previous version and is almost equivalent. Behind the scenes, RSpec takes everything after the `be_` (in this case `hairy`) - adds a question mark to make `hairy?`, then calls that method, expecting it to return a [truthy](https://github.com/makersacademy/course/blob/master/pills/boolean.md) value.  Note that the following expressions *are not equivalent*:
 ```ruby
 expect(fido.hairy?).to be true
 expect(fido.hairy?).to be_truthy
