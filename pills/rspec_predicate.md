@@ -118,8 +118,8 @@ Finally, we can also pass arguments into predicate matchers. For example:
 
 ```ruby
 class Dog
-  def is_friendy_to?(species)
-    return 'false' if species == 'cats'
+  def friendly_to?(species)
+    return false if species == 'cats'
     true
   end
 
@@ -134,28 +134,32 @@ end
 ```
 
 ```ruby
-it 'is unfriendly to cats' do
-  fido = Dog.new
-  expect(fido).not_to be_friendly_to('cats')
-end
+describe 'Dog' do
+  it 'is unfriendly to cats' do
+    fido = Dog.new
+    expect(fido).not_to be_friendly_to('cats')
+  end
 
-it 'is friendly to everything else' do
-  fido = Dog.new
-  expect(fido).to be_friendly_to('humans')
+  it 'is friendly to everything else' do
+    fido = Dog.new
+    expect(fido).to be_friendly_to('humans')
+  end
 end
 ```
 
 Can also be rewritten using predicate matchers:
 
 ```ruby
-it 'is unfriendly to cats' do
-  fido = Dog.new
-  expect(fido).not_to be_friendly_to('cats')
-end
+describe 'Dog' do
+  it 'is unfriendly to cats' do
+    fido = Dog.new
+    expect(fido).not_to be_friendly_to('cats')
+  end
 
-it 'is friendly to everything else' do
-  fido = Dog.new
-  expect(fido).to be_friendly_to('humans')
+  it 'is friendly to everything else' do
+    fido = Dog.new
+    expect(fido).to be_friendly_to('humans')
+  end
 end
 ```
 
