@@ -111,7 +111,7 @@ shared_examples_for BikeContainer do
   describe 'add_bike' do
     it 'receives a bike' do
       subject.add_bike double :bike
-      expect(subject).not_to be_empty?
+      expect(subject).not_to be_empty
     end
   end
 end
