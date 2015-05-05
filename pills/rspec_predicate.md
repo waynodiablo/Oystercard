@@ -48,13 +48,18 @@ it 'is hairy' do
 end
 ```
 
-This test is 100% equivalent to the previous version, but is much more readable. Behind the scenes, RSpec takes everything after the `be_` (`hairy`) - adds a question mark to make `hairy`, then calls that method (expecting it to return a [truthy](https://github.com/makersacademy/course/blob/master/pills/boolean.md) value).
+This test is much more readable than the previous version and is almost equivalent. Behind the scenes, RSpec takes everything after the `be_` (`hairy`) - adds a question mark to make `hairy`, then calls that method, expecting it to return a [truthy](https://github.com/makersacademy/course/blob/master/pills/boolean.md) value.  Note that the following expressions *are not equivalent*:
+```ruby
+expect(fido.hairy?).to be true
+expect(fido.hairy?).to be_truthy
+```
+The first tests that `fido.hairy?` returns the specific value `true` (an instance of `TrueClass`).  The second tests that `fido.hairy?` returns any object that evaluates to true in Ruby (i.e. anything other than `false` and `nil`).
 
 Why does it have to be so complicated? Because [rspec](http://rspec.info) is designed to write tests that read like English:
 
 ````ruby
-# Expect the bike not to be broken
-expect(the_bike).not_to be_broken
+# Expect the bike to be working
+expect(bike).to be_working
 ````
 
 In order to achieve this readability [rspec](http://rspec.info) goes to great lengths doing all those crazy things described above. That's why it's complicated.
@@ -62,17 +67,17 @@ In order to achieve this readability [rspec](http://rspec.info) goes to great le
 Another way to rewrite this line is
 
 ```ruby
-# Expect the method broken? of the object 'bike' to return false
-expect(the_bike.broken?).to be_false # in RSpec version 2.x.x
+# Expect the method working? of the object 'bike' to return true
+expect(bike.working?).to be_true # in RSpec version 2.x.x
 # or
-expect(the_bike.broken?).to be false # in RSpec version 3.x.x
+expect(bike.working?).to be_truthy # in RSpec version 3.x.x
 ````
 
 This is slightly less readable, isn't it? Yet it's exactly the same thing. Yet another way to write the same expectation is to use an old [rspec](http://rspec.info) syntax:
 
 ````ruby
-# The method broken? of the object 'bike' should return false
-bike.broken?.should be(false)
+# The method working? of the object 'bike' should return true
+bike.working?.should be_true # in RSpec version 2.x.x
 ````
 
 The newer `expect` syntax should be used whenever possible but you'll come across older codebases using `should` syntax, so you should be familiar with it as well.
@@ -134,15 +139,15 @@ end
 ```
 
 ```ruby
-describe 'Dog' do
+describe Dog do
   it 'is unfriendly to cats' do
     fido = Dog.new
-    expect(fido).not_to be_friendly_to('cats')
+    expect(fido.friendly_to('cats')).to be_falsy
   end
 
   it 'is friendly to everything else' do
     fido = Dog.new
-    expect(fido).to be_friendly_to('humans')
+    expect(fido.friendly_to('humans').to be_truthy
   end
 end
 ```
