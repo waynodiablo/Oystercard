@@ -170,5 +170,4 @@ end
 
 ## Resources
 
-- [Official RSpec docs on predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/
-docs/built-in-matchers/predicate-matchers)
+- [Official RSpec docs on predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/predicate-matchers)
