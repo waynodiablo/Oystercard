@@ -4,21 +4,23 @@
 
 We would like you to build a pairing organiser for a cohort of Makers' students. We'll get you started with a few user stories:
 
-As a bewildered maker
-I want to see a list of everyone in my cohort
-So that I know who these weird people are
+```
+As a bewildered maker  
+I want to see a list of everyone in my cohort  
+So that I know who these weird people are  
 
-As a promiscuous maker
-I want to see a sorted list of people in my cohort that I have/have not paired with
-So that I can put more notches on my virtual bedpost
+As a promiscuous maker  
+I want to see a sorted list of people in my cohort that I have/have not paired with  
+So that I can put more notches on my virtual bedpost  
 
-As a shy maker
-I want a pair partner to be randomly assigned to me
-So that I don’t have to ask them
+As a shy maker  
+I want a pair partner to be randomly assigned to me  
+So that I don’t have to ask them  
 
-As an unfriendly maker
-I want to have a blacklist of students I will never be paired with
-So that I never have to listen to them speak
+As an unfriendly maker  
+I want to have a blacklist of students I will never be paired with  
+So that I never have to listen to them speak  
+```
 
 Think about how you would like to build this application. You will probably need a database hosted on a server. You could use Github API to get student and cohort information, however in the first instance you could also just seed the database yourself. Think about the responsibilities of various parts of your application - where will you put the business logic such as blacklists and filtered lists?
 
