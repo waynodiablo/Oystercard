@@ -39,6 +39,7 @@ Last week you created a playable battleships game for the terminal. You separate
 
 * [Steve's BattleShips](https://github.com/stephenlloyd/battleships-march)
 * [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
+* [Ben's Battleships](https://github.com/silvabox/battleships)
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
