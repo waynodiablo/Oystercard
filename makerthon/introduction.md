@@ -12,3 +12,4 @@ Here are some resources to help you to structure your week:
 
 * [Learning Objectives](https://github.com/makersacademy/course/blob/master/makerthon/makerthon_objectives.md)
 * :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
+* [How much design upfront?](http://blog.sjmog.co/2015/03/12/software-design-up-front-how-much/)
