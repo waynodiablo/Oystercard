@@ -18,4 +18,5 @@ There are many different best practices, these are by no means "the right way". 
 ##External resources
 
 * [Git Flow - a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+* [what are this?](https://www.youtube.com/watch?v=t4sXjJJjcWQ)
 
