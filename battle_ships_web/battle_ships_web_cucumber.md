@@ -37,8 +37,8 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here are some versions of a battleships game engine you can use as an alternative.**:
 
-* [Steve's BattleShips](https://github.com/stephenlloyd/battleships-march)
-* [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
+* [Steve's Battleships](https://github.com/stephenlloyd/battleships-march)
+* [Tansaku's Battleships](https://github.com/tansaku/battleships_mvp_sequence)
 * [Ben's Battleships](https://github.com/silvabox/battleships) (`gem install battleships`)
 
 Note, if you use Ben's version, you can install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
@@ -103,7 +103,7 @@ Cucumber is a testing tool written by Aslak Hellesøy that let's you describe yo
 Within your projects directory, run the following:
 
 ```shell-session
-cucumber-sinatra init --app  BattleShips lib/battleships.rb
+cucumber-sinatra init --app  Battleships lib/battleships.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
@@ -175,16 +175,16 @@ rackup
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
-Why is sinatra greeting us with a "Hello BattleShips!" message?
+Why is sinatra greeting us with a "Hello Battleships!" message?
 
 If you open your `lib/battleships.rb` file you will see why:
 
 ```ruby
 require 'sinatra/base'
 
-class BattleShips < Sinatra::Base
+class Battleships < Sinatra::Base
   get '/' do
-    'Hello BattleShips!'
+    'Hello Battleships!'
   end
 
   # start the server if ruby file executed directly
@@ -197,23 +197,24 @@ Note: if you are using the gem, you will need to require that here too:
 require 'sinatra/base'
 require 'battleships'
 
-class BattleShips < Sinatra::Base
+class Battleships < Sinatra::Base
   get '/' do
-    'Hello BattleShips!'
+    'Hello Battleships!'
   end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
 ```
-When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleShips controller returning that greeting.
+When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our Battleships controller returning that greeting.
 
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are:
-```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleShips class.
+- tell our `Battleships` controller where the views are:
+```set :views, Proc.new { File.join(root, "..", "views") }``` inside your Battleships class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
+- Update the `Battleships` controller to render the new `index.erb` file.
 
 Running cucumber again after we have finished these tasks we will see the following:
 
