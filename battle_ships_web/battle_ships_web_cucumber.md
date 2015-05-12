@@ -100,7 +100,7 @@ Cucumber is a testing tool written by Aslak Hellesøy that let's you describe yo
 Within your projects directory, create a Battleships directory and navigate into it, then run:
 
 ```shell-session
-cucumber-sinatra init --app  BattleShips lib/battleships.rb
+cucumber-sinatra init --app  BattleShipsApp lib/battleships.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
@@ -179,7 +179,7 @@ If you open your `lib/battleships.rb` file you will see why:
 ````ruby
 require 'sinatra/base'
 
-class BattleShips < Sinatra::Base
+class BattleShipsApp < Sinatra::Base
   get '/' do
     'Hello BattleShips!'
   end
@@ -194,7 +194,7 @@ When we initialised cucumber with sinatra-cucumber we told it to generate our ap
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are:
+- tell our `BattleShipsApp` controller where the views are:
 ```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleShips class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
 
