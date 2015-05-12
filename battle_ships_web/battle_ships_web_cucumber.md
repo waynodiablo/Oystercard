@@ -103,7 +103,7 @@ Cucumber is a testing tool written by Aslak Hellesøy that let's you describe yo
 Within your projects directory, run the following:
 
 ```shell-session
-cucumber-sinatra init --app  BattleShipsApp lib/battleships.rb
+cucumber-sinatra init --app  Battleships lib/battleships.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
