@@ -9,7 +9,7 @@ To allow you the freedom to direct your own learning, this tutorial will not tak
 * [Learning objectives](https://github.com/makersacademy/course/blob/master/makermix/makermix_learning_objectives.md)
 * [Makermix brief](https://github.com/makersacademy/course/blob/master/makermix/makermix.md)
 
-*External Resources*
+**External Resources**
 
 * [Rails API gem](https://github.com/rails-api/rails-api)
 * [ng-token-auth - OAuth for Angular](https://github.com/lynndylanhurley/ng-token-auth)
