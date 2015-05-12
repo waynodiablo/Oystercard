@@ -6,8 +6,8 @@ The idea of this week is to give you an opportunity to mix your technologies, ho
 
 To allow you the freedom to direct your own learning, this tutorial will not take the form of a walkthrough. Rather, we will deliver a brief and suggest steps you may want to take to fulfil that brief. If you want to focus more on the back end than the front end, you have the freedom to do so. If you are more interested in producing a slick user interface, spend your time on that. Ideally, you will produce a minimal API using Rails, Sinatra or Node. You will then consume that API with a JavaScript frontend, such as Angular, JQuery or Ember. An advanced technique could be for a back end pair to form a team with a front end pair to wire together a complete application. As long as you are working in at least a pair, anything goes!
 
-* [Learning objectives](#)
-* [Makermix brief](#)
+* [Learning objectives](https://github.com/makersacademy/course/blob/master/makermix/makermix_learning_objectives.md)
+* [Makermix brief](https://github.com/makersacademy/course/blob/master/makermix/makermix.md)
 
 *External Resources*
 
