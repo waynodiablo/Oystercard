@@ -4,6 +4,7 @@
 
 We would like you to build a pairing organiser for a cohort of Makers' students. We'll get you started with a few user stories:
 
+```
 As a maker
 I want to be paired with someone
 So that I can learn faster
@@ -23,9 +24,11 @@ So that I don’t have to ask them
 As an unfriendly maker  
 I want to have a blacklist of students I will never be paired with  
 So that I never have to listen to them speak  
+```
 
-*Optional* (more difficult, and potentially more than 3 days' work)
+**Optional** (more difficult, and potentially more than 3 days' work)
 
+```
 As a security-conscious maker
 I want to be able to log in with a password
 So that nobody can see my lists
@@ -41,6 +44,7 @@ So that I can compare my progress to theirs
 As a maker with many commits
 I want to be preferentially paired with someone who has fewer commits
 So that I can accelerate our learning by pairing together
+```
 
 Think about how you would like to build this application. You will probably need a database hosted on a server. Think about the responsibilities of various parts of your application - where will you put the business logic such as blacklists and filtered lists?
 
