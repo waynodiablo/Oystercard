@@ -41,6 +41,8 @@ Last week you created a playable battleships game for the terminal. You separate
 * [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
 * [Ben's Battleships](https://github.com/silvabox/battleships) (`gem install battleships`)
 
+Note, if you use Ben's version, you can install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
+
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
@@ -70,6 +72,7 @@ Before we go off creating lots of directories, let's start with a Gemfile. Our G
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'battleships' # if you are using Ben's gem
 
 group :development, :test do
   gem 'capybara'
@@ -97,7 +100,7 @@ One of the gems you should have in your system now is ``cucumber-sinatra``. This
 
 Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](../pills/cucumber.md)).
 
-Within your projects directory, create a Battleships directory and navigate into it, then run:
+Within your projects directory, run the following:
 
 ```shell-session
 cucumber-sinatra init --app  BattleShipsApp lib/battleships.rb
@@ -176,7 +179,7 @@ Why is sinatra greeting us with a "Hello BattleShips!" message?
 
 If you open your `lib/battleships.rb` file you will see why:
 
-````ruby
+```ruby
 require 'sinatra/base'
 
 class BattleShipsApp < Sinatra::Base
@@ -187,8 +190,22 @@ class BattleShipsApp < Sinatra::Base
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
-````
+```
 
+Note: if you are using the gem, you will need to require that here too:
+```ruby
+require 'sinatra/base'
+require 'battleships'
+
+class BattleShips < Sinatra::Base
+  get '/' do
+    'Hello BattleShips!'
+  end
+
+  # start the server if ruby file executed directly
+  run! if app_file == $0
+end
+```
 When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleShips controller returning that greeting.
 
 To make the first step work we need to do a few things:
