@@ -100,7 +100,7 @@ One of the gems you should have in your system now is ``cucumber-sinatra``. This
 
 Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](../pills/cucumber.md)).
 
-Within your projects directory, create a Battleships directory and navigate into it, then run:
+Within your projects directory, run the following:
 
 ```shell-session
 cucumber-sinatra init --app  BattleShips lib/battleships.rb
