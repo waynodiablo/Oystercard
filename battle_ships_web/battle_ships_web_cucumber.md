@@ -1,4 +1,4 @@
-# Playing Battleships in the browser
+# Playing BattleshipsWeb in the browser
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -103,7 +103,7 @@ Cucumber is a testing tool written by Aslak Hellesøy that let's you describe yo
 Within your projects directory, run the following:
 
 ```shell-session
-cucumber-sinatra init --app  Battleships lib/battleships.rb
+cucumber-sinatra init --app  BattleshipsWeb lib/battleships.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
@@ -175,16 +175,16 @@ rackup
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
-Why is sinatra greeting us with a "Hello Battleships!" message?
+Why is sinatra greeting us with a "Hello BattleshipsWeb!" message?
 
 If you open your `lib/battleships.rb` file you will see why:
 
 ```ruby
 require 'sinatra/base'
 
-class Battleships < Sinatra::Base
+class BattleshipsWeb < Sinatra::Base
   get '/' do
-    'Hello Battleships!'
+    'Hello BattleshipsWeb!'
   end
 
   # start the server if ruby file executed directly
@@ -197,24 +197,24 @@ Note: if you are using the gem, you will need to require that here too:
 require 'sinatra/base'
 require 'battleships'
 
-class Battleships < Sinatra::Base
+class BattleshipsWeb < Sinatra::Base
   get '/' do
-    'Hello Battleships!'
+    'Hello BattleshipsWeb!'
   end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
 ```
-When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our Battleships controller returning that greeting.
+When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleshipsWeb controller returning that greeting.
 
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `Battleships` controller where the views are:
-```set :views, Proc.new { File.join(root, "..", "views") }``` inside your Battleships class.
+- tell our `BattleshipsWeb` controller where the views are:
+```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleshipsWeb class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
-- Update the `Battleships` controller to render the new `index.erb` file.
+- Update the `BattleshipsWeb` controller to render the new `index.erb` file.
 
 Running cucumber again after we have finished these tasks we will see the following:
 
