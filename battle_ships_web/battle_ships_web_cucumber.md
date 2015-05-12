@@ -241,11 +241,11 @@ Feature: Starting the game
 0m0.035s
 ```
 
-OK, our cukes (that's a common name to refer to cucumber features) are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
+OK, our cukes (that's a common name to refer to cucumber features) are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario and add the necessary steps to make it pass?
 
 **Tasks**
 
-- Add steps to the scenario
+- Add steps to the scenario to check that a new game has been created
 - Add a scenario for when the player does not input his name
 
 **Exercises**
