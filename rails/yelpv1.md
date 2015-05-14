@@ -97,7 +97,7 @@ instead.
 
 ##### Adding Gems for testing
 
-We created a Rails app without its default testing framework.  Let's add in our preferred RSpec testing framework by adding som gems to our Gemfile.
+We created a Rails app without its default testing framework.  Let's add in our preferred RSpec testing framework by adding some gems to our Gemfile.
 
 ```ruby
 group :test do
