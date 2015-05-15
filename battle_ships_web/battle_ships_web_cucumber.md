@@ -281,7 +281,7 @@ For this to happen we need to introduce the concept of a session to our applicat
 - Registering a second player
 - Placing the ships
 - Shooting at each others boards in turns
-- Winning and loosing
+- Winning and losing
 
 ## Version 3: Multigame battleships
 
