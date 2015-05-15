@@ -103,12 +103,12 @@ Cucumber is a testing tool written by Aslak Hellesøy that let's you describe yo
 Within your projects directory, run the following:
 
 ```shell-session
-cucumber-sinatra init --app  BattleshipsWeb lib/battleships.rb
+cucumber-sinatra init --app  BattleshipsWeb lib/battleships_web.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
      [ADDED]  features/step_definitions/web_steps.rb
-     [ADDED]  lib/battleships.rb
+     [ADDED]  lib/battleships_web.rb
      [ADDED]  config.ru
 ```
 
@@ -177,7 +177,7 @@ and point your browser to your application ( _[http://localhost:9292](http://loc
 
 Why is sinatra greeting us with a "Hello BattleshipsWeb!" message?
 
-If you open your `lib/battleships.rb` file you will see why:
+If you open your `lib/battleships_web.rb` file you will see why:
 
 ```ruby
 require 'sinatra/base'
