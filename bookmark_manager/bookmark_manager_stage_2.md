@@ -179,7 +179,7 @@ Finally, let's use this helper in the layout file (/views/layout.erb)
 </body>
 ```
 
-Finally, make sure 'bcrypt-ruby' is in your Gemfile and it's installed. Our test finally passes.
+Finally, make sure 'bcrypt-ruby' is in your Gemfile and it's installed. Also make sure you've required the new 'user' model in server.rb. Our test finally passes.
 
 Let's clean the code up a little bit by extracting the helpers and datamapper-related code to external files and moving server.rb, views and helpers to /app. Now the codebase looks a little bit cleaner.
 
