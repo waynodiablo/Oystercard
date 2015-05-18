@@ -177,6 +177,7 @@ Resources
 Related Videos
 --------------
 
+* [Sam on Whiteboard & Projector](https://www.youtube.com/watch?v=BS1_WrjhTQc)
 * [Stephen on Whiteboard (+Mihai)](https://www.youtube.com/watch?v=dIq_E-HSje8)
 * [Stephen on Projector (+Sam)](https://www.youtube.com/watch?v=C7EKjnFCyeQ)
 * [Enrique on Whiteboard](https://www.youtube.com/watch?v=QlDE4kYzvjU)
