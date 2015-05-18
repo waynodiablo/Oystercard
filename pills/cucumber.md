@@ -1,11 +1,14 @@
 #Cucumber
 
-<img src="https://cucumber.io/images/blog/single-source-of-truth.png">
+[Cucumber](http://cukes.info/) is a tool for writing [acceptance tests](http://en.wikipedia.org/wiki/Acceptance_testing) in Ruby. It's widely used in conjunction with [RSpec](http://rspec.info).
 
-[Cucumber](http://cukes.info/) is a tool for test-driving the development of a piece of software by specifying in plain English examples of its use.
+Cucumber functions as a description of the software for both the developer and the client, as well as a testing framework to determine whether the software is meeting the description. Although written in Ruby, Cucumber tests are written in a Domain Specific Language (DSL) called Gherkin, which makes the test readable to both the developer and their client alike.
 
-## Why Cucumber?
-As the creator [explains](https://cucumber.io/blog/2014/03/03/the-worlds-most-misunderstood-collaboration-tool), "Cucumber was born out of the frustration with ambiguous requirements and misunderstandings between the people who order the software and those who deliver it."
+##Why not just use Rspec
+
+You *could* use Rspec for acceptance testing - no law against it. But Cucumber
+and Gherkin extend the tests beyond just testing -- they act as a specification
+and design document for the whole project (that everyone can read!)
 
 ##Installation
 
@@ -70,9 +73,7 @@ Feature: cucumber says OH HAI CUCUMNER
 
 This is a Cucumber feature. It starts with a description of the feature (what
 it's doing, what it's for) as a reference point for people reading it to
-understand why the feature is there in the first place.
-
-Often it's written in
+understand why the feature is there in the first place. Often it's written in
 the form of *In order... / As a... / I want...*, but this is convention; the text
 indented underneath is entirely free. But bear in mind that the *In order...*
 pattern is a good place to start when trying to say what your feature is going
@@ -298,7 +299,9 @@ Feature: cucumber says OH HAI CUCUMNER
 
 And that ends the intro! There's a lot more to look at (Cucumber loads its
 environment up from a file called `env.rb` inside `features/support` would be
-a good place to start).
+a good place to start)
+
+Note that if you like/prefer gherkin style 'given, when, then' syntax you can also use it for Rspec tests: [https://github.com/jimweirich/rspec-given](https://github.com/jimweirich/rspec-given)
 
 ###Further Reading
 
