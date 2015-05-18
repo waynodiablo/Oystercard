@@ -149,7 +149,12 @@ Let's implement a new feature: allowing links to have tags associated with them.
   end
 ```
 
-Note that we modified add_link() method to have the third parameter with a default value to make sure it's still compatible with the other test we wrote earlier. Of course, our test fails.
+Note that we modified add_link() method to have the third parameter with a default value to make sure it's still compatible with the other test we wrote earlier. Of course, our test fails. Our test wants to fill out a field that doesn't exist. Let's fix it.
+
+```html
+Tags: <input type='text' name='tags'>
+```
+Next error:
 
 ```
 
@@ -213,12 +218,6 @@ Let's move over to the next error.
      Failure/Error: fill_in 'tags', with: tags.join(' ')
      Capybara::ElementNotFound:
        Unable to find field "tags"
-```
-
-Our test wants to fill out a field that doesn't exist. Let's fix it.
-
-```html
-Tags: <input type='text' name='tags'>
 ```
 
 Next error:
