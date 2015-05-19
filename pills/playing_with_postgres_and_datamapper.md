@@ -50,4 +50,54 @@ This command displays all columns from the table "students" and shows us an empt
     ----+------
     (0 rows)
 
-Let's add some data.
+Let's add some data:
+
+    $ INSERT INTO students (name)
+    VALUES ('Ptolemy');
+
+The same select command from above will prove that the new data has been added to the students table.
+
+There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our DataBase from a distance via a Ruby interface.
+
+Anyway, let's play! Keep your psql prompt open but open a new tab in terminal. Create a gemfile and add the following gems:
+
+    gem 'data_mapper'
+    gem 'dm-postgres-adapter'
+
+Bundle install then crack open IRB or pry and run the following:
+
+    $ require 'data_mapper'
+    $ require 'dm-postgres-adapter'
+    $ DataMapper::Logger.new($stdout, :debug)
+    $ DataMapper.setup(:default, "postgres://localhost/database_play")
+
+The above are pretty self-explanatory. For learning purposes, we're having DataMapper show us its chatter with the database.
+
+Now let's create a Student "model" (within IRB) for interfacing with our student table in the database:
+
+    class Student
+      include DataMapper::Resource
+
+      property :id,     Serial
+      property :name,   String
+    end
+
+So we've created a class that has extra abilities endowed by DataMapper: namely, the ability to persist data to the database. We now need to have DataMapper tell the database what the structure of the "students" table in the database should look like:
+
+      $ DataMapper.finalize
+
+DataMapper uses an elaboration the regular #new method for creating instances and preserving their data within the database:
+
+      $ Student.create(name: "Ptolemy")
+
+The Logger we setup will give us a bunch of mostly uninterestin chatter, but it should include the line:
+
+    ~ (0.001957) INSERT INTO "students" ("name") VALUES ('Ptolemy') RETURNING "id"
+
+So we've achieved exactly what we did before but in a single line of nice familiar Ruby. =)
+
+Keep playing! Here are some things to try:
+
+  * Delete a row of a table, via DataMapper.
+  * We set properties with two different datatypes: String, and Serial. What others are there?
+  * What happens within SQL when we start creating associations within DataMapper?
