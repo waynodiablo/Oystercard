@@ -1,5 +1,4 @@
 # Playing with Postgres and DataMapper from Terminal
-### ( this pill is unfinished )
 
 NOTE: The dollar symbol, by convention, means that what follows it is code. DON'T actually type the dollar symbol
 
@@ -59,7 +58,7 @@ The same select command from above will prove that the new data has been added t
 
 There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our DataBase from a distance via a Ruby interface.
 
-Anyway, let's play! Keep your psql prompt open but open a new tab in terminal. Create a gemfile and add the following gems:
+So let's play! Keep your psql prompt open but open a new tab in terminal. Create a gemfile and add the following gems:
 
     gem 'data_mapper'
     gem 'dm-postgres-adapter'
@@ -96,7 +95,7 @@ The Logger we setup will give us a bunch of mostly uninterestin chatter, but it 
 
 So we've achieved exactly what we did before but in a single line of nice familiar Ruby. =)
 
-Keep playing! Here are some things to try:
+Mess around with what you can do with DataMapper models. Here are some things to try:
 
   * Delete a row of a table, via DataMapper.
   * We set properties with two different datatypes: String, and Serial. What others are there?
