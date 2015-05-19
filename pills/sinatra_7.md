@@ -11,7 +11,7 @@ It's inconvenient to enter the visitor's name directly in the URL. Let's create 
       My name is <%= @name %>.
       What's your name?
       <input type="text" name="name">
-      <input type="submit">
+      <input type="submit" value="Submit">
     </form>
   <% end %>
   <img src='http://bit.ly/1eze8aE'>

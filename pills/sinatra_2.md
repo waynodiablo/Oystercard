@@ -46,16 +46,16 @@ get '/' do
 end
 ````
 
-- First, we require Sinatra, the gem, to be available in our application. 
-- Then we call the `get()` method, provided by Sinatra, passing `'/'` as an argument (this could therefore be re-written `get('/')` but the convention is to ignore the brackets). 
-- What you're telling the Sinatra to do is to _get_ whatever the block returns, in this case the string 'hello!' whenever someone requests it by calling the page at the address '/':
+First, we require Sinatra, the gem, to be available in our application.
 
-```
-User requests page '/' ->
-get() block activated ->
-'hello' string returned to get() block ->
-get() block returns 'hello' string to User
-```
+Then we call the `get()` method, provided by Sinatra, passing `'/'` as an argument (this could therefore be re-written `get('/')` but the convention is to ignore the brackets).
+
+What this method does is tell Sinatra to respond to a `GET` HTTP request to the path `/` (which happens whatever the user visits `http://localhost:4567`) and return the result of executing the block, in this case the string 'hello!':
+
+1. The brower requests page `/` (`http://localhost:4567/`) ->
+2. Sinatra activates the block defined by the `get '/' do` method call ->
+3. the block returns the string 'hello!' ->
+4. Sinatra returns this string ('hello!') to the  User
 
 The '/' part of the address is the last slash in `http://localhost:4567/`. Next up, let's try adding another page.
 

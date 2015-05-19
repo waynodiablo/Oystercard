@@ -1,4 +1,4 @@
-# Playing with Postgres and SQL from Terminal
+# Playing with Postgres and DataMapper from Terminal
 ### ( this pill is unfinished )
 
 NOTE: The dollar symbol, by convention, means that what follows it is code. DON'T actually type the dollar symbol

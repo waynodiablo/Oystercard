@@ -94,10 +94,10 @@ One of the gems you should have in your system now is ``rspec-sinatra``. This ge
 Within your projects directory, create a Battleships directory and navigate into it, then run:
 
 ```shell-session
-$ rspec-sinatra init --app  BattleShips lib/battleships.rb
+$ rspec-sinatra init --app  BattleShips lib/battleships_web.rb
 Generating with init generator:
      [ADDED]  spec/spec_helper.rb
-     [ADDED]  lib/battleships.rb
+     [ADDED]  lib/battleships_web.rb
      [ADDED]  config.ru
 ```
 
@@ -163,7 +163,7 @@ and point your browser to your application ( _[http://localhost:9292](http://loc
 
 Why is Sinatra greeting us with a "Hello BattleShips!" message?
 
-If you open your `lib/battleships.rb` file you will see why:
+If you open your `lib/battleships_web.rb` file you will see why:
 
 ````ruby
 require 'sinatra/base'

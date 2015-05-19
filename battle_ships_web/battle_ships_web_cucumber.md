@@ -37,9 +37,11 @@ The first thing we have to do is to setup our project so that it's ready for us 
 
 Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here are some versions of a battleships game engine you can use as an alternative.**:
 
-* [Steve's BattleShips](https://github.com/stephenlloyd/battleships-march)
-* [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
+* [Steve's Battleships](https://github.com/stephenlloyd/battleships-march)
+* [Tansaku's Battleships](https://github.com/tansaku/battleships_mvp_sequence)
 * [Ben's Battleships](https://github.com/silvabox/battleships) (`gem install battleships`)
+
+Note, if you use Ben's version, you can install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
@@ -70,6 +72,7 @@ Before we go off creating lots of directories, let's start with a Gemfile. Our G
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'battleships' # if you are using Ben's gem
 
 group :development, :test do
   gem 'capybara'
@@ -97,15 +100,15 @@ One of the gems you should have in your system now is ``cucumber-sinatra``. This
 
 Cucumber is a testing tool written by Aslak Hellesøy that let's you describe your application in plain english. The description of your system, the features, will interact with your application and prove that it works as described ([Cucumber Pill](../pills/cucumber.md)).
 
-Within your projects directory, create a Battleships directory and navigate into it, then run:
+Within your projects directory, run the following:
 
 ```shell-session
-cucumber-sinatra init --app  BattleShips lib/battleships.rb
+cucumber-sinatra init --app  BattleshipsWeb lib/battleships_web.rb
 Generating with init generator:
      [ADDED]  features/support/env.rb
      [ADDED]  features/support/paths.rb
      [ADDED]  features/step_definitions/web_steps.rb
-     [ADDED]  lib/battleships.rb
+     [ADDED]  lib/battleships_web.rb
      [ADDED]  config.ru
 ```
 
@@ -172,31 +175,46 @@ rackup
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
-Why is sinatra greeting us with a "Hello BattleShips!" message?
+Why is sinatra greeting us with a "Hello BattleshipsWeb!" message?
 
-If you open your `lib/battleships.rb` file you will see why:
+If you open your `lib/battleships_web.rb` file you will see why:
 
-````ruby
+```ruby
 require 'sinatra/base'
 
-class BattleShips < Sinatra::Base
+class BattleshipsWeb < Sinatra::Base
   get '/' do
-    'Hello BattleShips!'
+    'Hello BattleshipsWeb!'
   end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
-````
+```
 
-When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleShips controller returning that greeting.
+Note: if you are using the gem, you will need to require that here too:
+```ruby
+require 'sinatra/base'
+require 'battleships'
+
+class BattleshipsWeb < Sinatra::Base
+  get '/' do
+    'Hello BattleshipsWeb!'
+  end
+
+  # start the server if ruby file executed directly
+  run! if app_file == $0
+end
+```
+When we initialised cucumber with sinatra-cucumber we told it to generate our application as well. That's why we now have our BattleshipsWeb controller returning that greeting.
 
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are:
-```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleShips class.
+- tell our `BattleshipsWeb` controller where the views are:
+```set :views, Proc.new { File.join(root, "..", "views") }``` inside your BattleshipsWeb class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
+- Update the `BattleshipsWeb` controller to render the new `index.erb` file.
 
 Running cucumber again after we have finished these tasks we will see the following:
 
@@ -241,11 +259,11 @@ Feature: Starting the game
 0m0.035s
 ```
 
-OK, our cukes (that's a common name to refer to cucumber features) are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
+OK, our cukes (that's a common name to refer to cucumber features) are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario and add the necessary steps to make it pass?
 
 **Tasks**
 
-- Add steps to the scenario
+- Add steps to the scenario to check that a new game has been created
 - Add a scenario for when the player does not input his name
 
 **Exercises**
@@ -263,7 +281,7 @@ For this to happen we need to introduce the concept of a session to our applicat
 - Registering a second player
 - Placing the ships
 - Shooting at each others boards in turns
-- Winning and loosing
+- Winning and losing
 
 ## Version 3: Multigame battleships
 

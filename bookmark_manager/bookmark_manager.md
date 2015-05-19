@@ -47,7 +47,7 @@ Note that every project you work on should start with user stories/features in t
 
 ## First Steps
 
-As you'd do with every new project, create a new repository on Github.  Please name your project 'bookmark_manager'. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop and RSpec:
+As you'd do with every new project, create a new repository on Github. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop and RSpec:
 
 ```rb
 require 'rspec/core/rake_task'
