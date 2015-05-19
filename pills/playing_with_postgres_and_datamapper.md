@@ -56,6 +56,11 @@ Let's add some data:
 
 The same select command from above will prove that the new data has been added to the students table.
 
+Try the following exercises:
+  * Add two more entries to the students table.
+  * Delete them.
+  * Update the names of one of them.
+
 There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our DataBase from a distance via a Ruby interface.
 
 So let's play! Keep your psql prompt open but open a new tab in terminal. Create a gemfile and add the following gems:
@@ -89,7 +94,7 @@ DataMapper uses an elaboration the regular #new method for creating instances an
 
       $ Student.create(name: "Ptolemy")
 
-The Logger we setup will give us a bunch of mostly uninterestin chatter, but it should include the line:
+The Logger we setup will give us a bunch of mostly uninteresting chatter, but it should include the line:
 
     ~ (0.001957) INSERT INTO "students" ("name") VALUES ('Ptolemy') RETURNING "id"
 
