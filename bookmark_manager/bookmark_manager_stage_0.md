@@ -1,6 +1,6 @@
 ##Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md) and [plan with sql and datamapper](../pills/playing_with_postgres_and_datamapper.md).
 
 ##Talking to the database
 
