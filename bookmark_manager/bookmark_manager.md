@@ -47,17 +47,7 @@ Note that every project you work on should start with user stories/features in t
 
 ## First Steps
 
-As you'd do with every new project, create a new repository on Github. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop and RSpec:
-
-```rb
-require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
-
-RuboCop::RakeTask.new :cop
-RSpec::Core::RakeTask.new :spec
-
-task default: [:cop, :spec]
-```
+As you'd do with every new project, create a new repository on Github. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru.
 
 Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
