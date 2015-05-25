@@ -1,7 +1,7 @@
 BDD vs TDD
 ==========
 
-It's conceivable that someone might ask you if you had to choose between BDD and TDD which would you choose?
+It's conceivable that someone might ask you if you had to choose between [BDD](bdd.md) and [TDD](tdd.md) which would you choose?
 
 You might want to ask that someone to reframe that question since the thing is that BDD is TDD, so you can't do BDD without doing TDD, so arguably there's not really the option to choose BDD over TDD, since if you choose BDD, you are de facto, also choosing TDD.
 
@@ -18,5 +18,7 @@ Now the argument for keeping the unit tests is that in combination they will cov
 However, if the software being built is to demo some system in a startup to get more funding, then the argument for extensive unit tests is less persuasive - in a banking or finance system perhaps it would be more persuasive; but then again it all depends on the costs associated with failure, and the costs of doing manual tests, which are of course different from system to system.
 
 The bottom line is that we need both acceptance tests and unit tests - and no one should try and develop any system of any importance of scale without using both, and of course ideally one will have a balanced testing pyramid with both few acceptance tests, a medium number of intermediate (or integration tests) and a largish number of fast running unit tests.
+
+![Testing Pyramid](../images/test_pyramid.gif)
 
 And ultimately if you have acceptance tests and unit tests then by definition you are doing BDD!
