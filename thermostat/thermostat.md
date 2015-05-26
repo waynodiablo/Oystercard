@@ -31,7 +31,7 @@ Use the specifications below (hint: this could help you plan your Jasmine expect
 
 **Make sure you make some feature tests**
 
-See: https://github.com/tansaku/ThermostatBDD  and note you may need to use an older version of jQuery to have the tests play well with the document.ready operation: load jquery fro this CDN rather than locally --> https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js (good catch James Miller!)
+See: https://github.com/tansaku/ThermostatBDD for a working example of using both JasmineJQuery fixtures and JQuery's document.ready in combination.
 
 ## Stage 2
 
