@@ -95,7 +95,7 @@ The first thing to remember with Jasmine, is it lacks the 'context' method that 
 
 ## The first rule of Javascript is...
 
-**Close your brackets the _moment_ you open them.** No ifs, no buts. This is non-negotiable, and Enrique _will_ have your thumbs if you are caught doing otherwise. Personally, I like to have auto-complete and auto-matching disabled in my editor (Sublime Text) so I have complete control over what appears in my code.
+**Close your brackets the _moment_ you open them.** No ifs, no buts. This is non-negotiable. Personally, I like to have auto-complete and auto-matching disabled in my editor (Sublime Text) so I have complete control over what appears in my code.
 
 That aside, the one practice that turned Javascript from a chore to a joy for me was this one little habit. Open bracket, close it.
 
