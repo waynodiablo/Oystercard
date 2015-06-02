@@ -1,3 +1,6 @@
+* replace = with :
+* use .not_to change instead of .to change by 0
+
 ### Password confirmation
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
@@ -7,11 +10,9 @@ Now a user can register on our website but it would be nice to ask for password 
     expect { sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
   end
 
-  def sign_up(email = 'alice@example.com',
-              password = 'oranges!',
-              password_confirmation = 'oranges!')
+  def sign_up(user)
     visit '/users/new'
-    fill_in :email, with: email
+    fill_in :email, with: user.fetch(email)
     fill_in :password, with: password
     fill_in :password_confirmation, with: password_confirmation
     click_button 'Sign up'
