@@ -135,8 +135,4 @@ Now, just like a real project the client has come back to us with more requests:
 
 ## Supporting Material
 
-- [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
-- [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
-- [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
-- [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
 - [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
