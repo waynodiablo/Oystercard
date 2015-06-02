@@ -1,3 +1,15 @@
+* Add link to capybara github page.
+* BookmarkManager has not been declared at start.
+* wrong failure "Welcome to" has not been made yet.
+* follow rails convention './app/models'. Also place server.rb in root directory.
+* set root, views
+* Stealthy REST
+* mention that they should add a new feature file - adding tags
+* tags first error is wrong - should be no field tags. This error shows up later in the tutorial - swap it round.
+* add a link to datamapper docs 'through resource'
+* helper 'tags' should be extracted to module and tested
+
+
 # Managing links and tags
 
 ## Browsing links

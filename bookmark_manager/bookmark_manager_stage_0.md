@@ -1,3 +1,8 @@
+* test first?
+* add pill
+* `dbtype://user:password@hostname:port/databasename` doesn't make sense
+* remove link.destroy once db_cleaner is setup
+
 ##Adding the database
 
 For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
