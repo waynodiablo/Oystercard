@@ -1,3 +1,4 @@
+* Investigate 'sinatra-flash'
 ### Handling input errors
 
 Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
