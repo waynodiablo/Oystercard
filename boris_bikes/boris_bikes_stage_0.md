@@ -38,7 +38,7 @@ How did you document your domain model on paper?  Did you use boxes for the clas
 
 There are standard modeling languages and techniques used within the software industry.  There are also large and expensive software packages to help you design your domain using those techniques and languages!
 
-A simple example a class modeling technique is the [Class Responsibilty Colloborator card](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card).  Have read up on CRC cards and compare this technique with your own model.  You may need to Google for more detailed resources.
+A simple example of a class modeling technique is the [Class Responsibilty Colloborator card](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card).  Have read up on CRC cards and compare this technique with your own model.  You may need to Google for more detailed resources.
 
 A more exhaustive modeling framework is Unified Modeling Language (UML).  Have a look at [UML class diagrams](https://en.wikipedia.org/wiki/Class_diagram) and compare these with CRC cards and you're own effort.
 
