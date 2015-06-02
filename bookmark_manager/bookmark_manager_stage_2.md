@@ -1,3 +1,10 @@
+* "what we learned Security" - WTF!?
+* missing instruction to require User model in server.rb
+* sequence of error messages after creating User model that are brushed over by the tutorial
+* suggests on how to debug after creating the form for creating users.
+* Instruction to add bcrypt to Gemfile is past the point at which it's needed, also refers to deprecated bcrypt ('bcrypt-ruby' rather than 'bcrypt').
+* Randomly throws in "layout" file - without much introduction.
+
 ##Adding user accounts
 
 Let's implement basic user account functionality using what we learned in Security. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user. This section will rely on your understanding of what we (will) have discussed in Security.
@@ -71,7 +78,7 @@ attr_reader :description
 
 you will not be able to get the description back from the database.
 
-The next error in our test suite is not having the form to fill in to sign up. That's easy to fix by updating ```app/server.rb``` (or just ```server.rb``` if you chose to place it in the root folder).
+The next error in our test suite is not having the form to fill in to sign up. That's easy to fix by updating ```app/server.rb``` (or just ```server.rb``` if you chose to place it in the root folder). <---- WAT? Ptolemy.
 
 ```ruby
 get '/users/new' do
