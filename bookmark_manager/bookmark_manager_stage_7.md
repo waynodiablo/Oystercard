@@ -1,3 +1,8 @@
+* First sentence is unclear.
+* we should already have a Rakefile
+* data_mapper_setup has not been built yet
+
+
 ### Rake tasks for database management
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.

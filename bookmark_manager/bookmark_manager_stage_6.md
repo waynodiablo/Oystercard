@@ -1,3 +1,5 @@
+* errors image does not match reality
+
 ### Preventing duplicate registrations
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
