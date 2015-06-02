@@ -71,8 +71,8 @@ Before we go off creating lots of directories, let's start with a Gemfile. Our G
 ```ruby
 source 'https://rubygems.org'
 
-gem 'sinatra'
 gem 'battleships' # if you are using Ben's gem
+gem 'sinatra'
 
 group :development, :test do
   gem 'capybara'

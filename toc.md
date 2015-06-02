@@ -6,7 +6,7 @@
 * Day 1: [TDD and Pair Programming: Fizzbuzz](fizzbuzz/fizzbuzz.md)
 * Week 1: [BDD, OOD: Boris Bikes](boris_bikes/boris_bikes.md)
 * Week 2: [More advanced OO with games: BattleShips](battle_ships/battle_ships.md)
-* Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_cucumber.md)
+* Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_rspec.md)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Thermostat](thermostat/thermostat.md)
 * Week 6: [Lab week](lab_week/lab_week.md)
