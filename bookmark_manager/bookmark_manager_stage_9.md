@@ -49,6 +49,28 @@ end
 
 To test it locally it may be convenient to add the addon to Heroku to generate and API key and then create an environment variable in your .bash_profile to make it available locally.
 
+## Exercises
+
+Once you have completed the walkthrough you should be able to do all of the following (in no particular order).
+
+* Show the list of available tags on the homepage
+* Move the form to add a link to its own route
+* Add user_id to tags and links. Display who the link was submitted by. Same for a tag
+* Allow the user to add a link to favourites (this will be a many-to-many relationship)
+* Display how many users favourited the link
+* Create a user profile page that will show the links they submitted, tags they created and their favourites.
+* Display the link to the user's profile at the top of the page if the user is logged in
+* Implement forgotten password functionality
+* Redirect the user with a flash message if a logged in user tries to sign up or sign in
+* Send a welcome email when the user signs up
+* Create validations for all models:
+* email must have the correct format (see an example in Datamapper Validations)
+* email and password must be present
+* link must have a title and a url
+* tag must have some text
+* Add a description property to the link.
+* Add a username to the User model, so that username instead of an email was shown next to the link.
+
 [ [Next Stage](bookmark_manager_style.md) ]
 
 [ [Return to outline](bookmark_manager.md) ]

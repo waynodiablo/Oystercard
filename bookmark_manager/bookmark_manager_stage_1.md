@@ -9,36 +9,6 @@
 * add a link to datamapper docs 'through resource'
 * helper 'tags' should be extracted to module and tested
 
-
-# Managing links and tags
-
-## Browsing links
-
-Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it. Then, require and configure it in spec_helper as instructed on the capybara github page.
-
-```ruby
-require 'capybara/rspec'
-
-Capybara.app = BookmarkManager
-```
-
-Then, create ```spec/features``` folder where our integration(Capybara) tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
-
-```ruby
-feature 'User browses the list of links' do
-
-  before(:each) do
-    Link.create(url: 'http://www.makersacademy.com',
-                title: 'Makers Academy')
-  end
-
-  scenario 'when opening the home page' do
-    visit '/'
-    expect(page).to have_content('Makers Academy')
-  end
-end
-```
-
 So, this test creates one link, goes to the homepage and expects to see it there (well, not exactly, it just looks for "Makers Academy" words somewhere on the page). If you run the test, it should fail.
 ```
 Failures:

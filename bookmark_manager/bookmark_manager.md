@@ -33,7 +33,6 @@ So that I can quickly find web sites I recently bookmarked
 I would like to see a reverse chronological list of links on the site homepage
 ```
 
-
 User Interface Sketch (Hi-Fi)
 ------
 
@@ -47,17 +46,12 @@ Note that every project you work on should start with user stories/features in t
 
 ## First Steps
 
-As you'd do with every new project, create a new repository on Github.  Please name your project 'bookmark_manager'. Since we are going to use Sinatra go ahead and create an empty Sinatra application with a Gemfile and config.ru, and a Rakefile to run RuboCop and RSpec:
+As you'd do with every new project, create a new repository on Github.  
 
-```rb
-require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
-
-RuboCop::RakeTask.new :cop
-RSpec::Core::RakeTask.new :spec
-
-task default: [:cop, :spec]
-```
+* Name your project 'bookmark_manager'. 
+* From your project directory, run ```bundle init``` to generate a Gemfile.
+* Make a test group and add ```gem 'rspec' ``` and ```gem 'capybara' ``` then run 'bundle'.
+* Finally, add ``` require 'capybara/rspec'  ``` to your spec_helper.rb.
 
 Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 
@@ -75,28 +69,6 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
   * [Signing in and out](bookmark_manager_stage_8.md)
   * [Forgotten password](bookmark_manager_stage_9.md)
 * [Styling the website](bookmark_manager_stage_style.md)
-
-## Exercises
-
-Once you have completed the walkthrough you should be able to do all of the following (in no particular order).
-
-* Show the list of available tags on the homepage
-* Move the form to add a link to its own route
-* Add user_id to tags and links. Display who the link was submitted by. Same for a tag
-* Allow the user to add a link to favourites (this will be a many-to-many relationship)
-* Display how many users favourited the link
-* Create a user profile page that will show the links they submitted, tags they created and their favourites.
-* Display the link to the user's profile at the top of the page if the user is logged in
-* Implement forgotten password functionality
-* Redirect the user with a flash message if a logged in user tries to sign up or sign in
-* Send a welcome email when the user signs up
-* Create validations for all models:
-* email must have the correct format (see an example in Datamapper Validations)
-* email and password must be present
-* link must have a title and a url
-* tag must have some text
-* Add a description property to the link.
-* Add a username to the User model, so that username instead of an email was shown next to the link.
 
 ## Resources
 
