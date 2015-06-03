@@ -1,6 +1,6 @@
-# Managing links and tags
+# Viewing / Creating Links
 
-## Browsing links
+## Viewing links
 
 Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it.
 
@@ -22,11 +22,11 @@ end
 
 When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called Link. We know that we want this to be a representation of our database. We call these representations 'models'. In order to drive this development further, we are going to make a leap and construct the Link model as we would like to use it in the domain.
 
-##Adding the database
+###Adding the database
 
 For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
 
-##Talking to the database
+###Talking to the database
 
 To talk to the database, we'll need the DataMapper gem. Follow this :pill: [DataMapper](../pills/datamapper.md) to set up your ORM.
 
@@ -67,7 +67,7 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
 
 * Add ``` Capybara.app = BookmarkManager ``` to your RSpec config.
-* Set up your sinatra app.rb in the root directory of your application.
+* Set up your sinatra app.rb in the 'app' folder of your application.
 * Use the modular sinatra style (what do you think the app should be called?)
 * Make sure that you require your server file in spec_helper.
 
@@ -98,11 +98,11 @@ Let's set that up now.
 
   get '/links' do
     @links = Link.all
-    erb :links
+    erb :'links/index'
   end
 ```
-```HTML
-<!-- in views/links.erb -->
+```html
+<!-- in views/links/index.erb -->
 <h1> Links </h1>
 
 <% @links.each do |link| %>
@@ -111,6 +111,75 @@ Let's set that up now.
 <% end %>
 ```
 Running our tests now, it shows that our link is not being displayed on the page. Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
+
+## Creating Links
+
+So, let's add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
+
+```ruby
+feature 'User adds a new link' do
+
+  scenario 'using the new link form' do
+    visit '/links/new'
+    fill_in 'url',   with: 'http://www.zombo.com/'
+    fill_in 'title', with: 'This is Zombocom'
+    click_button 'Add link'
+    expect(Link.count).to eq(1)
+    expect(current_path).to eq '/links'
+    expect(page).to have_content('http://www.zombo.com/')
+    expect(page).to have_content('This is Zombocom')
+  end
+
+end
+```
+
+Take the following steps::
+* Define ``` get '/links/new' ``` route in app.rb.
+```html
+<form action='/links' method='post'>
+ Url: <input type='text' name='url'>
+ Title: <input type='text' name='title'>
+ <input type='submit' value='Add link'>
+</form>
+```
+* Create an associated view containing a form that POSTs to '/links'. What input fields should be defined?
+
+Run your tests. You should be seeing:
+```ruby
+1) User adds a link using the new links form
+    Failure/Error: expect(Link.count).to eq(1)
+
+      expected: 1
+           got: 3
+```
+Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that we are creating a link within our test. The flaw is in our testing strategy: we want every test to run from a clean slate. At present, however, data is persisting across test-runs.
+
+Let's configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
+
+Configuring DatabaseCleaner should move us on to the next error:
+
+```ruby
+1) User adds a link using the new links form
+   Failure/Error: expect(Link.count).to eq(1)
+
+     expected: 1
+          got: 0
+```
+
+Though we have a form for creating links, nothing is being done with the information the user has submitted. Examine the form you just created. Can you guess what path the form data is submitted to?
+
+* Within app.rb, define a route for the form data to be submitted to:
+
+```ruby
+post '/links' do
+  Link.create(url: params[:url], title: params[:title])
+  redirect to('/links')
+end
+```
+
+Now our tests shall pass. =)
+
+
 
 [ [Next Stage](bookmark_manager_stage_1.md) ]
 

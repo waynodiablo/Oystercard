@@ -1,137 +1,38 @@
-* Add link to capybara github page.
-* BookmarkManager has not been declared at start.
-* wrong failure "Welcome to" has not been made yet.
-* follow rails convention './app/models'. Also place server.rb in root directory.
-* set root, views
-* Stealthy REST
 * mention that they should add a new feature file - adding tags
 * tags first error is wrong - should be no field tags. This error shows up later in the tutorial - swap it round.
 * add a link to datamapper docs 'through resource'
 * helper 'tags' should be extracted to module and tested
 
-So, this test creates one link, goes to the homepage and expects to see it there (well, not exactly, it just looks for "Makers Academy" words somewhere on the page). If you run the test, it should fail.
-```
-Failures:
-
-  1) User browses the list of links when opening the home page
-     Failure/Error: expect(page).to have_content("Makers Academy")
-       expected to find text "Makers Academy" in "Welcome to the "
-     # ./spec/features/listing_all_links_spec.rb:11:in `block (2 levels) in <top (required)>'
-```
-
-This is because we haven't written any code to show the links on the homepage. Let's add it.
-
-Current links:
-
-```html
-<ul>
-  <% @links.each do |link| %>
-    <li><a href='<%= link.url %>'><%= link.title %></a></li>
-  <% end %>
-</ul>
-```
-
-```ruby
-get '/' do
-  @links = Link.all
-  erb :index
-end
-```
-
-Now our tests pass.
-```
-
-Finished in 0.03551 seconds
-2 examples, 0 failures
-```
-
-Current state is on Github.
-https://github.com/makersacademy/bookmark_manager/tree/7d35ba70c772421e64999eac68a2e28f0501780b
-
-
-## Submitting a new link
-
-So, let's add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
-
-```ruby
-feature 'User adds a new link' do
-  scenario 'when browsing the homepage' do
-    expect(Link.count).to eq(0)
-    visit '/'
-    add_link('http://www.makersacademy.com/', 'Makers Academy')
-    expect(Link.count).to eq(1)
-    link = Link.first
-    expect(link.url).to eq('http://www.makersacademy.com/')
-    expect(link.title).to eq('Makers Academy')
-  end
-
-  def add_link(url, title)
-    within('#new-link') do
-      fill_in 'url', with: url
-      fill_in 'title', with: title
-      click_button 'Add link'
-    end
-  end
-end
-```
-
-The code should be self-explanatory. We expect to have no links until we go to the homepage and fill out the form inside #new-link element and submit it. Afterwards, we'll have one link in the database with the properties that we specified when creating it.
-
-This test fails, so let's make it pass. First, we'll need to create the form in question.
-
-```html
-<div id='new-link'>
-  <form action='/links' method='post'>
-    Url: <input type='text' name='url'>
-    Title: <input type='text' name='title'>
-    <input type='submit' value='Add link'>
-  </form>
-</div>
-```
-
-Then we'll need to add a new route that will handle the form submission.
-
-```ruby
-post '/links' do
-  url = params['url']
-  title = params['title']
-  Link.create(url: url, title: title)
-  redirect to('/')
-end
-```
-
-Current state is on Github.
-https://github.com/makersacademy/bookmark_manager/tree/8844773e81ba888327a1bef46737c6cf5c36597f
+# Tagging links
 
 ## Adding tags to links
 
-By now we have a web application that allows us to add new links to the database and show the entire list on the front page. We have integration tests that give us comfort that if something breaks, we'll know about it straight away.
+By now we have a web application that allows us to add new links to the database and show the entire list on the front page. We have feature tests that give us comfort that if something breaks, we'll know about it straight away.
 
 Let's implement a new feature: allowing links to have tags associated with them. As usual, let's start with a test.
 
 ```ruby
+feature 'User adds a link' do
+
   scenario 'with a few tags' do
-    visit '/'
-    add_link('http://www.makersacademy.com/',
-             'Makers Academy',
-             %w(education ruby))
+    visit '/links/new'
+    fill_in 'url',   with: 'http://www.makersacademy.com/'
+    fill_in 'title', with: 'Makers Academy'
+    # our tags will be space separated
+    fill_in 'tags',  with: 'education ruby'
+    click_button 'Add link'
     link = Link.first
     expect(link.tags).to include('education')
     expect(link.tags).to include('ruby')
   end
 
-  def add_link(url, title, tags = [])
-    within('#new-link') do
-      fill_in 'url', with: url
-      fill_in 'title', with: title
-      # our tags will be space separated
-      fill_in 'tags', with: tags.join(' ')
-      click_button 'Add link'
-    end
-  end
+end
 ```
+You should get a Capybara error: cannot find field "tags".
 
-Note that we modified add_link() method to have the third parameter with a default value to make sure it's still compatible with the other test we wrote earlier. Of course, our test fails.
+* Amend the new link form to accept an input with the name 'tags'.
+
+Moving on...
 
 ```
 
@@ -148,17 +49,19 @@ So, the test tells us that the method "tags" is undefined. This is because our L
 has n, :tags, through: Resource
 ```
 
-The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its documentation.
+The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html).
 
 Let's go back and run the test. We get another error:
 
-```sh
+```
 Cannot find the child_model Tag for Link in tags (NameError)
 ```
 
 The error occurs because we haven't defined a Tag model, which the Link model now expects to exist.
 
-Before adding the Tag model, let's review the process we're going through. We have written a test that describes the functionality we want to see. We then ran the test and it highlighted a problem - no tags associated to a link. We then fixed that problem specifically. As we didn't create the Tag class straight away, we ran the test again and it told us that we didn't have the Tag model. We then know we need to create a Tag model to overcome the error.
+Before adding the Tag model, let's review the process we're going through.  
+1. We have written a test that describes the functionality we want to see.  
+2. We then ran the test and it highlighted a problem - no tags associated to a link. We then fixed that problem specifically. As we didn't create the Tag class straight away, we ran the test again and it told us that we didn't have the Tag model. We then know we need to create a Tag model to overcome the error.
 
 We'll be repeating this process several times over.
 
@@ -166,28 +69,26 @@ This is the fundamental concept of test-driven and behaviour-driven development.
 
 There isn't a one rule fits all approach. If you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
 
-So, let's create the Tag model that also has a many-to-many relationship to Link.
+So, let's create the Tag model that also has a many-to-many relationship to Link. Check out this pill and familiarise yourself with the flavours of database relationships: :pill:[Database Relations](../pills/database_relations)
 
 ```ruby
 class Tag
-
   include DataMapper::Resource
 
   has n, :links, through: Resource
 
   property :id, Serial
   property :text, String
-
 end
 ```
-and remember to require the file within ```server.rb```:
+and remember to require the file within ```app.rb```:
 
 ```ruby
 require 'tag'
 ```
 
 Note that we're doing a few things other than creating an empty datamapper model without letting the tests tell us that we need to do it (add the relationship with Link, add the text property). Use your best judgement when choosing how fast to go.
-
+###### WE'RE HERE - Ptolemy.
 Let's move over to the next error.
 ```
 
