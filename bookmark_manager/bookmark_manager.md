@@ -48,10 +48,10 @@ Note that every project you work on should start with user stories/features in t
 
 As you'd do with every new project, create a new repository on Github.  
 
-* Name your project 'bookmark_manager'. 
+* Name your project 'bookmark_manager'.
 * From your project directory, run ```bundle init``` to generate a Gemfile.
 * Make a test group and add ```gem 'rspec' ``` and ```gem 'capybara' ``` then run 'bundle'.
-* Finally, add ``` require 'capybara/rspec'  ``` to your spec_helper.rb.
+* Add ``` require 'capybara/rspec'  ``` to your spec_helper.rb.
 
 Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
 

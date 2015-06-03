@@ -1,13 +1,8 @@
-* test first?
-* add pill links
-* `dbtype://user:password@hostname:port/databasename` doesn't make sense
-* remove link.destroy once db_cleaner is setup
-
 # Managing links and tags
 
 ## Browsing links
 
-Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it. 
+Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it.
 
 Then, create ```spec/features``` folder where our integration(Capybara) tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
 
@@ -18,13 +13,44 @@ feature 'User browses the list of links' do
     Link.new(url:    'http://www.makersacademy.com',
                     title:  'Makers Academy')
     visit '/links'
+    expect(page.status_code).to eq 200
     expect(page).to have_content('Makers Academy')
   end
 
 end
 ```
 
-When you run this test, you will see this failure:
+When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called Link. We know that we want this to be a representation of our database. We call these representations 'models'. In order to drive this development further, we are going to make a leap and construct the Link model as we would like to use it in the domain.
+
+##Adding the database
+
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
+
+##Talking to the database
+
+To talk to the database, we'll need the DataMapper gem. Follow this :pill: [DataMapper](../pills/datamapper.md) to set up your ORM.
+
+Then let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in app/models/link.rb.
+
+```ruby
+# This class corresponds to a table in the database
+# We can use it to manipulate the data
+class Link
+
+  # adds datamapper functionality to this class
+  include DataMapper::Resource
+
+  # these property declaration set the column headers in the Link table
+  property :id,     Serial # Serial means that it will be auto-incremented for every record
+  property :title,  String
+  property :url,    String
+
+end
+```
+
+This class prescribes the relationship between the Link table in the database  and this Ruby application. We'll see how it can be used in a minute.
+
+If you run your tests now, you should encounter the following failure:
 ```
 Failures:
 
@@ -38,62 +64,53 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 1 example, 1 failure
 ```
 
-This is because we have not yet set up capybara in our spec_helper. Full instructions are found on the [capybara](https://github.com/jnicklas/capybara) github page. 
+How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
+
 * Add ``` Capybara.app = BookmarkManager ``` to your RSpec config.
+* Set up your sinatra app.rb in the root directory of your application.
+* Use the modular sinatra style (what do you think the app should be called?)
+* Make sure that you require your server file in spec_helper.
 
-#Adding the database
+The failure message of the test should now be:
+```
+Failures:
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
+ 1) User browses the list of links when visiting the links page
+    Failure/Error: expect(page.status_code).to eq 200
 
-##Talking to the database
+      expected: 200
+           got: 404
 
-To talk to the database, we'll need the DataMapper gem. Follow this :pill: [DataMapper](../pills/datamapper.md) to set up your ORM.
+      (compared using ==)
+    # ./spec/features/listing_all_links_spec.rb:6:in `block (2 levels) in <top (required)>'
 
-Then let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in lib/link.rb.
-
-```ruby
-# This class corresponds to a table in the database
-# We can use it to manipulate the data
-class Link
-
-  # this makes the instances of this class Datamapper resources
-  include DataMapper::Resource
-
-  # This block describes what resources our model will have
-  property :id,     Serial # Serial means that it will be auto-incremented for every record
-  property :title,  String
-  property :url,    String
-
-end
+Finished in 0.02297 seconds (files took 0.693 seconds to load)
+1 example, 1 failure
 ```
 
-This file describes the relationship between the table in the database (they don't exist yet) and this Ruby class. We'll see how it can be used in a minute.
+We are receiving a status code of 404 - which indicates that the path does not exist.
 
-We will also need to set up our :pill: [database environments](#).
+Let's set that up now.
+
 
 ```ruby
-env = ENV['RACK_ENV'] || 'development'
+# in app.rb
+
+  get '/links' do
+    @links = Link.all
+    erb :links
+  end
 ```
+```HTML
+<!-- in views/links.erb -->
+<h1> Links </h1>
 
-And then we select the database based on the environment.
-
-```ruby
-DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
+<% @links.each do |link| %>
+ Title: <%= link.title %>
+ URL:   <%= link.url   %>
+<% end %>
 ```
-
-Finally, in our ```spec_helper.rb``` we specify the environment, so that our tests were using the right database.
-
-```ruby
-ENV['RACK_ENV'] = 'test'
-```
-
-Current state is on Github.
-https://github.com/makersacademy/bookmark_manager/tree/24321e022f78f1275b77dcdff32e2df963d281f2
-
-
-
-Current State on Github
-https://github.com/makersacademy/bookmark_manager/tree/15f77fecce729e2a9225f3ac2d369e201f6ce142
+Running our tests now, it shows that our link is not being displayed on the page. Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
 
 [ [Next Stage](bookmark_manager_stage_1.md) ]
 
