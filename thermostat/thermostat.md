@@ -31,15 +31,15 @@ Use the specification below to plan your code.  Think about the separation of co
 Here's an overview of the schedule for talks this week:
 
 * Monday
-  * Introduction to JavaScript (Stages 1-3)
+  * Introduction to JavaScript
   * Using Node or Chrome console to play.
-  * Javascript functions and Scope.- (tjo - day 1 or 2.?)
+  * Javascript functions and Scope.
 * Tuesday
   * HTML and CSS
 * Wednesday
-  * Introduction to jQuery (Stage 4)
+  * Introduction to jQuery
 * Thursday
-  * API's, AJAX, Asynchronous transactions (Stage 5)
+  * API's, AJAX, Asynchronous transactions
 * Friday
   * Weekend Challenge release
   * Retrospective
@@ -59,8 +59,7 @@ Spend some time practicing more with the JavaScript syntax.  Use [Node](https://
 * Using the knowledge learnt in Stage 1, use Jasmine to TDD a set of functions which allow you to create an instance of a thermometer and interact with it.
 * Once built, try out your thermostat using the Chrome Console (hint: when you open `SpecRunner.html`, your JavaScript code should be loaded automatically and available in the console).
 
-Resources
----------
+#### Resources
 * http://jasmine.github.io/
 
 
@@ -83,8 +82,8 @@ Use the resources below to get familiar with jQuery then amend your HTML and Jav
 ### Test-driven jQuery
 There are libraries to help you TDD your jQuery.  See: https://github.com/tansaku/ThermostatBDD for a working example of using both JasminejQuery fixtures and jQuery's document.ready in combination.
 
-Resources
----------
+#### Resources
+
 * https://jquery.com/
 * https://learn.jquery.com/
 * https://github.com/velesin/jasmine-jquery
@@ -111,6 +110,5 @@ There is an issue with your thermometer interface!  If you close your browser an
 * Update your UI so that the thermostat communicates changes to the API. For example, it could make a POST request to localhost:4567/temperature, with the new temperature.  On page refresh, the thermostat could make a GET request to localhost:4567/temperature to get the temperature.
 * Save the selected city information using the API too.
 
-Resources
----------
+#### Resources
 See the video overview of Ajax for how to talk to a remote API with jQuery: https://www.youtube.com/watch?v=QDsrErWpizI
