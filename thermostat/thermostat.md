@@ -4,7 +4,7 @@ This week we're looking at JavaScript, a very important language, since it is th
 
 Please check out the [Learning Objectives for this week](learning_objectives.md) and refer to these throughout the week.
 
-The project this week is to create a simple digital thermostat, using JavaScript, test-driven with Jasmine and using JQuery to interact with the HTML page.  As with Battleships Web, there are 2 parts to this project:
+The project this week is to create a simple digital thermostat, using JavaScript, test-driven with Jasmine and using jQuery to interact with the HTML page.  As with Battleships Web, there are 2 parts to this project:
 
 * The first is to build a thermostat model, which encapsulates the business logic.
 * The second is to create a user interface (UI) in HTML to interact with the thermostat and provide buttons and a display similar to the following:
@@ -49,7 +49,7 @@ Here's an overview of the schedule for talks this week:
 
 To get started learning test-driven JavaScript please work through the [Javascript & Jasmine Pill](../pills/javascript&JasminePill.md).
 
-Spend some time practicing more with the JavaScript syntax.  Use Node or the Google Chrome console as a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) to create some objects and give them functions.  There are lots of 'learn JavaScript' resources out there, but the best way is to start writing your own code rather than just stepping through endless tutorials.
+Spend some time practicing more with the JavaScript syntax.  Use [Node](https://nodejs.org/) or the Google Chrome console as a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) to create some objects and give them functions.  There are lots of 'learn JavaScript' resources out there, but the best way is to start writing your own code rather than just stepping through endless tutorials.
 
 
 ## Stage 2 - Using Javascript to build the thermostat
@@ -66,98 +66,51 @@ Resources
 
 ## Stage 3 - Building the interface
 * Build a static [HTML](https://github.com/makersacademy/course/blob/master/pills/html.md) page as the user interface for your thermometer (hint: is there a static HTML page already in your project that you could use that as a template?).
-* Add JavaScript (and optionally JQuery) to enable your HTML page to interact with your thermostat object.  Think again about separation of concerns.  Where should this new JavaScript/ JQuery code go?
+* Add JavaScript to enable your HTML page to interact with your thermostat object.  Think again about separation of concerns.  Where should this new JavaScript code go?
+
+
+## Stage 4 - Using jQuery - write less, do more!
+jQuery is a JavaScript framework used extensively for:
+  * manipulating the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+  * handling events. eg. button presses, page loads.
+  * making AJAX calls. (more about that later)
+All of these tasks can be written in native Javascript, but jQuery makes it much simpler by handling browser compatibility issues and providing a standardized interface.  As the jQuery strapline says: write less, do more!
+
+Use the resources below to get familiar with jQuery then amend your HTML and JavaScript to utilize jQuery.
+  * To use jQuery you either need to download it and reference the local copy from your HTML, or reference jQuery from a CDN.  There are advantages and disadvantages is both approaches.
+  * There are other installation options such as [bower](http://bower.io/), if you are feeling adventurous!
+
+### Test-driven jQuery
+There are libraries to help you TDD your jQuery.  See: https://github.com/tansaku/ThermostatBDD for a working example of using both JasminejQuery fixtures and jQuery's document.ready in combination.
 
 Resources
 ---------
 * https://jquery.com/
 * https://learn.jquery.com/
-***
+* https://github.com/velesin/jasmine-jquery
 
-## Stage 4 - Using jQuery - write less, do more!
-JQuery is a JavaScript framework used extensively for:
-  * manipulating the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-  * handling events. eg. button presses, page loads.
-  * making AJAX calls. (more about that later)
-All of these tasks can be written in native Javascript, but JQuery makes it much simpler by handling browser compatibility issues and providing a standardized interface.  As the jQuery strapline says: write less, do more!
-
-* Lets amend our HTML page to utilize the power of jQuery.
-  * Let's get an [introduction to jQuery] (tjo - new pill? - or include a short list of resources)
-  * To use jQuery you either need to download a local copy of jQuery or you need a jQuery CDN in the HTML file. We should use a jQuery CDN. You'll find this on the internet.
-  * Create a separate file in your project called `custom.js`- the HTML will need to know about this file in the similar way to it knows about the CDN.
-  * Amend your functions written in native javascript to do the same thing but utilising jQuery, the jQuery should be written in the `custom.js` file
-
-See: https://github.com/tansaku/ThermostatBDD for a working example of using both JasmineJQuery fixtures and JQuery's document.ready in combination.
-
-  * Test driven development of the front end? (tjo - not sure of instructions to do this?)
-
-Resources
----------
-  * https://github.com/velesin/jasmine-jquery
-
-***
 
 ## Stage 5 - Connecting to an existing API
 Wouldn't it be good if before setting your thermometer's temperature, you knew what the weather was like outside and then you could set the thermometers interface appropriately?
 
-Additional Specification - add a display to the HTML to display the weather in the current city.
+Additional specification - add a feature to display the weather in a city selected by the user.
 
-Luckily there are some API's which can provide us with this information. Such as: Open Weather Map: http://openweathermap.org/api
+Luckily there are some API's which can provide us with this information, such as [Open Weather Map](http://openweathermap.org/api)
 
-* Use a jQuery AJAX call to get the weather information from this page and display it to the user.
-* You may wish to add further functionality to the screen so that the user can enter there current city and the weather provided is for that specific city.
-
-***
+* Use a jQuery AJAX call to get the weather information for a specific city and display it to the user.
+* Add further functionality so that the user can select their current city and the weather provided is for the selected city.
 
 ## Stage 6 - You got style
-* Style your thermostat using [CSS](https://github.com/makersacademy/course/blob/master/pills/css.md).  Go to town and make it look beautiful! - (tjo - Is this learning important at this stage?)
+Back to separation of concerns again!  Make sure that all the styling of your page is being handled with [CSS](https://github.com/makersacademy/course/blob/master/pills/css.md).  You should not have `style` attributes in your HTML, and avoid setting styles directly in JavaScript.   Go to town and make it look beautiful!
 
-***
 
 ## Stage 7
-There is an issue with your thermometer interface, if you close your browser and reopen it, it forgets what settings you had. It has no persistency. Over the last couple of weeks how have we managed to retain persistency in our applications with Sinatra?
+There is an issue with your thermometer interface!  If you close your browser and reopen it, it forgets what settings you had. It has no persistence. Over the last couple of weeks how have we managed persistence in our applications?
 
-Storing the thermostat settings allows us to ensure that user commands are not lost and getting the current temperature allows us to display that information to the user and to decide whether to turn the heating on
-
-* Create a remote API that the thermostat can talk to. (hint: you can build your own server to provide a temperature API) (tjo - not sure of sentence here?)
-* To store the temperature more permanently, you should set up a Sinatra server to act as an API, then use it to store the current temperature, and retrieve it on page refresh. For example, after every change, the thermostat could make a POST request to localhost:4567/temperature_change, with the new temperature.  On page refresh, the thermostat could make a JQuery getJSON request to localhost:4567/temperature_get to find the remembered status.
-
-Resources
----------
-See the video overview of Ajax for how to talk to a remote API with JQuery: https://www.youtube.com/watch?v=QDsrErWpizI
-
-
-
-
-
-
-
-
-
-
-* Split the specifications into those that are specific to the thermostat "engine" and those that are specific to the web interface and those that require interaction with the server.  You can start with either the engine or the interface, but stage 1 is to get the engine and interface working
-
-**Make sure you make some feature tests**
-
-See: https://github.com/tansaku/ThermostatBDD for a working example of using both JasmineJQuery fixtures and JQuery's document.ready in combination.
-
-## Stage 2
-
-* In order to support recording user changes to the thermostat persistently, and to get the current temperature, create a remote API that the thermostat can talk to. Storing the thermostat settings allows us to ensure that user commands are not lost, and getting the current temperature allows us to display that information to the user and to decide whether to turn the heating on (hint, you can build your own server to provide a temperature API) - see the video overview of Ajax for how to talk to a remote API with JQuery: https://www.youtube.com/watch?v=QDsrErWpizI
-
-## Stage 3
-
-* Style your thermostat using CSS.  Go to town and make it look beautiful!
-
-## Stage 4
-
-* Display the weather and temperature for cities around the world (http://weather-api.herokuapp.com/)
-
+* Create a remote API that the thermostat can talk to. (hint: you can build your own web server to provide this API using Sinatra!).
+* Update your UI so that the thermostat communicates changes to the API. For example, it could make a POST request to localhost:4567/temperature, with the new temperature.  On page refresh, the thermostat could make a GET request to localhost:4567/temperature to get the temperature.
+* Save the selected city information using the API too.
 
 Resources
 ---------
-
-* https://jquery.com/
-* https://learn.jquery.com/
-* http://jasmine.github.io/
-* https://github.com/velesin/jasmine-jquery
+See the video overview of Ajax for how to talk to a remote API with jQuery: https://www.youtube.com/watch?v=QDsrErWpizI
