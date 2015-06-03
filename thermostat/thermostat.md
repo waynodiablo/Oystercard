@@ -64,8 +64,9 @@ Spend some time practicing more with the JavaScript syntax.  Use [Node](https://
 
 
 ## Stage 3 - Building the interface
-* Build a static [HTML](https://github.com/makersacademy/course/blob/master/pills/html.md) page as the user interface for your thermometer (hint: is there a static HTML page already in your project that you could use that as a template?).
+* Build a static [HTML](https://github.com/makersacademy/course/blob/master/pills/html.md) page as the user interface for your thermometer (hint: is there a static HTML page already in your project that you could use as a template?).
 * Add JavaScript to enable your HTML page to interact with your thermostat object.  Think again about separation of concerns.  Where should this new JavaScript code go?
+* Add a file called `application.js` or `app.js` or whatever you want to call it, to place your JavaScript code that manages the interface between the UI and the thermostat object.
 
 
 ## Stage 4 - Using jQuery - write less, do more!
@@ -84,6 +85,7 @@ There are libraries to help you TDD your jQuery.  See: https://github.com/tansak
 
 #### Resources
 
+* http://learn.jquery.com/about-jquery/how-jquery-works/
 * https://jquery.com/
 * https://learn.jquery.com/
 * https://github.com/velesin/jasmine-jquery
@@ -103,7 +105,7 @@ Luckily there are some API's which can provide us with this information, such as
 Back to separation of concerns again!  Make sure that all the styling of your page is being handled with [CSS](https://github.com/makersacademy/course/blob/master/pills/css.md).  You should not have `style` attributes in your HTML, and avoid setting styles directly in JavaScript.   Go to town and make it look beautiful!
 
 
-## Stage 7
+## Stage 7 - Saving state
 There is an issue with your thermometer interface!  If you close your browser and reopen it, it forgets what settings you had. It has no persistence. Over the last couple of weeks how have we managed persistence in our applications?
 
 * Create a remote API that the thermostat can talk to. (hint: you can build your own web server to provide this API using Sinatra!).
