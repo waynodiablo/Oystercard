@@ -20,6 +20,7 @@ feature 'User browses the list of links' do
     visit '/links'
     expect(page).to have_content('Makers Academy')
   end
+
 end
 ```
 
@@ -37,13 +38,8 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 1 example, 1 failure
 ```
 
-This is because we have not yet set up capybara in our spec_helper. Full instructions are found on the [capybara](https://github.com/jnicklas/capybara) github page.
-
-```ruby
-Capybara.app = BookmarkManager
-```
-
-
+This is because we have not yet set up capybara in our spec_helper. Full instructions are found on the [capybara](https://github.com/jnicklas/capybara) github page. 
+* Add ``` Capybara.app = BookmarkManager ``` to your RSpec config.
 
 #Adding the database
 

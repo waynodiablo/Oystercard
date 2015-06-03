@@ -5,13 +5,13 @@ DataMapper
 
 [DataMapper](http://datamapper.org/) is an ORM (Object-relational mapper), which means that it provides a convenient way to interact with our data using classes and objects instead of working with database tables directly. DataMapper serves as a bridge between Ruby and SQL.  It allows us to query a SQL database using ruby commands, and have the results from the SQL queries transformed into Ruby objects.
 
-Another advantage of datamapper is that is can be used with a variety of database engines, not only postgres. This implies that we'll need to install an adapter to work with postgres, apart from the datamapper itself. Add these gems to your Gemfile:
+We will be using postgres databases during the course, however DataMapper can be configured to use many different databases. This implies that we'll need to install an adapter to work with postgres, as well as the datamapper gem itself. Add these gems to your Gemfile:
 
 ```ruby
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 ```
-Then, add this code to ```server.rb```:
+Then, add this code to ```data_mapper_setup.rb```:
 
 ```ruby
 require 'data_mapper'
@@ -21,7 +21,7 @@ env = ENV['RACK_ENV'] || 'development'
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
-require './lib/link' # this needs to be done after datamapper is initialised
+require './app/link' # require each model individually - the path may vary depending on your file structure.
 
 # After declaring your models, you should finalise them
 DataMapper.finalize
@@ -29,6 +29,7 @@ DataMapper.finalize
 # However, the database tables don't exist yet. Let's tell datamapper to create them
 DataMapper.auto_upgrade!
 ```
+Require this file near the top of your main application file - until this file is required, your app will not be able to access the database.
 
 So, we begin by telling datamapper where our database is going to be. The second argument to setup() is called a connection string. It has the following format.
 
@@ -41,7 +42,6 @@ After we require our models, datamapper will know what data schema we have in ou
 However, datamapper will not create the database for us. We need to do it ourselves.
 
 In the terminal run psql to connect to your database server.
-
 
 Psql is a text-based interface to talk to the database, much like irb is used to run Ruby code. Let's create both databases we need using SQL commands.
 
