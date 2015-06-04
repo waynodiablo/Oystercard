@@ -142,7 +142,9 @@ DockingStation releases working bikes
      # ./spec/docking_station_spec.rb:8:in `block (2 levels) in <top (required)>'
 ```
 
-So `release_bike` needs to return *something*.  We've already defined the `Bike` class, so let's return an *instance* of `Bike`:
+This error is a little more difficult to interpret.  At the moment our `release_bike` method returns nothing; a `nil` in fact.  `nil` is represented as an empty string in the failure message `expected  to respond to 'working?'`.  It might have been better if RSpec had reported `expected NilClass to respond to 'working?'` and maybe in a future release it will.
+
+Anyhow `release_bike` needs to return *something*.  We've already defined the `Bike` class, so let's return an *instance* of `Bike`:
 
 ```ruby
 require_relative 'bike'
@@ -154,9 +156,10 @@ class DockingStation
 end
 ```
 
-Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  Does it fail?  Discuss the output with your pair partner.  With this line still removed from your file, try running Boris Bikes in `irb`:
+Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  We should have moved on to a new failure from the last one, but does the absence of presence of `require_relative 'bike'` change that error?  Discuss the output with your pair partner.  How does DockingStation know what a Bike is without `require_relative 'bike'`?  With this line still removed from your file, try running the manual feature test in IRB:
 
 ```
+$ irb
 2.0.0-p195 :001 > require './lib/docking_station.rb'
  => true
 2.0.0-p195 :002 > station = DockingStation.new
@@ -170,13 +173,33 @@ NameError: uninitialized constant DockingStation::Bike
 ```
 What is going on here?  **It is very important that you understand this error message**.  Your code is running in two different environments.  One is provided by RSpec, the other by `irb`.  Take some time to discuss this with your pair partner.  Ask an [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) or coach to explain it if you don't understand.
 
-Add the `require_relative 'bike'` back in and repeat the test in `irb`.  **It's extremely good practice to break out and test in `irb` at appropriate intervals.**  Research the difference between `require` and `require_relative`.  Can you tell why we needed `require_relative` in this instance?
+Add the `require_relative 'bike'` back in and repeat the feature test in `irb`.  It should work now, or at least get you as far as:
 
-Ironically, given how carefully we have test-driven our code via feature and unit tests, there is a problem it does not catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bulletproof.  A sanity check of the actual user interface is always recommended.
+```
+2.2.2 :003 > bike = station.release_bike
+ => #<Bike:0x007faade0399c8>
+2.2.2 :004 > bike.working?
+ => nil
+```
 
-Anyway, back to our tests.  Are they passing?  Why?
+**As you can see this process of manual feature testing in `irb` is absolutely essential to ensure that your objects play well together.**  Research the difference between `require` and `require_relative`.  Can you tell why we needed `require_relative` in this instance?
 
-Let's do the simplest thing we can to pass our unit test:
+Ironically, given how carefully we have test-driven our code via unit tests in RSpec, there is a problem they failed to catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bulletproof.  A sanity check of the actual user interface is always recommended.
+
+So we've almost got our entire manual feature test working as specified at the beginning of stage 1.  The only thing missing is that when we ask our bike if it is working we get a nil and not a true :-(
+
+Let's look at our unit tests again.  Are they passing?  Why not?
+
+We got sidetracked here dealing with the require_relative issue, but our currently failing unit test corresponds precisely to the last problem with our manual feature test:
+
+```sh
+1) DockingStation releases working bikes
+   Failure/Error: expect(bike).to be_working
+     expected `#<Bike:0x007ff95b891b68>.working?` to return true, got nil
+   # ./spec/docking_station_spec.rb:7:in `block (2 levels) in <top (required)>'
+```
+
+Hopefully this RSpec unit test failure is relatively easy to analyse. Let's do the simplest thing we can to pass this unit test:
 
 ```ruby
 class Bike
@@ -186,11 +209,11 @@ class Bike
 end
 ```
 
-This change should ensure the feature test passes as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of writing new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instance always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
+This change should ensure that we can run our complete manual feature test as specified at the start of stage 1 as well as the unit test.  It is not necessarily the best practice to just create Bikes in DockingStations like this, but it is arguably the simplest thing to do in order to get this test to pass.  Sometimes, in the name of simplicity, we will write code that we will change later.  The code allows a DockingStation to be an unlimited generator of new Bikes.  This is not how real Boris Bike docking stations work, however our feature and unit tests are not yet specifying any other constraints.  Any new functionality that you create in your system should be created through the process of specifying new feature tests and then unit tests.  If you are tempted to add more complexity than is demanded by your tests then you will create code that is not completely tested and may not be needed.  If you find yourself thinking "oh yes, we must have that, we must have this", hold that thought.  Add a note of the extra thing to your user stories - check with the client.  In the first instance always do the simplest thing possible thing.  Like a Zen Garden your code should grow in tiny simple steps.
 
 **All our examples pass, so it's a perfect time to commit our changes and push it to Github ([Version Control with Git&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/git.md)).**
 
-So now we have our working system, test-driven and sanity checked. We can compare this with the original specification of what we wanted the user to experience via the irb interface and see that we are getting approximately the behavior we expect. **Please ensure you do run the feature test manually in IRB before proceeding.**
+So now we have our working system, test-driven and sanity checked. We can compare this with the original specification of what we wanted the user to experience via the irb interface and see that we are getting exactly the behavior we expect.
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
