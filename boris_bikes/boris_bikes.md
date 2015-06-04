@@ -65,7 +65,7 @@ I'd like vans to collect working bikes from garages and distribute them to docki
 
 This is clearly a simplified version of the user requirements that stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
 
-*It is generally a mistake to try to model everything you need in the system on the first go.  It has been proven many times that successful designs for complex systems have to **emerge**.*
+*It is generally a mistake to try to model everything you need in the system on the first go.  Hard experience has shown time and time again that is easier to create a successful design for a complex systems via* **emergence**.
 
 
 ## Stage 0: Domain Model and Project Setup
