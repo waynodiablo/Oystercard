@@ -19,7 +19,7 @@ Let's extend the test to expect a redirection back to the sign up form if the pa
 
 ```ruby
   scenario 'with a password that does not match' do
-    expect { sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
+    expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
     expect(current_path).to eq('/users')
     expect(page).to have_content('Sorry, your passwords do not match')
   end
@@ -91,7 +91,7 @@ A new instance of the user will simply return nil for @user.email.
 
 Finally, let's display a flash message at the top of the page which notifies the user of the error.
 
-Begin by adding ```rack-flash3``` to the ```Gemfile```. Now add the flash line to ```server.rb```:
+Begin by adding ```rack-flash3``` to the ```Gemfile```. Now add the flash line to ```app.rb```:
 
 ```ruby
   if @user.save
