@@ -78,7 +78,7 @@ Let's begin by fleshing out our domain model and getting a base project set up.
 
 [Stage 0](boris_bikes_stage_0.md)
 
-## Stage 1: Creating a Feature Test
+## Stage 1: Creating a Manual Feature Test
 
 Now we have a domain model and a project setup, let's continue with our first feature test, based on a single user story.
 
@@ -98,7 +98,7 @@ Our feature test involves both docking stations and bikes, so we'll have to driv
 
 ## Stage 4: Adding the next Feature Test
 
-We'll implement the next feature, which prevents the release of bikes when none are available.
+We'll create another manual feature test, which prevents the release of bikes when none are available.
 
 [Stage 4](boris_bikes_stage_4.md)
 
@@ -116,13 +116,13 @@ Bikes still can't break because we haven't looked at stories involving broken bi
 
 ## Stage 7: Introducing Doubles
 
-Bikes still can't break because we haven't looked at stories involving broken bikes.  In stage 5 we address two stories that are intimately tied to bikes being broken, i.e. those about preventing docking stations accepting broken bikes but not releasing them.
+Our unit tests need to run fast and be completely independent of each other.  To support that we introduce the critical concept of 'doubles'.
 
 [Stage 7](boris_bikes_stage_7.md)
 
 ## Stage 8: Feature Tests for Van and Garage
 
-Finally we have two more user stories relating to the Van and the Garage.  You've seen how the BDD acceptance-unit test cycle works.  This stage is less structured - make your own feature tests, unit tests and application functionality and consider the refactoring hints we give you.
+Finally we have two more user stories relating to the Van and the Garage.  You've seen how the BDD acceptance-unit test cycle works.  This stage is less structured - design your own manual feature tests, unit tests and application functionality and consider the refactoring hints we give you.
 
 [Stage 8](boris_bikes_stage_8.md)
 
