@@ -1,4 +1,4 @@
-## Stage 1: Creating a Feature Test
+## Stage 1: Implementing Our First User Story
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach these as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -34,7 +34,7 @@ Notice also that none of the objects we are referencing actually exist in code. 
 
 Later in the course we'll see how this kind of manual check can be converted into an automated 'feature' test, but  to keep things simple for the moment we'll just test the high level user stories or 'features' via manual feature testing in irb.
 
-Let's do that right now. Run `irb` (or [`pry`](http://pryrepl.org/) if you prefer) from the command line and type in the first line from the manual feature test above.  Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself.  It is essential that you type the code out yourself or you will not learn effectively.  You should get something like the following:
+Let's do that right now. Run `irb` (or [`pry`](http://pryrepl.org/) if you prefer) from the command line and type in the first line from the irb trace above, that's `station = DockingStation.new`.  Whatever you do, **DO NOT** copy and paste this code, you must type it out yourself.  It is essential that you type the code out yourself or you will not learn effectively.  You should get something like the following:
 
 ```sh
 $ irb
@@ -42,7 +42,7 @@ $ irb
 NameError: uninitialized constant DockingStation
 	from (irb):1
 	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in '<main>'
-2.2.2 :002 > 
+2.2.2 :002 >
 ```
 
 We got an error message.  You might think this is bad, but actually this is excellent.  The computer is trying to communicate with us to let us know why it can't perform the actions we asked of it.
