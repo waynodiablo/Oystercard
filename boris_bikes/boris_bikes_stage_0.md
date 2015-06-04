@@ -71,19 +71,6 @@ To finish the set up and get ready to write our first feature test, let's initia
 $ rspec --init
 ```
 
-We are going to use a library called Capybara to help us with our feature tests.  You'll be getting to know Capybara much better in the next few weeks, so don't worry too much about this extra detail at this stage.
-
-Ensure you have run the following command:
-
-```sh
-$ gem install capybara
-```
-
-Then edit the `.rspec` file in your root project folder (`boris-bikes`) and add the following line to the end of the file:
-```
---require capybara/rspec
-```
-
 Commit the changes to git then push your changes up to Github.
 
 Let's start with [Stage 1](boris_bikes_stage_1.md).
