@@ -14,7 +14,7 @@ This is a great user story to pick next as it introduces an entirely new concept
 
 Does the client want docking stations that store just 1 bike or should they store 20, 50, 100?  This would be a good time to check with the client what the storage capacity requirements are for docking stations.  Perhaps they weren't discussed in the initial client meeting.  
 
-In the meantime, let's assume a capacity of 1.  It's a fairly unreasonable assumption; but in order to do the least amount of work to support the user story, let's create a feature test that raises an error when trying to dock a bike into a station that already has a bike.  Remember that all we are doing here is writing out the code that we would like to be able to run in irb:
+In the meantime, let's assume a capacity of 1.  It's a fairly unreasonable assumption; but in order to do the least amount of work to support the user story, let's create a feature test that raises an error when trying to dock a bike into a station that already has a bike.  Remember that that this involves writing out the code that we would like to be able to run in irb:
 
 ```
 $ irb
@@ -23,24 +23,13 @@ $ irb
 2.1.5 :002 > docking_station = DockingStation.new
  => #<DockingStation:0x007fe022230258 ...>
 2.1.5 :003 > docking_station.dock Bike.new
+ => #<Bike:0x007f8d7424cee0>
+2.1.5 :004 > docking_station.dock Bike.new
 RuntimeError: DockingStation
 	.... stack trace omitted ....
 ```
 
-becomes:
-
-`spec/features/public_returns_bike_spec.rb`:
-```ruby
-feature 'member of public returns bike' do
-  scenario 'bike cannot be docked when station is full' do
-    docking_station = DockingStation.new
-    docking_station.dock Bike.new
-    expect { docking_station.dock Bike.new }.to raise_error 'Docking station full'
-  end
-end
-```
-
-Ensure this fails in the correct and fashion and then drop into a unit test:
+Run this in IRB to ensure that it currently does not raise any error (because that's what we want) and then drop into a unit test:
 
 ```ruby
 require 'docking_station'
@@ -57,7 +46,7 @@ describe DockingStation do
 end
 ```
 
-Let's make our two failing tests pass:
+Let's make our failing unit test pass:
 
 ```ruby
 class DockingStation
@@ -67,13 +56,13 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No Bikes Available' unless @bike
+    fail 'No bikes available' unless @bike
     @bike
   end
 end
 ```
 
-**Once passing please ensure that you do a manual test in IRB.  Is everything as we expect?**
+**Once passing please ensure that you run all your manual feature tests in IRB.  Is everything as we expect?  Are all parts of the system still behaving correctly?**
 
 We just finish getting this working and in comes an email from our client.  Docking stations should have a default capacity of 20, but sometimes they have a capacity of 30 or 40.  Hearing this, we refrain from leaping in to the code base, or even the tests, but update our user stories and domain model appropriately.
 
@@ -87,20 +76,24 @@ So that busy areas can be served more effectively,
 I want to be able to specify a larger capacity when necessary.
 ```
 
-We have some options now.  You might find yourself thinking about what data structure we use to enable docking stations to contain bikes. We might imagine a series of instance variables in our docking station class; e.g. `@bike0`, `@bike1`, `@bike2`; or an array instance variable, e.g. `@bikes = []`; or even a hash such as `@bikes = {}`.  Ideally, we should choose the least complex data structure that supports what we need to pass our tests.  It is often tempting to think, ooh, yes, bikes could have ids and so we could use a hash and then we could grab bike by id, e.g. `{'BIKEID007': <#Bike>}` etc., but we are not yet working on any user stories that require bikes to have ids.  You will make faster progress if you keep your object models and data structures as simple as possible.  In this case the array seems like a good choice for keeping track of the maximum 20 bikes we need to be able to store in our docking station.  And we might be tempted to leap in and start hacking up our application code, adding an array and so on, but it is a much better practice to hold off deciding on the actual data structure or object model until the last reasonable moment.  Far better to allow the user stories to drive us to create tests that specify how our system operates.  Get that nailed down and then it should become clear which is the best choice of data structure or object model.
+We have some options now.  You might find yourself thinking about what data structure we use to enable docking stations to contain bikes. We might imagine a series of instance variables in our docking station class; e.g. `@bike0`, `@bike1`, `@bike2`; or an array instance variable, e.g. `@bikes = []`; or even a hash such as `@bikes = {}`.  Ideally, we should choose the least complex data structure that supports what we need to pass our tests.  It is often tempting to think, ooh, yes, bikes could have ids and so we could use a hash and then we could grab bike by id, e.g. `{'BIKEID007': <#Bike>}` etc., but we are not yet working on any user stories that require bikes to have ids.  You will make faster progress if you keep your object models and data structures as simple as possible.  In this case the array seems like a good choice for keeping track of the maximum 20 bikes we need to be able to store in our docking station.  And we might be tempted to leap in and start hacking up our application code, adding an array and so on, but it is a much better practice to hold off; deciding on the actual data structure or object model until the last reasonable moment.  Far better to allow the user stories to drive us to create tests that specify how our system operates.  Get that nailed down and then it should become clear which is the best choice of data structure or object model.
 
-So let's adjust our existing feature test 'public_returns_bike_spec.rb' to support this new user story:
+So let's adjust our existing manual feature test to support this new user story:
 
-```ruby
-feature 'member of public docks bike' do
-  scenario 'bike cannot be docked when station is full' do
-    docking_station = DockingStation.new
-    20.times { docking_station.dock Bike.new }
-    expect { docking_station.dock Bike.new }.to raise_error 'Docking station full'
-  end
-end
 ```
-Naturally this fails.  Note that we haven't updated our unit tests yet.  One step at a time.  It's a good idea to check that you get the errors and failures you expect to get after each change.  Let's now update our docking_station_spec.rb unit test:
+$ irb
+2.1.5 :001 > require './lib/docking_station'
+ => true
+2.1.5 :002 > docking_station = DockingStation.new
+ => #<DockingStation:0x007fe022230258 ...>
+2.1.5 :003 > 20.times { docking_station.dock Bike.new }
+ => #<Bike:0x007f8d7424cee0>
+2.1.5 :004 > docking_station.dock Bike.new
+RuntimeError: DockingStation
+	.... stack trace omitted ....
+```
+
+Naturally this won't work as expected.  Note that we haven't updated our unit tests yet.  One step at a time.  It's a good idea to check that the system is giving you the behaviour you expect before each and every change.  Let's now update our docking_station_spec.rb unit test:
 
 ```ruby
 require 'docking_station'
@@ -117,7 +110,7 @@ describe DockingStation do
 end
 ```
 
-We should now have a pair of matching failures at the feature and unit test level.  Now it's time to start changing our application code.  An array seems like a good data structure for holding the bikes - let's try that out:
+We should now have a failure from our unit test to match the way our manual feature test doesn't do what we expect.  That means it's time to start changing our application code.  An array seems like a good data structure for holding the bikes - let's try that out:
 
 ```ruby
 class DockingStation
@@ -126,7 +119,7 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No Bikes Available' if @bikes.empty?
+    fail 'No bikes available' if @bikes.empty?
     @bikes.pop
   end
 
@@ -136,7 +129,8 @@ class DockingStation
   end
 end
 ```
-You should have run `rspec` without even thinking about it.  And you have committed your code to Git right?  **You should commit on each RED - GREEN - REFACTOR cycle.**  You don't have to push to the remote repo each time as this is a back up; but certainly at least twice a day - how much code do you want to risk losing?
+
+You should have run `rspec` without even thinking about it.  Everything green?  Just run your manual feature test checks in IRB and then you'll be ready to commit your code to GitHub right? Naturally you've been regularly backing up your code to GitHub all along :-) Just in case here's a reminder: **You should commit on each RED - GREEN - REFACTOR cycle.**  How much code do you want to risk losing in a computer crash?
 
 Speaking of RED - GREEN - REFACTOR, we haven't done any refactoring recently, so now would be a good time to look for opportunities.
 
@@ -150,7 +144,7 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No Bikes Available' if empty?
+    fail 'No bikes available' if empty?
     @bikes.pop
   end
 
@@ -171,7 +165,10 @@ class DockingStation
   end
 end
 ```
-We really should also deal with the 'magic number' `20`.  Magic numbers are a common source of bugs in computer programs.  They occur wherever a numeric literal is used in code and is related to a domain concept.  In this case, the default capacity of a docking station.  In a large and complex program, if we were to see the literal `20` all over the place, it would not be obvious, without reading the context in which it is used, whether it is a reference to capacity or some other domain concept that happens to also be 20.  What if the default capacity changes?
+
+Having made the above refactoring, you will of course want to immediately run RSpec again to ensure that we haven't accidentally introduced any errors.  And of course you'll want to manually test that everything still works in IRB.  Getting a little tired of manual testing in IRB?  We'll introduce you to some ways to automate your feature tests soon, but it is really really really importnat that you get comfortable and familiar with 'playing' with your code in IRB.
+
+Any more refactoring? We really should also deal with the 'magic number' `20`.  Magic numbers are a common source of bugs in computer programs.  They occur wherever a numeric literal is used in code and is related to a domain concept.  In this case, the default capacity of a docking station.  In a large and complex program, if we were to see the literal `20` all over the place, it would not be obvious, without reading the context in which it is used, whether it is a reference to capacity or some other domain concept that happens to also be 20.  What if the default capacity changes?
 
 To deal with this, we *encapsulate* the literal in a *constant* then use this constant everywhere else:
 
@@ -187,9 +184,10 @@ class DockingStation
 end
 ```
 
-This is a good start, but it still doesn't feel right.  Is a docking station full if the count of bikes exceeds the default capacity; or the specific capacity for that station?
+This is a good start, however is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?  Also this raises the question of whether a docking station full if the count of bikes exceeds the default capacity; or the specific capacity for that station?  
 
 It feels like we need a `capacity` attribute for our docking station.  But we can't introduce one without a unit test:
+
 ```ruby
 describe DockingStation do
   # other tests omitted for brevity
@@ -202,7 +200,7 @@ end
 
 See if you can make this test pass.  Hint: use `attr_reader` to create the `capacity` method and use `initialize` to set its initial value.  Don't forget to change the `full?` method to use our new `capacity`.
 
-Is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?  Actually, since docking station is already taking care of this, we can use the `capacity` that's already defined:
+Actually, since docking station is already taking care of this, we can use the `capacity` that's already defined:
 
 ```ruby
 describe DockingStation do
@@ -213,15 +211,8 @@ describe DockingStation do
     end
   end
 end
-
-feature 'member of public returns bike' do
-  scenario 'bike cannot be docked when station is full' do
-    docking_station = DockingStation.new
-    docking_station.capacity.times { docking_station.dock Bike.new }
-    expect { docking_station.dock Bike.new }.to raise_error 'Docking station full'  
-  end
-end
 ```
+
 We might also use a private `attr_reader` to have all our references to the `@bikes` instance variable go through a single interface:
 
 ```ruby
@@ -276,10 +267,10 @@ Have a go in your pair at implementing the necessary functionality through appro
 
 Think about the sequence of steps you might use, e.g.
 
-1. think about the user experience (in this case irb)
-2. create a corresponding feature test that fails
-3. create a minimal matching unit test
-4. see the paired failing feature and unit tests
+1. think about the user story
+2. create a corresponding manual feature test for irb
+3. create a minimal matching unit test or tests
+4. see relation between the way the feature does not work and the unit test failures
 5. create the functionality in the application
 6. see the unit test pass and the feature test move to next fail
 7. loop back to step 3 until feature test passes
