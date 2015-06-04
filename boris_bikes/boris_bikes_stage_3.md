@@ -8,22 +8,22 @@ A bike has a great many properties. It has a number of gears, it has a certain w
 
 Let's write a specification for the bike that describes how we want the bike to behave. We're intentionally keeping everything very simple right now. It's not because this is a tutorial; it's just a good thing to do. As you design the system, you should move in small steps regardless of your experience.
 
-Create a file `spec/bike_spec.rb`. The name should end in "_spec" since this is the convention [RSpec&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
+Create a file `spec/bike_spec.rb`. The name should end in "_spec" since this is the convention [RSpec&nbsp;:pill:](../pills/rspec.md) uses. The first part of the filename is the name of the class. So we have just implied that the class we'll be testing will be called Bike.
 
-Now let's write our first unit test in spec/bike_spec.rb. Note that we are placing our unit tests in the spec folder, and our feature tests in spec/features.  Our file structure should look like this:
+Now let's write our first unit test in spec/bike_spec.rb.  Our file structure should now look like this:
 
 ```sh
 $ tree
 .
-├── README.md
 ├── lib
 │   └── docking_station.rb
 └── spec
     ├── bike_spec.rb
     ├── docking_station_spec.rb
-    └── features
-        └── public_accesses_bike_spec.rb
+    └── spec_helper.rb
 ```
+
+Having the file locations set up correctly is absolutely essential for the correct running of your tests and the system itself.  Later on we'll learn how to adjust the file layout when needed, but for now just focus on ensuring that the files you create are in the exact same locations as described above.
 
 Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself.  It is essential that you type the code out yourself or you will not learn effectively.
 
@@ -75,7 +75,7 @@ describe Bike do
 end
 ```
 
-**Now our example fails.**
+**Now our example 'fails', rather than 'errors'.**
 
 ```
 Bike should respond to #working?
@@ -86,7 +86,7 @@ Bike should respond to #working?
 
 First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)  Where does this instance of the `Bike` class come from.  Discuss this with your pair parter.  Did we just read about it?
 
-Note also that RSpec will generate two failures here - one from the feature test and one from the unit test; both related to the absence of the 'working?' method - this is good and reassures us that our unit test is going to help us fix our feature test.
+Note also that this failure corresponds closely (although not exactly) to the error from our manual feature test at the end of stage 2.  Check back to reflect on the differences and similarities.
 
 Further, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
 
@@ -98,35 +98,29 @@ class Bike
 end
 ```
 
-Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.  Running RSpec we should see that our unit test passes, but our feature test does not.  It is still stuck on the same error as before, indicating there is more work to do :-/
+Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.  Running RSpec we should see that our unit test passes, but restarting IRB we see that our manual feature test does not.  It is still stuck on the same error as before, indicating there is more work to do :-/
 
 However we've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
 
 ```
-$ rspec
-..F
-
-Failures:
-
-  1) member of public accesses bike docking station releases a working bike
-     Failure/Error: expect(bike).to be_working
-       expected  to respond to `working?`
-     # ./spec/features/public_accesses_bike_spec.rb:6:in `block (2 levels) in <top (required)>'
-
-Finished in 0.00431 seconds (files took 1.27 seconds to load)
-3 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/features/public_accesses_bike_spec.rb:3 # member of public accesses bike docking station releases a working bike
+$ irb
+2.2.2 :001 > require './lib/docking_station'
+ => false
+2.2.2 :002 > station = DockingStation.new
+ => #<DockingStation:0x007fd45b884208>
+2.2.2 :003 > bike = station.release_bike
+ => nil
+2.2.2 :004 > bike.working?
+NoMethodError: undefined method `working?' for nil:NilClass
+	from (irb):4
+	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
 ```
 
-We have a similar problem as before in that RSpec is telling us that it expects `nil` to respond to `working?`.  Again, it would have been helpful if the message said `expected NilClass to respond to 'working?'`.  So what is `nil`?  Look at the line that the error is occurring on.  Check the code in your feature test.  Decide in you pair what thing is `nil`.  Try manually running the feature test in irb if you are having trouble working it out.
+The problem here seems to be that we have no method `working?` defined for `nil:NilClass`.  So what is `nil:NilClass` or `nil`?  Look at the result that IRB shows for the 3rd statement in the above feature test.
 
 You should have ascertained that it is the `bike` variable.  But why?  Have a look at the code that assigns the bike variable `bike = docking_station.release_bike`.  What is returned by `docking_station.release_bike`?
 
 Do we just go ahead and fix this now?  Or do we need to write some sort of test?  What sort of test?
-
 
 ```ruby
 describe DockingStation do
