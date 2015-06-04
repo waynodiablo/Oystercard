@@ -179,6 +179,9 @@ end
 
 Now our tests shall pass. =)
 
+## Extra Activities:
+1. At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
+
 
 
 [ [Next Stage](bookmark_manager_stage_1.md) ]

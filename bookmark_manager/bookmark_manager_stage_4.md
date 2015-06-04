@@ -91,23 +91,21 @@ A new instance of the user will simply return nil for @user.email.
 
 Finally, let's display a flash message at the top of the page which notifies the user of the error.
 
-Begin by adding ```rack-flash3``` to the ```Gemfile```. Now add the flash line to ```app.rb```:
+Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to ```app.rb```:
 
 ```ruby
   if @user.save
     session[:user_id] = @user.id
-    redirect to('/')
+    redirect to('/links')
   else
-    flash[:notice] = 'Sorry, your passwords do not match'
+    flash.now[:notice] = 'Sorry, your passwords do not match'
     erb :'users/new'
   end
 ```
 
-You'll need to make a couple more changes to the server file - see https://github.com/nakajima/rack-flash#sinatra for details.
+Add the following code to ```layout.erb``` allow the flash message to appear on the page.
 
-Finally, add the following code to ```layout.erb``` allow the flash message to appear on the page.
-
-```ruby
+```html
 <% if flash[:notice] %>
   <div id='notice'><%= flash[:notice] %></div>
 <% end %>
@@ -121,7 +119,7 @@ It will be displayed on top the page that was re-rendered (note the /users path)
 Finally, our tests pass.
 ```
 Finished in 0.40513 seconds
-7 examples, 0 failures
+6 examples, 0 failures
 ```
 Current state is on Github
 https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
