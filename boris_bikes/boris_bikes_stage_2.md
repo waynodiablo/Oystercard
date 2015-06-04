@@ -32,9 +32,9 @@ What we have here is a failing *feature test*.  It is a manual feature test, but
 This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has started writing this first manual feature test, and got the first error.  Errors are a great time to switch roles so you can work to the ['change-the-message' pairing protocol](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
 
 
-We have identified that we need a DockingStation class.  But before we create one, we want a **failing unit test**.
+We have identified that we need a DockingStation class.  But before we create one, we want a **failing unit test**.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as MiniTest and Cucumber to name a couple of popular alternatives.  RSpec provides a syntax that, while pure Ruby, reads very like English.
 
-Create the following code in `spec/docking_station_spec.rb`:
+Create the following code in `spec/docking_station_spec.rb`.  Again, whatever you do, **DO NOT** copy and paste this code, you must type it out yourself (not the comments).  It is essential that you type the code out yourself or you will not learn effectively:
 
 ```ruby
 describe DockingStation do
