@@ -1,0 +1,124 @@
+body {
+  font-family: 'Helvetica Neue';
+  background: grey;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background: white;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.32);
+  -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.32);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.32);
+}
+
+header {
+  padding: 1em;
+}
+
+.login {
+  float: right;
+  margin: 0.625em 1em 0 0;
+}
+
+.login a, .login a:hover, .login a:visited {
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: small;
+  margin-top: .5em;
+}
+
+a.logo {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+a.logo img {
+  width: 100px;
+}
+
+nav {
+  background-color: #081023;
+  min-height: 2em;
+  text-align: center;
+  padding-top: 0.625em;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  font-weight: bold;
+  opacity: 0.825;
+  padding: 0 2em 0 2em;
+}
+
+/*================
+    TYPOGRAPHY
+==================*/
+
+nav ul li a, nav ul li a:hover, nav ul li a:visited {
+  color: #FFF;
+  text-decoration: none;
+  height: 2em;
+}
+
+nav ul li a {
+  min-width: 8em;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+}
+
+x .slider_title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  font-size: 4.825em;
+  font-weight: bold;
+  color: #FFF;
+  opacity: .5;
+  text-shadow: 0 0 10px #2f5659;
+}
+
+.copy {
+  padding: 1em;
+}
+
+.team_bios {
+  text-align: center;
+}
+
+.team_pic {
+  border-radius: 50%;
+  max-width: 12em;
+  display: inline-block;
+}
+
+.individual_bio {
+  display: inline-block;
+  margin: 0 2em 0 2em;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+}

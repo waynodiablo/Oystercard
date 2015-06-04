@@ -18,17 +18,12 @@ We can't stress this enough. Copy and Paste is the DEVIL!! Even though at times 
 
 ## What you'll need
 
-- [Google Chrome browser](http://www.google.co.uk/chrome/). It's very well suited to web development ( _Safari; bundled with your Mac will do fine as well though_ ).
-- [SublimeText editor](http://www.sublimetext.com). This is a very convenient text editor that we'll be using.
-- Make sure you know how to run Terminal (it's already installed on every Mac). Find it in your Applications (in the Utilities folder) and launch it. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/finder.png)
-- XCode command line tools. Go to https://developer.apple.com/xcode/, click "View downloads" under Xcode 5 section, enter your Apple ID (you use it to get content from AppStore or iTunes), create one if you don't have it, select "Command Line tools for OS X Mountain Lion XCode5", download and follow the installation instructions. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/command_line_tools.png)
-- Once you have installed XCode, install Heroku Toolbelt from https://toolbelt.heroku.com/ 
-- Install RVM. 
-Type this in the Terminal window.
-
-```
-curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
-```
+1. [Google Chrome browser](http://www.google.co.uk/chrome/). It's very well suited to web development ( _Safari; bundled with your Mac will do fine as well though_ ).
+2. [SublimeText editor](http://www.sublimetext.com). This is a very convenient text editor that we'll be using.
+3. Make sure you know how to run Terminal (it's already installed on every Mac). Find it in your Applications (in the Utilities folder) and launch it. ![finder](https://github.com/makersacademy/course/raw/master/day_one/images/finder.png)
+4. XCode command line tools (:pill: [Installing XCode](https://github.com/makersacademy/course/blob/master/pills/installing_xcode.md) ).
+5. Once you have installed XCode, install Heroku Toolbelt from https://toolbelt.heroku.com/ 
+6. Install RVM (:pill: [Installing RVM](https://github.com/makersacademy/course/blob/master/pills/installing_rvm.md) ).
 
 ## Version 0: Create a walking skeleton
 
@@ -555,7 +550,7 @@ run Sinatra::Application
 
 This means that to launch this website we need to run a Sinatra application located in `app.rb`.
 
-Finally, we need to prepare our files for deployment. To do this, execute the following commands **while being in the motivational-posters directory in the Terminal** (to explain what exactly is going on here is outside the scope of a weekend course but we go through all of this and much more during our 12 week course at Makers Academy). Type all symbols exactly are they appear (dot, hyphen, both apostrophes).
+Finally, we need to prepare our files for deployment. To do this, execute the following commands **while being in the motivational-posters directory in the Terminal** (to explain what exactly is going on here is outside the scope of this first day but we will go through all of this and much more during the full 12 week course at Makers Academy). Type all symbols exactly are they appear (dot, hyphen, both apostrophes).
 
 ````
 git init
@@ -907,7 +902,7 @@ Let's add the final section on the page: the footer. Add its HTML code at the ve
 <footer>
   <a href="http://www.makersacademy.com/"><img src="http://www.makersacademy.com/images/logo.png"></a>
   <div>
-    I built this page during a weekend course at 
+    I built this page during my first day at 
     <a href="http://www.makersacademy.com">Makers Academy, a highly selective 12 week coding course in London</a>.
   </div>
   <div>
