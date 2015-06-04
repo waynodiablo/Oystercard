@@ -14,7 +14,7 @@ So that I can manage broken bikes and not disappoint users,
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
 ```
 
-Follow the technique from the previous stages to design feature tests and then unit tests to drive the functionality of the Van and the Garage.  **The user stories above have multiple clauses in their task components**; should we break them out into separate features?
+Follow the technique from the previous stages to design manual feature tests and then unit tests to drive the functionality of the Van and the Garage.  **The user stories above have multiple clauses in their task components**; should we break them out into separate features?
 
 Also, before writing more code, let's think about what the other classes are and why we need them, starting with the van.
 
@@ -63,6 +63,7 @@ end
 
 We've chosen the default capacity as the first behaviour to model as it feels like a suitable place to start.  So how de we make this test pass?
 `lib/bike_container.rb`:
+
 ```ruby
 module BikeContainer
   DEFAULT_CAPACITY = 20
@@ -74,9 +75,11 @@ module BikeContainer
   end
 end
 ```
+
 Note that we've defined `DEFAULT_CAPACITY` in the `BikeContainer` module.  That means `DockingStation`, `Van` and `Garage` will all have the same default capacity.  This is probably not ideal, but we'll stick with it for now for simplicity.
 
 Depending on how you implemented the variable capacity, you may need to specify the capacity at the initialize stage.  Let's write a test for that:
+
 ```ruby
 shared_examples_for BikeContainer do
   # other tests omitted for brevity
@@ -89,7 +92,9 @@ shared_examples_for BikeContainer do
     end
   end
 ```
+
 Why did we use a random capacity?  Discuss this idea with your pair partner - can you see any advantages and/or disadvantages with this approach?  We'll make it pass:
+
 ```ruby
 module BikeContainer
   DEFAULT_CAPACITY = 20
@@ -102,12 +107,13 @@ module BikeContainer
 end
 
 ```
+
 Let's add another test to `bike_container_spec.rb`:
 
 ```ruby
 shared_examples_for BikeContainer do
   # other tests omitted for brevity
-  
+
   describe 'add_bike' do
     it 'receives a bike' do
       subject.add_bike double :bike
@@ -116,12 +122,15 @@ shared_examples_for BikeContainer do
   end
 end
 ```
+
 Notice that we are not being driven by a feature test here.  Our motivation is refactoring, so we are driven by a desire for clean code.  Imagine every project has the unwritten user story:
+
 ```
 As as conscientious software developer
 So that my code is robust, readable and reusable
 I want to refactor regularly
 ```
+
 Let's speed things up a bit and add some related tests at the same time:
 
 ```ruby
@@ -141,7 +150,9 @@ shared_examples_for BikeContainer do
   end
 end
 ```
+
 And let's make them pass:
+
 ```ruby
 module BikeContainer
   # other code omitted for brevity
@@ -199,6 +210,7 @@ shared_examples_for BikeContainer do
 end
 ```
 Take a good look through these tests.  Notice how each test includes just one expectation and tests a very specific part of the `remove_bike` behaviour.  You could imagine combining all of these into one test:
+
 ```ruby
 shared_examples_for BikeContainer do
   # other tests omitted for brevity
@@ -214,15 +226,18 @@ shared_examples_for BikeContainer do
   end
 end
 ```
+
 But this is considered bad practice as the test is responsible for testing 3 different things, which violates the *Single Responsibility Principle (SRP)*.  Furthermore, the RSpec output `remove_bike enables bikes to be removed` doesn't really tell us how the method behaves - we would still have to read the code.
 
 Can you get these tests to pass?  It should be as simple as the following:
+
 ```ruby
 def remove_bike
   raise "#{self.class.name} empty" if empty?
   bikes.pop
 end
 ```
+
 Let's look at our shared requirements for docking station, van and garage again:
 
 * They contain bikes
@@ -231,6 +246,7 @@ Let's look at our shared requirements for docking station, van and garage again:
 * You can take bikes out
 
 Have we fulfilled them?  It feels like we have, so how do we go about implementing this new behaviour.  First, we should test drive it.  Add the following to `spec/docking_station_spec.rb`:
+
 ```ruby
 require 'docking_station'
 require 'bike_container'
@@ -241,7 +257,9 @@ describe DockingStation do
   it_behaves_like BikeContainer
 end
 ```
+
 Run RSpec and make sure the new tests are failing.  Now let's fix it in `lib/docking_station.rb`
+
 ```ruby
 require_relative 'bike'
 require_relative 'bike_container'
@@ -265,6 +283,7 @@ class DockingStation
   end
 end
 ```
+
 Whoa!  Where has all the other code gone?  Well, everything we've defined in `BikeContainer` is now also included in `DockingStation`, so we can remove all of the duplicate code.  Notice how we have kept `dock` and `release_bike` though.  Releasing a working bike from a docking station is not the same as removing the next bike along, so we still need this specialized method.  `dock` is really now just an alias for 'add_bike' as it delegates directly to that method.  This is a common approach in Ruby and improves the readability and domain-relevance of our code.  `docking_station.dock` is more intuitive than `docking_station.add_bike`.
 
 You may have implemented things slightly differently, but take a look at the code for `release_bike`.  What's happening in the line `bikes.delete working_bikes.pop`?  Discuss this with your pair partner and discuss other ways to approach this problem.
@@ -277,6 +296,7 @@ def add_bike(bike)
   bikes << bike
 end
 ```
+
 There are a number of ways you might approach this.  One would be to define a separate method, which fixes the bike, then delegates to `add_bike`:
 
 ```ruby
@@ -287,6 +307,7 @@ end
 ```
 
 The advantage is the simplicity. The disadvantage is that this isn't quite consistent with the real domain.  A bike does not get fixed simply by being put in the garage - this is a separate stage.  We have tightly coupled the fixing of bikes with the adding of bikes.  It might be preferable to create a `fix_bikes` method which, for now, simply fixes all bikes in the garage:
+
 ```ruby
 require 'garage'
 
@@ -303,6 +324,7 @@ end
 ```
 
 Notice how this test is structured.  This problem is similar to the `release_bike` test for docking station.  It is tempting to test that the bike is not broken after we've called `fix_bikes`.  However, by using doubles, we can see that this would be a vacuous test:
+
 ```ruby
 require 'garage'
 
@@ -317,6 +339,7 @@ describe Garage do
   end
 end
 ```
+
 We have to stub `broken?` because `bike` is a double; but we are then testing that the stubbed method returns `false`.  So this is no longer a test of `Garage`, but a test of RSpec doubles!  One of the reasons the London style is so effective is it helps ensure we are testing the behaviour of the correct object.
 
 By testing `expect(bike).to receive :fix`, we are ensuring the `fix_bikes` method has the correct behaviour.  The fact that the bike subsequently becomes fixed is the responsibility of the `fix` method in `Bike` and should be unit tested in `bike_spec.rb` accordingly.
