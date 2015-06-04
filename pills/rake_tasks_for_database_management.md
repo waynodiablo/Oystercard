@@ -1,9 +1,5 @@
-* First sentence is unclear.
-* we should already have a Rakefile
-* data_mapper_setup has not been built yet
-
-
 ### Rake tasks for database management
+:construction: :construction: :construction: THIS IS UNDER CONSTRUCTION :construction: :construction: :construction:
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
 
@@ -44,10 +40,3 @@ $ rake auto_migrate
 ```
 
 This way you can upgrade or migrate your database manually after every change to the model. Ruby on Rails makes extensive use of Rake tasks, as we'll see later.
-
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/a97fbdb0d12210277d6dca158b03ce6c88d07677
-
-[ [Next Stage](bookmark_manager_stage_8.md) ]
-
-[ [Return to outline](bookmark_manager.md) ]

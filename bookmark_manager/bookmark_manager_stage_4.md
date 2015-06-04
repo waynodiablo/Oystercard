@@ -121,8 +121,9 @@ Finally, our tests pass.
 Finished in 0.40513 seconds
 6 examples, 0 failures
 ```
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/bf1820c8e3ab276fae6e6d5be64cb2456451024c
+
+## Extra Activities:
+* 
 
 [ [Next Stage](bookmark_manager_stage_5.md) ]
 

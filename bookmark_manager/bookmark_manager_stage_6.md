@@ -1,13 +1,17 @@
 * errors image does not match reality
 
+### Refactor
+Before proceeding, let's refactor our helper methods. Lengthy argument lists such as we have in our #sign_up method are a sign of poor code quality. Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
+
 ### Preventing duplicate registrations
+
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 
 ```ruby
 scenario 'with an email that is already registered' do
-  expect { sign_up }.to change(User, :count).by(1)
-  expect { sign_up }.to change(User, :count).by(0)
+  expect { sign_up_as }.to change(User, :count).by(1)
+  expect { sign_up_as }.to change(User, :count).by(0)
   expect(page).to have_content('This email is already taken')
 end
 ```
