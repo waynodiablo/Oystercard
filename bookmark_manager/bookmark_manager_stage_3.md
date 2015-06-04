@@ -1,29 +1,42 @@
-* replace = with :
-* use .not_to change instead of .to change by 0
+  * replace = with :
+  * use .not_to change instead of .to change by 0
 
 ### Password confirmation
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
 
 ```ruby
-  scenario 'with a password that does not match' do
-    expect { sign_up('a@a.com', 'pass', 'wrong') }.to change(User, :count).by(0)
-  end
+scenario 'with a password that does not match' do
+  expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
+end
 
-  def sign_up(user)
-    visit '/users/new'
-    fill_in :email, with: user.fetch(email)
-    fill_in :password, with: password
-    fill_in :password_confirmation, with: password_confirmation
-    click_button 'Sign up'
-  end
+def sign_up(email: 'alice@example.com',
+            password: '12345678',
+            password_confirmation: '12345678')
+  visit '/users/new'
+  fill_in :email, with: email
+  fill_in :password, with: password
+  fill_in :password_confirmation, with: password_confirmation
+  click_button 'Sign up'
+end
 ```
 
 The test passes a different value for ```password``` and ```password_confirmation``` and then expects the user registration to be rejected because of the differing password values.
 
 You'll need to update the new user form.  Can you work out what you should add based on the error message you get from running the above test?
 
-Assuming you can change the form correctly now you'll need to update user.rb with the following change:
+Assuming you can change the form correctly you should now see the following error:
+
+```
+Failures:
+
+  1) User signs up when being a new user visiting the site
+     Failure/Error: expect { sign_up }.to change(User, :count).by(1)
+       expected #count to have changed by 1, but was changed by 0
+     # ./spec/features/user_management_spec.rb:9:in `block (2 levels) in <top (required)>'
+```
+
+So now our form is working, we just need to implement our functionality:
 
 ```ruby
   attr_reader :password
@@ -37,7 +50,7 @@ Assuming you can change the form correctly now you'll need to update user.rb wit
   validates_confirmation_of :password
 ```
 
-The reason we need the reader for :password and :password_confirmation is that datamapper should have access to both values to make sure they are the same.
+The reason we need the reader for :password and :password_confirmation is that datamapper should have access to both values to make sure they are the same. Note that :password_confirmation is deliberately named differently to :password_digest, ensuring that we are not overwriting the DataMapper methods.
 
 The reason we need the writer for :password_confirmation is that we're now passing the password confirmation to the model in the controller.
 
@@ -47,7 +60,7 @@ The reason we need the writer for :password_confirmation is that we're now passi
                        password: params[:password],
                        password_confirmation: params[:password_confirmation])
     session[:user_id] = user.id
-    redirect to('/')
+    redirect to('/links')
   end
 ```
 
