@@ -9,21 +9,20 @@
 
 By now we have a web application that allows us to add new links to the database and show the entire list on the front page. We have feature tests that give us comfort that if something breaks, we'll know about it straight away.
 
-Let's implement a new feature: allowing links to have tags associated with them. As usual, let's start with a test.
+Let's implement a new feature: allowing links to have a single tag associated with them. As usual, let's start with a test.
 
 ```ruby
 feature 'User adds a link' do
 
-  scenario 'with a few tags' do
+  scenario 'with a single tag' do
     visit '/links/new'
     fill_in 'url',   with: 'http://www.makersacademy.com/'
     fill_in 'title', with: 'Makers Academy'
     # our tags will be space separated
-    fill_in 'tags',  with: 'education ruby'
+    fill_in 'tags',  with: 'education' # for now, let's input a single tag value. Later on we can go for multiple tags.
     click_button 'Add link'
     link = Link.first
     expect(link.tags).to include('education')
-    expect(link.tags).to include('ruby')
   end
 
 end
@@ -69,120 +68,96 @@ This is the fundamental concept of test-driven and behaviour-driven development.
 
 There isn't a one rule fits all approach. If you're unsure, follow the tests closely: they will guide you towards writing only the necessary amount of good code to get the job done.
 
-So, let's create the Tag model that also has a many-to-many relationship to Link. Check out this pill and familiarise yourself with the flavours of database relationships: :pill:[Database Relations](../pills/database_relations)
+So, let's create the Tag model. Check out this pill and familiarise yourself with the flavours of database relationships: :pill:[Database Relations](../pills/database_relations)
 
 ```ruby
 class Tag
   include DataMapper::Resource
 
-  has n, :links, through: Resource
-
   property :id, Serial
-  property :text, String
 end
 ```
-and remember to require the file within ```app.rb```:
-
-```ruby
-require 'tag'
-```
-
-Note that we're doing a few things other than creating an empty datamapper model without letting the tests tell us that we need to do it (add the relationship with Link, add the text property). Use your best judgement when choosing how fast to go.
-###### WE'RE HERE - Ptolemy.
+and remember to require the file within ```data_mapper_setup.rb```.
 Let's move over to the next error.
-```
-
-2) User adds a new link with a few tags
-     Failure/Error: fill_in 'tags', with: tags.join(' ')
-     Capybara::ElementNotFound:
-       Unable to find field "tags"
-```
-
-Our test wants to fill out a field that doesn't exist. Let's fix it.
-
-```html
-Tags: <input type='text' name='tags'>
-```
 
 Next error:
 ```
-
 Failure/Error: expect(link.tags).to include('education')
        expected [] to include "education"
 ```
+Though we might think `[]` denotes an array, it is actually a [DataMapper collection](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection) (which is much like an array). We're in a similar situation to before: we're POST'ing a value from an input field, namely 'tags', but nothing is happening with that data. Let's update the relevant route:
 
-So, the test is filling out the form correctly since we added a new input fields but the data doesn't end up in the database. Time to fix it in server.rb.
 ```ruby
-
-tags = params['tags'].split(' ').map do |tag|
-  # this will either find this tag or create
-  # it if it doesn't exist already
-  Tag.first_or_create(text: tag)
+post '/links' do
+  link = Link.new(url: params[:url],
+                title: params[:title])
+  tag  = Tag.create(text: params[:text])
+  link.tags << tag
+  link.save
+  redirect to('/links')
 end
-Link.create(url: url, title: title, tags: tags)
+```
+So what we're doing here is the following:
+1. Creating our link
+2. Creating the tag for that link.
+3. Shoveling the tag into the link's tags DataMapper Collection.
+4. Saving the link.
+
+Our tests still fail. This is a good opportunity to go through a debugging process. What step have we missed?
+
+* Debug to the point of getting the following error:
+
+```
+1) User adds a link with a tag
+    Failure/Error: expect(link.tags).to include('education')
+      expected [#<Tag @id=2 @text="education">] to include "education"
+      Diff:
+      @@ -1,2 +1,2 @@
+      -["education"]
+      +[#<Tag @id=2 @text="education">]
 ```
 
-Note that we're searching for a tag record in the database (or creating an instance of the Tag class if it doesn't exist) and then passing an array of instances to Link, as opposed to passing just the text. This is because a Tag is not simply a string, it's a database record that has text and id but may have other properties in the future (user_id of the user who created it, created_at timestamp, etc).
-
-However, if we run the test, we'll still get an error.
-
-```
-Failure/Error: expect(link.tags).to include('education')
-       expected [#<Tag @id=1 @text="education" @link_id=4>, #<Tag @id=2 @text="ruby" @link_id=4>] to include "education"
-       Diff:
-       @@ -1,2 +1,2 @@
-       -["education"]
-       +[#<Tag @id=1 @text="education" @link_id=4>, #<Tag @id=2 @text="ruby" @link_id=4>]
-```
-
-It turns out we made a mistake in our test. Instead of expecting the link.tags array to contain strings, we should expect it to contain instances of Tag object. Let's fix the test by mapping the Tag instances to the text they contain.
+It turns out we made a mistake in our test. Instead of expecting the link.tags array to contain a string, we should expect it to contain instances of Tag object. Let's fix the test by extracting out the value we want to checkout within our expectation
 
 ```ruby
 
-expect(link.tags.map(&:text)).to include 'education', 'ruby'
+expect(link.tags.map(&:text)).to include 'education'
 
 ```
-Now all our tests pass.
+Now all our tests pass! =)
 
-```
-Finished in 0.12076 seconds
-4 examples, 0 failures
-```
-Current state is on Github.
-https://github.com/makersacademy/bookmark_manager/tree/88dd9bc90041fc02dd5f335ad4ddfc0eab430c4e
+## Filtering by a tag
 
-## Filtering by tag
-
-Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag. Let's write a test for this in ```listing_all_links_spec.rb``` first.
-
+Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag. Let's write a test for filtering links by the term "bubbles".
+Within ```listing_all_links_spec.rb```:
 ```ruby
 scenario 'filtered by a tag' do
-  visit '/tags/search'
+  visit '/tags/bubbles'
   expect(page).not_to have_content('Makers Academy')
   expect(page).not_to have_content('Code.org')
-  expect(page).to have_content('Google')
-  expect(page).to have_content('Bing')
+  expect(page).to have_content('This is Zombocom')
+  expect(page).to have_content('Bubble Bobble')
 end
 ```
 
-Let's also update the before(:each) block to create some test data.
+Let's also define a before(:each) block to create some test data.
 
 ```ruby
-  before(:each) {
+  before(:each) do
     Link.create(url: 'http://www.makersacademy.com',
                 title: 'Makers Academy',
                 tags: [Tag.first_or_create(text: 'education')])
     Link.create(url: 'http://www.google.com',
                 title: 'Google',
                 tags: [Tag.first_or_create(text: 'search')])
-    Link.create(url: 'http://www.bing.com',
-                title: 'Bing',
-                tags: [Tag.first_or_create(text: 'search')])
-    Link.create(url: 'http://www.code.org',
-                title: 'Code.org',
-                tags: [Tag.first_or_create(text: 'education')])
-  }
-  ```
+    Link.create(url: 'http://www.zombo.com',
+                title: 'This is Zombocom',
+                tags: [Tag.first_or_create(text: 'bubbles')])
+    Link.create(url: 'http://www.bubble-bobble.com',
+                title: 'Bubble Bobble',
+                tags: [Tag.first_or_create(text: 'bubbles')])
+  end
+```
 
 Sure enough, the test fails because Sinatra returns a "404 Not Found" page for the route that doesn't exist yet. Let's add the route.
 
@@ -190,14 +165,46 @@ Sure enough, the test fails because Sinatra returns a "404 Not Found" page for t
 get '/tags/:text' do
   tag = Tag.first(text: params[:text])
   @links = tag ? tag.links : []
-  erb :index
+  erb :'links/index'
 end
 ```
 
 First we find the tag that we need (note the use of a named parameter in the route). Then, if the tag exists, we get associated links. Otherwise, we just return an empty array.
 
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/e45ed5d9c3289c8320632e6aadcc56c3d624fbcc
+Run your tests. You should get an epic error message, but if you scroll to the top you'll find the important part:
+
+```ruby
+Failure/Error: expect(page).not_to have_content('Makers Academy')
+  expected not to find text "Makers Academy" in "NoMethodError at /tags/bubbles undefined method `links' for #<Tag @id=8 @text=\'bubbles\'"
+```
+Whereas `link.tags` returns an array-like DataMapper Collection, it seems that `tag.links` blows up with a NoMethodError. Looking at the Tag class, it should be relatively clear why: we haven't declared the many-to-many relationship. Let's do that:
+```ruby
+# within the body of the Tag class (./app/models/tag.rb)
+has n, :links, through: Resource
+```
+Run your tests again and you should get a whole series of messages referencing SQL errors. Examine the errors, though don't worry about understanding them. Think about what change a 'many-to-many' relationship should make to a database.
+
+The problem is that our declaration in Tag above is proposing a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes. What we need to do is change this to `DataMapper.auto_migrate!`. Doing so should make your tests go green. For safety's sake, switch back to `auto_upgrade!` (see extra activity below for implementing the best practice for this).
+
+
+## Extra Activities:
+
+* We chose to implement the most simple form of tagging: single tags. We probably want users to be able to give links many tags, however. Get to work on this new feature! Here's a test to get you started:
+```ruby
+scenario 'with multiple tags' do
+  visit '/links/new'
+  fill_in 'url',   with: 'http://www.makersacademy.com/'
+  fill_in 'title', with: 'Makers Academy'
+  # our tags will be space separated
+  fill_in 'tags',  with: 'education ruby'
+  click_button 'Add link'
+  link = Link.first
+  expect(link.tags.map(&:text)).to include('education', 'ruby')
+end
+```
+* What happens if the user submits no value within the tag field? Is a tag still being created? Do you think this a problem? If it is, fix it!
+
+* Setup Rake task for migration.
 
 [ [Next Stage](bookmark_manager_stage_2.md) ]
 
