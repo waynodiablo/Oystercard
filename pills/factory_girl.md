@@ -13,7 +13,7 @@ describe 'User management' do
 
     sign_in_as(user)
 
-    expect(page).to have_content "Welcome, foobar_user!"
+    expect(page).to have_content "Welcome, #{user.email}!"
   end
 
   scenario 'User logs out' do
