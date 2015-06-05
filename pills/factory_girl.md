@@ -23,7 +23,7 @@ describe 'User management' do
     sign_in_as(user)
     sign_out
 
-    expect(page).to have_content "Goodbye, foobar_user!"
+    expect(page).to have_content "Goodbye, #{user.email}!"
   end
 
 end
@@ -80,7 +80,7 @@ FactoryGirl.define do
 
 end
 ```
-Let's be clear: we're not *defining* the properties the User model. That's done within the User class (that said, you can drive the creation of a model by first defining its factory).
+Let's be clear: we're not *defining* the headings of the columns in the User table. That's done within the User class or elsewhere, depending on your ORM. (That said, you can drive the creation of a model by first defining its factory).
 
 What we're actually doing is setting the values of a default user, so that `create :user` will generate a model and corresponding row in the database containing those values.
 
