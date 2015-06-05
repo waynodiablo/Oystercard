@@ -1,17 +1,15 @@
-* errors image does not match reality
-
-### Refactor
+# Refactor
 Before proceeding, let's refactor our helper methods. Lengthy argument lists such as we have in our #sign_up method are a sign of poor code quality. Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
 
-### Preventing duplicate registrations
+## Preventing duplicate registrations
 
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 
 ```ruby
 scenario 'with an email that is already registered' do
-  expect { sign_up_as }.to change(User, :count).by(1)
-  expect { sign_up_as }.to change(User, :count).by(0)
+  sign_up_as(user)
+  expect { sign_up_as(user) }.to change(User, :count).by(0)
   expect(page).to have_content('This email is already taken')
 end
 ```
@@ -22,7 +20,7 @@ We need to do two things. Firstly, we need to put constrains on the email field.
 property :email, String, unique: true, message: 'This email is already taken'
 ```
 
-We're setting the error message datamapper is going to return explicitely even though a very similar message would be used by default if we didn't specify it.
+We're setting the error message datamapper is going to return explicitly even though a very similar message would be used by default if we didn't specify it.
 
 Secondly, we need to refactor our controller code. Right now it looks like this.
 
