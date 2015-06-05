@@ -52,8 +52,13 @@ describe Bike do
   it { is_expected.to respond_to :working?}
 end
 ```
-
-Notice that on the first line we have `describe Bike do` where we are referring directly to the class Bike.  We're not using a string description as we did in the feature test.  This is a feature of RSpec that gives us some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower-level Ruby error.
+Notice on the first line we have `describe Bike do`; we are _referring explicitly to the class Bike_.  RSpec also supports string descriptions such as this:
+```ruby
+describe 'Bike' do
+  # ...omitted for brevity
+end
+```
+Describing the class directly provides some great conveniences such as the [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject).  However, as Ruby executes this file it has to look for a Bike class, even before it can run the tests specified in the `it` blocks.  That's why we get the lower-level Ruby error.
 
 This new error of course means its a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:
 
@@ -86,7 +91,7 @@ Bike should respond to #working?
 
 First, it shows us the [rspec expectation](https://www.relishapp.com/rspec/rspec-expectations/docs) that failed. Specifically, it expected an instance of the `Bike` class to respond to `working?`. (As before with the docking station, #<Bike:0x007f9d2c0b2ef0> refers to the instance of the Bike class that is being tested.)  Where does this instance of the `Bike` class come from.  Discuss this with your pair parter.  Did we just read about it?
 
-Note also that this failure corresponds closely (although not exactly) to the error from our manual feature test at the end of stage 2.  Check back to reflect on the differences and similarities.
+Note also that this failure corresponds closely (although not exactly) to the error from our manual test at the end of stage 2.  Check back to reflect on the differences and similarities.
 
 Further, the test is almost telling us what to do. We don't have the method `working?`, so let's create one. Update the Bike class to include this method.
 
@@ -98,10 +103,7 @@ class Bike
 end
 ```
 
-Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now participate in our feature test.  Running RSpec we should see that our unit test passes, but restarting IRB we see that our manual feature test does not.  It is still stuck on the same error as before, indicating there is more work to do :-/
-
-However we've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
-
+Our code is still extremely basic but we're getting somewhere.  Our Bike is not complete, but it has sufficient functionality to now for us to try it out in IRB.  Running RSpec we should see that our unit test passes, but restarting IRB we see that our manual test does not.  It is still stuck on the same error as before, indicating there is more work to do :-/
 ```
 $ irb
 2.2.2 :001 > require './lib/docking_station'
@@ -115,8 +117,9 @@ NoMethodError: undefined method `working?' for nil:NilClass
 	from (irb):4
 	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
 ```
+However we've changed the error message again so it's a great time to switch driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
 
-The problem here seems to be that we have no method `working?` defined for `nil:NilClass`.  So what is `nil:NilClass` or `nil`?  Look at the result that IRB shows for the 3rd statement in the above feature test.
+The problem seems to be that we have no method `working?` defined for `nil:NilClass`.  So what is `nil:NilClass` or `nil`?  Look at the result that IRB shows for the 3rd statement in the above manual test.
 
 You should have ascertained that it is the `bike` variable.  But why?  Have a look at the code that assigns the bike variable `bike = docking_station.release_bike`.  What is returned by `docking_station.release_bike`?
 
@@ -133,7 +136,7 @@ describe DockingStation do
 end
 ```
 
-Now we have a matched pair of failing tests again (one feature and one unit) but don't worry - that's progress; we're chipping away at the functionality needed for the feature with a succession of unit tests.  Let's focus our attention on the unit test:
+Now we have a pair of failing tests again (one manual and one unit) but don't worry - that's progress; we're chipping away at the functionality needed for the feature with a succession of unit tests.  Let's focus our attention on the unit test:
 
 ```
 DockingStation releases working bikes
@@ -156,7 +159,7 @@ class DockingStation
 end
 ```
 
-Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  We should have moved on to a new failure from the last one, but does the absence of presence of `require_relative 'bike'` change that error?  Discuss the output with your pair partner.  How does DockingStation know what a Bike is without `require_relative 'bike'`?  With this line still removed from your file, try running the manual feature test in IRB:
+Notice the `require_relative 'bike'` at the top of the file.  Is this necessary?  Try removing it and run RSpec again.  We should have moved on to a new failure from the last one, but does the absence of presence of `require_relative 'bike'` change that error?  Discuss the output with your pair partner.  How does DockingStation know what a Bike is without `require_relative 'bike'`?  With this line still removed from your file, try running the manual test in IRB:
 
 ```
 $ irb
@@ -173,7 +176,7 @@ NameError: uninitialized constant DockingStation::Bike
 ```
 What is going on here?  **It is very important that you understand this error message**.  Your code is running in two different environments.  One is provided by RSpec, the other by `irb`.  Take some time to discuss this with your pair partner.  Ask an [Alumni Helper](https://github.com/makersacademy/course/blob/master/toc.md#resources) or coach to explain it if you don't understand.
 
-Add the `require_relative 'bike'` back in and repeat the feature test in `irb`.  It should work now, or at least get you as far as:
+Add the `require_relative 'bike'` back in and repeat the test in IRB.  It should work now, or at least get you as far as:
 
 ```
 2.2.2 :003 > bike = station.release_bike
@@ -184,9 +187,9 @@ Add the `require_relative 'bike'` back in and repeat the feature test in `irb`. 
 
 **As you can see this process of manual feature testing in `irb` is absolutely essential to ensure that your objects play well together.**  Research the difference between `require` and `require_relative`.  Can you tell why we needed `require_relative` in this instance?
 
-Ironically, given how carefully we have test-driven our code via unit tests in RSpec, there is a problem they failed to catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bulletproof.  A sanity check of the actual user interface is always recommended.
+Ironically, given how carefully we have test-driven our code via unit tests in RSpec, there is a problem they failed to catch.  This is a fairly common experience for developers.  Tests are great for taming complex systems but they are not bulletproof.  A manual sanity check of the actual user interface is always recommended.
 
-So we've almost got our entire manual feature test working as specified at the beginning of stage 1.  The only thing missing is that when we ask our bike if it is working we get a nil and not a true :-(
+So we've almost got our entire manual test working as specified at the beginning of stage 1.  The only thing missing is that when we ask our bike if it is working we get a nil and not a true :-(
 
 Let's look at our unit tests again.  Are they passing?  Why not?
 
