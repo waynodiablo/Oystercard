@@ -4,7 +4,7 @@
 
 So how did you try to deal with the error we saw at the end of stage 1?  Here it is again:
 
-```sh
+```
 $ irb
 2.2.2 :001 > station = DockingStation.new
 NameError: uninitialized constant DockingStation
@@ -111,7 +111,7 @@ Now run RSpec again - do you expect it will work?
 
 RSpec should now pass, so let's go back and check that this will work in IRB. You will need to restart IRB each time and re-type out the code in order to pick up the changes we make to Ruby files in our lib directory.  Going forward we'll also have to require our docking_station.rb file in IRB, just as we do in our unit test:
 
-```sh
+```
 $ irb
 2.2.2 :001 > require './lib/docking_station'
  => true
@@ -123,7 +123,7 @@ Notice the difference in the require statement.  In IRB we had to specify the pa
 
 Now that the first part of our user story is working, and showing us a representation of our newly created DockingStation object ('0x007fdac915c8f8' refers to the position of the object in the computer memory, and can safely be ignored), we can continue with the next elements of our user story like so:
 
-```sh
+```
 $ irb
 2.2.2 :001 > require './lib/docking_station'
  => true
@@ -139,11 +139,11 @@ We have a new Ruby error! It might feel like things are getting worse, but a new
 
 Compare this failure with the failure we started with at the beginning of the stage.  Is it the same?  If not, why is it different?  Take some time to discuss this with your pair partner.  What will you do next?
 
-Our user story still isn\'t working, which means that although we can now test the DockingStation class, it does not have the behaviour we want.  Let\'s look through the error carefully to work out what Ruby is telling us. Specifically, it tells us that the method `release_bike` is undefined. (``#<DockingStation:0x007fc1d4866828>`` refers to the instance of the DockingStation class that we have in the `docking_station` variable.).
+Our user story still isn't working, which means that although we can now test the DockingStation class, it does not have the behaviour we want.  Let's look through the error carefully to work out what Ruby is telling us. Specifically, it tells us that the method `release_bike` is undefined. (``#<DockingStation:0x007fc1d4866828>`` refers to the instance of the DockingStation class that we have in the `docking_station` variable.).
 
-So, the error is almost telling us what to do. We don\'t have the method `release_bike`, and it\'s tempting to just go ahead and create one, however we want to test-drive our code by *unit tests* right?
+So, the error is almost telling us what to do. We don't have the method `release_bike`, and it's tempting to just go ahead and create one, however we want to test-drive our code by *unit tests* right?
 
-Let\'s create a unit test for `release_bike` in `spec/docking_station_spec.rb`:
+Let's create a unit test for `release_bike` in `spec/docking_station_spec.rb`:
 
 ```ruby
 require 'docking_station'
@@ -153,7 +153,7 @@ describe DockingStation do
 end
 ```
 
-Notice that we are using the more common RSpec `describe`/`it` syntax here.  The test is remarkably succinct; but does it not also describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it does.
+The test is remarkably succinct; but does it not also describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it does.
 
 We are using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax).  We could just as easily have written the test like so:
 
@@ -167,7 +167,7 @@ describe DockingStation do
 end
 ```
 
-... which uses the RSpec [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject) syntax. The advantage of the one-liner syntax is that RSpec can infer the description from the syntax - so an additional description is unnecessary and just adds clutter.  As a developer you must constantly strive for readability and ensure that test descriptions correspond exactly with what is being tested.
+...which uses the RSpec [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject) syntax. The advantage of the one-liner syntax is that RSpec can infer the description from the syntax - so an additional description is unnecessary and just adds clutter.  As a developer you must constantly strive for readability and ensure that test descriptions correspond exactly with what is being tested.
 
 Before you run `$ rspec`, discuss with your pair partner what outcome you expect.
 
