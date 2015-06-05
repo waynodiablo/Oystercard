@@ -29,7 +29,7 @@ RuntimeError: DockingStation
 	.... stack trace omitted ....
 ```
 
-Run this in IRB to ensure that it currently does not raise any error (because that's what we want) and then drop into a unit test:
+Run this in IRB to ensure that it currently does not raise an error (because, for a capacity of 1, _that's a failure_ right?) and then drop into a unit test:
 
 ```ruby
 require 'docking_station'
@@ -110,7 +110,7 @@ describe DockingStation do
 end
 ```
 
-We should now have a failure from our unit test to match the way our manual feature test doesn't do what we expect.  That means it's time to start changing our application code.  An array seems like a good data structure for holding the bikes - let's try that out:
+We should now have a failure from our unit test to match the way our manual feature test fails.  That means it's time to start changing our application code.  An array seems like a good data structure for holding the bikes - let's try that out:
 
 ```ruby
 class DockingStation
@@ -134,8 +134,18 @@ You should have run `rspec` without even thinking about it.  Everything green?  
 
 Speaking of RED - GREEN - REFACTOR, we haven't done any refactoring recently, so now would be a good time to look for opportunities.
 
-One thing we could do is create private helper methods `empty?` and `full?` to make our code a little more readable.  In general we don't write tests for private methods.  Why do you think that is?  Discuss this with your pair partner.
+This is a great opportunity to introduce the Single Responsibility Principle (SRP).  Everything in code should have a _single recognizable responsibility_.  Our `DockingStation` class is responsible for docking and releasing bikes.  While you might argue that that's _two_ responsibilities(!), they are inextricably dependent on one-another, so it's OK.  But we do separate those responsibilities into individual methods.  Similarly, each method should have a _single responsibility_.  In our code, the `dock` method is responsible for handling the docking of a bike:
+```
+fail 'Docking station full' if @bikes.count >= 20
+@bikes << bike
+```
+**and** defining the rule for capacity:
+```
+@bikes.count >= 20
+```
+This is a bad thing for 2 reasons.  Firstly, because it breaks the single responsibility principle, and secondly because it necessitates an additional cognitive step when reading the code.  As a reader, I am forced to infer that `@bikes.count >= 20` corresonds to the docking station being full.
 
+Let's fix this and improve the readability of our code by introducing private helper methods `empty?` and `full?`. In general we don't write unit tests for private methods. Why do you think that is? Discuss this with your pair partner.
 
 ```ruby
 class DockingStation
@@ -153,7 +163,6 @@ class DockingStation
     @bikes << bike
   end
 
-
   private
 
   def full?
@@ -166,9 +175,9 @@ class DockingStation
 end
 ```
 
-Having made the above refactoring, you will of course want to immediately run RSpec again to ensure that we haven't accidentally introduced any errors.  And of course you'll want to manually test that everything still works in IRB.  Getting a little tired of manual testing in IRB?  We'll introduce you to some ways to automate your feature tests soon, but it is really really really importnat that you get comfortable and familiar with 'playing' with your code in IRB.
+Having made the above refactoring, you will of course want to immediately run RSpec again to ensure that we haven't accidentally introduced any errors.  And of course you'll want to manually test that everything still works in IRB.  Getting a little tired of manual testing in IRB?  We'll introduce you to some ways to automate your feature tests soon, but it is really really really important that you get comfortable and familiar with experimenting with your code in IRB.
 
-Any more refactoring? We really should also deal with the 'magic number' `20`.  Magic numbers are a common source of bugs in computer programs.  They occur wherever a numeric literal is used in code and is related to a domain concept.  In this case, the default capacity of a docking station.  In a large and complex program, if we were to see the literal `20` all over the place, it would not be obvious, without reading the context in which it is used, whether it is a reference to capacity or some other domain concept that happens to also be 20.  What if the default capacity changes?
+Any more refactoring? We really should also deal with the 'magic number' `20`.  Magic numbers are a common source of bugs in computer programs.  They occur wherever a numeric literal (e.g `20`) is used in code and is related to a domain concept; in this case, the default capacity of a docking station.  In a large and complex program, if we were to see the literal `20` all over the place, it would not be obvious, without reading the context in which it is used, whether it is a reference to capacity or some other domain concept that happens to also be 20.  What if the default capacity changes?
 
 To deal with this, we *encapsulate* the literal in a *constant* then use this constant everywhere else:
 
@@ -184,7 +193,7 @@ class DockingStation
 end
 ```
 
-This is a good start, however is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?  Also this raises the question of whether a docking station full if the count of bikes exceeds the default capacity; or the specific capacity for that station?  
+This is a good start, however is there anywhere else where we use the magic number `20`?  How about in our tests?  Here's a handy blog post on the subject of [testing with magic numbers](http://blog.silvabox.com/testing-with-magic-numbers/).  Which approach should we use here?  Also this raises the question of whether a docking station is full if the count of bikes exceeds the default capacity; or the specific capacity definied for that station?  
 
 It feels like we need a `capacity` attribute for our docking station.  But we can't introduce one without a unit test:
 
@@ -213,7 +222,7 @@ describe DockingStation do
 end
 ```
 
-We might also use a private `attr_reader` to have all our references to the `@bikes` instance variable go through a single interface:
+We might also use a _private_ `attr_reader` to have all our references to the `@bikes` instance variable go through a single interface:
 
 ```ruby
 class DockingStation
