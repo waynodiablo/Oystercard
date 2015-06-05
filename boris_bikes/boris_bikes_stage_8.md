@@ -39,7 +39,7 @@ Each object might use a different language for these (.e.g. 'dock', 'load', 'rel
 
 Note:  A module cannot be instantiated in the way a class can.  You can't have an instance of a module.  In Ruby, modules are used to define common behaviour that can then be *included* into other objects.  If we are defining common behaviour for a docking station, van and garage, it follows that this behaviour will need to be included into the `DockingStation`, `Van` and `Garage` classes.  We don't want to have to write the same tests three times, so we will use the [shared example](https://www.relishapp.com/rspec/rspec-core/v/2-0/docs/example-groups/shared-example-group) feature of RSpec to write the tests once, then include those tests in the tests for docking station, van and garage.
 
-Because we are testing a module, we don't have an actual object that we can test.  While we are test driving the module, we'll use a temporary class especially for the purposes of including the module so it can be tested.  Later, when we've test-driven the creation of this module, we'll do away with the temporary class.
+Because we are testing a module, we don't have an actual object that we can test.  While we are test-driving the module, we'll use a temporary class especially for the purposes of including the module so it can be tested.  Later, when we've test-driven the creation of this module, we could do away with the temporary class.
 
 `spec/bike_container_spec.rb`:
 ```ruby
@@ -55,7 +55,7 @@ end
 # class that includes `BikeContainer`, to initially run tests against
 class BikeContainerTest; include BikeContainer; end
 
-# it_behaves_like BikeContainer imports all the tests in the shared example
+# `it_behaves_like BikeContainer` imports all the tests in the shared example
 describe BikeContainerTest do
   it_behaves_like BikeContainer
 end
