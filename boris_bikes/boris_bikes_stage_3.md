@@ -4,7 +4,7 @@
 
 So how do we model a bike?
 
-A bike has a great many properties. It has a number of gears, it has a certain weight, etc. but none of that is relevant to the task of renting a bike from our system. Therefore, we shouldn't be concerned with those properties. Our feature test is indicating that the only thing about the bike that concerns us right now is whether it's working or not.
+A bike has a great many properties. It has a number of gears, it has a certain weight, etc. but none of that is relevant to the task of renting a bike from our system. Therefore, we shouldn't be concerned with those properties; the only thing about the bike that concerns us right now is whether it's working or not.
 
 Let's write a specification for the bike that describes how we want the bike to behave. We're intentionally keeping everything very simple right now. It's not because this is a tutorial; it's just a good thing to do. As you design the system, you should move in small steps regardless of your experience.
 
