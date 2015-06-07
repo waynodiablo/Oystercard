@@ -54,22 +54,36 @@ Try to get your version looking more like the mockup. Get some styling in there!
 
 ##Version 3 - Deploying to Heroku
 
-Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - you could use Node Express or Sinatra.
-
-If you want to try Node, have a look at these resources:
-
-* :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
-* [Node guide](https://github.com/makersacademy/course/blob/master/node_guide.md)
+Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - Sinatra, for example. 
 
 If you are deploying with Sinatra, you may want to read this:
 
 * [Deploying your Sinatra/Angular application to Heroku](https://github.com/makersacademy/course/blob/master/pills/deploying_angular_sinatra.md)
 
 
+
 ##Version 4 - Bonus Level
 
 Keep extending the profile - can you list all of a user's repos? How about the commit count per repo? Language distribution? How can you use Angular to display this information?
 
+What about build tools? Have you got everything optimized with Grunt? Have you thought about concatenating all the files and then minifying them? What does that even mean?!
+
 ##Version 5 - You're a masochist
 
-Redo everything in Coffeescript (or DogeScript)
+Redo everything in Coffeescript (or DogeScript). But in all seriousness, actually try to redo everything in ES6.
+
+
+
+
+
+
+
+
+
+
+
+
+And, if you have finished all of the above (except Version 5) and you really really want to try Node (at your own peril!), have a look at these resources:
+
+* :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md)
+* [Node guide](https://github.com/makersacademy/course/blob/master/node_guide.md)
