@@ -50,7 +50,7 @@ While you're here, also check out:
 
 ##Version 2 - More info
 
-Try to get your version looking more like the mockup. Get some styling in there!
+Try to get your version looking more like the mockup. Get some styling in there! Test ALL THE THINGS with Protractor! (you problably skipped past the bit where it said to use Protractor, so [here's the link again](/further_javascript/protractor.md))
 
 ##Version 3 - Deploying to Heroku
 
