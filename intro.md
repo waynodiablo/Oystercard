@@ -107,6 +107,7 @@ The Three Tier Architecture is the Rosetta Stone of web development.  We want yo
 Related Videos
 --------------
 
+* [Video of June 2015 Intro Session](https://www.youtube.com/watch?v=F1MMqNWuK5E)
 * [Video of April 2015 Intro Session](https://www.youtube.com/watch?v=TlSskjGryK4)
   - [Bonus "Learning to Learn" with Sam Morgan](https://www.youtube.com/watch?v=_NSQkqOk5x0)
 * [Video of March 2015 Intro Session](https://www.youtube.com/watch?v=zRb1WLbV_Sk)
