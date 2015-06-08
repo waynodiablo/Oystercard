@@ -15,13 +15,15 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 5. If your test goes green, congratulations! If not, repeat steps 3 to 4 a couple more times.
 
-6. Write up your problem in 3 - 4 sentences and post on your cohort's slack channel. Notify @channel and find out if any other students have encountered a similar problem or can help.
+6. Google the error message. Scan the first few results for useful pointers.
 
-7. Escalate your problem to the Alumni Helper desk and ask for their advice on debugging the problem. Ideally they are able to give you helpful suggestions.
+7. Write up your problem in 3 - 4 sentences and post on your cohort's slack channel. Notify @channel and find out if any other students have encountered a similar problem or can help.
 
-8. Congratulations! You've got a problem worthy of being an [issue](https://github.com/makersacademy/issues). The issues repo is intended as a stack-overflow style Q&A for use by students. Check out the readme for more details.
+8. Escalate your problem to the Alumni Helper desk and ask for their advice on debugging the problem. Ideally they are able to give you helpful suggestions.
 
-9. If your issue is not addressed promptly, bring a coach's attention to it or flag them over.
+9. Congratulations! You've got a problem worthy of being an [issue](https://github.com/makersacademy/issues). The issues repo is intended as a stack-overflow style Q&A for use by students. Check out the readme for more details.
+
+10. If your issue is not addressed promptly, bring a coach's attention to it or flag them over.
 
 ### Tips on the above
 Try not to think of alumni helpers and coaches as qualitatively different from other routes to solving a problem. Their expertise itself is a tool that you need to use carefully. If your codebase is a mess, you don't have relevant tests, or the problem you're having is otherwise obscured, they will struggle to be effective in helping you.
