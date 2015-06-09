@@ -115,7 +115,7 @@ describe 'Greeter' do
 Running the spec now will result in the test to pass:
 
 ````
-rspec -f p greeter_spec.rb
+rspec greeter_spec.rb
 .
 
 Finished in 0.0085 seconds
