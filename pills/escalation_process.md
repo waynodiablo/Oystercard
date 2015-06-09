@@ -21,7 +21,7 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 8. Escalate your problem to the Alumni Helper desk and ask for their advice on debugging the problem. Ideally they are able to give you helpful suggestions.
 
-9. Congratulations! You've got a problem worthy of being an [issue](https://github.com/makersacademy/issues). The issues repo is intended as a stack-overflow style Q&A for use by students. Check out the readme for more details. **Remember** to post a link to a github repo. Ideally, you checkout your buggy code to a separate branch, push, and link to that.
+9. Congratulations! You've got a problem worthy of posting to [slack-overflow](https://github.com/makersacademy/slack-overflow). The issues repo is intended as a stack-overflow style Q&A for use by students. Check out the readme for more details. **Remember** to post a link to a github repo. Ideally, you checkout your buggy code to a separate branch, push, and link to that.
 
 10. If your issue is not addressed promptly, bring a coach's attention to it or flag them over.
 
