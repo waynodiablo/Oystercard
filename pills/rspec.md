@@ -133,7 +133,7 @@ end
 Running [RSpec](http://rspec.info) will fail now (*and for the right reason*):
 
 ````ruby
-rspec -f p greeter_spec.rb
+rspec greeter_spec.rb
 .F
 
 Failures:
@@ -166,7 +166,7 @@ end
 If we run our specs now we will see that our code works as expected:
 
 ````
-rspec -f p greeter_spec.rb
+rspec greeter_spec.rb
 ..
 
 Finished in 0.0006 seconds
