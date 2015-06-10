@@ -14,7 +14,7 @@ git checkout <pair-partner>/<branch-name>
 git checkout -b <branch-name>
 ```
 
-Not that the above assumes a new branch name that you don't currently have on your local system.  If you are planning to ping pong on master then you can just pull your partners changes in directly like so
+Note that the above assumes a new branch name that you don't currently have on your local system.  If you are planning to ping pong on master then you can just pull your partners changes in directly like so
 
 ```sh
 git pull <pair-partner> master
