@@ -607,7 +607,7 @@ As always, let's start with the tests. We're planning to extract the http reques
   beforeEach(inject(function($httpBackend) {
       httpBackend = $httpBackend
       httpBackend
-        .expectGET("https://api.github.com/search/users?access_params=yourtoken&q=hello")
+        .expectGET("https://api.github.com/search/users?q=hello&access_token=yourtoken")
         .respond(
           { items: items }
         );
@@ -621,7 +621,7 @@ This is simply setting an expectation that a GET request will be sent. Don't wor
     httpBackend.verifyNoOutstandingRequest();
    });
 ```
-This will check after every test that the expected requests have been made, and that no extra requests have been made. At this stage, your tests should still pass. Now let's create a test for our new factory, in a new file `spec/searchfactory.spec.js`:
+This will check after every test that the expected requests have been made, and that no extra requests have been made. At this stage, your tests should still pass. Now let's create a test for our new factory, in a new file `test/searchfactory.spec.js`:
 
 ```javascript
 describe('factory: Search', function() {
