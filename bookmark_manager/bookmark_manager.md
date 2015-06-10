@@ -66,8 +66,8 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
   * [Three levels of data checks](bookmark_manager_stage_5.md)
   * [Preventing duplicate registrations](bookmark_manager_stage_6.md)
   * [Rake tasks for database management](bookmark_manager_stage_7.md)
-  * [Signing in and out](bookmark_manager_stage_8.md)
-  * [Forgotten password](bookmark_manager_stage_9.md)
+  * [Signing in and out](bookmark_manager_stage_7.md)
+  * [Forgotten password](bookmark_manager_stage_8.md)
 * [Styling the website](bookmark_manager_stage_style.md)
 
 ## Resources
