@@ -19,37 +19,34 @@ I'd like docking stations to accept returning bikes (broken or not).
 
 ```
 
-Let's start with one of these and create a feature test.
-
-```ruby
-feature 'member of public returns bike' do
-  # other tests omitted for brevity
-
-  scenario 'bike can be reported broken when returned' do
-    docking_station = DockingStation.new
-    bike = Bike.new
-    bike.report_broken
-    expect(bike).to be_broken
-    expect { docking_station.dock bike }.not_to raise_error
-  end
-end
-```
-We should be getting used to the format of these test failures now :-)
+Let's start with one of these and imagine how our manual feature test would look:
 
 ```
-Failures:
+$ irb
+2.0.0-p195 :001 > station = DockingStation.new
+ => #<DockingStation:0x007fae7b3b8950>
+2.0.0-p195 :002 > bike = Bike.new
+ => #<Bike:0x007fae7b3c0dd0>
+2.0.0-p195 :003 > bike.report_broken
+ => nil
+2.0.0-p195 :004 > bike.broken?
+ => true
+2.0.0-p195 :005 > docking_station.dock bike
+ => nil
+```
 
-  1) member of public returns bike bike can be reported broken when returned
-     Failure/Error: bike.report_broken
-     NoMethodError:
-       undefined method `report_broken' for #<Bike:0x007fe543c0afc8>
-     # ./spec/features/public_returns_bike_spec.rb:12:in `block (2 levels) in <top (required)>'
+Typing this into IRB we should be getting used to the format of these error messages by now :-)
 
+```
+2.0.0-p195 :003 > bike.report_broken
+NoMethodError: undefined method `report_broken' for #<Bike:0x007fad7c030ee0>
+	from (irb):8
+	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
 ```
 
 :twisted_rightwards_arrows:
 
-Again this is our feature test failing.  Naturally we'll want to create a unit-test for the missing low-level functionality.  As you might expect, that will go in our `bike_spec.rb` file.
+So our manual feature test doesn't work.  Naturally we'll want to create a unit-test for the missing low-level functionality.  As you might expect, that will go in our `bike_spec.rb` file.
 
 ```ruby
 it 'can be reported broken' do
@@ -58,7 +55,7 @@ it 'can be reported broken' do
 end
 ```
 
-We now have another pair of failing tests.  It's down to you now to make them pass.
+We now have a failing unit test to match our manual feature test error:  
 
 ```
 Failures:
@@ -68,108 +65,43 @@ Failures:
      NoMethodError:
        undefined method `report_broken' for #<Bike:0x007fe0b9315a50>
      # ./spec/bike_spec.rb:7:in `block (2 levels) in <top (required)>'
-
-  2) member of public returns bike bike can be reported broken when returned
-     Failure/Error: bike.report_broken
-     NoMethodError:
-       undefined method `report_broken' for #<Bike:0x007fe0b9fe5208>
-     # ./spec/features/public_returns_bike_spec.rb:12:in `block (2 levels) in <top (required)>'
 ```
 
-How many unit tests did you create?  **Did you think about the relationship between `broken?` and `working?`?**  Do we need to write additional tests?  Discuss this with your pair partner and write the required tests.
+It's down to you to make the unit test pass which should in turn allow the manual feature test to get another step further.  The training wheels are coming off now - see if you can get the complete feature working.
 
-Now let's add another feature test:
+How many unit tests did you create?  **Did you think about the relationship between `broken?` and `working?`?  In particular, do our current set of features demand a relationship between broken and working? Or not yet?**    Do we need to write additional tests?  Discuss this with your pair partner and write the required tests.
 
-```ruby
-feature 'member of public accesses bike' do
-  # other tests omitted for brevity
-
-  scenario 'docking station does not release broken bikes' do
-    docking_station = DockingStation.new
-    bike = Bike.new
-    bike.report_broken
-    docking_station.dock bike
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-end
-```
+When you think you're done let's move on to create another manual feature test to correspond to the second of the three user stories above.  The output we want is:
 
 ```
-Failures:
-
-1) member of public accesses bike docking station does not release broken bikes
-   Failure/Error: expect { docking_station.release_bike }.to raise_error 'No bikes available'
-     expected Exception with "No bikes available" but nothing was raised
-   # ./spec/features/public_accesses_bike_spec.rb:19:in `block (2 levels) in <top (required)>'
+$ irb
+2.0.0-p195 :001 > station = DockingStation.new
+ => #<DockingStation:0x007fae7b3b8950>
+2.0.0-p195 :002 > bike = Bike.new
+ => #<Bike:0x007fae7b3c0dd0>
+2.0.0-p195 :003 > bike.report_broken
+ => nil
+2.0.0-p195 :004 > docking_station.dock bike
+ => nil
+2.0.0-p195 :005 > docking_station.release_bike
+ RuntimeError: No bikes available
+ 	.... stack trace omitted ....
 ```
+
+But at the moment our docking station will happily release a broken bike.  We have to put a stop to that ...
+
 :twisted_rightwards_arrows:
 
-What unit tests will you need to create in order to support this feature test?  Is the behaviour affected by the number of bikes in the docking station?  What if some are bikes broken and others not?  Make sure your unit tests sufficiently cover all the possible eventualities.
+What unit tests will you need to create in order to support this feature test?  Is the behaviour affected by the number of bikes in the docking station?  What if some bikes are broken and others not?  Make sure your unit tests sufficiently cover all the possibilities.
 
 
-Now take some time to review the user stories with your pair partner.  Write a new feature test for the third user story.  What will happen when you run RSpec?
+Now take some time to review the user stories with your pair partner.  Start typing out a new manual feature test for the third user story.  How might it fail?
 
-Make sure all of your feature and unit tests are passing.
-
-Let's consider some refactoring.  Our feature test looks like it could use some attention.  Check out `public_accesses_bike_spec.rb`:
-
-```ruby
-feature 'member of public accesses bike' do
-  scenario 'docking station releases a working bike' do
-    docking_station = DockingStation.new
-    docking_station.dock Bike.new
-    bike = docking_station.release_bike
-    expect(bike).to be_working
-  end
-
-  scenario 'docking station does not release a bike when there are none available' do
-    docking_station = DockingStation.new
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-
-  scenario 'docking station does not release broken bikes' do
-    docking_station = DockingStation.new
-    bike = Bike.new
-    bike.report_broken
-    docking_station.dock bike
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-end
-```
-
-We're declaring `DockingStation.new` three times.  We could make this feature test `describe DockingStation` and use RSpec's implicitly defined subject, but it's a feature test that is testing both Bike and DockingStation so let's use an alternative.  A `let` statement:
-
-```ruby
-feature 'member of public accesses bike' do
-
-  let(:docking_station) { DockingStation.new }
-
-  scenario 'docking station releases a working bike' do
-    docking_station.dock Bike.new
-    bike = docking_station.release_bike
-    expect(bike).to be_working
-  end
-
-  scenario 'docking station does not release a bike when there are none available' do
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-
-  scenario 'docking station does not release broken bikes' do
-    bike = Bike.new
-    bike.report_broken
-    docking_station.dock bike
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-end
-```
-
-Notice how we've replaced three lines of identical code with a single `let` statement.  Each programmer has their own rule of thumb, but something being repeated three times is good time to consider DRYing out your code.  Although remember that every time you DRY out code you are introducing a dependency that may catch you out later.  It's important to consider if the set of identical elements you are consolidating may need to vary at some point in the future ...
-
-Every time you extract a commonality you are adding a dependency.  DRYing out your code is very important, but developing an intuition for just when to do it is also critical.
+Make sure all of your manual feature tests work and that your unit tests are green.
 
 :running_shirt_with_sash: ATHLETIC WAYPOINT - try re-creating the code so far from scratch without looking at the tutorial.
 
-**Now all our examples pass and we've refactored, a perfect time to commit our changes. Push them to Github (:pill: [Version Control with Git](https://github.com/makersacademy/course/blob/master/pills/git.md)), and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someone's been driving for too long.
+**Now all our examples pass and we've checked for any possible refactoring, it's a perfect time to commit our changes. Push them to Github, and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someone's been driving for too long.
 **
 
 Time to move on to [Stage 7](boris_bikes_stage_7.md)!

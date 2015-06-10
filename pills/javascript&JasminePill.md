@@ -95,7 +95,7 @@ The first thing to remember with Jasmine, is it lacks the 'context' method that 
 
 ## The first rule of Javascript is...
 
-**Close your brackets the _moment_ you open them.** No ifs, no buts. This is non-negotiable, and Enrique _will_ have your thumbs if you are caught doing otherwise. Personally, I like to have auto-complete and auto-matching disabled in my editor (Sublime Text) so I have complete control over what appears in my code.
+**Close your brackets the _moment_ you open them.** No ifs, no buts. This is non-negotiable. Personally, I like to have auto-complete and auto-matching disabled in my editor (Sublime Text) so I have complete control over what appears in my code.
 
 That aside, the one practice that turned Javascript from a chore to a joy for me was this one little habit. Open bracket, close it.
 
@@ -462,18 +462,19 @@ Dang, we're back in the red. How do we fix it? Oh yeah, you know what time it is
 
 ```javascript
 Javabuzz.prototype.says = function(number) {
-  if (this.isDivisibleByThree(number)) return "Java";
+  if (this.isDivisibleByThree(number)) {
+    return "Java";
+  }
 };
 ```
 
 There shouldn't be too many surprises here at this point. Things to note:
-* Single line `if` statement
 * `if` statement conditions need to be wrapped in parenthesis
 * `says` method name - just makes sense to me. Feel free to use whatever name works for you.
 
 Now this works like a charm for me, so I'm going to write the rest of my tests, to make sure I get "Java" for 3, "Buzz" for 5 and "Javabuzz" for 15, as well as returning the original number if it is not divisible by 3, 5 or both.
 
-Almost there - all we need to do now, is a straight conversion of what worked for us in Ruby. We can repeat the single-line `if` statements, as long as we remember to lead with the `isDivisibleByFifteen` method - and not forgetting to `return number` if all else fails:
+Almost there - all we need to do now, is a straight conversion of what worked for us in Ruby. We can repeat the `if` statements, as long as we remember to lead with the `isDivisibleByFifteen` method - and not forgetting to `return number` if all else fails:
 
 ```javascript
 Javabuzz.prototype.says = function(number) {

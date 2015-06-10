@@ -4,6 +4,8 @@ Postgres is a widely used open source [relational database](http://en.wikipedia.
 
 ### Installation
 
+(Linux users may want to start [here](postgres_linux.md))
+
 There are two ways of doing this. Firstly, you can download the PostgreSQL app. However, the app can sometimes be problematic, and actually leave you with a non-working PostgreSQL installation.
 
 **We recommend the following method:**
@@ -177,6 +179,9 @@ Resources
 Related Videos
 --------------
 
+Relational Database Overviews:
+
+* [Sam on Whiteboard & Projector](https://www.youtube.com/watch?v=BS1_WrjhTQc)
 * [Stephen on Whiteboard (+Mihai)](https://www.youtube.com/watch?v=dIq_E-HSje8)
 * [Stephen on Projector (+Sam)](https://www.youtube.com/watch?v=C7EKjnFCyeQ)
 * [Enrique on Whiteboard](https://www.youtube.com/watch?v=QlDE4kYzvjU)

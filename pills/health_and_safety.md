@@ -16,11 +16,11 @@ In the event of a fire:
 
 * Follow the fire exit signs to vacate the building
 
-* Follow the instructions of the Fire Marshals (Ana, Dana and Steve) to leave the building, fire exit signs and do not use lifts
+* Follow the instructions of the Fire Marshals (Ana, Dana, Steve and Nikesh) to leave the building, fire exit signs and do not use lifts
 
 * Assembly point is in the corner of Thrawl street and Commercial Street - Turn right out of door
 
 FIRST AID
 --------
 
-* If somebody gets injured, get help from one of the first aiders - Ana, Mihai
+* If somebody gets injured, get help from one of the first aiders - Ana, Nikesh

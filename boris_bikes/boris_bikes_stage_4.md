@@ -1,8 +1,8 @@
-##Stage 4: Add the next Feature Test
+##Stage 4: Implementing the next user story
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-Our feature test is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
+Our first feature is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
 
 ```
 As a member of the public,
@@ -10,7 +10,7 @@ So that I am not confused and charged unnecessarily,
 I'd like docking stations not to release bikes when there are none available.
 ```
 
-Let's imagine the `irb` interaction for this story.  For simplicity, we'll expect an exception to be raised when there are no bikes available.  Something like this perhaps:
+Let's imagine the `irb` interaction that will be our manual feature test for this story.  For simplicity, we'll expect an exception to be raised when there are no bikes available.  Something like this perhaps:
 
 ```
 $ irb
@@ -23,49 +23,23 @@ RuntimeError: No bikes available
 	.... stack trace omitted ....
 ```
 
-Can you imagine the corresponding feature test?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.  Let's get you started:
+Can you imagine what unit tests we might write to support this behaviour?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.
 
-```ruby
-require 'docking_station'
+At the moment we don't get the above behaviour in irb.  The two features we have created contradict each other.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.  Here's our original manual test, adjusted to dock a new bike initially, to account for docking stations being empty by default:
 
-feature 'member of public accesses bike' do
-  scenario 'docking station releases a working bike' do
-    docking_station = DockingStation.new
-    bike = docking_station.release_bike
-    expect(bike).to be_working
-  end
-
-  scenario 'docking station does not release a bike when there are none available' do
-    docking_station = DockingStation.new
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-end
+```sh
+$ irb
+2.0.0-p195 :001 > station = DockingStation.new
+ => #<DockingStation:0x007fae7b3b8950>
+2.0.0-p195 :002 > station.dock Bike.new
+ => #<Bike:0x007fae7b3c0dd0>
+2.0.0-p195 :003 > bike = station.release_bike
+ => #<Bike:0x007fae7b3c0dd0>
+2.0.0-p195 :004 > bike.working?
+ => true
 ```
 
-Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**  When we tell you something is important, it's for a reason.
-
-
-Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.
-
-```ruby
-require 'docking_station'
-
-feature 'member of public accesses bike' do
-  scenario 'docking station releases a working bike' do
-    docking_station = DockingStation.new
-    docking_station.dock Bike.new
-    bike = docking_station.release_bike
-    expect(bike).to be_working
-  end
-
-  scenario 'docking station does not release a bike when there are none available' do
-    docking_station = DockingStation.new
-    expect { docking_station.release_bike }.to raise_error 'No bikes available'
-  end
-end
-```
-
-It follows that we should now drop down to the unit-test level to ensure that our docking station has the necessary `dock` method to initially receive a bike:
+Before you try this in IRB, can you anticipate what will happen?  Neither of these manual tests will work with our current code in IRB.  We could choose to work on either one.  Either way, we want to drop down to the unit-test level.  Let's focus on our original feature and ensure that our docking station has the necessary `dock` method to initially receive a bike:
 
 ```ruby
 require 'docking_station'
@@ -77,7 +51,7 @@ describe DockingStation do
 end
 ```
 
-However this isn't going to help our acceptance test much, because we are calling dock *with an argument*.  We'll need a more rigorous test.  Fortunately, RSpec allows us to specify arguments:
+However this doesn't cover it, because we are calling dock *with an argument*.  We'll need a more rigorous test.  Fortunately, RSpec allows us to specify arguments:
 
 ```ruby
 require 'docking_station'
@@ -88,7 +62,7 @@ describe DockingStation do
 end
 ```
 
-Run `rpsec` to see our new unit test fail:
+Run `rspec` to see our new unit test fail:
 ```
 DockingStation should respond to #dock with 1 argument
      Failure/Error: it { is_expected.to respond_to(:dock).with(1).argument }
@@ -109,16 +83,10 @@ class DockingStation
   end
 end
 ```
-we should now be back to our failing feature test:
 
-```
-1) member of public accesses bike docking station does not release a bike when there are none available
-   Failure/Error: expect { docking_station.release_bike }.to raise_error 'No bikes available'
-     expected Exception with "No bikes available" but nothing was raised
-   # ./spec/feature/public_accesses_bike_spec.rb:13:in `block (2 levels) in <top (required)>'
-```
+Our original feature test should now work - try it in IRB - although clearly the dock method is not doing any useful work yet.  It's tempting to do more, but let's make sure we always to the minimum asked of us by our tests, and then drive any other application code we want to add by writing more tests.
 
-And again it's tempting to just go ahead and fix the application code, but what we should really be doing here is adjusting the unit test for our DockingStation so that we have a unit test check of the error being raised when the station is empty.
+Anyhow, we are no closer to having our second feature pass.  Let's add a unit test to our DockingStation spec to check that an explicit error is raised when the station is empty.
 
 ```ruby
 require 'docking_station'
@@ -134,39 +102,17 @@ describe DockingStation do
 end
 ```
 
-Notice the nested `describe` block.  Why have we introduced this?  Until now, we have been describing behaviour in a general sense.  However, we are now describing behaviour *specific to a particular method*.  By nesting this in another `describe` block, we are able to DRY out our descriptions.
+Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**
 
-Again we should now have a pair of failing tests that give very similar output:
+Notice also the nested `describe` block.  Why have we introduced this?  Until now, we have been describing behaviour in a general sense.  However, we are now describing behaviour *specific to a particular method*.  By nesting this in another `describe` block, we are able to DRY out our descriptions.
 
-```
-Failures:
-
-  1) DockingStation release_bike raises an error when there are no bikes available
-     Failure/Error: expect { subject.release_bike }.to raise_error 'No bikes available'
-       expected Exception with "No bikes available" but nothing was raised
-     # ./spec/docking_station_spec.rb:15:in `block (3 levels) in <top (required)>
-
-  2) member of public accesses bike docking does not release a bike when there are none available
-     Failure/Error: expect { docking_station.release_bike }.to raise_error 'No bikes available'
-       expected Exception with "No bikes available" but nothing was raised
-     # ./spec/features/public_accesses_bike_spec.rb:10:in `block (2 levels) in <top (required)>'
-
-Finished in 0.00678 seconds (files took 1.17 seconds to load)
-7 examples, 2 failures
-
-Failed examples:
-
-rspec ./spec/docking_station_spec.rb:14 # DockingStation release_bike raises an error when there are no bikes available
-rspec ./spec/features/public_accesses_bike_spec.rb:8 # member of public accesses bike docking station does not release a bike when there are none available
-```
-
-One is a failing feature test, but the other is a failing *unit test*.  Now, finally, we can change some production code.  We could do the following:
+Again we now have a match between our manual feature test and our unit test.  Our manual irb test for our second feature is failing to raise an error and our unit test is failing for the same reason; the absence of an error.  Now, finally, we can change some production code.  We could do the following:
 
 ```ruby
 class DockingStation
 
   def release_bike
-    raise 'No bikes available'
+    fail 'No bikes available'
   end
 
   def dock bike
@@ -174,13 +120,14 @@ class DockingStation
   end
 end
 ```
-But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed two tests, but broken two others.
+
+But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed one test, but broken another.
 
 That's the last time you need to be told to run `rspec`.  Every time you make a change to your tests or your production code, run `rspec`.  Did you try the above example and run `rspec` as suggested, or did you read through?  **Take every available opportunity to explore the code and different outcomes.  Follow every path suggested.  Experimentation is the most powerful learning tool available to you.**
 
 We cannot proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `release_bike` is called.
 
-At a future point, `DockingStation` is going to need to manage multiple bikes.  However, at the moment we are only interested in passing our tests.  Let's do the simplest thing possible:
+At a future point, `DockingStation` is going to need to manage multiple bikes.  However, at the moment we are only interested in passing our tests.  Let's do the simplest thing possible that will allow the docked bike to be released:
 
 ```ruby
 class DockingStation
@@ -199,8 +146,7 @@ end
 $ rspec
 ```
 
-Great, now we've got *three* failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our previously-passing unit test now failing?
-
+Great, now we've got *two* failing tests!  Let's take a moment to reflect on what we have done so far.  What is `@bike`?  Why is our original unit test now failing?
 
 ```
 1) DockingStation releases working bikes
@@ -214,7 +160,6 @@ By default, our `@bike` instance variable in `DockingStation` is `nil`.  All Rub
 ```ruby
 describe DockingStation do
   # other tests omitted for brevity
-
   it 'releases working bikes' do
     subject.dock Bike.new
     bike = subject.release_bike
@@ -238,7 +183,7 @@ class DockingStation
 end
 ```
 
-And we should have the joy of seeing both our unit test and feature test both go green at the same time.
+And we should have the joy of seeing all our unit tests go green and the ability of all our manual feature tests to pass.  Assuming your unit tests are green, make sure you run all your feature tests through IRB to double check!
 
 It might seem trivial, but what we've done here is model a docking station that can accept a single bike.  We know that we'll probably need to store more bikes in future but, particularly when learning, it is highly instructive to work carefully through much simpler versions of a system.  Also, surprisingly even for experts, it's often a great idea to play with super-simplified versions of a system, before gradually increasing the complexity level.  It tends to be easier to make progress if you build on a simple base.
 

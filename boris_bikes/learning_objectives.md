@@ -2,11 +2,6 @@
 
 *Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved. The section of the course that addresses a learning objective is appended to to each, in parentheses.*
 
-######BDD
-- Define BDD (intro)
-- Explain how BDD works (intro)
-- Explain how BDD and TDD are related (intro)
-
 ######Domain Modeling
 - Define 'Domain' as the abstract area in which the problem is defined (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/a-brief-introduction-to-domain-modelling/) *(reading)*, [Scaled Agile Framework: Domain Modelling](http://www.scaledagileframework.com/domain-modeling/) *(reading)*]
 - Define 'class structure' (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/whats-a-class-structure/)]

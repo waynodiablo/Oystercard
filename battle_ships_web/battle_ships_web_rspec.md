@@ -39,6 +39,9 @@ Last week you created a playable battleships game for the terminal. You separate
 
 * [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
 * [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
+* [Ben's Battleships](https://github.com/silvabox/battleships) (`gem install battleships`)
+
+Note, if you use Ben's version, you should install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
 
 First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
@@ -66,6 +69,7 @@ Before we go off creating lots of directories, let's start with a Gemfile. Our G
 ```ruby
 source 'https://rubygems.org'
 
+gem 'battleships' # if you are using Ben's gem
 gem 'sinatra'
 
 group :development, :test do
@@ -85,7 +89,7 @@ Now that your specs are passing and the code is all in place we are ready to sta
 
 ## Version 1: Building an application from the outside in
 
-Everything is setup and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full fledged web application; our friends and family can play with our app!
+Everything is setup and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full-fledged web application; our friends and family can play with our app!
 
 **Let's get started then, shall we?**
 
@@ -94,10 +98,10 @@ One of the gems you should have in your system now is ``rspec-sinatra``. This ge
 Within your projects directory, create a Battleships directory and navigate into it, then run:
 
 ```shell-session
-$ rspec-sinatra init --app  BattleShips lib/battleships.rb
+$ rspec-sinatra init --app  BattleshipsWeb lib/battleships_web.rb
 Generating with init generator:
      [ADDED]  spec/spec_helper.rb
-     [ADDED]  lib/battleships.rb
+     [ADDED]  lib/battleships_web.rb
      [ADDED]  config.ru
 ```
 
@@ -161,16 +165,16 @@ rackup
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
-Why is Sinatra greeting us with a "Hello BattleShips!" message?
+Why is Sinatra greeting us with a "Hello BattleshipsWeb!" message?
 
-If you open your `lib/battleships.rb` file you will see why:
+If you open your `lib/battleships_web.rb` file you will see why:
 
 ````ruby
 require 'sinatra/base'
 
-class BattleShips < Sinatra::Base
+class BattleshipsWeb < Sinatra::Base
   get '/' do
-    'Hello BattleShips!'
+    'Hello BattleshipsWeb!'
   end
 
   # start the server if ruby file executed directly
@@ -178,20 +182,20 @@ class BattleShips < Sinatra::Base
 end
 ````
 
-When we initialised RSpec with sinatra-rspec we told it to generate our application as well. That's why we now have our BattleShips controller returning that greeting.
+When we initialised RSpec with sinatra-rspec we told it to generate our application as well. That's why we now have our BattleshipsWeb controller returning that greeting.
 
 To make the first step work we need to do a few things:
 
 - create a views directory
-- tell our `BattleShips` controller where the views are:
-```set :views, proc { File.join(root, '..', 'views') }``` inside your BattleShips class.
+- tell our `BattleshipsWeb` controller where the views are:
+```set :views, proc { File.join(root, '..', 'views') }``` inside your BattleshipsWeb class.
 - create an `index.erb` file with the html ( _containing a link with the text 'New Game'_ )
-- adjust the BattleShips class like so:
+- adjust the BattleshipsWeb class like so:
 
 ````ruby
 require 'sinatra/base'
 
-class BattleShips < Sinatra::Base
+class BattleshipsWeb < Sinatra::Base
   get '/' do
     erb :index
   end
@@ -276,6 +280,4 @@ Once we have added some CSS goodness let's deploy our application to :pill: [her
 Resources
 ---------
 
-* [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
-* [Sinatra/Cucumber Cont](https://www.youtube.com/watch?v=_ptHGBh9sys)
 * [The Internet and WWW](../pills/internet_web.md)

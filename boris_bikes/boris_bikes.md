@@ -2,14 +2,11 @@
 
 The goal of this project is to introduce you to:
 
-- Behaviour Driven Development (BDD)
-- How BDD relates to Test Driven Development (TDD)
 - The process of domain modeling for Object-Oriented Design (OOD)
 
 For an overview of the baseline skills and concepts you will be learning during this project, see this week's [Learning Objectives](learning_objectives.md).
 
 ***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](../pills/pairing.md) :pill:.   Please swap driver/navigator roles following an appropriate protocol (change the message is probably best), ensuring that the maximum time one person is driving is 15 minutes, but it can be as frequently as every minute.***
-
 
 ***Also watch out for the :running_shirt_with_sash: ATHLETIC WAYPOINTS.  We recommend you stop at these points to try re-creating the code so far from scratch without looking at the tutorial.  This is a great exercise at the start of a new day with a new pair partner***
 
@@ -65,7 +62,7 @@ I'd like vans to collect working bikes from garages and distribute them to docki
 
 This is clearly a simplified version of the user requirements that stakeholders - members of the public and system maintainers - have for the real Boris Bikes system in London (in a real discussion with a client, we should identify many more).  We've deliberately left out extra considerations, like payment, to make our first version of the system tractable.  This is often a sensible first step, as we can focus on building a **simple**, **manageable** program before adding greater complexity. We can check that everything works each time we come round to add greater complexity.
 
-*It is generally a mistake to try to model everything you need in the system on the first go.  It has been proven many times that successful designs for complex systems have to **emerge**.*
+*It is generally a mistake to try to model everything you need in the system on the first go.  Hard experience has shown time and time again that is easier to create a successful design for a complex systems via* **emergence**.
 
 
 ## Stage 0: Domain Model and Project Setup
@@ -78,33 +75,33 @@ Let's begin by fleshing out our domain model and getting a base project set up.
 
 [Stage 0](boris_bikes_stage_0.md)
 
-## Stage 1: Creating a Feature Test
+## Stage 1: Implementing our first user story
 
-Now we have a domain model and a project setup, let's continue with our first feature test, based on a single user story.
+Now we have a domain model and a project setup, let's continue by thinking about what it would look like if we had a single user story working.
 
 [Stage 1](boris_bikes_stage_1.md)
 
 ## Stage 2: Creating a Docking Station via Unit Tests
 
-Given a failing feature test, let's introduce BDD and drop to the unit test level to create our docking station.
+Given that we've worked out what we would need to have our first user story working, let's drive creation of our docking station via the unit test level.
 
 [Stage 2](boris_bikes_stage_2.md)
 
 ## Stage 3: Creating a Bike via Unit Tests
 
-Our feature test involves both docking stations and bikes, so we'll have to drive creation of a Bike class with some more unit tests.  Ultimately this will allow our feature test to pass.
+Our story involves both docking stations and bikes, so we'll have to drive creation of a Bike class with some more unit tests.  Ultimately this will allow us to completely implement our first user story.
 
 [Stage 3](boris_bikes_stage_3.md)
 
-## Stage 4: Adding the next Feature Test
+## Stage 4: Implementing the next User Story
 
-We'll implement the next feature, which prevents the release of bikes when none are available.
+We'll implement the next user story, which prevents the release of bikes when none are available.
 
 [Stage 4](boris_bikes_stage_4.md)
 
 ## Stage 5: Giving Docking Stations Limited Capacities
 
-Moving on we work on feature tests to support user stories relating to docking stations having limited capacities.
+Moving on we work on user stories relating to docking stations having limited capacities.
 
 [Stage 5](boris_bikes_stage_5.md)
 
@@ -116,13 +113,13 @@ Bikes still can't break because we haven't looked at stories involving broken bi
 
 ## Stage 7: Introducing Doubles
 
-Bikes still can't break because we haven't looked at stories involving broken bikes.  In stage 5 we address two stories that are intimately tied to bikes being broken, i.e. those about preventing docking stations accepting broken bikes but not releasing them.
+Our unit tests need to run fast and be completely independent of each other.  To support that we introduce the critical concept of 'doubles'.
 
 [Stage 7](boris_bikes_stage_7.md)
 
-## Stage 8: Feature Tests for Van and Garage
+## Stage 8: Stories for Van and Garage
 
-Finally we have two more user stories relating to the Van and the Garage.  You've seen how the BDD acceptance-unit test cycle works.  This stage is less structured - make your own feature tests, unit tests and application functionality and consider the refactoring hints we give you.
+Finally we have two more user stories relating to the Van and the Garage.  This stage is less structured - develop your own ideas of how these user stories should work, then create unit tests and application functionality and consider the refactoring hints we give you.
 
 [Stage 8](boris_bikes_stage_8.md)
 
@@ -135,8 +132,4 @@ Now, just like a real project the client has come back to us with more requests:
 
 ## Supporting Material
 
-- [CRC - Wikipedia](https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card)
-- [CRC - Extreme Programming](http://www.extremeprogramming.org/rules/crccards.html)
-- [CRC - Agile Modeling](http://www.agilemodeling.com/artifacts/crcModel.htm)
-- [CRC - C2 Wiki](http://www.c2.com/cgi/wiki?CrcCard)
 - [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)

@@ -597,6 +597,8 @@ ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur':
 
 So we now have a functioning application that can query the Github API and return results in a useable format. Let's think about making our code more maintainable.
 
+:pill: [Factories, services (and providers)](https://github.com/makersacademy/course/blob/master/pills/angular_factories_services.md)
+
 Looking at our code, we are currently performing an http request directly from our controller. Bearing in mind that the controller's responsibility is to provide an interface between the view and the view-model, it seems that making a request to an external API does not fall within that single responsibility. So let's look at refactoring that functionality into a type of service called a factory.
 
 As always, let's start with the tests. We're planning to extract the http request into a separate service, so let's start by ensuring that `$httpBackend` is testing that a get request would be sent. Change the following code in test/gitUserSearchController.spec.js:
