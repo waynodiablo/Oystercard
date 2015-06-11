@@ -49,9 +49,9 @@ class BikeContainerTest
   include BikeContainer
 end
 
-# `it_behaves_like 'a bike container'` imports all the tests in the shared example
+# `it_behaves_like BikeContainer` imports all the tests in the shared example
 describe BikeContainerTest do
-  it_behaves_like 'a bike container'
+  it_behaves_like BikeContainer
 end
 ```
 
@@ -59,7 +59,7 @@ If you run RSpec now, it should fail with an error message like `Could not find 
 
 So let's get on and define our shared examples.  In `spec/support/shared_examples_for_bike_container.rb`:
 ```ruby
-shared_examples_for 'a bike container' do
+shared_examples_for BikeContainer do
   it 'has a default capacity when initialized' do
     expect(subject.capacity).to eq BikeContainer::DEFAULT_CAPACITY
   end
