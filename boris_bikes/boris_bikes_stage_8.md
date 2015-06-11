@@ -39,29 +39,35 @@ Each object might use a different language for these (.e.g. 'dock', 'load', 'rel
 
 Note:  A module cannot be instantiated in the way a class can.  You can't have an instance of a module.  In Ruby, modules are used to define common behaviour that can then be *included* into other objects.  If we are defining common behaviour for a docking station, van and garage, it follows that this behaviour will need to be included into the `DockingStation`, `Van` and `Garage` classes.  We don't want to have to write the same tests three times, so we will use the [shared example](https://www.relishapp.com/rspec/rspec-core/v/2-0/docs/example-groups/shared-example-group) feature of RSpec to write the tests once, then include those tests in the tests for docking station, van and garage.
 
-Because we are testing a module, we don't have an actual object that we can test.  While we are test-driving the module, we'll use a temporary class especially for the purposes of including the module so it can be tested.  Later, when we've test-driven the creation of this module, we could do away with the temporary class.
+Because we are testing a module, we won't have an actual object instance that we can test.  So, while we are test-driving the module, we'll use a temporary class as something to include the module into, so it can be tested.  Later, when we've test-driven the creation of this module, we could do away with the temporary class.
 
-`spec/bike_container_spec.rb`:
+`spec/bike_container_test_spec.rb`:
 ```ruby
-require 'bike_container'
+# The purpose of this class is to give us an instance of
+# something that includes `BikeContainer`, to initially run tests against
+class BikeContainerTest
+  include BikeContainer
+end
 
-shared_examples_for BikeContainer do
+# `it_behaves_like 'a bike container'` imports all the tests in the shared example
+describe BikeContainerTest do
+  it_behaves_like 'a bike container'
+end
+```
+
+If you run RSpec now, it should fail with an error message like `Could not find shared examples "a bike container"`
+
+So let's get on and define our shared examples.  In `spec/support/shared_examples_for_bike_container.rb`:
+```ruby
+shared_examples_for 'a bike container' do
   it 'has a default capacity when initialized' do
     expect(subject.capacity).to eq BikeContainer::DEFAULT_CAPACITY
   end
 end
-
-# The purpose of this class is to give us an instance of a
-# class that includes `BikeContainer`, to initially run tests against
-class BikeContainerTest; include BikeContainer; end
-
-# `it_behaves_like BikeContainer` imports all the tests in the shared example
-describe BikeContainerTest do
-  it_behaves_like BikeContainer
-end
 ```
+Remember, we will need also to require this examples file in `bike_container_test_spec.rb`.
 
-We've chosen the default capacity as the first behaviour to model as it feels like a suitable place to start.  So how de we make this test pass?
+We've chosen the default capacity as the first behaviour to model as it feels like a suitable place to start.  So how de we make this test pass?  Let's create the module!
 `lib/bike_container.rb`:
 
 ```ruby
@@ -108,7 +114,7 @@ end
 
 ```
 
-Let's add another test to `bike_container_spec.rb`:
+Let's add another test to `shared_examples_for_bike_container.rb`:
 
 ```ruby
 shared_examples_for BikeContainer do
@@ -249,7 +255,7 @@ Have we fulfilled them?  It feels like we have, so how do we go about implementi
 
 ```ruby
 require 'docking_station'
-require 'bike_container'
+require 'support/shared_examples_for_bike_container'
 
 describe DockingStation do
   # other code omitted for brevity
@@ -310,6 +316,7 @@ The advantage is the simplicity. The disadvantage is that this isn't quite consi
 
 ```ruby
 require 'garage'
+require 'support/shared_examples_for_bike_container'
 
 describe Garage do
   it_behaves_like BikeContainer
@@ -327,6 +334,7 @@ Notice how this test is structured.  This problem is similar to the `release_bik
 
 ```ruby
 require 'garage'
+require 'support/shared_examples_for_bike_container'
 
 describe Garage do
   it_behaves_like BikeContainer
