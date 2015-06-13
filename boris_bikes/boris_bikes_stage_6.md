@@ -19,9 +19,9 @@ I'd like docking stations to accept returning bikes (broken or not).
 
 ```
 
-Let's start with one of these and imagine how are manual feature test would work.
+Let's start with one of these and imagine how our manual feature test would look:
 
-```sh
+```
 $ irb
 2.0.0-p195 :001 > station = DockingStation.new
  => #<DockingStation:0x007fae7b3b8950>
@@ -31,7 +31,7 @@ $ irb
  => nil
 2.0.0-p195 :004 > bike.broken?
  => true
-2.0.0-p195 :005 > docking_station.dock bike
+2.0.0-p195 :005 > station.dock bike
  => nil
 ```
 
@@ -67,13 +67,13 @@ Failures:
      # ./spec/bike_spec.rb:7:in `block (2 levels) in <top (required)>'
 ```
 
-It's down to you to make the unit test pass which should in turn allow the manual feature test to get another step further.  The training wheels are coming off now - see if you can get the complete feature test working.
+It's down to you to make the unit test pass which should in turn allow the manual feature test to get another step further.  The training wheels are coming off now - see if you can get the complete feature working.
 
 How many unit tests did you create?  **Did you think about the relationship between `broken?` and `working?`?  In particular, do our current set of features demand a relationship between broken and working? Or not yet?**    Do we need to write additional tests?  Discuss this with your pair partner and write the required tests.
 
-When you think you're done let's move on to create another manual feature test to correspond to the second of the three user stories above:
+When you think you're done let's move on to create another manual feature test to correspond to the second of the three user stories above.  The output we want is:
 
-```sh
+```
 $ irb
 2.0.0-p195 :001 > station = DockingStation.new
  => #<DockingStation:0x007fae7b3b8950>
@@ -88,14 +88,14 @@ $ irb
  	.... stack trace omitted ....
 ```
 
-Now at the moment the above manual feature test will happily release a broken bike.  We have to put a stop to that ...
+But at the moment our docking station will happily release a broken bike.  We have to put a stop to that ...
 
 :twisted_rightwards_arrows:
 
-What unit tests will you need to create in order to support this feature test?  Is the behaviour affected by the number of bikes in the docking station?  What if some are bikes broken and others not?  Make sure your unit tests sufficiently cover all the possible eventualities.
+What unit tests will you need to create in order to support this feature test?  Is the behaviour affected by the number of bikes in the docking station?  What if some bikes are broken and others not?  Make sure your unit tests sufficiently cover all the possibilities.
 
 
-Now take some time to review the user stories with your pair partner.  Write out a new manual feature test for the third user story.  How might it fail?
+Now take some time to review the user stories with your pair partner.  Start typing out a new manual feature test for the third user story.  How might it fail?
 
 Make sure all of your manual feature tests work and that your unit tests are green.
 

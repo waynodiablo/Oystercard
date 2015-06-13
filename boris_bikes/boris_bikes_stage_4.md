@@ -1,8 +1,8 @@
-##Stage 4: Add the next Feature Test
+##Stage 4: Implementing the next user story
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-Our feature test is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
+Our first feature is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
 
 ```
 As a member of the public,
@@ -25,7 +25,7 @@ RuntimeError: No bikes available
 
 Can you imagine what unit tests we might write to support this behaviour?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.
 
-At the moment we don't get the above behaviour in irb.  The two manual feature tests we have created contradict each other slightly.  Whatever we do, these two feature tests cannot both pass.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.  Here's our original manual feature test, adjusted to take into account docking stations being empty by default:
+At the moment we don't get the above behaviour in irb.  The two features we have created contradict each other.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.  Here's our original manual test, adjusted to dock a new bike initially, to account for docking stations being empty by default:
 
 ```sh
 $ irb
@@ -39,7 +39,7 @@ $ irb
  => true
 ```
 
-Both of these manual feature tests will not work as expected with our current code in IRB.  We could work on supporting either one.  Either way we want to drop down to the unit-test level.  Let's focus on our original feature and ensure that our docking station has the necessary `dock` method to initially receive a bike:
+Before you try this in IRB, can you anticipate what will happen?  Neither of these manual tests will work with our current code in IRB.  We could choose to work on either one.  Either way, we want to drop down to the unit-test level.  Let's focus on our original feature and ensure that our docking station has the necessary `dock` method to initially receive a bike:
 
 ```ruby
 require 'docking_station'
@@ -51,7 +51,7 @@ describe DockingStation do
 end
 ```
 
-However this isn't going to help our manual acceptance test much, because we are calling dock *with an argument*.  We'll need a more rigorous test.  Fortunately, RSpec allows us to specify arguments:
+However this doesn't cover it, because we are calling dock *with an argument*.  We'll need a more rigorous test.  Fortunately, RSpec allows us to specify arguments:
 
 ```ruby
 require 'docking_station'
@@ -84,9 +84,9 @@ class DockingStation
 end
 ```
 
-Our original feature test should now work, although clearly the dock method is not doing any useful work yet.  It's tempting to do more, but let's make sure we always to the minimum asked of us by our tests, and then drive any other application code we want to add by writing more tests.
+Our original feature test should now work - try it in IRB - although clearly the dock method is not doing any useful work yet.  It's tempting to do more, but let's make sure we always to the minimum asked of us by our tests, and then drive any other application code we want to add by writing more tests.
 
-Anyhow, we are no closer to having our second feature test pass.  Let's add a unit test to our DockingStation spec to check that an explicit error is raised when the station is empty.
+Anyhow, we are no closer to having our second feature pass.  Let's add a unit test to our DockingStation spec to check that an explicit error is raised when the station is empty.
 
 ```ruby
 require 'docking_station'
@@ -102,7 +102,7 @@ describe DockingStation do
 end
 ```
 
-Before you go any further, study the syntax of this new test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**  When we tell you something is important, it's for a reason.
+Note the braces `{}`, rather than parentheses `()`, in our expectation. We'll come back to this shortly.
 
 Notice also the nested `describe` block.  Why have we introduced this?  Until now, we have been describing behaviour in a general sense.  However, we are now describing behaviour *specific to a particular method*.  By nesting this in another `describe` block, we are able to DRY out our descriptions.
 
@@ -122,6 +122,8 @@ end
 ```
 
 But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed one test, but broken another.
+
+Before you go any further, study the syntax of our bike availability test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**
 
 That's the last time you need to be told to run `rspec`.  Every time you make a change to your tests or your production code, run `rspec`.  Did you try the above example and run `rspec` as suggested, or did you read through?  **Take every available opportunity to explore the code and different outcomes.  Follow every path suggested.  Experimentation is the most powerful learning tool available to you.**
 

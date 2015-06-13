@@ -4,7 +4,7 @@
 
 So how did you try to deal with the error we saw at the end of stage 1?  Here it is again:
 
-```sh
+```
 $ irb
 2.2.2 :001 > station = DockingStation.new
 NameError: uninitialized constant DockingStation
@@ -23,14 +23,12 @@ Stop for a second and think about what could be the reason for this error. The a
 
 If you guessed that the `uninitialized constant DockingStation` error happened because we never defined what a DockingStation is, you're correct. It was simple in this case but it will be less trivial as we encounter more complex bugs later.
 
-You may be tempted now to jump in and fix the error by writing a DockingStation class in irb, or in a file somewhere.  However, **we have reached the crux of Behaviour Driven Development (BDD).  Before progressing any further, please read the [BDD pill&nbsp;:pill:](../pills/bdd.md).  In fact, we think BDD is so important, we've written two pills, so please read the [BDD Cycle pill&nbsp;:pill:](../pills/bdd_cycle.md) as well and use this understanding to anticipate the next move.  Discuss the next move with your pair partner - do you have the same idea?**
+You may be tempted now to jump in and fix the error by writing a DockingStation class in irb, or in a file somewhere.  However, **we have reached the crux of Test Driven Development (TDD).  Before progressing any further, please read the [TDD pill&nbsp;:pill:](../pills/tdd.md).  Discuss the next move with your pair partner - do you have the same idea?**
+
+We know what we need to do in order to start implementing our user story.  We might be tempted to just make a DockingStation class, but if we are following the TDD approach we never write any application code in our editor without writing a test FIRST.  We want to test-drive our code using *unit tests*.  Take a moment to discuss this with your pair partner.  Why do you think this is so important?
 
 
-What we have here is a failing *feature test*.  It is a manual feature test, but it is a feature test nonetheless.  Ideally, we want to test-drive our code using *unit tests*.  Take a moment to discuss this with your pair partner.  What is the difference between a feature test and a unit test?  How does this relate to TDD?
-
-
-This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has started writing this first manual feature test, and got the first error.  Errors are a great time to switch roles so you can work to the ['change-the-message' pairing protocol](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
-
+This would be a great time to switch Driver/Navigator Roles!&nbsp;:twisted_rightwards_arrows:  Let your partner start typing now.  One of you has started an initial play in IRB, and got the first error.  Errors are a great time to switch roles so you can work to the ['change-the-message' pairing protocol](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
 
 We have identified that we need a DockingStation class.  But before we create one, we want a **failing unit test**.  We'll be using RSpec, a handy testing tool in Ruby, but there are many other testing tools such as MiniTest and Cucumber to name a couple of popular alternatives.  RSpec provides a syntax that, while pure Ruby, reads very like English.
 
@@ -111,9 +109,9 @@ end
 
 Now run RSpec again - do you expect it will work?
 
-RSpec should now pass, so let's go back to our manual feature test by opening up irb again. You will need to restart IRB each time and re-type in the feature test in order to pick up the changes we make to Ruby files in our lib directory.  Going forward we'll also have to require our docking_station.rb file in IRB, just as we do in our unit test:
+RSpec should now pass, so let's go back and check that this will work in IRB. You will need to restart IRB each time and re-type out the code in order to pick up the changes we make to Ruby files in our lib directory.  Going forward we'll also have to require our docking_station.rb file in IRB, just as we do in our unit test:
 
-```sh
+```
 $ irb
 2.2.2 :001 > require './lib/docking_station'
  => true
@@ -123,9 +121,9 @@ $ irb
 
 Notice the difference in the require statement.  In IRB we had to specify the path to the location of the docking_station.rb file.  We don't have to do that in RSpec as RSpec automatically adjusts things so that Ruby will look in the lib directory for any files it tries to require. BTW, if you get really tired of typing require for files in your lib directory at the start of every IRB session, check out the pro-tip in the [IRB pill :pill:](../pills/irb.md#advanced-irb).
 
-Now that the first part of our manual feature test is working, and showing us a representation of our newly created DockingStation object ('0x007fdac915c8f8' refers to the position of the object in the computer memory, and can safely be ignored), we can continue with our manual feature test like so:
+Now that the first part of our user story is working, and showing us a representation of our newly created DockingStation object ('0x007fdac915c8f8' refers to the position of the object in the computer memory, and can safely be ignored), we can continue with the next elements of our user story like so:
 
-```sh
+```
 $ irb
 2.2.2 :001 > require './lib/docking_station'
  => true
@@ -141,13 +139,11 @@ We have a new Ruby error! It might feel like things are getting worse, but a new
 
 Compare this failure with the failure we started with at the beginning of the stage.  Is it the same?  If not, why is it different?  Take some time to discuss this with your pair partner.  What will you do next?
 
-Our manual feature test is still failing, which means that although we can now test the DockingStation class, it does not have the behaviour our feature expects.  Let\'s look through the error carefully to work out what Ruby is telling us. Specifically, it tells us that the method `release_bike` is undefined. (``#<DockingStation:0x007fc1d4866828>`` refers to the instance of the DockingStation class that we have in the `docking_station` variable.).
+Our user story still isn't working, which means that although we can now test the DockingStation class, it does not have the behaviour we want.  Let's look through the error carefully to work out what Ruby is telling us. Specifically, it tells us that the method `release_bike` is undefined. (``#<DockingStation:0x007fc1d4866828>`` refers to the instance of the DockingStation class that we have in the `docking_station` variable.).
 
-So, the test is almost telling us what to do. We don\'t have the method `release_bike`, and it\'s tempting to just go ahead and create one, however we are at the *feature test* level, and we want to test-drive our code at the *unit test* level right?
+So, the error is almost telling us what to do. We don't have the method `release_bike`, and it's tempting to just go ahead and create one, however we want to test-drive our code by *unit tests* right?
 
-It might seem as though we are doubling up on our tests; i.e. we are using IRB to test manually **AND** testing with our unit tests.  However, remember that the tests have a different *purpose*.  The feature test is intended to test an overall outcome of a sequence of *integrations* (i.e. a number of objects working together) and is not concerned with the detail of each component within that test.  A unit test is concerned with the detail of a *single component* and is not concerned with how it might be used in the wider program.  In a trivial example such as this, these work of both kinds of tests seems very similar, but in a more complex system - as we will be building later in the course - they will not.
-
-Let\'s create a unit test for `release_bike` in `spec/docking_station_spec.rb`:
+Let's create a unit test for `release_bike` in `spec/docking_station_spec.rb`:
 
 ```ruby
 require 'docking_station'
@@ -157,7 +153,7 @@ describe DockingStation do
 end
 ```
 
-Notice that we are using the more common RSpec `describe`/`it` syntax here.  The test is remarkably succinct; but does it not also describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it does.
+The test is remarkably succinct; but does it not also describe exactly what we want?  This is why we love RSpec.  Our test is beautifully readable and we are in no doubt as to what it does.
 
 We are using [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax).  We could just as easily have written the test like so:
 
@@ -171,7 +167,7 @@ describe DockingStation do
 end
 ```
 
-... which uses the RSpec [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject) syntax. The advantage of the one-liner syntax is that RSpec can infer the description from the syntax - so an additional description is unnecessary and just adds clutter.  As a developer you must constantly strive for readability and ensure that test descriptions correspond exactly with what is being tested.
+...which uses the RSpec [implicitly defined subject](http://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/implicitly-defined-subject) syntax. The advantage of the one-liner syntax is that RSpec can infer the description from the syntax - so an additional description is unnecessary and just adds clutter.  As a developer you must constantly strive for readability and ensure that test descriptions correspond exactly with what is being tested.
 
 Before you run `$ rspec`, discuss with your pair partner what outcome you expect.
 
@@ -197,7 +193,7 @@ Failed examples:
 rspec ./spec/docking_station_spec.rb:4 # DockingStation should respond to #release_bike
 ```
 
-Notice how our unit test is stuck on exactly the same point as our manual feature test (the absence of the 'release_bike' method). This is good.  It is telling us that if we can make the unit test pass, that it should help the feature test pass.  We\'re breaking down the larger problem of implementing the whole feature into little slices.
+Notice how our unit test is stuck on exactly the same point as we were in IRB (the absence of the 'release_bike' method). This is good.  It is telling us that if we can make the unit test pass, that it should help us with our user story.  We\'re breaking down the larger problem of implementing the whole feature into little slices.
 
 Let\'s pass this unit test by updating the DockingStation class:
 
@@ -209,7 +205,7 @@ class DockingStation
 end
 ```
 
-Now our DockingStation unit test should pass, and we should be able to continue our manual acceptance test and get a new failure.  This is progress worth celebrating!  Woohoo!
+Now our DockingStation unit test should pass, and we should be able to continue our user story in IRB and get a new failure.  This is progress worth celebrating!  Woohoo!
 
 ```
 $ irb
@@ -225,6 +221,6 @@ NoMethodError: undefined method `working?' for nil:NilClass
 	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
 ```
 
-To fix this issue, we need to drop from our feature test level into our unit test level again.  Also, since we've changed the error message, it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the [change-the-message pairing methodology](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
+To fix this issue, we need more unit tests.  Also, since we've changed the error message, it's naturally a good time to switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:, following the [change-the-message pairing methodology](../pills/pairing.md#change-the-message-between-programmer-a-and-b).
 
 Before progressing to [Stage 3](boris_bikes_stage_3.md), discuss with your pair partner what you need to test next.  What needs to respond to `working?`?

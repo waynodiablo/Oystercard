@@ -4,7 +4,7 @@
 
 Bower is a package manager, similar to :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md) but optimized for the front-end. It can be used in conjunction with Sinatra, Node or Rails, to manage your front-end dependencies.
 
-To begin using bower, you will need to have :pill: [node](https://github.com/makersacademy/course/blob/master/pills/node.md) installed.
+To begin using bower, you will need to have Node installed.
 
 Then you'll need to install bower, don't forget the -g
 
