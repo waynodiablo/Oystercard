@@ -1117,7 +1117,7 @@ haml:
           %li
             = review.thoughts
             %strong= review.rating
-            /5
+            \/5
     - else
       %p No reviews
 ```
