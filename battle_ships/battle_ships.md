@@ -65,7 +65,7 @@ I would like to play a two-player game
 
 It is a good idea to spend some time researching the domain of the battleships game and discovering the objects that you will need for this application to work (think back to what we did with [boris bikes](/boris_bikes/boris_bikes.md) in Version 0).
 
-One of the things you have to keep in mind is to simplify as much as you can when you are creating the model of your game. Think of what you need to build first and what you will have to conside in future, don't try to get everything nailed down ( _and designed perfectly_ ) to begin with, you will learn more about the game as you go.
+One of the things you have to keep in mind is to simplify as much as you can when you are creating the model of your game. Think of what you need to build first and what you will have to consider in future, don't try to get everything nailed down ( _and designed perfectly_ ) to begin with, you will learn more about the game as you go.
 
 Consider also that you could build simple versions of the game first.  You could build a game with only a single player, or build a game with a grid of only 1x1 size, that only had 1 type of ship.  Get a very simple version working and then very gradually increase the complexity by adding new features.  One way to ensure that you are always building simple working versions is to choose one user story at a time and build a single feature test that reflects it, and try to stick exclusively to only that functionality necessary to support that user story.
 
@@ -80,7 +80,7 @@ Consider also that you could build simple versions of the game first.  You could
 
 We have recognized the objects that make up the domain of the game. Let's implement them! Don't try to implement the game yet though ( _that is the logic that will make the players take a turn at a time until one of the players wins_ ), we are going to leave that for a later version.
 
-The important thing here is that once we have recognized the objects that make up the battleship game, we start implementing them with the desired functionality ( _How does a ship register a shot? How do you place ships on a board? What does the board look like? etc._ ). If we make sure that every object has its responsibilities clearly defined we will be able to implement them in a turn-base game very easily.
+The important thing here is that once we have recognized the objects that make up the battleship game, we start implementing them with the desired functionality ( _How does a ship register a shot? How do you place ships on a board? What does the board look like? etc._ ). If we make sure that every object has its responsibilities clearly defined we will be able to implement them in a turn-based game very easily.
 
 When you model your domain, make sure that your objects follow the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) ( **SRP** from now on ).
 
@@ -90,11 +90,11 @@ Do you know why? What's the benefit of the **SRP**?
 
 **Tasks**:
 
-1. Write tests for, the code the classes and their interactions (_swap driver/navigator roles frequently :twisted_rightwards_arrows:._)
+1. Write tests for the code, the classes, and their interactions (_swap driver/navigator roles frequently :twisted_rightwards_arrows:._)
 2. Think about the classes you have created. Are they following **SRP**?
 3. Explore your code in `irb` ( _if you prefer `pry` go with it_ ).  Can you create a board?  Add ships?  Take shots?
 
-Don't try to implement everything at once. Start with an MVP with, say, a single-celled grid and a single ship (do we even need cells and/or a grid?).  Once you get a bit of playable logic that you can use in irb move forward slowly by adding in a little bit of complexity at a time, e.g. one additional type of ship; a 2x2 grid, but go slow; only one additional component at a time, and at each step make sure all your tests are green and that you can play your game in irb.
+Don't try to implement everything at once. Start with an MVP with, say, a single-celled grid and a single ship (do we even need cells and/or a grid?).  Once you get a bit of playable logic that you can use in irb, move forward slowly by adding in a little bit of complexity at a time, e.g. one additional type of ship; a 2x2 grid. But go slow: only one additional component at a time, and at each step make sure all your tests are green and that you can play your game in irb.
 
 ## Version 3: The Game Engine
 
@@ -107,9 +107,9 @@ How will we go about implementing the game engine? What do we need?
 **Here is a list of things your game must be able to do**:
 
 - Initialize a new game with two players
-- Allow a player to place ship on their own board
+- Allow a player to place ships on their own board
 - Allow a player to shoot at their opponent's board
-- Allow a player to see where on their opponents board they have hit and missed ( _but not see his opponent's ships_).  Is there a rudimentary way to do this in 'irb'?
+- Allow a player to see where on their opponent's board they have hit and missed ( _but not see his opponent's ships_).  Is there a rudimentary way to do this in 'irb'?
 - Report if a player has won
 
 One important thing here is that you don't get distracted by how people will actually play the game, but concentrate on the logic of the game itself using the objects you have created.
@@ -119,11 +119,11 @@ One important thing here is that you don't get distracted by how people will act
 
 Now it's time to work on the user interface of our battleship game.  What is the user interface?
 
-The idea of the _user interface_ (UI) is to provide our players with a good _user experience_ (UI) while playing the game. You may need to spend some thought on how to implement the UI.  This is best done on paper, storyboarding the different _"screens"_ the players are presented with.
+The idea of the _user interface_ (UI) is to provide our players with a good _user experience_ (UI) while playing the game. You may need to spend some thought on how to implement the UI. This is best done on paper, storyboarding the different _"screens"_ the players are presented with.
 
 **Tasks**
 
-1. Research about user experience and user interfaces, how do they intersect? How are they related? Do you dare to give a little talk on this to your byte?
+1. Research user experience and user interfaces - how do they intersect? How are they related? Do you dare to give a little talk on this to your byte?
 2. Create a storyboard of screens you think you will need to implement for a good UX.
 3. Present the UI you have created to your cohort and discuss the different approaches.
 4. Can you implement the user interface?  Can your cohort play with your battleships game?
@@ -145,7 +145,7 @@ The idea of the _user interface_ (UI) is to provide our players with a good _use
 - [Makers Lecture - Blocks, Procs and Lambdas](https://www.youtube.com/watch?v=2HTR4oOZ9iM)
 - [Battleships Game - Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game))
 - [SOLID - Wikipedia](https://en.wikipedia.org/wiki/Solid_(object-oriented_design))
-- [Principles of OOD - Robert C. Martin (unclebob)](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
+- [Principles of OOD - Robert C. Martin (Uncle Bob)](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 - [Terminal Table Gem](https://github.com/tj/terminal-table)
 - [User experience design - Wikipedia](https://en.wikipedia.org/wiki/User_experience_design)
 - [User interface design - Wikipedia](https://en.wikipedia.org/wiki/User_interface_design)
