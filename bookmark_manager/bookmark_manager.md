@@ -50,7 +50,10 @@ As you'd do with every new project, create a new repository on Github.
 
 * Name your project 'bookmark_manager'.
 * From your project directory, run ```bundle init``` to generate a Gemfile.
-* Make a test group and add ```gem 'rspec' ``` and ```gem 'capybara' ``` then run 'bundle'.
+* In the Gemfile:
+  - add the line `ruby '2.2.1'`
+  - make a test group and add ```gem 'rspec' ``` and ```gem 'capybara' ```
+* Run `bundle`.
 * Add ``` require 'capybara/rspec'  ``` to your spec_helper.rb.
 
 Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:

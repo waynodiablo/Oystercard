@@ -181,6 +181,7 @@ Now our tests shall pass. =)
 
 ## Extra Activities:
 1. At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
+2. We have a green feature test - now is a good time to deploy to heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
 
 
 

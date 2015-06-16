@@ -1,12 +1,26 @@
 ### Forgotten password
 
-Instead of implementing it, let's just discuss how it could be done since it's fairly straightforward.
-
 If a user forgets the password, we cannot just send it by email for two reasons. Firstly, we don't know the password: we only have the digest. Secondly, that would be insecure because the password would likely be stored in the email archive. If the email archive is compromised, then the attacker would know the password.
 
-Instead of sending the password, we need to send a one-time password recovery token. It's a long random string that can be used only once and only for a limited time to change the password. The flow is as follows:
+Instead of sending the password, we need to send a one-time password recovery token. It's a long random string that can be used only once and only for a limited time to change the password. Let's start with a test:
 
-* Create a form that can be used to request a new password. The only field you need is email.
+```ruby
+feature 'Password reset' do
+
+ scenario 'requesting a password reset' do
+   user = User.create(email: 'test@test.com', password: 'secret1234',
+                      password_confirmation: 'secret1234')
+   visit '/password_reset'
+   fill_in 'Email', with: user.email
+   click_button 'Reset password'
+   user = User.first(email: user.email)
+   expect(user.password_token).not_to be_nil
+   expect(page).to have_content 'Check your emails'
+ end
+end
+```
+
+* Let your tests drive you to the point where user.password_token is expected to not be nil - you will need to add `property :password_token, Text` to your user class.
 * Find the record of the user that's recovering the password.
 * Generate a long, random password recovery token and save it as part of the user record, together with a timestamp.
 
@@ -14,19 +28,33 @@ Instead of sending the password, we need to send a one-time password recovery to
 user = User.first(email: email)
 # avoid having to memorise ascii codes
 user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
-user.password_token_timestamp = Time.now
 user.save
 ```
 
-* Create a route to reset the password: get "/users/reset_password/:token"
-* Send an email with this a link containing this token to the user.
-* When the link is clicked, find the user that has this token in the database.
+* Create a route to reset the password: get "/reset_password/:token"
+* Send an email (we'll cover this later) with a link containing this token to the user. For now let's imagine the email is sent and the user has clicked the link.
+* When the link is clicked, find the user that has this token in the database. We'll test this as follows:
+
+```ruby
+scenario 'resetting password' do
+   user = User.first
+   user.password_token = 'token'
+
+   visit "/users/password_reset/#{user.password_token}"
+   expect(page.status_code).to eq 200
+   expect(page).to have_content 'Enter a new password'
+ end
+```
+* Make a new form that passes the above test.
+* Write a test that drives you to amend the users password. Remember to test that your password token is valid, and reset the password token to nil once the password is changed.
 
 ```ruby
 user = User.first(password_token: token)
 ```
+* Optional extra:
 
-* Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
+  - Add a timestamp when you create the password_token, by setting `user.password_token_timestamp = Time.now`. To unit test this, you will need to stub the time - you could do this yourself, or have a look at timecop gem.
+  - Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
 
 ### Sending the email
 
