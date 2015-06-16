@@ -10,3 +10,7 @@ It is different from simply helping programmers with a technical issue in that p
 Here are some screen recordings of pair scaffolding sessions in action.  The ones in this playlist are slighlty artificial in that they are pairing sessions that brought together two programmers specifically for pairing, when perhaps ideally the pair scaffolding coach works with an existing pair who have already selected a task and have been working on it for some time.
 
 https://www.youtube.com/playlist?list=PLjbL0BCR04Q1bJi1T-BXuKGH7q9NbAtfK
+
+Pair scaffolding on Rails:
+
+https://www.youtube.com/watch?v=LRaWE0k3hZw
