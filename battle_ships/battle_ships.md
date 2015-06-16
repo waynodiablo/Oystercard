@@ -12,7 +12,15 @@ When all of one player's ships have been sunk the game finishes and the player w
 
 ***Please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
-Please also see the [Learning Objectives](learning_objectives.md) for this project.
+Please see the [Learning Objectives](learning_objectives.md) for this project and also the resources at the bottom of this page.
+
+## Talks this week:
+We will cover a number of more advanced OO concepts this week, referencing the projects we have covered so far.
+
+* *Class methods*:  creating different types of ship
+* *Dependency inversion*: dealing with the weather in Airport Challenge.
+* *Composition over inheritance*:  docking stations, vans and garages.
+* *Implementing blocks*:  initializing a grid with cells.
 
 ## Version 0: The User Stories
 
