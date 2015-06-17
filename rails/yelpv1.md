@@ -1117,7 +1117,7 @@ haml:
           %li
             = review.thoughts
             %strong= review.rating
-            /5
+            \/5
     - else
       %p No reviews
 ```
@@ -1139,7 +1139,7 @@ But what if the 'parent' restaurant gets deleted? This would lead to reviews exi
 has_many :reviews, dependent: :destroy
 ```
 
-***Exercise***: We just added code that does not support any functionality that we are testing.  Create a test to check for it, and then make sure it fails when either `belongs_to :restaurant` or the `dependent: :destroy` components are removed.  Test Driven Development (TDD) is the best way to ensure that tests fail before passing, but the critical thing is that you see the tests fail at least once.  Why?  Because otherwise you are not sure if your test is not just a vacuous test that will just waste time and leave you thinking you have test coverage when you don't really.
+***Exercise***: We just added code that does not support any functionality that we are testing.  Create a test to check for it, and then make sure it fails when `belongs_to :restaurant` is removed.  Test Driven Development (TDD) is the best way to ensure that tests fail before passing, but the critical thing is that you see the tests fail at least once.  Why?  Because otherwise you are not sure if your test is not just a vacuous test that will just waste time and leave you thinking you have test coverage when you don't really.
 
 Before we move on let's commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows: again.
 

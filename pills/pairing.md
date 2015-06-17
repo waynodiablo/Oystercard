@@ -73,6 +73,7 @@ Pair Programming Research
 Pair Programming Videos
 -------------
 
+* [Why we Pair](https://www.youtube.com/watch?v=81tcbUwM0t0)
 * [Does Pair Programming have to suck?](https://www.youtube.com/watch?v=OQXEzwXtzJ8)
 * [Pairing is Caring](https://www.youtube.com/watch?v=zCzc5W7vHQg)
 * [Tools for Pair Programming](https://www.youtube.com/watch?v=W_hsEi_UZHE)

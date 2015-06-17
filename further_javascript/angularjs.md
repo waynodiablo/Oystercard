@@ -735,7 +735,7 @@ Our tests should still all pass.
 There's a couple of things to clean up:
 
 * Although our tests pass, the website doesn't work. Why might that be?
-* We left some duplications in the test, using 'items' twice - how can we refactor that?
+* We have some duplications in the tests, as we are now testing the same thing (calling out to an API) in two places - how could we refactor that? Should we start mocking more things?
 * Notice how when you clear the text box you're still trying to search.
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?

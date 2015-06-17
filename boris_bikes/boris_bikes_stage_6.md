@@ -31,7 +31,7 @@ $ irb
  => nil
 2.0.0-p195 :004 > bike.broken?
  => true
-2.0.0-p195 :005 > docking_station.dock bike
+2.0.0-p195 :005 > station.dock bike
  => nil
 ```
 
