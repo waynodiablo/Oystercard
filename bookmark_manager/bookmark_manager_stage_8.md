@@ -39,6 +39,7 @@ user.save
 scenario 'resetting password' do
    user = User.first
    user.password_token = 'token'
+   user.save
 
    visit "/users/password_reset/#{user.password_token}"
    expect(page.status_code).to eq 200
@@ -58,24 +59,38 @@ user = User.first(password_token: token)
 
 ### Sending the email
 
-To send an email, you will need an external SMTP server that will do it for you. There are several companies provided these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku (the cloud hosting service), making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
+To send an email, you will need an external SMTP server. There are several companies providing these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku (the cloud hosting service), making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
 
-First, you'll need to add the addon to heroku. This will make the API key that you need to send an email available in your env variables (you can read them by typing "heroku config" in the project folder).
-
-Sending the email is as easy as sending a POST request from your app. To send an HTTP request, you'll need one of the many available libraries (HTTParty, Net::HTTP, RestClient, etc). The following example is taken from the Mailgun quickstart guide. It uses RestClient.
+As always, we start with a test. In this case we already have a test for the password reset feature. As feature tests are expensive, let's add an expectation to the test 'requesting a password reset':
 
 ```ruby
-def send_simple_message
-  RestClient.post 'https://api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0'\
-    '@api.mailgun.net/v2/samples.mailgun.org/messages',
-    from: 'Excited User <me@samples.mailgun.org>',
-    to: 'bar@example.com, baz@example.com',
-    subject: 'Hello',
-    text:'Testing some Mailgun awesomness!'
+  expect(SendResetEmail).to receive(:call)
+```
+
+We would not normally stub out a feature test - rather, we would want to catch the email, but that is beyond the scope of this tutorial. For now, we have a failing test, so let's get this working. Create a SendEmailClass in `./lib` directory.
+
+Follow the error messages until they are green (basically until we have an empty #call class method). You will need to call SendResetEmail.call(user) from your controller.
+
+Now we need to write some unit tests for the email functionality:
+
+```ruby
+
+require './lib/send_reset_email'
+
+describe SendResetEmail do
+
+ let(:user)   { double :user   }
+ let(:client) { double :client }
+ subject { SendResetEmail.new(user: user, client: client) }
+
+ it 'passes a message to an email client' do
+   expect(client).to receive :send_message
+   subject.call(user)
+ end
 end
 ```
 
-To test it locally it may be convenient to add the addon to Heroku to generate and API key and then create an environment variable in your .bash_profile to make it available locally.
+
 
 ## Exercises
 
