@@ -1,6 +1,8 @@
 #Adding user accounts
 
-Let's implement basic user account functionality. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user.
+Before we set up user accounts, have a read through this [post](https://crackstation.net/hashing-security.htm). Make sure you are sitting comfortably, it's a long post :-)
+
+Now we have an idea of security, let's implement basic user account functionality. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user.
 
 The goal of this exercise is to demonstrate how to create a user management system from scratch without using user management libraries (we'll be using them later in the course, though).
 
