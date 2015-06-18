@@ -1,9 +1,9 @@
 # How to Refactor with Sinatra
 
 ## The Problem.
-Unlike Rails, Sinatra allows us a great deal of flexibility in how we organize our code. One benefit of this is that it allows a natural development process: our app can start as a small single, easily understandable unit, and as it grows, its parts can gradually be broken out.
+Unlike Rails, Sinatra allows us a great deal of flexibility in how we organize our code. One benefit of this is that it allows a natural development process: our app can start small and easily understandable. As it grows, its parts can gradually be broken out.
 
-Things get messy when we don't take that refactor step.
+Things get messy, however, when we don't take that that step of breaking up and refactoring.
 
 This pill will take you through the process of refactoring your routes. Consider the following (as we're not concerned with the body of the routes they've been omitted):
 
@@ -50,20 +50,13 @@ We would be better off splitting out our routes into separate ["controllers"](ht
 ```bash
 ├── app.rb
 ├── models
-│   ├── user.rb
-│   └── link.rb
+│   └── # etc
 ├── controllers
 │   ├── link.rb
 │   ├── session.rb
 │   └── user.rb
 └── views
-    ├── link
-    │   ├── index.erb
-    │   └── new.erb
-    ├── session
-    │   └── new.erb
-    └── user
-        └── new.erb
+    └── # etc
 
 ```
 And, for example, our `/controllers/link.rb` would look like:
@@ -185,6 +178,6 @@ end
 
 Rewrite your config.ru to `run Armadillo::MyApp`, and you're done!
 
-Note that we haven't gone through the same process for our models or helpers. Go through the same process, nesting them within `Armadillo::Models`. Good luck!
+Note that we haven't touched our models or helpers. Go through the same process, nesting them within `Armadillo::Models`. Good luck!
 
 (*by Ptolemy. Questions / comments to ptolemy@makersacademy.com, or raise an issue)
