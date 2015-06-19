@@ -6,7 +6,7 @@ Capybara is a ruby gem that allows you to easily test the user experience of a w
 
 **How do I use capybara?**
 
-Firstly, install capybara for your chosen feature test framework (usually RSpec or Cucumber), following the instructions in the [documentation](https://github.com/jnicklas/capybara). This then allows the capybara methods to be used from within your tests. 
+Firstly, install capybara for your chosen feature test framework (usually RSpec or Cucumber), following the instructions in the [documentation](https://github.com/jnicklas/capybara). This then allows the capybara methods to be used from within your tests.
 
 RSpec
 
@@ -36,12 +36,11 @@ end
 
 Capybara methods can be broadly broken down into categories as follows:
 
-1. Click - methods that click something on a page, i.e. ``` click_button 'Submit' ```
-2. Navigate - methods that navigate to a page, i.e. ``` visit '/' ```
-3. Type - methods that mimic the user typing something, i.e. ``` fill_in('name', with: 'dave') ```
-4. Scoping - methods that target a specific area of the page, i.e. ``` within('#blog-post') { click_button 'See More' } ```
-5. Verify - methods that test expectations, i.e. ``` expect('#blog-post').to have_content('News')```
+1. Navigation - methods that navigate to a page, i.e. `visit '/'`
+2. Clicking - methods that click something on a page, i.e. `click_button 'Submit'`
+3. Interacting - methods that mimic the user entering form data, i.e. `fill_in('name', with: 'dave')`
+4. Matching - methods that test expectations, i.e. `expect('#blog-post').to have_content('News')`
+5. Scoping - methods that target a specific area of the page, i.e. `within('#blog-post') do`
 6. Other - Other user actions such as checking check boxes, selecting select options or attaching files.
 
 An excellent list of the primary capybara methods can be found in this [cheat sheet](http://www.cheatography.com/ddovii/cheat-sheets/capybara-cheat-sheet/).
-

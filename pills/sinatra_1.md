@@ -5,7 +5,7 @@
 > Sinatra is one of many simple web application frameworks.  You can read about some of the alternatives in [this blog post](http://www.sitepoint.com/ruby-microframeworks-round/).
 
 
-As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorise and understand what you're doing.
+As with every pill and project please do type in the code examples instead of copy-pasting them, it will help you to memorize and understand what you're doing.
 
 ***As always there may be subtle errors in the following materials.  Please try to approach any of these as challenges on which to polish your debugging skills - pull requests very welcome.***
 
@@ -35,11 +35,11 @@ As mentioned above, Sinatra is just a Ruby [gem](gems.md) :pill:, so you'll need
 
 However, a better way would be to put it in your Gemfile:
 
-````ruby
+```ruby
 # Gemfile
 source 'https://rubygems.org'
 gem 'sinatra'
-````
+```
 
 and install using [bundler](bundler.md) :pill::
 
@@ -50,8 +50,6 @@ There are two advantages to this approach. Firstly, you'll be keeping a record o
 Once you have installed Sinatra, you are ready to create a web-accessible _Hello World_ application. Let's do that now.
 
 [Go to part 2](sinatra_2.md)
-
-[Go to exercises](sinatra_exercises.md)
 
 Resources
 --------
