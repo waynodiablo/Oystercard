@@ -44,8 +44,6 @@ Next up, we'll chat about how to better organise our static assets, like images.
 
 [Go to part 8](sinatra_8.md)
 
-[Go to exercises](sinatra_exercises.md)
-
 Resources
 --------
 

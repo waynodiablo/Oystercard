@@ -69,8 +69,6 @@ Next up, let's use _parameters_ to add some more sophistication to our kitten we
 
 [Go to part 6](sinatra_6.md)
 
-[Go to exercises](sinatra_exercises.md)
-
 Resources
 --------
 
