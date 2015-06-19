@@ -35,7 +35,7 @@ Please ensure you have a good understanding of [Sinatra](../pills/sinatra_1.md) 
 
 The first thing we have to do is to setup our project so that it's ready for us to start working on it.
 
-Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to separate your game logic from your view logic here are some versions of a battleships game engine you can use as an alternative.**:
+Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to complete your game logic or separate your game logic from your view logic, here are some versions of a battleships game engine you can use as an alternative:**
 
 * [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
 * [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
@@ -43,7 +43,11 @@ Last week you created a playable battleships game for the terminal. You separate
 
 Note, if you use Ben's version, you should install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
 
-First we need to make sure that the code we wrote for battleships is in the right places. As before we will need a ``lib`` and a ``spec`` directory.   [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
+Start by creating a BattleshipsWeb folder in your projects directory.
+
+If you are importing your own battleships code, or code from one of the examples other than the gem, make sure that the code is in the right places. As before we will need a `lib` and a `spec` directory.
+
+[Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
 .
@@ -64,7 +68,7 @@ We will review what all these files and directories do as we come to them.
 
  **First things first! We need a Gemfile!**
 
-Before we go off creating lots of directories, let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](../pills/gems.md) ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to  have all we need. Let's look at the Gemfile we are going to need during our project:
+Let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](../pills/gems.md) ( _and the versions of the gems_ ) we want to use in our project, so that when we clone the project from another computer we'll be able to easily install everything we need. Let's look at the Gemfile we are going to need during our project:
 
 ```ruby
 source 'https://rubygems.org'
@@ -83,19 +87,21 @@ end
 
 _You might have noticed that we have ordered the gems alphabetically. This is for practical reasons. In bigger projects that use a lot of different gems we want to make sure that we find them in our Gemfile fairly quickly._
 
-Once you've bundled the `Gemfile` run `rspec` and make sure everything is working ( _did you remember to add your code into the lib and spec directories?_ ).
+Once you've bundled the `Gemfile` run `rspec` and make sure everything is working ( if you are not using the gem, _did you remember to add your battleships code into the lib and spec directories?_ ).
 
 Now that your specs are passing and the code is all in place we are ready to start working on our battleships online game!
 
+Commit your code to Git (you'd already done this though right?)
+
 ## Version 1: Building an application from the outside in
 
-Everything is setup and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full-fledged web application; our friends and family can play with our app!
+Everything is set up and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full-fledged web application; our friends and family can play with our app!
 
 **Let's get started then, shall we?**
 
-One of the gems you should have in your system now is ``rspec-sinatra``. This gem will help you setting up RSpec to work with Sinatra.
+One of the gems you should have in your system now is `rspec-sinatra`. This gem will help you setting up RSpec to work with Sinatra.
 
-Within your projects directory, create a Battleships directory and navigate into it, then run:
+Within your BattleshipsWeb directory, run:
 
 ```shell-session
 $ rspec-sinatra init --app  BattleshipsWeb lib/battleships_web.rb
@@ -105,11 +111,48 @@ Generating with init generator:
      [ADDED]  config.ru
 ```
 
-This has added some directories and files in our application directory.
+This will add some directories and files to our application directory.  You can use `git status` to quickly see what's new.  Have a look at the new files and see if you can work out what they are for.  Then commit the changes so you are back to a clean working directory.
+
+Now we're ready to write our first test, but what sort of test should that be?  So far, we've been writing _unit_ tests using RSpec and testing our features using IRB.  That's been OK up to now and our feature tests have helped us to understand what unit tests to write.  However, as our application gets larger, relying on manual feature tests is going to become unwieldy.  Wouldn't it be nice if we could automate our feature tests as well?
+
+Well we can.  If you think about it, everything we've written in IRB could have been written within one or more RSpec tests. The advantage of this would be every time we run RSpec it would run all of our feature tests too.
+
+Let's look at an example for Battleships.  We want to test that we can hit a ship after it has been placed on the board:
+
+```sh
+$ irb
+2.0.0-p195 :001 > require 'battleships'
+ => true
+2.0.0-p195 :002 > board = Board.new
+ => #<Battleships::Board:0x007fd34225b5f8>
+2.0.0-p195 :003 > ship = Ship.destroyer
+ => #<Battleships::Ship:0x007fd341a4af08 @type=:destroyer, @size=2, @hits=0>
+2.0.0-p195 :004 > board.place_ship ship, :B2, :vertically
+ => [#<Battleships::Ship:0x007fd341a4af08 @type=:destroyer, @size=2, @hits=0>]
+2.0.0-p195 :005 > board.receive_shot :B3
+ => :hit
+```
+What might that look like as a feature test?
+```
+describe 'shooting at the board' do
+  it 'results in :hit if there is a ship' do
+    board = Board.new
+    ship = Ship.destroyer
+    board.place_ship ship, :B2, :vertically
+    expect(board.receive_shot :B3).to eq :hit
+  end
+end
+```
+Note how this differs from a unit test.  Firstly, _we are not using doubles_.  Secondly, we are not describing a specific class, such as `Board`.  It is not necessarily clear which component is under test, and that's the point: we are testing the _feature_ and not the _units_.
+
+Suppose we had written that feature test _first_ - before writing any unit tests.  The feature test contains code we wish we had.  It gives us a clear starting point to go and start writing unit tests.  It may be quite a while before we can actually get that feature test to pass, but when it does, we'll have achieved a significant amount.  We could then choose the next feature to test and so on.  This is a very useful technique and is one of the cornerstones of Behaviour Driven Development (BDD), which you should read about here: [BDD&nbsp;:pill:](../pills/bdd.md) and [BDD cycle&nbsp;:pill:](../pills/bdd_cycle.md).
+
+
+So what are the features we want to test for BattleshipsWeb?  We've already tested the API; now we want to test the user interface...
 
 Let's write the first scenario of our first feature (`spec/features/starting_a_game_spec.rb`):
 
-```cucumber
+```ruby
 require 'spec_helper'
 
 feature 'Starting a new game' do
@@ -119,10 +162,9 @@ feature 'Starting a new game' do
     expect(page).to have_content "What's your name?"
   end
 end
-
 ```
 
-We should then get something like the following output:
+The `feature` and `scenario` methods are provided by Capybara.  They're just synonyms for RSpec's `describe` and `it` and they help to differentiate these as feature tests.
 
 ```shell-session
 $ rspec
