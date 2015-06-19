@@ -13,7 +13,7 @@ get '/' do
   'hello!'
 end
 ````
-> Why are we requiring `sinatra.rb` in this file?
+> Why are we requiring `sinatra` in this file?
 
 Now, run this file.
 
@@ -52,7 +52,7 @@ Then we call the `get()` method, provided by Sinatra, passing `'/'` as an argume
 
 What this method does is tell Sinatra to respond to a `GET` HTTP request to the path `/` (which happens whatever the user visits `http://localhost:4567`) and return the result of executing the block, in this case the string 'hello!':
 
-1. The brower requests page `/` (`http://localhost:4567/`) ->
+1. The browser requests page `/` (`http://localhost:4567/`) ->
 2. Sinatra activates the block defined by the `get '/' do` method call ->
 3. the block returns the string 'hello!' ->
 4. Sinatra returns this string ('hello!') to the  User
@@ -60,8 +60,6 @@ What this method does is tell Sinatra to respond to a `GET` HTTP request to the 
 The '/' part of the address is the last slash in `http://localhost:4567/`. Next up, let's try adding another page.
 
 [Go to part 3](sinatra_3.md)
-
-[Go to exercises](sinatra_exercises.md)
 
 Resources
 --------
