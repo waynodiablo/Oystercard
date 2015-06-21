@@ -6,7 +6,7 @@ Capybara is a ruby gem that allows you to easily test the user experience of a w
 
 **How do I use capybara?**
 
-Firstly, install capybara for your chosen feature test framework (usually RSpec or Cucumber), following the instructions in the [documentation](https://github.com/jnicklas/capybara). This then allows the capybara methods to be used from within your tests. 
+Firstly, install capybara for your chosen feature test framework (usually RSpec or Cucumber), following the instructions in the [documentation](https://github.com/jnicklas/capybara). This then allows the capybara methods to be used from within your tests.
 
 RSpec
 
@@ -45,3 +45,37 @@ Capybara methods can be broadly broken down into categories as follows:
 
 An excellent list of the primary capybara methods can be found in this [cheat sheet](http://www.cheatography.com/ddovii/cheat-sheets/capybara-cheat-sheet/).
 
+## Playing with Capybara
+
+To get a sense of how any tool works, it helps to be able to play with it from within your REPL. Let's get started.
+
+For this you'll need to create a Gemfile and list two dependencies:
+
+```ruby
+# ./Gemfile
+
+gem 'capybara'
+gem 'selenium-webdriver'
+```
+
+We'll get into what these are in a second. Now crack open your favourite REPL (usually IRB or pry) and do the following:
+
+```pry
+[1] pry(main)> require 'capybara'
+=> true
+[2] pry(main)> require 'selenium-webdriver'
+=> true
+[3] pry(main)> include Capybara::DSL
+including Capybara::DSL in the global scope is not recommended!
+=> Object
+
+```
+What we've just done there is made Capybara's DSL directly available to us within our REPL, rather than just within the context of RSpec as we would want for a real test. Capybara throws up a warning but it's okay, we're just messing around here. Let's keep going.
+
+```pry
+[4] pry(main)> Capybara.default_driver = :selenium
+=> :selenium
+```
+Here we've told Capybara to interface with a technology called [selenium webdriver](http://www.seleniumhq.org/projects/webdriver/) to run our automated browser-tests. Really, Capybara is just a DSL that allows you to *send instructions* to an automated browser, but it doesn't do any of the work that browsers have to do to send / receive information and display it.
+
+There are a number of 
