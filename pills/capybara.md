@@ -76,6 +76,15 @@ What we've just done there is made Capybara's DSL directly available to us withi
 [4] pry(main)> Capybara.default_driver = :selenium
 => :selenium
 ```
-Here we've told Capybara to interface with a technology called [selenium webdriver](http://www.seleniumhq.org/projects/webdriver/) to run our automated browser-tests. Really, Capybara is just a DSL that allows you to *send instructions* to an automated browser, but it doesn't do any of the work that browsers have to do to send / receive information and display it.
+Capybara is just a DSL that allows you to *send instructions* to an automated browser, but it doesn't do any of the work that browsers have to do to send / receive via HTTP and render HTML. So here we've told Capybara to interface with a technology called [selenium webdriver](http://www.seleniumhq.org/projects/webdriver/) to carry out the "browser" part of our automated browser tests. We're choosing selenium because we'll get to see what's happening.
 
-There are a number of 
+Now you can start exploring how Capybara works:
+
+```pry
+visit 'http//www.bbc.co.uk'
+```
+
+You should see a Firefox browser window pop up and a website load. Now play around with the Capybara commands and see what's possible. Things to try:
+* Type `page`. Try `page.methods`. Try out some of the methods on the page object.
+* Instruct the browser to click on a link or a button.
+* Fill in a form.
