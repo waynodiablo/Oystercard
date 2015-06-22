@@ -2,12 +2,12 @@
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-In this project we are going to improve on our battleships game.
+In this project we are going to take our battleships game to the next level.
 In [the last project](../battle_ships/battle_ships.md) we implemented the battleships game for the terminal.  Please refer to the [learning objectives](learning_objectives.md) for a list of everything we're hoping to cover this week.
 
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with computers for people in general. Before you even knew there was a terminal you likely did almost everything on a computer via a graphical interface of some sort; either through a dedicated desktop application or through a browser.
 
-Back in the day the terminal was the only way to interact with a computer, but nowadays applications are much richer in colours and interactions, they feel smoother and friendlier than the terminal does.
+Back in the day the terminal was the only way to interact with a computer. Nowadays, application interactions are richer and more colourful: a graphical interface feels smoother and friendlier than the terminal does.
 
 The web offers a wonderful plethora of technologies and possibilities to build applications.  Web applications that run in a browser are different from dedicated desktop applications (like MS Word) that have to be installed separately on each individual computer.  Web applications can be accessed from any computer that has a browser, simply by pointing the browser at the correct web page or URL (Uniform Resource Locator, e.g. http://google.com).  This means if you want to create a new 'app' you can just share the link to it, rather than having to ask your users to go through a potentially complex and error prone installation process.  The flipside is browser compatibility issues, but more on that later.
 
@@ -15,7 +15,7 @@ The web offers a wonderful plethora of technologies and possibilities to build a
 
 In order to share whatever we're building on our computer with the rest of the world, on the Web, we need to learn how to build web applications using _"web application frameworks"_.
 
-Have you heard of Ruby-on-Rails? Ruby here is the language whereas Rails is the web application framework. A Ruby-on-Rails application is one that uses the Rails web application framework with the Ruby language.
+Have you heard of 'Ruby on Rails'? Ruby is the language: Rails is the web application framework. A Ruby on Rails application is one that uses the Rails web application framework with the Ruby language.
 
 A web application framework for Ruby is a gem (library) that provides support to make our Ruby code accessible to the web browser. There are plenty of web application frameworks available for the Ruby language; the two we focus on in the Makers Academy course are Sinatra and Rails, in that particular order.
 
@@ -29,7 +29,7 @@ Despite its simplicity, Sinatra is very powerful. A large number of websites and
 
 ## Prerequisites
 
-Please ensure you have a good understanding of [Sinatra](../pills/sinatra_1.md) :pill: and [Capybara](../pills/capybara.md) :pill: before starting this project.  Capybara is a Ruby library that supports grabbing pieces of HTML web pages and taking actions like clicking links and filling in forms - please refer to the pills for details.  We'll use Capybara to write the acceptance tests for our game
+Please ensure you have a good understanding of [Sinatra](../pills/sinatra_1.md) :pill: and [Capybara](../pills/capybara.md) :pill: before starting this project.  Capybara is a Ruby library that supports grabbing pieces of HTML web pages and taking actions like clicking links and filling in forms - please refer to the pills for details.  We'll use Capybara to write the acceptance tests for our game.
 
 ## Version 0: Setting up
 
@@ -91,7 +91,7 @@ Once you've bundled the `Gemfile` run `rspec` and make sure everything is workin
 
 Now that your specs are passing and the code is all in place we are ready to start working on our battleships online game!
 
-Commit your code to Git (you'd already done this though right?)
+Commit your code to Git (you'd already done this though, right?).
 
 ## Version 1: Building an application from the outside in
 
@@ -113,9 +113,9 @@ Generating with init generator:
 
 This will add some directories and files to our application directory.  You can use `git status` to quickly see what's new.  Have a look at the new files and see if you can work out what they are for.  Then commit the changes so you are back to a clean working directory.
 
-Now we're ready to write our first test, but what sort of test should that be?  So far, we've been writing _unit_ tests using RSpec and testing our features using IRB.  That's been OK up to now and our feature tests have helped us to understand what unit tests to write.  However, as our application gets larger, relying on manual feature tests is going to become unwieldy.  Wouldn't it be nice if we could automate our feature tests as well?
+Now we're ready to write our first test, but what sort of test should that be?  So far, we've been writing _unit_ tests using RSpec and testing our features using IRB.  That's been OK up to now: each time we've needed a feature, our 'feature tests' have helped us to understand which unit tests to write next.  However, as our application gets larger, relying on manual feature tests is going to become unwieldy.  Wouldn't it be nice if we could automate our feature tests as well?
 
-Well we can.  If you think about it, everything we've written in IRB could have been written within one or more RSpec tests. The advantage of this would be every time we run RSpec it would run all of our feature tests too.
+Well, we can.  If you think about it, everything we've written in IRB could have been written within one or more RSpec tests. The advantage of this would be every time we run RSpec it would run all of our feature tests too.
 
 Let's look at an example for Battleships.  We want to test that we can hit a ship after it has been placed on the board:
 
@@ -145,7 +145,7 @@ end
 ```
 Note how this differs from a unit test.  Firstly, _we are not using doubles_.  Secondly, we are not describing a specific class, such as `Board`.  It is not necessarily clear which component is under test, and that's the point: we are testing the _feature_ and not the _units_.
 
-Suppose we had written that feature test _first_ - before writing any unit tests.  The feature test contains code we wish we had.  It gives us a clear starting point to go and start writing unit tests.  It may be quite a while before we can actually get that feature test to pass, but when it does, we'll have achieved a significant amount.  We could then choose the next feature to test and so on.  This is a very useful technique and is one of the cornerstones of Behaviour Driven Development (BDD), which you should read about here: [BDD&nbsp;:pill:](../pills/bdd.md) and [BDD cycle&nbsp;:pill:](../pills/bdd_cycle.md).
+Suppose we had written that feature test _first_ - before writing any unit tests. It would fail, of course. But, the failure would point us in the right direction to write our code: **the feature test contains code we wish we had**.  It gives us a clear starting point to go and start writing unit tests.  It may be quite a while before we can actually get that feature test to pass, but when it does, we'll have achieved a significant amount.  We could then choose the next feature to test and so on.  This is a very useful technique and is one of the cornerstones of Behaviour Driven Development (BDD), which you should read about here: [BDD&nbsp;:pill:](../pills/bdd.md) and [BDD cycle&nbsp;:pill:](../pills/bdd_cycle.md).
 
 
 So what are the features we want to test for BattleshipsWeb?  We've already tested the API; now we want to test the user interface...
