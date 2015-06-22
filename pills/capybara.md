@@ -81,7 +81,7 @@ Capybara is just a DSL that allows you to *send instructions* to an automated br
 Now you can start exploring how Capybara works:
 
 ```pry
-visit 'http//www.bbc.co.uk'
+visit 'http://www.bbc.co.uk'
 ```
 
 You should see a Firefox browser window pop up and a website load. Now play around with the Capybara commands and see what's possible. Things to try:
