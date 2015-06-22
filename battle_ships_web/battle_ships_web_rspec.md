@@ -156,7 +156,7 @@ Let's write the first scenario of our first feature (`spec/features/starting_a_g
 require 'spec_helper'
 
 feature 'Starting a new game' do
-  scenario 'Registering' do
+  scenario 'Starting a new game' do
     visit '/'
     click_link 'New Game'
     expect(page).to have_content "What's your name?"
@@ -170,11 +170,11 @@ The `feature` and `scenario` methods are provided by Capybara.  They're just syn
 $ rspec
 
 Starting a new game
-  Registering (FAILED - 1)
+  I am asked to enter my name (FAILED - 1)
 
 Failures:
 
-  1) Starting a new game Registering
+  1) Starting a new game I am asked to enter my name
      Failure/Error: click_link 'New Game'
      Capybara::ElementNotFound:
        Unable to find link "New Game"
@@ -191,7 +191,7 @@ Finished in 0.01883 seconds (files took 0.29812 seconds to load)
 
 Failed examples:
 
-rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game Registering
+rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game I am asked to enter my name
 ```
 
 **What just happened?** RSpec is telling us that it cannot find a link named _New Game_ in the homepage. But, how is it possible that RSpec was able to go to the homepage? Which homepage? At this point in time we haven't even created anything apart from our feature file. What's going on?
@@ -253,11 +253,11 @@ Running rspec again after we have finished these tasks we will see the following
 rspec
 
 Starting a new game
-  Registering (FAILED - 1)
+  I am asked to enter my name (FAILED - 1)
 
 Failures:
 
-  1) Starting a new game Registering
+  1) Starting a new game I am asked to enter my name
      Failure/Error: expect(page).to have_content "What's your name?"
        expected to find text "What's your name?" in "New Game"
      # ./spec/feature/starting_a_game_spec.rb:7:in `block (2 levels) in <top (required)>'
@@ -267,7 +267,7 @@ Finished in 0.03161 seconds (files took 0.4445 seconds to load)
 
 Failed examples:
 
-rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game Registering
+rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game I am asked to enter my name
 
 ```
 
@@ -277,13 +277,13 @@ rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game Registering
 rspec
 
 Starting a new game
-  Registering
+  I am asked to enter my name
 
 Finished in 0.03279 seconds (files took 0.42197 seconds to load)
 1 example, 0 failures
 ```
 
-OK, our specs are passing now, but there is something wrong with the scenario we specified; it said Registering, but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
+OK, our specs are passing now, but there is something wrong with the scenario we specified; it said "I am asked to enter my name", but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
 
 **Tasks**
 
