@@ -156,7 +156,7 @@ Let's write the first scenario of our first feature (`spec/features/starting_a_g
 require 'spec_helper'
 
 feature 'Starting a new game' do
-  scenario 'Starting a new game' do
+  scenario 'I am asked to enter my name' do
     visit '/'
     click_link 'New Game'
     expect(page).to have_content "What's your name?"
