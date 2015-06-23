@@ -13,4 +13,6 @@ https://www.youtube.com/playlist?list=PLjbL0BCR04Q1bJi1T-BXuKGH7q9NbAtfK
 
 Pair scaffolding on Rails:
 
-https://www.youtube.com/watch?v=LRaWE0k3hZw
+* https://www.youtube.com/watch?v=LRaWE0k3hZw
+* https://www.youtube.com/watch?v=qTaBrFzgLVc
+* https://www.youtube.com/watch?v=hfm3GcbJACc
