@@ -1,6 +1,3 @@
-* finish email implementation with Mailgun
-
-
 ### Forgotten password
 
 If a user forgets the password, we cannot just send it by email for two reasons. Firstly, we don't know the password: we only have the digest. Secondly, that would be insecure because the password would likely be stored in the email archive. If the email archive is compromised, then the attacker would know the password.
@@ -101,7 +98,7 @@ end
 
 To do:
 * Make the above test pass! Implement a SendResetEmail class. If you decide to change the public interface of SendResetEmail, you may have to adjust your feature test / app.rb.
-* Within your production code, you obviously want to pass in a *real* client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [http://www.mailgun.com/](mailgun service).
+* Within your production code, you obviously want to pass in a *real* client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [http://www.mailgun.com/](mailgun service). Check out the :pill: [mailgun pill](/pills/mailgun.md) for advice on this.
 * Implement a route that will catch the request from users who have request a password reset email. Allow them to enter a new password.
 
 ## Adding more features
@@ -130,6 +127,12 @@ Well done for getting so far! Have a go at the following. Recall best practice w
 * Add a description property to the link.
 * Add a username to the User model, so that username instead of an email was shown next to the link.
 
-[ [Next Stage](bookmark_manager_style.md) ]
+## Reflections
+
+In terms of its functionality, our Bookmark Manager site is shaping up to MVP-status. However, there should be more to an MVP than functionality. Consider the following:
+
+<img src="https://pbs.twimg.com/media/Bya3nBvCQAASBGi.png"></img>
+
+TL;DR : Let's make some [style](bookmark_manager_style.md).
 
 [ [Return to outline](bookmark_manager.md) ]
