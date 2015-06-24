@@ -1,10 +1,10 @@
-# Bookmark manager
+# Bookmark Manager
 
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development:
 
 * Relational databases
 * Security considerations
-* More Acceptance testing with Capybara
+* More feature testing with Capybara
 
 In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Battleships – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
 
@@ -40,7 +40,7 @@ This is the basic view of the website. This tutorial will discuss how to build i
 
 ![](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
-Note that every project you work on should start with user stories/features in the Stakeholder/Motivation/Action format, and a user interface experience sketch.  Usually that sketch will be Lo-Fi (Low Fidelity), rather than the Hi-Fi (High Fidelity) one that we show here.  In this case imagine that there was a quick Lo-Fi (pencil and paper) sketch that was done, agreed by the client, and was then mocked up in HTML and CSS only, or just using a graphics package like PhotoShop.  Now you have a Hi-Fi mockup and a few user stories you're ready to start!
+Now you have a mockup and a few user stories you're ready to start!
 
 ***As usual please work on this project with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.***
 
@@ -51,7 +51,7 @@ As you'd do with every new project, create a new repository on Github.
 * Name your project 'bookmark_manager'.
 * From your project directory, run ```bundle init``` to generate a Gemfile.
 * In the Gemfile:
-  - add the line `ruby '2.2.1'`
+  - specify the version of Ruby that you wish to use.
   - make a test group and add ```gem 'rspec' ``` and ```gem 'capybara' ```
 * Run `bundle`.
 * Add ``` require 'capybara/rspec'  ``` to your spec_helper.rb.
@@ -60,15 +60,14 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 
 ## Bookmark Manager Outline
 
-* [Adding the database](bookmark_manager_stage_0.md)
-* [Managing links and tags](bookmark_manager_stage_1.md)
+* [Viewing / Creating Links](bookmark_manager_stage_0.md)
+* [Tagging Links](bookmark_manager_stage_1.md)
 * Adding user accounts
   * [Signing up](bookmark_manager_stage_2.md)
   * [Password confirmation](bookmark_manager_stage_3.md)
   * [Handling input errors](bookmark_manager_stage_4.md)
-  * [Three levels of data checks](bookmark_manager_stage_5.md)
+  * [Data Validation](bookmark_manager_stage_5.md)
   * [Preventing duplicate registrations](bookmark_manager_stage_6.md)
-  * [Rake tasks for database management](bookmark_manager_stage_7.md)
   * [Signing in and out](bookmark_manager_stage_7.md)
   * [Forgotten password](bookmark_manager_stage_8.md)
 * [Styling the website](bookmark_manager_stage_style.md)

@@ -1,4 +1,4 @@
-# Refactor
+### Refactor
 Before proceeding, let's refactor our helper methods. Lengthy argument lists such as we have in our #sign_up method are a sign of poor code quality. Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
 
 ## Preventing duplicate registrations

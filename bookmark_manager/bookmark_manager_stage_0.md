@@ -30,7 +30,7 @@ For instructions on how to install your database (and learn some basic interacti
 
 To talk to the database, we'll need the DataMapper gem. Follow this :pill: [DataMapper](../pills/datamapper.md) to set up your ORM.
 
-Then let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in app/models/link.rb.
+Then let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
 
 ```ruby
 # This class corresponds to a table in the database
@@ -50,7 +50,7 @@ end
 
 This class prescribes the relationship between the Link table in the database  and this Ruby application. We'll see how it can be used in a minute.
 
-If you run your tests now, you should encounter the following failure:
+Running our tests now should kick up the following error:
 ```
 Failures:
 
@@ -66,10 +66,10 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 
 How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
 
-* Add ``` Capybara.app = BookmarkManager ``` to your RSpec config.
-* Set up your sinatra app.rb in the 'app' folder of your application.
-* Use the modular sinatra style (what do you think the app should be called?)
-* Make sure that you require your server file in spec_helper.
+* Create a file, `/app/app.rb`.
+* Lay out Sinatra, in the modular style, within `app.rb`
+* Add ``` Capybara.app = NameOfYourSinatraClass ``` to `spec_helper`. Here we're telling Capybara what it should be testing.
+* Ensure you require your server file in spec_helper.
 
 The failure message of the test should now be:
 ```
@@ -94,15 +94,14 @@ Let's set that up now.
 
 
 ```ruby
-# in app.rb
-
+# /app/app.rb
   get '/links' do
     @links = Link.all
     erb :'links/index'
   end
 ```
 ```html
-<!-- in views/links/index.erb -->
+<!-- in /views/links/index.erb -->
 <h1> Links </h1>
 
 <% @links.each do |link| %>
@@ -110,11 +109,12 @@ Let's set that up now.
  URL:   <%= link.url   %>
 <% end %>
 ```
-Running our tests now, it shows that our link is not being displayed on the page. Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
+Running our tests now, it shows that our link is not being displayed on the page.
+* :exclamation: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
 
 ## Creating Links
 
-So, let's add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
+Now's the time to add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
 
 ```ruby
 feature 'User adds a new link' do
@@ -134,15 +134,15 @@ end
 ```
 
 Take the following steps::
-* Define ``` get '/links/new' ``` route in app.rb.
+* :exclamation: Define ``` get '/links/new' ``` route in app.rb.
 ```html
 <form action='/links' method='post'>
- Url: <input type='text' name='url'>
- Title: <input type='text' name='title'>
- <input type='submit' value='Add link'>
+   Url: <input type='text' name='url'>
+   Title: <input type='text' name='title'>
+   <input type='submit' value='Add link'>
 </form>
 ```
-* Create an associated view containing a form that POSTs to '/links'. What input fields should be defined?
+* :exclamation: Create an associated view containing a form that POSTs to `/links`. What input fields should be defined?
 
 Run your tests. You should be seeing:
 ```ruby
@@ -152,9 +152,9 @@ Run your tests. You should be seeing:
       expected: 1
            got: 3
 ```
-Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that we are creating a link within our test. The flaw is in our testing strategy: we want every test to run from a clean slate. At present, however, data is persisting across test-runs.
+Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that each run of the test creates a link. The flaw is in our testing strategy: we want every test to run from a clean slate. At present, however, data is persisting across test-runs.
 
-Let's configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
+* :exclamation: Go ahead and configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
 
 Configuring DatabaseCleaner should move us on to the next error:
 
@@ -168,7 +168,7 @@ Configuring DatabaseCleaner should move us on to the next error:
 
 Though we have a form for creating links, nothing is being done with the information the user has submitted. Examine the form you just created. Can you guess what path the form data is submitted to?
 
-* Within app.rb, define a route for the form data to be submitted to:
+* :exclamation: Within app.rb, define a route for the form data to be submitted to, like so:
 
 ```ruby
 post '/links' do
@@ -177,11 +177,11 @@ post '/links' do
 end
 ```
 
-Now our tests shall pass. =)
+All is well. =)
 
 ## Extra Activities:
-1. At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
-2. We have a green feature test - now is a good time to deploy to heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
+* :exclamation: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
+* :exclamation: We have a green feature test - now is a good time to deploy to Heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
 
 
 

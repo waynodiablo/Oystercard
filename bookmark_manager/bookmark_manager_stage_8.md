@@ -1,4 +1,4 @@
-### Forgotten password
+# Forgotten password
 
 If a user forgets the password, we cannot just send it by email for two reasons. Firstly, we don't know the password: we only have the digest. Secondly, that would be insecure because the password would likely be stored in the email archive. If the email archive is compromised, then the attacker would know the password.
 
@@ -98,12 +98,12 @@ end
 
 To do:
 * Make the above test pass! Implement a SendResetEmail class. If you decide to change the public interface of SendResetEmail, you may have to adjust your feature test / app.rb.
-* Within your production code, you obviously want to pass in a *real* client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [http://www.mailgun.com/](mailgun service). Check out the :pill: [mailgun pill](/pills/mailgun.md) for advice on this.
-* Implement a route that will catch the request from users who have request a password reset email. Allow them to enter a new password.
+* Within your production code, you obviously want to pass in a *real* client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [mailgun service](http://www.mailgun.com/). Check out the :pill: [mailgun pill](/pills/mailgun.md) for advice on this.
+* Implement a route that will catch the request from users who have requested a password reset email. Allow them to enter a new password.
 
 ## Adding more features
 
-Well done for getting so far! Have a go at the following. Recall best practice with regard to git when implementing a new feature:
+Well done for getting so far! Have a go at the following. Recall best practice with regard to git when implementing a new feature:  
 1. Checkout to a new branch named after the feature.
 2. Develop on the new branch.
 3. Merge back into master once your tests are green.
