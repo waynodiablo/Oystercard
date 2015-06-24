@@ -64,7 +64,7 @@ user = User.first(password_token: token)
 
 To send an email, you will need an external SMTP server. There are several companies providing these services: Mailgun and Sendgrid are among the most popular. They are also available as add-ons on Heroku (the cloud hosting service), making the integration into your application trivial. Let's consider how we could use Mailgun to send emails.
 
-As always, we start with a test. In this case we already have a test for the password reset feature. As feature tests are expensive, let's add an expectation to the test 'requesting a password reset':
+As always, we start with a test. In this case we already have a test for the password reset feature. As feature tests are expensive, let's add an expectation to the beginning of the test 'requesting a password reset':
 
 ```ruby
   expect(SendResetEmail).to receive(:call)
@@ -77,27 +77,41 @@ Follow the error messages until they are green (basically until we have an empty
 Now we need to write some unit tests for the email functionality:
 
 ```ruby
-
 require './lib/send_reset_email'
 
 describe SendResetEmail do
 
- let(:user)   { double :user   }
- let(:client) { double :client }
- subject { SendResetEmail.new(user: user, client: client) }
+  let(:user)   { double :user, password_token: '4nknkj34nkj23n4j32', email:
+                 "user@example.com" }
+  let(:client) { double :client }
+  subject { SendResetEmail.new(user: user, client: client) }
 
- it 'passes a message to an email client' do
-   expect(client).to receive :send_message
-   subject.call(user)
- end
+  it 'passes a recovery message to an email client' do
+    expect(client).to receive(:send_message).with(
+      to:      user.email,
+      message: "You have requested a password reset. Follow this link to continue:
+      http://www.bookmarkmanager.com/password_reset/#{user.password_token}"
+    ) # of course we are referencing a domain here that doesn't exist... but we
+      # would have something like this in our production environment.
+
+    subject.call
+  end
 end
 ```
 
+To do:
+* Make the above test pass! Implement a SendResetEmail class. If you decide to change the public interface of SendResetEmail, you may have to adjust your feature test / app.rb.
+* Within your production code, you obviously want to pass in a *real* client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [http://www.mailgun.com/](mailgun service).
+* Implement a route that will catch the request from users who have request a password reset email. Allow them to enter a new password.
 
+## Adding more features
 
-## Exercises
+Well done for getting so far! Have a go at the following. Recall best practice with regard to git when implementing a new feature:
+1. Checkout to a new branch named after the feature.
+2. Develop on the new branch.
+3. Merge back into master once your tests are green.
 
-Once you have completed the walkthrough you should be able to do all of the following (in no particular order).
+### Suggestions:
 
 * Show the list of available tags on the homepage
 * Move the form to add a link to its own route
@@ -106,14 +120,13 @@ Once you have completed the walkthrough you should be able to do all of the foll
 * Display how many users favourited the link
 * Create a user profile page that will show the links they submitted, tags they created and their favourites.
 * Display the link to the user's profile at the top of the page if the user is logged in
-* Implement forgotten password functionality
 * Redirect the user with a flash message if a logged in user tries to sign up or sign in
 * Send a welcome email when the user signs up
-* Create validations for all models:
-* email must have the correct format (see an example in Datamapper Validations)
-* email and password must be present
-* link must have a title and a url
-* tag must have some text
+* Create [validations](http://datamapper.org/docs/validations.html) for all models:
+  * email must have the correct format (see an example in Datamapper Validations)
+  * email and password must be present
+  * link must have a title and a url
+  * tag must have some text
 * Add a description property to the link.
 * Add a username to the User model, so that username instead of an email was shown next to the link.
 

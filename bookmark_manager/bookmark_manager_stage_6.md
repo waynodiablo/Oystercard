@@ -3,7 +3,6 @@ Before proceeding, let's refactor our helper methods. Lengthy argument lists suc
 
 ## Preventing duplicate registrations
 
-
 Let's write a test first, as usual, checking that we can't register the same user twice.
 
 ```ruby
