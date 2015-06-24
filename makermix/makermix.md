@@ -68,7 +68,7 @@ Both points are valid. Request specs have recently fallen out of favour to some 
 
 ###Step 4
 
-Your request specs or feature tests should drive to you to create unit tests for a database and models.
+Your request specs or feature tests should drive the creation of unit tests for a database and models.
 
 ###Step 5
 
