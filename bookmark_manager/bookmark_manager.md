@@ -65,7 +65,7 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 * Adding user accounts
   * [Signing up](bookmark_manager_stage_2.md)
   * [Password confirmation](bookmark_manager_stage_3.md)
-  * [Handling input errors](bookmark_manager_stage_4.md)
+  * [Sanitizing User Inputs](bookmark_manager_stage_4.md)
   * [Data Validation](bookmark_manager_stage_5.md)
   * [Preventing duplicate registrations](bookmark_manager_stage_6.md)
   * [Signing in and out](bookmark_manager_stage_7.md)

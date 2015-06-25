@@ -1,6 +1,6 @@
 ### Data Validation: 3 Levels.
 
-Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
+Right now our validations are ensuring only that the user doesn't make a typo when entering their password. However, we also shouldn't be registering a user if the email is already taken.
 
 In general, there are three levels at which you can and should check for the uniqueness in a well-designed application:
 
@@ -14,29 +14,30 @@ In general, there are three levels at which you can and should check for the uni
 validates_uniqueness_of :email
 ```
 
-This datamapper validation will check if a record with this email exists before trying to create a new one.
+This DataMapper validation will check if a record with this email exists before trying to create a new one.
 
-* You should introduce database-level constraints. This is a safety check that protects the database in case any data is written directly, bypassing the model. For example, if you need to batch-add 10,000 new users from a text file, you may not want to initialise your User model for every record for performance reasons. Instead, you'll write to the database directly bypassing datamapper. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level contraints.
+* You should introduce database-level constraints. This is a safety check that protects the database in case any data is written directly, bypassing the model. For example, if you need to batch-add 10,000 new users from a text file, you may not want to initialize your User model for every record for performance reasons. Instead, you'll write to the database directly bypassing DataMapper. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level constraints.
 
 ```ruby
+# /app/models/user.rb
 property :email, String, unique: true
 ```
 
-  This will generate SQL that will create a unique index on that field.
+This will generate SQL that will create a unique index on that field.
 
-  ```
-  CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" VARCHAR(50), "password_digest" TEXT, PRIMARY KEY("id"))
-  CREATE UNIQUE INDEX "unique_users_email" ON "users" ("email")
-  ```
-  This unique index on users.email will make sure that no records with duplicate emails will ever be saved to the database.
+```
+CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" VARCHAR(50), "password_digest" TEXT, PRIMARY KEY("id"))
+CREATE UNIQUE INDEX "unique_users_email" ON "users" ("email")
+```
+This unique index on the email column of the users table will make sure that no records with duplicate emails will ever be saved to the database.
 
-  In datamapper's case, creating a unique index automatically implies the necessity of the validation, so this code
+In DataMapper's case, creating a unique index automatically implies the necessity of the validation, so this code...
 
-  ```ruby
-  validates_uniqueness_of :email
-  ```
+```ruby
+validates_uniqueness_of :email
+```
 
-  would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
+...would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
 
 [ [Next Stage](bookmark_manager_stage_6.md) ]
 
