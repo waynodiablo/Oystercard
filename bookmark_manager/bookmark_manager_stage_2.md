@@ -1,6 +1,6 @@
 #Adding user accounts
 
-Before we set up user accounts, have a read through this [post](https://crackstation.net/hashing-security.htm). Make sure you are sitting comfortably, it's a long post :-)
+Before we set up user accounts, have a read through this [post](https://crackstation.net/hashing-security.html). Make sure you are sitting comfortably :-)
 
 Now we have an idea of security, let's implement basic user account functionality. We want users to be able to register on the website, so that every link and tag could be attributed to a specific user.
 
@@ -17,7 +17,7 @@ We want to have a separate database table for all our users. For this we'll need
 
 ## Signing up
 
-Let's begin with a test, as usual. The integration test should go to ```spec/features/user_management_spec.rb```.
+Let's begin with a test, as usual. The feature test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
 feature 'User signs up' do
 
@@ -42,7 +42,7 @@ feature 'User signs up' do
               password: 'oranges!')
     visit '/users/new'
     expect(page.status_code).to eq(200)
-    fill_in :email, with: email
+    fill_in :email,    with: email
     fill_in :password, with: password
     click_button 'Sign up'
   end
@@ -50,11 +50,11 @@ feature 'User signs up' do
 end
 ```
 
-Running the test tells us that we haven't got the User class. Let's create a basic model in ```app/models/user.rb```.
+Running the test tells us that we haven't got the User class.
+* :exclamation: Let's create a basic model in ```app/models/user.rb```.
 
 ```ruby
 class User
-
   include DataMapper::Resource
 
   property :id, Serial
@@ -63,9 +63,10 @@ class User
 end
 ```
 
-* The test still fails with 'uninitialized constant User' - what have we forgotten to do?
+* :exclamation: The test still fails with 'uninitialized constant User' - what have we forgotten to do?
 
-The next error in our test suite is a status 404 - not found. That's easy to fix by updating `app.rb`:
+The next error in our test suite is a Status 404 - not found.
+* :exclamation: That's easy to fix by updating `app.rb`:
 
 ```ruby
 get '/users/new' do
@@ -74,7 +75,7 @@ end
 
 ```
 
-and ```app/views/users/new.erb```.
+* :exclamation: and ```app/views/users/new.erb```.
 
 ```html
 <h1>Please sign up</h1>
@@ -86,7 +87,8 @@ and ```app/views/users/new.erb```.
 </form>
 ```
 
-Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist yet. Let's fix this in ```app.rb```:
+Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist yet.
+* :exclamation: Let's fix this in ```app.rb```:
 
 ```ruby
 post '/users' do
@@ -96,7 +98,8 @@ post '/users' do
 end
 ```
 
-This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails. Let's extend our User class.
+This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails.
+* :exclamation: Let's extend our User class.
 
 ```ruby
 # bcrypt will generate the password hash
@@ -129,9 +132,11 @@ end
 
 Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session.
 
-First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies. This is done by changing Sinatra's configuration, so it goes into ```app.rb```.
+First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies.
+* :exclamation: This is done by changing Sinatra's configuration, so it goes into ```app.rb```.
 
 ```ruby
+# within the body of the Sinatra class
 enable :sessions
 set :session_secret, 'super secret'
 ```
@@ -147,17 +152,7 @@ post '/users' do
 end
 ```
 
-Then, let's create a helper that will give us access to the current user, if logged in (app.rb).
-
-```ruby
-helpers do
-
-  def current_user
-    @current_user ||= User.get(session[:user_id]) if session[:user_id]
-  end
-
-end
-```
+* :exclamation: Now, create a helper method, `#current_user`, that returns an instance of User associated with the currently logged-in user.
 
 Finally, let's build a layout file in the views folder so that our welcome will be shown on every page.
 
@@ -178,12 +173,7 @@ Finally, let's build a layout file in the views folder so that our welcome will 
 </html>
 ```
 
-Our test finally passes.
-
-Let's clean the code up a little bit by extracting the helpers and datamapper-related code to external files and moving app.rb, views and helpers to /app. Now the codebase looks a little bit cleaner.
-
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/1b6fada4c9fdaa5e44cc62fdd31ddf5d7706d139
+Our test finally passes. Don't forget to refactor!
 
 [ [Next Stage](bookmark_manager_stage_3.md) ]
 
