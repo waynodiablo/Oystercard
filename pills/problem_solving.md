@@ -6,14 +6,14 @@ Problem Solving
 3. Hard code a test pass that connects INPUT and OUTPUT to ensure your whole stack is working
 4. Then alternate between:
 
-  i) searching google
-  ii) trying things in irb/console (any REPL)
-  iii) re-reading the question
-  iv) discussing hypothesis and counter-hypothesis with your pair partner for max 5 mins before running experiments
-  v) keep choosing things to try randomly
-  vi) keep a journal of what you have tried
-  vii) post questions on slack, slack-overflow, and stack-overflow
-  viii) have a break and go work on a different problem or just relax, and then come back to this one
+  i. searching google
+  ii. trying things in irb/console (any REPL)
+  iii. re-reading the question
+  iv. discussing hypothesis and counter-hypothesis with your pair partner for max 5 mins before running experiments
+  v. keep choosing things to try randomly
+  vi. keep a journal of what you have tried
+  vii. post questions on slack, slack-overflow, and stack-overflow
+  viii. have a break and go work on a different problem or just relax, and then come back to this one
 
 
 Resources
