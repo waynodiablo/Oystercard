@@ -1,4 +1,4 @@
-### Signing in
+# Signing in
 
 The users can sign up on our website but there's no way to sign in if you happen to be logged out (not that we have logging out functionality yet but it's coming). Let's write a test for signing in.
 
@@ -24,7 +24,7 @@ feature 'User sign in' do
 end
 ```
 
-* Complete the 'sign_in' helper method in the spec file. This should drive you to an error 'unable to find field email'.
+* :exclamation: Complete the 'sign_in' helper method in the spec file. This should drive you to an error 'unable to find field email'.
 
 The only interesting part in this test is "visit '/sessions/new'" in the 'sign_in' method. Why do we want to sign_in at "/sessions/new", and not at "/sign_in", "/users/sign_in", "/login" or something like this? Technically, it would work but it wouldn't be as elegant.
 
@@ -74,7 +74,7 @@ Please sign in.
 </form>
 ```
 
-The error we get now is superficially similar to the error that we had previously (sinatra doesn't know this ditty), however there is a difference. We will need to create a route to handle this incoming post request:
+The error we get now is superficially similar to the error that we had previously ("Sinatra doesn't know this ditty"), however there is a difference. We will need to create a route to handle this incoming post request:
 
 
 ```ruby
@@ -92,7 +92,7 @@ end
 
 and the User.authenticate method that we'll get to in a second.
 
-Note that we're using the same pattern we used before: we try to obtain the user object by authenticating using the email and password provided and then check if we got one. If we did, we sign the user in and redirect. If we didn't, we show an error and display the form again.
+**Note that we're using the same pattern we used before:** we try to obtain the user object by authenticating using the email and password provided and then check if we got one. If we did, we sign the user in and redirect. If we didn't, we show an error and display the form again.
 
 Finally, we need a class method to authenticate a user. At this stage we have a failing feature test, but the only way to reach a solution is to write a ruby method on our User class. Discuss with your partner why we are only now writing our first unit test:
 
@@ -100,7 +100,7 @@ Finally, we need a class method to authenticate a user. At this stage we have a 
 # in /spec/models/user_spec.rb
 describe User do
 
- let(:user) do
+ let!(:user) do
    User.create(email: 'test@test.com', password: 'secret1234',
                password_confirmation: 'secret1234')
  end
@@ -114,10 +114,10 @@ end
 
 ```
 
-This then drives us to write the authenticate method below:
+This then drives us to minimally implement the authenticate method below:
 
 ```ruby
-def self.authenticate(email:, password:)
+def self.authenticate(email:, password:) # clearly there is an issue here.. but let's wait until we have a test that targets it
   User.first(email: email)
 end
 
@@ -154,12 +154,9 @@ def self.authenticate(email:, password:)
 end
 ```
 
-Since we're using bcrypt to generate a one-way hash, we cannot compare the passwords directly. We genuinely have no way of recovering the actual password. It is lost forever. However, what we do have is a digest that we can use to check if the password the user is trying to log in with is correct.
+Since we're using BCrypt to generate a one-way hash, we cannot compare the passwords directly. We genuinely have no way of recovering the actual password. It is lost forever. However, what we do have is a digest that we can use to check if the password the user is trying to log in with is correct.
 
-So we pass the password that the user is trying to log in with to the == method of the Password class. That method then calculates the digest for that password and compares it to the one in the database.
-
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/3beb8ac44357ceedf643bcbc9fccd92459faa92d
+So we pass the password that the user is trying to log in with to the `==` method of the Password class. That method then calculates the digest for that password and compares it to the one in the database.
 
 ### Signing out
 
@@ -234,14 +231,11 @@ Finally, let's add support for flash[:notice] in our layout.
 The tests should now pass, so we know that the user can now be signed out.  Although it doesn't hurt to check manually that everything works.
 
 Now it's a good time to refactor our code a little bit.
-* Let's install 'sinatra-partial' gem and use it to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder.
-* After we do this, our app.rb is nice and clean, containing only require statements and high-level configuration.
-* It's also a good time to consider to deploying our code to cloud hosting service like [Heroku](../pills/heroku.md).
+* :exclamation: Let's install 'sinatra-partial' gem and use it to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder.
+  * After we do this, our app.rb is nice and clean, containing only require statements and high-level configuration.
+* :exclamation: It's also a good time to consider to deploying our code to cloud hosting service like [Heroku](../pills/heroku.md).
 
 Actually in a real project it would be good to deploy as early as possible to Heroku or similar to ensure that all the gems and techniques we are using work smoothly on a remote server.  If you do too much development locally, without checking the remote operation of the system you may lull yourself into a false sense of security about how many features you can deliver to your customers.  
-
-Current state is on Github
-https://github.com/makersacademy/bookmark_manager/tree/2e09228d334fd8009296653dfd55768520734654
 
 [ [Next Stage](bookmark_manager_stage_8.md) ]
 

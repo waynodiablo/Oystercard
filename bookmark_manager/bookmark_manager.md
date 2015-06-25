@@ -69,7 +69,7 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
   * [Data Validation](bookmark_manager_stage_5.md)
   * [Preventing duplicate registrations](bookmark_manager_stage_6.md)
   * [Signing in and out](bookmark_manager_stage_7.md)
-  * [Forgotten password](bookmark_manager_stage_8.md)
+  * [Password Recovery](bookmark_manager_stage_8.md)
 * [Styling the website](bookmark_manager_stage_style.md)
 
 ## Resources
