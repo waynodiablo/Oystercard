@@ -1,6 +1,8 @@
 Problem Solving
 ==============
 
+Here's some tips on general problem solving when you have a specific question to answer:
+
 1. Read the Question
 2. Work out the INPUT and OUTPUT, trying to avoid thinking about how to solve the problem --> tests
 3. Hard code a test pass that connects INPUT and OUTPUT to ensure your whole stack is working
