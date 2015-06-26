@@ -16,7 +16,7 @@ After homebrew has downloaded the software it will show you some installation in
 
 Make sure you run these commands after installing:
 
-```shellm
+```shell
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
@@ -31,7 +31,7 @@ Which opens up the postgres terminal - it looks something like `postgres=#`.
 
 Then type in the following:
 
-```shell
+```
 create database "your_user_name_here";
 
 CREATE DATABASE
@@ -66,7 +66,7 @@ From now on you will be able to log in to postgresql without having to specify t
 
 So we're going to defy the order of the acronym for a moment, and start with Read (cRud). The reason being, that knowing what's currently in a database is usually advantageous before creating, updating or deleting. The SQL command associated with Reading, is called `SELECT`. Let's say we have connected to a database. Let's take a look at the tables that this database consists of, using the postgres command `\dt`:
 
-```SQL
+```
 some_database=# \dt
 
 List of relations
@@ -82,11 +82,11 @@ public | users     | table | your_username
 Hmm, now it would be really useful to know what kind of data lives in `links`. Let us invoke the mighty SQL Gods with the following:
 
 ```SQL
-some_database=# SELECT * FROM links;
+SELECT * FROM links;
 ```
 Hopefully this is relatively easy to read, but basically asks the database to select _everything_ (*) from the table `links`. Let's have a look at what output is generated:
 
-```SQL
+```
 id |     title      |           url
 ----+----------------+--------------------------
  1 | Code.org       | http://code.org
@@ -101,7 +101,7 @@ So we can see here that we have three columns (also called 'fields'): `id`, `tit
 There's little point of having a database if you're not willing to put anything in it. So it's time to Create. The SQL command associated with creation is `INSERT`. This command will create new [rows](http://en.wikipedia.org/wiki/Row_%28database%29d) in a table. Let's update our `links` table with some information for [CSS-Tricks](http://css-tricks.com):
 
 ```SQL
-some_database=# INSERT INTO "links" (TITLE,URL) VALUES ( 'CSS Tricks', 'http://csstricks.com');
+INSERT INTO "links" (TITLE,URL) VALUES ( 'CSS Tricks', 'http://csstricks.com');
 ```
 
 There are several things to note here.
@@ -113,8 +113,9 @@ There are several things to note here.
 Now let's have a look at the contents of table again:
 
 ```SQL
-some_database=# SELECT * FROM "links";
-
+SELECT * FROM "links";
+```
+```
 id |     title      |           url
 ----+----------------+--------------------------
  1 | Code.org       | http://code.org
@@ -130,14 +131,17 @@ We have successfully created a new record in `links`, and the database has autom
 Sometimes we just want to make amendments to our database. The `UPDATE` command is our friend here. Let's say that we made an error by linking to csstricks.com, and wish to amend the url value to the correct address (which is _css-tricks_.com). Looking at our table with a `SELECT` query, we can see that the column we have stored our offending value at is called `url` and it has a unique `id` of '3' associated with it.
 
 ```SQL
-some_database=# UPDATE "links" SET URL = 'http://css-tricks.com' WHERE ID = 3;
+UPDATE "links" SET URL = 'http://css-tricks.com' WHERE ID = 3;
+```
+```
 UPDATE 1
 ```
 Run another `SELECT` query to see if our changes have taken effect (`UPDATE 1` is a kind of confirmation message, so we can feel fairly confident that _something_ has been updated...)
 
 ```SQL
-some_database=# SELECT * FROM "links";
-
+SELECT * FROM "links";
+```
+```
 id |     title      |           url
 ----+----------------+--------------------------
  1 | Code.org       | http://code.org
@@ -153,14 +157,17 @@ Sweet, sweet success.
 I think we'll forego elaborating on the concept of deletion and jump straight in. I'm thinking that after all our hard work it would be a shame to delete our link to css-tricks.com, so let code.org be the sacrificial lamb.
 
 ```SQL
-some_database=# DELETE FROM "links" WHERE ID = 1;
+DELETE FROM "links" WHERE ID = 1;
+```
+```
 DELETE 1
 ```
 Now let's see what kind of condition `links` is in:
 
 ```SQL
-some_database=# SELECT * FROM "links";
-
+SELECT * FROM "links";
+```
+```
 id |     title      |           url
 ----+----------------+--------------------------
  2 | Makers Academy | http://makersacademy.com
