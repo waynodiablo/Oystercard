@@ -22,4 +22,7 @@ Resources
 --------
 
 * [Tansaku on Codewars and IRB](https://www.youtube.com/watch?v=DhK5suixS-Y)
-* [Conversion Ruby Kata](http://www.codewars.com/kata/miles-per-gallon-to-kilometers-per-liter/train/ruby)
+  * [Conversion Ruby Kata](http://www.codewars.com/kata/miles-per-gallon-to-kilometers-per-liter/train/ruby)
+* [Codewars Jam](http://youtu.be/ss8V3GN28Hs)
+  * [RepeatIt Kata](http://www.codewars.com/kata/repeatit/train/ruby) 
+  * [Parallelogram Kata](http://www.codewars.com/kata/complete-the-pattern-number-10-parallelogram/train/ruby) 
