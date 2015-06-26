@@ -1,12 +1,13 @@
 ##Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md) and [play with sql and datamapper](../pills/playing_with_postgres_and_datamapper.md).
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
 
 ##Talking to the database
+We could start by installing some low-level ruby libraries that allow us to interact directly with our database.  For example, we could execute `SELECT` statements to retrieve rows of data from our tables and then work out how to convert this data into Ruby objects that we can use in our code.  And that would be a _lot_ of work.  Fortunately, this is a problem that has been solved many times before; what we need is an Object-Relational Mapper (ORM).
 
-To talk to the database, we'll need the [DataMapper](../pills/datamapper.md) gem. It's an ORM (Object-relational mapper), which means that it's providing a convenient way to interact with our data using classes and objects instead of working with database tables directly.
+For this project, we'll be using an ORM called [DataMapper](../pills/datamapper.md).
 
-Another advantage of datamapper is that is can be used with a variety of database engines, not only postgres. This implies that we'll need to install an adapter to work with postgres, apart from the datamapper itself. Add these gems to your Gemfile:
+DataMapper can be used with a variety of database engines, including postgres.  For each database, there is an **adapter**. We'll need to install the adapter to work with postgres. Add these gems to your Gemfile:
 
 ```ruby
 gem 'data_mapper'
@@ -15,7 +16,7 @@ gem 'dm-postgres-adapter'
 
 Don't forget to run "bundle" every time you update your Gemfile.
 
-Then let's create our first model. Usually we would test drive its creation, but let's have a look at what a database mapped model looks like first.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in lib/link.rb.
+Then let's create our first model. Usually we would test-drive its creation, but let's have a look at what a database-mapped model looks like first.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in lib/link.rb.
 
 ```ruby
 # This class corresponds to a table in the database
@@ -35,7 +36,7 @@ end
 
 This file describes the relationship between the table in the database (they don't exist yet) and this Ruby class. We'll see how it can be used in a minute.
 
-Then, add this code to ```server.rb``` in the lib directory.
+Then, add this code to `server.rb` in the lib directory.
 
 ```ruby
 require 'data_mapper'
