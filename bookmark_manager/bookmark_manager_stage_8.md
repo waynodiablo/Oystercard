@@ -1,4 +1,4 @@
-# Forgotten password
+# Password Recovery
 
 If a user forgets the password, we cannot just send it by email for two reasons. Firstly, we don't know the password: we only have the digest. Secondly, that would be insecure because the password would likely be stored in the email archive. If the email archive is compromised, then the attacker would know the password.
 
