@@ -1,4 +1,4 @@
-# BDD and OOD Basics: Boris Bikes
+# OOD Basics: Boris Bikes
 
 The goal of this project is to introduce you to:
 
