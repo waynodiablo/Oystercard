@@ -1,7 +1,7 @@
 ### Refactor
 Before proceeding, let's refactor our helper methods. Lengthy argument lists such as we have in our #sign_up method are a sign of poor code quality.
-* :exclamation: Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
-* :exclamation: You may also want to checkout [factory girl](https://github.com/thoughtbot/factory_girl), a gem for setting up test data. Pill [here](/pills/factory_girl.md).
+* :white_check_mark: Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
+* :white_check_mark: You may also want to checkout [factory girl](https://github.com/thoughtbot/factory_girl), a gem for setting up test data. Pill [here](/pills/factory_girl.md).
 
 # Preventing duplicate registrations
 

@@ -2,33 +2,45 @@
 
 ## Viewing links
 
-Let's write our first feature test using Capybara. Create `spec/features` folder where our feature tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
+Let's write our first feature test using Capybara. Create `spec/features` folder where our feature tests will be. Create the first test `viewing_links_spec.rb` that visits the homepage and checks that the link we put in the database is there.
 
 ```ruby
-feature 'User browses the list of links' do
+feature 'Viewing links' do
 
-  scenario 'when visiting the links page' do
-    Link.new(url:    'http://www.makersacademy.com',
-                    title:  'Makers Academy')
+  scenario 'I can see existing links on the links page' do
+    # create an existing link first.
+    # we'll see where the create method comes from shortly
+    Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+
     visit '/links'
-    expect(page.status_code).to eq 200
-    expect(page).to have_content('Makers Academy')
-  end
 
+    # as this is our first feature test,
+    # the following expectation is a quick check that everything is working.
+    expect(page.status_code).to eq 200
+    # you might remove this later.
+
+    # why do we use within here?
+    # might we get a false positive if we just test for 'Makers Academy'?
+    within 'ul#links' do
+      expect(page).to have_content('Makers Academy')
+    end
+  end
 end
 ```
 
-When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called Link. We know that we want this to be a representation of our database. We call these representations 'models'. In order to drive this development further, we are going to make a leap and construct the Link model as we would like to use it in the domain.
+When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called `Link`.  Before we do that though, let's think about what is a `Link`?
+
+We know that links need to be saved (persisted) somewhere and that we want to use a database.  So we want our `Link` class to somehow map to a database...
 
 ###Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md) and spend some time [playing with Postgres & DataMapper](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill&nbsp;:pill:](../pills/postgres.md).
 
 ###Talking to the database
+To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill&nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
 
-To talk to the database, we'll need the DataMapper gem. Follow this :pill: [DataMapper](../pills/datamapper.md) to set up your ORM.
 
-Then let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
+Let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
 
 ```ruby
 # This class corresponds to a table in the database
@@ -46,17 +58,17 @@ class Link
 end
 ```
 
-This class prescribes the relationship between the Link table in the database  and this Ruby application. We'll see how it can be used in a minute.
+This class prescribes a relationship between a table in the database (which will be called 'links') and instances of `Link`. We'll see how it can be used in a minute.
 
 Running our tests now should kick up the following error:
 ```
 Failures:
 
- 1) User browses the list of links when visiting the links page
+ 1) Viewing links I can see existing links on the links page
     Failure/Error: visit '/links'
     ArgumentError:
       rack-test requires a rack application, but none was given
-    # ./spec/features/listing_all_links_spec.rb:4:in `block (2 levels) in <top (required)>'
+    # ./spec/features/viewing_links_spec.rb:4:in `block (2 levels) in <top (required)>'
 
 Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 1 example, 1 failure
@@ -65,15 +77,15 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
 
 * Create a file, `/app/app.rb`.
-* Lay out Sinatra, in the modular style, within `app.rb`
-* Add ``` Capybara.app = NameOfYourSinatraClass ``` to `spec_helper`. Here we're telling Capybara what it should be testing.
+* Lay out Sinatra in the modular style within `app.rb`
+* Add `Capybara.app = NameOfYourSinatraClass` to `spec_helper`. Here we're telling Capybara what it should be testing.
 * Ensure you require your server file in spec_helper.
 
 The failure message of the test should now be:
 ```
 Failures:
 
- 1) User browses the list of links when visiting the links page
+ 1) Viewing links I can see existing links on the links page
     Failure/Error: expect(page.status_code).to eq 200
 
       expected: 200
@@ -98,75 +110,54 @@ Let's set that up now.
     erb :'links/index'
   end
 ```
-```html
+```erb
 <!-- in /views/links/index.erb -->
 <h1> Links </h1>
 
-<% @links.each do |link| %>
- Title: <%= link.title %>
- URL:   <%= link.url   %>
-<% end %>
+<ul id="links">
+  <% @links.each do |link| %>
+    <li>
+      Title: <%= link.title %>
+      URL:   <%= link.url   %>
+    </li>
+  <% end %>
+</ul>
 ```
 Running our tests now, it shows that our link is not being displayed on the page.
-* :exclamation: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
+* :white_check_mark: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
 
 ## Creating Links
 
-Now's the time to add a few basic features to the website. First, we need to somehow submit new links. Let's add a new test for it, ```adding_links_spec.rb```.
+Now's the time to add a few basic features to the website. First, we need to somehow create new links. Let's add a new test for it, `creating_links_spec.rb`.
 
 ```ruby
-feature 'User adds a new link' do
+feature 'Creating links' do
 
-  scenario 'using the new link form' do
+  scenario 'I can create a new link' do
     visit '/links/new'
     fill_in 'url',   with: 'http://www.zombo.com/'
     fill_in 'title', with: 'This is Zombocom'
-    click_button 'Add link'
-    expect(Link.count).to eq(1)
-    expect(current_path).to eq '/links'
-    expect(page).to have_content('http://www.zombo.com/')
-    expect(page).to have_content('This is Zombocom')
-  end
+    click_button 'Create link'
 
+    # we expect to be redirected back to the links page
+    expect(current_path).to eq '/links'
+
+    within 'ul#links' do
+      expect(page).to have_content('This is Zombocom')
+    end
+  end
 end
 ```
+Run your tests.  What steps do we need to take to fix the failures?
 
-Take the following steps::
-* :exclamation: Define ``` get '/links/new' ``` route in app.rb.
-```html
-<form action='/links' method='post'>
-   Url: <input type='text' name='url'>
-   Title: <input type='text' name='title'>
-   <input type='submit' value='Add link'>
-</form>
-```
-* :exclamation: Create an associated view containing a form that POSTs to `/links`. What input fields should be defined?
+Take the following steps:
+* :white_check_mark: Define `get '/links/new'` route in app.rb.
+* :white_check_mark: Create an associated view containing a form that POSTs to `/links`.  What input fields should be defined?
 
-Run your tests. You should be seeing:
-```ruby
-1) User adds a link using the new links form
-    Failure/Error: expect(Link.count).to eq(1)
-
-      expected: 1
-           got: 3
-```
-Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that each run of the test creates a link. The flaw is in our testing strategy: we want every test to run from a clean slate. At present, however, data is persisting across test-runs.
-
-* :exclamation: Go ahead and configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
-
-Configuring DatabaseCleaner should move us on to the next error:
-
-```ruby
-1) User adds a link using the new links form
-   Failure/Error: expect(Link.count).to eq(1)
-
-     expected: 1
-          got: 0
-```
 
 Though we have a form for creating links, nothing is being done with the information the user has submitted. Examine the form you just created. Can you guess what path the form data is submitted to?
 
-* :exclamation: Within app.rb, define a route for the form data to be submitted to, like so:
+* :white_check_mark: Within app.rb, define a route for the form data to be submitted to, like so:
 
 ```ruby
 post '/links' do
@@ -175,11 +166,36 @@ post '/links' do
 end
 ```
 
+### Starting with a clean slate
+When we run our feature tests, we want each test to run from a clean start right?  Think about how this has been handled in previous projects.
+
+Now we are persisting data outside of our application, are we making a clean start each time?  To answer that question, let's write a test.  You perhaps wouldn't normally write a test like this, but it's a good way to establish what's going on.  Put the following in your `creating_links_spec` - you can always delete it later:
+
+```
+scenario 'there are no links in the database at the start of the test' do
+  expect(Link.count).to eq 0
+end
+```
+
+Run your tests. You should be seeing:
+```
+1) Creating links there are no links in the database at the start of the test
+    Failure/Error: expect(Link.count).to eq(0)
+
+      expected: 0
+           got: 3
+```
+
+Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that each run of the test creates a link. The flaw is in our testing strategy: we want every test to run from a clean slate.  At present, however, data is persisting across test-runs.
+
+* :white_check_mark: Configure a gem called [DatabaseCleaner&nbsp;:pill:](../pills/database_cleaner.md).
+
+
 All is well. =)
 
 ## Extra Activities:
-* :exclamation: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
-* :exclamation: We have a green feature test - now is a good time to deploy to Heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
+* :white_check_mark: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
+* :white_check_mark: We have a green feature test - now is a good time to deploy to Heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
 
 
 

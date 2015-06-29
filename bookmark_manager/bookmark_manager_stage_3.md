@@ -20,7 +20,7 @@ end
 
 The test passes a different value for ```password``` and ```password_confirmation``` and then expects the user registration to be rejected because of the differing password values.
 
-* :exclamation: You'll need to update the new user form.  Can you work out what you should add based on the error message you get from running the above test?
+* :white_check_mark: You'll need to update the new user form.  Can you work out what you should add based on the error message you get from running the above test?
 
 Assuming you change the form correctly you now get the following error:
 

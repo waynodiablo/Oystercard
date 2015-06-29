@@ -51,7 +51,7 @@ end
 ```
 
 Running the test tells us that we haven't got the User class.
-* :exclamation: Let's create a basic model in ```app/models/user.rb```.
+* :white_check_mark: Let's create a basic model in ```app/models/user.rb```.
 
 ```ruby
 class User
@@ -63,10 +63,10 @@ class User
 end
 ```
 
-* :exclamation: The test still fails with 'uninitialized constant User' - what have we forgotten to do?
+* :white_check_mark: The test still fails with 'uninitialized constant User' - what have we forgotten to do?
 
 The next error in our test suite is a Status 404 - not found.
-* :exclamation: That's easy to fix by updating `app.rb`:
+* :white_check_mark: That's easy to fix by updating `app.rb`:
 
 ```ruby
 get '/users/new' do
@@ -75,7 +75,7 @@ end
 
 ```
 
-* :exclamation: and ```app/views/users/new.erb```.
+* :white_check_mark: and ```app/views/users/new.erb```.
 
 ```html
 <h1>Please sign up</h1>
@@ -88,7 +88,7 @@ end
 ```
 
 Now the test will be able to fill out the form but the form submits to the route POST /users that doesn't exist yet.
-* :exclamation: Let's fix this in ```app.rb```:
+* :white_check_mark: Let's fix this in ```app.rb```:
 
 ```ruby
 post '/users' do
@@ -99,7 +99,7 @@ end
 ```
 
 This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails.
-* :exclamation: Let's extend our User class.
+* :white_check_mark: Let's extend our User class.
 
 ```ruby
 # bcrypt will generate the password hash
@@ -133,7 +133,7 @@ end
 Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session.
 
 First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies.
-* :exclamation: This is done by changing Sinatra's configuration, so it goes into ```app.rb```.
+* :white_check_mark: This is done by changing Sinatra's configuration, so it goes into ```app.rb```.
 
 ```ruby
 # within the body of the Sinatra class
@@ -152,7 +152,7 @@ post '/users' do
 end
 ```
 
-* :exclamation: Now, create a helper method, `#current_user`, that returns an instance of User associated with the currently logged-in user.
+* :white_check_mark: Now, create a helper method, `#current_user`, that returns an instance of User associated with the currently logged-in user.
 
 Finally, let's build a layout file in the views folder so that our welcome will be shown on every page.
 

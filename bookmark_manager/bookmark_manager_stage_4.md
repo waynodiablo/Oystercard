@@ -87,7 +87,7 @@ A new instance of the user will simply return nil for `@user.email`.
 
 Finally, let's display a flash message at the top of the page which notifies the user of the error.
 
-* :exclamation: Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to ```app.rb```:
+* :white_check_mark: Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to ```app.rb```:
 
 ```ruby
   if @user.save
