@@ -1,10 +1,8 @@
-# Viewing / Creating Links
+# Viewing and creating links
 
 ## Viewing links
 
-Let's write our first integration test using Capybara. First, add capybara to your Gemfile and install it.
-
-Then, create ```spec/features``` folder where our integration(Capybara) tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
+Let's write our first feature test using Capybara. Create `spec/features` folder where our feature tests will be. Create the first test ```listing_all_links_spec.rb``` that visits the homepage and checks that the link we put in the database is there.
 
 ```ruby
 feature 'User browses the list of links' do
