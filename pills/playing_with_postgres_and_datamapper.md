@@ -57,9 +57,9 @@ Let's add some data:
 The same select command from above will prove that the new data has been added to the students table.
 
 Try the following exercises:
-  * :exclamation: Add two more entries to the students table.
-  * :exclamation: Delete them.
-  * :exclamation: Update the names of one of them.
+  * :white_check_mark: Add two more entries to the students table.
+  * :white_check_mark: Delete them.
+  * :white_check_mark: Update the names of one of them.
 
 There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our DataBase from a distance via a Ruby interface.
 
@@ -102,6 +102,6 @@ So we've achieved exactly what we did before but in a single line of nice famili
 
 Mess around with what you can do with DataMapper models. Here are some things to try:
 
-  * :exclamation: Delete a row of a table, via DataMapper.
-  * :exclamation: We set properties with two different datatypes: String, and Serial. What others are there?
-  * :exclamation: What happens within SQL when we start creating associations within DataMapper?
+  * :white_check_mark: Delete a row of a table, via DataMapper.
+  * :white_check_mark: We set properties with two different datatypes: String, and Serial. What others are there?
+  * :white_check_mark: What happens within SQL when we start creating associations within DataMapper?

@@ -8,7 +8,7 @@ By now we have a web application that allows us to add new links to the database
 
 Let's implement a new feature: allowing links to have a single tag associated with them.
 
-* :exclamation: As usual, let's start with a test:
+* :white_check_mark: As usual, let's start with a test:
 
 ```ruby
 # /spec/features/adding_tags_spec.rb
@@ -29,7 +29,7 @@ end
 ```
 You should get a Capybara error: cannot find field "tags".
 
-* :exclamation: Amend the new link form to accept an input with the name 'tags'.
+* :white_check_mark: Amend the new link form to accept an input with the name 'tags'.
 
 Moving on...
 
@@ -178,14 +178,14 @@ has n, :links, through: Resource
 Run your tests again and you should get a whole series of messages referencing SQL errors. Examine the errors, though don't worry about understanding them. Think about what change a 'many-to-many' relationship should make to a database.
 
 The problem is that our declaration in Tag above is proposing a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes.
-* :exclamation: Change `DataMapper.auto_upgrade!` to `DataMapper.auto_migrate!`.
+* :white_check_mark: Change `DataMapper.auto_upgrade!` to `DataMapper.auto_migrate!`.
 
 Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see extra activity below for implementing the best practice for this).
 
 
 ## Extra Activities:
 
-* :exclamation: We chose to implement the most simple form of tagging: single tags. We probably want users to be able to give links many tags, however. Get to work on this new feature! Here's a test to get you started:
+* :white_check_mark: We chose to implement the most simple form of tagging: single tags. We probably want users to be able to give links many tags, however. Get to work on this new feature! Here's a test to get you started:
 ```ruby
 scenario 'with multiple tags' do
   visit '/links/new'
@@ -198,9 +198,9 @@ scenario 'with multiple tags' do
   expect(link.tags.map(&:text)).to include('education', 'ruby')
 end
 ```
-* :exclamation: What happens if the user submits no value within the tag field? Is a tag still being created? Do you think this a problem? If it is, fix it!
+* :white_check_mark: What happens if the user submits no value within the tag field? Is a tag still being created? Do you think this a problem? If it is, fix it!
 
-* :exclamation: Setup a rake task for performing migrations.
+* :white_check_mark: Setup a rake task for performing migrations.
 
 [ [Next Stage](bookmark_manager_stage_2.md) ]
 

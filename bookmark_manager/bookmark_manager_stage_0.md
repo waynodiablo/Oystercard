@@ -108,7 +108,7 @@ Let's set that up now.
 <% end %>
 ```
 Running our tests now, it shows that our link is not being displayed on the page.
-* :exclamation: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
+* :white_check_mark: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
 
 ## Creating Links
 
@@ -132,7 +132,7 @@ end
 ```
 
 Take the following steps::
-* :exclamation: Define ``` get '/links/new' ``` route in app.rb.
+* :white_check_mark: Define ``` get '/links/new' ``` route in app.rb.
 ```html
 <form action='/links' method='post'>
    Url: <input type='text' name='url'>
@@ -140,7 +140,7 @@ Take the following steps::
    <input type='submit' value='Add link'>
 </form>
 ```
-* :exclamation: Create an associated view containing a form that POSTs to `/links`. What input fields should be defined?
+* :white_check_mark: Create an associated view containing a form that POSTs to `/links`. What input fields should be defined?
 
 Run your tests. You should be seeing:
 ```ruby
@@ -152,7 +152,7 @@ Run your tests. You should be seeing:
 ```
 Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that each run of the test creates a link. The flaw is in our testing strategy: we want every test to run from a clean slate. At present, however, data is persisting across test-runs.
 
-* :exclamation: Go ahead and configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
+* :white_check_mark: Go ahead and configure a gem called :pill:["DatabaseCleaner"](../pills/database_cleaner.md).
 
 Configuring DatabaseCleaner should move us on to the next error:
 
@@ -166,7 +166,7 @@ Configuring DatabaseCleaner should move us on to the next error:
 
 Though we have a form for creating links, nothing is being done with the information the user has submitted. Examine the form you just created. Can you guess what path the form data is submitted to?
 
-* :exclamation: Within app.rb, define a route for the form data to be submitted to, like so:
+* :white_check_mark: Within app.rb, define a route for the form data to be submitted to, like so:
 
 ```ruby
 post '/links' do
@@ -178,8 +178,8 @@ end
 All is well. =)
 
 ## Extra Activities:
-* :exclamation: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
-* :exclamation: We have a green feature test - now is a good time to deploy to Heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
+* :white_check_mark: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
+* :white_check_mark: We have a green feature test - now is a good time to deploy to Heroku (remember, deploy early and regularly). See the [docs](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) for some direction.
 
 
 

@@ -20,8 +20,8 @@ feature 'Password reset' do
 end
 ```
 
-* :exclamation: Let your tests drive you to the point where user.password_token is expected to not be nil - you will need to add `property :password_token, Text` to your user class.
-* :exclamation: At this point we need to think about where the password recovery form is submitting to. (The context of the code below has been left for you to figure out).
+* :white_check_mark: Let your tests drive you to the point where user.password_token is expected to not be nil - you will need to add `property :password_token, Text` to your user class.
+* :white_check_mark: At this point we need to think about where the password recovery form is submitting to. (The context of the code below has been left for you to figure out).
 
 ```ruby
 user = User.first(email: email) # find the record of the user that's recovering the password.
@@ -29,11 +29,11 @@ user.password_token = "DMFYOMLYCESXAFPYFRATHPTKLULDPOVIHUIOZIIPSRLCQV" # Here we
 user.save
 ```
 
-* :exclamation: Write a method for generating password recovery tokens similar to the above.
+* :white_check_mark: Write a method for generating password recovery tokens similar to the above.
 
 For now let's imagine the email is sent and the user has clicked the link sent to them in the email.
 
-* :exclamation: When the link is clicked, find the user that has this token in the database. We'll test this as follows:
+* :white_check_mark: When the link is clicked, find the user that has this token in the database. We'll test this as follows:
 
 ```ruby
 scenario 'resetting password' do
@@ -46,12 +46,12 @@ scenario 'resetting password' do
    expect(page).to have_content 'Enter a new password'
  end
 ```
-* :exclamation: Create a new form that passes the above test.
-* :exclamation: Write a test that drives you to actually amend the users password. Remember to test that your password token is valid, and reset the password token to nil once the password is changed.
+* :white_check_mark: Create a new form that passes the above test.
+* :white_check_mark: Write a test that drives you to actually amend the users password. Remember to test that your password token is valid, and reset the password token to nil once the password is changed.
 
 ### Extra Activities (optional)
-* :exclamation: Add a timestamp when you create the password_token, by setting `user.password_token_timestamp = Time.now`. To unit test this, you will need to stub the time - you could do this yourself, or have a look at timecop gem.
-* :exclamation: Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
+* :white_check_mark: Add a timestamp when you create the password_token, by setting `user.password_token_timestamp = Time.now`. To unit test this, you will need to stub the time - you could do this yourself, or have a look at timecop gem.
+* :white_check_mark: Check that the token was issued recently (a hour, maybe, or less) and if so, allow the user to set a new password (this will require a new form and a new route to handle it. The token must be a hidden field on the form and it must be checked again after submission. Finally, after the new password is set, remove the token from the database, so that it couldn't be used again.
 
 ### Sending the email
 
@@ -93,8 +93,8 @@ end
 ```
 
 To do:
-* :exclamation: Make the above test pass! Implement a SendResetEmail class. If you decide to change the public interface of SendResetEmail, you may have to adjust your feature test / app.rb.
-* :exclamation: Within your production code, you obviously want to pass in a *real* email client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [mailgun service](http://www.mailgun.com/). Check out the :pill: [mailgun pill](/pills/mailgun.md) for advice on this.
+* :white_check_mark: Make the above test pass! Implement a SendResetEmail class. If you decide to change the public interface of SendResetEmail, you may have to adjust your feature test / app.rb.
+* :white_check_mark: Within your production code, you obviously want to pass in a *real* email client, capable of sending emails. Check out the [mailgun-ruby gem](https://github.com/mailgun/mailgun-ruby), which requires sign-up to the [mailgun service](http://www.mailgun.com/). Check out the :pill: [mailgun pill](/pills/mailgun.md) for advice on this.
 * Implement a route that will catch the request from users who have requested a password reset email. Allow them to enter a new password.
 
 ## Adding more features

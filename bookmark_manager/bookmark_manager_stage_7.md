@@ -24,7 +24,7 @@ feature 'User sign in' do
 end
 ```
 
-* :exclamation: Complete the 'sign_in' helper method in the spec file. This should drive you to an error 'unable to find field email'.
+* :white_check_mark: Complete the 'sign_in' helper method in the spec file. This should drive you to an error 'unable to find field email'.
 
 The only interesting part in this test is "visit '/sessions/new'" in the 'sign_in' method. Why do we want to sign_in at "/sessions/new", and not at "/sign_in", "/users/sign_in", "/login" or something like this? Technically, it would work but it wouldn't be as elegant.
 
@@ -231,9 +231,9 @@ Finally, let's add support for flash[:notice] in our layout.
 The tests should now pass, so we know that the user can now be signed out.  Although it doesn't hurt to check manually that everything works.
 
 Now it's a good time to refactor our code a little bit.
-* :exclamation: Let's install 'sinatra-partial' gem and use it to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder.
+* :white_check_mark: Let's install 'sinatra-partial' gem and use it to extract the welcome message and flash from the layout. Let's also extract all actions from server.rb into specific controllers in the /app/controllers folder.
   * After we do this, our app.rb is nice and clean, containing only require statements and high-level configuration.
-* :exclamation: It's also a good time to consider to deploying our code to cloud hosting service like [Heroku](../pills/heroku.md).
+* :white_check_mark: It's also a good time to consider to deploying our code to cloud hosting service like [Heroku](../pills/heroku.md).
 
 Actually in a real project it would be good to deploy as early as possible to Heroku or similar to ensure that all the gems and techniques we are using work smoothly on a remote server.  If you do too much development locally, without checking the remote operation of the system you may lull yourself into a false sense of security about how many features you can deliver to your customers.  
 
