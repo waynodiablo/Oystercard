@@ -65,7 +65,7 @@ Commit the changes, push them to Github and switch Driver/Navigator Roles&nbsp;:
 
 ## Bookmark Manager Outline
 
-* [Viewing an creating links](bookmark_manager_stage_0.md)
+* [Viewing and creating links](bookmark_manager_stage_0.md)
 * [Tagging links](bookmark_manager_stage_1.md)
 * Adding user accounts
   * [Signing up](bookmark_manager_stage_2.md)

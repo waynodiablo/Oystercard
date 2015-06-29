@@ -1,11 +1,17 @@
 DataMapper
 =========
 
-:construction: UNDER CONSTRUCTION :construction:
+##Adding the database
 
-[DataMapper](http://datamapper.org/) is an ORM (Object-relational mapper), which means that it provides a convenient way to interact with our data using classes and objects instead of working with database tables directly. DataMapper serves as a bridge between Ruby and SQL.  It allows us to query a SQL database using ruby commands, and have the results from the SQL queries transformed into Ruby objects.
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
 
-We will be using postgres databases during the course, however DataMapper can be configured to use many different databases. This implies that we'll need to install an adapter to work with postgres, as well as the datamapper gem itself. Add these gems to your Gemfile:
+##Talking to the database with Ruby
+So now we have a database running on our machine, how do we talk to it from Ruby?  We could start by looking for some low-level ruby libraries that allow us to interact directly with our database.  For example, libraries that allow enable us to execute `SELECT` statements to retrieve rows of data from our tables. We could then work out how to convert this data into Ruby objects that we can use in our code.  And that would be a _lot_ of work.  Fortunately, this is a problem that has been solved many times before; what we need is an Object-Relational Mapper (ORM).
+
+We'll be using an ORM called [DataMapper](../pills/datamapper.md).  DataMapper serves as a bridge between our Ruby classes and the database.  It allows us to define mappings between our classes and tables declaratively using a DSL.  Datamapper then handles all the necessary communication with the database to create, read, update and delete our data.
+
+DataMapper can be used with a variety of database engines, including postgres.  For each database, there is an **adapter**. We'll need to install the adapter to work with postgres. Add these gems to your Gemfile:
+
 
 ```ruby
 gem 'data_mapper'
@@ -51,7 +57,7 @@ Finally, type
 `\q`
 to exit psql.
 
-Now we have everything we need to use datamapper in our code. 
+Now we have everything we need to use datamapper in our code.
 
 Resources
 --------
