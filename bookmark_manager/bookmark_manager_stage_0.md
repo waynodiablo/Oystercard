@@ -37,7 +37,7 @@ We know that links need to be saved (persisted) somewhere and that we want to us
 For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill&nbsp;:pill:](../pills/postgres.md).
 
 ###Talking to the database
-To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill &nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
+To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill&nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
 
 
 Let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
@@ -77,7 +77,7 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
 
 * Create a file, `/app/app.rb`.
-* Lay out Sinatra, in the modular style, within `app.rb`
+* Lay out Sinatra in the modular style within `app.rb`
 * Add `Capybara.app = NameOfYourSinatraClass` to `spec_helper`. Here we're telling Capybara what it should be testing.
 * Ensure you require your server file in spec_helper.
 
@@ -189,8 +189,6 @@ Run your tests. You should be seeing:
 Run them again. How does the error change? It seems that every time we run the tests, the number of links increases. This is unsurprising given that each run of the test creates a link. The flaw is in our testing strategy: we want every test to run from a clean slate.  At present, however, data is persisting across test-runs.
 
 * :white_check_mark: Configure a gem called [DatabaseCleaner&nbsp;:pill:](../pills/database_cleaner.md).
-
-Configuring DatabaseCleaner should move us on to the next error:
 
 
 All is well. =)
