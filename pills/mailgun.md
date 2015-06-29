@@ -1,3 +1,3 @@
 # Mailgun
 
-:construction This pill is under construction :construction
+:construction: This pill is under construction :construction:
