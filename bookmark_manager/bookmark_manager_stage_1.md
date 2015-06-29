@@ -1,5 +1,3 @@
-* helper 'tags' should be extracted to module and tested
-
 # Tagging links
 
 ## Adding tags to links
@@ -12,43 +10,44 @@ Let's implement a new feature: allowing links to have a single tag associated wi
 
 ```ruby
 # /spec/features/adding_tags_spec.rb
-feature 'User adds a link' do
+feature 'Adding tags' do
 
-  scenario 'with a single tag' do
+  scenario 'I can add a single tag to a new link' do
     visit '/links/new'
     fill_in 'url',   with: 'http://www.makersacademy.com/'
     fill_in 'title', with: 'Makers Academy'
-    # our tags will be space separated
-    fill_in 'tags',  with: 'education' # for now, let's input a single tag value. Later on we can go for multiple tags.
-    click_button 'Add link'
+
+    fill_in 'tags',  with: 'education' # for now, let's input a single tag value.
+    #later on we can go for multiple tags.
+
+    click_button 'Create link'
     link = Link.first
     expect(link.tags).to include('education')
   end
 
 end
 ```
-You should get a Capybara error: cannot find field "tags".
+You should get a Capybara error: `cannot find field "tags"`.
 
 * :white_check_mark: Amend the new link form to accept an input with the name 'tags'.
 
 Moving on...
 
 ```
-
-1) User adds a new link with a few tags
+1) Adding tags I can add a single tag to a new link
      Failure/Error: expect(link.tags).to include("education")
      NoMethodError:
        undefined method `tags' for #<Link:0x007fe22c3a95b0>
      # ./spec/features/adding_links_spec.rb:19:in `block (2 levels) in <top (required)>'
 ```
 
-So, the test tells us that the method "tags" is undefined. This is because our Link model doesn't have any tags associated with it. Let's add a many-to-many relationship to our Link model.
+So, the test tells us that the method "tags" is undefined.   But what do we want our `tags` method to be?  Ideally, it would be some clever method that allows us to access all the tags associated with this link automatically.  Well, with DataMapper, that's exactly what we can do by defining a relationship.  In this case, it's a **many-to-many** relationship (why?), which we can model like this in `link.rb`:
 
 ```ruby
 has n, :tags, through: Resource
 ```
 
-The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarise yourself with the flavours of database relationships: :pill:[Database Relations](../pills/database_relations)
+The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarize yourself with the types of database relationships: :pill:[Database Relations](../pills/database_relations)
 
 Let's go back and run the test. We get another error:
 
@@ -56,7 +55,7 @@ Let's go back and run the test. We get another error:
 Cannot find the child_model Tag for Link in tags (NameError)
 ```
 
-The error occurs because we haven't defined a Tag model, which the Link model now expects to exist.
+The error occurs because we haven't defined the associated `Tag` model, which the Link model now expects to exist.
 
 Before adding the Tag model, let's review the process we're going through.  
 1. We have written a test that describes the functionality we want to see.  
@@ -75,7 +74,7 @@ class Tag
   property :id, Serial
 end
 ```
-and remember to require the file within ```data_mapper_setup.rb```.
+Remember to require the file within `data_mapper_setup.rb`.
 Let's move over to the next error.
 
 Next error:
@@ -83,7 +82,7 @@ Next error:
 Failure/Error: expect(link.tags).to include('education')
        expected [] to include "education"
 ```
-Though we might think `[]` denotes an array, it is actually a [DataMapper collection](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection) (which is much like an array). We're in a similar situation to before: we're POST'ing a value from an input field, namely 'tags', but nothing is happening with that data. Let's update the relevant route:
+Though we might think `[]` denotes an array, what we see here is just the string representation of an object.  It may be an `Array` - it may be any other type of object whose string representation is `[]`.  In this case, it is actually a [DataMapper collection](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection) (which is much like an array). We're in a similar situation to before: we're POST'ing a value from an input field, namely 'tags', but nothing is happening with that data. Let's update the relevant route:
 
 ```ruby
 post '/links' do
@@ -95,13 +94,14 @@ post '/links' do
   redirect to('/links')
 end
 ```
+You might want to spend some time understanding exactly what's going on in this action.  There are some common patterns presented here.
 
-Our tests still fail. This is a good opportunity to go through a debugging process. What step have we missed?
+Our tests still fail. This is a good opportunity to go through a debugging process and also to consider whether to refactor our tests.
 
-* Debug to the point of getting the following error:
+* See if you can reach the point of getting the following error:
 
 ```
-1) User adds a link with a tag
+1) Adding tags I can add a single tag to a new link
     Failure/Error: expect(link.tags).to include('education')
       expected [#<Tag @id=2 @text="education">] to include "education"
       Diff:
@@ -110,21 +110,20 @@ Our tests still fail. This is a good opportunity to go through a debugging proce
       +[#<Tag @id=2 @text="education">]
 ```
 
-It turns out we made a mistake in our test. The array-like collection returned by `link.tags` contains Tag objects, not tag names (such as 'education'). Let's fix the test by extracting tag names.
+It turns out we made a mistake in our test. The array-like collection returned by `link.tags` contains Tag objects, not tag names (such as 'education').  We could fix the test by extracting tag names.
 
 ```ruby
-
 expect(link.tags.map(&:text)).to include 'education'
-
 ```
-Now all our tests pass! =)
+Now all our tests pass!  However, on reflection, we may be mixing up our tests a little.  We began by setting up the UI, then finished by testing the models.  It can be difficult sometimes to separate the responsibilities of tests and you may find yourself writing tests like this one to _drive the code you want to write_.  This is often an indication that we are missing a test layer.  As you become more experienced, you will learn when to introduce new testing layers.  For now, just think of this as a conversation point and discuss with you pair partner how you might have written different tests.
+
 
 ## Filtering by a tag
 
 Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag. Let's write a test for filtering links by the term "bubbles".
-Within ```listing_all_links_spec.rb```:
+Within `viewing_links_spec.rb`:
 ```ruby
-scenario 'filtered by a tag' do
+scenario 'I can filter links by tag' do
   visit '/tags/bubbles'
   expect(page).not_to have_content('Makers Academy')
   expect(page).not_to have_content('Code.org')
