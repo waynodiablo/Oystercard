@@ -40,7 +40,8 @@ For instructions on how to install your database (and learn some basic interacti
 To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill&nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
 
 
-Let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
+Let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them.
+* :white_check_mark: So, create a model in `/app/models/link.rb`.
 
 ```ruby
 # This class corresponds to a table in the database
@@ -76,10 +77,10 @@ Finished in 0.00136 seconds (files took 0.37153 seconds to load)
 
 How do you think you might approach this error? To get you started, follow these steps and see if you can change the error:
 
-* Create a file, `/app/app.rb`.
-* Lay out Sinatra in the modular style within `app.rb`
-* Add `Capybara.app = NameOfYourSinatraClass` to `spec_helper`. Here we're telling Capybara what it should be testing.
-* Ensure you require your server file in spec_helper.
+* :white_check_mark: Create a file, `/app/app.rb`.
+* :white_check_mark: Lay out Sinatra in the modular style within `app.rb`
+* :white_check_mark: Add `Capybara.app = NameOfYourSinatraClass` to `spec_helper`. Here we're telling Capybara what it should be testing.
+* :white_check_mark: Ensure you require your server file in spec_helper.
 
 The failure message of the test should now be:
 ```
@@ -100,7 +101,7 @@ Finished in 0.02297 seconds (files took 0.693 seconds to load)
 
 We are receiving a status code of 404 - which indicates that the path does not exist.
 
-Let's set that up now.
+* :white_check_mark: Let's create a `/links` path.
 
 
 ```ruby
@@ -128,7 +129,8 @@ Running our tests now, it shows that our link is not being displayed on the page
 
 ## Creating Links
 
-Now's the time to add a few basic features to the website. First, we need to somehow create new links. Let's add a new test for it, `creating_links_spec.rb`.
+Now's the time to add a few basic features to the website. First, we need to somehow create new links:
+* :white_check_mark: Let's add a new test for it, `creating_links_spec.rb`.
 
 ```ruby
 feature 'Creating links' do
