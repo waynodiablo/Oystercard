@@ -100,9 +100,11 @@ To do:
 ## Adding more features
 
 Well done for getting so far! Have a go at the following. Recall best practice with regard to git when implementing a new feature:
-1. Checkout to a new branch named after the feature.
-2. Develop on the new branch.
-3. Merge back into master once your tests are green.
+<ol>
+<li>Checkout to a new branch named after the feature.</li>
+<li>Develop on the new branch.</li>
+<li>Merge back into master once your tests are green.</li>
+</ol>
 
 ### Suggestions:
 
