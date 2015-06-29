@@ -24,7 +24,7 @@ When you run this test, you will encounter a familiar error "uninitialized const
 
 ###Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md) and spend some time [playing with Postgres & DataMapper](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
 
 ###Talking to the database
 
