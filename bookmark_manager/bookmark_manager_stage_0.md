@@ -9,10 +9,8 @@ feature 'Viewing links' do
 
   scenario 'I can see existing links on the links page' do
     # create an existing link first.
-    link = Link.new
-    link.url = 'http://www.makersacademy.com'
-    link.title = 'Makers Academy'
-    link.save
+    # we'll see where the create method comes from shortly
+    Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
     visit '/links'
 
@@ -32,14 +30,14 @@ end
 
 When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called `Link`.  Before we do that though, let's think about what is a `Link`?
 
-We know that links need to be saved (persisted) somewhere and that we want to use our database.  So we want our `Link` class to somehow map to the database...
+We know that links need to be saved (persisted) somewhere and that we want to use a database.  So we want our `Link` class to somehow map to a database...
 
 ###Adding the database
 
-For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md).
+For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill&nbsp;:pill:](../pills/postgres.md).
 
 ###Talking to the database
-To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill &nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
+To talk to the database, we'll need the DataMapper gem. Follow this [DataMapper pill &nbsp;:pill:](../pills/datamapper.md) and spend some time [playing with Postgres & DataMapper&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md).
 
 
 Let's create our first model.  Since our bookmark manager is going to manage collections of links, it'll certainly need a table to store them. So, create a model in `/app/models/link.rb`.
@@ -60,7 +58,7 @@ class Link
 end
 ```
 
-This class prescribes the relationship between the Link table in the database and this Ruby application. We'll see how it can be used in a minute.
+This class prescribes a relationship between a table in the database (which will be called 'links') and instances of `Link`. We'll see how it can be used in a minute.
 
 Running our tests now should kick up the following error:
 ```
