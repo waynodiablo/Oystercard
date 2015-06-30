@@ -72,7 +72,7 @@ class Tag
   include DataMapper::Resource
 
   property :id, Serial
-  property :name, Serial
+  property :name, String
 end
 ```
 Remember to require the file within `data_mapper_setup.rb`.
