@@ -114,7 +114,7 @@ Our tests still fail. This is a good opportunity to go through a debugging proce
 It turns out we made a mistake in our test. The array-like collection returned by `link.tags` contains Tag objects, not tag names (such as 'education').  We could fix the test by extracting tag names.
 
 ```ruby
-expect(link.tags.map(&:text)).to include 'education'
+expect(link.tags.map(&:name)).to include 'education'
 ```
 Now all our tests pass!  However, on reflection, we may be mixing up our tests a little.  We began by setting up the UI, then finished by testing the models.  It can be difficult sometimes to separate the responsibilities of tests and you may find yourself writing tests like this one to _drive the code you want to write_.  This is often an indication that we are missing a test layer.  As you become more experienced, you will learn when to introduce new testing layers.  For now, just think of this as a conversation point and discuss with you pair partner how you might have written different tests.
 
