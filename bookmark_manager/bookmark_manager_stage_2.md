@@ -153,9 +153,8 @@ end
 * :white_check_mark: Now, create a [helper method](http://www.sinatrarb.com/intro.html#Helpers), `current_user`, that returns an instance of User for the currently logged-in user.  Why do we use a helper method here?  Can you optimize this method with [lazy initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Ruby)?
 
 Finally, let's build a layout file in the views folder so that our welcome will be shown on every page.
-
+`app/views/layout.erb`:
 ```html
-/*layout.erb*/
 <!DOCTYPE html>
 <html>
   <head>
