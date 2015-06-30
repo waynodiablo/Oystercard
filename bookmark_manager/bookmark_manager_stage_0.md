@@ -166,6 +166,8 @@ post '/links' do
 end
 ```
 
+Note:  Why do we POST to `/links` and not `/links/new`?  Why do we GET `links/new`?  Discuss this with your pair partner.  Does the message structure help us to infer the intent of each message?
+
 ### Starting with a clean slate
 When we run our feature tests, we want each test to run from a clean start right?  Think about how this has been handled in previous projects.
 
