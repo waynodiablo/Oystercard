@@ -19,20 +19,18 @@ We want to have a separate database table for all our users. For this we'll need
 
 Let's begin with a test, as usual. The feature test should go to ```spec/features/user_management_spec.rb```.
 ```ruby
-feature 'User signs up' do
+feature 'User sign up' do
 
   # Strictly speaking, the tests that check the UI
   # (have_content, etc.) should be separate from the tests
-  # that check what we have in the DB. The reason is that
-  # you should test one thing at a time, whereas
-  # by mixing the two we're testing both
-  # the business logic and the views.
-  #
-  # However, let's not worry about this yet
-  # to keep the example simple.
+  # that check what we have in the DB since these are separate concerns
+  # and we should only test one concern at a time.
+
+  # However, we are currently driving everything through
+  # feature tests and we want to keep this example simple.
 
 
-  scenario 'when being a new user visiting the site' do
+  scenario 'I can sign up as a new user' do
     expect { sign_up }.to change(User, :count).by(1)
     expect(page).to have_content('Welcome, alice@example.com')
     expect(User.first.email).to eq('alice@example.com')
@@ -51,7 +49,7 @@ end
 ```
 
 Running the test tells us that we haven't got the User class.
-* :white_check_mark: Let's create a basic model in ```app/models/user.rb```.
+* :white_check_mark: Let's create a basic model in `app/models/user.rb`.
 
 ```ruby
 class User
@@ -98,7 +96,7 @@ post '/users' do
 end
 ```
 
-This code is straighforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails.
+This code is straightforward enough. However, we already have a problem. Our User model doesn't know anything about the password, so our test still fails.
 * :white_check_mark: Let's extend our User class.
 
 ```ruby
@@ -133,7 +131,7 @@ end
 Now our user is created in the database but the test would still fail because it expects to see a welcome message for the user. Let's log in the user automatically on sign up. To do this, we'll store the user id in the session.
 
 First, we need to enable the sessions and set the encryption key to make sure nobody can tamper with our cookies.
-* :white_check_mark: This is done by changing Sinatra's configuration, so it goes into ```app.rb```.
+* :white_check_mark: This is done by changing Sinatra's configuration, so it goes into `app.rb`.
 
 ```ruby
 # within the body of the Sinatra class
@@ -141,7 +139,7 @@ enable :sessions
 set :session_secret, 'super secret'
 ```
 
-Then, let's save the user id in the session after it's created within ```app.rb```:
+Then, let's save the user id in the session after it's created within `app.rb`:
 
 ```ruby
 post '/users' do
@@ -152,7 +150,7 @@ post '/users' do
 end
 ```
 
-* :white_check_mark: Now, create a helper method, `#current_user`, that returns an instance of User associated with the currently logged-in user.
+* :white_check_mark: Now, create a [helper method](http://www.sinatrarb.com/intro.html#Helpers), `current_user`, that returns an instance of User for the currently logged-in user.  Why do we use a helper method here?  Can you optimize this method with [lazy initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Ruby)?
 
 Finally, let's build a layout file in the views folder so that our welcome will be shown on every page.
 

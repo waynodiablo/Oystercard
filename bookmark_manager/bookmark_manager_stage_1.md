@@ -17,7 +17,7 @@ feature 'Adding tags' do
     fill_in 'url',   with: 'http://www.makersacademy.com/'
     fill_in 'title', with: 'Makers Academy'
 
-    fill_in 'tags',  with: 'education' # for now, let's input a single tag value.
+    fill_in 'tag',  with: 'education' # for now, let's input a single tag value.
     #later on we can go for multiple tags.
 
     click_button 'Create link'
@@ -27,9 +27,9 @@ feature 'Adding tags' do
 
 end
 ```
-You should get a Capybara error: `cannot find field "tags"`.
+You should get a Capybara error: `cannot find field "tag"`.
 
-* :white_check_mark: Amend the new link form to accept an input with the name 'tags'.
+* :white_check_mark: Amend the new link form to accept an input with the name 'tag'.
 
 Moving on...
 
@@ -72,6 +72,7 @@ class Tag
   include DataMapper::Resource
 
   property :id, Serial
+  property :name, Serial
 end
 ```
 Remember to require the file within `data_mapper_setup.rb`.
@@ -82,13 +83,13 @@ Next error:
 Failure/Error: expect(link.tags).to include('education')
        expected [] to include "education"
 ```
-Though we might think `[]` denotes an array, what we see here is just the string representation of an object.  It may be an `Array` - it may be any other type of object whose string representation is `[]`.  In this case, it is actually a [DataMapper collection](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection) (which is much like an array). We're in a similar situation to before: we're POST'ing a value from an input field, namely 'tags', but nothing is happening with that data. Let's update the relevant route:
+Though we might think `[]` denotes an array, what we see here is just the string representation of an object.  It may be an `Array` - it may be any other type of object whose string representation is `[]`.  In this case, it is actually a [DataMapper collection](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection) (which is much like an array). We're in a similar situation to before: we're POST'ing a value from an input field, namely 'tag', but nothing is happening with that data. Let's update the relevant route:
 
 ```ruby
 post '/links' do
   link = Link.new(url: params[:url],     # 1. Create a link
                 title: params[:title])
-  tag  = Tag.create(text: params[:text]) # 2. Create a tag for the link
+  tag  = Tag.create(name: params[:tag]) # 2. Create a tag for the link
   link.tags << tag                       # 3. Adding the tag to the link's DataMapper collection.
   link.save                              # 4. Saving the link.
   redirect to('/links')
@@ -132,7 +133,7 @@ scenario 'I can filter links by tag' do
 end
 ```
 
-Let's also define a before(:each) block to create some test data.
+Let's also define a `before(:each)` block to create some test data.  How will this `before` block affect our existing test?
 
 ```ruby
   before(:each) do
@@ -154,18 +155,18 @@ Let's also define a before(:each) block to create some test data.
 Sure enough, the test fails because Sinatra returns a "404 Not Found" page for the route that doesn't exist yet. Let's add the route.
 
 ```ruby
-get '/tags/:text' do
-  tag = Tag.first(text: params[:text])
+get '/tags/:name' do
+  tag = Tag.first(name: params[:name])
   @links = tag ? tag.links : []
   erb :'links/index'
 end
 ```
 
-First we find the tag that we need (note the use of a named parameter in the route). Then, if the tag exists, we get associated links. Otherwise, we just return an empty array.
+First we find the tag that we need (note the use of the parameter `:name` in the route). Then, if the tag exists, we get associated links. Otherwise, we just return an empty array.
 
 Run your tests. You might get an epic error message, but if you scroll to the top you'll find the important part:
 
-```ruby
+```
 Failure/Error: expect(page).not_to have_content('Makers Academy')
   expected not to find text "Makers Academy" in "NoMethodError at /tags/bubbles undefined method `links' for #<Tag @id=8 @text=\'bubbles\'"
 ```
@@ -176,27 +177,29 @@ has n, :links, through: Resource
 ```
 Run your tests again and you should get a whole series of messages referencing SQL errors. Examine the errors, though don't worry about understanding them. Think about what change a 'many-to-many' relationship should make to a database.
 
-The problem is that our declaration in Tag above is proposing a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes.
+The problem is that our declaration in Tag above requires a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes.
 * :white_check_mark: Change `DataMapper.auto_upgrade!` to `DataMapper.auto_migrate!`.
 
-Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see extra activity below for implementing the best practice for this).
+Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see further activities below for implementing the best practice for this).
 
 
-## Extra Activities:
+## Further Activities:
 
 * :white_check_mark: We chose to implement the most simple form of tagging: single tags. We probably want users to be able to give links many tags, however. Get to work on this new feature! Here's a test to get you started:
 ```ruby
-scenario 'with multiple tags' do
+scenario 'I can add multiple tags to a new link' do
   visit '/links/new'
   fill_in 'url',   with: 'http://www.makersacademy.com/'
   fill_in 'title', with: 'Makers Academy'
   # our tags will be space separated
   fill_in 'tags',  with: 'education ruby'
-  click_button 'Add link'
+  click_button 'Create link'
   link = Link.first
-  expect(link.tags.map(&:text)).to include('education', 'ruby')
+  expect(link.tags.map(&:name)).to include('education', 'ruby')
 end
 ```
+Note: This test is not compatible with the first.  As your design emerges, you will often need to update existing tests to fit in.
+
 * :white_check_mark: What happens if the user submits no value within the tag field? Is a tag still being created? Do you think this a problem? If it is, fix it!
 
 * :white_check_mark: Setup a rake task for performing migrations.
