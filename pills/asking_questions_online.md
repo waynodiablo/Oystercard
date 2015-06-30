@@ -19,3 +19,4 @@
 * Questions analyzed in the above talk
   * [Marcin's Question](https://github.com/marcinwal/githubTree/wiki)
   * [Guillame's Question](http://stackoverflow.com/questions/30920118/cucumber-test-which-syntax-to-choose-to-test-a-radio-button-selection/30997452#30997452)
+* [Tansaku on 'Asking Questions in Person and Escalation'](https://www.youtube.com/watch?v=i_Pg5KVKQNI)
