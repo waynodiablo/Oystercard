@@ -26,7 +26,7 @@ You can then create the database user via **either** of the following commands; 
 
 ```bash
 createuser --interactive # for interactive user setup…
-createuser «USERNAME» -drS # NB: CAPITAL S! Replace «USERNAME» with your system login name.
+createuser -drS «USERNAME»  # NB: CAPITAL S! Replace «USERNAME» with your system login name.
 ```
 
 Return to your normal login using `logout`.
