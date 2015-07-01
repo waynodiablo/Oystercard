@@ -1,6 +1,6 @@
 # Sanitizing User Inputs
 
-Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the homepage. In the controller, the user.id will be nil because datamapper won't be able to save the record if the passwords don't match.
+Right now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the links page. In the controller, the `user.id` will be `nil` because datamapper won't save the record if the validations fail.
 
 ```ruby
   post '/users' do
@@ -10,28 +10,25 @@ Right now our code has no logic for handling the situation when the user enters 
     # the user.id will be nil if the user wasn't saved
     # because of password mismatch
     session[:user_id] = user.id
-    redirect to('/')
+    redirect to('/links')
   end
 ```
 
-Let's extend the test to expect a redirection back to the sign up form if the passwords don't match.
+Let's extend the test to ensure we are not redirected if the passwords don't match.
 
 ```ruby
 scenario 'with a password that does not match' do
   expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
   expect(current_path).to eq('/users') # current_path is a helper provided by Capybara
-  expect(page).to have_content('Sorry, your passwords do not match')
+  expect(page).to have_content 'Password does not match the confirmation'
 end
 ```
 
-This test expects the client to stay at `/users`, instead of being directed to the index page as they would on successful signup.
+This test expects the client to stay at `/users`, instead of being directed to the links page as they would on successful signup.
 
-Let's suppose we have a longer sign up form. A user fills out 20 fields but makes a mistake in `password_confirmation`. There is a danger here that we lose all the *valid* information entered by the user, as it never makes it to the database (try to confirm this in IRB). Fortunately, the data is preserved, albeit temporarily, in an unsaved *instance* of User.
-
-So, instead of redirecting the user, let's show the same form but this time we'll pre-populate it with the data from our invalid User object:
+Instead of redirecting the user, we'll send a response bak to the browser showing the same form again.
 
 ```ruby
-
 post '/users' do
   # we just initialize the object
   # without saving it. It may be invalid
@@ -40,19 +37,57 @@ post '/users' do
                   password_confirmation: params[:password_confirmation])
   if user.save # #save returns true/false depending on whether the model is successfully saved to the database.
     session[:user_id] = user.id
-    redirect to('/')
+    redirect to('/links')
     # if it's not valid,
-    # we'll show the same
-    # form again
+    # we'll render the sign up form again
   else
     erb :'users/new'
   end
 end
 ```
 
-This is a fairly common pattern of handling potential errors. Instead of creating the object straight away, you initialize it, attempt to save and handle both possibilities.
+This is a fairly common pattern for handling errors in the model. Instead of creating the model straight away, you initialize it then test if it saves successfully.
 
-However, how will the data (in our case the email the user entered) make its way from the user object to the re-rendered form? Let's make the user an instance variable and update the view.
+Is the test passing?
+
+We need to tell the user why their sign-up attempt failed!  Fortunately, DataMapper models have an `errors` method, which returns a hash of all the failures.  There are lots of clever things we can do with the UI to tell the user what went wrong.  For now though, we'll do the simplest thing, which is to list all of the errors.
+
+Inserting additional useful messages into our pages is a common requirement and there is a common pattern we can use to do this.  Let's display a **flash message** at the top of the page which notifies the user of the error(s).
+
+* :white_check_mark: Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to `app.rb`:
+
+```ruby
+  if @user.save
+    session[:user_id] = @user.id
+    redirect to('/links')
+  else
+    # the following line is not good practice!
+    # we would not usually include presentation logic in the controller.
+    # there are much better ways to convey error messages to the user
+    # but they are too involved to go into at this stage.
+    notice = user.errors.values.flatten.join('<br/>')
+    flash.now[:notice] = notice
+    erb :'users/new'
+  end
+```
+
+Add the following code to `layout.erb` - ideally before the `yield` - to present the flash message on the page.
+
+```html
+<% if flash[:notice] %>
+  <div id='notice'><%= flash[:notice] %></div>
+<% end %>
+```
+
+It will be displayed on top of the page that was re-rendered (note the `/users` path).
+
+Do the tests now pass?
+
+Rackup your app and try signing up for yourself with a mismatched password confirmation.  Is there something about the UX that's really annoying?
+
+Let's suppose we have a longer sign-up form. A user fills out 20 fields but makes a mistake in `password_confirmation`. There is a danger here that we lose all the *valid* information entered by the user, as it never makes it to the database (try to confirm this in IRB). Fortunately, the data is available temporarily in the unsaved `user` variable.
+
+Can this data (in our case the email the user entered) make its way from the user object to the re-rendered form? Let's make the `user` an instance variable and update the view.
 
 ```ruby
 post '/users' do
@@ -63,6 +98,8 @@ post '/users' do
     session[:user_id] = @user.id
     redirect to('/')
   else
+    notice = @user.errors.values.flatten.join('<br/>')
+    flash.now[:notice] = notice
     erb :'users/new'
   end
 end
@@ -85,38 +122,12 @@ end
 
 A new instance of the user will simply return nil for `@user.email`.
 
-Finally, let's display a flash message at the top of the page which notifies the user of the error.
 
-* :white_check_mark: Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to ```app.rb```:
-
-```ruby
-  if @user.save
-    session[:user_id] = @user.id
-    redirect to('/links')
-  else
-    flash.now[:notice] = 'Sorry, your passwords do not match'
-    erb :'users/new'
-  end
-```
-
-Add the following code to ```layout.erb``` allow the flash message to appear on the page.
-
-```html
-<% if flash[:notice] %>
-  <div id='notice'><%= flash[:notice] %></div>
-<% end %>
-```
-
-It will be displayed on top the page that was re-rendered (note the /users path).
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380105990218_Screen%20Shot%202013-09-25%20at%2011.46.01.png "bookmark manager")
 
 
 Finally, our tests pass.
-```
-Finished in 0.40513 seconds
-6 examples, 0 failures
-```
 
 [ [Next Stage](bookmark_manager_stage_5.md) ]
 

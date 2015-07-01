@@ -8,7 +8,6 @@ scenario 'requires a matching confirmation password' do
   # level.  We are mixing integration tests with feature tests.
   # However, it's convenient for our purposes.
   expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
-  expect(page).to have_content 'your password and confirmation passwords do not match'
 end
 
 def sign_up(email: 'alice@example.com',
@@ -85,7 +84,7 @@ def password=(password)
 end
 ```
 
-This should have changed the message and the last failure is down to you to fix!
+Tests should now pass.
 
 [ [Next Stage](bookmark_manager_stage_4.md) ]
 
