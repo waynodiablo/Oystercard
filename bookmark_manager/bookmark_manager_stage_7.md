@@ -79,7 +79,7 @@ The error we get now is superficially similar to the error that we had previousl
 
 ```ruby
 post '/sessions' do
-  user = User.authenticate(email: params[:email], password[:password])
+  user = User.authenticate(email: params[:email], password: params[:password])
   if user
     session[:user_id] = user.id
     redirect to('/links')
