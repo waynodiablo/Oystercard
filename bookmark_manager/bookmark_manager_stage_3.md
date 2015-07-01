@@ -1,10 +1,14 @@
 # Password Confirmation
 
-Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within ```user_management_spec.rb```:
+Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password. Let's start by creating a test for this within `user_management_spec.rb`:
 
 ```ruby
-scenario 'with a password that does not match' do
+scenario 'requires a matching confirmation password' do
+  # again it's questionable whether we should be testing the model at this
+  # level.  We are mixing integration tests with feature tests.
+  # However, it's convenient for our purposes.
   expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
+  expect(page).to have_content 'your password and confirmation passwords do not match'
 end
 
 def sign_up(email: 'alice@example.com',
@@ -18,7 +22,7 @@ def sign_up(email: 'alice@example.com',
 end
 ```
 
-The test passes a different value for ```password``` and ```password_confirmation``` and then expects the user registration to be rejected because of the differing password values.
+The test passes a different value for `password` and `password_confirmation` and then expects the user registration to be rejected because of the differing password values.
 
 * :white_check_mark: You'll need to update the new user form.  Can you work out what you should add based on the error message you get from running the above test?
 
@@ -27,29 +31,32 @@ Assuming you change the form correctly you now get the following error:
 ```
 Failures:
 
-  1) User signs up when being a new user visiting the site
-     Failure/Error: expect { sign_up }.to change(User, :count).by(1)
-       expected #count to have changed by 1, but was changed by 0
-     # ./spec/features/user_management_spec.rb:9:in `block (2 levels) in <top (required)>'
+1) User sign up requires a matching confirmation password
+   Failure/Error: expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
+     expected #count not to have changed, but did change from 0 to 1
+   # ./spec/features/user_management_spec.rb:19:in `block (2 levels) in <top (required)>'
 ```
 
-So now our form is working, we just need to implement our functionality at a deeper level:
+So now our form is working and we need to implement the password confirmation functionality at a lower level in `user.rb`:
 
 ```ruby
 attr_reader :password
 attr_accessor :password_confirmation
 
-# this is datamapper's method of validating the model.
-# The model will not be saved unless both password
+# validates_confirmation_of is a DataMapper method
+# provided especially for validating confirmation passwords!
+# The model will not save unless both password
 # and password_confirmation are the same
 # read more about it in the documentation
 # http://datamapper.org/docs/validations.html
 validates_confirmation_of :password
 ```
 
-The reason we need the reader for :password and :password_confirmation is that datamapper should have access to both values to make sure they are the same. Note that `:password_confirmation` is deliberately named differently to `:password_digest`, ensuring that we are not overwriting the DataMapper methods.
+To enable `validates_confirmation_of` in DataMapper, you may need to include `require 'dm-validations'` in your `data_mapper_setup` file.
 
-The reason we need the writer for :password_confirmation is that we're now passing the password confirmation to the model in the controller.
+What is the relationship between `password`, `password_confirmation` and `password_digest`?  Discuss this with your pair partner.  Consider the reasons for each being defined differently with `attr_reader`, `attr_accessor` and `property` respectively.  Discuss how `validates_confirmation_of :password` might work.
+
+Try running your tests.  Is anything missing?
 
 ```ruby
 post '/users' do
@@ -61,7 +68,7 @@ post '/users' do
 end
 ```
 
-However, you may wonder what happens to :password since we wrote a custom writer for this property.
+Is this working yet?  It turns out the validation only works if a password is provided.  But we are providing a password aren't we?  We have an `attr_reader :password`, but we aren't setting `@password` at any point, so that attribute is always `nil`:
 
 ```ruby
 def password=(password)
@@ -78,7 +85,7 @@ def password=(password)
 end
 ```
 
-Now the test passes.
+This should have changed the message and the last failure is down to you to fix!
 
 [ [Next Stage](bookmark_manager_stage_4.md) ]
 

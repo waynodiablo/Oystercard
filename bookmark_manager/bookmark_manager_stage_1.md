@@ -126,10 +126,12 @@ Within `viewing_links_spec.rb`:
 ```ruby
 scenario 'I can filter links by tag' do
   visit '/tags/bubbles'
-  expect(page).not_to have_content('Makers Academy')
-  expect(page).not_to have_content('Code.org')
-  expect(page).to have_content('This is Zombocom')
-  expect(page).to have_content('Bubble Bobble')
+  within 'ul#links' do
+    expect(page).not_to have_content('Makers Academy')
+    expect(page).not_to have_content('Code.org')
+    expect(page).to have_content('This is Zombocom')
+    expect(page).to have_content('Bubble Bobble')
+  end
 end
 ```
 

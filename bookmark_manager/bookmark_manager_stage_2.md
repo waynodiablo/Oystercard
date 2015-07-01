@@ -17,7 +17,7 @@ We want to have a separate database table for all our users. For this we'll need
 
 ## Signing up
 
-Let's begin with a test, as usual. The feature test should go to ```spec/features/user_management_spec.rb```.
+Let's begin with a test, as usual. The feature test should go to `spec/features/user_management_spec.rb`.
 ```ruby
 feature 'User sign up' do
 
