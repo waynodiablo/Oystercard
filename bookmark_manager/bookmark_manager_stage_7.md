@@ -16,7 +16,7 @@ feature 'User sign in' do
    expect(page).to have_content "Welcome, #{user.email}"
  end
 
- def sign_in(email, password)
+ def sign_in(email:, password:)
    visit '/sessions/new'
    # complete this helper method
  end
