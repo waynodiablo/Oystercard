@@ -65,7 +65,7 @@ Inserting additional useful messages into our pages is a common requirement and 
     # we would not usually include presentation logic in the controller.
     # there are much better ways to convey error messages to the user
     # but they are too involved to go into at this stage.
-    notice = user.errors.values.flatten.join('<br/>')
+    notice = user.errors.full_messages.join('<br/>')
     flash.now[:notice] = notice
     erb :'users/new'
   end
@@ -98,7 +98,7 @@ post '/users' do
     session[:user_id] = @user.id
     redirect to('/')
   else
-    notice = @user.errors.values.flatten.join('<br/>')
+    notice = @user.errors.full_messages.join('<br/>')
     flash.now[:notice] = notice
     erb :'users/new'
   end
