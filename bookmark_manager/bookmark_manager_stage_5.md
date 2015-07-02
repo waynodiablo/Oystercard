@@ -2,7 +2,7 @@
 
 Right now our validations are ensuring only that the user doesn't make a typo when entering their password. However, we also shouldn't be registering a user if they do not provide an email.
 
-Write a feature test to ensure a user can't sign up without entering an email.  Ensure this test is failing correctly before proceeding.  Hint: test for the message 'Email must not be blank'.
+Write a feature test to ensure a user can't sign up without entering an email.  Ensure this test is failing correctly before proceeding.
 
 
 In general, there are three levels at which you can and should validate data in a well-designed application:
@@ -39,7 +39,9 @@ validates_presence_of :email
 
 ...becomes unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
 
-Your tests should pass and the model should validate that the email is present.  However, beware that unless you ran `auto_migrate!` instead of `auto_upgrade!`, the `NOT NULL` constraint will not have been created on the database!
+The model should validate that the email is present.  However, beware that unless you ran `auto_migrate!` instead of `auto_upgrade!`, the `NOT NULL` constraint will not have been created on the database!
+
+If you are having trouble working out how to display a different error message from the previous stage, head on over to the next stage, where all will be revealed...
 
 [ [Next Stage](bookmark_manager_stage_6.md) ]
 
