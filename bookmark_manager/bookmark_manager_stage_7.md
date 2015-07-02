@@ -79,7 +79,7 @@ The error we get now is superficially similar to the error that we had previousl
 
 ```ruby
 post '/sessions' do
-  user = User.authenticate(email: params[:email], password: params[:password])
+  user = User.authenticate(params[:email], params[:password])
   if user
     session[:user_id] = user.id
     redirect to('/links')
@@ -106,7 +106,7 @@ describe User do
  end
 
  it 'authenticates when given a valid email address and password' do
-   authenticated_user = User.authenticate(email: user.email, password: user.password)
+   authenticated_user = User.authenticate(user.email, user.password)
    expect(authenticated_user).to eq user
  end
 
@@ -117,7 +117,7 @@ end
 This then drives us to minimally implement the authenticate method below:
 
 ```ruby
-def self.authenticate(email:, password:) # clearly there is an issue here.. but let's wait until we have a test that targets it
+def self.authenticate(email, password)
   User.first(email: email)
 end
 
@@ -126,13 +126,13 @@ end
 Now let's write the test for a failing authentication:
 ```ruby
 it 'does not authenticate when given an incorrect password' do
-  expect(User.authenticate(email: user.email, password: 'wrong_stupid_password')).to be_nil
+  expect(User.authenticate(user.email, 'wrong_stupid_password')).to be_nil
 end
 ```
 So now we should actually create our logic:
 
 ```ruby
-def self.authenticate(email:, password:)
+def self.authenticate(email, password)
   # that's the user who is trying to sign in
   user = first(email: email)
   # if this user exists and the password provided matches
