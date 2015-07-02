@@ -20,13 +20,13 @@ Let's extend the test to ensure we are not redirected if the passwords don't mat
 scenario 'with a password that does not match' do
   expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
   expect(current_path).to eq('/users') # current_path is a helper provided by Capybara
-  expect(page).to have_content 'Password does not match the confirmation'
+  expect(page).to have_content 'Password and confirmation password do not match'
 end
 ```
 
 This test expects the client to stay at `/users`, instead of being directed to the links page as they would on successful signup.
 
-Instead of redirecting the user, we'll send a response bak to the browser showing the same form again.
+Instead of redirecting the user, we'll send a response back to the browser showing the same form again.
 
 ```ruby
 post '/users' do
@@ -50,9 +50,7 @@ This is a fairly common pattern for handling errors in the model. Instead of cre
 
 Is the test passing?
 
-We need to tell the user why their sign-up attempt failed!  Fortunately, DataMapper models have an `errors` method, which returns a hash of all the failures.  There are lots of clever things we can do with the UI to tell the user what went wrong.  For now though, we'll do the simplest thing, which is to list all of the errors.
-
-Inserting additional useful messages into our pages is a common requirement and there is a common pattern we can use to do this.  Let's display a **flash message** at the top of the page which notifies the user of the error(s).
+We need to tell the user why their sign-up attempt failed!  Fortunately, inserting additional useful messages into our pages is a common requirement and there is a common pattern we can use to do this.  Let's display a **flash message** at the top of the page which notifies the user of the error(s).
 
 * :white_check_mark: Add and require the gem [sinatra-flash](https://github.com/SFEley/sinatra-flash). *Important!* We are using the 'Sinatra::Base' style so you must follow the instructions on github (see link) under 'Setting Up' to configure sinatra-flash. Now add the flash line to `app.rb`:
 
@@ -61,12 +59,7 @@ Inserting additional useful messages into our pages is a common requirement and 
     session[:user_id] = @user.id
     redirect to('/links')
   else
-    # the following line is not good practice!
-    # we would not usually include presentation logic in the controller.
-    # there are much better ways to convey error messages to the user
-    # but they are too involved to go into at this stage.
-    notice = user.errors.full_messages.join('<br/>')
-    flash.now[:notice] = notice
+    flash.now[:notice] = "Password and confirmation password do not match"
     erb :'users/new'
   end
 ```
@@ -98,8 +91,7 @@ post '/users' do
     session[:user_id] = @user.id
     redirect to('/')
   else
-    notice = @user.errors.full_messages.join('<br/>')
-    flash.now[:notice] = notice
+    flash.now[:notice] = "Password and confirmation password do not match"
     erb :'users/new'
   end
 end

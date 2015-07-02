@@ -3,39 +3,32 @@ Before proceeding, let's refactor our helper methods. Lengthy argument lists suc
 * :white_check_mark: Have a look at [this gist](https://gist.github.com/ptolemybarnes/2dfda607b85d01e113b0) with suggestions on how.
 * :white_check_mark: You may also want to checkout [factory girl](https://github.com/thoughtbot/factory_girl), a gem for setting up test data. Pill [here](/pills/factory_girl.md).
 
+
 # Preventing duplicate registrations
 
 Let's write a test first, as usual, checking that we can't register the same user twice.
 
 ```ruby
-scenario 'with an email that is already registered' do
+scenario 'I cannot sign up with an existing email' do
   sign_up_as(user)
   expect { sign_up_as(user) }.to change(User, :count).by(0)
-  expect(page).to have_content('This email is already taken')
+  expect(page).to have_content('Email is already taken')
 end
 ```
+We need to introduce a unique constraint on our `email` field.  Research DataMapper to find out how.
 
-We need to do two things. Firstly, we need to put constrains on the email field.
-
-```ruby
-property :email, String, unique: true, message: 'This email is already taken'
-```
-
-We're setting the error message DataMapper is going to return explicitly even though a very similar message would be used by default if we didn't specify it.
-
-Secondly, we need to refactor our controller code. Right now it looks like this.
+Now let's improve our controller code. Right now it looks like this.
 
 ```ruby
 if @user.save
-  session[:user_id] = @user.id
-  redirect to('/')
+  session[:user_id] = user.id
+  redirect to('/links')
 else
-  flash[:notice] = 'Sorry, your passwords do not match'
+  flash.now[:notice] = "Password and confirmation password do not match"
   erb :'users/new'
 end
 ```
-
-The problem is that the only error message that this controller can show is the one about passwords not being the same. However, we need to show various error messages and even several messages at the same time, if necessary. Let's take the list of messages from DataMapper.
+The problem is that the only error message that this controller can show is the one about passwords not being the same. However, we need to show various error messages and even several messages at the same time if necessary.  Fortunately, DataMapper models include an `errors` method which returns an object with methods like `full_messages` that tell us what went wrong.  `full messages` returns an array of error messages.
 
 ```ruby
 if @user.save
@@ -47,15 +40,13 @@ else
 end
 ```
 
-Note that we're switching to using flash[:errors] instead of flash[:notice]. Given that these errors prevent us from proceeding further, it's more appropriate to call them errors.
+Note that we're switching from using flash `:notice` to flash `:errors`. Given that these errors prevent us from proceeding further, it's more appropriate to call them errors.
 
-We're also using flash.now instead of just flash. By default, a flash message is available for both the current request and the next request. This is very convenient if we're doing a redirect. However, since we are just re-rendering the page, we just want to show the flash for the current request, not for the next one. If we use flash[:errors] then after the user fixes the mistakes, they'd be redirected to the homepage where they'd see our message again.
-
-The `@user.errors` object contains all validation errors. It can be used to get errors for a given field (if you want to display the error next to a specific field). The full_messages method just returns an array of all errors as strings. Let's display them in our layout file.
+The `@user.errors` object can also be used to get errors for a given field, and with some clever erb, you can display error messages next to the relevant field in the html.  However, for now, let's just display a list in the flash:
 
 ```html
 <% if flash[:errors] && !flash[:errors].empty? %>
-  Sorry, there were the following problems with the form.
+  Please refer to the following errors below:
   <ul id='errors'>
     <% flash[:errors].each do |error| %>
       <li><%= error %></li>
@@ -64,7 +55,7 @@ The `@user.errors` object contains all validation errors. It can be used to get 
 <% end %>
 ```
 
-Note that we'll also have to update our password mismatch test since the automated message generated is slightly different from our earlier custom one.
+Note that we'll have to update our password mismatch test since the generated message is slightly different from our earlier custom one.
 
 Now we get a list of errors if the user is trying to both register with the same email and mistypes the password.
 
