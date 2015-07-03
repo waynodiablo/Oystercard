@@ -75,11 +75,7 @@ Let's begin by fleshing out our domain model and getting a base project set up.
 
 [Stage 0](boris_bikes_stage_0.md)
 
-<<<<<<< HEAD
-## Stage 1: Creating a Manual Feature Test
-=======
 ## Stage 1: Implementing our first user story
->>>>>>> 614586a74da7ebdf093712e19129b5e7a2a97d26
 
 Now we have a domain model and a project setup, let's continue by thinking about what it would look like if we had a single user story working.
 
