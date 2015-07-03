@@ -45,8 +45,6 @@ Next up, let's allow our visitor to interact with our app via a `<form>` element
 
 [Go to part 7](sinatra_7.md)
 
-[Go to exercises](sinatra_exercises.md)
-
 Resources
 --------
 

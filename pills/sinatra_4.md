@@ -47,8 +47,6 @@ Next up, we'll see if we can modularize some of our code into a _view_.
 
 [Go to part 5](sinatra_5.md)
 
-[Go to exercises](sinatra_exercises.md)
-
 Resources
 --------
 

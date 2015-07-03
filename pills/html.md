@@ -17,11 +17,11 @@ When an HTML file is received by a _browser_ (such as Google Chrome, Mozilla Fir
 Above, we see two examples of HTML _tags_. One of them is `<div>` and the other is `<h1>`. Both of them have different _semantic meaning_:
 
 - `<div>` is used as an all-purpose container, to separate content. Its use implies that there is content inside it.
-- `<h1>` is the 'main header' tag. Its use implies that its (textual) contents are very important (such as being the main page header).
+- `<h1>` is the '1st-level header' tag. Its use implies that its contents constitute primary header for the page.
 
 <aside>You should use more specific containers than `<div>` when creating HTML files, such as `<article>` and `<aside>`. These better convey the meaning of the contents than the general-purpose `<div>`. If you don't do this, your pages can end up being an inexplorable sea of `<div>` tags, which will make maintaining it harder - and search engines may penalise you, too.</aside>
 
-You will note that both `<div>` and `<h1>` are repeated twice - as `</div>` and `</h1>`. This is because both of these tags are 'block' tags that require a **closing tag** to end their respective sections. Some tags, like `<img>` (the _image_ tag, used to insert images within a page) are so-called 'self-closing' tags, and do not require, say, an `</img>` closing tag. It is generally good pratice, though, to write self-closing tags with the `/` at the end anyway, like this: `<img />`.
+You will note that both `<div>` and `<h1>` are repeated twice - as `</div>` and `</h1>`. This is because both of these tags are 'block' tags that require a **closing tag** to end their respective sections. Some tags, like `<img>` (the _image_ tag, used to insert images within a page) are so-called 'self-closing' tags, and do not require, say, an `</img>` closing tag. It is generally good practice, though, to write self-closing tags with the `/` at the end anyway, like this: `<img />`.
 
 <aside>What happens if you don't close your opening block tags?</aside>
 

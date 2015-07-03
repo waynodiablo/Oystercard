@@ -53,8 +53,6 @@ Next up, let's add some [HTML](html.md) to the mix.
 
 [Go to part 4](sinatra_4.md)
 
-[Go to exercises](sinatra_exercises.md)
-
 Resources
 --------
 

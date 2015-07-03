@@ -1,44 +1,47 @@
-### Three levels of data checks
+### Data Validation: 3 Levels.
 
-Right now we don't do any validations except that the passwords should match. However, we shouldn't be registering the user in the first place if the email is already taken.
+Right now our validations are ensuring only that the user doesn't make a typo when entering their password. However, we also shouldn't be registering a user if they do not provide an email.
 
-In general, there are three levels at which you can and should check for the uniqueness in a well-designed application.
+Write a feature test to ensure a user can't sign up without entering an email.  Ensure this test is failing correctly before proceeding.
 
-Firstly, you should check it before the form is submitted by sending a request to the server to check if the form is valid. This is done using Javascript that we haven't covered yet, so let's ignore it for now. You can't rely exclusively on this check anyway because the form may be submitted directly without the page being rendered or javascript may be disabled.
 
-You can see an example of it in action on Github if you try to create a new repository with a non-unique name.
+In general, there are three levels at which you can and should validate data in a well-designed application:
+
+1 You could check it in the browser before the form is submitted (this is done using Javascript, which we haven't covered yet so let's postpone that for now). However, you can't rely exclusively on this validation because a post request can be submitted directly without a page ever being rendered; or javascript may be disabled.
 
 ![alt text](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380107708596_Screen%20Shot%202013-09-25%20at%2012.13.52.png "bookmark manager")
 
-Secondly, you should check for the uniqueness of records on the model level by using validations. This will allow you to display meaningful error messages. So, on the model level we want to have a uniqueness validation:
+2 You should validate it on the server using model validations. This will help you to display meaningful error messages.   Also, it ensures data integrity issues can't be introduced at the model level.  So, for our required email validation:
 
 ```ruby
-validates_uniqueness_of :email
+validates_presence_of :email
 ```
 
-This datamapper validation will check if a record with this email exists before trying to create a new one.
+This DataMapper validation will prevent the model from saving if the email is blank.
 
-Finally, you should introduce database-level constraints. This is a safety check that protects the database in case any data is written directly, bypassing the model. For example, if you need to batch-add 10,000 new users from a text file, you may not want to initialise your User model for every record for performance reasons. Instead, you'll write to the database directly bypassing datamapper. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level contraints.
+3 You must introduce database-level constraints. This ensure data integrity in the database in case data is written directly, bypassing the model. For example, if you need to batch import 10,000 new users from a text file, you may not want to initialize your User model for every record for performance reasons. Instead, you'll write to the database directly. To account for any cases when you may want to write to the database bypassing your models, you need to have database-level constraints.
 
 ```ruby
-property :email, String, unique: true
+# /app/models/user.rb
+property :email, String, required: true
 ```
 
-This will generate SQL that will create a unique index on that field.
-
+This will generate a `NOT NULL` constraint on the `users` table.
+```sql
+CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" VARCHAR(50) NOT NULL, "password_digest" VARCHAR(60), PRIMARY KEY("id"))
 ```
-CREATE TABLE "users" ("id" SERIAL NOT NULL, "email" VARCHAR(50), "password_digest" TEXT, PRIMARY KEY("id"))
-CREATE UNIQUE INDEX "unique_users_email" ON "users" ("email")
-```
-This unique index on users.email will make sure that no records with duplicate emails will ever be saved to the database.
 
-In datamapper's case, creating a unique index automatically implies the necessity of the validation, so this code
+Interestingly, in DataMapper's case, creating a `required` property implies the necessity of the validation, so this code...
 
 ```ruby
-validates_uniqueness_of :email
+validates_presence_of :email
 ```
 
-would be unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
+...becomes unnecessary. When using other ORMs, double check if creating a unique index implies a model-level validation.
+
+The model should validate that the email is present.  However, beware that unless you ran `auto_migrate!` instead of `auto_upgrade!`, the `NOT NULL` constraint will not have been created on the database!
+
+If you are having trouble working out how to display a different error message from the previous stage, head on over to the next stage, where all will be revealed...
 
 [ [Next Stage](bookmark_manager_stage_6.md) ]
 
