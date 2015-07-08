@@ -194,8 +194,30 @@ Run them again. How does the error change? It seems that every time we run the t
 
 * :white_check_mark: Configure a gem called [DatabaseCleaner&nbsp;:pill:](../pills/database_cleaner.md).
 
-
 All is well. =)
+
+## Directory structure
+
+Your directory should look like this:
+```bash
+.
+├── Gemfile
+├── Gemfile.lock
+├── app
+│   ├── app.rb
+│   ├── data_mapper_setup.rb
+│   ├── models
+│   │   └── link.rb
+│   └── views
+│       └── index.erb
+└── spec
+    ├── features
+    │   └── viewing_links_spec.rb
+    └── spec_helper.rb
+
+5 directories, 8 files
+```
+Be aware, however, that this is only a suggested structure. You might want to have the features folder outside of the spec folder, so that it's easier to run feature tests in isolation from unit tests. Discuss the pros and cons of different directory structures with your pair partner.
 
 ## Extra Activities:
 * :white_check_mark: At this point, you may have already tried `rackup`. If you haven't, give it a shot. What happens? What step have we missed?
