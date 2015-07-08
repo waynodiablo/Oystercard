@@ -88,7 +88,7 @@ Now let's create a Student "model" (within IRB) for interfacing with our student
       property :name,   String
     end
 
-So we've created a class that has extra abilities endowed by DataMapper: namely, the ability to persist data to the database. We now need to have DataMapper tell the database what the structure of the "students" table in the database should look like:
+So we've created a class that has extra abilities endowed by DataMapper: namely, the ability to persist data to the database. We now need to have DataMapper [http://www.rubydoc.info/github/datamapper/dm-core/DataMapper/Model#finalize-instance_method](check the validity) of the models as we've declared them.
 
       $ DataMapper.finalize
 
