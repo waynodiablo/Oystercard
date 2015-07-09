@@ -13,10 +13,17 @@ It is entirely up to you how you approach Lab Week. That said, we strongly recom
 ### What support can I expect during Lab Week?
 During lab week coaches are generally not available as they are conducting their own retrospective and planning activities related to developing the course and related materials.  To help with planning and retrospectives coaches will usually be available for Monday 9am and Friday 9am stand-ups, as well as spending significant time with students on the Friday before lab week helping the students plan lab week activities.
 
-###Suggested Format:
-1 ) Everyone creates a “lab week” repo. Create a README describing your objectives for the week, what you want to cover. Expectation: This is the repo we’ll review at the end of the week to get a sense of your progress.
-2 ) Within each group on Monday morning, discuss how you can plan the week to try to achieve what you want.
-3 ) Different person leads the standup each time (go in alphabetical order?).
+###Suggested Structure:
+#### Monday --> Tuesday
+Prior to Lab Week, coaches will have you choose from 1 of 3 options:
+- **Review**: pick up a project or challenge from the first 5 weeks of the course and redo it.
+- **Refresh**: pick a project of challenge from the first 5 weeks and reimagine it in a new context. For example, *Battleships Web* could become *TicTacToe* Web. The idea here it to cover similar concepts in a new domain.
+- **Greenfield Project**: Work on an entirely new concept. This will require you to go through a design process, think about what your MVP is, and so on.
+
+Coaches will prescribe groups of 4 based on the above, and attend student-led standups at 9:30 and 2:15. Otherwise, use alumni helpers and slack-overflow to get your issues resolved.
+
+#### Wednesday --> Thursday
+:construction: *Junior Makerthon* :construction:
 
 ###Tips:
 Review the [escalation process](https://github.com/makersacademy/course/blob/master/pills/escalation_process.md) and use [slack-overflow](https://github.com/makersacademy/slack-overflow) to get issues resolved.
