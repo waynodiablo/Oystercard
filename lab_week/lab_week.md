@@ -20,7 +20,7 @@ Prior to Lab Week, coaches will have you choose from 1 of 3 options:
 - **Refresh**: pick a project of challenge from the first 5 weeks and reimagine it in a new context. For example, *Battleships Web* could become *TicTacToe* Web. The idea here it to cover similar concepts in a new domain.
 - **Greenfield Project**: Work on an entirely new concept. This will require you to go through a design process, think about what your MVP is, and so on.
 
-Coaches will prescribe groups of 4 based on the above, and attend student-led standups at 9:30 and 2:15. Otherwise, use alumni helpers and slack-overflow to get your issues resolved.
+Coaches will prescribe groups of 4 based on the above, and attend student-led standups at 9:30 and 2:15. The groups of 4 are composed of 2 pairs. Please swap pairs between Monday and Tuesday.
 
 #### Wednesday --> Thursday
 :construction: *Junior Makerthon* :construction:
