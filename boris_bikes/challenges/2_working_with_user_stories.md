@@ -12,7 +12,7 @@ In this challenge, you will transform a User Story into a Domain Model.
 Here is a user story:
 
 ```
-As a user, 
+As a user,
 So I can find customers,
 I want to search for my customers by their surnames.
 ```
@@ -21,7 +21,7 @@ And here is a functional representation of that story:
 
 Objects  | Messages
 ------------- | -------------
-User  | 
+User  |
 Customer  | find_by_surname
 
 You must translate these two user stories into a functional representation:
@@ -47,3 +47,5 @@ To complete this challenge, you will need to:
 - [ ] Draw a diagram that shows how your Objects will use Messages to communicate with one another
 
 ### Resources
+
+- :pill: [user stories](https://github.com/makersacademy/course/blob/master/pills/user_stories.md)
