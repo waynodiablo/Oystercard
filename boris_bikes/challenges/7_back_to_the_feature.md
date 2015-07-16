@@ -2,6 +2,8 @@
 
 Now we have passed a unit test, we go back to our feature tests. You have now implemented a `DockingStation` class, so you should be able to get further than last time.
 
+In this challenge, you will get further in your feature test, and dissect an error.
+
 ### Challenge setup
 
 Here are the User Stories you converted into a Domain Model:
