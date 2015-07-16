@@ -50,3 +50,5 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner what the resulting error means.
 
 ### Resources
+
+### [Solution](solutions/7.md)
