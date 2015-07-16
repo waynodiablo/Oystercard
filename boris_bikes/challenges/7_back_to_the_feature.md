@@ -1,0 +1,50 @@
+# Back to the feature
+
+Now we have passed a unit test, we go back to our feature tests. You have now implemented a `DockingStation` class, so you should be able to get further than last time.
+
+### Challenge setup
+
+Here are the User Stories you converted into a Domain Model:
+
+```
+As a person,
+So that I can use a bike,
+I'd like to get a bike from a docking station.
+
+As a person,
+So that I can use a good bike,
+I'd like to see if a bike works
+```
+
+Here is a functional representation of those stories:
+
+Objects  | Messages
+------------- | -------------
+Person  | 
+Bike  | works?
+DockingStation | get_bike
+
+Here is the `DockingStation` class you should have written:
+
+```ruby
+# in lib/docking_station.rb
+class DockingStation
+
+end
+```
+
+### Learning Objectives covered
+- Pass a unit test
+- Use `require`
+
+### Self-assessment
+
+To complete this challenge, you will need to:
+
+- [ ] Start `irb` (or any other REPL) from the Command Line
+- [ ] Set a variable `docking_station` equal to a new `DockingStation` object
+- [ ] Explain to your pair partner why you do not see an error now, when you did before
+- [ ] Ask the `docking_station` instance to `get_bike`
+- [ ] Explain to your pair partner what the resulting error means.
+
+### Resources
