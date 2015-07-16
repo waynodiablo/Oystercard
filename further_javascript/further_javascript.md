@@ -14,7 +14,7 @@ Here are this week's [learning objectives](https://github.com/makersacademy/cour
 
 This week's project is to create a simple Github Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
 
-The project will involve using JavaScript to consume data available from third parties over the network (e.g. Github API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS. 
+The project will involve using JavaScript to consume data available from third parties over the network (e.g. Github API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS.
 
 The project will need to be deployed to Heroku, and the choice of back-end server is up to you: Node for the brave, Ruby for the stable.
 
@@ -24,19 +24,21 @@ Here's a wireframe of one possible design:
 
 **Experimentation is encouraged - the guides below are a suggestion, not an absolute. How you achieve the final goal is up to you.**
 
-###Knowledge
+###Preamble
 
 Make sure you have worked through these pills before starting:
 
-* :pill: [The JavaScript ecosystem](https://github.com/makersacademy/course/blob/master/pills/javascript_ecosystem.md)
 * :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md)
 * :pill: [bower](https://github.com/makersacademy/course/blob/master/pills/bower.md)
 * :pill: [grunt](https://github.com/makersacademy/course/blob/master/pills/grunt.md)
 * :pill: [angularjs](https://github.com/makersacademy/course/blob/master/pills/angularjs.md)
 
+For an in-depth look at the JavaScript ecosystem:
+* :pill: [The JavaScript ecosystem](https://github.com/makersacademy/course/blob/master/pills/javascript_ecosystem.md)
+
 ##Version 0 - jQuery prototype & warmup
 
-Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals: 
+Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals:
 
 * [jQuery prototype](https://github.com/makersacademy/course/blob/master/further_javascript/jQuery.md)
 
@@ -54,7 +56,7 @@ Try to get your version looking more like the mockup. Get some styling in there!
 
 ##Version 3 - Deploying to Heroku
 
-Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - Sinatra, for example. 
+Now we have a working, usable application, lets deploy to Heroku so that it can actually be used. In order to do this, you will need to build a simple server - Sinatra, for example.
 
 If you are deploying with Sinatra, you may want to read this:
 
