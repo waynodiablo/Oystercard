@@ -11,16 +11,27 @@ It also involves helping the pair have a constructive dialogue about the problem
 
 ```
 Pair A: Why are we getting this error message?
+
 Scaffolder: Good question, Pair B, why do you think we are getting this error message?
+
 Pair B: I don't know I'm totally stuck
+
 Scaffolder: Let's read the error message carefully and guess
+
 Pair B: Well it says there's a cross browser security error, but I don't know what that is?
+
 Scaffolder: Pair A, can you guess what the error means?
+
 Pair A: I guess it's that we can't talk to the server?
+
 Scaffolder: Pair B, what do you think of that idea?
+
 Pair B: I suppose so ...
+
 Scaffolder: And how might we find more information about what the error message means?
+
 Pair B: we could google the error ... [Pair B starts to google]
+
 Scaffolder: very good, but let's take the core part of the error; the part that doesn't mention any of our code fragments, enclose that in quotes ...
 ```
 
