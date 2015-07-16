@@ -36,3 +36,5 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner the difference between what you see, and the error you saw before.
 
 ### Resources
+
+### [Solution](solutions/6.md)

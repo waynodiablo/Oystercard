@@ -23,3 +23,5 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner the difference between this error and the error you saw before.
 
 ### Resources
+
+### [Solution](solutions/5.md)

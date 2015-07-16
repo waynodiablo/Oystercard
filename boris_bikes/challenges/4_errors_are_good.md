@@ -27,3 +27,5 @@ To complete this challenge, you will need to:
 - [ ] Suggest one way of solving the error.
 
 ### Resources
+
+### [Solution](solutions/4.md)
