@@ -34,11 +34,11 @@ form.erb
 ```
 
 In form.erb you can see the first `<form>` tag contains 3 attributes: 
-* name - This is the name of the form
-* action - this is the path to which the form will be sent
-* method - this is the type of HTTP request via which the form will be sent
+* `name` - This is the name of the form
+* `action` - this is the path to which the form will be sent
+* `method` - this is the type of HTTP request via which the form will be sent
 
-When the user fills in their username and password, a POST request is sent to the /form path with a params hash. The server identifies this request and defines an instance variable @name that is available to the erb. It then prints the params to the console and serves a new template params.erb to the user.
+When the user fills in their username and password, a POST request is sent to the `/form` path with a params hash. The server identifies this request and defines an instance variable `@name` that is available to the erb. It then prints the params to the console and serves a new template `params.erb` to the user.
 
 ### Query String Params
 
@@ -79,7 +79,7 @@ Path params are great because they allow you to have descriptive paths that can 
 
 ### Splat Parameters
 
-Splat params are similar to Path params, but they use the wildcard '*' as a placeholder for anything.
+Splat params are similar to Path params, but they use the wildcard `*` as a placeholder for anything.
 
 Consider this URI:
 
