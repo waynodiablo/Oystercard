@@ -26,3 +26,5 @@ To complete this challenge, you will need to:
 ### Resources
 
 - [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax)
+
+### [Solution](solutions/8.md)
