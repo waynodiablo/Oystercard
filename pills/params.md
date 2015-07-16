@@ -33,7 +33,7 @@ form.erb
   </form>
 ```
 
-In form.erb you can see the first <form> tag contains 3 attributes: 
+In form.erb you can see the first `<form>` tag contains 3 attributes: 
 * name - This is the name of the form
 * action - this is the path to which the form will be sent
 * method - this is the type of HTTP request via which the form will be sent
