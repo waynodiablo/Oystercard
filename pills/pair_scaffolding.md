@@ -11,9 +11,14 @@ Here are some screen recordings of pair scaffolding sessions in action.  The one
 
 https://www.youtube.com/playlist?list=PLjbL0BCR04Q1bJi1T-BXuKGH7q9NbAtfK
 
-Pair scaffolding on Rails:
+Pair Scaffolding on Rails:
 -----------------
 
 * https://www.youtube.com/watch?v=LRaWE0k3hZw
 * https://www.youtube.com/watch?v=qTaBrFzgLVc
 * https://www.youtube.com/watch?v=hfm3GcbJACc
+
+Coach Pair Scaffolding Workshop in Haskell
+-----------------
+
+* https://www.youtube.com/watch?v=La_EtOkgryY
