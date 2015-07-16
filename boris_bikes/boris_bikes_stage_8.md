@@ -273,7 +273,7 @@ require_relative 'bike_container'
 class DockingStation
   include BikeContainer
 
-  def release_bike
+  def get_bike
     fail 'No bikes available' if working_bikes.empty?
     bikes.delete working_bikes.pop
   end
@@ -290,9 +290,9 @@ class DockingStation
 end
 ```
 
-Whoa!  Where has all the other code gone?  Well, everything we've defined in `BikeContainer` is now also included in `DockingStation`, so we can remove all of the duplicate code.  Notice how we have kept `dock` and `release_bike` though.  Releasing a working bike from a docking station is not the same as removing the next bike along, so we still need this specialized method.  `dock` is really now just an alias for 'add_bike' as it delegates directly to that method.  This is a common approach in Ruby and improves the readability and domain-relevance of our code.  `docking_station.dock` is more intuitive than `docking_station.add_bike`.
+Whoa!  Where has all the other code gone?  Well, everything we've defined in `BikeContainer` is now also included in `DockingStation`, so we can remove all of the duplicate code.  Notice how we have kept `dock` and `get_bike` though.  Releasing a working bike from a docking station is not the same as removing the next bike along, so we still need this specialized method.  `dock` is really now just an alias for 'add_bike' as it delegates directly to that method.  This is a common approach in Ruby and improves the readability and domain-relevance of our code.  `docking_station.dock` is more intuitive than `docking_station.add_bike`.
 
-You may have implemented things slightly differently, but take a look at the code for `release_bike`.  What's happening in the line `bikes.delete working_bikes.pop`?  Discuss this with your pair partner and discuss other ways to approach this problem.
+You may have implemented things slightly differently, but take a look at the code for `get_bike`.  What's happening in the line `bikes.delete working_bikes.pop`?  Discuss this with your pair partner and discuss other ways to approach this problem.
 
 Now you can create refactor your `Van` and/or `Garage` classes so that they will reuse `BikeContainer`. You'll need to think how to extend the functionality of the existing methods. For example, will you create aliases for `add_bike` and `remove_bike`?  Maybe 'load' and 'unload' for `Van`.  The garage must fix the bikes as they arrive. However, the `add_bike()` method knows nothing about fixing bikes:
 
@@ -330,7 +330,7 @@ describe Garage do
 end
 ```
 
-Notice how this test is structured.  This problem is similar to the `release_bike` test for docking station.  It is tempting to test that the bike is not broken after we've called `fix_bikes`.  However, by using doubles, we can see that this would be a vacuous test:
+Notice how this test is structured.  This problem is similar to the `get_bike` test for docking station.  It is tempting to test that the bike is not broken after we've called `fix_bikes`.  However, by using doubles, we can see that this would be a vacuous test:
 
 ```ruby
 require 'garage'
