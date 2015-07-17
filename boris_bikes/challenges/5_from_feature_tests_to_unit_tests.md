@@ -23,6 +23,7 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner the difference between this error and the error you saw before.
 
 ### Resources
+- [RSpec](https://github.com/makersacademy/course/blob/master/pills/rspec.md) :pill:
 - [RSpec wiki](https://github.com/rspec/rspec/wiki)
 - [Setting up RSpec (video)]() :construction:
 - [RSpec basics and Spec files](https://semaphoreci.com/community/tutorials/getting-started-with-rspec) (start from 'RSpec basics' partway down the page)

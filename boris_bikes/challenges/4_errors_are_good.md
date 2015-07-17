@@ -23,12 +23,12 @@ To complete this challenge, you will need to:
 - [ ] Write down the type of error
 - [ ] Write down the file path where the error happened
 - [ ] Write down the line number of the error
-- [ ] Use the Ruby Documentation to find out what the error means
-- [ ] Suggest one way of solving the error.
+- [ ] Find out what the error means using the Ruby Documentation, or by copying the entire error message into a google search
+- [ ] Suggest one way of solving the error
 
 ### Resources
-
-- [Using the stack trace (video)]() :construction:
+- [Stack Trace](https://github.com/makersacademy/course/blob/master/pills/stack_trace.md) :pill:
 - [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
+- [Using the stack trace (video)](#) :construction:
 
 ### [Solution](solutions/4.md)
