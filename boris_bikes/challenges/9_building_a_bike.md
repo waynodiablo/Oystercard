@@ -1,5 +1,7 @@
 # Building a bike
 
+[Back to the Challenge Map](../0_challenge_map.md)
+
 You now have a definition for a `DockingStation`:
 
 ```ruby

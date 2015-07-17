@@ -1,5 +1,7 @@
 # Making Docking Stations get Bikes
 
+[Back to the Challenge Map](../0_challenge_map.md)
+
 You now have a definition for a `DockingStation` and a `Bike`. Docking Stations respond to `get_bike`, and Bikes respond to `working?`.
 
 If we run a feature test, we still get a failure:
