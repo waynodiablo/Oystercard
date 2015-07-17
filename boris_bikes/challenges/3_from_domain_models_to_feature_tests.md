@@ -27,7 +27,7 @@ Here is a functional representation of that story:
 
 Objects  | Messages
 ------------- | -------------
-Person  | 
+Person  |
 Bike  | works?
 DockingStation | get_bike
 
@@ -41,3 +41,6 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner what the resulting error means.
 
 ### Resources
+
+- [IRB](http://ruby-doc.org/stdlib-2.0.0/libdoc/irb/rdoc/IRB.html)
+- [Ruby Variables](https://github.com/makersacademy/course/blob/master/pills/variables.md):pill:
