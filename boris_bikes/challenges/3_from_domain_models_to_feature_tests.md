@@ -42,4 +42,7 @@ To complete this challenge, you will need to:
 
 ### Resources
 
+- [What's a Domain Model?](http://sjmog.github.io/posts/502_domain-modelling/)
+- [Feature Testing in IRB (video)]() :construction:
+
 ### [Solution](solutions/3.md)
