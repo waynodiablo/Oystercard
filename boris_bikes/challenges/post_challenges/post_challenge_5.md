@@ -1,4 +1,6 @@
-## Stage 8: Feature Tests for Van & Garage
+## Post Challenge 5: Feature Tests for Van & Garage
+
+[Back to the Challenge Map](../0_challenge_map.md)
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -356,4 +358,4 @@ Nevertheless, we should still have a test that creates a garage, adds bikes, fix
 
 Try using what we've learned in this stage to complete all the feature and unit tests for the docking station, van and garage, refactored to use `BikeContainer`.
 
-Once you've finished up here check out the [Stage 9](boris_bikes_stage_9.md) extension!
+[Back to the Challenge Map](../0_challenge_map.md)

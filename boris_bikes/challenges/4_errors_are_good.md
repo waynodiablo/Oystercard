@@ -28,4 +28,7 @@ To complete this challenge, you will need to:
 
 ### Resources
 - [Stack Trace](https://github.com/makersacademy/course/blob/master/pills/stack_trace.md) :pill:
-- [Ruby docs](http://ruby-doc.org/)
+- [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
+- [Using the stack trace (video)](#) :construction:
+
+### [Solution](solutions/4.md)

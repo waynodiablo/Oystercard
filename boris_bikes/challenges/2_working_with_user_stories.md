@@ -6,6 +6,7 @@ In this challenge, you will transform a User Story into a Domain Model.
 
 ### Learning Objectives covered
 - Give the structure of a User Story
+- Extract a Domain Model from User Stories
 
 ### Challenge setup
 
@@ -40,12 +41,18 @@ I'd like to see if a bike works
 
 To complete this challenge, you will need to:
 
-- [ ] Write down all the nouns in the User Story
-- [ ] Write down all the verbs in the User Story
+- [ ] Write down all the nouns in the User Stories
+- [ ] Write down all the verbs in the User Stories
 - [ ] Draw a table like the one above
 - [ ] Organise the nouns and verbs into Objects and Messages within the table
 - [ ] Draw a diagram that shows how your Objects will use Messages to communicate with one another
 
 ### Resources
 
-- :pill: [user stories](https://github.com/makersacademy/course/blob/master/pills/user_stories.md)
+- [user stories](https://github.com/makersacademy/course/blob/master/pills/user_stories.md) :pill:
+- [Introduction to User Stories](https://www.mountaingoatsoftware.com/agile/user-stories)
+- [What's a Domain Model?](http://sjmog.github.io/posts/502_domain-modelling/)
+- [Explain Like I'm 5 - Object-Oriented Programming](https://www.reddit.com/r/explainlikeimfive/comments/1pyhng/eli5_objected_oriented_programming/)
+- [What's a Class Structure?](http://sjmog.github.io/posts/504_whats-a-class-structure/)
+
+### [Solution](solutions/2.md)

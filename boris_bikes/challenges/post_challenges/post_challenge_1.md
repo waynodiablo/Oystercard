@@ -1,4 +1,6 @@
-##Stage 4: Implementing the next user story
+## Post Challenge 1: Implementing the next user story
+
+[Back to the Challenge Map](../0_challenge_map.md)
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -20,7 +22,7 @@ $ irb
  => #<DockingStation:0x007fe022230258 ...>
 2.1.5 :003 > docking_station.get_bike
 RuntimeError: No bikes available
-	.... stack trace omitted ....
+  .... stack trace omitted ....
 ```
 
 Can you imagine what unit tests we might write to support this behaviour?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.
@@ -203,4 +205,4 @@ So that I am not confused and charged unnecessarily,
 I'd like docking stations not to release bikes when there are none available.
 ```
 
-Then time to move on to [Stage 5](boris_bikes_stage_5.md)!
+[Back to the Challenge Map](../0_challenge_map.md)

@@ -20,3 +20,10 @@ To complete this challenge, you will need to:
 - [ ] Push the project to Github.
 
 ### Resources
+- [Common command-line commands](http://guides.macrumors.com/Terminal)
+- [git - the simple guide](http://rogerdudler.github.io/git-guide/)
+- [Creating and removing files from the Terminal](http://www.techrepublic.com/blog/apple-in-the-enterprise/creating-and-deleting-files-using-the-mac-terminal/)
+- [How to write a good README](http://stackoverflow.com/questions/2304863/how-to-write-a-good-readme)
+
+
+### [Solution](solutions/1.md)

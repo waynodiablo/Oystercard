@@ -1,4 +1,6 @@
-## Stage 5: Giving Docking Stations Limited Capacities
+## Post Challenge 2: Giving Docking Stations Limited Capacities
+
+[Back to the Challenge Map](../0_challenge_map.md)
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -26,7 +28,7 @@ $ irb
  => #<Bike:0x007f8d7424cee0>
 2.1.5 :004 > docking_station.dock Bike.new
 RuntimeError: DockingStation
-	.... stack trace omitted ....
+  .... stack trace omitted ....
 ```
 
 Run this in IRB to ensure that it currently does not raise an error (because, for a capacity of 1, _that's a failure_ right?) and then drop into a unit test:
@@ -90,7 +92,7 @@ $ irb
  => #<Bike:0x007f8d7424cee0>
 2.1.5 :004 > docking_station.dock Bike.new
 RuntimeError: DockingStation
-	.... stack trace omitted ....
+  .... stack trace omitted ....
 ```
 
 Naturally this won't work as expected.  Note that we haven't updated our unit tests yet.  One step at a time.  It's a good idea to check that the system is giving you the behaviour you expect before each and every change.  Let's now update our docking_station_spec.rb unit test:
@@ -328,4 +330,4 @@ $ irb
 
 In the absence of input from the client which is the best place to start?  You decide.  If you go for the former consider how you'll handle the case when no capacity is initially set [Hint: research Ruby's ability to set default values for arguments on any method].
 
-Then time to move on to [Stage 6](boris_bikes_stage_6.md)!
+[Back to the Challenge Map](../0_challenge_map.md)

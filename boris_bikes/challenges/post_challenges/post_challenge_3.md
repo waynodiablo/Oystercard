@@ -1,4 +1,6 @@
-## Stage 6:  Dealing with Broken Bikes
+## Post Challenge 3:  Dealing with Broken Bikes
+
+[Back to the Challenge Map](../0_challenge_map.md)
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
@@ -40,8 +42,8 @@ Typing this into IRB we should be getting used to the format of these error mess
 ```
 2.0.0-p195 :003 > bike.report_broken
 NoMethodError: undefined method `report_broken' for #<Bike:0x007fad7c030ee0>
-	from (irb):8
-	from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
+  from (irb):8
+  from /Users/tansaku/.rvm/rubies/ruby-2.2.2/bin/irb:11:in `<main>'
 ```
 
 :twisted_rightwards_arrows:
@@ -85,7 +87,7 @@ $ irb
  => nil
 2.0.0-p195 :005 > docking_station.get_bike
  RuntimeError: No bikes available
- 	.... stack trace omitted ....
+  .... stack trace omitted ....
 ```
 
 But at the moment our docking station will happily release a broken bike.  We have to put a stop to that ...
@@ -104,4 +106,4 @@ Make sure all of your manual feature tests work and that your unit tests are gre
 **Now all our examples pass and we've checked for any possible refactoring, it's a perfect time to commit our changes. Push them to Github, and this can also be a good time switch Driver/Navigator Roles again&nbsp;:twisted_rightwards_arrows: if someone's been driving for too long.
 **
 
-Time to move on to [Stage 7](boris_bikes_stage_7.md)!
+[Back to the Challenge Map](../0_challenge_map.md)

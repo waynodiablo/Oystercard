@@ -42,5 +42,8 @@ To complete this challenge, you will need to:
 
 ### Resources
 
-- [IRB](http://ruby-doc.org/stdlib-2.0.0/libdoc/irb/rdoc/IRB.html)
 - [Ruby Variables](https://github.com/makersacademy/course/blob/master/pills/variables.md):pill:
+- [IRB](http://ruby-doc.org/stdlib-2.0.0/libdoc/irb/rdoc/IRB.html)
+- [What's a Domain Model?](http://sjmog.github.io/posts/502_domain-modelling/)
+- [Feature Testing in IRB (video)]() :construction:
+### [Solution](solutions/3.md)
