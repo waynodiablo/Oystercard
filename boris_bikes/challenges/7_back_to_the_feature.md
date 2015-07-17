@@ -22,7 +22,7 @@ Here is a functional representation of those stories:
 
 Objects  | Messages
 ------------- | -------------
-Person  |
+Person  | 
 Bike  | works?
 DockingStation | get_bike
 
@@ -44,12 +44,13 @@ end
 To complete this challenge, you will need to:
 
 - [ ] Start `irb` (or any other REPL) from the Command Line
-- [ ] require the files you have written
+- [ ] Use `require` to include the file that contains the `DockingStation` class definition
 - [ ] Set a variable `docking_station` equal to a new `DockingStation` object
 - [ ] Explain to your pair partner why you do not see an error now, when you did before
 - [ ] Ask the `docking_station` instance to `get_bike`
 - [ ] Explain to your pair partner what the resulting error means.
 
 ### Resources
+
 
 ### [Solution](solutions/7.md)
