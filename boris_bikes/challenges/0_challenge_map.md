@@ -27,4 +27,9 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 
 After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
 
-1. []()
+1. [Post Challenge 1](post_challenges/post_challenge_1.md)
+1. [Post Challenge 2](post_challenges/post_challenge_2.md)
+1. [Post Challenge 3](post_challenges/post_challenge_3.md)
+1. [Post Challenge 4](post_challenges/post_challenge_4.md)
+1. [Post Challenge 5](post_challenges/post_challenge_5.md)
+1. [Post Challenge 6](post_challenges/post_challenge_6.md)
