@@ -36,5 +36,7 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner the difference between what you see, and the error you saw before.
 
 ### Resources
+- [Ruby in 20 minutes](https://www.ruby-lang.org/en/documentation/quickstart/)
+- [Including files in Ruby](http://rubylearning.com/satishtalim/including_other_files_in_ruby.html)
 
 ### [Solution](solutions/6.md)
