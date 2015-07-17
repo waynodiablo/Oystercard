@@ -28,4 +28,7 @@ To complete this challenge, you will need to:
 
 ### Resources
 
+- [Using the stack trace (video)]() :construction:
+- [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
+
 ### [Solution](solutions/4.md)
