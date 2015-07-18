@@ -53,6 +53,9 @@ To complete this challenge, you will need to:
 - [ ] Explain to your pair partner what the resulting error means.
 
 ### Resources
+- [Including files in Ruby](http://rubylearning.com/satishtalim/including_other_files_in_ruby.html)
+- [Feature Testing in IRB (video)]() :construction:
+- [Ruby Docs - Exception](http://ruby-doc.org/core-2.2.0/Exception.html)
 
 
 ### [Solution](solutions/7.md)
