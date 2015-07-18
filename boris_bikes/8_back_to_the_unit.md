@@ -12,9 +12,7 @@ In this challenge, you will write a unit test for the missing method, and make i
 - Write an RSpec test using `it`
 - Test that an Object responds to a Message
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Add a test to your spec file that expects `DockingStation` instances to `respond_to` the method `get_bike`
 - [ ] Rewrite this test using RSpec's one-liner syntax

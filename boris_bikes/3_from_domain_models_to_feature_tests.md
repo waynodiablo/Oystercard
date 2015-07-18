@@ -33,10 +33,7 @@ Person  |
 Bike  | works?
 DockingStation | get_bike
 
-
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Start `irb` (or any other REPL) from the Command Line
 - [ ] Set a variable `docking_station` equal to a new `DockingStation` object

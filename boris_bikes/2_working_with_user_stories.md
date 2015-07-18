@@ -39,9 +39,7 @@ So that I can use a good bike,
 I'd like to see if a bike works
 ```
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Write down all the nouns in the User Stories
 - [ ] Write down all the verbs in the User Stories

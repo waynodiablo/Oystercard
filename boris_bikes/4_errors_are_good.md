@@ -18,9 +18,7 @@ In this challenge, you will dissect a Command Line error message.
 - Explain how to use a stack trace to debug errors
 - Debug an error using a stack trace
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Write down the type of error
 - [ ] Write down the file path where the error happened

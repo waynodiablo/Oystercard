@@ -29,9 +29,7 @@ In this challenge, you will deliver the completed feature from the first two use
 - Use RSpec 'predicate' syntax
 - Pass a feature test
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Feature-test the feature you are building using irb
 - [ ] Explain the error to your pair partner

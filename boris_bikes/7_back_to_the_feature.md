@@ -41,9 +41,7 @@ end
 
 - Move between Feature and Unit Tests
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Start `irb` (or any other REPL) from the Command Line
 - [ ] Use `require` to include the file that contains the `DockingStation` class definition

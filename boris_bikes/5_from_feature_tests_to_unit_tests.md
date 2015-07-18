@@ -14,9 +14,7 @@ In this challenge, you will initialize a testing framework, **RSpec**, and plan 
 - Describe an Object using a specification
 - Set up a Unit Test
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Initialize RSpec within your project
 - [ ] Create a new spec file for your DockingStation object

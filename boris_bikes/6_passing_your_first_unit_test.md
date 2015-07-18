@@ -27,9 +27,7 @@ In this challenge, you will create a `DockingStation` class and include it in th
 - Pass a unit test
 - Use `require`
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Create a new file for a Docking Station class, inside the `/lib` directory
 - [ ] Define a `DockingStation` class

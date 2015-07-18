@@ -32,9 +32,7 @@ In this challenge, you will run a Feature Test to test the above. It will fail, 
 - Use `require`
 - Test that an Object responds to a message
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Start `irb` (or another REPL such as :pill: [Pry](https://github.com/makersacademy/course/blob/master/pills/pry.md))
 - [ ] Instantiate a `DockingStation` as `docking_station`
