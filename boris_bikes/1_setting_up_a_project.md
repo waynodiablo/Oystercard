@@ -9,9 +9,7 @@ Every good code project starts with a git repository. To get started with Boris 
 - Explain why a complete README is important
 - Initialize and push a git project
 
-### Self-assessment
-
-To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Create a directory from the command line
 - [ ] Initialize a git repository within that directory
