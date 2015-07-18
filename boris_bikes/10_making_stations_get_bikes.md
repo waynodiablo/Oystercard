@@ -35,11 +35,12 @@ To complete this challenge, you will need to:
 
 - [ ] Feature-test the feature you are building using irb
 - [ ] Explain the error to your pair partner
-- [ ] Add a test to your DockingStation specification that gets a bike, and expects the bike to be working
+- [ ] Add a test to your DockingStation specification that a) gets a bike, and then b) expects the bike to be working
 - [ ] Make this test pass
 - [ ] Feature-test the feature again.
 
 ### Resources
+- :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
 
 ### [Solution](solutions/10.md)
