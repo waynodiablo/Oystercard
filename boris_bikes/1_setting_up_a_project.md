@@ -23,7 +23,9 @@ To complete this challenge, you will need to:
 
 ### Resources
 - [Common command-line commands](http://guides.macrumors.com/Terminal)
+- :pill: [Advanced command-line commands](https://github.com/makersacademy/course/blob/master/pills/command_line.md)
 - [git - the simple guide](http://rogerdudler.github.io/git-guide/)
+- :pill: [git - advanced guide](https://github.com/makersacademy/course/blob/master/pills/git.md)
 - [Creating and removing files from the Terminal](http://www.techrepublic.com/blog/apple-in-the-enterprise/creating-and-deleting-files-using-the-mac-terminal/)
 - [How to write a good README](http://stackoverflow.com/questions/2304863/how-to-write-a-good-readme)
 
