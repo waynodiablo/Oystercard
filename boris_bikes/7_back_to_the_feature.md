@@ -38,8 +38,8 @@ end
 ```
 
 ### Learning Objectives covered
-- Pass a unit test
-- Use `require`
+
+- Move between Feature and Unit Tests
 
 ### Self-assessment
 

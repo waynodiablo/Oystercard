@@ -11,8 +11,8 @@ In this challenge, you will initialize a testing framework, **RSpec**, and plan 
 ### Learning Objectives covered
 - Define RSpec as a testing framework
 - Create a spec file
-- Describe an Object using a spec
-- Set up a unit test
+- Describe an Object using a specification
+- Set up a Unit Test
 
 ### Self-assessment
 

@@ -2,6 +2,8 @@
 
 [Back to the Challenge Map](../0_challenge_map.md)
 
+> From this point onwards, you will not use Challenges. Instead, you will use a more traditional 'tutorial'. Try to bring the same 'try it first' approach you've used during the Challenges to these Post Challenges.
+
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 Our first feature is passing, ensuring that we are delivering value to our client.  We've got unit tests for the `Bike` and `DockingStation` classes.  Now let's consider another user story in the same part of the problem space:
@@ -25,7 +27,7 @@ RuntimeError: No bikes available
   .... stack trace omitted ....
 ```
 
-Can you imagine what unit tests we might write to support this behaviour?  Note that moving forward, the walkthroughs will fill in fewer and fewer gaps.  As you get stuck you'll need to use your problem-solving skills to work out what is going wrong and to get you back on track.  Try not to get frustrated - the key is to stay calm and work with your pair partner to figure out the logic of what is going on.
+Can you imagine what unit tests we might write to support this behaviour?
 
 At the moment we don't get the above behaviour in irb.  The two features we have created contradict each other.  Either docking stations will start with an initial bike (or bikes), or they will start empty.  We'll need to make a decision here, perhaps in consultation with the client.  However, it seems a reasonable assumption that docking stations will start empty, so let's go with that for the time being.  It implies that we'll need to change our first user story to ensure that there is a bike to hand out to the first user.  We're making some assumptions about the docking station here, but we are also **defining the code we wish we had**.  Here's our original manual test, adjusted to dock a new bike initially, to account for docking stations being empty by default:
 
@@ -186,6 +188,8 @@ class DockingStation
   end
 end
 ```
+
+> Notice how we put the error-catching line - which uses `fail` - first in the method. This is a pattern known as a 'guard condition'. By catching errors as the first priority, errors cannot progress further into the program. It's a great pattern.
 
 And we should have the joy of seeing all our unit tests go green and the ability of all our manual feature tests to pass.  Assuming your unit tests are green, make sure you run all your feature tests through IRB to double check!
 

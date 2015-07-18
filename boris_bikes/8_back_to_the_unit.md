@@ -10,8 +10,7 @@ In this challenge, you will write a unit test for the missing method, and make i
 
 ### Learning Objectives covered
 - Write an RSpec test using `it`
-- Test than an Object responds to a message
-- Move between unit and feature tests
+- Test that an Object responds to a Message
 
 ### Self-assessment
 
