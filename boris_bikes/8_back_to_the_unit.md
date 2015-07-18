@@ -27,6 +27,9 @@ To complete this challenge, you will need to:
 
 ### Resources
 
+- [Introduction to RSpec](http://blog.teamtreehouse.com/an-introduction-to-rspec) (note that this resource uses the old RSpec syntax – you should use the new syntax [detailed here](http://rspec.info/blog/2012/06/rspecs-new-expectation-syntax/))
+- :pill: [RSpec Pill](https://github.com/makersacademy/course/blob/master/pills/rspec.md)
+- [RSpec Basic Structure](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/basic-structure-describe-it)
 - [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax)
 
 ### [Solution](solutions/8.md)
