@@ -469,7 +469,7 @@ First we need to inject `$resource` into our controller so that we can make use 
 githubUserSearch.controller('GitUserSearchController', ['$resource', function($resource) {
 ```
 
-This concept is called [Dependency Injection](http://c2.com/cgi/wiki?DependencyInjection). Essentially Angular is looking up what the controller needs by looking at the parameters and their names. It then calls the function with these parameters and the arguments it requires already instantiated. The injector will compare the name of each dependency in the strings to the variables called in the function's arguments - if you hav more than one dependency these must be in the same order within the array and the function.You don't need to worry too much about this at this stage but just know that it's there and that it works.
+This concept is called [Dependency Injection](http://c2.com/cgi/wiki?DependencyInjection). Essentially Angular is looking up what the controller needs by looking at the parameters and their names. It then calls the function with these parameters and the arguments it requires already instantiated. The injector will compare the name of each dependency in the strings to the variables called in the function's arguments - if you have more than one dependency these must be in the same order within the array and the function.  You don't need to worry too much about this at this stage but just know that it's there and that it works.
 
 To use the GitHub API we can hit `https://api.github.com/search/users` with a query parameter `q` and a value. For example `https://api.github.com/search/users?q=antony`.
 
