@@ -3,7 +3,6 @@
 ### Concepts
 * Evaluate the benefits of convention over configuration.
 * Describe the primary aspects of Rails that utilize this idiom.
-* Evaluate the differences between the Rails MVC pattern with Angular's MV* pattern.
 * Describe the asset pipeline.
 * Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
 
