@@ -5,25 +5,13 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 ### The Process
 
-1. After registering that a problem is blocking you and your pair partner, ensure that you have a test that specifically targets the problem. Rather than running your entire test suite and having to pick out the red, find the relevant command for executing only the failing test.
-
-2. Apply your debugging skills to *diagnose*: try to visualize the chain of execution. What method within your test is resulting in the failure? What is the immediate cause of the failure? Examine the error message carefully.
-
-3. Come up with a hypothesis about the cause of the problem. This is really important. Without some notion as to the cause, you'll just be making random changes to the codebase. Your hypothesis need not be deeply refined.
-
-4. Test your hypothesis. Use 'puts' statements or a debugging tool such as byebug.
-
-5. If your test goes green, congratulations! If not, repeat steps 3 to 4 a couple more times.
-
-6. Google the error message. Scan the first few results for useful pointers.
-
-7. Write up your problem in 3 - 4 sentences and post on your cohort's slack channel. Notify @channel and find out if any other students have encountered a similar problem or can help.
-
-8. Escalate your problem to the Alumni Helper desk and ask for their advice on debugging the problem. Ideally they are able to give you helpful suggestions.
-
-9. Congratulations! You've got a problem worthy of posting to [slack-overflow](https://github.com/makersacademy/slack-overflow). The issues repo is intended as a stack-overflow style Q&A for use by students. Check out the readme for more details. **Remember** to post a link to a github repo. Ideally, you checkout your buggy code to a separate branch, push, and link to that.
-
-10. If your issue is not addressed promptly, bring a coach's attention to it or flag them over.
-
-### Tips on the above
-Try not to think of alumni helpers and coaches as qualitatively different from other routes to solving a problem. Their expertise itself is a tool that you need to use carefully. If your codebase is a mess, you don't have relevant tests, or the problem you're having is otherwise obscured, they will struggle to be effective in helping you.
+1. *???* Try to gather some words about the problem, even in vague terms. "It's broken" is not a problem description.
+2. *Pair Partner.* Bounce off them, discuss, and rubber-duck debug. Imagine you are seeing the problem for the first time, together.
+3. *Isolate Keywords.* Gather a small group of keywords that describe the problem area, like `Array`, ‘Websockets’, or ‘Terminal’.
+4. *Isolate Error Keywords.* If you have an error message, identify and add these keywords to your results from 3).
+5. *Google.* Research the problem using your keywords. Also use the keywords to identify relevant results (i.e. not just the first one).
+6. *Cohort channel in Slack.* Ask your cohort for help, explaining clearly: what’s the issue, why did it happen, and what have you tried?
+7. *Specific channel in Slack.* As above, but more targetted - for example, #ruby, #mobile. Also ask mentor cohorts, like #june2015.
+8. *Slack Overflow.* (Jrs) or *Stack Overflow.* (Srs) Format your question well. Expect formatting feedback on your query from coaches, and support from Alumni Helpers or fellow students/graduates.
+9. *Alumni Helper.* Take your well-formatted Slack/Stack Overflow problem to an Alumni Helper for one-to-one guidance.
+10. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
