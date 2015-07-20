@@ -644,7 +644,7 @@ In `app/views/restaurants/index.html.(erb/haml)`, add this code replacing your e
 <ul>
   <% restaurant.reviews.each do |review| %>
     <li>
-      <%= review.thoughts %> Average rating: <%= star_rating(restaurant.average_rating) %>
+      <%= review.thoughts %> <%= review.rating %>
       <%= link_to "Endorse", review_endorsements_path(review), class: 'endorsements-link' %>
       <span class="endorsements_count"> <%= review.endorsements.count %> </span> <%= 'endorsement'.pluralize(review.endorsements.count) %>
     </li>
