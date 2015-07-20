@@ -83,7 +83,7 @@ $ irb
  => nil
 2.0.0-p195 :004 > docking_station.dock bike
  => nil
-2.0.0-p195 :005 > docking_station.get_bike
+2.0.0-p195 :005 > docking_station.release_bike
  RuntimeError: No bikes available
  	.... stack trace omitted ....
 ```

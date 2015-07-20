@@ -18,7 +18,7 @@ $ irb
  => true
 2.1.5 :002 > docking_station = DockingStation.new
  => #<DockingStation:0x007fe022230258 ...>
-2.1.5 :003 > docking_station.get_bike
+2.1.5 :003 > docking_station.release_bike
 RuntimeError: No bikes available
 	.... stack trace omitted ....
 ```
@@ -33,7 +33,7 @@ $ irb
  => #<DockingStation:0x007fae7b3b8950>
 2.0.0-p195 :002 > station.dock Bike.new
  => #<Bike:0x007fae7b3c0dd0>
-2.0.0-p195 :003 > bike = station.get_bike
+2.0.0-p195 :003 > bike = station.release_bike
  => #<Bike:0x007fae7b3c0dd0>
 2.0.0-p195 :004 > bike.working?
  => true
@@ -74,7 +74,7 @@ Then fix the failure:
 
 ```ruby
 class DockingStation
-  def get_bike
+  def release_bike
     Bike.new
   end
 
@@ -94,9 +94,9 @@ require 'docking_station'
 describe DockingStation do
   # other tests omitted for brevity
 
-  describe 'get_bike' do
+  describe 'release_bike' do
     it 'raises an error when there are no bikes available' do
-      expect { subject.get_bike }.to raise_error 'No bikes available'
+      expect { subject.release_bike }.to raise_error 'No bikes available'
     end
   end
 end
@@ -111,7 +111,7 @@ Again we now have a match between our manual feature test and our unit test.  Ou
 ```ruby
 class DockingStation
 
-  def get_bike
+  def release_bike
     fail 'No bikes available'
   end
 
@@ -123,18 +123,18 @@ end
 
 But what would happen?  Try it and rerun your tests.  This is part of the beauty of TDD - you can experiment with different approaches and use your tests to analyze the outcome.  We haven't really improved the situation - we've fixed one test, but broken another.
 
-Before you go any further, study the syntax of our bike availability test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.get_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.get_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**
+Before you go any further, study the syntax of our bike availability test with your pair partner.  **There is a critical learning to be had here.**  What do the curly braces in the line `expect { docking_station.release_bike }.to raise_error` mean?  Why couldn't we have used ordinary parentheses instead: `expect(docking_station.release_bike).to raise_error`?  Do not proceed until you have understood this distinction.  Ask an Alumni Helper or coach to explain if you are stuck.  **These are the subtle nuances in computer programming that differentiate a hacky hobbyist from a serious junior developer.**
 
 That's the last time you need to be told to run `rspec`.  Every time you make a change to your tests or your production code, run `rspec`.  Did you try the above example and run `rspec` as suggested, or did you read through?  **Take every available opportunity to explore the code and different outcomes.  Follow every path suggested.  Experimentation is the most powerful learning tool available to you.**
 
-We cannot proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `get_bike` is called.
+We cannot proceed any further without introducing some *state* into `DockingStation`.  State is the ability of an object to retain information about itself.  Critically, we need to know whether it has any bikes to release.  When a bike is docked, we need to retain that information and use it again when `release_bike` is called.
 
 At a future point, `DockingStation` is going to need to manage multiple bikes.  However, at the moment we are only interested in passing our tests.  Let's do the simplest thing possible that will allow the docked bike to be released:
 
 ```ruby
 class DockingStation
 
-  def get_bike
+  def release_bike
     @bike
   end
 
@@ -164,7 +164,7 @@ describe DockingStation do
   # other tests omitted for brevity
   it 'releases working bikes' do
     subject.dock Bike.new
-    bike = subject.get_bike
+    bike = subject.release_bike
     expect(bike).to be_working
   end
 end
@@ -174,7 +174,7 @@ Now we can finally create the functionality we expect:
 ```ruby
 class DockingStation
 
-  def get_bike
+  def release_bike
     fail 'No bikes available' unless @bike
     @bike
   end

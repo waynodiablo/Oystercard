@@ -8,11 +8,11 @@ Take a look at the unit tests for docking station:
 require 'docking_station'
 
 describe DockingStation do
-  it { is_expected.to respond_to :get_bike }
+  it { is_expected.to respond_to :release_bike }
 
   it 'releases working bikes' do
     subject.dock Bike.new
-    bike = subject.get_bike
+    bike = subject.release_bike
     expect(bike).to be_working
   end
 
@@ -20,14 +20,14 @@ describe DockingStation do
     bike = Bike.new
     bike.report_broken
     subject.dock bike
-    expect {subject.get_bike}.to raise_error 'No bikes available'
+    expect {subject.release_bike}.to raise_error 'No bikes available'
   end
 
   it { is_expected.to respond_to(:dock).with(1).argument }
 
-  describe 'get_bike' do
+  describe 'release_bike' do
     it 'raises an error when there are no bikes available' do
-      expect { subject.get_bike }.to raise_error 'No bikes available'
+      expect { subject.release_bike }.to raise_error 'No bikes available'
     end
   end
 
@@ -90,7 +90,7 @@ it 'does not release broken bikes' do
   bike = Bike.new
   bike.report_broken
   subject.dock bike
-  expect {subject.get_bike}.to raise_error 'No bikes available'
+  expect {subject.release_bike}.to raise_error 'No bikes available'
 end
 ```
 
@@ -102,7 +102,7 @@ What we actually want to test is that `DockingStation` does not release a bike w
 it 'does not release broken bikes' do
   bike = double :bike, broken?: true
   subject.dock bike
-  expect {subject.get_bike}.to raise_error 'No bikes available'
+  expect {subject.release_bike}.to raise_error 'No bikes available'
 end
 ```
 
@@ -113,7 +113,7 @@ Finally, let's take a look at the last remaining reference to `Bike` in our dock
 ```ruby
 it 'releases working bikes' do
   subject.dock Bike.new
-  bike = subject.get_bike
+  bike = subject.release_bike
   expect(bike).to be_working
 end
 ```
@@ -123,7 +123,7 @@ Bizarrely, although this is a `DockingStation` unit test, our expectation is on 
 ```ruby
 it 'releases working bikes' do
   subject.dock double :bike, broken?: false
-  bike = subject.get_bike
+  bike = subject.release_bike
   expect(bike).to be_working
 end
 ```
@@ -147,13 +147,13 @@ subject.dock double :bike, broken?: false, working?: true
 
 But surely this is a ridiculous test?  Now we are testing that our double returns `true` for `working?`.  But of course it does - we've just told it to!
 
-What we really want to test is that if there's a working bike in the docking station, then the same bike gets returned by `get_bike`.  The *feature test* takes care of also testing that the bike that comes out is working.
+What we really want to test is that if there's a working bike in the docking station, then the same bike gets returned by `release_bike`.  The *feature test* takes care of also testing that the bike that comes out is working.
 
 ```ruby
 it 'releases working bikes' do
   bike = double :bike, broken?: false
   subject.dock bike
-  expect(subject.get_bike).to be bike
+  expect(subject.release_bike).to be bike
 end
 ```
 

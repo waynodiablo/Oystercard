@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](../0_challenge_map.md)
 
-The error happened because you asked a Docking Station to `get_bike`, but you haven't told Ruby that a Docking Station can do that.
+The error happened because you asked a Docking Station to `release_bike`, but you haven't told Ruby that a Docking Station can do that.
 
 All Ruby knows is that Docking Stations are allowed to exist, because the class `DockingStation` has been written.
 
@@ -14,11 +14,11 @@ In this challenge, you will write a unit test for the missing method, and make i
 
 ### To complete this challenge, you will need to:
 
-- [ ] Add a test to your spec file that expects `DockingStation` instances to `respond_to` the method `get_bike`
+- [ ] Add a test to your spec file that expects `DockingStation` instances to `respond_to` the method `release_bike`
 - [ ] Rewrite this test using RSpec's one-liner syntax
 - [ ] Run RSpec from the Command Line
 - [ ] Explain the error to your pair partner
-- [ ] Add a method `get_bike` to the `DockingStation` class
+- [ ] Add a method `release_bike` to the `DockingStation` class
 - [ ] Run RSpec from the Command Line
 - [ ] Explain to your pair partner the difference between what you see, and the error you saw before.
 

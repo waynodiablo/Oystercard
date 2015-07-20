@@ -49,7 +49,7 @@
 
 - Practice Learning Objectives from Challenges 3 – 8
 
-### [Challenge 10](10_making_stations_get_bikes.md)
+### [Challenge 10](10_making_stations_release_bikes.md)
 
 - Use Objects within other Objects
 - Use RSpec 'predicate' syntax

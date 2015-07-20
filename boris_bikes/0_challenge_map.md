@@ -21,7 +21,7 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 7. [Back to the feature](7_back_to_the_feature.md)
 8. [Back to the unit](8_back_to_the_unit.md)
 9. [Building a bike](9_building_a_bike.md)
-10. [Making Docking Stations get Bikes](10_making_stations_get_bikes.md)
+10. [Making Docking Stations get Bikes](10_making_stations_release_bikes.md)
 
 ### Post-challenges
 

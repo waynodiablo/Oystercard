@@ -26,7 +26,7 @@ Objects  | Messages
 ------------- | -------------
 Person  | 
 Bike  | works?
-DockingStation | get_bike
+DockingStation | release_bike
 
 Here is the `DockingStation` class you should have written:
 
@@ -47,7 +47,7 @@ end
 - [ ] Use `require` to include the file that contains the `DockingStation` class definition
 - [ ] Set a variable `docking_station` equal to a new `DockingStation` object
 - [ ] Explain to your pair partner why you do not see an error now, when you did before
-- [ ] Ask the `docking_station` instance to `get_bike`
+- [ ] Ask the `docking_station` instance to `release_bike`
 - [ ] Explain to your pair partner what the resulting error means.
 
 ### Resources

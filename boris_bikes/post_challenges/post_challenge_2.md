@@ -57,7 +57,7 @@ class DockingStation
     @bike = bike
   end
 
-  def get_bike
+  def release_bike
     fail 'No bikes available' unless @bike
     @bike
   end
@@ -120,7 +120,7 @@ class DockingStation
     @bikes = []
   end
 
-  def get_bike
+  def release_bike
     fail 'No bikes available' if @bikes.empty?
     @bikes.pop
   end
@@ -155,7 +155,7 @@ class DockingStation
     @bikes = []
   end
 
-  def get_bike
+  def release_bike
     fail 'No bikes available' if empty?
     @bikes.pop
   end
@@ -242,7 +242,7 @@ class DockingStation
     bikes << bike
   end
 
-  def get_bike
+  def release_bike
     fail 'No bikes available' if empty?
     bikes.pop
   end

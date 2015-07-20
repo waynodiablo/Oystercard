@@ -6,7 +6,7 @@ You now have a definition for a `DockingStation`:
 
 ```ruby
 class DockingStation
-  def get_bike
+  def release_bike
 
   end
 end
@@ -18,7 +18,7 @@ When you **instantiate** this class:
 docking_station = DockingStation.new
 ``` 
 
-you have an object (`docking_station`) that responds to `get_bike`. You would like `get_bike` to give you a Bike object. You would also like to check that this object responds to a method `working?`.
+you have an object (`docking_station`) that responds to `release_bike`. You would like `release_bike` to give you a Bike object. You would also like to check that this object responds to a method `working?`.
 
 In this challenge, you will run a Feature Test to test the above. It will fail, so you will have to write a Unit Test based on the error you get. You will then write code to fix that error. This challenge combines the content from stages [3](3_from_domain_models_to_feature_tests.md) to [8](8_back_to_the_unit.md): look back at them if you get stuck.
 
@@ -36,7 +36,7 @@ In this challenge, you will run a Feature Test to test the above. It will fail, 
 
 - [ ] Start `irb` (or another REPL such as :pill: [Pry](https://github.com/makersacademy/course/blob/master/pills/pry.md))
 - [ ] Instantiate a `DockingStation` as `docking_station`
-- [ ] Ask `docking_station` to get you a bike, and save the response to a variable `bike`
+- [ ] Ask `docking_station` to release a bike, and save the response to a variable `bike`
 - [ ] Ask the `bike` if it is `working?`
 - [ ] Explain the error to your pair partner
 - [ ] Create a new spec file for a `Bike` class

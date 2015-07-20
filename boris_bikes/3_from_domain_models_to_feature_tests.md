@@ -18,7 +18,7 @@ Here is the User Story you converted into a Domain Model:
 ```
 As a person,
 So that I can use a bike,
-I'd like to get a bike from a docking station.
+I'd like a docking station to release a bike.
 
 As a person,
 So that I can use a good bike,
@@ -31,7 +31,7 @@ Objects  | Messages
 ------------- | -------------
 Person  |
 Bike  | works?
-DockingStation | get_bike
+DockingStation | release_bike
 
 ### To complete this challenge, you will need to:
 

@@ -32,7 +32,7 @@ You must translate these two user stories into a functional representation:
 ```
 As a person,
 So that I can use a bike,
-I'd like to get a bike from a docking station.
+I'd like a docking station to release a bike.
 
 As a person,
 So that I can use a good bike,
