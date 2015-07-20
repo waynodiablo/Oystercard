@@ -98,7 +98,7 @@ require 'docking_station'
 describe DockingStation do
   # other tests omitted for brevity
 
-  describe 'get_bike' do
+  describe '#get_bike' do
     it 'raises an error when there are no bikes available' do
       expect { subject.get_bike }.to raise_error 'No bikes available'
     end
