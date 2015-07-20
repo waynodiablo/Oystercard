@@ -1,112 +1,104 @@
-##Learning Objectives: Boris Bikes
+# Learning Objectives: Boris Bikes
 
-*Learning Objectives are organised by topic. As you go down the bullet-point list below each topic header, skills become more advanced/involved. The section of the course that addresses a learning objective is appended to to each, in parentheses.*
+> Learning Objectives summarise everything you will learn this week. If you want more detail, go to the [Learning Outcomes](learning_outcomes.md).
 
-######Domain Modeling
-- Define 'Domain' as the abstract area in which the problem is defined (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/a-brief-introduction-to-domain-modelling/) *(reading)*, [Scaled Agile Framework: Domain Modelling](http://www.scaledagileframework.com/domain-modeling/) *(reading)*]
-- Define 'class structure' (0) [[Samm's brief introduction](http://blog.sjmog.co/2015/03/11/whats-a-class-structure/)]
-- Recall that a Domain Model describes key concepts in the domain and the relationships between them (0)
-- Explain that defining the problem in plain English is a good first step to a Domain Model (0)
-- Explain how to extract a Domain Model by analysing the nouns and verbs in a plain English description of the problem (0)
-- Illustrate links between User Stories, Domain Models, and Class Structures
+### [Challenge 1](1_setting_up_a_project.md)
 
-######RSpec
-- Know what RSpec is (0)
-- Know to use `_spec` in filenames if they include tests (3)
-- Explain that RSpec provides a natural, English-like syntax (1)
-- Explain how RSpec is a DSL (1)
-- Explain why RSpec's syntax is helpful for developers (1)
-- Fail an RSpec test (1)
-- Debug code to pass an RSpec test (1)
-- Use `describe`, `it`, and expectation syntax (2)
-- Use `respond_to` syntax (2)
-- Use RSpec implicitly-defined subject syntax (2)
+- Set up a simple project
+- Explain why a complete README is important
+- Intialize and push a git project
+
+### [Challenge 2](2_working_with_user_stories.md)
+
+- Give the structure of a User Story
+- Extract a Domain Model from User Stories
+
+### [Challenge 3](3_from_domain_models_to_feature_tests.md)
+
+- Define 'Feature Test'
+- Define 'stack trace'
+- Use `irb` to run a 'feature test'
+
+### [Challenge 4](4_errors_are_good.md)
+
+- Explain how to use a stack trace to debug errors
+- Debug an error using a stack trace
+
+### [Challenge 5](5_from_feature_tests_to_unit_tests.md)
+
+- Define RSpec as a testing framework
+- Create a spec file
+- Describe and Object using a specification
+- Set up a Unit Test
+
+### [Challenge 6](6_passing_your_first_unit_test.md)
+
+- Pass a unit test
+- Use `require`
+
+### [Challenge 7](7_back_to_the_feature.md)
+
+- Move between Feature and Unit Tests
+
+### [Challenge 8](8_back_to_the_unit.md)
+
+- Write an RSpec test using `it`
+- Test that an Object responds to a Message
+
+### [Challenge 9](9_building_a_bike.md)
+
+- Practice Learning Objectives from Challenges 3 – 8
+
+### [Challenge 10](10_making_stations_release_bikes.md)
+
+- Use Objects within other Objects
 - Use RSpec 'predicate' syntax
-- Use RSpec 'context' syntax
-- Select the lightest useful testing method (2)
-- Assess when is appropriate to use RSpec's one-liner syntax (3)
-- Analyse why sometimes tests pass when it seems like they shouldn't (3)
-- Evaluate the difference between RSpec failures and Ruby errors (3)
-- Refactor tests (3)
+- Pass a feature test
 
-######Doubles
-- Define doubles as a kind of 'stunt stand-in' for objects in testing (2)
-- Explain that doubles are useful to avoid interacting with 3rd-party services (2)
+### [Post Challenge 1](post_challenges/post_challenge_1.md)
 
-######TDD
-- Know what an 'acceptance' (or 'feature') test is (intro)
-- Know what an 'integration' test is (1)
-- Know what a 'unit' test is (intro)
-- Explain that starting with tests helps us to avoid going mad (1)
-- Organise a spec-driven filesystem (1)
-- Set up a unit test (3)
-- Link RSpec failures to progress in TDD (2)
-- Assess which properties to implement into objects using TDD as a guide (3)
-- Move between unit and feature tests (3)
-- Analyse why code should be written in a TDD manner (3)
-- Analyse why passing tests does not guarantee fully-working code (3)
+- Write RSpec tests that require arguments
+- Write RSpec tests that `expect` errors
+- Use `fail` or `raise` to raise an error
+- Set an attribute on an instantiated Object using an `@` instance variable
+- Use a 'guard condition'
 
-######Debugging
-- Define a 'stack trace' (3)
-- Explain how to use a stack trace to debug errors (3)
-- Debug errors using a stack trace (3)
+### [Post Challenge 2](post_challenges/post_challenge_2.md)
 
-######OOP
-- Define OOP (intro)
-- Explain that OOP allows us to write more flexible code (intro)
-- Explain why modular code is useful for future code maintainers (intro)
+- Set a complex attribute on an instantiated Object
+- Set an initial attribute value using `initialize`
+- Refactor code for readability
+- Use a constant
+- Use `attr_reader` to read an attribute on an instantiated Object
 
-######Agile
-- Define an 'Agile' process (intro) [[Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development) *(reading)*, [Agile Manifesto Principles](http://agilemanifesto.org/principles.html) *(reading)*]
-- Explain how to apply Agile methodology to development (intro) [[Scrum Reference Card](http://scrumreferencecard.com/scrum-reference-card/) *(reading, visual)*]
-- Differentiate between BDUF, NDUF, and EDUF [[Samm's brief introduction](http://blog.sjmog.co/2015/03/12/software-design-up-front-how-much/)]
-- Work in an Agile way (0 onwards)
-- Link Agile methodology and TDD (1 onwards)
-- Evaluate why Agile methodology is so popular
+### [Post Challenge 3](post_challenges/post_challenge_3.md)
 
-######Pair Programming
-- Define 'pair programming', 'driver', and 'navigator' (intro)
-- Explain why pair programming is so useful in development (intro)
-- Use pair programming techniques (0 onwards)
-- Argue for why pair programming is often better for code quality than solo programming
-- Evaluate how pair programming with a new partner every day has developed their proficiency in other topics, and more generally
+- Implement a feature from scratch
 
-######Style Guides
-- Give an example of a style guide (intro)
-- Recall that it is better to write self-explanatory code than fill code with comments (1)
-- Install and run RuboCop (1)
-- Analyse why 'linters' like RuboCop are useful when developing (1)
-- Correct style violations (1)
+### [Post Challenge 4](post_challenges/post_challenge_4.md)
 
-######User Stories
-- Recall the structure of a user story (intro) [[Wikipedia](http://en.wikipedia.org/wiki/User_story) *(reading)*, [Agile Modelling: User Stories Introduction](http://www.agilemodeling.com/artifacts/userStory.htm) *(reading)*]
-- Elicit user stories from clients (intro)
-- Select high-value user stories (1)
+- Explain why doubles are needed to isolate unit tests
+- Use a double to isolate a unit test
+- Explain why method stubs are needed to isolate unit tests
+- Use a method stub to isolate a unit test
+- Discuss 'London' and 'Chicago' testing styles
 
-######Interfaces
-- Define an interface as a way to interact with a system (1)
-- Recognize that IRB is an interface (1)
+### [Post Challenge 5](post_challenges/post_challenge_5.md)
 
-######Setting up a project
-- Recall how to set up a simple project (0)
-- Explain why a complete README is important (0)
-- Initialize and push a git project (0)
+- Extract shared behaviour to a Module
+- Mix a Module into a Class using `include`
+- Test Modules
 
-######MVP
-- Define an MVP as a Minimum Viable Product (1)
-- Explain that an MVP is the minimum set of operating features for a client to test a business model (1)
+### [Post Challenge 6](post_challenges/post_challenge_6.md)
 
-######Ruby
-- Know to include files in other files using `require` (2)
-- Outline Ruby convention for `require` (2)
-- `require` a file in another (2)
-- Differentiate between `require` and `require_relative` (3)
-- `require_relative` one file into another (3)
+- Reuse flexible code in a different domain
+- Add an interactive text interface to a program
+
+
 
 ### Activities
 * Use BDD/TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
 * Use BDD/TDD and solo programming to approach a slightly more complex model (e.g. Airports) which requires wider use of doubles.
-
 
 Weekly Challenge
 ===========
@@ -118,7 +110,6 @@ Weekly Challenge
 * Simple OOD and OOP creating and linking at least two objects via composition
 * Mocking random behaviour effectively in order to ensure consistent and reliable tests
 * Test driven development (TDD)
-
 
 ## Tube
 
