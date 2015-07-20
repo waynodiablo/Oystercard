@@ -35,11 +35,11 @@ Here you will find other, relevant materials and challenges that will help you o
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 - Your alumni helpers are [Daryl](https://github.com/dwatson62), [Mollie](https://github.com/MollieS), [Andy](https://github.com/andygout), [Alex](https://github.com/alexhandy1) and [Rocco](https://github.com/bagolol) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
-![Daryl](https://avatars2.githubusercontent.com/u/9296416?v=3&s=400)
-![Mollie](https://avatars2.githubusercontent.com/u/11349388?v=3&s=400)
-![Andy](https://avatars0.githubusercontent.com/u/10484515?v=3&s=400)
-![Alex](https://avatars0.githubusercontent.com/u/5671036?v=3&s=400)
-![Rocco](https://avatars3.githubusercontent.com/u/10029227?v=3&s=400)
+![Daryl](https://avatars2.githubusercontent.com/u/9296416?v=3&s=128)
+![Mollie](https://avatars2.githubusercontent.com/u/11349388?v=3&s=128)
+![Andy](https://avatars0.githubusercontent.com/u/10484515?v=3&s=128)
+![Alex](https://avatars0.githubusercontent.com/u/5671036?v=3&s=128)
+![Rocco](https://avatars3.githubusercontent.com/u/10029227?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
