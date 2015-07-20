@@ -12,9 +12,9 @@ Here are this week's [learning objectives](https://github.com/makersacademy/cour
 
 ##Github Profiles
 
-This week's project is to create a simple Github Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
+This week's project is to create a simple GitHub Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
 
-The project will involve using JavaScript to consume data available from third parties over the network (e.g. Github API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS.
+The project will involve using JavaScript to consume data available from third parties over the network (e.g. GitHub API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS.
 
 The project will need to be deployed to Heroku, and the choice of back-end server is up to you: Node for the brave, Ruby for the stable.
 
@@ -36,7 +36,7 @@ Make sure you have worked through these pills before starting:
 For an in-depth look at the JavaScript ecosystem:
 * :pill: [The JavaScript ecosystem](https://github.com/makersacademy/course/blob/master/pills/javascript_ecosystem.md)
 
-##Version 0 - jQuery prototype & warmup
+##Version 0 - jQuery prototype & warm up
 
 Let's have a look at a quick prototype of what we will be trying to build, and discuss why we might want to use a framework to achieve the same goals:
 
