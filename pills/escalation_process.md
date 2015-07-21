@@ -19,7 +19,7 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 7. *Specific channel in Slack.* As above, but more targetted - for example, #ruby, #mobile. Also ask mentor cohorts, like #june2015.
 
-8. *Slack Overflow.* (Jrs) or *Stack Overflow.* (Srs) Format your question well. Expect formatting feedback on your query from coaches, and support from Alumni Helpers or fellow students/graduates.
+8. *Slack Overflow.* (Jrs) or *Stack Overflow.* (Srs) Format your question well. Expect formatting feedback on your query from coaches, and support from Alumni Helpers or fellow students/graduates. If you're struggling to create a post, grab an Alumni Helper to help out.
 
 9. *Alumni Helper.* Take your well-formatted Slack/Stack Overflow problem to an Alumni Helper for one-to-one guidance.
 
