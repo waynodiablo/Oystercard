@@ -24,7 +24,7 @@ In this challenge, you will initialize a testing framework, **RSpec**, and plan 
 
 ### Resources
 - [RSpec wiki](https://github.com/rspec/rspec/wiki)
-- [Setting up RSpec (video)]() :construction:
+- [Setting up RSpec (video)](https://www.youtube.com/watch?v=rRDQKAAGw6M)
 - [RSpec basics and Spec files](https://semaphoreci.com/community/tutorials/getting-started-with-rspec) (start from 'RSpec basics' partway down the page)
 
 ### [Solution](solutions/5.md)
