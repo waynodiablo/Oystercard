@@ -1,6 +1,6 @@
 # From a Domain Model to a Feature Test
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 A **Domain Model** is an abstract representation of the Objects within a system, and the Messages they use to communicate with one another. Once you have a Domain Model for a feature, you need to think about how your Objects and Messages will work together in code. This is called a **Feature Test**.
 

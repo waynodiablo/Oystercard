@@ -1,6 +1,6 @@
 # Errors are good
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 You should have just gotten an error something like this:
 

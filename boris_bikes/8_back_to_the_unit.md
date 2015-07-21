@@ -1,6 +1,6 @@
 # Back to the unit
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 The error happened because you asked a Docking Station to `release_bike`, but you haven't told Ruby that a Docking Station can do that.
 

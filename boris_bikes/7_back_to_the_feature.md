@@ -1,6 +1,6 @@
 # Back to the feature
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 Now we have passed a unit test, we go back to our feature tests. You have now implemented a `DockingStation` class, so you should be able to get further than last time.
 

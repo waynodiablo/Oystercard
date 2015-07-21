@@ -1,6 +1,6 @@
 # Setting up a project
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 Every good code project starts with a git repository. To get started with Boris Bikes, you need to get your repository set up, and uploaded to Github.
 

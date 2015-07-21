@@ -1,6 +1,6 @@
 # Passing your first Unit Test
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 Your spec file should now look like this:
 

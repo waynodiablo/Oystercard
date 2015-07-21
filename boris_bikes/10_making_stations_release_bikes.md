@@ -1,6 +1,6 @@
 # Making Docking Stations Release Bikes
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 You now have a definition for a `DockingStation` and a `Bike`. Docking Stations respond to `release_bike`, and Bikes respond to `working?`.
 

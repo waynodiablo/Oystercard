@@ -1,6 +1,6 @@
 # From Feature Tests to Unit Tests
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
 
 You should now understand that our error happened because Ruby doesn't know what a `DockingStation` is. Ruby doesn't know this because you haven't told it about `DockingStation`s: you just asked Ruby to make you a new one.
 
