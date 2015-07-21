@@ -45,4 +45,4 @@ We got an error message.  You might think this is bad, but actually this is exce
 
 There's a lot of information here, but it's important to work through it carefully.  There's nothing worse than seeing some sort of failure/error and then bashing away at the code randomly in the hopes of fixing it.  Ruby is giving you critical information about the precise nature of the underlying problem and you need to use that to work out what's wrong.  Have you seen this kind of error before?
 
-Have a go with your pair partner at fixing this, and then check out [Stage 2](boris_bikes_stage_2.md)
+Discuss with your pair partner about what might be causing this error, and then check out [Stage 2](boris_bikes_stage_2.md)
