@@ -52,7 +52,7 @@ end
 
 ### Resources
 - [Including files in Ruby](http://rubylearning.com/satishtalim/including_other_files_in_ruby.html)
-- [Feature Testing in IRB (video)]() :construction:
+- [Feature Testing in IRB (video)](https://www.youtube.com/watch?v=rShBRLyEccY)
 - [Ruby Docs - Exception](http://ruby-doc.org/core-2.2.0/Exception.html)
 
 
