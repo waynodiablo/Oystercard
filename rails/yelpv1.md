@@ -1208,7 +1208,7 @@ To pass this test we need to add a validation to our restaurant model.
 validates :name, length: {minimum: 3}
 ```
 
-That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saves – but not the original feature test. Let's fix our feature test now.
+That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saved – but not the original feature test. Let's fix our feature test now.
 
 Currently our restaurants controller will save a restaurant passed to its `create` method regardless of whether it's correct or not – so let's change that.
 
