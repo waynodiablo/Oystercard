@@ -186,7 +186,9 @@ For this example, we'll be adding a 'sign in with Facebook' link.
 
 Create a [Facebook Developer application](http://developers.facebook.com), making note of the two keys you're given.
 
-Now follow the instructions on the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview), ensuring you read the next section straight after about keeping your private details safe!
+Before you go to the devise wiki, finish reading this whole section. 
+
+Go to the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview) to set up facebook authentication, ensuring you read the next section straight after about keeping your private details safe!
 
 Note that Devise will add the link to Facebook sign-up automatically and you don't need to add the sign out to the config/routes (since Device also does that), so you don't need to follow those steps on the wiki.
 
