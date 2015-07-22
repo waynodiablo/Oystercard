@@ -120,7 +120,7 @@ Now in our controller, we don't need to check `current_user.has_reviewed?(@resta
 ```
 def create
   @restaurant = Restaurant.find review_params[:restaurant_id]
-  @review = @restaurant.build_review current_user, review_params
+  @review = @restaurant.build_review review_params, current_user
 
   if @review.save
     redirect_to restaurants_path
