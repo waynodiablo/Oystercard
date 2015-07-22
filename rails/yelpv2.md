@@ -188,7 +188,7 @@ Create a [Facebook Developer application](http://developers.facebook.com), makin
 
 Now follow the instructions on the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview), ensuring you read the next section straight after about keeping your private details safe!
 
-Note that Devise will add the link to Facebook sign-up automatically, so you don't need to follow that step on the wiki.
+Note that Devise will add the link to Facebook sign-up automatically and you don't need to add the sign out to the config/routes (since Device also deos that), so you don't need to follow those steps on the wiki.
 
 Under Settings => Advanced in your Facebook Developer dashboard, you need to add http://localhost:3000 as a valid redirect URI.
 
