@@ -2,7 +2,7 @@
 
 ***As with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach these as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-So how did you try to deal with the error we saw at the end of stage 1?  Here it is again:
+So what did you and your pair partner think about the error we saw at the end of stage 1?  Here it is again:
 
 ```
 $ irb
