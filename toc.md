@@ -11,7 +11,7 @@
 * Week 5: [Intro to Javascript: Thermostat](thermostat/thermostat.md)
 * Week 6: [Lab week](lab_week/lab_week.md)
 * Week 7: [Intro to Rails](https://github.com/makersacademy/course/blob/master/rails/introduction_to_rails.md)
-* Week 8: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/github_profiles.md)
+* Week 8: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/further_javascript.md)
 * Week 9: \[[Makerthon](https://github.com/makersacademy/course/blob/master/makerthon/introduction.md), [MakerMix](https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md)\]
 * Weeks 10-11: Final Projects
 * Week 12: Hiring week
