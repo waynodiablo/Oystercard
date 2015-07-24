@@ -69,7 +69,7 @@ end
 ```
 Remember, we will need also to require this examples file in `bike_container_test_spec.rb`.
 
-We've chosen the default capacity as the first behaviour to model as it feels like a suitable place to start.  So how de we make this test pass?  Let's create the module!
+We've chosen the default capacity as the first behaviour to model as it feels like a suitable place to start.  So how do we make this test pass?  Let's create the module!
 `lib/bike_container.rb`:
 
 ```ruby
