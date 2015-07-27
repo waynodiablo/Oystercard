@@ -46,7 +46,7 @@ Our test is not *isolated*.  It is dependent on another component of the system 
 
 So how do we overcome this?  This is where we introduce *doubles*.  A *double* is a temporary, disposable object that we can use as a stand-in for some other real object - like a `Bike` for example.  The difference is, we can precisely define the behaviour of a double on a test-by-test basis to remove any uncertainty that the real object might introduce.
 
-Have a read of the [doubles pill&nbsp;:pill:](../pills/doubles.md) for an introduction to the different types of doubles and a link to RSpec's implementation of them ([Rspec mocks](https://relishapp.com/rspec/rspec-mocks/docs)).
+Have a read of the [doubles pill&nbsp;:pill:](https://github.com/makersacademy/course/blob/master/pills/doubles.md) for an introduction to the different types of doubles and a link to RSpec's implementation of them ([Rspec mocks](https://relishapp.com/rspec/rspec-mocks/docs)).
 
 Let's take a look at our `dock` test:
 
