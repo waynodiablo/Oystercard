@@ -1,6 +1,6 @@
 # Active Record
 
-Web frameworks typically include a friendly way of getting your web app talking to a database. These are called **ORMs**, short for *object-relational mapping*. 
+Web frameworks typically include a friendly way of getting your web app talking to a database. These are called **ORMs**, short for *object-relational mapping*.
 
 In Sinatra, you've used DataMapper to perform this task. In Rails, the built-in ORM is **Active Record**.
 
@@ -46,7 +46,7 @@ Or in two steps with `User.new` and then `User.save`:
 
 ```ruby
 # creates a user but doesn't save it to the database
-user = User.new 
+user = User.new
 
 # give the user some properties:
 user.name = "Spike"
@@ -68,5 +68,6 @@ Active Record also deals with migrations. (Is there *anything* it doesn't do?)
 
 ## Further reading
 
+* [Koans for Performing Active Record Migrations](https://github.com/ptolemybarnes/rails-migration-koans)
 * [Martin Fowler, *Patterns of Enterprise Application Architecture*](http://books.google.co.uk/books?id=FyWZt5DdvFkC&lpg=PA1&dq=Patterns%20of%20Enterprise%20Application%20Architecture%20by%20Martin%20Fowler&pg=PT187#v=onepage&q=active%20record&f=false) – Google Books
 * [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html) – RailsGuides
