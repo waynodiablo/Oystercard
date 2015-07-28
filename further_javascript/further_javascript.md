@@ -1,4 +1,4 @@
-#Week 7 - Further JavaScript
+#Week 8 - Further JavaScript
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
