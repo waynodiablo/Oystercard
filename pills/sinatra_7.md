@@ -22,7 +22,7 @@ This is what it's going to look like:
 
 ![alt text](images/sinatra/sinatra_basic_8.png)
 
-So, what is happening in this code? First, we check if we have a value in @visitor. If we do, we greet the user. If we don't we display a form, described by yet another HTML tag.
+So, what is happening in this code? First, we check if we have a value in @visitor. If we do, we greet the user. If we don't, we display a form, described by yet another HTML tag.
 
 The form tag creates a form that sends the data back to the server when it's submitted. The URL that the form data is sent to is defined by the **action** attribute. The data that is sent is determined by the fields that are present inside the form (before the closing </form> tag).
 
