@@ -26,7 +26,7 @@ I want to have a blacklist of students I will never be paired with
 So that I never have to listen to them speak  
 ```
 
-**Optional** (more difficult, and potentially more than 3 days' work)
+**Optional** (more difficult, and potentially more than a few days' work)
 
 ```
 As a security-conscious maker
