@@ -677,7 +677,7 @@ So, let's start moving http functionality over from the controller to the servic
 beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend
     httpBackend
-      .when("https://api.github.com/search/users?q=hello")
+      .when("GET", "https://api.github.com/search/users?q=hello")
       .respond(
         { items: items }
       );
@@ -692,6 +692,7 @@ it('returns search results', function() {
     .then(function(response) {
       expect(response.data).toEqual(items)
     })
+  httpBackend.flush();  
 })
 ```
 So what is all this? HTTP requests in Angular return a promise. This means you have to wait for the request to be fulfilled in order for that promise to contain the data you need. The `.then` method will wait for a promise to be completed before executing the code - in this case, our expectation. Watch the test fail, then let's fix the code:
