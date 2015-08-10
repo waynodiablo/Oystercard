@@ -4,7 +4,7 @@ For the most part, you can follow the regular tutorial. If you run into issues, 
 
 ### Issues installing the `do_postgres` gem
 
-Try installing the Postgres 9.3 server header files like this:
+Try installing the Postgres 9.3 server development headers like this:
 
 ```sh
 sudo apt-get install postgresql-9.3 postgresql-server-dev-9.3 libpq-dev
