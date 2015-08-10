@@ -1,4 +1,4 @@
-# Installing Postgres on Nitrous
+# PostgreSQL for Nitrous
 
 For the most part, you can follow the regular tutorial. If you run into issues, try the following:
 
