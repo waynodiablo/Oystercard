@@ -4,7 +4,7 @@ Postgres is a widely used open source [relational database](http://en.wikipedia.
 
 ### Installation
 
-(Linux users may want to start [here](postgres_linux.md))
+(Linux users may want to start [here](postgres_linux.md) and Nitrous users may want to start [here](postgres_nitrous.md)
 
 There are two ways of doing this. Firstly, you can download the PostgreSQL app. However, the app can sometimes be problematic, and actually leave you with a non-working PostgreSQL installation.
 
