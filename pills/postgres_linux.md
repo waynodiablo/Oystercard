@@ -47,7 +47,7 @@ psql
 \q # to exit psql
 ```
 
-Finally, you need to allow your system to modify databases from the localhost without a prompt (this may be a minor security issue depending on who has access to your machine and what you intend to run on it, but experience taught us that getting passwords to work was futile). To do this you need to edit you `pg_hba.conf` file. Depending on your system, this may be in `/var/lib/psql/data` or `/etc/postgres/9.3/main` – use your Unix Command skills from the precourse to find it if necessary! You will need to edit a line in the file (probably as `root` too):
+Finally, you need to allow your system to modify databases from the localhost without a prompt (this may be a minor security issue depending on who has access to your machine and what you intend to run on it, but experience taught us that getting passwords to work was futile). To do this you need to edit you `pg_hba.conf` file. Depending on your system, this may be in `/var/lib/psql/data` or `/etc/postgres/9.3/main` – use your Unix Command skills from the precourse to find it if necessary! You will need to edit a line in the file (probably as `root` too*):
 
 ```bash
 # Change…
@@ -55,6 +55,8 @@ host    all             all             127.0.0.1/32            md5
 # …to…
 host    all             all             127.0.0.1/32            trust
 ```
+
+* If you're unable to change the file due to a permissions problem, use `sudo su` and input your password, and then try again. That will put you into a `root` environment so you can override any permissions.
 
 You should now be ready to continue with the Postgres [pill](postgres.md#more-fun-commands).
 
