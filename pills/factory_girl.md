@@ -94,9 +94,9 @@ It's straightforward to override the set defaults. Imagine we need two users wit
 
     # EXERCISE
     sender.communicate(message: "HI!", to: receiver)
-    sign_in_as(receiver)
 
     # VERIFY
+    sign_in_as(receiver)
     expect(page).to have_content "HI!"
   end
   # TEARDOWN (handled by DatabaseCleaner)
