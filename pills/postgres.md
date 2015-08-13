@@ -42,4 +42,4 @@ The last command quits out of the postgres terminal.
 
 From now on you will be able to log in to postgresql without having to specify the database you want to log into.
 
-Checkout the [playing_with_postgres_and_datamapper.md](Playing with Postgres and DataMapper pill) for an introduction on using Postgres and how it works with an ORM, DataMapper.
+Checkout the [playing_with_postgres_and_datamapper.md](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md) for an introduction on using Postgres and how it works with an ORM, DataMapper.
