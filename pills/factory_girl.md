@@ -64,7 +64,7 @@ RSpec.configure do |config|
     config.include FactoryGirl::Syntax::Methods
 end
 ```
-* Define your factory. FactoryGirl will look for factories within a `factory` folder within `spec`. The files themselves should be named after the model they contain factories for. For example:  
+* Define your factory. FactoryGirl will look for factories within a `factories` folder within `spec`. The files themselves should be named after the model they contain factories for. For example:  
 
 ```ruby
 # ./spec/factories/user.rb
