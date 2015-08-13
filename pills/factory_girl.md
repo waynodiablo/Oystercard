@@ -93,7 +93,7 @@ It's straightforward to override the set defaults. Imagine we need two users wit
     receiver = create(:user, email: 'receiver@email.com', username: 'receiver_user')
 
     # EXERCISE
-    sender.send(message: "HI!", to: receiver)
+    sender.communicate(message: "HI!", to: receiver)
     sign_in_as(receiver)
 
     # VERIFY
