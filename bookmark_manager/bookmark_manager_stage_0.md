@@ -26,7 +26,7 @@ feature 'Viewing links' do
 end
 ```
 
-When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called `Link`.  Before we do that though, let's think about what is a `Link`?
+When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called `Link`.  Before we do that though, let's think about what a `Link` is.
 
 We know that links need to be saved (persisted) somewhere and that we want to use a database.  So we want our `Link` class to somehow map to a database...
 
