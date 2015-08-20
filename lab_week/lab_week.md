@@ -18,5 +18,8 @@ It is entirely up to you how you approach Lab Week but we strongly recommend:
 ### What support can I expect during Lab Week?
 During lab week coaches are generally not available as they are conducting their own retrospective and planning activities related to developing the course and related materials.  To help with planning and retrospectives, some coaches may be available for Monday 9am and Friday 9am stand-ups.  We will also help scaffold the planning of lab week activities where required.
 
+### Objectives
+There are some project-based [learning objectives](learning_objectives.md), but you should create a set of learning objectives of your own at the start of lab week.  This will help you to review your progress.  You should also create a git repository to contain the code and/or documents created during the week.
+
 ###Tips:
 Review the [escalation process](https://github.com/makersacademy/course/blob/master/pills/escalation_process.md) and use [slack-overflow](https://github.com/makersacademy/slack-overflow) to get issues resolved.
