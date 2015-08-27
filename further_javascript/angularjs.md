@@ -360,8 +360,8 @@ Check your tests again. This time the second test is passing but the original on
 To get the data we've just added to our controller into your view, amend your `index.html`, replacing the `ul.list-group` with the following:
 
 ```html
-<ul class="list-group" ng-repeat="user in searchCtrl.searchResult.items">
-  <li>
+<ul class="list-group">
+  <li ng-repeat="user in searchCtrl.searchResult.items">
     <img ng-src="{{user.avatar_url}}&s=50">
     <a ng-href="{{user.html_url}}">{{user.login}}</a>
   </li>
