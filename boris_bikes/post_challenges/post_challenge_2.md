@@ -41,7 +41,7 @@ describe DockingStation do
 
   describe '#dock' do
     it 'raises an error when full' do
-      subject.dock Bike.new
+      subject.dock(Bike.new)
       expect { subject.dock Bike.new }.to raise_error 'Docking station full'
     end
   end
@@ -52,7 +52,7 @@ Let's make our failing unit test pass:
 
 ```ruby
 class DockingStation
-  def dock bike
+  def dock(bike)
     fail 'Docking station full' if @bike
     @bike = bike
   end
@@ -125,7 +125,7 @@ class DockingStation
     @bikes.pop
   end
 
-  def dock bike
+  def dock(bike)
     fail 'Docking station full' if @bikes.count >= 20
     @bikes << bike
   end
@@ -160,7 +160,7 @@ class DockingStation
     @bikes.pop
   end
 
-  def dock bike
+  def dock(bike)
     fail 'Docking station full' if full?
     @bikes << bike
   end
