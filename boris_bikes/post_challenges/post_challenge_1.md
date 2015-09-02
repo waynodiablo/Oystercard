@@ -82,7 +82,7 @@ class DockingStation
     Bike.new
   end
 
-  def dock bike
+  def dock(bike)
 
   end
 end
@@ -119,7 +119,7 @@ class DockingStation
     fail 'No bikes available'
   end
 
-  def dock bike
+  def dock(bike)
 
   end
 end
@@ -142,7 +142,7 @@ class DockingStation
     @bike
   end
 
-  def dock bike
+  def dock(bike)
     @bike = bike
   end
 end
@@ -183,7 +183,7 @@ class DockingStation
     @bike
   end
 
-  def dock bike
+  def dock(bike)
     @bike = bike
   end
 end

@@ -107,7 +107,7 @@ module BikeContainer
 
   attr_reader :capacity
 
-  def initialize capacity = DEFAULT_CAPACITY
+  def initialize(capacity = DEFAULT_CAPACITY)
     @capacity = capacity
   end
 end
@@ -163,7 +163,7 @@ And let's make them pass:
 module BikeContainer
   # other code omitted for brevity
 
-  def initialize capacity = DEFAULT_CAPACITY
+  def initialize(capacity = DEFAULT_CAPACITY)
     @capacity = capacity
     @bikes = []
   end
@@ -278,7 +278,7 @@ class DockingStation
     bikes.delete working_bikes.pop
   end
 
-  def dock bike
+  def dock(bike)
     add_bike bike
   end
 

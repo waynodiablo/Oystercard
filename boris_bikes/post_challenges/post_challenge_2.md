@@ -237,7 +237,7 @@ class DockingStation
     @capacity = DEFAULT_CAPACITY
   end
 
-  def dock bike
+  def dock(bike)
     fail 'Docking station full' if full?
     bikes << bike
   end
@@ -300,7 +300,7 @@ which would rely on an initialize method in our class
 
 ```ruby
 class DockingStation
-  def initialize capacity
+  def initialize(capacity)
     @capacity = capacity
   end
 end

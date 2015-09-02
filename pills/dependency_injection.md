@@ -19,7 +19,7 @@ Dependency injection provides a solution to this problem.  At the moment Docking
 
 ```ruby
 class DockingStation
-  def initialize klass
+  def initialize(klass)
     @klass = klass
   end
   def release_bike

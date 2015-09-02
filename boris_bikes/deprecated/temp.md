@@ -239,7 +239,7 @@ class DockingStation
 
   attr_reader :capacity
 
-  def initialize capacity = DEFAULT_CAPACITY
+  def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
     @capacity = capacity
   end
@@ -249,7 +249,7 @@ class DockingStation
     bikes.delete working_bikes.pop
   end
 
-  def dock bike
+  def dock(bike)
     fail 'Docking station full' if full?
     bikes << bike
   end
@@ -291,7 +291,7 @@ module BikeContainer
     @capacity = value
   end
 
-  def dock bike
+  def dock(bike)
     fail 'Station Full' if full?
     bikes << bike
   end
