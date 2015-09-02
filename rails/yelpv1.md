@@ -394,7 +394,7 @@ class CreateRestaurants < ActiveRecord::Migration
 end
 ```
 
-Note that as well as the string name property that we specified in the generator timestamps are automatically added for us (so when models are created and updated we'll be able to look up when that happened), and that also the migration itself is timestamped based on when we ran the generate command
+Note that as well as the string name property that we specified in the generator, two timestamp columns are automatically added so we know when a given record was created or last updated. The migration itself is timestamped based on when we ran the generate command.
 
 * We can run our tests now, but we'll get a reminder that we need to actually run these migrations in order to support the Restaurant model that we want to work with:
 
