@@ -1210,7 +1210,7 @@ validates :name, length: {minimum: 3}
 
 That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saved – but not the original feature test. Let's fix our feature test now.
 
-Currently our restaurants controller will redirect to `restaurants_path`, regardless of whether or not a restaurant that has been passed to its `create` method has been successfully created (saved to the database) – so let's change that.
+Currently the ```create``` action on the restaurants controller will redirect to `restaurants_path`, regardless of whether or not a restaurant has been successfully created – so let's change that.
 
 `app/controllers/restaurants_controller.rb`:
 
