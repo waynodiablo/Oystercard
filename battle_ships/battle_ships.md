@@ -14,8 +14,8 @@ When all of one player's ships have been sunk the game finishes and the player w
 
 Please see the [Learning Objectives](learning_objectives.md) for this project and also the resources at the bottom of this page.
 
-## Talks this week:
-We will cover a number of more advanced OO concepts this week, referencing the projects we have covered so far.
+## Potential research topics this week:
+We will encounter a number of more advanced OO concepts this week, referencing the projects we have covered so far.
 
 * *Class methods*:  creating different types of ship
 * *Dependency inversion*: dealing with the weather in Airport Challenge.
