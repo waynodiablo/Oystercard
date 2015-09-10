@@ -17,6 +17,10 @@ As a promiscuous maker
 I want to see a sorted list of people in my cohort that I have/have not paired with
 So that I can keep pairing with more people
 
+As an odd maker in an odd-numbered cohort
+I want to work in a three
+So that I am not forever alone
+
 As a shy maker  
 I want a pair partner to be randomly assigned to me  
 So that I don’t have to ask them  
