@@ -38,11 +38,7 @@ Last week you created a playable battleships game for the terminal. You separate
 
 * [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
 
-Start by creating a BattleshipsWeb folder in your projects directory.
-
-If you are importing your own battleships code, or code from one of the examples other than the gem, make sure that the code is in the right places. As before we will need a `lib` and a `spec` directory.
-
-[Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
+Start by creating a BattleshipsWeb folder in your projects directory. It is important to make sure that the code is in the right places. As before we will need a `lib` and a `spec` directory. [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
 .
