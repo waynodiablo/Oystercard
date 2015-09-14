@@ -2,8 +2,7 @@
 
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
-In this project we are going to take our battleships game to the next level.
-In [the last project](../battle_ships/battle_ships.md) we implemented the battleships game for the terminal.  Please refer to the [learning objectives](learning_objectives.md) for a list of everything we're hoping to cover this week.
+In this project we are going to take our battleships game to the next level. In [the last project](../battle_ships/battle_ships.md) we implemented the battleships game for the terminal.  Please refer to the [learning objectives](learning_objectives.md) for a list of everything we're hoping to cover this week.
 
 Whilst interacting with the computer on the terminal is an essential skill for us developer types, it is far from the preferred way to interact with computers for people in general. Before you even knew there was a terminal you likely did almost everything on a computer via a graphical interface of some sort; either through a dedicated desktop application or through a browser.
 
@@ -39,13 +38,7 @@ Last week you created a playable battleships game for the terminal. You separate
 
 * [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
 
-Note, if you use Ben's version, you should install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
-
-Start by creating a BattleshipsWeb folder in your projects directory.
-
-If you are importing your own battleships code, or code from one of the examples other than the gem, make sure that the code is in the right places. As before we will need a `lib` and a `spec` directory.
-
-[Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
+Start by creating a BattleshipsWeb folder in your projects directory. It is important to make sure that the code is in the right places. As before we will need a `lib` and a `spec` directory. [Sinatra](../pills/sinatra_1.md) can work with just these directories, but in a _"real"_ project you will see a few more. By the end of this project our directory structure will look a little more complex than anything we have seen so far:
 
 ```
 .
@@ -71,7 +64,6 @@ Let's start with a Gemfile. Our Gemfile helps us to keep track of the [gems](../
 ```ruby
 source 'https://rubygems.org'
 
-gem 'battleships' # if you are using Ben's gem
 gem 'sinatra'
 
 group :development, :test do
@@ -82,6 +74,7 @@ group :development, :test do
   gem 'shotgun'
 end
 ```
+Within this Gemfile you should notice quite a few gems that you've not come across before. Before continuing, you should look for a single-sentence definition on each gem you are unfamiliar with. Understand why these things have been placed in the Gemfile, why the Developer before you felt they were useful and how your application is going to depend on them. With that understanding comes great power indeed.
 
 _You might have noticed that we have ordered the gems alphabetically. This is for practical reasons. In bigger projects that use a lot of different gems we want to make sure that we find them in our Gemfile fairly quickly._
 
@@ -93,7 +86,7 @@ Commit your code to Git (you'd already done this though, right?).
 
 ## Version 1: Building an application from the outside in
 
-Everything is set up and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a full-fledged web application; our friends and family can play with our app!
+Everything is set up and ready, but how do we start? If you have been following best practices you know that you have to write a failing test before you write any code. That was a relatively easy task when we were talking about simpler applications. This time though we are building a fully-fledged web application; our friends and family can play with our app!
 
 **Let's get started then, shall we?**
 
@@ -147,6 +140,10 @@ Suppose we had written that feature test _first_ - before writing any unit tests
 
 
 So what are the features we want to test for BattleshipsWeb?  We've already tested the API; now we want to test the user interface...
+
+#### STOP!
+
+Did you just skip over that line regarding the "API"? Did it make sense to you?  Do you understand exactly what the API is in this context? If not it is important that you discuss with your pair partner what that means, and come to an understanding before continuing.
 
 Let's write the first scenario of our first feature (`spec/features/starting_a_game_spec.rb`):
 
@@ -202,6 +199,7 @@ rackup
 [2014-05-19 17:57:39] INFO  ruby 2.1.2 (2014-05-08) [x86_64-darwin13.0]
 [2014-05-19 17:57:39] INFO  WEBrick::HTTPServer#start: pid=14728 port=9292
 ```
+**NOTE:** The code example above uses 'rackup' to start your Sinatra application. How else might you do this? There's a clue in your Gemfile...
 
 and point your browser to your application ( _[http://localhost:9292](http://localhost:9292)_ ).
 
@@ -269,7 +267,7 @@ rspec ./spec/feature/starting_a_game_spec.rb:4 # Starting a new game I am asked 
 
 ```
 
-**We are almost there!** Now we only need to change the button so that it actually takes us to a new page that will ask us for our name. Once we have done this we will see the following output from RSpec:
+**We have almost passed our first feature test!** Now we only need to change the link so that it actually takes us to a new page that will ask us for our name. Once we have done this we will see the following output from RSpec:
 
 ```shell-session
 rspec
@@ -282,6 +280,8 @@ Finished in 0.03279 seconds (files took 0.42197 seconds to load)
 ```
 
 OK, our specs are passing now, but there is something wrong with the scenario we specified; it said "I am asked to enter my name", but we hardly have registered for a new game... Can you modify the scenario to add the necessary steps to make it pass?
+
+**HINT:** You will need to include a HTML form in your view file, which allows the user to input their name, and send it to Sinatra for further processing.
 
 **Tasks**
 
