@@ -1,5 +1,9 @@
 # Playing Battleships in the browser
 
+### IMPORTANT
+
+**At this stage, we feel that while Cucumber is an excellent tool, we would prefer that for now you would instead follow the tutorial using RSpec for feature testing, which can be found [here.](https://github.com/makersacademy/course/blob/master/battle_ships_web/battle_ships_web_rspec.md)**
+
 ***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 In this project we are going to improve on our battleships game.
