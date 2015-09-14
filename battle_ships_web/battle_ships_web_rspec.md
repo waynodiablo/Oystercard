@@ -286,13 +286,74 @@ OK, our specs are passing now, but there is something wrong with the scenario we
 **Tasks**
 
 - Add steps to the scenario
-- Add a scenario for when the player does not input his name
+- Add a scenario for when the player does not input their name
 
-**Exercises**
+## Version 2: Showing the board
+
+Congratulations! You now have the basics of a web application. Now we're going to start adding some more complex logic. Our first complex stage is the rendering of the board. As the game progresses and shots are fired, the board will start to change. As a result, we will need to _re-render_ it after each shot is fired.
+
+So far, you have handled application functionality in the **Controller**. In a standard web application, we want our Controllers to be as 'thin' as possible: any 'heavy lifting' should be passed to a deeper _Application Logic_ layer. For example, let's say we are building a simple calculator:
+
+```ruby
+# inside a server file lives this BAD CODE
+get '/add' do
+  number_1 = params[:number_1] # Make sure you know what the params hash is!
+  number_2 = params[:number_2]
+  @result = number_1 + number_2
+  erb :result # Also make sure you know what erb does
+end
+```
+
+This isn't great code. Why? Because we're performing _addition_ - which is logic - inside the controller code itself. Addition might not seem like 'heavy lifting', but it is: our controllers should deal exclusively with server stuff like routing, rendering, and short-term storage (via the `session` - which you should learn about later). Anything more 'logic-y' than that should be passed to an Application Logic layer. For now, that layer lives in the `/lib` folder.
+
+Here's the above code refactored to pass addition into the application logic:
+
+```ruby
+# inside a server file lives this GOOD CODE
+get '/add' do
+  number_1 = params[:number_1]
+  number_2 = params[:number_2]
+  # Reach into the Calculator class, stored in /lib
+  @result = Calculator.add(number_1, number_2)
+  erb :result
+end
+```
+
+We only changed one line, but now we're asking the application logic to deal with addition instead of trying to shoehorn our controller into doing it. This might seem a bit weird, but one major benefit is that we can now reuse our `Calculator` class inside a different Web Framework, like Rails, or even in a completely different kind of framework altogether, like Apple's WatchKit.
+
+As a result of the above, we'll have a file in `/lib`:
+
+```ruby
+# in /lib/calculator.rb
+class Calculator
+  def self.add(number_1, number_2)
+    number_1 + number_2
+  end
+end
+```
+
+Of course, we'll also have all the unit tests associated with this.
+
+Now we know how to keep our controllers 'thin', we can reach into our Battleships code to perform 'heavy lifting' on things like firing at ships, calculating sunk ships, and winning the game. The controller is nothing more than a conduit for passing the actions required to make these tasks happen in the application logic.
+
+**Tasks**
+
+- Find the part of Steve's Battleships code that prints out a board
+- Add another method to print a board in HTML
+- (Advanced: Consider refactoring this method to accept an `HtmlPrinter` class that outputs HTML)
+- (Advanced 2: Consider refactoring both methods to accept either an `HtmlPrinter` or an `IrbPrinter` class)
+- Set the return value of this method to an instance value within a Sinatra Controller action (like `@result` above).
+- Print (using `<%= %>`) this instance within an `erb` view to render the board as HTML.
+
+## Version 3: Playing some Battleships
+
+OK! You have a board, you have a player - now it's time to get some ships on that board, fire at them, and play the game against a computer player. This is where we withdraw the steps: you have everything you need to get going. Remember to pass any 'heavy lifting' off to the Battleships Application Logic stored in `/lib`.
+
+**Tasks**
 
 * Allow the user to play against the computer by shooting at a randomly generated computer opponent board
 
-## Version 2: Making the game playable by two people
+## Version 4: Making the game playable by two people
 
 We now have the first walking skeleton of our application and we are ready to add more features to describe our application.
 
@@ -305,7 +366,7 @@ For this to happen we need to introduce the concept of a session to our applicat
 - Shooting at each others boards in turns
 - Winning and loosing
 
-## Version 3: Multigame battleships
+## Version 5: Multigame battleships
 
 Up until now our application has been running only for two players at a time. Can you make it work with any amount of players and games ( obviously with two players per game )?
 
