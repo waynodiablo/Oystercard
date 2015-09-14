@@ -35,11 +35,9 @@ Please ensure you have a good understanding of [Sinatra](../pills/sinatra_1.md) 
 
 The first thing we have to do is to setup our project so that it's ready for us to start working on it.
 
-Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to complete your game logic or separate your game logic from your view logic, here are some versions of a battleships game engine you can use as an alternative:**
+Last week you created a playable battleships game for the terminal. You separated the logic of the game from the view ( _how the game is presented to the players_ ), making it modifiable in terms of what interface it is played through, e.g. terminal, web, desktop app etc.  **If you were unable to complete your game logic or separate your game logic from your view logic, here is a version of a battleships game engine you can use as an alternative:**
 
 * [Steve's BattleShips](https://github.com/makersacademy/battle_ships_september)
-* [Tansaku's BattleShips](https://github.com/tansaku/battleships_mvp_sequence)
-* [Ben's Battleships](https://github.com/silvabox/battleships) (`gem install battleships`)
 
 Note, if you use Ben's version, you should install it as a gem.  If you do this, you can start this walkthrough in a clean folder with no code.
 
