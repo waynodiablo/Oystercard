@@ -19,7 +19,7 @@ and we had a test like so
 ```ruby
 describe Foo do
   it 'should bar' do
-    expect(Foo.bar).to eq 'bar'
+    expect(subject.bar).to eq 'bar'
   end
 end
 ```
