@@ -47,4 +47,5 @@ Checkout the [playing_with_postgres_and_datamapper.md](https://github.com/makers
 Resources:
 ---------
 
-* http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/
+* [PostGreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
+* [SQL in one page](http://www.cheat-sheets.org/sites/sql.su/)
