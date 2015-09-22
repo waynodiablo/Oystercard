@@ -22,12 +22,13 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 8. [Back to the unit](8_back_to_the_unit.md)
 9. [Building a bike](9_building_a_bike.md)
 10. [Making Docking Stations get Bikes](10_making_stations_release_bikes.md)
+11. [Using Instance Variables](11_using_instance_variables.md)
+12. [Raising Exceptions](12_raising_exceptions.md)
 
 ### Post-challenges
 
 After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
 
-1. [Post Challenge 1](post_challenges/post_challenge_1.md)
 1. [Post Challenge 2](post_challenges/post_challenge_2.md)
 1. [Post Challenge 3](post_challenges/post_challenge_3.md)
 1. [Post Challenge 4](post_challenges/post_challenge_4.md)

@@ -66,14 +66,6 @@
 - Use `fail` or `raise` to raise an error
 - Use a 'guard condition'
 
-### [Post Challenge 1](post_challenges/post_challenge_1.md)
-
-- Write RSpec tests that require arguments
-- Write RSpec tests that `expect` errors
-- Use `fail` or `raise` to raise an error
-- Set an attribute on an instantiated Object using an `@` instance variable
-- Use a 'guard condition'
-
 ### [Post Challenge 2](post_challenges/post_challenge_2.md)
 
 - Set a complex attribute on an instantiated Object
