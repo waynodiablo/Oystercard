@@ -207,6 +207,7 @@ Your directory should look like this:
 │   ├── models
 │   │   └── link.rb
 │   └── views
+│     └── links
 │       └── index.erb
 └── spec
     ├── features
