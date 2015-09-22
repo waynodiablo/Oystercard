@@ -123,7 +123,7 @@ We are receiving a status code of 404 - which indicates that the path does not e
 </ul>
 ```
 Running our tests now, it shows that our link is not being displayed on the page.
-* :white_check_mark: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass.
+* :white_check_mark: Refer to [DataMapper documentation](http://datamapper.org/docs/create_and_destroy.html) and see if you can get this to pass. Hint: focus on the first line of the test within `viewing_links_spec.rb`.
 
 ## Creating Links
 
