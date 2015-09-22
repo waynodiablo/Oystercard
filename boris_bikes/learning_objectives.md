@@ -61,7 +61,7 @@
 - Set an attribute on an instantiated Object using an `@` instance variable
 - Use `attr_reader` to read an attribute on an instantiated Object
 
-### [Challenge 12](12_raising_errors.md)
+### [Challenge 12](12_raising_exceptions.md)
 - Write RSpec tests that `expect` errors
 - Use `fail` or `raise` to raise an error
 - Use a 'guard condition'

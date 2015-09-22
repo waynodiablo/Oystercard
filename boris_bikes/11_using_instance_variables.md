@@ -2,17 +2,7 @@
 
 [Back to the Challenge Map](0_challenge_map.md)
 
-We now have Docking Stations that can release Bikes. But there's a problem: our Docking Station actually instantiates a _new_ `Bike` instance each time we want one released: 
-
-```ruby
-def release_bike
-  Bike.new
-end
-```
-
-So we've built a Docking Station that gives us infinite bikes.
-
-Our next two User Stories will help us take care of this problem:
+We now have Docking Stations that can release Bikes, but we have no way to `dock` them. Our next two User Stories will help us take care of this problem:
 
 ```
 As a member of the public
