@@ -55,6 +55,17 @@
 - Use RSpec 'predicate' syntax
 - Pass a feature test
 
+### [Challenge 11](11_using_instance_variables.md)
+- Write RSpec tests that require arguments
+- Pass an instance as an argument
+- Set an attribute on an instantiated Object using an `@` instance variable
+- Use `attr_reader` to read an attribute on an instantiated Object
+
+### [Challenge 12](12_raising_errors.md)
+- Write RSpec tests that `expect` errors
+- Use `fail` or `raise` to raise an error
+- Use a 'guard condition'
+
 ### [Post Challenge 1](post_challenges/post_challenge_1.md)
 
 - Write RSpec tests that require arguments
