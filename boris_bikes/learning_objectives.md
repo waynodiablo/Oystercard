@@ -71,13 +71,20 @@
 - Use `fail` or `raise` to raise an error
 - Use a 'guard condition'
 
-### [Post Challenge 2](post_challenges/post_challenge_2.md)
-
+### [Challenge 14](14_complex_attributes.md)
 - Set a complex attribute on an instantiated Object
 - Set an initial attribute value using `initialize`
+
+### [Challenge 15](15_single_responsibility_principle.md)
+- Use the Single Responsibility Principle
 - Refactor code for readability
+
+### [Challenge 16](16_removing_magic_numbers.md)
 - Use a constant
-- Use `attr_reader` to read an attribute on an instantiated Object
+
+### [Challenge 17](17_initialization_defaults.md)
+- Set an initial attribute value using `initialize`
+- Set a default initialization value
 
 ### [Post Challenge 3](post_challenges/post_challenge_3.md)
 

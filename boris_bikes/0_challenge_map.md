@@ -24,12 +24,16 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 10. [Making Docking Stations get Bikes](10_making_stations_release_bikes.md)
 11. [Using Instance Variables](11_using_instance_variables.md)
 12. [Raising Exceptions](12_raising_exceptions.md)
+13. [Limiting Capacity](13_limiting_capacity.md)
+14. [Using Complex Attributes](14_complex_attributes.md)
+15. [The Single Responsibility Principle](15_single_responsibility_principle.md)
+16. [Removing Magic Numbers](16_removing_magic_numbers.md)
+17. [Initialization Defaults](17_initialization_defaults.md)
 
 ### Post-challenges
 
 After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
 
-1. [Post Challenge 2](post_challenges/post_challenge_2.md)
 1. [Post Challenge 3](post_challenges/post_challenge_3.md)
 1. [Post Challenge 4](post_challenges/post_challenge_4.md)
 1. [Post Challenge 5](post_challenges/post_challenge_5.md)
