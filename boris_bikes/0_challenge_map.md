@@ -29,12 +29,12 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 15. [The Single Responsibility Principle](15_single_responsibility_principle.md)
 16. [Removing Magic Numbers](16_removing_magic_numbers.md)
 17. [Initialization Defaults](17_initialization_defaults.md)
+18. [Dealing with Broken Bikes](18_dealing_with_broken_bikes.md)
 
 ### Post-challenges
 
 After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
 
-1. [Post Challenge 3](post_challenges/post_challenge_3.md)
 1. [Post Challenge 4](post_challenges/post_challenge_4.md)
 1. [Post Challenge 5](post_challenges/post_challenge_5.md)
 1. [Post Challenge 6](post_challenges/post_challenge_6.md)

@@ -86,8 +86,7 @@
 - Set an initial attribute value using `initialize`
 - Set a default initialization value
 
-### [Post Challenge 3](post_challenges/post_challenge_3.md)
-
+### [Challenge 18](18_dealing_with_broken_bikes.md)
 - Implement a feature from scratch
 
 ### [Post Challenge 4](post_challenges/post_challenge_4.md)
