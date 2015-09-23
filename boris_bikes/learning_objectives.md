@@ -89,10 +89,11 @@
 ### [Challenge 18](18_dealing_with_broken_bikes.md)
 - Implement a feature from scratch
 
-### [Post Challenge 4](post_challenges/post_challenge_4.md)
-
+### [Challenge 19](19_isolating_tests_with_doubles.md)
 - Explain why doubles are needed to isolate unit tests
 - Use a double to isolate a unit test
+
+### [Challenge 20](20_mocking_behaviour_on_doubles.md)
 - Explain why method stubs are needed to isolate unit tests
 - Use a method stub to isolate a unit test
 - Discuss 'London' and 'Chicago' testing styles

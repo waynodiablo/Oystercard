@@ -50,7 +50,9 @@ end
 There are ways of DRYing the above up, as well: check the Resources for more information.
 
 ### Learning Objectives covered
-- Implement a feature from scratch
+- Explain why method stubs are needed to isolate unit tests
+- Use a method stub to isolate a unit test
+- Discuss 'London' and 'Chicago' testing styles
 
 ### To complete this challenge, you will need to:
 

@@ -30,11 +30,12 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 16. [Removing Magic Numbers](16_removing_magic_numbers.md)
 17. [Initialization Defaults](17_initialization_defaults.md)
 18. [Dealing with Broken Bikes](18_dealing_with_broken_bikes.md)
+19. [Isolating Tests with Doubles](19_isolating_tests_with_doubles.md)
+20. [Mocking Behaviour on Doubles](20_mocking_behaviour_on_doubles.md)
 
 ### Post-challenges
 
 After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
 
-1. [Post Challenge 4](post_challenges/post_challenge_4.md)
 1. [Post Challenge 5](post_challenges/post_challenge_5.md)
 1. [Post Challenge 6](post_challenges/post_challenge_6.md)

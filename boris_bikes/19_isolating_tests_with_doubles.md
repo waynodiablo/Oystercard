@@ -68,7 +68,8 @@ end
 In the next challenge, we'll figure out how to get this test passing (i.e. how to tell a `double` to `respond_to` the `working?` method with the value `true`).
 
 ### Learning Objectives covered
-- Implement a feature from scratch
+- Explain why doubles are needed to isolate unit tests
+- Use a double to isolate a unit test
 
 ### To complete this challenge, you will need to:
 
