@@ -3,7 +3,7 @@
 
 Since we are changing the schema of the database in a destructive way (creating a unique index), we need to execute `DataMapper.auto_migrate!` instead of `DataMapper.auto_upgrade!` after we create a unique index.
 
-Right now our `data_upgrade!` call is in `data_mapper_setup` but this creates two problems. First, we don't want to edit this file every time we want to run `data_migrate!` instead. Second, we don't want to run `data_upgrade` every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
+Right now our `auto_upgrade!` call is in `data_mapper_setup` but this creates two problems. First, we don't want to edit this file every time we want to run `data_migrate!` instead. Second, we don't want to run `data_upgrade` every single time we respond to a request. Let's create a rake task for these operations, so that we could call them manually when we need to.
 
 As we've seen before Rake is a tool for running automated tasks. The tasks are defined in `Rakefile` (with capital R). Add the following to a file called 'Rakefile' in the root folder of the project.
 
