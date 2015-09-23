@@ -177,10 +177,6 @@ Whereas `link.tags` returns an array-like DataMapper Collection, it seems that `
 # within the body of the Tag class (./app/models/tag.rb)
 has n, :links, through: Resource
 ```
-Run your tests again and you should get a whole series of messages referencing SQL errors. Examine the errors, though don't worry about understanding them. Think about what change a 'many-to-many' relationship should make to a database.
-
-The problem is that our declaration in Tag above requires a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes.
-* :white_check_mark: Change `DataMapper.auto_upgrade!` to `DataMapper.auto_migrate!`.
 
 Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see further activities below for implementing the best practice for this).
 
