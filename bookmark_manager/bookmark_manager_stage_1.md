@@ -178,8 +178,7 @@ Whereas `link.tags` returns an array-like DataMapper Collection, it seems that `
 has n, :links, through: Resource
 ```
 
-Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see further activities below for implementing the best practice for this).
-
+Doing so should make your tests go green.
 
 ## Further Activities:
 
