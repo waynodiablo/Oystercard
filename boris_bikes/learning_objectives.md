@@ -66,6 +66,11 @@
 - Use `fail` or `raise` to raise an error
 - Use a 'guard condition'
 
+### [Challenge 13](13_limiting_capacity.md)
+- Write RSpec tests that `expect` errors
+- Use `fail` or `raise` to raise an error
+- Use a 'guard condition'
+
 ### [Post Challenge 2](post_challenges/post_challenge_2.md)
 
 - Set a complex attribute on an instantiated Object
