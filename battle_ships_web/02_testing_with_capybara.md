@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Recall that a web application is a kind of *object*, and objects send and receive *messages*. What's special about web applications is that they send and receive messages over *HTTP*. The content of these messages is typically HTML.
+Recall that a web application is a kind of program that sends and receives messages over *HTTP*. The content of these messages is typically HTML.
 
 In order to test an object like a web application, then, we need a tool that is able to send/receive messages over HTTP as well as process HTML.
 
@@ -32,7 +32,6 @@ To complete this challenge you will need to have Firefox installed.
 ### Resources
 
 - [Selenium](http://www.seleniumhq.org/)
-- [Capybara](https://github.com/jnicklas/capybara)
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
 ### [Solution](solutions/02.md)
