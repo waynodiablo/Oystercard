@@ -11,9 +11,9 @@ In this challenge you will look at the important elements of an HTTP request and
 
 ### To complete this challenge, you will need to:
 
-- [ ] Use cURL's "-v" flag and make a request to 'http://curl.haxx.se/'.
+- [ ] Use cURL's "-v" flag and make a request to 'http://makersipsum.herokuapp.com/'.
 - [ ] Divide what you see into three sections:
-  - [ ] The request headers. 
+  - [ ] The request headers.
   - [ ] The response headers.
   - [ ] The **body** of the response.
 - [ ] For each of the above, explain to your partner which side of the client-server relationship they originate from.
