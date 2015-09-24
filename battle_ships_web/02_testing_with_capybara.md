@@ -6,7 +6,7 @@ Recall that a web application is a kind of *object*, and objects send and receiv
 
 In order to test an object like a web application, then, we need a tool that is able to send/receive messages over HTTP as well as process HTML.
 
-**Automated browsers** are one such technology. **Automated browsers** are just like browsers such as Chrome or Safari, except that they are able to receive instructions **programmatically**, not just from mouse clicks or keyboard presses. How do we write these instructions? In Ruby, we use **Capybara**, an add-on to RSpec, to compose our instructions.
+**Automated browsers** are one such technology. **Automated browsers** are like browsers such as Chrome or Safari, except that they are able to receive instructions **programmatically**, not just from mouse clicks or keyboard presses. How do we write these instructions? In Ruby, we can use **Capybara** as an add-on to RSpec to compose our instructions.
 
 In this challenge you will learn how to use Capybara to send instructions to an automated browser.
 
