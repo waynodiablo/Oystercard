@@ -30,4 +30,4 @@ Additionally, we will use **shotgun** to speed up our development process.
 - [Another Resource (another type, e.g. slides)](http://ruby-doc.org/stdlib-2.0.0/libdoc/irb/rdoc/IRB.html)
 - [Written Resource](http://sjmog.github.io/posts/502_domain-modelling/) <-- look ma, no type
 
-### [Solution](solutions/3.md)
+### [Solution](solutions/????.md)

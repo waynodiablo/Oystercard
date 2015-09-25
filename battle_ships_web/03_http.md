@@ -27,8 +27,4 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 
 ### TO DO
 
-### [Solution](solutions/3.md)
-
-Let's send some data:
-
-``
+### [Solution](solutions/03.md)
