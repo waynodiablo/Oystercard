@@ -1,8 +1,8 @@
-# HTTP II: GET / POST Requests
+# HTTP III: GET / POST Requests
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-So far we've seen that HTTP is used as a means of communicating between clients and servers. We've composed HTTP *requests* that ask a server for information in the form of a web page. In the language of HTTP, this kind of request is typically done as a **GET** request: a request that "gets" information. There are, however, other kinds of request **methods** we can use, such as **POST**.
+So far we've seen that HTTP is used as a means of communicating between clients and servers. We've composed HTTP *requests* that ask a server for information in the form of a web page. In the language of HTTP, this kind of request is typically done as a **GET** request: a request that "gets" information. As we have seen, with a get request, it is possible to pass parameters in the query string. This can cause the server to respond in a specific way. Typically, however, the data we communicate in a query string is not persisted. There are other kinds of request **methods** we can use, such as **POST**.
 
 In this challenge you will learn the different use-cases for two of HTTP methods, GET and POST.
 
@@ -27,4 +27,4 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 
 ### TO DO
 
-### [Solution](solutions/03.md)
+### [Solution](solutions/04.md)
