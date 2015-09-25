@@ -10,12 +10,11 @@ In this challenge you will learn about the client - server relationship.
 - Understand the client-server relationship.
 
 ### Challenge setup
-
-This challenge uses [cURL](http://curl.haxx.se/), a command line tool useful for making HTTP requests. It comes with the operating system.
+This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line tool useful for making HTTP requests. Install it from the command line with: `brew install httpie`.
 
 ### To complete this challenge, you will need to:
 
-- [ ] From the command line, use cURL to make a request to 'http://curl.haxx.se/'.
+- [ ] From the command line, use httpie to make a request to 'http://curl.haxx.se/'.
 - [ ] Explain to your partner what you see.
 - [ ] Explain to your partner:
   - [ ] what the "client" is in this situation.
@@ -23,8 +22,8 @@ This challenge uses [cURL](http://curl.haxx.se/), a command line tool useful for
 
 ### Resources
 
-- [cURL Cheat Sheet](http://www.lornajane.net/posts/2008/curl-cheat-sheet)
-- cURL manual: type `man curl` from the command line
+- [httpie usage](https://github.com/jkbrzt/httpie#usage)
+- httpie manual: type `man httpie` from the command line
 - [Client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
 
 ### [Solution](solutions/3.md)

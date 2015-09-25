@@ -7,11 +7,14 @@ As we have seen, the web is a system of clients and servers talking to each othe
 In this challenge you will look at the important elements of an HTTP request and response.
 
 ### Learning Objectives covered
-- Understand what request and response **headers** are.
+- Recognise a request and a response and some of the important elements of each.
+
+### Challenge setup
+This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line tool useful for making HTTP requests. Install it from the command line with: `brew install httpie`.
 
 ### To complete this challenge, you will need to:
 
-- [ ] Use cURL's "-v" flag and make a request to 'http://makersipsum.herokuapp.com/'.
+- [ ] Use httpie's "-v" flag and make a request to 'http://makersipsum.herokuapp.com/'.
 - [ ] Divide what you see into three sections:
   - [ ] The request headers.
   - [ ] The response headers.
@@ -20,7 +23,6 @@ In this challenge you will look at the important elements of an HTTP request and
 
 ### Resources
 
-- [cURL: How can I see request headers?](http://stackoverflow.com/questions/866946/how-can-i-see-the-request-headers-made-by-curl-when-sending-a-request-to-the-ser)
-- [cURL: How can I see response headers?](http://stackoverflow.com/questions/10060098/getting-only-response-header-from-http-post-using-curl)
+# TO DO 
 
 ### [Solution](solutions/3.md)

@@ -1,11 +1,11 @@
 # Solution - The Web: An Introduction
 
-cURL must be the most powerful tool in the UNIX toolbox! Let's use it to make a request to the cURL homepage:
+HTTPie must be the most powerful tool in the UNIX toolbox! Let's use it to make a request to the makersipsum page:
 ```sh
-$ curl http://makersipsum.herokuapp.com/
+$ http http://makersipsum.herokuapp.com/
 ```
 
-In this example, our command line is the client and "http://makersipsum.herokuapp.com/" is the server. Using cURL, we make a request for information, which the server provides and cURL dumps to the terminal.
+In this example, our command line is the client and "http://makersipsum.herokuapp.com/" is the server. Using httpie, we make a request for information, which the server provides and httpie dumps to the terminal.
 
 The information we get back is in the form of text, marked up with HTML.
 

@@ -1,35 +1,35 @@
 # Solution - The Hypertext Transfer Protocol
 
-The following command makes a request to 'http://curl.haxx.se/' with "verbose" mode enabled:
+The following command makes a request to 'http://makersipsum.herokuapp.com/' with "verbose" mode enabled:
 
 ```sh
-curl -v http://curl.haxx.se/
+http -v http://makersipsum.herokuapp.com/
 ```
 
 Let's divide the response into three sections:
 ```
-> GET / HTTP/1.1
-> Host: makersipsum.herokuapp.com
-> User-Agent: curl/7.43.0
-> Accept: */*
->
+GET / HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: makersipsum.herokuapp.com
+User-Agent: HTTPie/0.9.2
 ```
-Above is the *request*. It contains request headers and other information. This originates from the *client*: we sent it!
+Above is the *request*. It contains request headers and other information. This originates from the *client*, "HTTPie/0.9.2", we sent it!
 
 ```
-< HTTP/1.1 200 OK
-< Connection: keep-alive
-< Content-Type: text/html;charset=utf-8
-< Content-Length: 681
-< X-Xss-Protection: 1; mode=block
-< X-Content-Type-Options: nosniff
-< X-Frame-Options: SAMEORIGIN
-< Server: WEBrick/1.3.1 (Ruby/2.0.0/2015-04-13)
-< Date: Thu, 24 Sep 2015 16:56:51 GMT
-< Via: 1.1 vegur
-<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 681
+Content-Type: text/html;charset=utf-8
+Date: Fri, 25 Sep 2015 11:21:44 GMT
+Server: WEBrick/1.3.1 (Ruby/2.0.0/2015-04-13)
+Via: 1.1 vegur
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
 ```
-Above are the *response* headers. They originate from the server.
+Above are the *response* headers. They originate from the server. We can see information such as what language the server is running on.
 
 ```
 <h1>This is the beginning of the response body</h1>
