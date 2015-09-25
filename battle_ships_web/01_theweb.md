@@ -14,7 +14,7 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 
 ### To complete this challenge, you will need to:
 
-- [ ] From the command line, use httpie to make a request to 'http://curl.haxx.se/'.
+- [ ] From the command line, use httpie to make a request to 'http://makersipsum.herokuapp.com'
 - [ ] Explain to your partner what you see.
 - [ ] Explain to your partner:
   - [ ] what the "client" is in this situation.
