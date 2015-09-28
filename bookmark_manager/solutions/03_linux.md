@@ -67,3 +67,5 @@ host    all             all             127.0.0.1/32            trust
 [Postgres Install on Ubuntu - Github Issue](https://github.com/datamapper/do/issues/66)
 
 [Fedora Wiki](https://fedoraproject.org/wiki/PostgreSQL)
+
+[next challenge](../04_postgres_in_the_raw.md)

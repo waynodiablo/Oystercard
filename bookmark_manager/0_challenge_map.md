@@ -26,13 +26,16 @@ This is the basic view of the website. You will build it by working through the 
 ## Challenges
 
  1. [Creating User stories](01_creating_user_stories.md)
- 2. Viewing links
- 3. ....
+ 2. [Understanding Databases](02_understanding_databases.md)
+ 3. [Setting up a Database](03_setting_up_a_database.md)
+ 4. [Postgres in the Raw](04_postgres_in_the_raw.md)
+ 5. [Viewing Links](05_viewing_links.md)
+ 6. ...
 
 
 ---------------
 
-## Bookmark Manager Outline
+## Old Bookmark Manager Outline
 
 * [Viewing and creating links](bookmark_manager_stage_0.md)
 * [Tagging links](bookmark_manager_stage_1.md)

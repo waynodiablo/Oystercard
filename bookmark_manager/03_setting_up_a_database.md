@@ -16,7 +16,6 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 - [ ] Check your installation by running `psql` in the terminal
 - [ ] Create a database in Postgres with your username
 
-
 ## Resources
 
 * [Homebrew Package Manager](http://brew.sh/)

@@ -11,3 +11,5 @@ Try installing the Postgres 9.3 server development headers like this:
 Suggestion from [here](https://github.com/datamapper/do/issues/66)
 
 If that doesn't work, try using Ruby 2.1.5 (2.1.1 is ideal, but Nitrous won't let you downgrade that far).
+
+[next challenge](../04_postgres_in_the_raw.md)
