@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The internet is a system of **server-client** relationships. There are many different kinds of **client** and **server** but the relationship is the same: the client is dependent on the server for providing and managing information.
+The web is a system of **server-client** relationships. There are different kinds of **clients** and **servers** but the relationship is roughly the same: the client is dependent on the server for providing and managing information.
 
 In this challenge you will learn about the client - server relationship.
 
@@ -19,6 +19,7 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 - [ ] Explain to your partner:
   - [ ] what the "client" is in this situation.
   - [ ] what the "server" is in this situation.
+- Repeat the same process in a browser.
 
 ### Resources
 

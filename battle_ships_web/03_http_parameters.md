@@ -2,13 +2,14 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-So far we've seen that HTTP requests and responses are the signals pinging between servers and clients. Every HTTP-based interaction involves a server-client relationship. In the previous challenge, we used httpie client to retrieve some data. Often, however, when we make a request of a server, we want to tell the server something with that request.
+So far we've seen that HTTP requests and responses are the signals pinging between servers and clients. Every HTTP-based interaction involves a server-client relationship. In the previous challenge, we used httpie client to retrieve some data. Often, however, when we make a request of a server, we want to *tell* the server something with that request.
 
-Within HTTP, we call data sent from a client to a server a **parameter**. Just like Ruby's hashes, parameters come as key-value pairs and a request can contain multiple parameters. One way of sending a parameter to a server is to pass it in the *query string*. The query string is a string that can be appended to a URL and has a special set of formatting conventions.
+Within HTTP, we call data sent from a client to a server a **parameter**. Just like Ruby's hashes, parameters come as key-value pairs and a request can contain multiple parameters. One way of sending a parameter to a server is to pass it in the *query string*. The query string is a string that can be appended to an URL. It has a special set of formatting conventions.
 
 
 ### Learning Objectives covered
-- Learn that parameters are key-value pairs sent with http requests.
+- Recognise the query string in a URL.
+- Learn that query string parameters are key-value pairs sent with http requests.
 - Learn the structure of the query string
 - Learn how to send parameters in the query string
 
@@ -25,6 +26,6 @@ Within HTTP, we call data sent from a client to a server a **parameter**. Just l
 
 ### Resources
 
-TO DO 
+TO DO
 
 ### [Solution](solutions/03.md)
