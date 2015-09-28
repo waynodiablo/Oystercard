@@ -9,7 +9,7 @@ The website will have the following functionality:
 * Add tags to the links
 * Filter links by a tag
 
-First up we will creatr user stories for each in the Stakeholder/Motivation/Action format, e.g.
+First up we will create user stories for each in the Stakeholder/Motivation/Action format, e.g.
 
 ```
 As a Makers Student

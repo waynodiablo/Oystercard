@@ -25,7 +25,7 @@ This is the basic view of the website. You will build it by working through the 
 
 ## Challenges
 
- 1. Creating User stories
+ 1. [Creating User stories](01_creating_user_stories.md)
  2. Viewing links
  3. ....
 
