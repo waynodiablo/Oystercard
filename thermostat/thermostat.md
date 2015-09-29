@@ -1,6 +1,6 @@
 # JavaScript: Thermostat interface
 
-This week we're looking at JavaScript, a very important language, since it is the only language that runs natively in client browsers.  It can also run on the server side, but as the de-facto client language it is hugely important.  Designed in 10 days in the 1990's by Brendan Eich since "if I didn't design it in less than 10 days, something much worse than JavaScript would have happened", JavaScript is a somewhat querky language that combines various elements from different existing languages, and has both great power and some dangerous pitfalls.
+This week we're looking at JavaScript, a very important language, since it is the only language that runs natively in client browsers.  It can also run on the server side, but as the de-facto client language it is hugely important.  Designed in 10 days in the 1990's by Brendan Eich since "if I didn't design it in less than 10 days, something much worse than JavaScript would have happened", JavaScript is a somewhat quirky language that combines various elements from different existing languages, and has both great power and some dangerous pitfalls.
 
 Please check out the [Learning Objectives for this week](learning_objectives.md) and refer to these throughout the week.
 
