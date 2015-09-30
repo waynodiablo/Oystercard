@@ -28,7 +28,7 @@ This is the basic view of the website. You will build it by working through the 
  1. [Creating User stories](01_creating_user_stories.md)
  2. [Understanding Databases](02_understanding_databases.md)
  3. [Setting up a Database](03_setting_up_a_database.md)
- 4. [Postgres in the Raw](04_postgres_in_the_raw.md)
+ 4. [Postgres in the Raw](04_creating_your_first_table.md)
  5. [Viewing Links](05_viewing_links.md)
  6. ...
 
