@@ -9,6 +9,7 @@ You should now see how it's possible to manipulate database data using SQL. Ther
 * Define DataMapper as a gem for including persistence functionality in Ruby classes ('models')
 * Configure DataMapper to use a Postgres database
 * Embellish a ruby class so that it's persisted into a database via DataMapper (!!!New LO)
+* Construct a data schema within a Ruby model
 
 ## To complete this challenge, you will need to
 
