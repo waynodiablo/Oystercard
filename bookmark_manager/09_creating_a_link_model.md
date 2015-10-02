@@ -17,7 +17,7 @@ In this challenge you'll create your a "model" using a Ruby class and DataMapper
 ## To complete this challenge, you will need to
 
 - [ ] Discuss with your pair partner what a "model" is and how it's different from a class or table/relation
-- [ ] Create a 'links' table in Postgres in a 'bookmark_manager_development' database
+- [ ] Create a 'links' table in Postgres in a 'bookmark_manager_test' database
 - [ ] Create a model (DataMapper backed ruby class) in `app/models/link.rb` with `:id`, `:title` and `:url` properties
 - [ ] Ensure that you have a new error related to visiting the links page
 

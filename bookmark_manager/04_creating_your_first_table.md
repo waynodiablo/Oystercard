@@ -1,4 +1,4 @@
-## Postgres in the raw
+## Creating Your First Table
 
 [Back to the Challenge Map](0_challenge_map.md)
 
