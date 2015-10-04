@@ -5,6 +5,8 @@
 1. [JavaScript Basics](1_javascript_basics.md)
 2. [Setting up Jasmine](2_setting_up_jasmine.md)
 3. [FizzBuzz in JavaScript](3_fizzbuzz_in_javascript.md)
+4. [Airport in JavaScript](4_airport_challenge_js.md)
+5. [Thermostat business logic)[5_thermostat_logic.md]
 
 ### What is JavaScript?
 
