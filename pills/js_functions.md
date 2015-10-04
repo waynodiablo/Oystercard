@@ -110,7 +110,7 @@ And just like Ruby's procs and lambdas, we can also create functions that are no
 
 ~~~javascript
 function bark(suffix) {
-  alert('Woof' + suffix)'
+  alert('Woof' + suffix);
 }
 
 bark('!')
