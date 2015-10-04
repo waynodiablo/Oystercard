@@ -18,11 +18,15 @@ A new language means a new environment. So far, you've been used to using IRB or
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will output "Hello, Maker!" when you type `greeting.hello("Maker")`
 - [ ] Create a `hi` function which will output "Hi, Maker!" when you type `hi("Maker")`
 - [ ] Ensure all your code follows [basic JavaScript conventions](/pills/js_conventions.md)
+- [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
+- [ ] Discuss why JavaScript is the "language of the Web"
 
 ### Resources
 - [Using the console](https://developers.google.com/web/tools/javascript/console/index?hl=en)
 - :pill: [`function` in JavaScript](/pills/js_functions.md)
 - :pill: [JavaScript conventions](/pills/js_conventions.md)
+- [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
+- :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
 ### [Solution](solutions/1.md)
 
