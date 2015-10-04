@@ -1,5 +1,10 @@
 # Welcome to JavaScript
 
+### Challenges
+
+1. [JavaScript Basics](1_javascript_basics.md)
+2. [Setting up Jasmine](2_setting_up_jasmine.md)
+
 ### What is JavaScript?
 
 From [Eloquent JavaScript](http://eloquentjavascript.net/):
@@ -22,8 +27,5 @@ It's also a great second language to learn, as it introduces many new language c
 
 This week will begin with revisiting some exercises familiar from Ruby to map underlying language concepts to the new syntax: the infamous FizzBuzz kata, followed by translating your Airport challenge into a new language. You will then build the business logic to model a simple thermostat, and learn to hook it up to a dynamic visual interface using jQuery - all within the browser. Finally, you'll use JavaScript to fetch data from external sources and display that on the page - again, all right from the page. Underpinning all this will be a new testing framework to help you test-drive your JavaScript code - Jasmine.
 
-Let's get started!
 
-### Challenges
-
-1. [JavaScript Basics](1_javascript_basics.md)
+[Let's get started!](1_javascript_basics.md)
