@@ -111,9 +111,9 @@ And just like Ruby's procs and lambdas, we can also create functions that are no
 ~~~javascript
 function bark(suffix) {
   alert('Woof' + suffix)'
-};
+}
 
-bark('!');
+bark('!')
 ~~~
 
 *Tip: in Sublime Text, you can type `proto` and hit Tab in a JS file to autocomplete the boilerplate code for defining a method*
