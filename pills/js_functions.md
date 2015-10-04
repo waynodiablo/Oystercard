@@ -72,7 +72,7 @@ could be rewritten in JavaScript like so:
 
 ~~~ruby
 ['one', 'two', 'three'].forEach(function(number) {
-    alert(number);
+    console.log(number);
 });
 ~~~
 
@@ -84,7 +84,7 @@ Finally we can use `function` to define methods:
 
 ~~~javascript
 Dog.prototype.bark = function() {
-  alert('Woof')
+  console.log('Woof')
 };
 ~~~
 
@@ -99,7 +99,7 @@ Just as in Ruby, a method can accept arguments:
 
 ~~~javascript
 Dog.prototype.bark = function(suffix) {
-  alert('Woof' + suffix);
+  console.log('Woof' + suffix);
 };
 
 fido = new Dog();
@@ -110,7 +110,7 @@ And just like Ruby's procs and lambdas, we can also create functions that are no
 
 ~~~javascript
 function bark(suffix) {
-  alert('Woof' + suffix);
+  console.log('Woof' + suffix);
 }
 
 bark('!')
