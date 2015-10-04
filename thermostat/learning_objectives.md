@@ -15,6 +15,7 @@
 * Recall that Jasmine is a JavaScript testing framework
 * Explain that Jasmine's test environment is the browser
 * Compare and contrast Jasmine and RSpec - syntax, test environment, and portability
+* Use Jasmine to Test-Drive Development
 * Use Jasmine to Test-Drive Development of a thermostat
 * Use Jasmine to Test-Drive Development of a web page with JavaScript functionality
 * Use Jasmine in conjunction with jQuery
