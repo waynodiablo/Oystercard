@@ -5,6 +5,8 @@
 ## JavaScript
 * Describe JavaScript as a scripting language built for the web
 * Understand JavaScript's role in the browser ecosystem
+* Use the Chrome console as a REPL
+* Understand JavaScript language conventions
 * Use JavaScript in pair programming to build a thermostat
 * Analyse some differences between Ruby and JavaScript syntaxes, such as the primacy of `function()` in JavaScript vs. the primacy of `Object` in Ruby
 * Evaluate some benefits of JavaScript as a language above Ruby, and vice-versa
