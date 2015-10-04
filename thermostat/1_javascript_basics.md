@@ -4,6 +4,8 @@
 
 A new language means a new environment. So far, you've been used to using IRB or Pry to try out small code experiments and load your own files. However, this week, the focus is on browser-based (also known as client-side) JavaScript, which means that you'll need to get familiar with some new tools.
 
+In this challenge, you will learn to interact with the JavaScript REPL, create a basic object with a method and write a simple function.
+
 ### Learning Objectives covered
 - Describe JavaScript as a scripting language built for the web
 - Understand JavaScript's role in the browser ecosystem
