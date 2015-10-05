@@ -1,4 +1,4 @@
-# Thermostat: Business Logic
+# Thermostat: business logic
 
 [Back to the Challenge Map](0_challenge_map.md)
 

@@ -1,4 +1,4 @@
-# Thermostat: Interface
+# Thermostat: interface
 
 [Back to the Challenge Map](0_challenge_map.md)
 
