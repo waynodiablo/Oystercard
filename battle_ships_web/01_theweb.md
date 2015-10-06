@@ -2,9 +2,11 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The web is a system of **server-client** relationships. There are different kinds of **clients** and **servers** but the relationship is roughly the same: the client is dependent on the server for providing and managing information.
+The World Wide Web is an information space made up of two chief components: resources (mostly stored on **servers**), and the entities that request those resources (usually called **clients**). When you visit a website, such as http://www.google.com, your browser (e.g. Firefox, Chrome, Safari) acts as a _client_. It requests a resource - in this case, the Google homepage - from a _server_. The server returns the requested resource.
 
-In this challenge you will learn about the client - server relationship.
+The whole Web is built on **client-server** relationships. There are different kinds of **clients** and **servers** but the relationship is roughly the same: the client is dependent on the server for providing and managing information. Anything that can request a resource from a server can be called a client.
+
+In this challenge you will use your command line as a client to interact with a server.
 
 ### Learning Objectives covered
 - Understand the client-server relationship.
