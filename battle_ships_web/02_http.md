@@ -2,9 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-As we have seen, the web is a system of clients and servers talking to each other. But how do they talk to each other? Usually, clients and servers talk to each other using the **HyperText Transfer Protocol. A client makes a **request** to a server and gets back a **response**. It is called a "protocol" because it has a defined structure for requests and responses.
+As we have seen, the web is a system of clients and servers talking to each other. But how do they talk to each other? Usually, clients and servers talk to each other using the **HyperText Transfer Protocol**. A client makes a **request** to a server and gets back a **response**. It is called a "protocol" because it has a defined structure for requests and responses.
 
-In this challenge you will look at the important elements of an HTTP request and response.
+In this challenge you will look at the important elements of an HTTP request and response from the command line.
 
 ### Learning Objectives covered
 - Recognise a request and a response and the important elements of each.
