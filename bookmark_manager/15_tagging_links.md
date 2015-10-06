@@ -27,4 +27,4 @@ In this challenge you will implement a new feature: allowing links to have tags 
 * [Database relations - Pill](https://github.com/makersacademy/course/blob/master/pills/relational_SQL_DBs.md)
 * [DataMapper collection documentation](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection)
 
-## [Solution](solutions/14.md)
+## [Solution](solutions/15.md)
