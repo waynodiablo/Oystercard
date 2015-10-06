@@ -6,7 +6,7 @@ Let's create a basic web application using Sinatra. It will have only one page a
 
 ![What we're making](../images/first_sinatra_route.png)
 
-Now, let's make it happen. Create a new file _hello.rb_ and type the following:
+Now, let's make it happen. Create a new file `app.rb` and type the following:
 
 ````ruby
 require 'sinatra'
@@ -19,7 +19,7 @@ end
 
 Now, run this file.
 
-`$ ruby hello.rb`
+`$ ruby app.rb`
 
 You should see this:
 
