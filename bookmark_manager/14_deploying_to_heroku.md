@@ -2,15 +2,13 @@
 
 [Back to the Challenge Map](0_challenge_map.md)
 
-<!-- Now that we have DatabaseCleaner, whenever we run the tests the contents of the database will be deleted, which is a good thing for testing, but it's not what we want in development and production.
-
-In this challenge you will set up your Rack environment variables to ensure a separation between your `test` and `development` environments. -->
+Now that you understand about the different database environments and have database cleaner configured, you might be asking what about a 'production' environment.  Production means when outside users can access the system.  In general this will involve hosting your application somewhere.  In this challenge we'll host our application on the Heroku cloud hosting service and configure the database for production.
 
 ## Learning Objectives covered
 
 * Differentiate between `development`, `test`, and `production` environments
 * Understand that Heroku is a cloud hosting platform (New LO !!!)
-* Be able to depoy a datamapper/postgres app to Heroku (New LO !!!)
+* Be able to deploy a datamapper/postgres app to Heroku (New LO !!!)
 * Be able to debug a datamapper/postgres app on Heroku (New LO !!!)
 
 ## To complete this challenge, you will need to
