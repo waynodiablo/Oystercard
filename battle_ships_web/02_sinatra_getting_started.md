@@ -25,13 +25,11 @@ For this challenge you will need a Gemfile listing Sinatra as a dependency.
 - [ ] Require `sinatra` at the top of the file.
 - [ ] Run the app from the command line: `ruby app.rb`.
 - [ ] Explain to your partner the significance of what you see in the terminal
+- [ ] Use a browser to visit your application at `http://localhost:4567`
 
 ### Resources
 
-* [Sinatra Main Site](http://www.sinatrarb.com/)
 * [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
-* [Talk Slides on Sinatra Chat Server](http://obfusk.org/achatwithsinatra/#1)
-* [Detailed Talk Slides on Sinatra](http://www.slideshare.net/BobNadlerJr/sinatra-flatiron)
 * [Sinatra Up and Running (Book)](http://shop.oreilly.com/product/0636920019664.do)
 * [Jump Start Sinatra (Book)](http://www.sitepoint.com/store/jump-start-sinatra/)
 
