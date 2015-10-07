@@ -1,0 +1,18 @@
+When you closed the last issue, you added the functionality to make sure a card can only be used to touch in if it has enough money for one journey. Now we need to actually charge the card on touch out.
+
+Update the `touch_out` method to reduce the balance by minimum fare. 
+
+## Learning Objectives covered
+- Use RSpec to check that code changes a variable
+
+## Interview questions you may expect:
+- Why would you use curly braces to pass a block of code to the `expect` method in RSpec?
+
+## To complete this challenge:
+- [ ] Write a test that uses `expect {}.to change{}.by()` syntax to check that a charge is made on touch out.
+- [ ] Update the `touch_out` method to make the test pass
+- [ ] Keep the code DRY
+
+## Suggested resources
+- [expect vs expect with a block on SO](http://stackoverflow.com/questions/19960831/rspec-expect-vs-expect-with-block-whats-the-difference)
+- [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)

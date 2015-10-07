@@ -1,0 +1,32 @@
+The very first step of starting a Ruby project is to initialise it with a Gemfile. Gemfiles act as a reference for all the libraries (‘gems’) we’re going to use in this project. We will use Bundler, a dependency manager, to work with the gems listed in the Gemfile. Finally, we'll use Ruby Version Manager (RVM) to install and manage different versions of Ruby.
+
+In this issue you will create a valid Gemfile for this project.
+
+## Learning Objectives covered:
+- Cloning a project from Github to your local machine
+- Installing and upgrading gems without using Bundler
+- Using RVM to check what ruby versions you have installed and in use
+- Using Gemfile to list the gems that will be used in the project
+
+## Interview questions you may expect:
+- Explain what RVM is and how you use it.
+- Explain how Ruby gems help reuse code across projects.
+- Explain how do you use Bundler to manage Ruby gems.
+- Explain the structure of a Gemfile.
+
+## To complete this challenge:
+- [ ] construct a valid Gemfile
+- [ ] specify a correct source for gems
+- [ ] specify the latest Ruby version
+- [ ] add the `rspec` gem to ‘test’ group
+- [ ] commit only this Gemfile
+
+## Suggested resources
+- [Cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+- [RubyGems basics](http://guides.rubygems.org/rubygems-basics/)
+- [RVM documentation](http://www.rvm.io)
+- [Bundler documentation](http://www.bundler.io)
+- [Gemfile documentation on bundler.io](http://bundler.io/gemfile.html)
+- [What is a Gemfile](http://tosbourn.com/what-is-the-gemfile/)
+
+To link your commits to this issue, reference them as [described in a Github Guide](https://guides.github.com/features/issues/).
