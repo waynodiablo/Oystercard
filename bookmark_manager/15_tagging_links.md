@@ -6,6 +6,12 @@ By now we have a web application that allows us to add new links to the database
 
 In this challenge you will implement a new feature: allowing links to have tags associated with them.
 
+```
+As a time-pressed user
+So that I can organise my many links into different categories for ease of search
+I would like to add tags to the links in my bookmark manager
+```
+
 ## Learning Objectives covered
 
 * Use incoming params to persist models to a database
