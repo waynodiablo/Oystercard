@@ -26,6 +26,7 @@ I would like to add tags to the links in my bookmark manager
   - [ ] Create a Tag model
   - [ ] Refactor the DataMapper configuration into a separate `data_mapper_setup.rb` file
 - [ ] Adjust the controller so that new tags are added to the Link as it is created.
+- [ ] Deploy and confirm everything is running fine on Heroku
 
 ## Resources
 

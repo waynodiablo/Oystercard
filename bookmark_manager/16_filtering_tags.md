@@ -17,6 +17,7 @@ I would like to filter links by tag
 
 - [ ] Write a failing feature test that goes to `tags/bubbles` that checks that only Links tagged with `bubbles` are present
 - [ ] Make the test pass
+- [ ] Deploy and confirm everything is running fine on Heroku
 
 ## Resources
 
