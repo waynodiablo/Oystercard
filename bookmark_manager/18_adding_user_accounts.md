@@ -11,10 +11,10 @@ In this challenge you will create the functionality for signing up for a user ac
 
 ## Learning Objectives covered
 
-* Using DataMapper to manipulate the state of the database from Ruby (new LO!!!!)
-* Know that common tasks are contained within the 'Rakefile'
-* Define common tasks such as migrate
-* Run common tasks from the command line with rake
+* Bcrypt as a library for encrypting/decrypting strings
+* Explain that Bcrypt functionality can be included in Ruby models by including the bcrypt gem
+* Use Bcrypt to encrypt a password and save it to the database
+* Use session to manage a user's authenticated state
 
 ## To complete this challenge, you will need to
 
