@@ -23,7 +23,7 @@ http://localhost:4567/named-cat?name=James&last_name=Cameron
 
 Now, if you modify your erb template to expect this value, you'll see a welcome message if a name is provided:
 
-```html
+```erb
 <% if @name %>
 <h1>My name is <%= @name %></h1>
 <% end %>
