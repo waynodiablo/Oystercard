@@ -10,7 +10,7 @@ In this challenge, you will install Jasmine, set up a new project and try to fin
 - Recall that Jasmine is a JavaScript testing framework
 - Explain that Jasmine's test environment is the browser
 - Use Jasmine to Test-Drive Development of a web page with JavaScript functionality
-- Compare and contrast Jasmine and RSpec - syntax, test environment, and portability
+- Compare and contrast Jasmine and RSpec - syntax, test environment, and extensibility
 
 ### To complete this challenge, you will need to:
 

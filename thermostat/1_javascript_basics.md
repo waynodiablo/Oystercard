@@ -11,12 +11,12 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - Understand JavaScript's role in the browser ecosystem
 - Use the Chrome console as a REPL
 - Understand JavaScript language conventions
-- Analyse some differences between Ruby and JavaScript syntaxes, such as the primacy of `function()` in JavaScript vs. the primacy of `Object` in Ruby
 
 ### To complete this challenge, you will need to:
 
 - [ ] Find the Chrome DevTools Console
 - [ ] Write your first "Hello world!" using `console.log()`
+- [ ] Understand the difference between **literal** and **constructor** notation when creating objects
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will output "Hello, Maker!" when you type `greeting.hello("Maker")`
 - [ ] Create a `hi` function which will output "Hi, Maker!" when you type `hi("Maker")`
 - [ ] Ensure all your code follows [basic JavaScript conventions](/pills/js_conventions.md)
@@ -25,6 +25,7 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 
 ### Resources
 - [Using the console](https://developers.google.com/web/tools/javascript/console/index?hl=en)
+- [Explore and Master Chrome DevTools - Codeschool (Free Tutorial)](http://discover-devtools.codeschool.com/)
 - :pill: [`function` in JavaScript](/pills/js_functions.md)
 - :pill: [JavaScript conventions](/pills/js_conventions.md)
 - [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
