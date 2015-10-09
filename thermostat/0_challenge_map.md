@@ -19,7 +19,7 @@ From [Eloquent JavaScript](http://eloquentjavascript.net/):
 
 >JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible—applications with which you can interact directly, without doing a page reload for every action. But it is also used in more traditional websites to provide various forms of interactivity and cleverness.
 
-JavaScript is a confusing language. It was written in only 10 days by developer Brendan Eich, and has since become one of the most popular and widely used languages. This is mainly due to it being the only language can be run natively in the browser, but also because it offers a huge amount of flexibility in how it's written (e.g. object-oriented, functional), as well as having a great community and ecosystem.
+JavaScript is a confusing language. It was written in only 10 days by developer Brendan Eich, and has since become one of the most popular and widely used languages. This is mainly due to it being the only language that can be run natively in the browser, but also because it offers a huge amount of flexibility in how it's written (e.g. object-oriented, functional), as well as having a great community and ecosystem.
 
 JavaScript is often referred to as the "language of the Web" - it powers most of the dynamic content on websites, as well as increasingly being used elsewhere in the stack, such as servers and databases.
 

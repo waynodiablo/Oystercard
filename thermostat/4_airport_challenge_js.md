@@ -17,9 +17,13 @@ Take your Ruby code and attempt to rewrite it in JavaScript - don't dwell too lo
 
 ### To complete this challenge, you will need to:
 - [ ] Translate your Airport challenge into JavaScript
+- [ ] Be able to explain the difference between an **expression** and a **statement**
+- [ ] Understand how to use `function()` to control the scope of a variable
+- [ ] Be able to emulate a module
 - [ ] Use Jasmine spies
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
+- [Eloquent Javascript - Modules](http://eloquentjavascript.net/10_modules.html)
 
 ### [Solution](solutions/4.md)
