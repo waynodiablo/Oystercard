@@ -16,14 +16,17 @@ use of multiple accounts on the same browser in this challenge you will allow us
 - [ ] Write a failing feature test that checks that:
   - [ ] A user can sign out
   - [ ] A goodbye message is displayed on signing out
+  - [ ] The user is redirected to `/link`
 - [ ] Extract the `sign_in` and `sign_out` methods into a helper module and include it
 in your spec helper
 - [ ] Ensure to test manually locally and on Heroku
 
 ## Resources
 
-* [DELETE method with Sinata](http://stackoverflow.com/questions/5166484/sending-a-delete-request-from-sinatra)
+* [DELETE method with Sinatra](http://stackoverflow.com/questions/5166484/sending-a-delete-request-from-sinatra)
 * [Sinatra Configuration](http://www.sinatrarb.com/configuration.html)
 * [RSpec helper modules](https://www.relishapp.com/rspec/rspec-core/docs/helper-methods/define-helper-methods-in-a-module)
+* [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 
-## [Solution](solutions/22.md)
+
+## [Solution](solutions/24.md)
