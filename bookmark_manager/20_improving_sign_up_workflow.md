@@ -2,13 +2,11 @@
 
 [Back to the Challenge Map](0_challenge_map.md)
 
-Now you have implemented the password confirmation functionality you are sure that
-users have signed up with the correct password.
+Now you have implemented the password confirmation functionality you can be sure that users have signed up with the correct password.
 
-However now our code has no logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the links page. In the controller, the user.id will be nil because datamapper won't save the record if the validations fail.
+However our code does not have any logic for handling the situation when the user enters an incorrect password confirmation. It just fails silently, redirecting the user to the links page. In the controller, the user.id will be nil because datamapper won't save the record if the validations fail.
 
-In this challenge you will create functionality for handling when the passwords do not
-match.
+In this challenge you will create functionality for handling the situation when the passwords do not match.
 
 ## Learning Objectives covered
 
