@@ -11,6 +11,7 @@ In this challenge you will create functionality for handling the situation when 
 ## Learning Objectives covered
 
 * Configure password verification with a password_confirmation field
+* Use the flash to display messages to users
 
 ## To complete this challenge, you will need to
 

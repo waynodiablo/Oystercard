@@ -9,6 +9,7 @@ In this challenge you will create password confirmation functionality.
 ## Learning Objectives covered
 
 * Configure password verification with a password_confirmation field
+* Use validation within models (new LO!!!)
 
 ## To complete this challenge, you will need to
 

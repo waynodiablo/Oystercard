@@ -15,6 +15,8 @@ In this challenge you will create the functionality for signing up for a user ac
 * Explain that Bcrypt functionality can be included in Ruby models by including the bcrypt gem
 * Use Bcrypt to encrypt a password and save it to the database
 * Use session to manage a user's authenticated state
+* Construct a form for signing up ('registering') a user
+* Create a basic registration/authentication system from scratch
 
 ## To complete this challenge, you will need to
 
