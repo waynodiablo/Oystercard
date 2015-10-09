@@ -8,7 +8,7 @@ In this challenge you will create password confirmation functionality.
 
 ## Learning Objectives covered
 
-Configure password verification with a password_confirmation field
+* Configure password verification with a password_confirmation field
 
 ## To complete this challenge, you will need to
 
