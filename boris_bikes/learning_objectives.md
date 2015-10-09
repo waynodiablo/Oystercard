@@ -98,37 +98,24 @@
 - Use a method stub to isolate a unit test
 - Discuss 'London' and 'Chicago' testing styles
 
-### [Post Challenge 5](post_challenges/post_challenge_5.md)
+### [Challenge 21](21_men_with_ven.md)
+- Implement a feature from scratch
 
+### [Challenge 22](22_modules_as_mixins.md)
 - Extract shared behaviour to a Module
-- Mix a Module into a Class using `include`
 - Test Modules
+- Mix a Module into a Class using `include`
 
-### [Post Challenge 6](post_challenges/post_challenge_6.md)
-
+### [Post Challenge](post_challenge.md)
 - Reuse flexible code in a different domain
 - Add an interactive text interface to a program
 
 
-
-### Activities
-* Use BDD/TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
-* Use BDD/TDD and solo programming to approach a slightly more complex model (e.g. Airports) which requires wider use of doubles.
-
 Weekly Challenge
 ===========
 
-## Airport
+### Airport Challenge
 
-**Learning Objectives**
-
-* Simple OOD and OOP creating and linking at least two objects via composition
-* Mocking random behaviour effectively in order to ensure consistent and reliable tests
-* Test driven development (TDD)
-
-## Tube
-
-**Learning Objectives**
-
-* Simple OOD and OOP creating and linking at least two objects via composition
-* Writing effective tests, i.e. doing TDD
+- Use Simple OOD and OOP to create and link at least two objects via composition
+- Use RSpec mocks to mock random behaviour effectively in order to ensure consistent and reliable tests
+- Complete a project from scratch using Test-Driven Development (TDD)

@@ -32,10 +32,11 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 18. [Dealing with Broken Bikes](18_dealing_with_broken_bikes.md)
 19. [Isolating Tests with Doubles](19_isolating_tests_with_doubles.md)
 20. [Mocking Behaviour on Doubles](20_mocking_behaviour_on_doubles.md)
+21. [Men with Ven](21_men_with_ven.md)
+22. [Modules as Mixins](22_modules_as_mixins.md)
 
-### Post-challenges
+### Post-challenge
 
-After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
+After the challenges, you can stretch yourself by implementing additional User Stories that significantly enhance the domain.
 
-1. [Post Challenge 5](post_challenges/post_challenge_5.md)
-1. [Post Challenge 6](post_challenges/post_challenge_6.md)
+1. [Post-challenge](post_challenge.md)
