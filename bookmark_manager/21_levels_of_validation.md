@@ -8,7 +8,6 @@ In this challenge you will create functionality for validating the user supplies
 
 ## Learning Objectives covered
 
-* Configure password verification with a password_confirmation field
 * Use validation within models (new LO!!!)
 
 ## To complete this challenge, you will need to
@@ -23,7 +22,7 @@ In this challenge you will create functionality for validating the user supplies
 
 * [HTML5 Form Validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation)
 * [DataMapper Validations](http://datamapper.org/docs/validations.html)
-* [DM Validations Gem](https://github.com/datamapper/dm-validations)
+* [DM Validations](https://github.com/datamapper/dm-validations)
 * [PostGreSQL constraints](http://www.postgresql.org/docs/9.4/static/ddl-constraints.html)
 
 ## [Solution](solutions/21.md)

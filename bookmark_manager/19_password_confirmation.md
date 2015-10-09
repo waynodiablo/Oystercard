@@ -21,7 +21,7 @@ models, views and controllers.
 ## Resources
 
 * [DataMapper Validations](http://datamapper.org/docs/validations.html)
-* [DM Validations Gem](https://github.com/datamapper/dm-validations)
+* [DM Validations](https://github.com/datamapper/dm-validations)
 * [Why confirm password fields must die](http://uxmovement.com/forms/why-the-confirm-password-field-must-die/)
 * [Do You Need To Confirm/Verify Passwords On Sign Up?](http://www.leemunroe.com/confirm-passwords-signup/)
 
