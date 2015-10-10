@@ -55,65 +55,67 @@
 - Use RSpec 'predicate' syntax
 - Pass a feature test
 
-### [Post Challenge 1](post_challenges/post_challenge_1.md)
-
+### [Challenge 11](11_using_instance_variables.md)
 - Write RSpec tests that require arguments
-- Write RSpec tests that `expect` errors
-- Use `fail` or `raise` to raise an error
+- Pass an instance as an argument
 - Set an attribute on an instantiated Object using an `@` instance variable
-- Use a 'guard condition'
-
-### [Post Challenge 2](post_challenges/post_challenge_2.md)
-
-- Set a complex attribute on an instantiated Object
-- Set an initial attribute value using `initialize`
-- Refactor code for readability
-- Use a constant
 - Use `attr_reader` to read an attribute on an instantiated Object
 
-### [Post Challenge 3](post_challenges/post_challenge_3.md)
+### [Challenge 12](12_raising_exceptions.md)
+- Write RSpec tests that `expect` errors
+- Use `fail` or `raise` to raise an error
+- Use a 'guard condition'
 
+### [Challenge 13](13_limiting_capacity.md)
+- Write RSpec tests that `expect` errors
+- Use `fail` or `raise` to raise an error
+- Use a 'guard condition'
+
+### [Challenge 14](14_complex_attributes.md)
+- Set a complex attribute on an instantiated Object
+- Set an initial attribute value using `initialize`
+
+### [Challenge 15](15_single_responsibility_principle.md)
+- Use the Single Responsibility Principle
+- Refactor code for readability
+
+### [Challenge 16](16_removing_magic_numbers.md)
+- Use a constant
+
+### [Challenge 17](17_initialization_defaults.md)
+- Set an initial attribute value using `initialize`
+- Set a default initialization value
+
+### [Challenge 18](18_dealing_with_broken_bikes.md)
 - Implement a feature from scratch
 
-### [Post Challenge 4](post_challenges/post_challenge_4.md)
-
+### [Challenge 19](19_isolating_tests_with_doubles.md)
 - Explain why doubles are needed to isolate unit tests
 - Use a double to isolate a unit test
+
+### [Challenge 20](20_mocking_behaviour_on_doubles.md)
 - Explain why method stubs are needed to isolate unit tests
 - Use a method stub to isolate a unit test
 - Discuss 'London' and 'Chicago' testing styles
 
-### [Post Challenge 5](post_challenges/post_challenge_5.md)
+### [Challenge 21](21_men_with_ven.md)
+- Implement a feature from scratch
 
+### [Challenge 22](22_modules_as_mixins.md)
 - Extract shared behaviour to a Module
-- Mix a Module into a Class using `include`
 - Test Modules
+- Mix a Module into a Class using `include`
 
-### [Post Challenge 6](post_challenges/post_challenge_6.md)
-
+### [Post Challenge](post_challenge.md)
 - Reuse flexible code in a different domain
 - Add an interactive text interface to a program
 
 
-
-### Activities
-* Use BDD/TDD and pair programming together to create a simple model of the Boris Bikes problem in Ruby.
-* Use BDD/TDD and solo programming to approach a slightly more complex model (e.g. Airports) which requires wider use of doubles.
-
 Weekly Challenge
 ===========
 
-## Airport
+### Airport Challenge
 
-**Learning Objectives**
-
-* Simple OOD and OOP creating and linking at least two objects via composition
-* Mocking random behaviour effectively in order to ensure consistent and reliable tests
-* Test driven development (TDD)
-
-## Tube
-
-**Learning Objectives**
-
-* Simple OOD and OOP creating and linking at least two objects via composition
-* Writing effective tests, i.e. doing TDD
+- Use Simple OOD and OOP to create and link at least two objects via composition
+- Use RSpec mocks to mock random behaviour effectively in order to ensure consistent and reliable tests
+- Complete a project from scratch using Test-Driven Development (TDD)

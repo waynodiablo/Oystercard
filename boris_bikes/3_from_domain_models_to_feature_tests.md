@@ -22,7 +22,7 @@ I'd like a docking station to release a bike.
 
 As a person,
 So that I can use a good bike,
-I'd like to see if a bike works
+I'd like to see if a bike is working
 ```
 
 Here is a functional representation of that story:
@@ -30,7 +30,7 @@ Here is a functional representation of that story:
 Objects  | Messages
 ------------- | -------------
 Person  |
-Bike  | works?
+Bike  | working?
 DockingStation | release_bike
 
 ### To complete this challenge, you will need to:
