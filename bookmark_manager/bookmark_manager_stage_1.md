@@ -169,8 +169,9 @@ First we find the tag that we need (note the use of the parameter `:name` in the
 Run your tests. You might get an epic error message, but if you scroll to the top you'll find the important part:
 
 ```
-Failure/Error: expect(page).not_to have_content('Makers Academy')
-  expected not to find text "Makers Academy" in "NoMethodError at /tags/bubbles undefined method `links' for #<Tag @id=8 @name=\'bubbles\'"
+Failure/Error: visit '/tags/bubbles'
+    NoMethodError:
+      undefined method `links' for #<Tag @id=8 @name="bubbles">
 ```
 Whereas `link.tags` returns an array-like DataMapper Collection, it seems that `tag.links` blows up with a NoMethodError. Looking at the Tag class, it should be relatively clear why: we haven't declared the many-to-many relationship there yet. **Both partners in a many-to-many relationship need to know about each other**. Let's do that:
 ```ruby
