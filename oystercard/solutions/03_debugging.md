@@ -1,4 +1,4 @@
- This issue is somewhat unusual: it's the only issue on the project that won't require you writing code. However, it will require you to demonstrate that you have basic debugging skills that you will absolutely need going forward. Any developer, no matter how experienced, will encounter many error messages every single working day.
+ This challenge is somewhat unusual: it's the only challenge on the project that won't require you writing code. However, it will require you to demonstrate that you have basic debugging skills that you will absolutely need going forward. Any developer, no matter how experienced, will encounter many error messages every single working day.
 
  Error messages are not simply indications of things going wrong, they are meant to help you to understand what the computer is actually doing and how that's different from what you want it to do. Therefore it's essential to understand the error and choose what to do next based on the information given in the error.
 

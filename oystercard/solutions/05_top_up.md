@@ -1,4 +1,4 @@
-This issue is concerned with updating an object's internal state in a controlled manner, by exposing a public interface to allow the object to respond to external messages. If you are unsure as to why you want to control your public methods, have a look
+This challenge is concerned with updating an object's internal state in a controlled manner, by exposing a public interface to allow the object to respond to external messages. If you are unsure as to why you want to control your public methods, have a look into the concept of 'Encapsulation'. Remember to first of all manually feature test your code in IRB or Pry.
 
 - [ ] Write a test for the `top_up` method
 
@@ -56,7 +56,7 @@ describe '#top_up' do
 
   it { is_expected.to respond_to(:top_up).with(1).argument }
 
-  it 'increases the balance' do
+  it 'can top up the balance' do
     expect{ subject.top_up 1 }.to change{ subject.balance }.by 1
   end
 
@@ -79,5 +79,3 @@ end
 ```
 
 Your test should now be green - can you think of a way to refactor? (hint: there is a shortcut in ruby `+=` that may make this a little bit more concise.)
-
-Once you are happy with your code, make a pull request for this issue.
