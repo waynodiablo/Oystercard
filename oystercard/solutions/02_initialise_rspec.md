@@ -25,7 +25,7 @@ git add .rspec
 The first command will add the folder and everything in it. Now, do `git status` to make sure that the list of files in the staging area is correct (there's nothing else), and there's nothing outside the staging area. If you're happy with what `git status` tells you, commit the files and push them:
 
 ```
-git commit -m 'Closing #2: added rspec conventional files'
+git commit -m 'complete challenge #02 add rspec conventional files'
 git push origin master
 ```
 
