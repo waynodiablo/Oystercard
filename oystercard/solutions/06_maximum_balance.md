@@ -1,4 +1,4 @@
-The purpose of this issue is to set an upper limit on the balance of our oyster card. We will do this by adding controls or 'guard clauses' to our top_up method that ensure that the state of an Oystercard instance can only be changed within specified boundaries.
+The purpose of this challenge is to set an upper limit on the balance of our oyster card. We will do this by adding controls or 'guard clauses' to our top_up method that ensure that the state of an Oystercard instance can only be changed within specified boundaries. Remember to use manual feature testing in IRB or Pry to help keep your focus on the behaviour of the application.
 
 - [ ] Write a test that checks the `top_up` method throws an exception if the new balance would exceed the limit.
 
@@ -59,7 +59,7 @@ class Oystercard
   end
 
   def top_up(amount)
-    raise 'Maximum balance exceeded' if amount + balance > MAXIMUM_BALANCE
+    fail 'Maximum balance exceeded' if amount + balance > MAXIMUM_BALANCE
     @balance += amount
   end
 
@@ -78,7 +78,7 @@ Exceptions should be exceptional, so we when we raise an error we need to be rea
 ``` ruby
   it 'raises an error if the maximum balance is exceeded' do
     maximum_balance = Oystercard::MAXIMUM_BALANCE
-    subject.top_up maximum_balance
+    subject.top_up(maximum_balance)
     expect{ subject.top_up 1 }.to raise_error 'Maximum balance of 20 exceeded'
   end
 ```
@@ -93,4 +93,4 @@ it 'raises an error if the maximum balance is exceeded' do
 end
 ```
 
-This change should not make your test fail - so ensure that you immediately mirror the change in your code. Once you are happy with the refactor and all the tests are green, submit a pull request.
+This change should not make your test fail - so ensure that you immediately mirror the change in your code. When refactoring like this, it is often wise to 'break' your code to watch the test fail, then make it pass again - this helps to protect against accidentally writing vacuous tests.
