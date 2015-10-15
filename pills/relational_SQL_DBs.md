@@ -132,7 +132,7 @@ individual tables this time.
 Querying this in SQL requires you to join the tables again:
 
 ```SQL
-SELECT * FROM User LEFT JOIN Blog ON User.id = Address.user_id;
+SELECT * FROM User LEFT JOIN Blog ON User.id = Blog.user_id;
 ```
 
 The `LEFT JOIN` command returns all the left hand side (User) data, and any
