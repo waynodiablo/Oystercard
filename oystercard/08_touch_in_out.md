@@ -4,6 +4,12 @@ Let's start with something simple: let the card be aware whether it's being used
 
 To close this issue, you'll need to test-drive two methods: `touch_in`, `touch_out` and `in_journey?`. Don't try to write all tests in one go: consider the test that you can write first that will rely on only one method and then write more complex tests.
 
+```
+In order to get through the barriers.
+As a customer
+I need to touch in and out.
+```
+
 ## Learning Objectives covered
 - Set an instance variable
 - Update the value of an instance variable

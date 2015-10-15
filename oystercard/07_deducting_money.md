@@ -2,6 +2,12 @@ By now you have a card that can hold a balance and be topped up. However, unless
 
 Write the `deduct` method that will reduce the balance by a specified amount using test-driven approach.
 
+```
+In order to pay for my journey
+As a customer
+I need my fare deducted from my card
+```
+
 ## Learning Objectives covered
 - Create a simple RSpec test
 

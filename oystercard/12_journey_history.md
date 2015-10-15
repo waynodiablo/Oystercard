@@ -4,6 +4,7 @@ In order to save several journeys in computer's memory, you'll need a data struc
 
 Write necessary tests and update your code to make sure the card remembers the history of all journeys.
 
+
 ## Learning Objectives covered
 - Use Ruby arrays
 - Use Ruby hashes

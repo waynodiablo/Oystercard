@@ -2,6 +2,12 @@ When you completed the last challenge, you added the functionality to make sure 
 
 Update the `touch_out` method to reduce the balance by minimum fare.
 
+```
+In order to pay for my journey
+As a customer
+I need to pay for my journey when it's complete
+```
+
 ## Learning Objectives covered
 - Use RSpec to check that code changes a variable
 - Use private methods to maximise encapsulation
