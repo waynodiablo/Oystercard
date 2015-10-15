@@ -1,4 +1,4 @@
-Now your Oyster card can be used to touch in and out. It will also throw an error if there are not enough funds available to pay. However, it will let you touch in even if you haven't got enough funds for a single journey.
+Now your Oyster card can be used to touch in and out. However, it will let you touch in even if you haven't got enough funds for a single journey.
 
 If your card is empty, you wouldn't get past the entry barrier on London transport network. This is because when you try to touch in, it checks the balance and refuses to touch in unless you have enough money for one journey.
 
@@ -20,6 +20,7 @@ Let's implement this check. Assume that the minimum fare is £1 and raise an exc
 - [ ] Write a test that checks that an error is thrown if a card with insufficient balance is touched in
 - [ ] Write the implementation
 - [ ] Update existing tests, if necessary, to make sure they still pass
+- [ ] Refactor to remove any magic numbers and replace with a constant
 
 ## Suggested resources:
 - [Handling and Raising exceptions](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/41-exceptions/lessons/92-handling)
