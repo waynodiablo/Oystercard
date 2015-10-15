@@ -1,9 +1,10 @@
-When you closed the last issue, you added the functionality to make sure a card can only be used to touch in if it has enough money for one journey. Now we need to actually charge the card on touch out.
+When you completed the last challenge, you added the functionality to make sure a card can only be used to touch in if it has enough money for one journey. Now we need to actually charge the card on touch out.
 
 Update the `touch_out` method to reduce the balance by minimum fare.
 
 ## Learning Objectives covered
 - Use RSpec to check that code changes a variable
+- Use private methods to maximise encapsulation
 
 ## Interview questions you may expect:
 - Why would you use curly braces to pass a block of code to the `expect` method in RSpec?
@@ -12,6 +13,7 @@ Update the `touch_out` method to reduce the balance by minimum fare.
 - [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test that uses `expect {}.to change{}.by()` syntax to check that a charge is made on touch out.
 - [ ] Update the `touch_out` method to make the test pass
+- [ ] Make '#deduct' a private method
 - [ ] Keep the code DRY
 
 ## Suggested resources
