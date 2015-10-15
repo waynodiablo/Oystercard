@@ -14,3 +14,4 @@ Write the `deduct` method that will reduce the balance by a specified amount usi
 - [RSpec](http://rspec.info/)
 - [TDD on Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)
 - [RubyMonk](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables)
+- [4 phase testing](https://robots.thoughtbot.com/four-phase-test)

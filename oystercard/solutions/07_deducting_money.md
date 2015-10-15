@@ -1,4 +1,4 @@
-This issue is asking us to implement a means to deduct money from the total balance of an Oystercard instance.
+This challenge is asking us to implement a means to deduct money from the total balance of an Oystercard instance.
 
 - [ ] Write a test for the `deduct` method, see it fail
 
@@ -15,7 +15,7 @@ describe Oystercard do
 end
 ```
 
-Implement this method in your Oysterdard class as decribed by the test (remember - do no more than necessary to make the test pass), and then let's have a think about how we can actually implement the desired functionality. We want our deduct method to change the value of the balance. As that is our desired outcome, we can use that as our expectation. However, this is a little different to adding, in that we need our test subject to actually have some balance to begin with. There are [4 phases](https://robots.thoughtbot.com/four-phase-test) in creating a test, this would be a part of the setup phase. Your test would look something like this - take time to identify each of the 4 phases (some of them happen implicitly) :
+Implement this method in your Oystercard class as described by the test (remember - do no more than necessary to make the test pass), and then let's have a think about how we can actually implement the desired functionality. We want our deduct method to change the value of the balance. As that is our desired outcome, we can use that as our expectation. However, this is a little different to adding, in that we need our test subject to actually have some balance to begin with. There are [4 phases](https://robots.thoughtbot.com/four-phase-test) in creating a test, this would be a part of the setup phase. Your test would look something like this - take time to identify each of the 4 phases (some of them happen implicitly) :
 
 ``` ruby
   it 'deducts an amount from the balance' do
@@ -45,6 +45,4 @@ def deduct(amount)
 end
 ```
 
-Now we should have a green test - it is very important that you high-five your pair partner. As always, now is the time to reflet upon your code, and decide if there is anything you would like to refactor. When you are happy with it, submit a pull request.
-
-
+Now we should have a green test - it is very important that you high-five your pair partner. As always, now is the time to reflect upon your code, and decide if there is anything you would like to refactor.
