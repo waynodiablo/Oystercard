@@ -2,6 +2,12 @@ Now that you have a card that can have a balance, you want to make sure it can b
 
 Write a new test that checks that if a `top_up` method is invoked with the top up value as the argument, the balance of the card will increase by that amount.
 
+```
+In order to keep using public transport
+As a customer
+I want to put money on my card
+```
+
 ## Learning Objectives covered
 - Updating the value of an instance variable
 - Using a shorthand notation for addition and assignment in one go

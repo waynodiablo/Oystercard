@@ -4,6 +4,13 @@ If your card is empty, you wouldn't get past the entry barrier on London transpo
 
 Let's implement this check. Assume that the minimum fare is £1 and raise an exception unless the balance is at least £1 on touch in.
 
+
+```
+In order to pay for my journey
+As a customer
+I need to have the minimum amout for a single journey.
+```
+
 ## Learning Objectives covered
 - Raise errors
 - Check that a statement raises an error with RSpec

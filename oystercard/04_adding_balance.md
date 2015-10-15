@@ -4,6 +4,14 @@ A card that cannot carry a balance is just a piece of plastic (or an empty file,
 
 Write an RSpec test for the Oystercard class that will test that a freshly initialised card has a `balance` of 0 by default, see it fail, then write an implementation (Oystercard class code) that will make the test pass. Put the Oystercard class in the `lib/` folder.
 
+
+```
+In order to use public transport
+As a customer
+I want money on my card
+```
+
+
 ## Learning Objectives covered
 - Create a directory
 - Create a simple RSpec test

@@ -4,6 +4,12 @@ Our goal is to enable the card to record the entire history of all journeys. How
 
 Update your Oystercard class to make the card remember the entry station of the current journey.
 
+```
+In order to pay for my journey
+As a customer
+I need to know where I've travelled from
+```
+
 ## Learning Objectives covered
 - Selectively disable RSpec tests.
 

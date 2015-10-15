@@ -2,6 +2,13 @@ By now you have a card that can be topped up but we want to limit the amount of 
 
 Use test-driven development approach to update the `top_up` method to raise an error if the action would take the card beyond the limit.
 
+
+```
+In order to protect my money
+As a customer
+I don't want to put too much money on my card
+```
+
 ## Learning Objectives covered
 - Use interpolation
 - Use an inline `if` statement
