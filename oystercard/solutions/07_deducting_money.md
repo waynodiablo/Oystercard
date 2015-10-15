@@ -6,12 +6,10 @@ Similar to adding money to the oyster card, let's start by considering our appro
 
 ``` ruby
 describe Oystercard do
-# previous tests hidden for brevity
-  describe '#deduct' do
+# previous tests hidden for brevity  
 
-    it { is_expected.to respond_to(:deduct).with(1).argument }
+  it { is_expected.to respond_to(:deduct).with(1).argument }
 
-  end
 end
 ```
 
