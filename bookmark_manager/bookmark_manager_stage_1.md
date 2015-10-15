@@ -47,7 +47,7 @@ So, the test tells us that the method "tags" is undefined.   But what do we want
 has n, :tags, through: Resource
 ```
 
-The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarize yourself with the types of database relationships: :pill:[Database Relations](../pills/database_relations) [LINK BROKEN]
+The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarize yourself with the types of database relationships: :pill:[Database Relations](../pills/relational_SQL_DBs.md)
 
 Let's go back and run the test. We get another error:
 
