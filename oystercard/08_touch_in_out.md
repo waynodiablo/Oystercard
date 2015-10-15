@@ -2,7 +2,7 @@ Now that we have a card that can be topped up and can be used to spend money, we
 
 Let's start with something simple: let the card be aware whether it's being used on a journey or not. If it was used to touch in but the user didn't touch out yet, it'll be "in use".
 
-To close this issue, you'll need to test-drive three methods: `touch_in`, `touch_out` and `in_use?`. Don't try to write all tests in one go: consider the test that you can write first that will rely on only one method and then write more complex tests.
+To close this issue, you'll need to test-drive two methods: `touch_in`, `touch_out` and `in_journey?`. Don't try to write all tests in one go: consider the test that you can write first that will rely on only one method and then write more complex tests.
 
 ## Learning Objectives covered
 - Set an instance variable
