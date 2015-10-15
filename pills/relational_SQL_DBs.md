@@ -201,8 +201,8 @@ two tables *through* the join table each other:
 
 ```SQL
 SELECT * FROM TagsBlogposts
-INNER JOIN Tags ON Tags.id = TagsBlogposts.blog_id
-INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.tag_id;
+INNER JOIN Tags ON Tags.id = TagsBlogposts.tag_id
+INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.blog_id;
 ```
 
 (You can write SQL statements across many lines - but they must always end in
