@@ -66,5 +66,3 @@ git push origin master
 ```
 
 What you've just done was to add the files individually (first Gemfile, then Gemfile.lock). There's a git command to add all files in the current directory that will save you typing individual filenames but we advise you to add the files individually while you're still learning how to use git to make sure that you're adding exactly what you want and not something else.
-
-The reference to the number of the issue in the commit message is important. It will link this commit to the issue you're closing. By mentioning the word "Closing" in the message, you will automatically close the issue.

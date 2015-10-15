@@ -25,8 +25,8 @@ git add .rspec
 The first command will add the folder and everything in it. Now, do `git status` to make sure that the list of files in the staging area is correct (there's nothing else), and there's nothing outside the staging area. If you're happy with what `git status` tells you, commit the files and push them:
 
 ```
-git commit -m 'complete challenge #02 add rspec conventional files'
+git commit -m 'complete challenge #02: add rspec conventional files'
 git push origin master
 ```
 
-The `git push` command will synch the changed you made locally (that you staged and committed) to your Github account (where you cloned this repo from). Now go to your Github repo and check that the commit you made is there. Verify that the three files in the commit are the ones you added in the command line.
+The `git push` command will sync the changed you made locally (that you staged and committed) to your Github account (where you cloned this repo from). Now go to your Github repo and check that the commit you made is there. Verify that the three files in the commit are the ones you added in the command line.
