@@ -1,4 +1,4 @@
-The main goal of this issue is to establish a test-first cycle to structure the development of our code. This issue assumes that you have already have a describe block for your Oystercard, and an Oystercard class that has been required into the spec file.
+The main goal of this challenge is to establish a test-first cycle to structure the development of our code. This issue assumes that you have already have a describe block for your Oystercard, and an Oystercard class that has been required into the spec file.
 
 Google 'Red Green Refactor' to see many examples of a TDD coding cycle - in fact, the phrase 'Red Green Refactor' should become a mantra to you during your coding career.
 
@@ -109,4 +109,4 @@ class Oystercard
 end
 ```
 
-Our test is now green again and our code is clean - time to submit your PR.
+Our test is now green again and our code is clean.
