@@ -18,6 +18,7 @@ Update your test suite to check that a correct fare is charged.
 - What is parallel assignment in Ruby? Why is it useful? When can you and when can't you break it into a sequence of normal assignmens and why?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write tests that cover different scenarios (same zone, different zones)
 - [ ] For now, assume no incomplete journeys happen
 - [ ] Make the tests pass

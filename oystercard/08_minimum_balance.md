@@ -12,6 +12,7 @@ Update the `deduct` method to only allow it to deduct the money if enough funds 
 - How can you check an expression raises an error with RSpec? Why do you have to pass the code as a block to do this?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a failing test for the `deduct` method that expects an exception to be raised
 - [ ] Update the method to make the test pass
 

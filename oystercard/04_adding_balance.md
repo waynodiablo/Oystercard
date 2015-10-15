@@ -26,15 +26,13 @@ Write an RSpec test for the Oystercard class that will test that a freshly initi
 - What's a class constructor? What is the `initialize` method? How are they different?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Create a unit test for the `Oystercard` class
 - [ ] Write a failing test that checks that a new card has a `balance`
 - [ ] Write code that will make this test pass
 - [ ] Now refactor by setting the balance in initialize using an instance variable
 - [ ] Remove the balance method entirely and replace with an attr_reader
-<<<<<<< HEAD:issues/04_adding_balance.md
 
-=======
->>>>>>> 4bc16d34ab7662cf6474f7532d6f02523dc3c708:issues/adding_balance.md
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 - [RSpec basic structure](https://www.relishapp.com/rspec/rspec-core/v/3-3/docs/example-groups/basic-structure-describe-it)

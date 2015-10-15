@@ -12,8 +12,9 @@ Update your Oystercard class to make the card remember the entry station of the 
 - Why would you want to temporarily disable some tests (make them pending)?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test that expects the card to remember the entry station after the touch in
-- [ ] Update the `touch_in` method to accept the entry station using a double 
+- [ ] Update the `touch_in` method to accept the entry station using a double
 - [ ] Update existing tests to pass a station to the `touch_in` method - you may need to declare your double in a `let` statement at the top of your describe block
 - [ ] when your tests are all green, refactor to remove the `in_journey` variable. Rewrite the `in_journey?` method to infer its status based on whether or not there is an entry station
 - [ ] Make the card forget the entry station on touch out by setting it to `nil`

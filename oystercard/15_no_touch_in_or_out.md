@@ -18,6 +18,7 @@ Let's create a new Journey class, it should be responsible for starting a journe
 - Explain when you would use Extract Class refactoring pattern and how you would do it.
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Update your test suite to reflect a new Journey class
 - [ ] Create a new class Journey and move the functionality that relates to a journey from Oystercard to Journey
 - [ ] Make sure all tests pass, all existing functionality is preserved

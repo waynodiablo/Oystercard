@@ -14,6 +14,7 @@ Write a new test that checks that if a `top_up` method is invoked with the top u
 - What is the red/green/refactor cycle? Give me an example of using it.
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test for the `top_up` method
 - [ ] Make sure the test fails before implementing the method
 - [ ] Implement the method to make the test pass

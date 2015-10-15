@@ -16,6 +16,7 @@ Let's implement this check. Assume that the minimum fare is £1 and raise an exc
 - How can you check an expression raises an error with RSpec? Why do you have to pass the code as a block to do this?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test that checks that an error is thrown if a card with insufficient balance is touched in
 - [ ] Write the implementation
 - [ ] Update existing tests, if necessary, to make sure they still pass

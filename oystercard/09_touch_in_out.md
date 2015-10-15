@@ -17,6 +17,7 @@ To close this issue, you'll need to test-drive three methods: `touch_in`, `touch
 - Why some Ruby methods end with a question mark? What are they expected to return?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write tests for `in_journey?`, `touch_in` and `touch_out`
 - [ ] Write implementation of these methods that will make the tests pass
 - [ ] Use an instance variable to track whether the card is in use

@@ -11,6 +11,7 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [ ] describe some common uses for delegating functionality from one object to another.
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] test drive the development of JourneyLog class
 - [ ] use dependency injection to inject a journey_klass
 - [ ] `#start_journey` should start a new journey with an entry station

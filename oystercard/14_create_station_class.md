@@ -13,6 +13,7 @@ Discuss with your pairing partner different ways – there are several strategie
 - What does the DRY acronym mean? Why is it important to keep your code DRY?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Test drive the creation of a Station class that exposes a name and a zone variable
 - [ ] Write a test that checks that the journey now contains information about zones and make it pass
 - [ ] Use only one expectation per test. Use multiple `describe` blocks if necessary

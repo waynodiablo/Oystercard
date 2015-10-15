@@ -17,6 +17,7 @@ Use test-driven development approach to update the `top_up` method to raise an e
 - What does the DRY acronym mean? Why is it important to keep your code DRY?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test that checks the `top_up` method throws an exception if the new balance would exceed the limit.
 - [ ] Use a constant to store the limit
 - [ ] Implement the limit in the top_up method. Use an inline `if` statement to check if the limit would be exceeded

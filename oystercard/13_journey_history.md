@@ -1,6 +1,6 @@
 Well done. Now your card can remember both entry and exit stations for the current (or last) journey. This is already helpful but let's make it slightly more useful. Real Oyster cards remember the history of all journeys. Let's make our Oystercard class remember all journeys made as well.
 
-In order to save several journeys in computer's memory, you'll need a data structure that can hold an ordered sequence of objects. You will need to update this structure every time a journey is made. Don't worry about incomplete journeys yet (when there's no touch in or touch out event). After you introduce all necessary changes to store the list of journeys, you'll end up with two mechanisms of storing entry and exit stations (in the instance vars that you created previously and in the list of journeys). Once you get all the tests passing, refactor your code to make it DRY (Don't Repeat Yourself) by writing custom accessors to replace attribute readers. 
+In order to save several journeys in computer's memory, you'll need a data structure that can hold an ordered sequence of objects. You will need to update this structure every time a journey is made. Don't worry about incomplete journeys yet (when there's no touch in or touch out event). After you introduce all necessary changes to store the list of journeys, you'll end up with two mechanisms of storing entry and exit stations (in the instance vars that you created previously and in the list of journeys). Once you get all the tests passing, refactor your code to make it DRY (Don't Repeat Yourself) by writing custom accessors to replace attribute readers.
 
 Write necessary tests and update your code to make sure the card remembers the history of all journeys.
 
@@ -15,6 +15,7 @@ Write necessary tests and update your code to make sure the card remembers the h
 - What is refactoring? When do you refactor code? Why is it important to have good test coverage before refactoring?
 
 ## To complete this challenge:
+- [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Store the list of journeys as an instance variable and expose it with an attribute reader - you will need to refactor the touch_out method to accept an exit station
 - [ ] Use a hash to store one journey (set of an entry and exit stations)
 - [ ] Write a test that checks that the card has an empty list of journeys by default
