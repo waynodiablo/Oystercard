@@ -20,11 +20,10 @@ Update your test suite to check that a correct fare is charged.
 ## To complete this challenge:
 - [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write tests that cover different scenarios (same zone, different zones)
-- [ ] For now, assume no incomplete journeys happen
 - [ ] Make the tests pass
 - [ ] Consider whether some methods should be private
 - [ ] If appropriate, consider extracting some code into new methods to make the code easier to read
-- [ ] Implement a mechanism to deduct the penalty fare from the card if the user forgets to touch out
+- [ ] Implement a mechanism across your application to deduct the penalty fare from the balance if the user forgets to touch out
 
 ## Suggested resources:
 - [RubyDoc](http://ruby-doc.org/core-2.2.2/)
