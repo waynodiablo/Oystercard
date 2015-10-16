@@ -48,3 +48,5 @@ I want money on my card
 - [RSpec resources on Better Specs](http://betterspecs.org/#resources)
 - [Ruby's guide to symbols](http://www.troubleshooters.com/codecorn/ruby/symbols.htm)
 - [Writing your own classes in Ruby](http://rubylearning.com/satishtalim/writing_our_own_class_in_ruby.html)
+
+## [Solution](solutions/04_adding_balance.md)

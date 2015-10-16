@@ -39,3 +39,5 @@ I don't want to put too much money on my card
 - [If statements](http://www.dev-hq.net/ruby/5--if-statements)
 - [String interpolation](https://rubymonk.com/learning/books/1-ruby-primer/chapters/5-strings/lessons/31-string-basics)
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+
+## [Solution](solutions/06_maximum_balance.md)

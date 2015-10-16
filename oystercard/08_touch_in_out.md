@@ -35,3 +35,5 @@ I need to touch in and out.
 - [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type)
 - [Predicate methods](http://pragmati.st/2012/03/24/the-elements-of-ruby-style-predicate-methods/)
 - [RSpec predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/predicate-matchers)
+
+## [Solution](solutions/08_touch_in_out.md)

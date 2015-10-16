@@ -27,3 +27,5 @@ Discuss with your pairing partner different ways – there are several strategie
 - [Struct and OpenStruct in Ruby](http://community.logicalbricks.com/node/235)
 - [OpenStruct documentation](http://ruby-doc.org/stdlib-2.0.0/libdoc/ostruct/rdoc/OpenStruct.html)
 - [Don't repeat yourself – O'Reilly](http://programmer.97things.oreilly.com/wiki/index.php/Don't_Repeat_Yourself)
+
+## [Solution](solutions/13_create_station_class.md)

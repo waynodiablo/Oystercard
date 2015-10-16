@@ -34,3 +34,5 @@ Let's create a new Journey class, it should be responsible for starting a journe
 - [Extract Class on Scrutinizer](https://scrutinizer-ci.com/docs/refactorings/extract-class)
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 - [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
+
+## [Solution](solutions/14_no_touch_in_or_out.md)

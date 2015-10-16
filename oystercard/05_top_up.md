@@ -29,3 +29,5 @@ I want to put money on my card
 - [RSpec](http://rspec.info/)
 - [TDD on Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)
 - [RubyMonk](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables)
+
+## [Solution](solutions/05_top_up.md)

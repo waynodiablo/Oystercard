@@ -35,3 +35,5 @@ I need to have the minimum amout for a single journey.
 - [expect vs expect with a block on SO](http://stackoverflow.com/questions/19960831/rspec-expect-vs-expect-with-block-whats-the-difference)
 - [Ruby constants](http://rubylearning.com/satishtalim/ruby_constants.html)
 - [If statements](http://www.dev-hq.net/ruby/5--if-statements)
+
+## [Solution](solutions/09_min_balance_on_touch_in.md)

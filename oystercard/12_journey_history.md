@@ -34,3 +34,5 @@ Write necessary tests and update your code to make sure the card remembers the h
 - [RSpec single expectation](http://betterspecs.org/#single)
 - [RSpec before and after hooks](https://www.relishapp.com/rspec/rspec-core/v/2-0/docs/hooks/before-and-after-hooks)
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+
+## [Solution](solutions/12_journey_history.md)

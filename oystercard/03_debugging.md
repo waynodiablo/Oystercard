@@ -27,3 +27,5 @@ In this challenge, you will dissect a Command Line error message.
 ## Suggested resources:
 - [Using the stack trace (video)](https://www.youtube.com/watch?v=TF_-tfOc9Pw)
 - [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
+
+## [Solution](solutions/03_debugging.md)
