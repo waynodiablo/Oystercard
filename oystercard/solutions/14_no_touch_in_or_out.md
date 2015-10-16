@@ -11,7 +11,9 @@ Remember to test all the different combinations of zones. You may need to write 
 - [ ] Make sure the entire codebase is DRY
 - [ ] Make sure all methods are three lines or shorter
 
-Here is an example of a spec file for a journey class - there are many ways to make this work, this is only one.
+At this point it is very important to manually feature test your application in IRB - do the two classes communicate effectively?
+
+Here is an example of a spec file for a journey class - there are many ways to make this work, this is only one such way.
 
 ```ruby
 require 'journey'

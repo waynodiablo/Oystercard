@@ -18,6 +18,7 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [ ] a private method `#current_journey` should return an incomplete journey or create a new journey
 - [ ] `#exit_journey` should add a new exit station to the `current_journey`
 - [ ] `#journeys` should return a list of all previous journeys without exposing the internal array to external modification
+- [ ] `#outstanding_charges` should close an incomplete journey and return its fare
 - [ ] refactor to using Forwardable module from Standard Library to delegate the method `#exit_journey` to the `current_journey`'s `#exit` method.
 - [ ] remove redundant code from OysterCard class
 
