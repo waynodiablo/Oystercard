@@ -9,7 +9,7 @@ Write a new test that checks that if a `top_up` method is invoked with the top u
 ```
 In order to keep using public transport
 As a customer
-I want to put money on my card
+I want to add money to my card
 ```
 
 ## Learning Objectives covered
