@@ -15,7 +15,6 @@ Update your test suite to check that a correct fare is charged.
 - Why testing private methods behaviour is different from testing public methods.
 - What is an absolute value of a number? How do you calculate it in Ruby? Where is the relevant method defined?
 - Everything in Ruby is an object. What does it mean? Where do you find out what methods are available on different objects?
-- What is parallel assignment in Ruby? Why is it useful? When can you and when can't you break it into a sequence of normal assignmens and why?
 
 ## To complete this challenge:
 - [ ] Write up a plan for how you will interact with your code and manually test in IRB.
@@ -31,3 +30,5 @@ Update your test suite to check that a correct fare is charged.
 - [Ruby access control](http://rubylearning.com/satishtalim/ruby_access_control.html)
 - [Ruby's Numeric class](http://ruby-doc.org/core-2.2.0/Numeric.html)
 - [Parallel assignment on SO](http://stackoverflow.com/questions/2895957/parallel-assignment-operator-in-ruby)
+
+## [Solution](solutions/16_fare_for_zones.md)
