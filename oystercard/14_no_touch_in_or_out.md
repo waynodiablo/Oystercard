@@ -1,3 +1,7 @@
+# Handling a journey without a touch out
+
+[Back to the challenge map](README.md)
+
 You did a pretty difficult job when you moved from using doubles to represent a station to using actual station objects. However, this will really help us to close the next few issues.
 
 So far we have assumed that our users behave well: they touch in on every station and touch out on every station. However, in real life it's not like this. Sometimes people forget to touch in or touch out. Our code should expect this to happen. This is called an edge case: an unlikely but possible situation.

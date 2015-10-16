@@ -1,3 +1,7 @@
+# Learn debugging basics
+
+[Back to the challenge map](README.md)
+
 If you set up your `Oystercard` test file correctly, it should look something like this:
 
 ```ruby

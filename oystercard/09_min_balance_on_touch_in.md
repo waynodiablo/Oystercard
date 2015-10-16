@@ -1,3 +1,7 @@
+# Checking minimum balance on touch in
+
+[Back to the challenge map](README.md)
+
 Now your Oyster card can be used to touch in and out. However, it will let you touch in even if you haven't got enough funds for a single journey.
 
 If your card is empty, you wouldn't get past the entry barrier on London transport network. This is because when you try to touch in, it checks the balance and refuses to touch in unless you have enough money for one journey.

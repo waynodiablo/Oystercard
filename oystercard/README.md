@@ -9,7 +9,7 @@ really stretch your skills in Code Design, Ruby, RSpec and Object-Oriented Progr
 
   * [Create a Gemfile](01_create_gemfile.md)
   * [Create RSpec conventional files](02_initialise_rspec.md)
-  * [Learn debugging basics](03_debugging.md)
+  * [Review debugging basics](03_debugging.md)
 
 ## Create a basic Oyster card:
   * [Add the balance](04_adding_balance.md)
@@ -28,7 +28,7 @@ really stretch your skills in Code Design, Ruby, RSpec and Object-Oriented Progr
   * [Creating the station class](13_create_station_class.md)
 
 ## Refactor to extract Journey class
-  * [Handling a journey without a touch out](14_no_touch_in_out.md)
+  * [Handling a journey without a touch out](14_no_touch_in_or_out.md)
 
 ## Refactoring: get the code into shape
   * [Extracting the journey log out of the Oystercard](15_extracting_journey_log.md)

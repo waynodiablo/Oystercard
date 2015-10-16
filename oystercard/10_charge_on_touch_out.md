@@ -1,3 +1,7 @@
+# Charging for the journey
+
+[Back to the challenge map](README.md)
+
 When you completed the last challenge, you added the functionality to make sure a card can only be used to touch in if it has enough money for one journey. Now we need to actually charge the card on touch out.
 
 Update the `touch_out` method to reduce the balance by minimum fare.

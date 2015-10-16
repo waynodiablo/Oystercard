@@ -1,3 +1,7 @@
+# Exctracting the journey log out of the Oystercard
+
+[Back to the challenge map](README.md)
+
 So that was fun - we now have a simple station class that can hold information about a stations zone, and a journey class holding the state of each individual journey. We also saw how to extract 1 class into 2 classes, using our tests as a scaffold. Now let's have another look at our Oystercard class and make some improvements. Currently our Oystercard has two responsibilities: maintaining a balance through touch in/out and recording a journey history. We should be following Single Responsibility Principle, so we still have some refactoring to do.
 
 Let's extract a JourneyLog class. It should be responsible for starting a journey, ending a journey and returning a list of journeys.
