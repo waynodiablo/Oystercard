@@ -7,9 +7,7 @@ end
 ```
 Try running `rspec` from the command line to load and run the contents of this file. You should get an error.
 
-Errors are good. They tell us what the problem is and point us towards where we can go to fix it. Much of a developer's time is spent reading, researching, and understanding the result of error messages.
-
-In this challenge, you will dissect a Command Line error message.
+As we discovered last week, errors are good. In this challenge, you will dissect another Command Line error message.
 
 ## Learning Objectives covered
 - Use a stack trace to debug an error.
