@@ -35,7 +35,7 @@ Now we need to think about the functionality of our 'touch_in' method. We want t
 it "can touch in" do
   subject.top_up(20)
   subject.touch_in
-  expect(subject).to be_in_use
+  expect(subject).to be_in_journey
 end
 ```
 
@@ -50,7 +50,7 @@ Once the touch_in method is complete, let's write a test for touch_out:
 it "can touch out" do
   subject.touch_in
   subject.touch_out
-  expect(subject).not_to be_in_use
+  expect(subject).not_to be_in_journey
 end
 ```
 

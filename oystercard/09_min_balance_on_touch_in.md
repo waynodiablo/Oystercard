@@ -12,7 +12,7 @@ Let's implement this check. Assume that the minimum fare is £1 and raise an exc
 ```
 In order to pay for my journey
 As a customer
-I need to have the minimum amout for a single journey.
+I need to have the minimum amount for a single journey.
 ```
 
 ## Learning Objectives covered
