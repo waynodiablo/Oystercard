@@ -47,4 +47,4 @@ Notice how we described the **method** as a verb that "expresses the intention o
 - :pill: [`params`](../pills/params.md)
 - [How are parameters sent in an HTTP POST request? (Stack Overflow)](http://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request)
 
-### [Solution](solutions/11_sinatra_posted_params.md)
+### [Solution](solutions/14_sinatra_posted_params_solution.md)

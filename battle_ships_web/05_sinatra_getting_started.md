@@ -33,4 +33,4 @@ For this challenge you will need a Gemfile listing Sinatra as a dependency.
 * [Sinatra Up and Running (Book)](http://shop.oreilly.com/product/0636920019664.do)
 * [Jump Start Sinatra (Book)](http://www.sitepoint.com/store/jump-start-sinatra/)
 
-### [Solution](solutions/01.md)
+### [Solution](solutions/05_sinatra_getting_started_solution.md)

@@ -31,4 +31,4 @@ In this challenge, you will use `params` to extract extra information from a cli
 - [Query String (Wikipedia)](https://en.wikipedia.org/wiki/Query_string)
 
 
-### [Solution](solutions/09_introducing_params.md)
+### [Solution](solutions/12_sinatra_introducing_params_solution.md)

@@ -25,4 +25,4 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 
 # TO DO
 
-### [Solution](solutions/3.md)
+### [Solution](solutions/02_http_solution.md)
