@@ -25,7 +25,6 @@ In this issue you will create a valid Gemfile for this project.
 - [ ] commit only this Gemfile
 
 ## Suggested resources
-- [Cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 - [RubyGems basics](http://guides.rubygems.org/rubygems-basics/)
 - [RVM documentation](http://www.rvm.io)
 - [Bundler documentation](http://www.bundler.io)
