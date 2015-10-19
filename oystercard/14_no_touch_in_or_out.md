@@ -12,6 +12,12 @@ Right now we are referencing Journey throughout our code. We are talking about j
 
 Let's create a new Journey class, it should be responsible for starting a journey, ending a journey, calculating the fare of a journey, and returning whether or not the journey is complete.
 
+```
+In order to be charged correctly
+As a customer
+I need a penalty charge deducted if I fail to touch in or out
+```
+
 ## Learning Objectives covered
 - Use the Extract Class refactoring pattern
 
