@@ -26,7 +26,7 @@ Here's a wireframe of one possible design:
 
 ###Preamble
 
-Make sure you have worked through these pills before starting:
+Make sure you have read through these pills before starting - they will give you a little bit more background. Don't feel that you have to work through them completely, but make sure you're familiar with the concepts:
 
 * :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md)
 * :pill: [bower](https://github.com/makersacademy/course/blob/master/pills/bower.md)
