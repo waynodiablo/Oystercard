@@ -1,3 +1,7 @@
+# Creating the station class
+
+[Back to the challenge map](README.md)
+
 The last issue wasn't easy was it? However, you learned and reinforced quite a few important concepts. You also did some basic refactoring. Finally, you used Ruby data structures – arrays and hashes – to store data, which you will do in pretty much every single Ruby project you'll ever work on.
 
 Right now our card holds the history of all trips made. In our tests we are using a double to represent a station object. Let's create a simple station class that has a name and zone on creation. Once we do this, we'll be able to display zones in the travel history and calculate fares between different zones.

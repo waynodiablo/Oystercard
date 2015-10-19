@@ -1,3 +1,7 @@
+# Deduct the money
+
+[Back to the challenge map](README.md)
+
 By now you have a card that can hold a balance and be topped up. However, unless we can use it to spend money it's not of much use. We should also have a mechanism for deducting money from it.
 
 Write the `deduct` method that will reduce the balance by a specified amount using test-driven approach.

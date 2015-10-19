@@ -1,3 +1,7 @@
+# Enable top up functionality
+
+[Back to the challenge map](README.md)
+
 Now that you have a card that can have a balance, you want to make sure it can be topped up.
 
 Write a new test that checks that if a `top_up` method is invoked with the top up value as the argument, the balance of the card will increase by that amount.
@@ -5,7 +9,7 @@ Write a new test that checks that if a `top_up` method is invoked with the top u
 ```
 In order to keep using public transport
 As a customer
-I want to put money on my card
+I want to add money to my card
 ```
 
 ## Learning Objectives covered

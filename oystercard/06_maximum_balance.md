@@ -1,3 +1,7 @@
+# Enforce maximum balance
+
+[Back to the challenge map](README.md)
+
 By now you have a card that can be topped up but we want to limit the amount of money that can be stored there. On real Oyster cards the limit is £90, so let's add it to our class too. After you close the issue, it will be impossible to top up the card beyond the limit.
 
 Use test-driven development approach to update the `top_up` method to raise an error if the action would take the card beyond the limit.
