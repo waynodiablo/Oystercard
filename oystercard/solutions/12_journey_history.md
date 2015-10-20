@@ -2,13 +2,18 @@ This challenge adds another variable to the oystercard class. Too many instance 
 
 - [ ] Store the list of journeys as an instance variable and expose it with an attribute reader - you will need to refactor the touch_out method to accept an exit station
 
-Let's start with a test for our touch_out method:
+Let's start with a test for our touch_out method. Notice that you will need to have two
+doubles, one for the entry station and another for our exit station.
 
 ```ruby
+
+let(:entry_station) { double :station }
+let(:exit_station) { double :station }
+
 it 'stores exit station' do
-  subject.touch_in(station)
-  subject.touch_out(station)
-  expect(subject.exit_station).to eq station
+  subject.touch_in(entry_station)
+  subject.touch_out(exit_station)
+  expect(subject.exit_station).to eq exit_station
 end
 ```
 
@@ -30,10 +35,11 @@ Make this test pass by exposing the instance variable via a public reader.
 - [ ] Write a test that checks that touching in and out creates one journey
 
 ```ruby
-let(:journey){ {entry_station: station, exit_station: station} }
+let(:journey){ {entry_station: entry_station, exit_station: exit_station} }
+
 it 'stores a journey' do
-  subject.touch_in(station)
-  subject.touch_out(station)
+  subject.touch_in(entry_station)
+  subject.touch_out(exit_station)
   expect(subject.journeys).to include journey
 end
 ```
