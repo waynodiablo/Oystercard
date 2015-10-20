@@ -8,6 +8,11 @@ In order to save several journeys in computer's memory, you'll need a data struc
 
 Write necessary tests and update your code to make sure the card remembers the history of all journeys.
 
+```
+In order to know where I have been
+As a customer
+I want to see to all my previous trips
+```
 
 ## Learning Objectives covered
 - Use Ruby arrays

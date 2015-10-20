@@ -8,6 +8,12 @@ Right now our card holds the history of all trips made. In our tests we are usin
 
 Discuss with your pairing partner different ways – there are several strategies that you could come up with – to add zone information to the list of stations. Implement it using the guidelines below.
 
+```
+In order to know how far I have travelled
+As a customer
+I want to know what zone a station is in
+```
+
 ## Learning Objectives covered
 - create a simple class
 - compare Struct vs OpenStruct vs manually building a simple class

@@ -7,7 +7,6 @@ The very first step of starting a Ruby project is to initialise it with a Gemfil
 In this issue you will create a valid Gemfile for this project.
 
 ## Learning Objectives covered:
-- Cloning a project from Github to your local machine
 - Installing and upgrading gems without using Bundler
 - Using RVM to check what ruby versions you have installed and in use
 - Using Gemfile to list the gems that will be used in the project
@@ -26,7 +25,6 @@ In this issue you will create a valid Gemfile for this project.
 - [ ] commit only this Gemfile
 
 ## Suggested resources
-- [Cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 - [RubyGems basics](http://guides.rubygems.org/rubygems-basics/)
 - [RVM documentation](http://www.rvm.io)
 - [Bundler documentation](http://www.bundler.io)

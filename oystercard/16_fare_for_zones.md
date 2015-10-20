@@ -8,6 +8,12 @@ Now that we have zone information in the system, it's time to make our fare calc
 
 Update your test suite to check that a correct fare is charged.
 
+```
+In order to be charged the correct amount
+As a customer
+I need to have the correct fare calculated
+```
+
 ## Learning Objectives covered
 - Use RSpec to check that code changes a variable
 - Use private methods where appropriate
