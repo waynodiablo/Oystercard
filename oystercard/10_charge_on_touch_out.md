@@ -9,7 +9,7 @@ Update the `touch_out` method to reduce the balance by minimum fare.
 ```
 In order to pay for my journey
 As a customer
-I need to pay for my journey when it's complete
+When my journey is complete, I need the correct amount deducted from my card
 ```
 
 ## Learning Objectives covered
@@ -27,6 +27,8 @@ I need to pay for my journey when it's complete
 - [ ] Keep the code DRY
 
 ## Suggested resources
+- [Why you should care about
+  encapsulation](http://gmoeck.github.io/2011/09/20/why-you-should-care-about-encapsulation.html)
 - [expect vs expect with a block on SO](http://stackoverflow.com/questions/19960831/rspec-expect-vs-expect-with-block-whats-the-difference)
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 

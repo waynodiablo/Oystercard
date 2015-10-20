@@ -1,6 +1,6 @@
 In this challenge, we are being asked to build functionality to track the movements of an Oystercard user.
 
-- [ ] Write tests for `touch_in`, `touch_out` and `in_use?` methods
+- [ ] Write tests for `touch_in`, `touch_out` and `in_journey?` methods
 - [ ] Write implementation of these methods that will make the tests pass
 - [ ] Use an RSpec predicate matcher to check if the card is in use
 
@@ -18,7 +18,7 @@ Failures:
 
   1) Oystercard tracking usage is initially not in use
      Failure/Error: expect(subject).not_to be_in_use
-       expected `#<Oystercard:0x007f9431a830a0 @balance=0>.in_use?` to return false, got true
+       expected `#<Oystercard:0x007f9431a830a0 @balance=0>.in_journey?` to return false, got true
      # ./spec/oystercard_spec.rb:7:in `block (3 levels) in <top (required)>'
 
 ```

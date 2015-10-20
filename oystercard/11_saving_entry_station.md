@@ -26,9 +26,9 @@ I need to know where I've travelled from
 - [ ] Write a test that expects the card to remember the entry station after the touch in
 - [ ] Update the `touch_in` method to accept the entry station using a double
 - [ ] Update existing tests to pass a station to the `touch_in` method - you may need to declare your double in a `let` statement at the top of your describe block
-- [ ] when your tests are all green, refactor to remove the `in_journey` variable. Rewrite the `in_journey?` method to infer its status based on whether or not there is an entry station
-- [ ] Make the card forget the entry station on touch out by setting it to `nil`
 - [ ] Expose `entry_station` instance variable using an attribute reader
+- [ ] Make the card forget the entry station on touch out by setting it to `nil`
+- [ ] When your tests are all green, refactor to remove the `in_journey` variable. Rewrite the `in_journey?` method to infer its status based on whether or not there is an entry station
 
 ## Suggested resources:
 - [Doubles, Mocks, Stubs and Spies](https://github.com/makersacademy/course/blob/master/pills/doubles.md)
