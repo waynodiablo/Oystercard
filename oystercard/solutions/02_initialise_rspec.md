@@ -15,7 +15,7 @@ describe Oystercard do
 end
 ```
 
-Now add all files you created need to be added to a staging area (place were the files stay before they are committed) of git:
+Now all the files you created need to be added to a staging area (place were the files stay before they are committed) of git:
 
 ```
 git add spec
