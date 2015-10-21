@@ -26,4 +26,4 @@ Additionally, we will use **shotgun** to speed up our development process.
 - [Shotgun (Github)](https://github.com/rtomayko/shotgun)
 - [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 
-### [Solution](solutions/04_sinatra_start_and_restart.md)
+### [Solution](solutions/07_sinatra_start_and_restart_solution.md)

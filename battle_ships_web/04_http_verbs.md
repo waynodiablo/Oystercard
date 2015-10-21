@@ -29,4 +29,4 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 
 ### TO DO
 
-### [Solution](solutions/04.md)
+### [Solution](solutions/04_http_verbs_solution.md)

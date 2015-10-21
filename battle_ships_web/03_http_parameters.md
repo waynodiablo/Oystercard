@@ -28,4 +28,4 @@ Within HTTP, we call data sent from a client to a server a **parameter**. Just l
 
 TO DO
 
-### [Solution](solutions/03.md)
+### [Solution](solutions/03_http_parameters_solution.md)
