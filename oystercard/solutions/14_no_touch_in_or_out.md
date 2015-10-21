@@ -1,6 +1,6 @@
 - [ ] Update your test suite to reflect a new Journey class
 Make a new spec file journey_spec.rb
-- [ ] Create a new class Journey and move the functionality that relates to a journey from Oystercard to Journey
+- [ ] Create a new class Journey and move the functionality that relates to a journey from Oystercard to Journey.
 Test drive the development of your journey class. Each journey should have an entry and an exit station. Instances of journey should be initialized with an entry station, and should respond to `#exit`, `#fare` and `#complete` methods.
 - [ ] Make sure all tests pass, all existing functionality is preserved
 You will need to send messages to your Journey class from your Oystercard class - remember to use doubles to test that the correct messages are being sent.
