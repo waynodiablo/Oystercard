@@ -23,7 +23,7 @@ I need to touch in and out.
 - Use RSpec predicate matchers
 
 ## Interview questions you may expect:
-- What are instance variables and how they are different from local variables?
+- What are instance variables and how are they different from local variables?
 - Why some Ruby methods end with a question mark? What are they expected to return?
 
 ## To complete this challenge:
