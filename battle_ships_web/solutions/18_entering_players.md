@@ -155,7 +155,7 @@ And in `play.erb` we want to display the names our users just submitted from the
 
 ```erb
 <!-- in views/play.erb -->
-<%= @player_1 %> vs. <%= @player_2 %>
+<%= @player_1_name %> vs. <%= @player_2_name %>
 ```
 
 So we can pass these instance variables into the view, let's extract them from the `params` in the `post '/names'` action:
@@ -164,8 +164,8 @@ So we can pass these instance variables into the view, let's extract them from t
 # in app.rb
 
 post '/names' do
-  @player_1 = params[:player_1_name]
-  @player_2 = params[:player_2_name]
+  @player_1_name = params[:player_1_name]
+  @player_2_name = params[:player_2_name]
   erb :play
 end
 ```
