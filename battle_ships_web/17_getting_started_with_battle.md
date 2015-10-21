@@ -97,11 +97,13 @@ I want a sexy user interface
 
 - [ ] Start a new project directory (you could call it `Battle`)
 - [ ] Add dependencies for `sinatra`, `rspec-sinatra`, and `capybara` using a Gemfile, and install using `bundle`
+- [ ] Initialize the app using `rspec-sinatra`
 - [ ] Add an `app.rb` file at the root
-- [ ] Set up a Sinatra Application called `Battle` using Sinatra's Modular Style.
+- [ ] Set up a Sinatra Application called `Battle` inside `app.rb` using Sinatra's Modular Style.
 
 ### Resources
 
+- [`rspec-sinatra` gem](https://github.com/tansaku/rspec-sinatra)
 - [Sinatra Modular Style](http://www.sinatrarb.com/intro.html#Sinatra::Base%20-%20Middleware,%20Libraries,%20and%20Modular%20Apps)
 
 ### [Solution](solutions/17_getting_started_with_battle.md)
