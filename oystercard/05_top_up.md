@@ -19,7 +19,7 @@ I want to add money to my card
 
 ## Interview questions you may expect:
 - When do you have to use a `return` statement in Ruby and when can you omit it?
-- What are instance variables and how they are different from local variables?
+- What are instance variables and how are they different from local variables?
 - How can you access instance variable outside the instance they belong to?
 - What is the red/green/refactor cycle? Give me an example of using it.
 
