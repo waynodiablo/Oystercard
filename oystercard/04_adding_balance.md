@@ -2,7 +2,7 @@
 
 [Back to the challenge map](README.md)
 
-By now you have an empty project with a Gemfile and RSpec infrastructure, so you're ready to go. Now it's time to do some actual coding. To complete this issue you'll require to read and understand quite a lot but all this information is essential to learning how to code at a professional level.
+By now you have an empty project with a Gemfile and RSpec infrastructure, so you're ready to go. Now it's time to do some actual coding. To complete this issue you'll be required to read and understand quite a lot but all this information is essential to learning how to code at a professional level.
 
 A card that cannot carry a balance is just a piece of plastic (or an empty file, in our case). Let's enable our card to have a balance as the very first step.
 
