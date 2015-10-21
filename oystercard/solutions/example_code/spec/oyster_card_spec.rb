@@ -1,0 +1,64 @@
+require 'oyster_card'
+describe OysterCard do
+  let(:station){double(:station)}
+  let(:journey){double :journey, fare: 5, complete?: true}
+  let(:journey_log){double :journey_log, all: [journey], exit_journey: journey, outstanding_charges: 0}
+  let(:subject) {described_class.new(journey_log: journey_log)}
+
+  it 'has a balance of zero' do
+    expect(subject.balance).to eq(0)
+  end
+
+  it "can top up the balance" do
+    subject.top_up(10)
+    expect(subject.balance).to eq(10)
+  end
+
+  it "can't deduct if the balance goes below zero" do
+    expect{subject.touch_in(station)}.to raise_error(BalanceError, "You don't have enough.")
+  end
+
+  it "won't let you touch in if you don't have enough balance" do
+    expect{subject.touch_in(station)}.to raise_error(BalanceError, "You don't have enough.")
+  end
+
+  context 'it has a full balance' do
+    before{subject.top_up(OysterCard::BALANCE_LIMIT)}
+
+    it "won't let you top up over the balance limit" do
+      expect{subject.top_up(1)}.to raise_error(BalanceError, "You have exceeded your #{OysterCard::BALANCE_LIMIT} allowance.")
+    end
+
+    it "knows what station in touched in at" do
+      expect(journey_log).to receive(:start_journey).with(station)
+      subject.touch_in(station)
+    end
+
+    it "informs journey log in which station it touched out" do
+      expect(journey_log).to receive(:exit_journey).with(station)
+      subject.touch_out(station)
+    end
+
+
+    context 'when touched in' do
+      before do
+        allow(journey_log).to receive(:start_journey)
+        subject.touch_in(station)
+      end
+
+      it "deducts the charge from the balance when touching out" do
+        expect{subject.touch_out(station)}.to change{subject.balance}.by(-journey.fare)
+      end
+
+      it "will notify journey log to close previous fares" do
+        expect(journey_log).to receive(:outstanding_charges)
+        subject.touch_in(station)
+      end
+
+      it "will charge for the previous fare if you touch in twice" do
+        allow(journey_log).to receive(:outstanding_charges).and_return(6)
+        expect{subject.touch_in(station)}.to change{subject.balance}.by(-6)
+      end
+    end
+  end
+end
