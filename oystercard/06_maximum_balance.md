@@ -8,9 +8,9 @@ Use test-driven development approach to update the `top_up` method to raise an e
 
 
 ```
-In order to protect my money
+In order to protect my money from theft or loss
 As a customer
-I don't want to put too much money on my card
+I want a maximum limit (of £90) on my card
 ```
 
 ## Learning Objectives covered

@@ -61,31 +61,31 @@ I need to have the correct fare calculated
 
 ## Set up the project:
 
-  * [Create a Gemfile](01_create_gemfile.md)
-  * [Create RSpec conventional files](02_initialise_rspec.md)
-  * [Review debugging basics](03_debugging.md)
+  1. [Create a Gemfile](01_create_gemfile.md)
+  2. [Create RSpec conventional files](02_initialise_rspec.md)
+  3. [Review debugging basics](03_debugging.md)
 
 ## Create a basic Oyster card:
-  * [Add the balance](04_adding_balance.md)
-  * [Enable top up functionality](05_top_up.md)
-  * [Enforce maximum balance](06_maximum_balance.md)
-  * [Deduct the money](07_deducting_money.md)
+  4. [Add the balance](04_adding_balance.md)
+  5. [Enable top up functionality](05_top_up.md)
+  6. [Enforce maximum balance](06_maximum_balance.md)
+  7. [Deduct the money](07_deducting_money.md)
 
 ## Add touch in/out functionality:
-  * [Add touch in/out support](08_touch_in_out.md)
-  * [Checking mininum balance on touch in](09_min_balance_on_touch_in.md)
-  * [Charging for the journey](10_charge_on_touch_out.md)
+  8. [Add touch in/out support](08_touch_in_out.md)
+  9. [Checking mininum balance on touch in](09_min_balance_on_touch_in.md)
+  10. [Charging for the journey](10_charge_on_touch_out.md)
 
 ## Record the journeys
-  * [Saving the entry station](11_saving_entry_station.md)
-  * [Adding journey history](12_journey_history.md)
-  * [Creating the station class](13_create_station_class.md)
+  11. [Saving the entry station](11_saving_entry_station.md)
+  12. [Adding journey history](12_journey_history.md)
+  13. [Creating the station class](13_create_station_class.md)
 
 ## Refactor to extract Journey class
-  * [Handling a journey without a touch out](14_no_touch_in_or_out.md)
+  14. [Handling a journey without a touch out](14_no_touch_in_or_out.md)
 
 ## Refactoring: get the code into shape
-  * [Extracting the journey log out of the Oystercard](15_extracting_journey_log.md)
+  15. [Extracting the journey log out of the Oystercard](15_extracting_journey_log.md)
 
 ## Make fares depends on zones
-  * [Calculating the fare between zones](16_fare_for_zones.md)
+  16. [Calculating the fare between zones](16_fare_for_zones.md)
