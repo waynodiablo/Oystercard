@@ -40,6 +40,6 @@ Head [here](https://github.com/sjmog/battle/commit/480e6433eb825a5bce4b9221fe99c
 
 By this point, I was concerned that `Game` was getting overly-responsible again, so I [refactored an `Attack` object](https://github.com/sjmog/battle/commit/0e95307771acd92b6d898a3c1138c03be835696b) out of my code. The pattern I used was inspired by [this Thoughtbot article](https://robots.thoughtbot.com/meditations-on-a-class-method).
 
-Once you're happy you have approximated solutions to these feature tests, let's move on to some extension exercises.
+Once you're happy you have approximated solutions to these feature tests, let's move on to losing and winning the game.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
