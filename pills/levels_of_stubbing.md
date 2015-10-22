@@ -195,3 +195,11 @@ Note that on first operation the text message will be sent, but on second and su
 Note also that with this VCR configuration we are replacing any sensitive data in the YAML file such as our Twilio authentication ids etc.
 
 Checking this file into version control ensures that automated CI systems will avoid sending unwanted SMS messages (in this case) and prevent unwanted network interactions from your app (in general).  In fact all the solutions have the same overall effect and it is a matter of taste about the particular level at which you stub interactions with 3rd party services over the network.  The higher level stubbing makes more sense for unit tests (class level stubbing, stubbing the gem), where the lower level stubbing (webmock, vcr) make more sense in feature tests.
+
+## Resources
+
+* https://relishapp.com/rspec/rspec-mocks/docs/working-with-legacy-code/message-chains
+* https://github.com/bblimke/webmock
+* https://www.relishapp.com/webmock/webmock/docs/stubbing/stubbing-requests
+* https://github.com/vcr/vcr
+* http://stackoverflow.com/questions/9816152/filtering-sensitive-data-with-vcr/9831148#9831148
