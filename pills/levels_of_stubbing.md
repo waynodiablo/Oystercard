@@ -1,4 +1,4 @@
-# Stubbing 3rd Party Network APIS
+# Stubbing 3rd Party Network APIs
 
 In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  Say that we are using the Twilio gem liks so:
 
@@ -24,7 +24,7 @@ end
 
 And test of complete_order will have the side effect of sending an SMS.  
 
-## Stub the Class
+## Stub Class in Your Application
 
 The simplest way to avoid this is to stub out like so:
 
@@ -40,7 +40,7 @@ end
 
 This ensures that Takeaway#complete_order gets some test coverage and that no SMS will be sent by our tests.  This is acceptable, but we still don't have very good test coverage. 
 
-## Stub the Gem
+## Stub the Gem Associated with 3rd Party API
 
 What alternatives do we have?  One is to use some of RSpec's legacy code features like [`receive_message_chain`](https://relishapp.com/rspec/rspec-mocks/docs/working-with-legacy-code/message-chains):
 
