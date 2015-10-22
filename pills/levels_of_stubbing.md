@@ -32,7 +32,7 @@ end
 
 And test of complete_order will have the side effect of sending an SMS.  
 
-## Stub Class in Your Application
+## 1. Stub Class in Your Application
 
 The simplest way to avoid this is to stub out like so:
 
@@ -48,7 +48,7 @@ end
 
 This ensures that Takeaway#complete_order gets some test coverage and that no SMS will be sent by our tests.  This is acceptable, but we still don't have very good test coverage. 
 
-## Stub the Gem Associated with 3rd Party API
+## 2. Stub the Gem Associated with 3rd Party API
 
 What alternatives do we have?  One is to use some of RSpec's legacy code features like [`receive_message_chain`](https://relishapp.com/rspec/rspec-mocks/docs/working-with-legacy-code/message-chains):
 
@@ -68,7 +68,7 @@ end
 
 This has the advantage that we have now precisely stubbed out our applications interaction with the Twilio gem, but we've got some really brittle convoluted code here.  As soon as Twilio's gem changes our application will break, but our tests will still pass.  Can we do better?
 
-## Stub the Network with Webmock
+## 3. Stub the Network with Webmock
 
 Rather than stubbing at the level of the Twilio gem we can go one level lower and stub the network interface using [webmock](https://github.com/bblimke/webmock).  See the webmock README and the [relish docs](https://www.relishapp.com/webmock/webmock/docs/stubbing/stubbing-requests) for more details, but now we can have code like this in our tests:
 
@@ -86,7 +86,7 @@ end
 
 We are no longer dependent on the specifics of how the Twilio gem happens to arrange its interface, but this is still a little convoluted and requires us to understand exactly which URL endpoints the Twilio gem is hitting in order to communicate with the remote Twilio API over HTTP.
 
-## Manage Your Network Stubbing with VCR
+## 4. Manage Your Network Stubbing with VCR
 
 We can make management of all this a little easier with a gem like [VCR](https://github.com/vcr/vcr).  This requires more setup, but VCR operates so that it records all the network interactions that your application has in yaml files.  Full details of operation in [VCR](https://github.com/vcr/vcr)'s README, but here's a taste:
 
