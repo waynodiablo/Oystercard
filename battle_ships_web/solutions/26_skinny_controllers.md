@@ -59,8 +59,6 @@ Now we can tidy up our controller:
  
  class Battle < Sinatra::Base
    enable :sessions
- @@ -8,22 +10,20 @@ class Battle < Sinatra::Base
-   end
  
    post '/names' do
 -    $game = Game.new
