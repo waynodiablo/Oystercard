@@ -1,4 +1,6 @@
-In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are at least three different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  Say that we are using the Twilio gem liks so:
+# Stubbing 3rd Party Network APIS
+
+In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  Say that we are using the Twilio gem liks so:
 
 ```ruby 
 class Takeaway
