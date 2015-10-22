@@ -1,6 +1,14 @@
 # Stubbing 3rd Party Network APIs
 
-In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  Say that we are using the Twilio gem liks so:
+In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  
+
+1. Stub Class in Your Application
+2. Stub the Gem Associated with 3rd Party API
+3. Stub the Network with Webmock
+4. Manage Your Network Stubbing with VCR
+
+
+Let's see each in turn: Say that we are using the Twilio gem liks so:
 
 ```ruby 
 class Takeaway
