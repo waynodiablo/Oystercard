@@ -53,21 +53,21 @@ So I can start to lose a game of Battle,
 I want Player 2's attack to reduce my HP by 10
 
 As a Player,
-So I can play a suspenseful game of Battle,
-I want all Attacks to deal a random amount of damage
-
-As a Player,
 So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
-
-As a lonely Player,
-So I can keep my Battle skills up to scratch
-I want to play a Computerised opponent
 ```
 
 And some Advanced 'extension' User Stories:
 
 ```
+As a Player,
+So I can play a suspenseful game of Battle,
+I want all Attacks to deal a random amount of damage
+
+As a lonely Player,
+So I can keep my Battle skills up to scratch
+I want to play a Computerised opponent
+
 As a Player,
 So I can enjoy a game of Battle with more variety,
 I want to choose from a range of attacks I could make

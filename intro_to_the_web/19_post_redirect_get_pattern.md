@@ -1,4 +1,4 @@
-# POST-redirect loops
+# POST/`redirect`/GET pattern
 
 [Back to the Challenge Map](00_challenge_map.md)
 
@@ -41,4 +41,4 @@ First, we are extracting parameters to state. Then, we are rendering a view. But
 - [Sinatra `session`s](http://www.sinatrarb.com/intro.html#Using%20Sessions)
 - [Post/Redirect/Get pattern](https://en.wikipedia.org/wiki/Post/Redirect/Get)
 
-### [Solution](solutions/19_post_redirect_loops.md)
+### [Solution](solutions/19_post_redirect_get_pattern.md)

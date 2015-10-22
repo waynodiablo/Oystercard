@@ -1,6 +1,6 @@
-# Solution – POST-redirect loops
+# Solution – POST/`redirect`/GET pattern
 
-[Back to the Challenge](../19_post_redirect_loops.md)
+[Back to the Challenge](../19_post_redirect_get_pattern.md)
 
 Let's enable the `session` so we can store information between requests.
 

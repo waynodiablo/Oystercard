@@ -172,6 +172,6 @@ And creating a `game_over.erb` view file with a losing message:
 <%= @game.loser.name %> loses! 
 ```
 
-All passes, and we're done! Now let's move on to some extension exercises.
+Everything passes, and we're done! Now let's move on to some extension exercises.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
