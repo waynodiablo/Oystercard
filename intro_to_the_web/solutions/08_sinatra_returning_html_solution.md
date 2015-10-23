@@ -1,6 +1,6 @@
-# Solution – Sinatra: Start and restart
+# Solution – Sinatra: Returning HTML
 
-[Back to the Challenge](../03_sinatra_defining_a_route.md)
+[Back to the Challenge](../08_sinatra_returning_html.md)
 
 "hello" is a boring thing to send to our users. We can do better!
 

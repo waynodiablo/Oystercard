@@ -1,6 +1,6 @@
 # Solution – Sinatra: Using the Chrome DevTools
 
-[Back to the Challenge](../12_sinatra_using_the_chrome_devtools.md)
+[Back to the Challenge](../15_sinatra_using_the_chrome_devtools.md)
 
 The Chrome DevTools are an extra string to your debugging bow. They will give you extra insight in to the flow of information through your application - insight that you can use to identify where things are going wrong, and fix them.
 

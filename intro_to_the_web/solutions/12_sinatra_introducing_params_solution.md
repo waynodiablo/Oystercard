@@ -1,6 +1,6 @@
 # Solution – Sinatra: Introducing `params`
 
-[Back to the Challenge](../09_sinatra_introducing_params.md)
+[Back to the Challenge](../12_sinatra_introducing_params.md)
 
 Our current web page is not interactive. It doesn't take any input from the user. That could be a very useful feature! Pretty much any website you see online is interactive and that's what makes the web such an exciting place.
 

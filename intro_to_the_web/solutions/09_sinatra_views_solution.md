@@ -1,6 +1,6 @@
 # Solution – Sinatra: Views
 
-[Back to the Challenge](../06_sinatra_views.md)
+[Back to the Challenge](../09_sinatra_views.md)
 
 So, we've got a kitten inside a box with a red border. The code looks something like this:
 

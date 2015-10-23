@@ -1,6 +1,6 @@
 # Solution – Test Helpers
 
-[Back to the Challenge](../18_entering_players.md)
+[Back to the Challenge](../21_test_helpers.md)
 
 Let's make a new file, `web_helpers.rb`. We can use this file to store actions we commonly use in our feature tests.
 

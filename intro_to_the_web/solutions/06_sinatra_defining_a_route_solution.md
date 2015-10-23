@@ -1,6 +1,6 @@
 # Solution – Sinatra: Defining a route
 
-[Back to the Challenge](../03_sinatra_defining_a_route.md)
+[Back to the Challenge](../06_sinatra_defining_a_route.md)
 
 Let's create a basic web application using Sinatra. It will have only one page and on this page there will be "hello!" text. This is what it will look like:
 

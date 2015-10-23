@@ -1,6 +1,6 @@
 # Solution – Sinatra: `erb`
 
-[Back to the Challenge](../03_sinatra_defining_a_route.md)
+[Back to the Challenge](../10_sinatra_erb.md)
 
 Let's say we want to give our kitten a name. For kicks, we're going to select a random name that will change each time the page is reloaded. For now, we'll do this _within the view_.
 

@@ -1,6 +1,6 @@
 # Solution – Sinatra: Start and restart
 
-[Back to the Challenge](../03_sinatra_defining_a_route.md)
+[Back to the Challenge](../07_sinatra_start_and_restart.md)
 
 If we wanted to have another page at `http://localhost:4567/secret`, then we'd do the following:
 

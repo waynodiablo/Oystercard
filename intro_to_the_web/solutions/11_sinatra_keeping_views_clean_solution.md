@@ -1,6 +1,6 @@
 # Solution – Sinatra: Keeping views clean
 
-[Back to the Challenge](../08_sinatra_keeping_views_clean.md)
+[Back to the Challenge](../11_sinatra_keepig_views_clean.md)
 
 Let's refactor our code to push the 'heavy logical lifting' of random name generation out of the view, and in to the controller. Views shouldn't concern themselves with this sort of complexity.
 

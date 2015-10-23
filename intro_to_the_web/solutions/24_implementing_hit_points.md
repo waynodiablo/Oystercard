@@ -1,6 +1,6 @@
 # Solution – Implementing Hit Points
 
-[Back to the Challenge](../23_extracting_logic_to_the_model.md)
+[Back to the Challenge](../24_implementing_hit_points.md)
 
 Our User Story:
 

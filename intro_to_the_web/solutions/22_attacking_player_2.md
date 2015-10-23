@@ -1,6 +1,6 @@
 # Solution – Entering Players
 
-[Back to the Challenge](../18_entering_players.md)
+[Back to the Challenge](../22_attacking_player_2.md)
 
 Our User Story:
 

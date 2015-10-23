@@ -1,6 +1,6 @@
 # Solution – Switching Turns
 
-[Back to the Challenge](../25_srp_anyone.md)
+[Back to the Challenge](../27_switching_turns.md)
 
 Let's check our User Story:
 
