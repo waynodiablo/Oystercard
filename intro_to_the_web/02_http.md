@@ -9,9 +9,6 @@ In this challenge you will look at the important elements of an HTTP request and
 ### Learning Objectives covered
 - Recognise a request and a response and the important elements of each.
 
-### Challenge setup
-This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line tool useful for making HTTP requests. Install it from the command line with: `brew install httpie`.
-
 ### To complete this challenge, you will need to:
 
 - [ ] Use httpie's "-v" flag and make a request to 'http://makersipsum.herokuapp.com/'.

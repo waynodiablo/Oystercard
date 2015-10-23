@@ -1,6 +1,6 @@
 # Intro to the Web
 
-This web is designed to introduce you to the web. Some of the key topics you'll cover include:
+This week is designed to introduce you to the web. Some of the key topics you'll cover include:
 
 - Servers and Clients
 - HTTP requests and responses
@@ -14,7 +14,7 @@ At a high level, your introduction involves:
 
 - Some basic exercises to get you familiar with Requests, Responses, and HTTP
 - A basic project to get you familiar with Servers, `params`, `session`s
-- Some basic exercies to get you familiar with Capybara
+- Some basic exercises to get you familiar with Capybara
 - An extended project to wrap it all together and build on previous weeks.
 
 ### Challenges

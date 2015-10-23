@@ -13,9 +13,6 @@ In this challenge you will learn the different use-cases for two of HTTP methods
 - Understand that a POST request creates data.
 - Understand the different use-cases for GET and POST requests.
 
-### Challenge setup
-This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line tool useful for making HTTP requests. Install it from the command line with: `brew install httpie`.
-
 ### To complete this challenge, you will need to:
 
 - [ ] Use HTTPie's "-v" flag and make a request to 'http://getpostworkout.herokuapp.com/'.
