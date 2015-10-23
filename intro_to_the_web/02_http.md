@@ -20,6 +20,8 @@ In this challenge you will look at the important elements of an HTTP request and
 
 ### Resources
 
-# TO DO
+- [HTTP Headers for Dummies](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
+- [Understanding HTTP
+  Basics](http://learn.onemonth.com/understanding-http-basics)
 
 ### [Solution](solutions/02_http_solution.md)

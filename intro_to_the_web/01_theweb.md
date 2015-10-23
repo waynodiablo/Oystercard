@@ -26,7 +26,7 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 ### Resources
 
 - [httpie usage](https://github.com/jkbrzt/httpie#usage)
-- httpie manual: type `man httpie` from the command line
+- httpie manual: type `man http` from the command line
 - [Client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
 
 ### [Solution](solutions/01_theweb_solution.md)

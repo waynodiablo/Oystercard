@@ -26,6 +26,10 @@ Within HTTP, we call data sent from a client to a server a **parameter**. Just l
 
 ### Resources
 
-TO DO
+- [HTTP: The Protocol Every Web Developer Must
+  Know](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+- [Understanding
+  URLs](http://www.tutorialspoint.com/html/understanding_url_tutorial.htm)
+- [Anatomy of a URL](http://doepud.co.uk/blog/anatomy-of-a-url)
 
 ### [Solution](solutions/03_http_parameters_solution.md)
