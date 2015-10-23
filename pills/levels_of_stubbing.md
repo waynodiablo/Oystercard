@@ -1,5 +1,7 @@
 # Stubbing 3rd Party Network APIs
 
+:construction: UNDER CONSTRUCTION :construction:
+
 In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  
 
 1. Stub Class in Your Application
@@ -77,7 +79,7 @@ describe Takeaway do
   it "can send text" do
     message = 'order complete'
     host = "#{ENV['TWILIO_ACCOUNT_SID']}: #{ENV['TWILIO_AUTH_TOKEN']}@api.twilio.com"
-    stub_request(:post, "#{host}/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json").
+    assert_requested(:post, "#{host}/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json").
       with(:body => {:data => {'From' => ENV['TWILIO_PHONE'], 'To' => ENV['TWILIO_DESTINATION_PHONE'], 'Body' => message}})
     subject.send_text(message)
   end
