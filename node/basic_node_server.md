@@ -8,9 +8,9 @@ Many thanks to [Spike](http://github.com/spike01) for the original design of thi
 
 So, now that we can write unit tests and automate various tasks, it's time to take Node out on to the web. For this, we will be using the [Express framework](http://expressjs.com/), which has the same lightweight design philosophy as Sinatra. However, as Makers, we'll be wanting to write some tests first.  
 
-##Testing with `webdriver-io`
+##Testing with `webdriverio`
 
-To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using `webdriver-io`, which is based on Selenium (much like Protractor) and provides us with the ability to automate page navigation in a real browser.  
+To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using `webdriverio`, which is based on Selenium (much like Protractor) and provides us with the ability to automate page navigation in a real browser.  
 
 We will also be using Mocha (Node's most popular test harness) and Chai (an expectation library).  
 
@@ -23,7 +23,7 @@ First of all: set up a new project with `npm init` (or adapt an exisiting one). 
 npm install --save-dev mocha
 npm install --save-dev chai
 npm install --save-dev selenium-standalone 
-npm install --save-dev webdriver-io
+npm install --save-dev webdriverio
 ```
 
 Make sure you follow all the instructions for [selenium-standalone](https://www.npmjs.com/package/selenium-standalone) if for some reason you don't have the JDK installed yet. Have a Selenium server running somewhere in the background.
@@ -85,8 +85,8 @@ We get an error, which should be expected as we don't have a server:
 Uncaught AssertionError: expected 'This webpage is not available\nERR_CONNECTION_REFUSED\nReload\nDetails' to equal 'Hello world'
 ```
 
-> __"Wait a second, where do you `require('webdriver-io)`?"__  
-> Good point. One thing that hasn't been mentioned is that `grunt-webdriver` contains quite a bit of magic, which is great for moving quickly, but maybe not for understanding. If we were to write these tests without the Grunt task, we would have to require and configure Webdriver manually in our test file. 
+> __"Wait a second, where do you `require('webdriverio)`?"__  
+> Good point. One thing that hasn't been mentioned is that `grunt-webdriver` contains quite a bit of magic, which is great for moving quickly, but maybe not for understanding. If we were to write these tests without the Grunt task, we would have to require and configure Webdriver manually in our test file - check the `webdriverio` documentation to see how to do this
 
 At this stage, this test will be red for a little while, as we will need to set up Express. 
 

@@ -1,4 +1,14 @@
-In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are at least three different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  Say that we are using the Twilio gem liks so:
+# Stubbing 3rd Party Network APIs
+
+In general you shouldn't be stubbing out behaviour on the object under test.  The two key exceptions are when you have randomness or a 3rd party API.  There are several different levels we can stub out the interaction with a 3rd party API such as Twilio (used for sending SMS messages).  
+
+1. Stub Class in Your Application
+2. Stub the Gem Associated with 3rd Party API
+3. Stub the Network with Webmock
+4. Manage Your Network Stubbing with VCR
+
+
+Let's see each in turn: Say that we are using the Twilio gem liks so:
 
 ```ruby 
 class Takeaway
@@ -20,7 +30,11 @@ class Takeaway
 end
 ```
 
-And test of complete_order will have the side effect of sending an SMS.  The simplest way to avoid this is to stub out like so:
+And test of complete_order will have the side effect of sending an SMS.  
+
+## 1. Stub Class in Your Application
+
+The simplest way to avoid this is to stub out like so:
 
 ```ruby
 describe Takeaway
@@ -33,6 +47,8 @@ end
 ```
 
 This ensures that Takeaway#complete_order gets some test coverage and that no SMS will be sent by our tests.  This is acceptable, but we still don't have very good test coverage. 
+
+## 2. Stub the Gem Associated with 3rd Party API
 
 What alternatives do we have?  One is to use some of RSpec's legacy code features like [`receive_message_chain`](https://relishapp.com/rspec/rspec-mocks/docs/working-with-legacy-code/message-chains):
 
@@ -52,10 +68,30 @@ end
 
 This has the advantage that we have now precisely stubbed out our applications interaction with the Twilio gem, but we've got some really brittle convoluted code here.  As soon as Twilio's gem changes our application will break, but our tests will still pass.  Can we do better?
 
-The next level up is to stub out at the network layer using a gem like [VCR](https://github.com/vcr/vcr).  This involves a non-trivial setup and there are a number of gotchas, but VCR operates so that it records all the network interactions that your application has.  Full details of operation in [VCR](https://github.com/vcr/vcr)'s README, but here's a taste:
+## 3. Stub the Network with Webmock
+
+Rather than stubbing at the level of the Twilio gem we can go one level lower and stub the network interface using [webmock](https://github.com/bblimke/webmock).  See the webmock README and the [relish docs](https://www.relishapp.com/webmock/webmock/docs/stubbing/stubbing-requests) for more details, but now we can have code like this in our tests:
 
 ```ruby
-  it "receives a message after the order is placed" do
+describe Takeaway do
+  it "can send text" do
+    message = 'order complete'
+    host = "#{ENV['TWILIO_ACCOUNT_SID']}: #{ENV['TWILIO_AUTH_TOKEN']}@api.twilio.com"
+    stub_request(:post, "#{host}/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json").
+      with(:body => {:data => {'From' => ENV['TWILIO_PHONE'], 'To' => ENV['TWILIO_DESTINATION_PHONE'], 'Body' => message}})
+    subject.send_text(message)
+  end
+end
+```
+
+We are no longer dependent on the specifics of how the Twilio gem happens to arrange its interface, but this is still a little convoluted and requires us to understand exactly which URL endpoints the Twilio gem is hitting in order to communicate with the remote Twilio API over HTTP.
+
+## 4. Manage Your Network Stubbing with VCR
+
+We can make management of all this a little easier with a gem like [VCR](https://github.com/vcr/vcr).  This requires more setup, but VCR operates so that it records all the network interactions that your application has in yaml files.  Full details of operation in [VCR](https://github.com/vcr/vcr)'s README, but here's a taste:
+
+```ruby
+  it "receives a text message after the order is placed" do
     VCR.use_cassette('twilio') do
       takeaway.complete_order(20.93)
     end
@@ -158,4 +194,12 @@ Note that on first operation the text message will be sent, but on second and su
 
 Note also that with this VCR configuration we are replacing any sensitive data in the YAML file such as our Twilio authentication ids etc.
 
-Checking this file into version control ensures that automated CI systems will not send unwanted SMS messages (in this case) and prevent unwanted network interactions from your app (in general).
+Checking this file into version control ensures that automated CI systems will avoid sending unwanted SMS messages (in this case) and prevent unwanted network interactions from your app (in general).  In fact all the solutions have the same overall effect and it is a matter of taste about the particular level at which you stub interactions with 3rd party services over the network.  The higher level stubbing makes more sense for unit tests (class level stubbing, stubbing the gem), where the lower level stubbing (webmock, vcr) make more sense in feature tests.
+
+## Resources
+
+* https://relishapp.com/rspec/rspec-mocks/docs/working-with-legacy-code/message-chains
+* https://github.com/bblimke/webmock
+* https://www.relishapp.com/webmock/webmock/docs/stubbing/stubbing-requests
+* https://github.com/vcr/vcr
+* http://stackoverflow.com/questions/9816152/filtering-sensitive-data-with-vcr/9831148#9831148

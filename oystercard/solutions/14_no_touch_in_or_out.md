@@ -18,9 +18,6 @@ require 'journey'
 describe Journey do
   let(:station) { double :station, zone: 1}
 
-  it { is_expected.to respond_to(:entry_station)}
-  it { is_expected.to respond_to(:exit_station)}
-
   it "knows if a journey is not complete" do
     expect(subject).not_to be_complete
   end
