@@ -23,7 +23,6 @@ In this challenge you will learn the different use-cases for two of HTTP methods
 - [ ] Explain to your partner what was different about the request headers as compared to the first step.
 
 ### Resources
-
-### TO DO
+- [POST(Http)](https://en.wikipedia.org/wiki/POST_(HTTP))
 
 ### [Solution](solutions/04_http_verbs_solution.md)
