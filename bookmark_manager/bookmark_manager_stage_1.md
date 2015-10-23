@@ -47,7 +47,7 @@ So, the test tells us that the method "tags" is undefined.   But what do we want
 has n, :tags, through: Resource
 ```
 
-The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarize yourself with the types of database relationships: :pill:[Database Relations](../pills/database_relations)
+The details of how datamapper works with many-to-many relationships (through: Resource) are well described in its [documentation](http://datamapper.org/docs/associations.html). At some point you may wish to check out this pill and familiarize yourself with the types of database relationships: :pill:[Database Relations](../pills/relational_SQL_DBs.md)
 
 Let's go back and run the test. We get another error:
 
@@ -89,7 +89,7 @@ Though we might think `[]` denotes an array, what we see here is just the string
 post '/links' do
   link = Link.new(url: params[:url],     # 1. Create a link
                 title: params[:title])
-  tag  = Tag.create(name: params[:tag]) # 2. Create a tag for the link
+  tag  = Tag.create(name: params[:tag])  # 2. Create a tag for the link
   link.tags << tag                       # 3. Adding the tag to the link's DataMapper collection.
   link.save                              # 4. Saving the link.
   redirect to('/links')
@@ -169,21 +169,17 @@ First we find the tag that we need (note the use of the parameter `:name` in the
 Run your tests. You might get an epic error message, but if you scroll to the top you'll find the important part:
 
 ```
-Failure/Error: expect(page).not_to have_content('Makers Academy')
-  expected not to find text "Makers Academy" in "NoMethodError at /tags/bubbles undefined method `links' for #<Tag @id=8 @name=\'bubbles\'"
+Failure/Error: visit '/tags/bubbles'
+    NoMethodError:
+      undefined method `links' for #<Tag @id=8 @name="bubbles">
 ```
 Whereas `link.tags` returns an array-like DataMapper Collection, it seems that `tag.links` blows up with a NoMethodError. Looking at the Tag class, it should be relatively clear why: we haven't declared the many-to-many relationship there yet. **Both partners in a many-to-many relationship need to know about each other**. Let's do that:
 ```ruby
 # within the body of the Tag class (./app/models/tag.rb)
 has n, :links, through: Resource
 ```
-Run your tests again and you should get a whole series of messages referencing SQL errors. Examine the errors, though don't worry about understanding them. Think about what change a 'many-to-many' relationship should make to a database.
 
-The problem is that our declaration in Tag above requires a structural change to the database. But in our data_mapper_setup.rb, the command `DataMapper.auto_upgrade!` only makes non-destructive changes.
-* :white_check_mark: Change `DataMapper.auto_upgrade!` to `DataMapper.auto_migrate!`.
-
-Doing so should make your tests go green. For safety's sake, immediately switch back to `auto_upgrade!` (see further activities below for implementing the best practice for this).
-
+Doing so should make your tests go green.
 
 ## Further Activities:
 

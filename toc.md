@@ -5,7 +5,7 @@
 * [Introduction](intro.md)
 * Day 1: [TDD and Pair Programming: Fizzbuzz](fizzbuzz/fizzbuzz.md)
 * Week 1: [Object Oriented Design (OOD): Boris Bikes](boris_bikes/0_challenge_map.md)
-* Week 2: [More advanced OO with games: BattleShips](battle_ships/battle_ships.md)
+* Week 2: [Further OOD: Oystercard](oystercard/README.md)
 * Week 3: [Welcome to the web: BattleShips in the browser](battle_ships_web/battle_ships_web_rspec.md)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/bookmark_manager.md)
 * Week 5: [Intro to Javascript: Thermostat](thermostat/thermostat.md)

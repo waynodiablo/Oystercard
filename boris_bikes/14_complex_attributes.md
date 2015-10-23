@@ -4,7 +4,7 @@
 
 Our system now allows us to `dock` bikes up to a capacity of 1, and to `release_bike` if there is a bike available.
 
-So far we have been assuming the capacity of a `DockingStation` instance to be 1. Your produce owner receives an email from the client: they want each docking station to accept 20 bikes. A User Story for this:
+So far we have been assuming the capacity of a `DockingStation` instance to be 1. Your product owner receives an email from the client: they want each docking station to accept 20 bikes. A User Story for this:
 
 ```
 As a system maintainer,

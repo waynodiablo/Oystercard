@@ -6,7 +6,7 @@ London's [Boris Bikes](https://tfl.gov.uk/modes/cycling/santander-cycles) (well,
 
 Let's go back several years, to the days when there were no Boris Bikes. Imagine that you're a junior developer (congratulations! That was easy). Transport for London, the body responsible for delivery of a new bike system, come to you with a plan: a network of Docking Stations and bikes that anyone can use. They want you to build a program that will run all the Docking Stations, simulate all the Bikes, and emulate all the infrastructure (vans, repair staff, and so on) required to make their dream a reality. They call it - guess what? - 'Boris' Bikes, and they're offering a tasty sum of money.
 
-These challenges will help to guide your first few steps when presented with _any_ software project. There are ten challenges, and they all build on one another. They require you to research things, to get stuck, and to find your own solutions. This is on purpose. A developer is a 'knowledge worker' - someone who will spend the majority of their time researching and learning how to solve problems. It'll suck for a bit, but with practice, you will get faster: and there's no better feeling than finding the answer to a problem that's been standing in your way for hours.
+These challenges will help to guide your first few steps when presented with _any_ software project. There are 22 challenges, and they all build on one another. They require you to research things, to get stuck, and to find your own solutions. This is on purpose. A developer is a 'knowledge worker' - someone who will spend the majority of their time researching and learning how to solve problems. It'll suck for a bit, but with practice, you will get faster: and there's no better feeling than finding the answer to a problem that's been standing in your way for hours.
 
 When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 
@@ -32,10 +32,11 @@ When you're ready, start at Challenge 1: Setting up a Project. Good luck!
 18. [Dealing with Broken Bikes](18_dealing_with_broken_bikes.md)
 19. [Isolating Tests with Doubles](19_isolating_tests_with_doubles.md)
 20. [Mocking Behaviour on Doubles](20_mocking_behaviour_on_doubles.md)
+21. [Men with Ven](21_men_with_ven.md)
+22. [Modules as Mixins](22_modules_as_mixins.md)
 
-### Post-challenges
+### Post-challenge
 
-After the challenges, you continue to develop the Boris Bikes program in a more tutorial-focussed manner.
+After the challenges, you can stretch yourself by implementing additional User Stories that significantly enhance the domain.
 
-1. [Post Challenge 5](post_challenges/post_challenge_5.md)
-1. [Post Challenge 6](post_challenges/post_challenge_6.md)
+1. [Post-challenge](post_challenge.md)

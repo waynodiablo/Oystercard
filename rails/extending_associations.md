@@ -101,7 +101,7 @@ Now, in `Restaurant`, replace the association declaration with the following:
 ```
 has_many :reviews,
       -> { extending WithUserAssociationExtension },
-      dependent: :restrict_with_exception
+      dependent: :destroy
 ```
 
 Not only should this pass all our tests, we can use this extension module to extend _any_ association where we want to pass the user alongside the model attributes.  And that's pretty cool.

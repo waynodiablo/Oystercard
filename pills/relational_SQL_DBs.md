@@ -132,7 +132,7 @@ individual tables this time.
 Querying this in SQL requires you to join the tables again:
 
 ```SQL
-SELECT * FROM User LEFT JOIN Blog ON User.id = Address.user_id;
+SELECT * FROM User LEFT JOIN Blog ON User.id = Blog.user_id;
 ```
 
 The `LEFT JOIN` command returns all the left hand side (User) data, and any
@@ -201,8 +201,8 @@ two tables *through* the join table each other:
 
 ```SQL
 SELECT * FROM TagsBlogposts
-INNER JOIN Tags ON Tags.id = TagsBlogposts.blog_id
-INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.tag_id;
+INNER JOIN Tags ON Tags.id = TagsBlogposts.tag_id
+INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.blog_id;
 ```
 
 (You can write SQL statements across many lines - but they must always end in

@@ -1,4 +1,4 @@
-## Post Challenge 6: More User Stories/Feature Requests from the Client
+## Post-challenge: More User Stories/Feature Requests from the Client
 
 [Back to the Challenge Map](../0_challenge_map.md)
 
