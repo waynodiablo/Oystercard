@@ -23,7 +23,7 @@ First of all: set up a new project with `npm init` (or adapt an exisiting one). 
 npm install --save-dev mocha
 npm install --save-dev chai
 npm install --save-dev selenium-standalone 
-npm install --save-dev webdriver-io
+npm install --save-dev webdriverio
 ```
 
 Make sure you follow all the instructions for [selenium-standalone](https://www.npmjs.com/package/selenium-standalone) if for some reason you don't have the JDK installed yet. Have a Selenium server running somewhere in the background.
