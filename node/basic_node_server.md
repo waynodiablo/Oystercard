@@ -85,8 +85,8 @@ We get an error, which should be expected as we don't have a server:
 Uncaught AssertionError: expected 'This webpage is not available\nERR_CONNECTION_REFUSED\nReload\nDetails' to equal 'Hello world'
 ```
 
-> __"Wait a second, where do you `require('webdriver-io)`?"__  
-> Good point. One thing that hasn't been mentioned is that `grunt-webdriver` contains quite a bit of magic, which is great for moving quickly, but maybe not for understanding. If we were to write these tests without the Grunt task, we would have to require and configure Webdriver manually in our test file. 
+> __"Wait a second, where do you `require('webdriverio)`?"__  
+> Good point. One thing that hasn't been mentioned is that `grunt-webdriver` contains quite a bit of magic, which is great for moving quickly, but maybe not for understanding. If we were to write these tests without the Grunt task, we would have to require and configure Webdriver manually in our test file - check the `webdriverio` documentation to see how to do this
 
 At this stage, this test will be red for a little while, as we will need to set up Express. 
 
