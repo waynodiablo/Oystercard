@@ -8,9 +8,9 @@ Many thanks to [Spike](http://github.com/spike01) for the original design of thi
 
 So, now that we can write unit tests and automate various tasks, it's time to take Node out on to the web. For this, we will be using the [Express framework](http://expressjs.com/), which has the same lightweight design philosophy as Sinatra. However, as Makers, we'll be wanting to write some tests first.  
 
-##Testing with `webdriver-io`
+##Testing with `webdriverio`
 
-To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using `webdriver-io`, which is based on Selenium (much like Protractor) and provides us with the ability to automate page navigation in a real browser.  
+To test, we will need some kind of programmable browser. These fall into two categories: browsers without a visual interface (headless, such as Capybara in Ruby) and with (head..ful? ...in most cases, this will be Selenium). For this walkthrough, we will be using `webdriverio`, which is based on Selenium (much like Protractor) and provides us with the ability to automate page navigation in a real browser.  
 
 We will also be using Mocha (Node's most popular test harness) and Chai (an expectation library).  
 
