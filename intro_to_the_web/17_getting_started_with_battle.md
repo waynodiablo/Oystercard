@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Now that you have a basic understanding of HTTP, response-request mechanisms, and Sinatra, we are going to construct a project that uses these technologies.
+Now that you have a basic understanding of HTTP, response-request mechanisms, Sinatra, and Capybara we are going to construct a project that uses these technologies.
 
 The project is called 'Battle'. Here is a mockup of how it might look towards the end:
 
