@@ -20,7 +20,7 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 
 * [Homebrew Package Manager](http://brew.sh/)
 * [Creating a databse - Official Documentation](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html)
-* [PostGreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
+* [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
 ## [Solution - Mac OS](solutions/03_mac.md)
 ## [Solution - Linux](solutions/03_linux.md)

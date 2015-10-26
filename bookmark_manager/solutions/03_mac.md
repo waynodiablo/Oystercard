@@ -38,4 +38,4 @@ The last command quits out of the postgres terminal.
 
 From now on you will be able to log in to postgresql without having to specify the database you want to log into.
 
-[next challenge](../04_postgres_in_the_raw.md)
+[next challenge](../04_creating_your_first_table.md)

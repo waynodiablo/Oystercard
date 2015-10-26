@@ -6,7 +6,7 @@ You have the error "uninitialized constant Link". Let's think about what a Link 
 
 We know that links need to be saved (persisted) somewhere and that we want to use a database. So we want our Link class to somehow map to a database...
 
-In this challenge you'll create your a "model" using a Ruby class and DataMapper
+In this challenge you'll create your "model" using a Ruby class and DataMapper
 
 ## Learning Objectives covered
 
@@ -16,7 +16,7 @@ In this challenge you'll create your a "model" using a Ruby class and DataMapper
 
 ## To complete this challenge, you will need to
 
-- [ ] Discuss with your pair partner what a "model" is and how it's different from a class or table/relation
+- [ ] Discuss with your pair partner what a "model" is and how it relates to a class or table/relation
 - [ ] Create a 'links' table in Postgres in a 'bookmark_manager_test' database
 - [ ] Create a model (DataMapper backed ruby class) in `app/models/link.rb` with `:id`, `:title` and `:url` properties
 - [ ] Ensure that you have a new error related to visiting the links page

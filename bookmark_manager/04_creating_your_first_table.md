@@ -21,7 +21,7 @@ Now that we have a database set up we would like to be able to interact with it,
 
 ## Resources
 
-* [PostGreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
+* [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 * [SQL in One Page](http://www.cheat-sheets.org/sites/sql.su/)
 
 ## [Solution](solutions/04.md)

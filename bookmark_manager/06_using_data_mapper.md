@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](0_challenge_map.md)
 
-You should now see how it's possible to manipulate database data using SQL. There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our DataBase from a distance via a Ruby interface. In this challenge you'll use DataMapper to manipulate a database table using ruby commands.
+You should now see how it's possible to manipulate database data using SQL. There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our database from a distance via a Ruby interface. In this challenge you'll use DataMapper to manipulate a database table using ruby commands.
 
 ## Learning Objectives covered
 

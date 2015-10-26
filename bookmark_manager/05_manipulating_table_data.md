@@ -6,7 +6,7 @@ You should now have a students table (also known as a 'relation').  However it c
 
 ## Learning Objectives covered
 
-* Use SQL query terms like `SELECT`, `FROM`, `WHERE`, and `*`
+* Use SQL query terms like `SELECT`, `FROM`, `WHERE`, `*`, etc.
 
 ## To complete this challenge, you will need to
 
@@ -18,7 +18,7 @@ You should now have a students table (also known as a 'relation').  However it c
 
 ## Resources
 
-* [PostGreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
+* [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 * [SQL in One Page](http://www.cheat-sheets.org/sites/sql.su/)
 
 ## [Solution](solutions/05.md)
