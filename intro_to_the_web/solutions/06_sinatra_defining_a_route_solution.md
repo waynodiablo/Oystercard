@@ -31,10 +31,10 @@ You should see this:
 ```
 
 Open [this address](http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
+                                                                                                  # broken link git.md
+This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:                      
 
-This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:
-
-> :pill: [`localhost` and web host addresses](localhost_web_addresses.md)
+> :pill: [`localhost` and web host addresses](localhost_web_addresses.md) # broken link localhost_web_addresses.md
 
 ## How does _Hello World_ work?
 
