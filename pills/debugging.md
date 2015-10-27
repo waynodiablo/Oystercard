@@ -1,26 +1,38 @@
-Debugging
-=========
+#Debugging Rails
 
-:construction: UNDER CONSTRUCTION :construction:
+>It is a capital mistake to theorise before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
 
-The process of debugging - breaking the problem down to isolate the cause of the problem.  Assuming that you have isolated what data is going in and what is supposed to come out, you can tell when you are getting the wrong thing out.  This is what your tests are for.
+— *A Scandal in Bohemia, 1892*
 
-However, there may be many steps of data transformation inbetween the initial method call or user interface click and the final data out, or response from the system.  In general you want to work down from your more comprehensive feature tests that are checking things end-to-end, down through integration tests and then to unit tests to try and isolate the particular step that is failing.
+##Steps for debugging
 
-Wrapping new tests around smaller parts of the system is a good way to go, but you can also try to:
+  1. Hypothesis -  read the exception messages properly!
+  2. Analysis - think what the program is doing, rather than what it isn't doing. What do you want it to do?
+  3. Experimentation - see below
+  4. Conclusion
 
-1) Printing things out at particular points in the code using 'puts' or 'pp' or similar (e.g. console.log in JavaScript)
+> If you get stuck, take a break, switch your mind off, then start from the beginning again.
 
-2) Use a debugger to stop the execution of the code at some point, ideally driven by a test
+ - Always think like the interpreter. It's very rational
+ - The problem is likely to be in your variables so dissect them
 
-Whether you are printing data out, or using a debugger, fundamentally you are just trying to break the data transformation down into smaller and smaller steps to isolate the point at which something is going wrong.
+Dissection tools
 
-In Ruby [byebug](https://github.com/deivid-rodriguez/byebug) is a great debugging tool, and in JavaScript the Chrome development tools.  See the resources below for more specifics.
+These are mostly summed up in [this article from the Rails docs](http://guides.rubyonrails.org/debugging_rails_applications.html) which is highly recommended going over when you have the time.
 
-Rails has its own [magic stuff](http://edgeguides.rubyonrails.org/debugging_rails_applications.html) to assist in debugging. And, since Rails 4.2, Rails has included the [Web Console gem](https://github.com/rails/web-console) by default. This means you get a debugging console on every error page - handy for checking those errant instance variables!
 
-Resources:
----------
+Remember the choice of your tool is personal and changes from person to person but if you're not using any of these tools you're doing something wrong!
 
-* [How to use byebug in Ruby](https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md)
-* [How to use the Chrome debugger for JavaScript](https://developer.chrome.com/extensions/tut_debugging)
+   * Print statements - remember if you do this in the controller it will only show up in the server output
+   * Raise exceptions
+   * Rails logger - `tail -f log/development.log` shows the log
+   * Pry debugger - add `pry-rails` to your Gemfile, then use `binding.pry` to break the code, `exit` to continue
+   * Rails console/irb
+   * Git log/diff - what's changed since the bug was introduced?
+
+
+Some further reading:
+
+   * [Zen of debugging](http://webadvent.org/2012/debugging-zen-by-ben-ramsey)
+   * [The psychology of debugging](https://docs.google.com/file/d/13hFUiT8lD1FiaRkwrM5AOdbT2xSVZF8eg0JXdcqU4mZSAzXkwonp1M-TFqR8/edit)
+   * [Debugging Railscasts](http://railscasts.com/?tag_id=10) - some of these are subscription only
