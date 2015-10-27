@@ -6,7 +6,7 @@ class JourneyLog
 
   NO_CHARGE = 0
 
-  def initialize(journey_klass: )
+  def initialize(journey_klass: Journey)
     @journey_klass = journey_klass
     @journeys = []
   end

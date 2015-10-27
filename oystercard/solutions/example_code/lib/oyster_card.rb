@@ -7,13 +7,13 @@ class OysterCard
   BALANCE_LIMIT = 90
   MINIMUM_CHARGE = 1
 
-  def initialize(journey_log:)
+  def initialize(journey_log: JourneyLog.new)
     @balance = 0
     @journey_log = journey_log
   end
 
   def top_up(amount)
-    fail(BalanceError, "You have exceeded your #{BALANCE_LIMIT} allowance.") if (amount + balance) > BALANCE_LIMIT
+    fail(BalanceError, "Exceeds #{BALANCE_LIMIT}") if over_limit?(amount) 
     @balance += amount
   end
 
@@ -31,6 +31,10 @@ class OysterCard
   private
 
   attr_reader :journey_log
+
+  def over_limit?(amount)
+    (amount + balance) > BALANCE_LIMIT
+  end
 
   def deduct(amount)
     @balance -= amount
