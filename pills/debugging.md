@@ -1,4 +1,4 @@
-#Debugging Rails
+#Debugging
 
 >It is a capital mistake to theorise before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
 
@@ -14,11 +14,13 @@
 > If you get stuck, take a break, switch your mind off, then start from the beginning again.
 
  - Always think like the interpreter. It's very rational
- - The problem is likely to be in your variables so dissect them
+ - The problem is likely to be in your variables so so you need to **dissect them**
 
-Dissection tools
+## Dissection tools
 
-These are mostly summed up in [this article from the Rails docs](http://guides.rubyonrails.org/debugging_rails_applications.html) which is highly recommended going over when you have the time.
+### Ruby
+
+In Ruby these are mostly summed up in [this article from the Rails docs](http://guides.rubyonrails.org/debugging_rails_applications.html) which is highly recommended going over when you have the time.
 
 
 Remember the choice of your tool is personal and changes from person to person but if you're not using any of these tools you're doing something wrong!
@@ -29,6 +31,8 @@ Remember the choice of your tool is personal and changes from person to person b
    * Pry debugger - add `pry-rails` to your Gemfile, then use `binding.pry` to break the code, `exit` to continue
    * Rails console/irb
    * Git log/diff - what's changed since the bug was introduced?
+
+### JavaScript
 
 
 Some further reading:
