@@ -1,10 +1,8 @@
 ## Creating a modular Sinatra app.
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
-At this point you should have a valid Link model and a failing test for visiting the links page.
-
-We need a web application to allow us to display a link to the links page.
+At this point you should have a valid Link model and a failing test for visiting the links page. We need a web application to allow us to display a link to the links page.
 
 In this challenge you will use Sinatra to set up a web application and tell Capybara which application it is testing.
 
@@ -17,7 +15,7 @@ In this challenge you will use Sinatra to set up a web application and tell Capy
 
 - [ ] Create a file `/app/app.rb`
 - [ ] Lay out Sinatra in the modular style within app.rb
-- [ ] Add Capybara.app = NameOfYourSinatraClass to the spec_helper
+- [ ] Tell Capybara which app you are testing in the `spec_helper`
 - [ ] Require your link model in `app.rb`
 - [ ] Ensure you require your server file in spec_helper
 - [ ] Create a `\links` path and associated `erb` view
