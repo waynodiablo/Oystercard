@@ -4,7 +4,9 @@
 
 — *A Scandal in Bohemia, 1892*
 
-##Steps for debugging
+## Steps for debugging
+
+Debugging follows a process identical to the scientific method (or Sherlock Holmes' process for solving crimes!)
 
   1. Hypothesis -  read the exception messages properly!
   2. Analysis - think what the program is doing, rather than what it isn't doing. What do you want it to do?
@@ -14,26 +16,28 @@
 > If you get stuck, take a break, switch your mind off, then start from the beginning again.
 
  - Always think like the interpreter. It's very rational
- - The problem is likely to be in your variables so so you need to **dissect them**
+ - The problem is likely to be in your variables so you need to **dissect them**
 
 ## Dissection tools
 
+Remember the choice of your tool is personal and changes from person to person but if **you're not using any of these tools you're going to find debugging incredibly difficult**!
+
 ### Ruby
-
-In Ruby these are mostly summed up in [this article from the Rails docs](http://guides.rubyonrails.org/debugging_rails_applications.html) which is highly recommended going over when you have the time.
-
-
-Remember the choice of your tool is personal and changes from person to person but if you're not using any of these tools you're doing something wrong!
 
    * Print statements - remember if you do this in the controller it will only show up in the server output
    * Raise exceptions
    * Rails logger - `tail -f log/development.log` shows the log
    * Pry debugger - add `pry-rails` to your Gemfile, then use `binding.pry` to break the code, `exit` to continue
+   * [Byebug](https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md) is another useful debugging tool
    * Rails console/irb
    * Git log/diff - what's changed since the bug was introduced?
 
+In Ruby these are mostly summed up in [this article from the Rails docs](http://guides.rubyonrails.org/debugging_rails_applications.html) which is highly recommended going over when you have the time. And, since Rails 4.2, Rails has included the [Web Console gem](https://github.com/rails/web-console) by default. This means you get a debugging console on every error page - handy for checking those errant instance variables!
+
 ### JavaScript
 
+   * `console.log` prints your value into the console
+   * Typing `debugger` in JavaScript and running your script in Chrome will cause the browser to break at that point in your code, you can then run JavaScript in the console from this point of your code to see what's going on. [Read more on this here]((https://developer.chrome.com/extensions/tut_debugging)
 
 Some further reading:
 
