@@ -10,15 +10,18 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 
 ## Learning Objectives covered
 
-* Embellish a ruby class so that it's persisted into a database via DataMapper (!!!New LO)
-* Construct a data schema within a Ruby model
-* Knowing where to place models in a Sinatra application (!!!New LO)
+* Add DataMapper functionality to a Ruby class (!!!New LO)
+* Use DataMapper's DSL to construct a data schema within a Ruby model
+* Know where to place models in a Sinatra application (!!!New LO)
 
 ## To complete this challenge, you will need to
 
 - [ ] Discuss with your pair partner what a "model" is and how it relates to a class or table/relation
-- [ ] Create a 'links' table in Postgres in a 'bookmark_manager_test' database
 - [ ] Create a model (DataMapper backed ruby class) in `app/models/link.rb` with `:id`, `:title` and `:url` properties
+- [ ] At the bottom of `link.rb`, instruct DataMapper to:
+  - [ ] setup a connection to the `bookmark_manager_test` database
+  - [ ] finalize your DataMapper model
+  - [ ] Migrate the model
 - [ ] Ensure that you have a new error related to visiting the links page
 
 ## Resources
