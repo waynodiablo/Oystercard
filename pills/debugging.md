@@ -6,17 +6,19 @@
 
 ## Steps for debugging
 
-Debugging follows a process identical to the scientific method (or Sherlock Holmes' process for solving crimes!)
+Debugging follows a process identical to the **scientific method** (or Sherlock Holmes' process for solving crimes!). If you follow the steps below you should be able to fix your problems far quicker than if you go about debuggin in a haphazard way.
+
+And remember, 
 
   1. Hypothesis -  read the exception messages properly!
   2. Analysis - think what the program is doing, rather than what it isn't doing. What do you want it to do?
   3. Experimentation - see below
   4. Conclusion
 
-> If you get stuck, take a break, switch your mind off, then start from the beginning again.
-
- - Always think like the interpreter. It's very rational
- - The problem is likely to be in your variables so you need to **dissect them**
+ - If you get stuck, **take a break**, switch your mind off, then start from the beginning again.
+ - It's often a case that what you think is wrong isn't the actual problem, so always **check your assumptions** as any good scientist would do!
+ - Always **think like the interpreter**. It's very rational.
+ - The problem is likely to be in your variables so you need to **dissect them**.
 
 ## Dissection tools
 
@@ -37,7 +39,7 @@ In Ruby these are mostly summed up in [this article from the Rails docs](http://
 ### JavaScript
 
    * `console.log` prints your value into the console
-   * Typing `debugger` in JavaScript and running your script in Chrome will cause the browser to break at that point in your code, you can then run JavaScript in the console from this point of your code to see what's going on. [Read more on this here]((https://developer.chrome.com/extensions/tut_debugging)
+   * You can use the [built-in debugger in Chrome](https://developer.chrome.com/extensions/tut_debugging)
 
 Some further reading:
 
