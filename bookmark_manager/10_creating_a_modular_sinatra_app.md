@@ -1,4 +1,4 @@
-## Creating a Link model
+## Creating a modular Sinatra app.
 
 [Back to the Challenge Map](0_challenge_map.md)
 
