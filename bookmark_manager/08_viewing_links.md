@@ -1,10 +1,10 @@
 ## Viewing Links
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 You should now have a reasonable understanding of some key database concepts such as how to set up a database, creating tables, manipulating table data via SQL &amp; DataMapper and the unifying concept of CRUD.  Databases are one option for persisting data within an application.  Let's see how we can use this sort of persistence to help build our bookmark manager.
 
-If you recall from challenge 1 we have a mockup and a few user stories. The BDD cycle suggests we should always start with a feature test. Last week we saw how to feature test web apps using Capybara.
+If you recall from [Challenge 1](01_creating_user_stories.md)( we have a mockup and a few user stories. The BDD cycle suggests we should always start with a feature test.
 
 In this challenge you will be creating a feature test for the user story of a link being displayed, e.g.
 
