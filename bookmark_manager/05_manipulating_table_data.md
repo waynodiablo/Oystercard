@@ -20,5 +20,6 @@ You should now have a students table (also known as a 'relation').  However it c
 
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 * [SQL in One Page](http://www.cheat-sheets.org/sites/sql.su/)
+* [Relational Database: Terminology](https://en.wikipedia.org/wiki/Relational_database#Terminology)
 
 ## [Solution](solutions/05.md)
