@@ -13,11 +13,11 @@ If you follow the steps below you should be able to fix your problems far quicke
   1. Analysis - think what the program is doing, rather than what it isn't doing. What do you want it to do?
   1. Experimentation - see below
   1. Conclusion - and repeat if the problem still isn't fixed
-
- - If you get stuck, **take a break**, switch your mind off, then start from the beginning again.
- - It's often a case that what you think is wrong isn't the actual problem, so always **check your assumptions** as any good scientist would do!
- - Always **think like the interpreter**. It's very rational.
- - The problem is likely to be in your variables so you need to **dissect them**.
+ 
+- If you get stuck, **take a break**, switch your mind off, then start from the beginning again.
+- It's often a case that what you think is wrong isn't the actual problem, so always **check your assumptions** as any good scientist would do!
+- Always **think like the interpreter**. It's very rational.
+- The problem is likely to be in your variables so you need to **dissect them**.
 
 ## Dissection tools
 
