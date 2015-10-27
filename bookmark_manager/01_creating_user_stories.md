@@ -1,6 +1,6 @@
 ## Creating User stories
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 The website will have the following specification:
 
