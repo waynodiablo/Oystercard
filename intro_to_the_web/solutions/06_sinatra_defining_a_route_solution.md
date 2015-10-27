@@ -34,7 +34,7 @@ Open [this address](http://localhost:4567) in the browser and you should see a w
                                                                                                   # broken link git.md
 This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:                      
 
-> :pill: [`localhost` and web host addresses](../../../pills/localhost_web_addresses.md)
+> :pill: [`localhost` and web host addresses](../../../master/pills/localhost_web_addresses.md)
 
 ## How does _Hello World_ work?
 
