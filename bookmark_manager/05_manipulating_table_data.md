@@ -1,4 +1,4 @@
-## Postgres in the raw
+## Manipulating Table Data
 
 [Back to the Challenge Map](0_challenge_map.md)
 
