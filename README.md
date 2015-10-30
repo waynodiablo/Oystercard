@@ -18,4 +18,4 @@ Your goal, as a beginner, is not just to learn how to build software. You must l
 
 At Makers Academy, we worked hard to figure out what needs to be learned in what order in order to maximise your productivity. The first weeks project is designed to give you a foundation in Behaviour Driven Design (BDD), Ruby, version control and pair programming. The goal is to learn how to use the language itself before getting to web application frameworks like Rails or Sinatra. This way, you'll be able to focus on the frameworks themselves when we get to them and your progress won't be hindered by your lack of experience with Ruby or the principles of software development.
 
-**Are you ready?** [Go to the Course outline!](https://github.com/makersacademy/course/blob/master/toc.md)
+**Are you ready?** [Go to the Course outline!](https://github.com/makersacademy/course/blob/master/course_outline.md)
