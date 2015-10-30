@@ -35,5 +35,5 @@
 ##Server side JavaScript
 
 * Utilise node with express to host a single page Angular application.
-* Link express routing to creating a RESTful API.
+* Link express routing to create a RESTful API.
 * Describe the use of express middleware to serve static files.
