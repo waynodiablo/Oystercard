@@ -1,19 +1,16 @@
 ## Adding User Accounts
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
-At this point you have implemented the full functionality of the bookmark manager. At the moment
-the application only works for a single user. As with pinapple.io and delicious.com we would like
-to provide this functionality to multiple users so that each user can organise their own data as well
-as view how others have organised theirs.
+You have now completed the original specification of the bookmark manager. Let's extend it to work for multiple users.
 
 In this challenge you will create the functionality for signing up for a user account.
 
 ## Learning Objectives covered
 
-* Bcrypt as a library for encrypting/decrypting strings
-* Explain that Bcrypt functionality can be included in Ruby models by including the bcrypt gem
-* Use Bcrypt to encrypt a password and save it to the database
+* Understand that BCrypt is a library for encrypting/decrypting strings
+* Explain that BCrypt functionality can be included in Ruby models by including the bcrypt gem
+* Use BCrypt to encrypt a password and save it to the database
 * Use session to manage a user's authenticated state
 * Construct a form for signing up ('registering') a user
 * Create a basic registration/authentication system from scratch
@@ -21,11 +18,10 @@ In this challenge you will create the functionality for signing up for a user ac
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that checks the following:
-  - [ ] when a user signs up the `User` count increases by 1
+  - [ ] when a user signs up, the `User` count increases by 1
   - [ ] the page displays a welcome message to the new user
-  - [ ] the email address on that user in the database is correct.
-- [ ] As usual this test should fail, make it pass with the appropriate changes to your
-models, views and controllers.
+  - [ ] the email address for that user in the database is correct.
+- [ ] Make the test pass
 - [ ] Ensure that your `User` model supports an encrypted Password
 - [ ] Ensure that Sinatra is configured to have encrypted sessions
 - [ ] Deploy to heroku and perform manual test for this functionality
