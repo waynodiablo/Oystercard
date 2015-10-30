@@ -1,6 +1,6 @@
 ## Filtering Tags
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now that you have links that are taggable. This allows you to implement the next user story, which is filtering by tags. Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag.
 
@@ -15,7 +15,9 @@ I would like to filter links by tag
 
 ## To complete this challenge, you will need to
 
-- [ ] Write a failing feature test that goes to `tags/bubbles` that checks that only Links tagged with `bubbles` are present
+- [ ] Write a failing feature test that:
+  - [ ] visits `/tags/bubbles` 
+  - [ ] checks that only Links tagged with `bubbles` are present
 - [ ] Make the test pass
 - [ ] Deploy and confirm everything is running fine on Heroku
 
