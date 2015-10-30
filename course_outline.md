@@ -12,7 +12,7 @@
 * Week 6: [Lab week](lab_week/lab_week.md)
 * Week 7: [Intro to Rails](https://github.com/makersacademy/course/blob/master/rails/introduction_to_rails.md)
 * Week 8: [Further JavaScript: Github Report](https://github.com/makersacademy/course/blob/master/further_javascript/further_javascript.md)
-* Week 9: \[[Makerthon](https://github.com/makersacademy/course/blob/master/makerthon/introduction.md), [MakerMix](https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md)\]
+* Week 9: [[Makerthon](https://github.com/makersacademy/course/blob/master/makerthon/introduction.md), [MakerMix](https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md)\]
 * Weeks 10-11: Final Projects
 * Week 12: Hiring week
 
@@ -36,13 +36,13 @@ Here you will find other, relevant materials and challenges that will help you o
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 
-- Your alumni helpers are [Daryl](https://github.com/dwatson62), [Mollie](https://github.com/MollieS), [Alex](https://github.com/alexhandy1), [Rocco](https://github.com/bagolol), and [Andy](https://github.com/andygout) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [Diego](https://github.com/dregules), [Siv](https://github.com/sivanpatel), [Sarah](https://github.com/tealpaintedduck), [Adrian](https://github.com/adrianw1832), and [Bex](https://github.com/katylouise) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
-![Daryl](https://avatars2.githubusercontent.com/u/9296416?v=3&s=128)
-![Mollie](https://avatars2.githubusercontent.com/u/11349388?v=3&s=128)
-![Andy](https://avatars0.githubusercontent.com/u/10484515?v=3&s=128)
-![Alex](https://avatars0.githubusercontent.com/u/5671036?v=3&s=128)
-![Rocco](https://avatars3.githubusercontent.com/u/10029227?v=3&s=128)
+![Diego](https://avatars3.githubusercontent.com/u/1048262?v=3&s=128)
+![Siv](https://avatars1.githubusercontent.com/u/10670079?v=3&s=128)
+![Sarah](https://avatars1.githubusercontent.com/u/5543916?v=3&s=128)
+![Adrian](https://avatars3.githubusercontent.com/u/12715033?v=3&s=128)
+![Bex](https://avatars0.githubusercontent.com/u/8373317?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
