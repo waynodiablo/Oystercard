@@ -32,6 +32,7 @@ Here you will find other, relevant materials and challenges that will help you o
 
 ## Resources
 
+- A list of [good resources online and in the wider world of code](https://github.com/makersacademy/course/blob/master/resources.md)
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 
