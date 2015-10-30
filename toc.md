@@ -20,6 +20,7 @@
 
 Here you will find other, relevant materials and challenges that will help you on your quest of becoming a software developer in a matter of weeks!
 
+- [The Escalation Process](https://github.com/makersacademy/course/blob/29a5e4a3c1776d32eda8f3ee55edc1dd124b05ba/pills/escalation_process.md)
 - [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
 - [Pills](https://github.com/makersacademy/course/blob/master/pills.md)
 
