@@ -28,14 +28,33 @@ This is the basic view of the website. You will build it by working through the 
  1. [Creating User stories](01_creating_user_stories.md)
  2. [Understanding Databases](02_understanding_databases.md)
  3. [Setting up a Database](03_setting_up_a_database.md)
- 4. [Postgres in the Raw](04_creating_your_first_table.md)
- 5. [Viewing Links](05_viewing_links.md)
- 6. ...
+ 4. [Creating Your First Table](04_creating_your_first_table.md)
+ 5. [Manipulating Table Data](05_manipulating_table_data.md)
+ 6. [Using DataMapper](06_using_data_mapper.md)
+ 7. [Research CRUD](7_research_crud.md)
+ 8. [Viewing Links](08_viewing_links.md)
+ 9. [Creating a Link Model](09_creating_a_link_model.md)
+ 10. [Creating a Modular Sinatra App](10_creating_a_modular_sinatra_app.md)
+ 11. [Creating Links](11_creating_links.md)
+ 12. [Configuring DatabaseCleaner](12_configuring_database_cleaner.md)
+ 13. [Configuring the Rack Env](13_configuring_the_rack_env.md)
+ 14. [Deploying to Heroku](14_deploying_to_heroku.md)
+ 15. [Tagging Links](15_tagging_links.md)
+ 16. [Filtering Tags](16_filtering_tags.md)
+ 17. [Multiple Tags](17_multiple_tags.md)
+ 18. [Adding User Accounts](18_adding_user_accounts.md)
+ 19. [19_password_confirmation.md](19_password_confirmation.md)
+ 20. [Improving Sign Up Workflow](20_improving_sign_up_workflow.md)
+ 21. [Levels of Validation](21_levels_of_validation.md)
+ 22. [Preventing Duplicate Registrations](22_preventing_duplicate_registrations.md)
+ 23. [Signing in](23_signing_in.md)
+ 24. [Signing Oout](24_signing_out.md)
+ 25. [Refactoring](25_refactoring.md)
 
 
 ---------------
 
-## Old Bookmark Manager Outline
+## Old Bookmark Manager Outline (Refrence Only)
 
 * [Viewing and creating links](bookmark_manager_stage_0.md)
 * [Tagging links](bookmark_manager_stage_1.md)
