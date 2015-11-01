@@ -1,12 +1,8 @@
-# PostgreSQL
+# Solution - Setting up a Database
 
-Postgres is a widely used open source [relational database](http://en.wikipedia.org/wiki/Relational_database) engine.
+[Back to Challenge](../03_setting_up_a_database.md)
 
-### Installation
-
-(Linux users may want to start [here](postgres_linux.md) and Nitrous users may want to start [here](postgres_nitrous.md))
-
-There are two ways of doing this. Firstly, you can download the PostgreSQL app. However, the app can sometimes be problematic, and actually leave you with a non-working PostgreSQL installation.
+There are two ways of installing PostgreSQL. Firstly, you can download the PostgreSQL app. However, the app can sometimes be problematic, and actually leave you with a non-working PostgreSQL installation.
 
 **We recommend the following method:**
 
@@ -42,10 +38,4 @@ The last command quits out of the postgres terminal.
 
 From now on you will be able to log in to postgresql without having to specify the database you want to log into.
 
-Checkout the [playing_with_postgres_and_datamapper.md](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md) for an introduction on using Postgres and how it works with an ORM, DataMapper.
-
-Resources:
----------
-
-* [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
-* [SQL in one page](http://www.cheat-sheets.org/sites/sql.su/)
+[next challenge](../04_creating_your_first_table.md)
