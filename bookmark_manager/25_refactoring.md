@@ -1,6 +1,6 @@
 ## Refactoring
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 You now have a fully functioning signup, sign in and sign out mechanism. This is a good time to refactor our code somewhat as things have got a bit messy.  The app.rb file is full of routes and the layout file is full of lots of boolean logic.
 
