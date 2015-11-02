@@ -1,6 +1,6 @@
 ## Setting up a database
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now that you understand the pros and cons of different persistence mechanisms, it's important for you to see them in action. In this challenge you will install a popular Relational Database Management System (RDBMS) called PostgreSQL
 
