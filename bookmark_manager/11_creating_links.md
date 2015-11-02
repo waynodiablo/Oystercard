@@ -11,10 +11,6 @@ I would like to add the site's address and title to my bookmark manager
 ```
 So let's create a new feature test to drive the implementation of this functionality.
 
-## Learning Objectives covered
-
-* Week 3 learning objectives re-covered?? RESTful endpoints, GET vs POST?
-
 ## To complete this challenge, you will need to
 
 - [ ] Add a new feature test called creating_links_spec.rb that uses a form to submit a new link
