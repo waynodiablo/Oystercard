@@ -2,13 +2,13 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You should now see how it's possible to manipulate database data using SQL. There is a problem emerging here, however: we're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our database from a distance via a Ruby interface. In this challenge you'll use DataMapper to manipulate a database table using ruby commands.
+You should now see how it's possible to manipulate database data using SQL. We're having to write out syntactically difficult and unfamiliar SQL commands to perform basic read / write commands. This is where DataMapper comes it. DataMapper allows us to deal with our database via a Ruby interface. In this challenge you'll use DataMapper to manipulate a database table using ruby commands.
 
 ## Learning Objectives covered
 
-* Define DataMapper as a gem for including persistence functionality in Ruby classes ('models')
+* Define DataMapper as a gem for interacting with a database in Ruby ('models')
 * Configure DataMapper to use a Postgres database
-* Embellish a ruby class so that it's persisted into a database via DataMapper (!!!New LO)
+* Include DataMapper in a ruby class so that it can be persisted into a database
 * Construct a data schema within a Ruby model
 
 ## To complete this challenge, you will need to
