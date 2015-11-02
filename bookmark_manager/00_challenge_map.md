@@ -31,7 +31,7 @@ This is the basic view of the website. You will build it by working through the 
  4. [Creating Your First Table](04_creating_your_first_table.md)
  5. [Manipulating Table Data](05_manipulating_table_data.md)
  6. [Using DataMapper](06_using_data_mapper.md)
- 7. [Research CRUD](7_research_crud.md)
+ 7. [Research CRUD](07_research_crud.md)
  8. [Viewing Links](08_viewing_links.md)
  9. [Creating a Link Model](09_creating_a_link_model.md)
  10. [Creating a Modular Sinatra App](10_creating_a_modular_sinatra_app.md)
