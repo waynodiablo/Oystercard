@@ -1,3 +1,10 @@
+
+
+Please see [00_challenge_map.md](00_challenge_map.md)
+
+BELOW IS DEPRECATED
+-------------------
+
 # Bookmark Manager
 
 This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development:
