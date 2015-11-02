@@ -6,8 +6,8 @@ So our first feature test is passing, and we have a web app that displays the li
 
 ```
 As a time-pressed user
-So that I can find again the latest and greatest website I just found
-I would like to add the link to my bookmark manager and have it appear in list of links
+So that I can save a website
+I would like to add the site's address and title to my bookmark manager
 ```
 So let's create a new feature test to drive the implementation of this functionality.
 
