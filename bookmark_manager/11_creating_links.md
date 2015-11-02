@@ -22,7 +22,7 @@ So let's create a new feature test to drive the implementation of this functiona
   - [ ] Define a route, `get '/links/new'`, to serve a form for creating a new link
   - [ ] Create an associated view containing the form
   - [ ] Define a route, `post '/links'` to receive the form data
-- [ ] Discuss with your pair partner why do we POST to /links and not /links/new? And also why do we GET links/new?
+- [ ] Discuss with your pair partner why do we POST to `/links` and not `/links/new`? Why do we GET `links/new`?
 
 ## Resources
 
