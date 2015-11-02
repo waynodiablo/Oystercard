@@ -23,7 +23,7 @@ I would like to tag links in my bookmark manager
 
 - [ ] Discuss why using a many-to-many relationship between Tags and Links is appropriate over one-to-many.
 - [ ] Create a failing feature test for adding a single tag to a Link with Capybara
-- [ ] Amend the new link form to allow for adding a tag.
+- [ ] Amend the new link form to allow for adding tags.
 - [ ] Create a many-to-many relation to tags:
   - [ ] Create a Tag model
   - [ ] Refactor the DataMapper configuration into a separate `data_mapper_setup.rb` file
