@@ -6,7 +6,7 @@ Now that you understand about the different database environments and have datab
 
 ## Learning Objectives covered
 
-* Differentiate between `development`, `test`, and `production` environments
+* Differentiate between `development` and `production` environments
 * Understand that Heroku is a cloud hosting platform
 * Be able to deploy a datamapper/postgres app to Heroku
 * Be able to debug a datamapper/postgres app on Heroku
