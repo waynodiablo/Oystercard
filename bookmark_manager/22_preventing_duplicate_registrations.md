@@ -1,6 +1,6 @@
 ## Preventing Duplicate Registrations
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 The application now validates that a user can not sign up without an email address. Currently it does not provide any form of feedback to the user as to why the sign up fails. As we saw in the Improving Sign Up Workflow challenge this can be improved.
 
