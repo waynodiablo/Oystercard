@@ -8,8 +8,8 @@ In this challenge you will use Sinatra to set up a web application and tell Capy
 
 ## Learning Objectives covered
 
-* Laying out Sinatra in the modular style (!!!New LO)
-* Week 3 learning objectives also covered??
+* Laying out Sinatra in the modular style
+* Week 3 learning objectives also covered
 
 ## To complete this challenge, you will need to
 
