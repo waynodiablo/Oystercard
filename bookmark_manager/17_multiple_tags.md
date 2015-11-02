@@ -14,19 +14,18 @@ You've done all this before so let's also do a bit of configuration management a
 
 ## Learning Objectives covered
 
-* Use DataMapper to manipulate the state of the database from Ruby
 * Know that common tasks are contained within the 'Rakefile'
-* Define common tasks such as migrate
+* Define common tasks such as migrate/upgrade
 * Run common tasks from the command line with rake
 
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that adds multiple tags and checks that they are all present on the new link
 - [ ] Make the test pass, check it works locally, then deploy and confirm everything is running fine on Heroku
-- [ ] Create rake tasks for performing migrations using the rake gem
+- [ ] Create rake tasks for performing database changes using the `rake` gem
   - [ ] add one task to Rakefile for DataMapper.auto_upgrade!
   - [ ] add another task for DataMapper.auto_migrate!
-  - [ ] ensure you no upgrade or migrate code left in your application apart from the Rakefile
+  - [ ] ensure you remove any upgrade or migrate code left in your application apart from in the Rakefile
 
 ## Resources
 
