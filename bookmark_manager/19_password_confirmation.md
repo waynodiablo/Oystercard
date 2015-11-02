@@ -1,6 +1,6 @@
 ## Password Confirmation
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now a user can register on our website but it would be nice to ask for password confirmation on registration to make sure there's no mistake in the password.
 
