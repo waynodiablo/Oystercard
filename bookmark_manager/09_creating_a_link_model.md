@@ -4,15 +4,15 @@
 
 You have the error "uninitialized constant Link". Let's think about what a Link is.
 
-We know that links need to be saved (persisted) somewhere and that we want to use a database. So we want our Link class to somehow map to a database...
+We know that links need to be saved (persisted) somewhere and that we want to use a database. So we want our Link class to map to a database.
 
 In this challenge you'll create your "model" using a Ruby class and DataMapper
 
 ## Learning Objectives covered
 
-* Add DataMapper functionality to a Ruby class (!!!New LO)
+* Add DataMapper functionality to a Ruby class
 * Use DataMapper's DSL to construct a data schema within a Ruby model
-* Know where to place models in a Sinatra application (!!!New LO)
+* Know where to place models in a Sinatra application
 
 ## To complete this challenge, you will need to
 
@@ -21,7 +21,7 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 - [ ] At the bottom of `link.rb`, instruct DataMapper to:
   - [ ] setup a connection to the `bookmark_manager_test` database
   - [ ] finalize your DataMapper model
-  - [ ] migrate the model
+  - [ ] setup DataMapper to migrate your models
 - [ ] Ensure that you have a new error related to visiting the links page
 
 ## Resources
