@@ -6,11 +6,11 @@ At this point we can add a single tag and filter by tags, however we cannot yet 
 
 ```
 As a time-pressed user
-So that I can organise my many links into different categories for ease of search
+So that I can organise my links into different categories for ease of search
 I would like to add tags to the links in my bookmark manager
 ```
 
-You've done all this before so let's also do a bit of configuration management and set up Rake tasks to allow us to effectively manager the state of the database.
+You've done all this before so let's also do a bit of configuration management and set up Rake tasks to allow us to effectively manage the state of the database.
 
 ## Learning Objectives covered
 
