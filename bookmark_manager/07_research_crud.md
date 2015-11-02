@@ -1,13 +1,13 @@
 ## Researching CRUD
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 You should now see how it's possible to manipulate database data using Ruby via DataMapper. There are lots of different ways to manipulate database data but whether we are using SQL or a library like DataMapper there is a unifying concept called **CRUD**.  In this challenge you will research and write up about the CRUD concept and how it relates to database persistence.
 
 ## Learning Objectives covered
 
-* Know that 'CRUD' stands for 'Create, Read, Update and Delete' (!new LO)
-* Explain the CRUD concept (!new LO)
+* Know that 'CRUD' stands for 'Create, Read, Update and Delete'
+* Explain the CRUD concept
 * Know that 'SQL' means 'Structured Query Language'
 * Explain how SQL is used to query databases
 
