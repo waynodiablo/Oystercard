@@ -1,6 +1,6 @@
 ## Signing In
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 The application now validates various aspects of the user sign up process and makes use of dynamically generated DataMapper error messages and the flash to display those issues to the user. That's great, but there's still no way to sign in or sign out.
 
