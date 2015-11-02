@@ -14,13 +14,14 @@ I would like to tag links in my bookmark manager
 
 ## Learning Objectives covered
 
-* Create a many-to-many relationship between models
+* Understand a many-to-many relationship between models
 * Use incoming params to persist models to a database
 * Extract configuration to its own file
 * Create a bookmark manager that interacts with a database
 
 ## To complete this challenge, you will need to
 
+- [ ] Discuss why using a many-to-many relationship between Tags and Links is appropriate over one-to-many.
 - [ ] Create a failing feature test for adding a single tag to a Link with Capybara
 - [ ] Amend the new link form to allow for adding a tag.
 - [ ] Create a many-to-many relation to tags:
