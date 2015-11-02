@@ -24,6 +24,5 @@ Now that you understand about the different database environments and have datab
 * [Create Heroku App from the Command Line](https://devcenter.heroku.com/articles/creating-apps)
 * [Configuring DataMapper for Heroku](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel)
 * [Adding Postgres support to Heroku instance](https://devcenter.heroku.com/articles/heroku-postgresql)
-* [Sinatra Environments](https://blog.rainforestqa.com/2014-05-30-what-are-environments-for/)
 
 ## [Solution](solutions/14.md)
