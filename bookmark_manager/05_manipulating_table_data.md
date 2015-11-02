@@ -1,6 +1,6 @@
 ## Manipulating Table Data
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 You should now have a students table (also known as a 'relation').  However it currently contains nothing, so we need to start putting things in it in order to make use of it. In this challenge you will query, add, delete and update data in the table.
 
