@@ -22,4 +22,4 @@ In order to support the user stories created in the first challenge, we'll need 
 * [Three Tier Web Database Architecture :pill: ](../pills/three_tier_architecture.md)
 * [Three Tier Web Database - Diagram](https://docs.google.com/drawings/d/17ES4_vO90p3x3np1K3X5b5C_JVs14VbJZ5N8KraVRUw/edit)
 
-## [Next Challenge](../03_setting_up_a_database.md)
+## [Next Challenge](03_setting_up_a_database.md)
