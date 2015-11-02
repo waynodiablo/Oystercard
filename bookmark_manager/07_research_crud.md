@@ -23,9 +23,6 @@ You should now see how it's possible to manipulate database data using Ruby via 
 
 * http://www.w3schools.com/sql/
 * http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/
-* [Overview of RDBMS by Tansaku on Whiteboard & Projector](https://www.youtube.com/watch?v=BS1_WrjhTQc)
-* [Overview of RDBMS by Stephen on Whiteboard (+Mihai)](https://www.youtube.com/watch?v=dIq_E-HSje8)
-* [Overview of RDBMS by Stephen on Projector (+Sam)](https://www.youtube.com/watch?v=C7EKjnFCyeQ)
-* [Overview of RDBMS by Enrique on Whiteboard](https://www.youtube.com/watch?v=QlDE4kYzvjU)
+* [Overview of RDBMS by Stephen](https://www.youtube.com/watch?v=C7EKjnFCyeQ)
 
 ## [Solution](solutions/07.md)
