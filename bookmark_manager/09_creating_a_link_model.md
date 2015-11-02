@@ -1,6 +1,6 @@
 ## Creating a Link model
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 You have the error "uninitialized constant Link". Let's think about what a Link is.
 
