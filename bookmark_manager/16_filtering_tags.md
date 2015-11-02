@@ -9,9 +9,6 @@ As a time-pressed user
 So that I can quickly find links on a particular topic
 I would like to filter links by tag
 ```
-## Learning Objectives covered
-
-* Create a many-to-many relationship between models using `:through`
 
 ## To complete this challenge, you will need to
 
