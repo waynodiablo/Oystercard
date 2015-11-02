@@ -13,8 +13,8 @@ I would like to filter links by tag
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that:
-  - [ ] visits `/tags/bubbles` 
-  - [ ] checks that only Links tagged with `bubbles` are present
+  - [ ] visits `/tags/education` 
+  - [ ] checks that only Links tagged with `education` are present
 - [ ] Make the test pass
 - [ ] Deploy and confirm everything is running fine on Heroku
 
