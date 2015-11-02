@@ -1,6 +1,6 @@
 ## Improving the sign up workflow
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now you have implemented the password confirmation functionality you can be sure that users have signed up with the correct password.
 
