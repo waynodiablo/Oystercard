@@ -1,6 +1,6 @@
 ## Creating Your First Table
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now that we have a database set up we would like to be able to interact with it, and persist data in it.  There are a number of ways to do this.  A simple method is to do that through the `psql` command line tool.  In the long run we shouldn't rely on this approach but it's important to practice with it as a backup in order to sanity check how the database is set up.
 
