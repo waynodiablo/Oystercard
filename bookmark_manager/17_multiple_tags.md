@@ -14,7 +14,7 @@ You've done all this before so let's also do a bit of configuration management a
 
 ## Learning Objectives covered
 
-* Use DataMapper to manipulate the state of the database from Ruby (new LO!!!!)
+* Use DataMapper to manipulate the state of the database from Ruby
 * Know that common tasks are contained within the 'Rakefile'
 * Define common tasks such as migrate
 * Run common tasks from the command line with rake
