@@ -12,7 +12,7 @@ In this challenge you will use the DatabaseCleaner gem to ensure that the databa
 
 ## To complete this challenge, you will need to
 
-- [ ] Comment out the `Link.create(url: params[:url], title: params[:title])` in the `app.rb`. What happens to your tests?
+- [ ] Comment out the `Link.create(url: params[:url], title: params[:title])` in the `app.rb`. If you remove a line of code, a test should break. Is this the case?
 - [ ] Discuss with your partner why it's important to clean up between tests
 - [ ] Make the test fail by installing and configuring the DatabaseCleaner gem
 - [ ] Make the test green again 
