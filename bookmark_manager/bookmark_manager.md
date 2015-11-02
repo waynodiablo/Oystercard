@@ -3,7 +3,7 @@
 Please see [00_challenge_map.md](00_challenge_map.md)
 
 BELOW IS DEPRECATED
--------------------
+==================
 
 # Bookmark Manager
 
