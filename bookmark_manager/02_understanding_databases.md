@@ -1,6 +1,6 @@
 ## Understanding databases
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 In order to support the user stories created in the first challenge, we'll need a method to **persist** data beyond a single session of use. There are many ways to do this, but one common approach is to use a **Relational Database Management System** (**RDBMS**)
 
