@@ -48,13 +48,13 @@ This is the basic view of the website. You will build it by working through the 
  21. [Levels of Validation](21_levels_of_validation.md)
  22. [Preventing Duplicate Registrations](22_preventing_duplicate_registrations.md)
  23. [Signing in](23_signing_in.md)
- 24. [Signing Oout](24_signing_out.md)
+ 24. [Signing Out](24_signing_out.md)
  25. [Refactoring](25_refactoring.md)
 
 
 ---------------
 
-## Old Bookmark Manager Outline (Refrence Only)
+## Old Bookmark Manager Outline (Reference Only)
 
 * [Viewing and creating links](bookmark_manager_stage_0.md)
 * [Tagging links](bookmark_manager_stage_1.md)
