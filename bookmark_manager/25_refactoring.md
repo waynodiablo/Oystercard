@@ -8,8 +8,8 @@ In this challenge you will extract routing logic into a series of controllers an
 
 ## Learning Objectives covered
 
-* Be able to work with sinatra partials (new LO!!!!)
-* Refactor Sinatra Controllers (new LO!!!!)
+* Be able to work with sinatra partials
+* Refactor Sinatra Controllers
 
 ## To complete this challenge, you will need to
 
