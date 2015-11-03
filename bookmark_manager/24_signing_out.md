@@ -7,7 +7,6 @@ use of multiple accounts on the same browser in this challenge you will allow us
 
 ## Learning Objectives covered
 
-* Construct a form for signing in ('authenticating') a user
 * Use session to manage a user's authenticated state
 * Create a basic registration/authentication system from scratch
 
@@ -19,7 +18,7 @@ use of multiple accounts on the same browser in this challenge you will allow us
   - [ ] The user is redirected to `/link`
 - [ ] Extract the `sign_in` and `sign_out` methods into a helper module and include it
 in your spec helper
-- [ ] Ensure to test manually locally and on Heroku
+- [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
 
