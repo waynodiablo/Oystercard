@@ -8,7 +8,7 @@ In this challenge you will add a validation that checks that email addresses are
 
 ## Learning Objectives covered
 
-* Use validation within models (new LO!!!)
+* Use validation within models
 * Use the flash to display messages to users
 * Use validation within models through DataMapper's validates_uniqueness_of method
 * Use validation at the database level through DataMapper's :unique option
@@ -20,9 +20,9 @@ In this challenge you will add a validation that checks that email addresses are
   - [ ] A user can not sign up with an already registered email address
   - [ ] The correct message is displayed to the user based on the error
 - [ ] Make the test pass by adding the correct validation and displaying the message using the flash
-- [ ] Update your previous feature test for having an email address present to also display the correct message
+- [ ] Update your previous feature tests for validating email addresses the correct message
 - [ ] Make the test pass
-- [ ] Ensure to test manually locally and on Heroku
+- [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
 
