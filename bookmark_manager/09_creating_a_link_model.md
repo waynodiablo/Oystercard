@@ -21,7 +21,7 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 - [ ] At the bottom of `link.rb`, instruct DataMapper to:
   - [ ] setup a connection to the `bookmark_manager_test` database
   - [ ] finalize your DataMapper model
-  - [ ] migrate your DataMapper models
+  - [ ] update your DataMapper models
 - [ ] Ensure that you have a new error related to visiting the links page
 
 ## Resources
