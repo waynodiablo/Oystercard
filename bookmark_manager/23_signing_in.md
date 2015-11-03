@@ -20,7 +20,7 @@ In this challenge you will develop sign in functionality.
 - [ ] Make the test pass by adding appropriate changes to the model, view and controller
   - [ ] Create a Unit Test for authentication on the user model
 - [ ] Make the test pass
-- [ ] Ensure to test manually locally and on Heroku
+- [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
 
