@@ -1,6 +1,6 @@
 ## Password Recovery
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md)
 
 Now that you have refactored your application you can move on to the final feature. In this
 challenge you will implement password recovery, this allows users who have forgotten their password
