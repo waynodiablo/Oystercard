@@ -2,9 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The User experience of sign up is somewhat improved.  We are validating that the user is setting their password correctly.  However we need some additional validations, such as ensuring that a user provides an email address.
+The User experience of sign up is somewhat improved.  We are validating that the user is setting their password correctly.  However we need some additional validations, such as ensuring that a user provides an email address and that it is correctly formatted.
 
-In this challenge you will create functionality for validating the user supplies an email address.
+In this challenge you will create functionality for validating the user supplied email address.
 
 ## Learning Objectives covered
 
@@ -14,14 +14,14 @@ In this challenge you will create functionality for validating the user supplies
 
 - [ ] Ensure a user can't sign up with an blank email address:
   - [ ] Write a failing feature test to ensure a user can't sign up without entering an email
-  - [ ] Add a check on the client side using html5 and confirm that this will not make the test pass and try it manually
+  - [ ] Add a check on the client side using HTML5 and confirm that this will not make the test pass and try it manually
   - [ ] Add an appropriate DataMapper validation, and check the test now passes
   - [ ] Add a database level constraint for the same thing, and see if the test passes without the DataMapper validation
 - [ ] Ensure a user can't sign in with an invalid formatted email adress (e.g. `invalid@email`):
   - [ ] Write a failing feature test to ensure a user can't sign up with an invalid formatted email address
-  - [ ] Add a check on the client side using html5 and confirm that this will not make the test pass and try it manually
+  - [ ] Add a check on the client side using HTML5 and confirm that this will not make the test pass and try it manually
   - [ ] Add an appropriate DataMapper validation, and check the test now passes
-- [ ] Ensure to test manually locally and on Heroku
+- [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
 
