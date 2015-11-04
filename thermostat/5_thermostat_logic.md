@@ -20,9 +20,10 @@ Specification:
 * Use Jasmine to Test-Drive Development of a thermostat
 
 ### To complete this challenge, you will need to:
-- [ ] Translate the first specification into a Jasmine test
+- [ ] Translate the first specification into a user story
+- [ ] Translate this user story into a Jasmine test
 - [ ] Pass the test
-- [ ] Repeat until you've run out of specifications
+- [ ] Repeat until you've run out of specification
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
