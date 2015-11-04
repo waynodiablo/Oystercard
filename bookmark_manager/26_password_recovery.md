@@ -8,8 +8,8 @@ to be able to reset it to a new one.
 
 ## Learning Objectives covered
 
-* Be able to work with sinatra partials (new LO!!!!)
-* Refactor Sinatra Controllers (new LO!!!!)
+* Learn to manipulate time
+* 
 
 ## To complete this challenge, you will need to
 - [ ] Test drive the following features:
@@ -23,7 +23,6 @@ to be able to reset it to a new one.
 
 ## Resources
 
-* [Sinatra Partial](https://github.com/yb66/Sinatra-Partial)
-* [Sinatra MVC](http://stackoverflow.com/questions/5015471/using-sinatra-for-larger-projects-via-multiple-files/5030173#5030173)
+* [Timecop](https://github.com/travisjeffery/timecop)
 
-## [Solution](solutions/25.md)
+## [Solution](solutions/26.md)
