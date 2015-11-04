@@ -23,7 +23,7 @@ Specification:
 - [ ] Translate the first specification into a user story
 - [ ] Translate this user story into a Jasmine test
 - [ ] Pass the test
-- [ ] Repeat until you've run out of specification
+- [ ] Repeat until you've run out of specifications
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
