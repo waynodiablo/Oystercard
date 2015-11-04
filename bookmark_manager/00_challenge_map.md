@@ -72,5 +72,5 @@ This is the basic view of the website. You will build it by working through the 
 
 ## Resources
 
-* [Three Tier Web Database Architecture :pill: ](pills/three_tier_architecture.md)
+* [Three Tier Web Database Architecture :pill: ](/pills/three_tier_architecture.md)
 * [Three Tier Web Database Diagram](https://docs.google.com/drawings/d/17ES4_vO90p3x3np1K3X5b5C_JVs14VbJZ5N8KraVRUw/edit)
