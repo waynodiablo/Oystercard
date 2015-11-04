@@ -12,16 +12,14 @@ to be able to reset it to a new one.
 * Refactor Sinatra Controllers (new LO!!!!)
 
 ## To complete this challenge, you will need to
-
-- [ ] Write a failing test that ensures that when a user requests a password reset:
-  - [ ] The user has a password token set
-  - [ ] They receive the appropriate message on the password reset page
-- [ ] Make the test pass
-- [ ] Write a failing test that ensures that when a user visits the password reset page with a correct token:
-  - [ ] The user is prompted to enter a new password
-  - [ ] The password is actually changed
-  - [ ] The password reset token is reset to nil
-- [ ] Ensure that at each stage that all your tests pass, as well as testing manually on local and on Heroku
+- [ ] Test drive the following features:
+  - [ ] The user can ask for password recovery
+  - [ ] The user can submit their email for recovery and get an acknowledgment message
+  - [ ] The token is generated and set on the user
+  - [ ] The token is only valid for one hour
+  - [ ] Create a page that accepts the token and allows the user to reset their password if valid
+  - [ ] A user should be able to sign in with their new password
+- [ ] Ensure everything works on Heroku
 
 ## Resources
 
