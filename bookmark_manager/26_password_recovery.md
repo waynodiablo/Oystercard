@@ -9,7 +9,6 @@ to be able to reset it to a new one.
 ## Learning Objectives covered
 
 * Learn to manipulate time
-* 
 
 ## To complete this challenge, you will need to
 - [ ] Test drive the following features:
