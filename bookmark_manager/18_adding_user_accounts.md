@@ -33,6 +33,6 @@ In this challenge you will create the functionality for signing up for a user ac
 * [Bcrypt Ruby](https://github.com/codahale/bcrypt-ruby)
 * [Bcrypt - Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)
 * [Helper methods](http://www.sinatrarb.com/intro.html#Helpers)
-* [Lazy initialization](https://en.wikipedia.org/wiki/Lazy_initialization#Ruby)
+* [Lazy initialization](http://blog.jayfields.com/2007/07/ruby-lazily-initialized-attributes.html)
 
 ## [Solution](solutions/18.md)
