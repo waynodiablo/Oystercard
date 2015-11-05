@@ -19,6 +19,7 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [ ] Understand the difference between **literal** and **constructor** notation when creating objects
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will output "Hello, Maker!" when you type `greeting.hello("Maker")`
 - [ ] Create a `hi` function which will output "Hi, Maker!" when you type `hi("Maker")`
+- [ ] Experiment with the following basic language features: strings, numbers, arrays, objects. This point may seem trivial but there are some very important differences between Ruby and Javascript!
 - [ ] Ensure all your code follows [basic JavaScript conventions](/pills/js_conventions.md)
 - [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
 - [ ] Discuss why JavaScript is the "language of the Web"
@@ -28,6 +29,7 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [Explore and Master Chrome DevTools - Codeschool (Free Tutorial)](http://discover-devtools.codeschool.com/)
 - :pill: [`function` in JavaScript](/pills/js_functions.md)
 - :pill: [JavaScript conventions](/pills/js_conventions.md)
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
 - :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
