@@ -34,5 +34,6 @@ In this challenge you will create the functionality for signing up for a user ac
 * [Bcrypt - Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)
 * [Helper methods](http://www.sinatrarb.com/intro.html#Helpers)
 * [Lazy initialization](http://blog.jayfields.com/2007/07/ruby-lazily-initialized-attributes.html)
+* [Memoization](http://gavinmiller.io/2013/basics-of-ruby-memoization/)
 
 ## [Solution](solutions/18.md)
