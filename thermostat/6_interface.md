@@ -2,14 +2,17 @@
 
 [Back to the Challenge Map](0_challenge_map.md)
 
-### Challenge setup
+You now have some well tested business logic, representing simple model of a thermostat. However, at the moment, the only way you can interact with the code is either through the console or tests. It's time to build a user interface.
 
 ### Learning Objectives covered
 
+- Use Jasmine to Test-Drive Development of a web page with advanced JavaScript functionality
+
 ### To complete this challenge, you will need to:
-- [ ] Build a static HTML page as the user interface for your thermometer (hint: is there a static HTML page already in your project that you could use as a template?).
-- [ ] Add JavaScript to enable your HTML page to interact with your thermostat object. Think again about separation of concerns. Where should this new JavaScript code go?
-- [ ] Add a file to place your JavaScript code that manages the interface between the UI and the thermostat object.
+- [ ] Decide what elements you will need as input and output for your thermostat
+- [ ] Build a static HTML page with these elements
+- [ ] Add your thermostat JavaScript to the page
+- [ ] Add another (empty) file to place JavaScript code that manages the interface between the UI and the thermostat object
 
 ### Resources
 
