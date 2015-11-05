@@ -8,7 +8,7 @@ There're three main types of relationships between tables in the database:
 
 ## One to many
 
-![One-to-many](/images/one-to-many.png)
+![One-to-many](images/db-relationships/one-to-many.png)
 
 Here post has many comments. At the database level it means that `comments_table` has a **foreign_key** column `post_id`. When we want to retrieve all comments for the first post using DataMapper
 
@@ -39,7 +39,7 @@ Note the difference - at the DB level `posts` table doesn't have any pointers to
 
 ## One to one
 
-![One-to-one](/images/one-to-one.png)
+![One-to-one](images/db-relationships/one-to-one.png)
 
 One-to-one relationship is similar to one-to-many except now both tables have foreign keys pointing at each other.
 
@@ -61,7 +61,7 @@ There's no difference between `has 1` and `belongs_to` in the database, it's pur
 
 ## Many to many
 
-![Many-to-many](/images/many-to-many.png)
+![Many-to-many](images/db-relationships/many-to-many.png)
 
 In this example an article can have many categories and a category can have many articles, so we need a many-to-many relationship. To implement that we introduce another table containing both `article_id` and `category_id`. Whenever add a category to an article or vice versa we add a row to `article_categories` table with both article and category id.
 
@@ -82,7 +82,7 @@ Here we have a `:through => Resource` option passed to both `has n`s. `:through`
 
 Sometimes "bridge table" has some unconventional name. In that case we pass table name to `:through`
 
-![Many-to-many-through](/images/many-to-many-through.png)
+![Many-to-many-through](images/db-relationships/many-to-many-through.png)
 
 ```ruby
 class Link
@@ -96,7 +96,7 @@ end
 
 ### Many to many `:through` with `:via`
 
-![Many-to-many-through-via](/images/many-to-many-through-via.png)
+![Many-to-many-through-via](images/db-relationships/many-to-many-through-via.png)
 
 In this example a person can have many friends and also be a friend to many people. On the both sides of this relationship is the `people` table. The bridge table `friendships` contain two foreign keys - `source_id` and `target_id`. In the model we have to define the association with the bridge table name and foreign key name.
 
