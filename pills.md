@@ -108,4 +108,6 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 ## Database
 
-:pill: [Database relationships](https://github.com/makersacademy/course/blob/master/pills/db-relationships.md)
+:pill: [Relational databases](https://github.com/makersacademy/course/blob/master/pills/relational_SQL_DBs.md)
+
+:pill: [Datamapper and database relationships](https://github.com/makersacademy/course/blob/master/pills/db-relationships.md)
