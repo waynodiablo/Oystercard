@@ -10,7 +10,7 @@ There're three main types of relationships between tables in the database:
 
 ![One-to-many](images/db-relationships/one-to-many.png)
 
-Here post has many comments. At the database level it means that `comments_table` has a **foreign_key** column `post_id`. When we want to retrieve all comments for the first post using DataMapper
+Here post has many comments. At the database level it means that `comments` table has a **foreign_key** column `post_id`. When we want to retrieve all comments for the first post using DataMapper we would write something like this:
 
 ```ruby
   Post.get(1).comments
@@ -63,7 +63,7 @@ There's no difference between `has 1` and `belongs_to` in the database, it's pur
 
 ![Many-to-many](images/db-relationships/many-to-many.png)
 
-In this example an article can have many categories and a category can have many articles, so we need a many-to-many relationship. To implement that we introduce another table containing both `article_id` and `category_id`. Whenever add a category to an article or vice versa we add a row to `article_categories` table with both article and category id.
+In this example an article can have many categories and a category can have many articles, so we need a many-to-many relationship. To implement that we introduce another table containing both `article_id` and `category_id`. Whenever we add a category to an article or vice versa we add a row to `article_categories` table with both article and category id.
 
 ```ruby
 class Article
