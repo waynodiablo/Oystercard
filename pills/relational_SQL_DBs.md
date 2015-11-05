@@ -3,7 +3,7 @@ Relational Databases
 
 A relational database is one which stores data as a series of 'tables' made of
 rows and columns -- like a spreadsheet. The rows represent individual entries in
-the database, while the columns represent the fields - the data stored about he
+the database, while the columns represent the fields - the data stored about the
 entries. For instance, here's a representation of a user in a relational
 database:
 
