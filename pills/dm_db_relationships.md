@@ -1,4 +1,4 @@
-# Relationships between database tables
+# Relationships between DB tables and Ruby
 
 There're three main types of relationships between tables in the database:
 
