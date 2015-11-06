@@ -19,7 +19,7 @@ and we had a test like so
 ```ruby
 describe Foo do
   it 'should bar' do
-    expect(Foo.bar).to eq 'bar'
+    expect(subject.bar).to eq 'bar'
   end
 end
 ```
@@ -39,10 +39,10 @@ The main problem with test coverage as an indicator of code quality is that we c
 ```ruby
 describe Foo do
   it 'should bar' do
-    Foo.bar
+    subject.bar
   end
   it 'should foo' do
-    Foo.foo
+    subject.foo
   end
 end
 ```
@@ -52,10 +52,10 @@ This gets a 100% simple coverage because every line in the class Foo will be exe
 ```ruby
 describe Foo do
   it 'should bar' do
-    expect(Foo.bar).to eq 'bar'
+    expect(subject.bar).to eq 'bar'
   end
   it 'should foo' do
-    expect(Foo.foo).to eq 'foo'
+    expect(subject.foo).to eq 'foo'
   end
 end
 ```

@@ -690,7 +690,7 @@ We will also need to define items in our new test - however, this creates some d
 it('returns search results', function() {
   search.query('hello')
     .then(function(response) {
-      expect(response.data).toEqual(items)
+      expect(response.data.items).toEqual(items)
     })
   httpBackend.flush();  
 })

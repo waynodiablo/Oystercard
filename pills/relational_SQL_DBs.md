@@ -3,7 +3,7 @@ Relational Databases
 
 A relational database is one which stores data as a series of 'tables' made of
 rows and columns -- like a spreadsheet. The rows represent individual entries in
-the database, while the columns represent the fields - the data stored about he
+the database, while the columns represent the fields - the data stored about the
 entries. For instance, here's a representation of a user in a relational
 database:
 
@@ -37,27 +37,6 @@ database:
 
 Relational databases are managed using relational database management systems
 (RDBMS), such as PostgreSQL, MySQL and SQL Server.
-
-###SQL
-
-Virtually every relational database in the world uses SQL ('Structured Query
-Language' pronounced
-'sequel') as the language to query and update the database. Let's use some SQL
-to look at this database. We won't be using a real database quite yet. The SQL
-command to look at all the rows in this table:
-
-```SQL
-SELECT * FROM User;
-```
-
-And if we'd like a user 1's email address:
-
-```SQL
-SELECT email FROM User WHERE id = 1;
-```
-
-SQL is worth looking at - but let's not get bogged down in the details right
-now. Let's think about giving these users addresses:
 
 ###One-to-One Relationships
 
@@ -132,7 +111,7 @@ individual tables this time.
 Querying this in SQL requires you to join the tables again:
 
 ```SQL
-SELECT * FROM User LEFT JOIN Blog ON User.id = Address.user_id;
+SELECT * FROM User LEFT JOIN Blog ON User.id = Blog.user_id;
 ```
 
 The `LEFT JOIN` command returns all the left hand side (User) data, and any
@@ -201,32 +180,11 @@ two tables *through* the join table each other:
 
 ```SQL
 SELECT * FROM TagsBlogposts
-INNER JOIN Tags ON Tags.id = TagsBlogposts.blog_id
-INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.tag_id;
+INNER JOIN Tags ON Tags.id = TagsBlogposts.tag_id
+INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.blog_id;
 ```
 
 (You can write SQL statements across many lines - but they must always end in
 a semi-colon). This query will return all the data about Tags and their related
 Blogposts. Note that you don't need to make a join table when the two tables are
 linked through a pre-existing table.
-
-###ORMs
-
-In the past when you wanted to query a RDBMS from your program you may have had
-to construct SQL queries as a string to send to the database, and then parse the
-response into something your program can work with -- like an object. The
-inefficiencies of this should be obvious -- you have to know and translate
-between two different languages.
-
-This operation is so frequent that libraries have been written for (almost)
-every language to relate an object oriented programming language to a relational
-database. These libraries are called Object Relational Mappers (ORMs), and you
-will do much of your work with databases using them.
-
-###But... SQL
-
-SQL was invented in 1970 and is still being used today, long after every other
-language around in the 70s has fallen by the wayside. While it's definitely
-not a cool language, or even very pretty, it's efficient and good at what
-it does, and a useful tool. When your database falls apart, it's good to have
-some SQL

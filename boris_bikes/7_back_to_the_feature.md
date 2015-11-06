@@ -17,7 +17,7 @@ I'd like to get a bike from a docking station.
 
 As a person,
 So that I can use a good bike,
-I'd like to see if a bike works
+I'd like to see if a bike is working
 ```
 
 Here is a functional representation of those stories:
@@ -25,7 +25,7 @@ Here is a functional representation of those stories:
 Objects  | Messages
 ------------- | -------------
 Person  | 
-Bike  | works?
+Bike  | working?
 DockingStation | release_bike
 
 Here is the `DockingStation` class you should have written:

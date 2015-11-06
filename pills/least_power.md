@@ -14,7 +14,8 @@ Some Ruby concepts from least to most powerful:
 9. object
 10. collections of interacting objects
 11. composition
-12. inheritance
+12. mixins
+13. inheritance
 
 Attr_* from least to most powerful:
 
@@ -22,4 +23,4 @@ Attr_* from least to most powerful:
 2. attr_writer
 3. attr_accessor
 
-Wherever possible you should prefer the items with lower power to avoid uneccessary complexity
+Wherever possible you should prefer the items with lower power to avoid uneccessary complexity.  Don't use a tool any more complex than you need, unless you really are getting something from it, such as special flexibility that you are pretty damn sure is going to support delivering value to the client.

@@ -782,7 +782,7 @@ Now let's tackle updating restaurants. Testing first:
 ...
 context 'editing restaurants' do
 
-  before {Restaurant.create name: 'KFC'}
+  before { Restaurant.create name: 'KFC' }
 
   scenario 'let a user edit a restaurant' do
    visit '/restaurants'

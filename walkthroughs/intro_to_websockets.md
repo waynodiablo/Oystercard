@@ -114,7 +114,7 @@ var socket = function(io){
 
   io.on('connection', function(socket){
 
-    console.log('Client connected!);
+    console.log('Client connected!');
 
   });
 });

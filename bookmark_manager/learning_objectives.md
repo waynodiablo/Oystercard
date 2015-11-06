@@ -93,3 +93,7 @@
 * Use RSpec to test database functionality
 * Use Capybara to create feature tests that include database functionality
 * Refactor Capybara feature tests to modularize database processes
+
+### BDD
+
+* Use a specification to generate user stories in the appropriate format
