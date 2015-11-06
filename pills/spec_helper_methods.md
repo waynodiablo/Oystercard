@@ -15,7 +15,7 @@ What is the problem with a helper method like the following?
 - It relies on a model existing in the database with the same email / password values that you give it.
 - It relies on you not making a typo when you pass that email and password string.
 
-So many things could go wrong! Even worse, what happens if you decide to add some validations such that passwords have to have at least one number? Unless you'd already formatted your examples like that, you'd have to find every call to the #sign_in method and correct that password string. So how can we improve on this? Like so:
+So many things could go wrong! Even worse, what happens if you decide to add some validations such that passwords have to have at least one number? Unless you'd already formatted your examples like that, you'd have to find every call to the `#sign_in` method and correct that password string. So how can we improve on this? Like so:
 
 ```ruby
   def sign_in_as(user)
@@ -25,7 +25,7 @@ So many things could go wrong! Even worse, what happens if you decide to add som
     click_button 'Sign in'
   end
 ```
-Wow nice!!! This means that all we have to remember to do is pass in a user model that presumably exists in the db. We don't have to remember an order of arguments. We're not at risk of opaque errors from having incorrectly typed a password string. So we'd call such a method like:
+Nice! This means that all we have to remember to do is pass in a user model that presumably exists in the db. We don't have to remember an order of arguments. We're not at risk of opaque errors from having incorrectly typed a password string. So we'd call such a method like:
 
 ```ruby
 it 'displays a welcome message on sign-in' do
@@ -70,9 +70,8 @@ def sign_up_as(user)
     click_button 'Sign up'
   end
 ```
-(p.s yes, it does hurt me that the last line doesn't like up with the previous four).
 
-But wait, how can we can supply an instance of user with details for a user that hasn't signed up yet? Surely the whole point of a sign up method is that you pass it details that are not yet in the DB. True, but recall that User.new would create a model without saving it in the DB. So we could call the above method in the following way:
+But wait, how can we can supply an instance of user with details for a user that hasn't signed up yet? Surely the whole point of a sign up method is that you pass it details that are not yet in the DB. True, but recall that `User.new` would create a model without saving it in the DB. So we could call the above method in the following way:
 
 ```ruby
 it 'displays a welcome message on sign up' do
@@ -83,6 +82,7 @@ it 'displays a welcome message on sign up' do
   expect(page).to have_content "Welcome to Chitter, #{user.email}!"
 end
 ```
-(above I'm suggesting another helper method, "user_params", that would allow you to keep the knowledge of what values are needed to create a user in one place. If only there were some nice gem for doing this... <notextile>*</notextile>)
+
+> Above I'm suggesting another helper method, "user_params", that would allow you to keep the knowledge of what values are needed to create a user in one place. If only there were some nice gem for doing this... <notextile>*</notextile>
 
 <notextile>*</notextile>https://github.com/thoughtbot/factory_girl
