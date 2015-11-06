@@ -50,6 +50,9 @@ This is the basic view of the website. You will build it by working through the 
  23. [Signing in](23_signing_in.md)
  24. [Signing Out](24_signing_out.md)
  25. [Refactoring](25_refactoring.md)
+ 26. [Password Recovery](26_password_recovery.md)
+ 27. [Mailing the Token](27_mailing_the_token.md)
+
 
 
 ---------------
