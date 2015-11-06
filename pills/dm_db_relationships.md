@@ -1,6 +1,6 @@
 # Relationships between DB tables and Ruby
 
-There're three main types of relationships between tables in the database:
+There are three main types of relationships between tables in the database:
 
 - One to one
 - One to many
@@ -16,7 +16,7 @@ Here post has many comments. At the database level it means that `comments` tabl
   Post.get(1).comments
 ```
 
-it translates to the SQL query like
+it translates to an SQL query:
 
 ```sql
 SELECT * FROM comments WHERE post_id = 1;
@@ -35,13 +35,13 @@ class Comment
 end
 ```
 
-Note the difference - at the DB level `posts` table doesn't have any pointers to `comments` table. However in the `Post` model we call `has n` method. We do that to have access to the `comments` method.
+Note the difference - at the DB level the `posts` table doesn't have any pointers to the `comments` table. However in the `Post` model we call the `has n` method. We do that to have access to the `comments` method.
 
-## One to one
+## One-to-one
 
 ![One-to-one](images/db-relationships/one-to-one.png)
 
-One-to-one relationship is similar to one-to-many except now both tables have foreign keys pointing at each other.
+A one-to-one relationship is similar to one-to-many except now both tables have foreign keys pointing at each other.
 
 ```ruby
 class Person
@@ -76,11 +76,11 @@ class Category
 end
 ```
 
-Here we have a `:through => Resource` option passed to both `has n`s. `:through` option tells DataMapper what table is used as a "bridge" table. `Resource` means that we use a conventional table named after both tables it links.
+Here we have a `:through => Resource` option passed to both `has n`s. The `:through` option tells DataMapper what table is used as a **join table**. `Resource` means that we use a conventional table named after both the tables it links to.
 
 ### Many to many `:through`
 
-Sometimes "bridge table" has some unconventional name. In that case we pass table name to `:through`
+Sometimes the **join table** has an unconventional name. In that case we pass the table name to `:through`
 
 ![Many-to-many-through](images/db-relationships/many-to-many-through.png)
 
@@ -98,7 +98,7 @@ end
 
 ![Many-to-many-through-via](images/db-relationships/many-to-many-through-via.png)
 
-In this example a person can have many friends and also be a friend to many people. On the both sides of this relationship is the `people` table. The bridge table `friendships` contain two foreign keys - `source_id` and `target_id`. In the model we have to define the association with the bridge table name and foreign key name.
+In this example a person can have many friends and also be a friend to many people. On the both sides of this relationship is the `people` table. The join table `friendships` contain two foreign keys - `source_id` and `target_id`. In the model we have to define the association with the join table name and the foreign key name.
 
 ```ruby
 class Person
