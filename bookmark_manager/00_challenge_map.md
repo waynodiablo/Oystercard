@@ -43,7 +43,7 @@ This is the basic view of the website. You will build it by working through the 
  16. [Filtering Tags](16_filtering_tags.md)
  17. [Multiple Tags](17_multiple_tags.md)
  18. [Adding User Accounts](18_adding_user_accounts.md)
- 19. [Password confiramtion](19_password_confirmation.md)
+ 19. [Password confirmation](19_password_confirmation.md)
  20. [Improving Sign Up Workflow](20_improving_sign_up_workflow.md)
  21. [Levels of Validation](21_levels_of_validation.md)
  22. [Preventing Duplicate Registrations](22_preventing_duplicate_registrations.md)
