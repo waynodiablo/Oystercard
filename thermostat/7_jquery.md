@@ -8,12 +8,14 @@ In this challenge, you will manipuate the DOM using JavaScript and jQuery.
 
 ### Challenge setup
 
-The first part of this challenge is intentionally left really open. When you first use jQuery, you should play with it, mainly because changing things on the page is still going to be fun. Make the background of the page silly colours. Go find other pages on the web that have jQuery. Generally, if typing `jQuery` in the console returns something, you're in business. Insert rude words. Delete banners. Replace all the pictures on the page with Nikesh.
+The first part of this challenge is intentionally left really open. When you first use jQuery, you should play with it, mainly because changing things on the page is still going to be fun. Make the background of the page silly colours. Go find other pages on the web that have jQuery. Generally, if typing `jQuery` in the console returns something, you're in business. Insert rude words. Delete banners. Replace all the pictures on the page with Nikesh. 
+
+Once you're done, try to add **event handlers** to the input elements identified in the last challenge, and decide what needs to be updated each time a button/link is clicked.
 
 ### Learning Objectives covered
 
 - Explain some benefits of using jQuery above 'raw' JavaScript
-- Explain some common jQuery idioms, such as `$(document)ready();`
+- Explain some common jQuery idioms, such as `$(document).ready();`
 - Use jQuery to build interactive functionality into a webpage
 
 ### To complete this challenge, you will need to:
@@ -27,6 +29,6 @@ The first part of this challenge is intentionally left really open. When you fir
 ### Resources
 - [How jQuery works](http://learn.jquery.com/about-jquery/how-jquery-works/)
 - [learn.jquery.com](https://learn.jquery.com/)
-- [jQuery documentation](
+- [jQuery documentation](http://api.jquery.com/)
 
 ### [Solution](solutions/7.md)
