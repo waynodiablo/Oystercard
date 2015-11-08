@@ -16,9 +16,8 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 
 - [ ] Find the Chrome DevTools Console
 - [ ] Write your first "Hello world!" using `console.log()`
-- [ ] Understand the difference between **literal** and **constructor** notation when creating objects
-- [ ] Create a `Greeting` object with a method `hello(person)`, which will output "Hello, Maker!" when you type `greeting.hello("Maker")`
-- [ ] Create a `hi` function which will output "Hi, Maker!" when you type `hi("Maker")`
+- [ ] Create a `Greeting` object with a method `hello(person)`, which will return "Hello, Maker!" when you type `greeting.hello("Maker")`
+- [ ] Create a `hi` function which will return "Hi, Maker!" when you type `hi("Maker")`
 - [ ] Experiment with the following basic language features: strings, numbers, arrays, objects. This point may seem trivial but there are some very important differences between Ruby and Javascript!
 - [ ] Ensure all your code follows [basic JavaScript conventions](/pills/js_conventions.md)
 - [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
