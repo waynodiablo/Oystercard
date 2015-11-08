@@ -18,6 +18,8 @@ becomes:
 var theMeaningOfLife = 42
 ~~~
 
+We also use the keyword `var` whenever creating a new variable, to ensure correct scoping.
+
 ## Method naming
 
 Likewise, we'll use camel casing for method names

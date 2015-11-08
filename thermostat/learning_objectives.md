@@ -5,6 +5,8 @@
 ## JavaScript
 * Describe JavaScript as a scripting language built for the web
 * Understand JavaScript's role in the browser ecosystem
+* Use the Chrome console as a REPL
+* Understand JavaScript language conventions
 * Use JavaScript in pair programming to build a thermostat
 * Analyse some differences between Ruby and JavaScript syntaxes, such as the primacy of `function()` in JavaScript vs. the primacy of `Object` in Ruby
 * Evaluate some benefits of JavaScript as a language above Ruby, and vice-versa
@@ -13,8 +15,10 @@
 * Recall that Jasmine is a JavaScript testing framework
 * Explain that Jasmine's test environment is the browser
 * Compare and contrast Jasmine and RSpec - syntax, test environment, and portability
+* Understand and use Jasmine spies
+* Use Jasmine to Test-Drive Development
 * Use Jasmine to Test-Drive Development of a thermostat
-* Use Jasmine to Test-Drive Development of a web page with advanced JavaScript functionality
+* Use Jasmine to Test-Drive Development of a web page with JavaScript functionality
 * Use Jasmine in conjunction with jQuery
 
 ## JQuery
