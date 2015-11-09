@@ -105,3 +105,9 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 :pill: [JS conventions](https://github.com/makersacademy/course/blob/master/pills/js_conventions.md)
 
 :pill: [jQuery events](https://github.com/makersacademy/course/blob/master/pills/jquery_events.md)
+
+## Database
+
+:pill: [Relationships between tables in a database](https://github.com/makersacademy/course/blob/master/pills/db_relationships.md)
+
+:pill: [Datamapper and database relationships](https://github.com/makersacademy/course/blob/master/pills/dm_db_relationships.md)

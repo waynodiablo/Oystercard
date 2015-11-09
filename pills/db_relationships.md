@@ -1,4 +1,4 @@
-Relational Databases
+Relationships between tables in a database
 ====================
 
 A relational database is one which stores data as a series of 'tables' made of
