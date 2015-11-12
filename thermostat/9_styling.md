@@ -21,4 +21,6 @@ Or, influenced by whatever else you take your visual inspiration from.
 
 ### Resources
 
+- [Learn layout](http://learnlayout.com/)
+
 ### [Solution](solutions/9.md)
