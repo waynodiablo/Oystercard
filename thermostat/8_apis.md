@@ -8,7 +8,7 @@ Add a feature to display the weather in a city selected by the user.
 
 ### Challenge setup
 
-:construction:
+You'll need to find a suitable weather API - [Weather Underground](http://www.wunderground.com/weather/api) or [Open Weather Map](http://openweathermap.org/api) are popular choices.
 
 ### Learning Objectives covered
 
