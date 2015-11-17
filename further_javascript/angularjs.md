@@ -370,7 +370,7 @@ To get the data we've just added to our controller into your view, amend your `i
 
 Look upon my works, ye Mighty, and despair! We've polluted our html with a load of Angular [cruft](http://en.wikipedia.org/wiki/Cruft). This is one of the downsides of using a framework like Angular. Let's look at some of the details:
 
-* Mustache `{{your_variable_here}}` - you need to use a mustache to get access to the [scope](https://docs.angularjs.org/guide/scope). In our example we are using `{{user.login}}` to access the `login` property on the `user` object. However notice inside `ng-repeat` we don't use them.
+* Mustache `{{your_variable_here}}` - you need to use a mustache to get access to the [scope](https://docs.angularjs.org/guide/scope). In our example we are using `{{user.login}}` to access the `login` property on the `user` object. However notice inside `ng-repeat="user in searchCtrl.searchResult.items"` we don't use them.
 * [ng-repeat](https://docs.angularjs.org/api/ng/directive/ngRepeat) is an Angular directive that behaves like a for loop. Basically we're going to iterate for every user in the items array. Notice that we've called the variable `user`.
 * [ng-src](https://docs.angularjs.org/api/ng/directive/ngSrc) just sets the `src` attribute on the `img` after everything has loaded. If we didn't do this and set `src="{{user.avatar_url}}"` (as opposed to `ng-src`) then the page would show a broken image link. This is because it takes a short while after the page has loaded for Angular to replace strings like `{{user.avatar_url}}` with the dynamically generated value.  
 * [ng-href](https://docs.angularjs.org/api/ng/directive/ngHref) similarly just sets the `href` once Angular has replaced any markup.  
