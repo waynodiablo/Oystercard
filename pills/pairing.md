@@ -11,6 +11,35 @@ Pair programming can be very exhausting as it will often lead to a state of very
 
 Please do read through the pair programming tips and methodologies below and make sure to watch the videos referenced at the end of this document!
 
+Styles
+------
+
+### Side by Side
+
+This is not really true pairing.  It's just two people working on a related or similar problem while happening to be sitting next to each other.  It's friendly but doesn't give much benefit compared with working completely separately on a problem
+
+### Master Slave 
+
+Navigator tells driver exactly what to do and driver follows blindly.  In this case at least both parties are involved and the driver is building up some muscle memory from typing; however they may feel completely lost and not be gettig so much out of the experience.  It may be frustrating to the 'master navigator' to do anything other than slow down - they may want to just get in there and type themselves, but the key to both parties long term learning is to the process
+
+### Lose the Navigator
+
+driver just does everything and says almost nothing
+
+TODO - add more detail
+
+### Driver Narrative
+
+driver is typing and explains what they do
+
+TODO - add more detail
+
+### Regular Swapping Roles - shared head space
+
+both are doing effective narrative
+
+TODO - add more detail
+
 
 General Pair Programming Tips
 --------------
