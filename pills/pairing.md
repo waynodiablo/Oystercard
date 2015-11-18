@@ -24,22 +24,17 @@ Navigator tells driver exactly what to do and driver follows blindly.  In this c
 
 ### Lose the Navigator
 
-driver just does everything and says almost nothing
+If the driver and the navigator both go silent and the driver pushes on regardless we have a situation where we effectively "lose the navigator".   Basically the driver is now solo programming and, at best, the navigator is perhaps picking up a few things from watching.
 
-TODO - add more detail
+### Driver in Narrative Mode
 
-### Driver Narrative
-
-driver is typing and explains what they do
-
-TODO - add more detail
+In this context the driver is explaining their thought process as they type, as they reflect on how to solve the problem.  The navigator can thus stay in touch with what is going on and is in a better position to ask helpful questions and make suggestions.  Working in narrative mode (i.e. explaining what you are doing as you are doing it) is tough and takes practice; but that is worthwhile since you will become a better pair partner if you develop your narrative skills.
 
 ### Regular Swapping Roles - shared head space
 
-both are doing effective narrative
+This is the pinnacle of effective pairing.  Both navigator and driver are in narrative mode, and are taking turns speaking, and swapping driver/navigator roles at appropriate intervals.  This is exhausting compared to working solo, but while it sometimes seems like you are going more slowly, it can help both individuals focus in a way that's not possible individually.  Furthermore the process of discussing and debating (within reason) the various aspects of what you are doing helps both parties to better remember what they are discovering through the pairing process.  Both parties need to be assertive in asking the other to speed up or slow down to find the best compromise speed for the pair, and also assertive in terms of saying things like "I'm really stuck now, can we take a 15min break?" or "shall we both go and read the documentation for 30 minutes and then come back together to discuss what we worked out".  The ultimate goal is a process of co-discovery, but you need to negotiate with your pair partner to get the best out of the process.
 
-TODO - add more detail
-
+If you's like help mastering the different pairing styles please do see the [pair_scaffolding](pair_scaffolding.md) :pill: pill
 
 General Pair Programming Tips
 --------------
