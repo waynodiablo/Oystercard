@@ -53,5 +53,5 @@ Pair Scaffolding on Rails:
 Coach Pair Scaffolding Workshops in Haskell
 -----------------
 
-* https://www.youtube.com/watch?v=La_EtOkgryY
-* https://www.youtube.com/watch?v=srSriMqNLqw
+* [Stephen, Ptolemy and Tansaku](https://www.youtube.com/watch?v=La_EtOkgryY)
+* [Irina, Stefan and Jordan](https://www.youtube.com/watch?v=srSriMqNLqw)
