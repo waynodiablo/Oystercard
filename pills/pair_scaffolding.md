@@ -50,7 +50,8 @@ Pair Scaffolding on Rails:
 * https://www.youtube.com/watch?v=qTaBrFzgLVc
 * https://www.youtube.com/watch?v=hfm3GcbJACc
 
-Coach Pair Scaffolding Workshop in Haskell
+Coach Pair Scaffolding Workshops in Haskell
 -----------------
 
 * https://www.youtube.com/watch?v=La_EtOkgryY
+* https://www.youtube.com/watch?v=srSriMqNLqw
