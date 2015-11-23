@@ -199,7 +199,7 @@ Controllers are a bit like methods in a Sinatra server file – they contain th
 
 `$ bin/rails g controller restaurants`
 
-Note, `g` is short for generate.  This command will generate a file restaurants_controller.rb in app/controllers and also an rspec test in spec/controllers.  Let's delete the latter for the moment since the integration test we are writing is currently sufficient for testing the controller functionality.
+Note, `g` is short for generate.  This command will generate a file restaurants_controller.rb in app/controllers and also an rspec test in spec/controllers [possible error here].  Let's delete the latter for the moment since the integration test we are writing is currently sufficient for testing the controller functionality.
 
 Now, RSpec gives us a different error – that there's no action /index for restaurants.
 
