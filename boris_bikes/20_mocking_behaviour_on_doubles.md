@@ -39,11 +39,11 @@ it 'releases working bikes' do
   # let's superpower our double
   # using allow().to receive().and_return()
   allow(bike).to receive(:working).and_return(true)
-  subject.dock double(:bike)
-  bike = subject.release_bike
+  subject.dock(bike)
+  released_bike = subject.release_bike
   # Now the double responds to working?
   # with the value true
-  expect(bike).to be_working
+  expect(released_bike).to be_working
 end
 ```
 
