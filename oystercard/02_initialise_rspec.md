@@ -25,6 +25,4 @@ Prepare your project for RSpec by creating a helper file and an empty test file.
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 
-To link your commits to this issue, reference them as [described in a Github Guide](https://guides.github.com/features/issues/).
-
 ## [Solution](solutions/02_initialise_rspec.md)
