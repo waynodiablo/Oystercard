@@ -21,7 +21,7 @@ In this issue you will create a valid Gemfile for this project.
 - [ ] construct a valid Gemfile
 - [ ] specify a correct source for gems
 - [ ] specify the latest Ruby version
-- [ ] add the `rspec` gem to ‘test’ group
+- [ ] add the `rspec` gem to ‘test’ and ’development’ groups
 - [ ] commit only this Gemfile
 
 ## Suggested resources
