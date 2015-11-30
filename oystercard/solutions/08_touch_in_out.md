@@ -4,7 +4,7 @@ In this challenge, we are being asked to build functionality to track the moveme
 - [ ] Write implementation of these methods that will make the tests pass
 - [ ] Use an RSpec predicate matcher to check if the card is in use
 
-These methods all share a common feature - they are responsible for tracking when the oyster card is being used. Make this first test pass by defining a touch_in method, then let's think about adding some functionality. We want `touch_in` to change an internal status `in_use` from false to true. Our first test could look something like this:
+These methods all share a common feature - they are responsible for tracking when the oyster card is being used. Make this first test pass by defining a touch_in method, then let's think about adding some functionality. We want `touch_in` to change an internal status `in_journey` from false to true. Our first test could look something like this:
 
 ```ruby
 it 'is initially not in a journey' do
@@ -17,7 +17,7 @@ When we run this test we should see the following error:
 Failures:
 
   1) Oystercard tracking usage is initially not in use
-     Failure/Error: expect(subject).not_to be_in_use
+     Failure/Error: expect(subject).not_to be_in_journey
        expected `#<Oystercard:0x007f9431a830a0 @balance=0>.in_journey?` to return false, got true
      # ./spec/oystercard_spec.rb:7:in `block (3 levels) in <top (required)>'
 
