@@ -33,7 +33,6 @@ Now we need to think about the functionality of our 'touch_in' method. We want t
 ```ruby
 
 it "can touch in" do
-  subject.top_up(20)
   subject.touch_in
   expect(subject).to be_in_journey
 end
