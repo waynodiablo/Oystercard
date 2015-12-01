@@ -12,7 +12,7 @@ Here are this week's [learning objectives](https://github.com/makersacademy/cour
 
 ##Github Profiles
 
-This week's project is to create a simple GitHub Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified users avatar, number of followers and number of repos.
+This week's project is to create a simple GitHub Profile app purely in JavaScript that grabs data from the [Github API](https://developer.github.com/v3/) in order to display a specified user's avatar, number of followers and number of repos.
 
 The project will involve using JavaScript to consume data available from third parties over the network (e.g. GitHub API data accessed via Ajax) and using more advanced JavaScript Model View Controller (MVC) frameworks such as AngularJS.
 
