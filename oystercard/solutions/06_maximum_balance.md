@@ -46,7 +46,7 @@ This error message is expecting us to raise an error. If we do the minimum to ch
 ``` ruby
 class Oystercard
 
-  BALANCE_LIMIT = 90
+  MAXIMUM_BALANCE = 90
 
   attr_reader :balance
 
@@ -55,7 +55,7 @@ class Oystercard
   end
 
   def top_up(amount)
-    fail 'Maximum balance exceeded' if amount + balance > BALANCE_LIMIT
+    fail 'Maximum balance exceeded' if amount + balance > MAXIMUM_BALANCE
     @balance += amount
   end
 
