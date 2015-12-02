@@ -661,7 +661,7 @@ githubUserSearch.factory('Search', ['$http', function($http) {
 
 If we run our tests, we now see ``` Error: [$injector:undef] Provider 'Search' must return a value from $get factory method. ```.
 
-This is prompting us to return a response to the method 'query'. Factories expose their API by returning an object or a function to provides the interface. To add the smallest possible amount of code to pass the test, add something like this to our factory:
+This is prompting us to return a response to the method 'query'. Factories expose their API by returning an object or a function to provide to the interface. To add the smallest possible amount of code to pass the test, add something like this to our factory:
 
 ```javascript
   return {
