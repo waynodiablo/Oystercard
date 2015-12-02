@@ -118,7 +118,7 @@ describe('GitHub profile finder', function() {
     element(by.className('btn')).click();
 
     expect(element(by.binding('user.login')).getText()).
-        toEqual('spike0');
+        toEqual('spike01');
   });
 });
 ```
