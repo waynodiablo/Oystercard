@@ -114,11 +114,11 @@ describe('GitHub profile finder', function() {
   it('finds profiles', function() {
     browser.get('http://localhost:8080');
 
-    element(by.model('searchTerm')).sendKeys('spike01');
+    element(by.model('searchCtrl.searchTerm')).sendKeys('spike01');
     element(by.className('btn')).click();
 
     expect(element(by.binding('user.login')).getText()).
-        toEqual('spike0');
+        toEqual('spike01');
   });
 });
 ```
@@ -146,7 +146,7 @@ Let's put these two tests together and clean them up a bit. Change your spec to 
 ```js
 describe('GitHub profile finder', function() {
 
-  var searchBox = element(by.model('searchTerm'))
+  var searchBox = element(by.model('searchCtrl.searchTerm'))
   var searchButton = element(by.className('btn'))
 
   beforeEach(function() {
@@ -215,7 +215,7 @@ it('finds profiles', function() {
   searchBox.sendKeys('spike');
   searchButton.click();
 
-  var profiles = element.all(by.repeater('user in searchResult.items'));
+  var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
   expect(profiles.get(0).getText()).toEqual('spike01'); //This won't pass!
 });
 ```
@@ -228,7 +228,7 @@ We use `element.all` with the `by.repeater` Locator to get an ElementArrayFinder
     searchBox.sendKeys('spike');
     searchButton.click();
 
-    var profiles = element.all(by.repeater('user in searchResult.items'));
+    var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
     expect(profiles.last().getText()).toEqual('spike01'); //This is, again, wrong.
   });
 ```
