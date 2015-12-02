@@ -1106,7 +1106,7 @@ erb:
 haml:
 ```haml
 %h3
-  Review for
+  Reviews for
   = restaurant.name
 
 - if restaurant.reviews.any?
