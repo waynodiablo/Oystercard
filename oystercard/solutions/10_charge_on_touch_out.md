@@ -10,7 +10,7 @@ expect{ subject.touch_out }.to change{ subject.balance }.by(-Oystercard::MINIMUM
 Let's make use of our deduct method to charge the card with the minimum charge.
 
 ```ruby
-def touch_in
+def touch_out
   deduct(MINIMUM_CHARGE)
   @in_journey = true
 end
