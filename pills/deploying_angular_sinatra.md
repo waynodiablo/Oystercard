@@ -18,3 +18,4 @@ To get around this, follow these steps:
 # Background reading
 * [Heroku Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
 * [Bower Configuration](http://bower.io/docs/config/)
+* [Deploying Sinatra plus Angular to Heroku (gist)](https://gist.github.com/giusepped/a7196e3ec7b0946b9121)
