@@ -46,7 +46,7 @@ This error message is expecting us to raise an error. If we do the minimum to ch
 ``` ruby
 class Oystercard
 
-  BALANCE_LIMIT = 20
+  MAXIMUM_BALANCE = 90
 
   attr_reader :balance
 
