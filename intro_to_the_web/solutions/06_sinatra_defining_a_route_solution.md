@@ -31,14 +31,12 @@ You should see this:
 ```
 
 Open [this address](http://localhost:4567) in the browser and you should see a white page with "hello!" in the upper left corner.
-                                                                                                  # broken link git.md
-This would be a good time to commit your code, push it to Github (:pill: [Version Control with Git](git.md)), and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:                      
 
 > :pill: [`localhost` and web host addresses](../../../master/pills/localhost_web_addresses.md)
 
 ## How does _Hello World_ work?
 
-So, let's take a look at the source code again.
+Let's take a look at our code again.
 
 ````ruby
 require 'sinatra'
@@ -48,15 +46,13 @@ get '/' do
 end
 ````
 
-First, we require Sinatra, the gem, to be available in our application.
-
-Then we call the `get()` method, provided by Sinatra, passing `'/'` as an argument (this could therefore be re-written `get('/')` but the convention is to ignore the brackets).
+First, we require Sinatra. This allows us to call the `#get` method passing `'/'` as an argument.
 
 What this method does is tell Sinatra to respond to a `GET` HTTP request to the path `/` (which happens whatever the user visits `http://localhost:4567`) and return the result of executing the block, in this case the string 'hello!':
 
-1. The browser requests page `/` (`http://localhost:4567/`) ->
-2. Sinatra activates the block defined by the `get '/' do` method call ->
-3. the block returns the string 'hello!' ->
+1. The browser requests page `/` (`http://localhost:4567/`)
+2. Sinatra activates the block defined by the `get '/' do` method call
+3. The block returns the string 'hello!'
 4. Sinatra returns this string ('hello!') to the  User
 
 The '/' part of the address is the last slash in `http://localhost:4567/`. Next up, let's try adding another page.
