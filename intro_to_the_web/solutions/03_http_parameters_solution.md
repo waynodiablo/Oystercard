@@ -2,9 +2,7 @@
 
 [Back to the Challenge](../03_http_parameters.md)
 
-Let's try to dissect the URL given to us:
-
-  ### http://www.example.com/home?name=Bob&age=21
+Let's try to dissect the URL, "http://www.example.com/home?name=Bob&age=21"
 
 - "http://www.example.com" The first part specifies the domain name. It indicates which web server to make the request to.
 - "/home" This part specifies the path to the resource we want on that server, the home page.
