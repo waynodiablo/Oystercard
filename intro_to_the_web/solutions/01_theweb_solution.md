@@ -2,7 +2,7 @@
 
 [Back to the Challenge](../01_theweb.md)
 
-HTTPie must be the most powerful tool in the UNIX toolbox! Let's use it to make a request to the makersipsum page:
+Let's use HTTPie to make a request to the "makersipsum" page:
 ```sh
 $ http http://makersipsum.herokuapp.com/
 ```
