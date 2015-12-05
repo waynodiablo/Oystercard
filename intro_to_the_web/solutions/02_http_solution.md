@@ -31,7 +31,7 @@ X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 ```
-Above are the *response* headers. They originate from the server. We can see information such as what language the server is running on.
+Above are the *response* headers. They originate from the server. We can see *metadata* such as what language the server is running on.
 
 ```
 <h1>This is the beginning of the response body</h1>
