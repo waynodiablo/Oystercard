@@ -62,7 +62,7 @@ Learn it by heart - it'll stand you well in the next few challenges.
 Let's translate our user actions into a Capybara feature test:
 
 ```ruby
-# in spec/features/user_name_spec.rb
+# in spec/features/enter_names_spec.rb
 
 feature 'Enter names' do
   scenario 'submitting names' do
