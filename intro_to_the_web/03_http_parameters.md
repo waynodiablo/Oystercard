@@ -1,4 +1,4 @@
-# HTTP III: Parameters
+# HTTP: Parameters
 
 [Back to the Challenge Map](00_challenge_map.md)
 
