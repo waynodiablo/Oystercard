@@ -79,7 +79,7 @@ And our `Player` class with those abilities implemented (and after some refactor
 ```ruby
 # in lib/player.rb
 
- class Player
+class Player
   DEFAULT_HIT_POINTS = 60
   attr_reader :name, :hit_points
 
@@ -94,8 +94,8 @@ And our `Player` class with those abilities implemented (and after some refactor
 
   def receive_damage
     @hit_points -= 10
-    end
- end 
+  end
+end 
 ```
 
 OK. Now we need to make a tiny addition to our controller, inside the `get '/attack'` route:
