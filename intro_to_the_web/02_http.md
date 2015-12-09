@@ -1,4 +1,4 @@
-# The Hypertext Transfer Protocol
+# The Hypertext Transfer Protocol (HTTP)
 
 [Back to the Challenge Map](00_challenge_map.md)
 
