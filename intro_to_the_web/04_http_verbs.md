@@ -1,4 +1,4 @@
-# HTTP III: GET / POST Requests
+# HTTP: GET / POST Requests
 
 [Back to the Challenge Map](00_challenge_map.md)
 
