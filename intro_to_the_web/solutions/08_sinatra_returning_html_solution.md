@@ -9,7 +9,7 @@ Behind the scenes, Sinatra was actually sending "hello" as an [HTML](html.md) fi
 ````ruby
 require 'sinatra'
 
-get '/' do
+get '/cat' do
   "<div>
     <img src='http://bit.ly/1eze8aE'>
    </div>"
@@ -26,7 +26,7 @@ CSS stands for Cascading Style Sheets. It's a language that describes what HTML 
 
 ````ruby
 require 'sinatra'
-get '/' do
+get 'cat/' do
   "<div style='border: 3px dashed red'>
      <img src='http://bit.ly/1eze8aE'>
    </div>"
