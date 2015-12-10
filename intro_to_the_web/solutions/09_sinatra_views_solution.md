@@ -25,7 +25,7 @@ In our `app.rb` file we'll just put this instead:
 ````ruby
 require 'sinatra'
 
-get '/' do
+get '/cat' do
   erb(:index)
 end
 ````
