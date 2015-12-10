@@ -10,7 +10,7 @@ In this challenge you will learn the different use-cases for two of HTTP methods
 
 ### Learning Objectives covered
 - Understand from a request whether it is a GET or POST request.
-- Understand that a POST request creates data.
+- Understand that both POST and GET requests pass parameters and how they differ in this.
 - Understand the different use-cases for GET and POST requests.
 
 ### To complete this challenge, you will need to:
