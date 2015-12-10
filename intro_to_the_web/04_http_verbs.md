@@ -24,5 +24,6 @@ In this challenge you will learn the different use-cases for two of HTTP methods
 
 ### Resources
 - [POST(Http)](https://en.wikipedia.org/wiki/POST_(HTTP))
+- [GET vs. Post](http://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post)
 
 ### [Solution](solutions/04_http_verbs_solution.md)
