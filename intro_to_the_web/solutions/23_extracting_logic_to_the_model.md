@@ -1,4 +1,4 @@
-# Solution – Getting Started with Battle
+# Solution – Extracting Logic to the Model
 
 [Back to the Challenge](../23_extracting_logic_to_the_model.md)
 
