@@ -87,7 +87,7 @@ Nice! =D
 
 ## Refactoring to the Modular Style
 
-So far, we've been assuming that our app is using the *classical style*, and not the *modular* style. In the classical style, all our routes are compiled within an instance of a class given to us by Sinatra, called `Sinatra::Application`. Hence, our `config.ru` looks like this:
+So far, we've been assuming that our app is using the *classical style*, and not the *modular* style. In the classical style, all our routes are compiled within a class given to us by Sinatra, called `Sinatra::Application`. Hence, our `config.ru` looks like this:
 ```ruby
 require './app/app'
 
