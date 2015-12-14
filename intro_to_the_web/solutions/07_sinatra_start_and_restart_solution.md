@@ -52,6 +52,8 @@ If you see a "Boot Error" when you're starting the application using shotgun, do
 
 Assuming that you get Shotgun working you can now make changes to your `app.rb` file and see the changes with a simple browser refresh.  Try adjusting the strings in the `do ... end` blocks and reload the browser.
 
+Shotgun works by reloading your entire application on every request. While this is very convenient for our development process, it might cause problems down the line with the way Sinatra secures session data (you will learn about this in a later challenge). To avoid this pitfall, we should add the line `set :session_secret, 'super secret'` to our `app.rb` file. What this is doing is beyond the scope of this challenge, but go [here](https://groups.google.com/forum/#!topic/sinatrarb/pUFSoyQXyQs) if you're interested.
+
 Webpages that return strings are kind of boring. Next up, let's add some [HTML](pills/html.md) to the mix.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
