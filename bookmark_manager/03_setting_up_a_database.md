@@ -16,7 +16,7 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 - [ ] Check your installation by running `psql` in the terminal. Refer to the [official postgres tutorial](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html) to understand any errors that you see.
 - [ ] Create a database in Postgres with your username:
   - [ ] From within terminal, type `echo $USER` to see your username. 
-  - [ ] Connect with `psql`.
+  - [ ] Connect to the default postgres database with `psql postgres`.
   - [ ] Using the `CREATE DATABASE databasename` command, create a database with your username.
 
 ## Resources
