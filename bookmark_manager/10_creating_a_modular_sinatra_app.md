@@ -18,7 +18,7 @@ In this challenge you will use Sinatra to set up a web application and tell Capy
 - [ ] Tell Capybara which app you are testing in the `spec_helper`
 - [ ] Require your link model in `app.rb`
 - [ ] Ensure you require your server file in spec_helper
-- [ ] Create a `\links` path and associated `erb` view
+- [ ] Create a `/links` path and associated `erb` view
 - [ ] Ensure that the feature test passes
 
 ## Resources
