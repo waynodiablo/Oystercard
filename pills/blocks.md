@@ -32,7 +32,7 @@ John
 Mary
 ````
 
-This is the most basic example of using blocks. Blocks can take several arguments (not just one) and they can be passed to any method, not just an to one of the methods of class Array.
+This is the most basic example of using blocks. Blocks can take several arguments (not just one) and they can be passed to any method, not just to one of the methods of class Array.
 
 You'll see blocks in the documentation for many [Ruby methods](https://github.com/makersacademy/course/blob/master/pills/methods.md). For example, if we have an array of names and we want to select the names that start with "A", we can use the [select()](http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-select) method.
 
