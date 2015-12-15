@@ -14,11 +14,15 @@ You should now see how it's possible to manipulate database data using SQL. Howe
 ## To complete this challenge, you will need to
 
 - [ ] Create a new project including the "data_mapper" and "dm-postgres-adapter" gems
-- [ ] Start an IRB session using those gems
-- [ ] Setup DataMapper to use the local postgres database
-- [ ] Set Logger level to `:debug`
-- [ ] Create a student model in IRB that is DataMapper enabled
-- [ ] Create a database entry (new student) from IRB
+- [ ] Connect with `psql` and create a database called `datamapper_play`
+- [ ] Start an IRB session and require the "data_mapper" and "dm-postgres-adapter" gems
+- [ ] Setup DataMapper to connect to a local postgres database: `DataMapper.setup(:default, "postgres://localhost/database_play")`
+- [ ] Set Logger level to `:debug`: `DataMapper::Logger.new($stdout, :debug)`
+- [ ] Create a "student" model in IRB:
+  - [ ] Refer to [DataMapper: Getting Started](http://datamapper.org/getting-started.html), subheading "Define your models".
+  - [ ] Declare a `Student` class and include the module `DataMapper::Resource`.
+  - [ ] Give the `Student` model the properties `id` and `name` - you will need to declare datatypes for these.
+- [ ] Create an entry in your student table from within IRB: `Student.create(name: 'Joe Bloggs')`
 - [ ] Delete that new student from IRB
 
 ## Resources
