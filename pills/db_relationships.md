@@ -93,7 +93,7 @@ User table we'd be looking at something pretty ugly. And wide...
 This is bad. We'd have to be adding new fields for each extra blog post, along
 with leaving some of the 'cells' for each row blank when there isn't an nth
 blog post by a user. Luckily there's a way around this by extracting out
-he blog posts to a separate table:
+the blog posts to a separate table:
 
 |id | user_id | title | content |
 |---|---|---|---|
