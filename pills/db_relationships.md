@@ -141,7 +141,7 @@ post:
 
 But we've already seen that this ends in a very long table, and the repetition
 of content. It also means that there's no direct relationship between the
-tags themselves and the blog posts - we'd have to have to have a Tags table that looked
+tags themselves and the blog posts - we'd have to have a Tags table that looked
 like this:
 
 |id | tag_name| blog_post_one_id| blog_post_two_id|
