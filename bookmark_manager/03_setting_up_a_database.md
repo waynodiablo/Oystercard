@@ -13,13 +13,15 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 ## To complete this challenge, you will need to
 
 - [ ] Using `brew`, install the `postgresql` package and follow the instructions carefully
-- [ ] Check your installation by running `psql` in the terminal
-- [ ] Create a database in Postgres with your username
+- [ ] Check your installation by running `psql` in the terminal. Use the resources to understand any errors that you see.
+- [ ] Create a database in Postgres with the same name as your username:
+  - [ ] Connect to the default postgres database with `psql postgres`.
+  - [ ] Using the `CREATE DATABASE yourusername` command, create a database with your username.
 
 ## Resources
 
 * [Homebrew Package Manager](http://brew.sh/)
-* [Creating a databse - Official Documentation](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html)
+* [Creating a database - Official Documentation](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html)
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
 ## [Solution - Mac OS](solutions/03_mac.md)
