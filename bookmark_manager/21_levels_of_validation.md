@@ -12,7 +12,7 @@ In this challenge you will create functionality for validating the user supplied
 
 ## To complete this challenge, you will need to
 
-- [ ] Ensure a user can't sign up with an blank email address:
+- [ ] Ensure a user can't sign up with a blank email address:
   - [ ] Write a failing feature test to ensure a user can't sign up without entering an email
   - [ ] Add a check on the client side using HTML5 and confirm that this will not make the test pass and try it manually
   - [ ] Add an appropriate DataMapper validation, and check the test now passes
