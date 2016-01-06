@@ -44,4 +44,4 @@ Other possible feature requests and system changes
 * Vans can run out of petrol and have to be refill at petrol stations
 * Users must pay to release bikes, docking stations must check user credit levels
 
-[Back to the Challenge Map](../0_challenge_map.md)
+[Back to the Challenge Map](0_challenge_map.md)
