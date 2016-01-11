@@ -42,15 +42,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     webdriver: {
-      helloWorld: {
-        tests: 'test/**/*'
-      },
-      options: {
-        desiredCapabilities: {
-          browserName: 'chrome'
-        }
+      test: {
+        configFile: './test/wdio.conf.js'
       }
-    },
+    }
   })
 
   grunt.loadNpmTasks('grunt-webdriver');
@@ -59,7 +54,9 @@ module.exports = function(grunt) {
 };
 ```
 
-Make a `test` directory, and a `homepageFeature.js` file. Let's write the first failing test:
+Make a `test` directory and create the config file with `wdio config` [docs](http://webdriver.io/guide/testrunner/gettingstarted.html).
+
+Add a `homepageFeature.js` file to the `test` directory. Let's write the first failing test:
 
 `homepageFeature.js`
 ```javascript
@@ -79,6 +76,8 @@ describe('homepage', function () {
 
 });
 ```
+
+Run your tests with `grunt`.
 
 We get an error, which should be expected as we don't have a server:
 
