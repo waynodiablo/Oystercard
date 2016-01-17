@@ -28,4 +28,4 @@ In this challenge, you will raise an exception when a user attempts to dock a bi
 - [RSpec errors documentation (Github)](https://github.com/rspec/rspec-expectations#expecting-errors)
 - [Relish errors documentation](http://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/raise-error-matcher)
 
-### [Solution](solutions/13.md)
+### [Walkthrough](walkthroughs/13.md)

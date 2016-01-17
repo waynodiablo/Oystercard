@@ -29,4 +29,4 @@ In this challenge, you will refactor your code to **compose** objects using mixi
 - :pill: [Modules](https://github.com/makersacademy/course/blob/master/pills/modules.md)
 
 
-### [Solution](solutions/22.md)
+### [Walkthrough](walkthroughs/22.md)

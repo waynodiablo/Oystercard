@@ -28,4 +28,4 @@ Every good code project starts with a git repository. To get started with Boris 
 - [How to write a good README](http://stackoverflow.com/questions/2304863/how-to-write-a-good-readme)
 
 
-### [Solution](solutions/1.md)
+### [Walkthrough](walkthroughs/1.md)

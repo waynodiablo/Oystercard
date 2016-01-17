@@ -34,4 +34,4 @@ In this challenge, you will implement two User Stories with minimal scaffolding.
 - :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
 
-### [Solution](solutions/21.md)
+### [Walkthrough](walkthroughs/21.md)
