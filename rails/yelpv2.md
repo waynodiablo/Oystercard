@@ -58,7 +58,7 @@ This does the following:
 Make sure you then follow the on-screen instructions to finish setting up devise, but change the root declaration in **routes.rb** to:
 
 ```ruby
-root to: "restaurants#index"
+root "restaurants#index"
 ```
 
 #### How do I log into this thing?
