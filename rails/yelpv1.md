@@ -24,7 +24,7 @@
     - [Creating a restaurant on the frontend](#creating-a-restaurant-on-the-frontend)
         - [Making forms in Rails – `form_for`, `create`, and `permit`](#making-forms-in-rails--formfor-create-and-permit)
     - [Adding a description to restaurants – migrations](#adding-a-description-to-restaurants--migrations)
-    - [Putting the 'RUD' in CRUD - reading, updating and destroying restaurants](#putting-the-rud-in-crud---updating-and-destroying-restaurants)
+    - [Putting the 'RUD' in CRUD - reading, updating and destroying restaurants](#putting-the-rud-in-crud---reading-updating-and-destroying-restaurants)
         - [Updating restaurants](#updating-restaurants)
         - [Deleting restaurants](#deleting-restaurants)
     - [Adding reviews to restaurants – associations](#adding-reviews-to-restaurants--associations)
