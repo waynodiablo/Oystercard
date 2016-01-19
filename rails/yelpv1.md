@@ -699,7 +699,7 @@ $ bin/rake db:migrate
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
 
-#### Putting the 'CUD' in CRUD - updating and destroying restaurants
+#### Putting the 'RUD' in CRUD - reading, updating and destroying restaurants
 
 You remember [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), right? That's all Yelp is, at its core. Just a fancy CRUD app.
 
