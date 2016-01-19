@@ -192,7 +192,7 @@ Go to the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-O
 
 Note that Devise will add the link to Facebook sign-up automatically and you don't need to add the sign out to the config/routes (since Device also does that), so you don't need to follow those steps on the wiki.
 
-Under Settings => Advanced in your Facebook Developer dashboard, you need to add http://localhost:3000 as a valid redirect URI.
+Under Settings => Advanced in your Facebook Developer dashboard, you need to add http://localhost:3000 as a valid redirect URI. Make sure the user logging in through facebook has privacy settings that permit their email to be viewed by 3rd parties.
 
 ##### Keeping secrets properly
 
