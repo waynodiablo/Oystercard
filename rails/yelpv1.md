@@ -1047,7 +1047,7 @@ Add `shoulda` to your Gemfile and run `bundle install`
 
 Create `spec/models/restaurant_spec.rb`:
 ```
-require 'spec_helper'
+require 'rails_helper'
 
 describe Restaurant, type: :model do
   it { is_expected.to have_many :reviews }
