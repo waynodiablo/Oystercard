@@ -314,7 +314,7 @@ module ReviewsHelper
 
     # if it does – i.e. if it's a valid number - then the rest of the
     # method is run
-    remainder = (5 - rating)
+    remainder = (5 - rating.round)
     "★" * rating.round + "☆" * remainder
   end
 end
