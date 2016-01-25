@@ -30,4 +30,4 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [Leveraging Ruby's Standard Library (extract from 'Ruby Best Practices')](http://archive.oreilly.com/pub/a/ruby/excerpts/ruby-best-practices/ruby-standard-library.html)
 - [Forwardable module documentation](http://ruby-doc.org/stdlib-2.0.0/libdoc/forwardable/rdoc/Forwardable.html)
 
-## [Solution](solutions/15_extracting_journey_log.md)
+## [Walkthrough](walkthroughs/15_extracting_journey_log.md)
