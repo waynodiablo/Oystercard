@@ -37,4 +37,4 @@ I want to know what zone a station is in
 - [OpenStruct documentation](http://ruby-doc.org/stdlib-2.0.0/libdoc/ostruct/rdoc/OpenStruct.html)
 - [Don't repeat yourself – O'Reilly](http://programmer.97things.oreilly.com/wiki/index.php/Don't_Repeat_Yourself)
 
-## [Solution](solutions/13_create_station_class.md)
+## [Walkthrough](walkthroughs/13_create_station_class.md)

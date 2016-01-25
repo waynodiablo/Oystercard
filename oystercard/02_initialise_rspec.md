@@ -25,4 +25,4 @@ Prepare your project for RSpec by creating a helper file and an empty test file.
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 
-## [Solution](solutions/02_initialise_rspec.md)
+## [Walkthrough](walkthroughs/02_initialise_rspec.md)

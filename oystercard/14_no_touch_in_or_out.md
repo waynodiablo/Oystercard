@@ -45,4 +45,4 @@ I need a penalty charge deducted if I fail to touch in or out
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 - [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
 
-## [Solution](solutions/14_no_touch_in_or_out.md)
+## [Walkthrough](walkthroughs/14_no_touch_in_or_out.md)
