@@ -82,4 +82,4 @@ In the next challenge, we'll figure out how to get this test passing (i.e. how t
 - :pill: [Doubles](https://github.com/makersacademy/course/blob/master/pills/doubles.md)
 - [RSpec Mocks (docs)](https://relishapp.com/rspec/rspec-mocks/docs)
 
-### [Solution](solutions/19.md)
+### [Walkthrough](walkthroughs/19.md)

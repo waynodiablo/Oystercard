@@ -38,4 +38,4 @@ In this challenge, you will use **private methods** to extract method responsibi
 - [Single Responsibility Principle (Thoughtbot)](https://robots.thoughtbot.com/back-to-basics-solid) <-- extracts classes rather than methods, but the principle still applies
 - [`private` methods in Ruby](http://culttt.com/2015/06/03/the-difference-between-public-protected-and-private-methods-in-ruby/)
 
-### [Solution](solutions/15.md)
+### [Walkthrough](walkthroughs/15.md)

@@ -22,4 +22,4 @@ In this challenge, you will further refactor your code, using a **constant**.
 - [Ruby Constants (RubyDoc)](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html)
 - [Testing with Magic Numbers](http://blog.silvabox.com/testing-with-magic-numbers/)
 
-### [Solution](solutions/16.md)
+### [Walkthrough](walkthroughs/16.md)

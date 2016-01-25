@@ -67,4 +67,4 @@ There are ways of DRYing the above up, as well: check the Resources for more inf
 - [Mocking a simple return value](https://www.relishapp.com/rspec/rspec-mocks/v/2-14/docs/method-stubs/allow-with-a-simple-return-value)
 - [RSpec Method Stubs (shorthand) (Github)](https://github.com/rspec/rspec-mocks#method-stubs)
 
-### [Solution](solutions/20.md)
+### [Walkthrough](walkthroughs/20.md)

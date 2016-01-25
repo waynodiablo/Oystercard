@@ -33,4 +33,4 @@ In this challenge, you will modify your `intialize` function to accept a `capaci
 
 - [Method arguments in Ruby](http://www.skorks.com/2009/08/method-arguments-in-ruby/)
 
-### [Solution](solutions/17.md)
+### [Walkthrough](walkthroughs/17.md)

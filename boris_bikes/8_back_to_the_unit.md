@@ -29,4 +29,4 @@ In this challenge, you will write a unit test for the missing method, and make i
 - [RSpec Basic Structure](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/basic-structure-describe-it)
 - [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax)
 
-### [Solution](solutions/8.md)
+### [Walkthrough](walkthroughs/8.md)

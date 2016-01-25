@@ -46,4 +46,4 @@ DockingStation | release_bike
 - [What's a Domain Model?](http://sjmog.github.io/posts/502_domain-modelling/)
 - [Feature Testing in IRB (video)](https://www.youtube.com/watch?v=rShBRLyEccY)
 
-### [Solution](solutions/3.md)
+### [Walkthrough](walkthroughs/3.md)

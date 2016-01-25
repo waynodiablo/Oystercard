@@ -37,4 +37,4 @@ In this challenge, you will pass instances of the `Bike` class into a `DockingSt
 - [RubyMonk: instance variables](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables)
 - [RSpec `respond_to` expectations documentation](http://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/respond-to-matcher)
 
-### [Solution](solutions/11.md)
+### [Walkthrough](walkthroughs/11.md)

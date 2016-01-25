@@ -51,4 +51,4 @@ In this challenge, you will run a Feature Test to test the above. It will fail, 
 - :pill: [RSpec `subject`](https://github.com/makersacademy/course/blob/master/pills/rspec_subject.md)
 
 
-### [Solution](solutions/9.md)
+### [Walkthrough](walkthroughs/9.md)

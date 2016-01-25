@@ -56,4 +56,4 @@ end
 - [Ruby Docs - Exception](http://ruby-doc.org/core-2.2.0/Exception.html)
 
 
-### [Solution](solutions/7.md)
+### [Walkthrough](walkthroughs/7.md)

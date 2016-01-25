@@ -47,4 +47,4 @@ In this challenge, you will learn how to test and raise exceptions.
 - [RSpec errors documentation (Github)](https://github.com/rspec/rspec-expectations#expecting-errors)
 - [Relish errors documentation](http://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/raise-error-matcher)
 
-### [Solution](solutions/12.md)
+### [Walkthrough](walkthroughs/12.md)

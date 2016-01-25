@@ -32,4 +32,4 @@ In this challenge, you will use a **complex attribute** with your instance varia
 
 - [Ruby `initialize` method](http://www.rubyist.net/~slagell/ruby/objinitialization.html)
 
-### [Solution](solutions/14.md)
+### [Walkthrough](walkthroughs/14.md)
