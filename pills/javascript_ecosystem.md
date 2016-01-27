@@ -36,7 +36,7 @@ You should learn how to write good, clean, test-driven code, leveraging the best
 3. Use build and automation tools where possible  
 4. Use linters  
 5. Pick a well respected style guide and stick to it  
-6. Pick a framework or libary that interests you but don't get too attached to it  
+6. Pick a framework or library that interests you but don't get too attached to it  
 7. Explore, widely
 
 ## Resources
