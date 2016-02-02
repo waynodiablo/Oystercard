@@ -22,7 +22,7 @@ To complete this challenge you will need to have Firefox installed.
 ### To complete this challenge, you will need to:
 
 - [ ] List `capybara` and `selenium-webdriver` in a Gemfile.
-- [ ] Open up *PRY* and require both `capybara` and `selenium-webdriver`.
+- [ ] Open up *PRY* and require both `capybara/dsl` and `selenium-webdriver`.
 - [ ] Within the REPL, `$ include Capybara::DSL`.
 - [ ] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
 - [ ] Use Capybara's `visit` command to take the automated browser to [http://capybaraworkout.herokuapp.com/](http://capybaraworkout.herokuapp.com/).
