@@ -242,7 +242,7 @@ Where to go next
 
 * This should get you started writing tests. To learn more, see the documentation: [Table of Contents](http://angular.github.io/protractor/#/toc).
 * Discuss the different approaches taken by Capybara and Protractor (assuming you are [using Capybara properly](http://www.elabs.se/blog/51-simple-tricks-to-clean-up-your-capybara-tests)) - are they mutually exclusive? Do you think one works better than the other?
-* Hmm, these test seem awful coupled to the GitHub API. What if you didn't want to hit the API every time you run your tests? What if the results from the API change? What if you only had arms the same length as a T-Rex (typing would be hard)?
+* Hmm, these test seem awfully coupled to the GitHub API. What if you didn't want to hit the API every time you run your tests? What if the results from the API change? What if you only had arms the same length as a T-Rex (typing would be hard)?
 
 **warning** The default angular end-to-end mocking library `ngMockE2E` is usually difficult to set up. We recommend trying [Protractor http mock](https://github.com/atecarlos/protractor-http-mock) instead.
 * BDD ALL THE THINGS with your newfound Protractor skillz. Aww yeah.
