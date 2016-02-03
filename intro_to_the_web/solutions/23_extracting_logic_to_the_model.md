@@ -1,4 +1,4 @@
-# Solution – Extracting Logic to the Model
+# Walkthrough – Extracting Logic to the Model
 
 [Back to the Challenge](../23_extracting_logic_to_the_model.md)
 
@@ -60,11 +60,11 @@ This fails: great. Let's add a simple class file to solve our failing test:
 
 class Player
   attr_reader :name
-  
+
   def initialize(name)
     @name = name
   end
-end 
+end
 ```
 
 Now we need to look at our controller file `app.rb` and replace cases where we are using the `session` with cases where we could use a `Player` instance.
@@ -87,13 +87,13 @@ post '/names' do
   $player_2 = Player.new(params[:player_2_name])
   redirect '/play'
 end
- 
+
 get '/play' do
   @player_1_name = $player_1.name
   @player_2_name = $player_2.name
   erb :play
 end
- 
+
 get '/attack' do
   @player_1_name = $player_1.name
   @player_2_name = $player_2.name

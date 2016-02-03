@@ -1,4 +1,4 @@
-# Solution – Sinatra: Views
+# Walkthrough – Sinatra: Views
 
 [Back to the Challenge](../09_sinatra_views.md)
 

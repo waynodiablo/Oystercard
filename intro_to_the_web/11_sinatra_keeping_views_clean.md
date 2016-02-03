@@ -29,4 +29,4 @@ In this challenge, you will move the name-randomising logic from the view to the
 - [Sinatra Views](http://www.sinatrarb.com/intro.html#Views%20/%20Templates)
 - [Separation of Concerns (Wikipedia)](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-### [Solution](solutions/11_sinatra_keeping_views_clean_solution.md)
+### [Walkthrough](solutions/11_sinatra_keeping_views_clean_solution.md)

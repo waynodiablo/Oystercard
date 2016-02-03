@@ -1,4 +1,4 @@
-# Solution – Implementing Hit Points
+# Walkthrough – Implementing Hit Points
 
 [Back to the Challenge](../24_implementing_hit_points.md)
 

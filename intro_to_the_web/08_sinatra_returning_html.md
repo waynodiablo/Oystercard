@@ -27,4 +27,4 @@ By the end of this challenge, you should see (in your browser) something like th
 - [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 - [CSS Borders (Mozilla Developer Network)](https://developer.mozilla.org/en/docs/Web/CSS/border)
 
-### [Solution](solutions/08_sinatra_returning_html_solution.md)
+### [Walkthrough](solutions/08_sinatra_returning_html_solution.md)

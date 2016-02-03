@@ -1,4 +1,4 @@
-# Solution – POST/`redirect`/GET pattern
+# Walkthrough – POST/`redirect`/GET pattern
 
 [Back to the Challenge](../19_post_redirect_get_pattern.md)
 

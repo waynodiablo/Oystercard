@@ -31,4 +31,4 @@ In this challenge, we will implement a turn switcher on `Game`. This challenge c
 - [Skinny Controllers, Skinny Models (Thoughtbot)](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
-### [Solution](solutions/27_switching_turns.md)
+### [Walkthrough](solutions/27_switching_turns.md)

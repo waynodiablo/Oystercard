@@ -27,4 +27,4 @@ In this challenge, you will implement a feature that meets this User Story. You 
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 - [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-### [Solution](solutions/24_implementing_hit_points.md)
+### [Walkthrough](solutions/24_implementing_hit_points.md)

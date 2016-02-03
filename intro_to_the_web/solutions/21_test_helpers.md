@@ -1,4 +1,4 @@
-# Solution – Test Helpers
+# Walkthrough – Test Helpers
 
 [Back to the Challenge](../21_test_helpers.md)
 

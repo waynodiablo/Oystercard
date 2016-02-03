@@ -1,4 +1,4 @@
-# Solution – Sinatra: using Forms
+# Walkthrough – Sinatra: using Forms
 
 [Back to the Challenge](../03_sinatra_defining_a_route.md)
 

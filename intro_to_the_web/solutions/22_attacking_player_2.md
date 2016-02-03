@@ -1,4 +1,4 @@
-# Solution – Entering Players
+# Walkthrough – Entering Players
 
 [Back to the Challenge](../22_attacking_player_2.md)
 

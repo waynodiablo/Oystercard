@@ -34,4 +34,4 @@ In this challenge, you will add a **form** to your view and observe how modifyin
 - :pill: [`params`](../pills/params.md)
 - [Query String (Wikipedia)](https://en.wikipedia.org/wiki/Query_string)
 
-### [Solution](solutions/13_sinatra_using_forms_solution.md)
+### [Walkthrough](solutions/13_sinatra_using_forms_solution.md)

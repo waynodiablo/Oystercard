@@ -53,4 +53,4 @@ This challenge introduces the use of a Global Variable (`$variable`). In Ruby, t
 
 - [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-### [Solution](solutions/23_extracting_logic_to_the_model.md)
+### [Walkthrough](solutions/23_extracting_logic_to_the_model.md)

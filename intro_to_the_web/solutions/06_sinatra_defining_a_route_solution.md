@@ -1,4 +1,4 @@
-# Solution – Sinatra: Defining a route
+# Walkthrough – Sinatra: Defining a route
 
 [Back to the Challenge](../06_sinatra_defining_a_route.md)
 

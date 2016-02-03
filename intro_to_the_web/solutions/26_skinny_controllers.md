@@ -1,4 +1,4 @@
-# Solution – Skinny Controllers
+# Walkthrough – Skinny Controllers
 
 [Back to the Challenge](../26_skinny_controllers.md)
 

@@ -1,4 +1,4 @@
-# Solution – Getting Started with Battle
+# Walkthrough – Getting Started with Battle
 
 [Back to the Challenge](../17_getting_started_with_battle.md)
 

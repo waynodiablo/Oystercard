@@ -22,4 +22,4 @@ In this challenge, you will use the **Chrome DevTools** to observe the flow of r
 - [Chrome DevTools](https://developer.chrome.com/devtools)
 - [Chrome DevTools: Network](https://developer.chrome.com/devtools/docs/network)
 
-### [Solution](solutions/15_sinatra_using_the_chrome_devtools.md)
+### [Walkthrough](solutions/15_sinatra_using_the_chrome_devtools.md)

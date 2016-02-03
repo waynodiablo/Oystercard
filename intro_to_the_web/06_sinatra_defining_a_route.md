@@ -34,4 +34,4 @@ Here's what you should end up with:
 
 * [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 
-### [Solution](solutions/06_sinatra_defining_a_route_solution.md)
+### [Walkthrough](solutions/06_sinatra_defining_a_route_solution.md)

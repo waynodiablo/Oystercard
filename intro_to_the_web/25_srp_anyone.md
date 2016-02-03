@@ -21,4 +21,4 @@ In this challenge, you will extract a model capable of performing attacks from t
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 - [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-### [Solution](solutions/25_srp_anyone.md)
+### [Walkthrough](solutions/25_srp_anyone.md)

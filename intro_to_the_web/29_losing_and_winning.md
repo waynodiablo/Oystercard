@@ -28,4 +28,4 @@ In this challenge, you will implement losing.
 - [Skinny Controllers, Skinny Models (Thoughtbot)](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
-### [Solution](solutions/29_losing_and_winning.md)
+### [Walkthrough](solutions/29_losing_and_winning.md)

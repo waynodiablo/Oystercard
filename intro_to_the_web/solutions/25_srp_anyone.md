@@ -1,4 +1,4 @@
-# Solution – Single Responsibility Principle, anyone?
+# Walkthrough – Single Responsibility Principle, anyone?
 
 [Back to the Challenge](../25_srp_anyone.md)
 

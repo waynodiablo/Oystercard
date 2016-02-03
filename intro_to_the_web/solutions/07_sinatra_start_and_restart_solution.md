@@ -1,4 +1,4 @@
-# Solution – Sinatra: Start and restart
+# Walkthrough – Sinatra: Start and restart
 
 [Back to the Challenge](../07_sinatra_start_and_restart.md)
 
