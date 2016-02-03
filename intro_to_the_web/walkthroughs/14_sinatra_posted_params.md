@@ -1,4 +1,4 @@
-# Solution – Sinatra: `POST`ed `params`
+# Walkthrough – Sinatra: `POST`ed `params`
 
 [Back to the Challenge](../11_sinatra_posted_params.md)
 

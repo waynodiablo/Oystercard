@@ -1,4 +1,4 @@
-# Solution – Viewing hit points
+# Walkthrough – Viewing hit points
 
 [Back to the Challenge](../20_viewing_hit_points.md)
 

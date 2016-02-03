@@ -1,4 +1,4 @@
-# Solution - Sinatra: Getting Started
+# Walkthrough - Sinatra: Getting Started
 
 [Back to the Challenge](../05_sinatra_getting_started.md)
 

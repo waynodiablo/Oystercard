@@ -1,4 +1,4 @@
-# Solution - The Hypertext Transfer Protocol
+# Walkthrough - The Hypertext Transfer Protocol
 
 [Back to the Challenge](../02_http.md)
 

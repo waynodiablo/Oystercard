@@ -31,4 +31,4 @@ In this challenge, we will DRY up our tests using a **helper**.
 
 - [Helper class (Wikipedia)](https://en.wikipedia.org/wiki/Helper_class)
 
-### [Solution](solutions/21_test_helpers.md)
+### [Walkthrough](walkthroughs/21_test_helpers.md)

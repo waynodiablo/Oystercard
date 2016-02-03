@@ -1,4 +1,4 @@
-# Solution - HTTP II: GET / POST Requests
+# Walkthrough - HTTP II: GET / POST Requests
 
 [Back to the Challenge](../04_http_verbs.md)
 

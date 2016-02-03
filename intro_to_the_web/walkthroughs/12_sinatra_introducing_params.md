@@ -1,4 +1,4 @@
-# Solution – Sinatra: Introducing `params`
+# Walkthrough – Sinatra: Introducing `params`
 
 [Back to the Challenge](../12_sinatra_introducing_params.md)
 

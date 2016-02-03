@@ -1,4 +1,4 @@
-# Solution - The Web: An Introduction
+# Walkthrough - The Web: An Introduction
 
 [Back to the Challenge](../01_theweb.md)
 

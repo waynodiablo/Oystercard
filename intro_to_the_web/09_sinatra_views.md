@@ -28,4 +28,4 @@ In this challenge, you will use **views** to separate the Ruby and HTML code. Th
 - [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 - [Sinatra Views](http://www.sinatrarb.com/intro.html#Views%20/%20Templates)
 
-### [Solution](solutions/09_sinatra_views_solution.md)
+### [Walkthrough](walkthroughs/09_sinatra_views.md)

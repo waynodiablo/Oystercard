@@ -36,4 +36,4 @@ In this challenge, you will implement two-player functionality.
 - [Skinny Controllers, Skinny Models (Thoughtbot)](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
-### [Solution](solutions/28_multiplayer.md)
+### [Walkthrough](walkthroughs/28_multiplayer.md)

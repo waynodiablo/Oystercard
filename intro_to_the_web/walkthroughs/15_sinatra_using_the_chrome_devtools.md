@@ -1,4 +1,4 @@
-# Solution – Sinatra: Using the Chrome DevTools
+# Walkthrough – Sinatra: Using the Chrome DevTools
 
 [Back to the Challenge](../15_sinatra_using_the_chrome_devtools.md)
 

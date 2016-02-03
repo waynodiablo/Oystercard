@@ -1,4 +1,4 @@
-# Solution – Sinatra: Returning HTML
+# Walkthrough – Sinatra: Returning HTML
 
 [Back to the Challenge](../08_sinatra_returning_html.md)
 

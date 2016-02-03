@@ -1,4 +1,4 @@
-# Solution – Switching Turns
+# Walkthrough – Switching Turns
 
 [Back to the Challenge](../27_switching_turns.md)
 

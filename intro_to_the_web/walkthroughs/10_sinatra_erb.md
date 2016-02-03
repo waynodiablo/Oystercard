@@ -1,4 +1,4 @@
-# Solution – Sinatra: `erb`
+# Walkthrough – Sinatra: `erb`
 
 [Back to the Challenge](../10_sinatra_erb.md)
 

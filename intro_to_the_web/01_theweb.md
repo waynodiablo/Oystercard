@@ -29,4 +29,4 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 - httpie manual: type `man http` from the command line
 - [Client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
 
-### [Solution](solutions/01_theweb_solution.md)
+### [Walkthrough](walkthroughs/01_theweb.md)

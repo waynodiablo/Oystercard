@@ -1,4 +1,4 @@
-# Solution - HTTP III: Parameters
+# Walkthrough - HTTP III: Parameters
 
 [Back to the Challenge](../03_http_parameters.md)
 

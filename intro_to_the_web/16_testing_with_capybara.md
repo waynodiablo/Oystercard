@@ -34,4 +34,4 @@ To complete this challenge you will need to have Firefox installed.
 - [Selenium](http://www.seleniumhq.org/)
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
-### [Solution](solutions/16_testing_with_capybara.md)
+### [Walkthrough](walkthroughs/16_testing_with_capybara.md)

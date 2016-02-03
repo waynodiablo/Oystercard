@@ -1,4 +1,4 @@
-# Solution – Entering Players
+# Walkthrough – Entering Players
 
 [Back to the Challenge](../18_entering_players.md)
 

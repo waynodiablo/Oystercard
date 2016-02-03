@@ -26,4 +26,4 @@ In this challenge, you will refactor your controller to make it more 'skinny'. Y
 - [Skinny Controllers, Skinny Models (Thoughtbot)](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
-### [Solution](solutions/26_skinny_controllers.md)
+### [Walkthrough](walkthroughs/26_skinny_controllers.md)

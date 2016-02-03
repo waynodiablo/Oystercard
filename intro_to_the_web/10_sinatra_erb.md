@@ -51,4 +51,4 @@ erb "Hi there, Visitor <% 2 + 2 %>!"
 - [ERB (Ruby Docs)](http://ruby-doc.org/stdlib-2.2.3/libdoc/erb/rdoc/ERB.html)
 - [An introduction to ERB Templating](http://www.stuartellis.eu/articles/erb/)
 
-### [Solution](solutions/10_sinatra_erb_solution.md)
+### [Walkthrough](walkthroughs/10_sinatra_erb.md)

@@ -1,4 +1,4 @@
-# Solution – Sinatra: Keeping views clean
+# Walkthrough – Sinatra: Keeping views clean
 
 [Back to the Challenge](../11_sinatra_keepig_views_clean.md)
 

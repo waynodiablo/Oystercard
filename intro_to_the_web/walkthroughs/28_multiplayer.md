@@ -1,4 +1,4 @@
-# Solution – Multiplayer
+# Walkthrough – Multiplayer
 
 [Back to the Challenge](../28_multiplayer.md)
 

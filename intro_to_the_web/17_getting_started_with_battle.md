@@ -106,4 +106,4 @@ I want a sexy user interface
 - [`rspec-sinatra` gem](https://github.com/tansaku/rspec-sinatra)
 - [Sinatra Modular Style](http://www.sinatrarb.com/intro.html#Sinatra::Base%20-%20Middleware,%20Libraries,%20and%20Modular%20Apps)
 
-### [Solution](solutions/17_getting_started_with_battle.md)
+### [Walkthrough](walkthroughs/17_getting_started_with_battle.md)

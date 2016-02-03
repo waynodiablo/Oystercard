@@ -1,4 +1,4 @@
-# Solution – Losing and Winning
+# Walkthrough – Losing and Winning
 
 [Back to the Challenge](../29_losing_and_winning.md)
 
