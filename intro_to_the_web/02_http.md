@@ -24,4 +24,4 @@ In this challenge you will look at the important elements of an HTTP request and
 - [Understanding HTTP
   Basics](http://learn.onemonth.com/understanding-http-basics)
 
-### [Walkthrough](solutions/02_http_solution.md)
+### [Walkthrough](walkthroughs/02_http.md)

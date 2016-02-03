@@ -27,4 +27,4 @@ In this challenge, you will implement a simple User Story driven by Capybara. Th
 
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
-### [Walkthrough](solutions/20_viewing_hit_points.md)
+### [Walkthrough](walkthroughs/20_viewing_hit_points.md)

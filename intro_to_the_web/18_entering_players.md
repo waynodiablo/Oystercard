@@ -32,4 +32,4 @@ In this challenge, you will allow players to enter their names and see them on-s
 - [My First HTML form (MDN)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
 - [How are parameters sent in an HTTP POST request? (Stack Overflow)](http://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request)
 
-### [Walkthrough](solutions/18_entering_players.md)
+### [Walkthrough](walkthroughs/18_entering_players.md)

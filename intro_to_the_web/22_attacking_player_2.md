@@ -25,4 +25,4 @@ In this challenge, you will implement this user story with little support. You s
 
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
-### [Walkthrough](solutions/22_attacking_player_2.md)
+### [Walkthrough](walkthroughs/22_attacking_player_2.md)
