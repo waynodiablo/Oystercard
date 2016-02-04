@@ -8,7 +8,7 @@ The project is called 'Battle'. Here is a mockup of how it might look towards th
 
 ![Battle Final Mockup](./images/battle_final_mockup.png)
 
-> We encourage you to make this project your own. Although the solutions will prescribe a 'best path', you can name things and lay out your views however fits your needs. By using the solutions as 'analogies' to your own project, you will learn to interpret guidance and apply it in a different context.
+> We encourage you to make this project your own. Although the walkthroughs will prescribe a 'best path', you can name things and lay out your views however fits your needs. By using the walkthroughs as 'analogies' to your own project, you will learn to interpret guidance and apply it in a different context.
 
 In this challenge, you will set up a basic project structure with Sinatra, RSpec, and Capybara ready to go.
 

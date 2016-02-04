@@ -2,7 +2,7 @@
 
 [Back to the Challenge](../28_multiplayer.md)
 
-Let's implement our User Stories in turn. In this solution, I'll link you to my git commits for implementing each story. You should be able to interpret my intentions from the commit itself.
+Let's implement our User Stories in turn. In this walkthrough, I'll link you to my git commits for implementing each story. You should be able to interpret my intentions from the commit itself.
 
 Our first User Story:
 
