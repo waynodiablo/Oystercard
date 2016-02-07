@@ -31,5 +31,6 @@ In this challenge, you will allow players to enter their names and see them on-s
 - :pill: [`params`](../pills/params.md)
 - [My First HTML form (MDN)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
 - [How are parameters sent in an HTTP POST request? (Stack Overflow)](http://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request)
+- [Relishapp notes on feature specs with capybara] (https://www.relishapp.com/rspec/rspec-rails/docs/feature-specs/feature-spec) 
 
 ### [Walkthrough](walkthroughs/18_entering_players.md)
