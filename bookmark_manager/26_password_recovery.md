@@ -24,4 +24,4 @@ to be able to reset it to a new one.
 
 * [Timecop](https://github.com/travisjeffery/timecop)
 
-## [Solution](solutions/26.md)
+## [Walkthrough](walkthroughs/26.md)

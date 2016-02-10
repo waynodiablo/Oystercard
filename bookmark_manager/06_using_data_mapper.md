@@ -32,4 +32,4 @@ You should now see how it's possible to manipulate database data using SQL. Howe
 * [DataMapper Overview, Setup & Configuration](http://www.rubydoc.info/github/datamapper/dm-core/DataMapper)
 * [Finish DataMapper Model Setup ](http://www.rubydoc.info/github/datamapper/dm-core/DataMapper/Model#finalize-instance_method)
 
-## [Solution](solutions/06.md)
+## [Walkthrough](walkthroughs/06.md)

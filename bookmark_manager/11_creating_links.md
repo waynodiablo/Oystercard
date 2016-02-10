@@ -25,4 +25,4 @@ So let's create a new feature test to drive the implementation of this functiona
 * [How to structure an HTML form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
 * [Representational State Transfer(REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
-## [Solution](solutions/11.md)
+## [Walkthrough](walkthroughs/11.md)

@@ -24,4 +24,4 @@ I would like to filter links by tag
 * [Database relations - Pill](https://github.com/makersacademy/course/blob/master/pills/db_relationships.md)
 * [DataMapper collection documentation](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection)
 
-## [Solution](solutions/16.md)
+## [Walkthrough](walkthroughs/16.md)

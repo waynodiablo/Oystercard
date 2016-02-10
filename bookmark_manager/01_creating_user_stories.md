@@ -37,4 +37,4 @@ I want to purchase a new alarm clock
 * [UK Government advice on creating user stories](https://www.gov.uk/service-manual/agile/writing-user-stories.html)
 * [Agile Modeling tips on User stories](http://www.agilemodeling.com/artifacts/userStory.htm)
 
-## [Solution](solutions/01.md)
+## [Walkthrough](walkthroughs/01.md)

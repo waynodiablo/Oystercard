@@ -30,4 +30,4 @@ In this challenge you will create functionality for validating the user supplied
 * [DM Validations](https://github.com/datamapper/dm-validations)
 * [PostgreSQL constraints](http://www.postgresql.org/docs/9.4/static/ddl-constraints.html)
 
-## [Solution](solutions/21.md)
+## [Walkthrough](walkthroughs/21.md)

@@ -21,4 +21,4 @@ In this challenge you will use the DatabaseCleaner gem to ensure that the databa
 
 * [DatabaseCleaner gem - GitHub](https://github.com/DatabaseCleaner/database_cleaner)
 
-## [Solution](solutions/12.md)
+## [Walkthrough](walkthroughs/12.md)

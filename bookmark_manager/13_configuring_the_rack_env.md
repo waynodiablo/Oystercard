@@ -25,4 +25,4 @@ In this challenge you will set up your **Rack environment** variables to ensure 
 
 * [Sinatra Environments](https://blog.rainforestqa.com/2014-05-30-what-are-environments-for/)
 
-## [Solution](solutions/13.md)
+## [Walkthrough](walkthroughs/13.md)

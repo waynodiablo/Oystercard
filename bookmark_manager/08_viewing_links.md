@@ -34,4 +34,4 @@ In the feature test we will use some DataMapper syntax to ensure that at least o
 * [Capybara Documentation](https://github.com/jnicklas/capybara)
 * [Capybara Cheat Sheet](http://www.cheatography.com/ddovii/cheat-sheets/capybara-cheat-sheet/)
 
-## [Solution](solutions/08.md)
+## [Walkthrough](walkthroughs/08.md)

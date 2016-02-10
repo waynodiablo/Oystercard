@@ -36,4 +36,4 @@ In this challenge you will create the functionality for signing up for a user ac
 * [Lazy initialization](http://blog.jayfields.com/2007/07/ruby-lazily-initialized-attributes.html)
 * [Memoization](http://gavinmiller.io/2013/basics-of-ruby-memoization/)
 
-## [Solution](solutions/18.md)
+## [Walkthrough](walkthroughs/18.md)

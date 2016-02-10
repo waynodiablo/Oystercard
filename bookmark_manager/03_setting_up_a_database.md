@@ -24,6 +24,6 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 * [Creating a database - Official Documentation](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html)
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
-## [Solution - Mac OS](solutions/03_mac.md)
-## [Solution - Linux](solutions/03_linux.md)
-## [Solution - Nitrous](solutions/03_nitrous.md)
+## [Walkthrough - Mac OS](walkthroughs/03_mac.md)
+## [Walkthrough - Linux](walkthroughs/03_linux.md)
+## [Walkthrough - Nitrous](walkthroughs/03_nitrous.md)

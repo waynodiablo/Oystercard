@@ -22,4 +22,4 @@ You should now have a students table (also known as a 'relation').  However it c
 * [SQL in One Page](http://www.cheat-sheets.org/sites/sql.su/)
 * [Relational Database: Terminology](https://en.wikipedia.org/wiki/Relational_database#Terminology)
 
-## [Solution](solutions/05.md)
+## [Walkthrough](walkthroughs/05.md)
