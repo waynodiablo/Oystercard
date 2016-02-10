@@ -19,7 +19,7 @@ There are many ways for a final project to stand out. Usually a great final proj
 - **The product offers a great user experience**
     - Fortunately, this communicates itself.
         - Makers visitor: https://www.youtube.com/watch?v=v1GVvMg1-Js
-    </br>
+</br>
 - **The story around the building of the project**
     - How will you communicate what you learned and how you evolved as a team?
         - Example, admire the README of [hipspot](https://github.com/ejbyne/hipspot).
