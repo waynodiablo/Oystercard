@@ -28,4 +28,4 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 
 * [DataMapper Getting Started](http://datamapper.org/getting-started.html)
 
-## [Solution](solutions/09.md)
+## [Walkthrough](walkthroughs/09.md)

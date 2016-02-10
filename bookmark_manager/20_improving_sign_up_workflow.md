@@ -29,4 +29,4 @@ a password confirmation mismatch
 * [Web Form Usability](http://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/)
 * [Web Forms](http://thoughtfulweb.com/thoughts/on/web-forms-a-great-big-user-experience-brick-wall)
 
-## [Solution](solutions/20.md)
+## [Walkthrough](walkthroughs/20.md)

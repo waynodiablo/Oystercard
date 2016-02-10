@@ -25,4 +25,4 @@ Now that you understand about the different database environments and have datab
 * [Configuring DataMapper for Heroku](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel)
 * [Adding Postgres support to Heroku instance](https://devcenter.heroku.com/articles/heroku-postgresql)
 
-## [Solution](solutions/14.md)
+## [Walkthrough](walkthroughs/14.md)

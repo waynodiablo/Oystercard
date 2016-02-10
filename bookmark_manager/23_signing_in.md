@@ -29,4 +29,4 @@ In this challenge you will develop sign in functionality.
 * [Representational State Transfer(REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
 
-## [Solution](solutions/23.md)
+## [Walkthrough](walkthroughs/23.md)

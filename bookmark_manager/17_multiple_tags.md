@@ -32,4 +32,4 @@ You've done all this before so let's also do a bit of configuration management a
 * [Rake on Wikipedia](https://en.wikipedia.org/wiki/Rake_(software))
 * [Rake on Github](https://github.com/ruby/rake)
 
-## [Solution](solutions/17.md)
+## [Walkthrough](walkthroughs/17.md)

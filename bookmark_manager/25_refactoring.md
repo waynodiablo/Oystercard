@@ -22,4 +22,4 @@ In this challenge you will extract routing logic into a series of controllers an
 * [Sinatra Partial](https://github.com/yb66/Sinatra-Partial)
 * [Sinatra MVC](http://stackoverflow.com/questions/5015471/using-sinatra-for-larger-projects-via-multiple-files/5030173#5030173)
 
-## [Solution](solutions/25.md)
+## [Walkthrough](walkthroughs/25.md)

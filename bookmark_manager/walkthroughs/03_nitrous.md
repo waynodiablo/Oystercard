@@ -1,4 +1,4 @@
-# Solution - Setting up a Database
+# Walkthrough - Setting up a Database
 
 [Back to Challenge](../03_setting_up_a_database.md)
 

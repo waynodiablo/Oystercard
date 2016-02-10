@@ -30,4 +30,4 @@ In this challenge you will add a validation that checks that email addresses are
 * [DM Validations](https://github.com/datamapper/dm-validations)
 * [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 
-## [Solution](solutions/22.md)
+## [Walkthrough](walkthroughs/22.md)

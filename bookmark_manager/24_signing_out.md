@@ -28,4 +28,4 @@ in your spec helper
 * [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 
 
-## [Solution](solutions/24.md)
+## [Walkthrough](walkthroughs/24.md)
