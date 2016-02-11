@@ -10,9 +10,9 @@ Let's make a new file, `web_helpers.rb`. We can use this file to store actions w
     ├── spec
     │   ├── features
     │   │   ├── enter_names_spec.rb
-    │   │   └── hit_points_spec.rb
-    │   ├── spec_helper.rb
-    │   └── web_helpers.rb
+    │   │   ├── hit_points_spec.rb
+    │   │   └── web_helpers.rb
+    │   └── spec_helper.rb
     ├── .rspec
     ├── Gemfile
     ├── Gemfile.lock
@@ -28,7 +28,7 @@ Let's `require` this file in our `spec_helper.rb` (because then we can access me
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require 'web_helpers'
+require 'features/web_helpers'
 ```
 
 Which lines of code can we extract from our tests? These ones:
