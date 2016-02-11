@@ -27,3 +27,5 @@ end
 - [ ] Refactor to remove any magic numbers and replace with a constant
 
 Once all your tests are green, consider a refactor - currently there is a magic number `1` in your touch_in method - this is a [code smell](https://en.wikipedia.org/wiki/Code_smell), as a subsequent developer looking at the code will have to work out what that number means. If the rules change in future, and you want to change the minimum balance to 5, you would have to look in a seemingly unrelated method. Refactor this by using a constant to store the minimum balance.
+
+[Next challenge](../10_charge_on_touch_in.md)

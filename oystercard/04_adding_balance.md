@@ -6,7 +6,7 @@ By now you have an empty project with a Gemfile and RSpec infrastructure, so you
 
 A card that cannot carry a balance is just a piece of plastic (or an empty file, in our case). Let's enable our card to have a balance as the very first step.
 
-Write an RSpec test for the Oystercard class that will test that a freshly initialised card has a `balance` of 0 by default, see it fail, then write an implementation (Oystercard class code) that will make the test pass.
+Write an RSpec test for the Oystercard class that will test that a freshly initialized card has a `balance` of 0 by default, see it fail, then write an implementation (Oystercard class code) that will make the test pass.
 
 
 ```

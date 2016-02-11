@@ -2,12 +2,12 @@
 
 [Back to the challenge map](README.md)
 
-The very first step of starting a Ruby project is to initialise it with a Gemfile. Gemfiles act as a reference for all the libraries (‘gems’) we’re going to use in this project. We will use Bundler, a dependency manager, to work with the gems listed in the Gemfile. Finally, we'll use Ruby Version Manager (RVM) to install and manage different versions of Ruby.
+The very first step of starting a Ruby project is to initialize it with a Gemfile. Gemfiles act as a reference for all the libraries (‘gems’) we’re going to use in this project. We will use Bundler, a dependency manager, to work with the gems listed in the Gemfile. Finally, we'll use Ruby Version Manager (RVM) to install and manage different versions of Ruby.
 
 In this issue you will create a valid Gemfile for this project.
 
 ## Learning Objectives covered:
-- Installing and upgrading gems without using Bundler
+- Installing and upgrading gems using Bundler
 - Using RVM to check what ruby versions you have installed and in use
 - Using Gemfile to list the gems that will be used in the project
 

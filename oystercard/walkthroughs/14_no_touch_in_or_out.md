@@ -65,3 +65,5 @@ describe Journey do
   end
 end
 ```
+
+[Next challenge](../15_extracting_journey_log.md)

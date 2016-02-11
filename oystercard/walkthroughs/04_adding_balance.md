@@ -110,3 +110,5 @@ end
 ```
 
 Our test is now green again and our code is clean.
+
+[Next challenge](../05_top_up.md)

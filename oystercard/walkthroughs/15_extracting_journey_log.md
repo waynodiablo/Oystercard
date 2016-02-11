@@ -76,3 +76,5 @@ Discuss with your partner what is happening here - why is this helpful?
 - [ ] remove redundant code from OysterCard class
 
 Your Oystercard should now only send messages to the JourneyLog. Although it does pass instances of station around, station is never aware of OysterCards existence. OysterCard should never communicate directly with Journey.
+
+[Next challenge](../16_fare_for_zones.md)

@@ -62,7 +62,7 @@ I need to have the correct fare calculated
 ## Set up the project:
 
   1. [Create a Gemfile](01_create_gemfile.md)
-  2. [Create RSpec conventional files](02_initialise_rspec.md)
+  2. [Create RSpec conventional files](02_initialize_rspec.md)
   3. [Review debugging basics](03_debugging.md)
 
 ## Create a basic Oyster card:
