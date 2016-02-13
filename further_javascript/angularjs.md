@@ -166,7 +166,7 @@ Now let's install our node packages:
 ```shell
 npm install karma --save-dev
 npm install karma-jasmine karma-chrome-launcher karma-phantomjs-launcher --save-dev
-npm install jasmine-core phantomjs --save-dev
+npm install jasmine-core phantomjs phantomjs-prebuilt --save-dev
 npm install -g karma-cli
 ```
 
