@@ -104,3 +104,6 @@ end
 Now, `@game` is already defined for us in every route; and in `/names`, it is simply overridden by `@game = Game.create(player_1, player_2)`.
 
 The End.
+
+Now let's move on to some extension exercises:
+[Forward to the Challenge Map](../00_challenge_map.md)

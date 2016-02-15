@@ -48,6 +48,7 @@ At a high level, your introduction involves:
 27. [Switching turns](27_switching_turns.md)
 28. [Multiplayer](28_multiplayer.md)
 29. [Losing and winning](29_losing_and_winning.md)
+30. [Killing the Global Variable](30_killing_the_global_variable.md)
 
 ### Post-challenges
 
