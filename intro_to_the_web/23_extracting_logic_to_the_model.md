@@ -34,7 +34,7 @@ If the Controller action is complex - for example, it stores complex data (i.e. 
 
 ### Important note
 
-This challenge introduces the use of a Global Variable (`$variable`). In Ruby, the sight of a global variable is a major code smell :poo:. We are using a global variable because we have not yet introduced databases. **If you ever use a global variable in a hiring tech test, you will instantly fail. Don't do it.**.
+This challenge introduces the use of a Global Variable (`$variable`). In Ruby, the sight of a global variable is a major code smell :poo:. We are using a global variable here in lieu of a better approach that we'll introduce in the final challenge. **If you ever use a global variable in a hiring tech test, you will instantly fail. Don't do it.**
 
 ### Learning Objectives covered
 - Refactor code to the Model layer
