@@ -31,4 +31,4 @@ Once you're done, try to add **event handlers** to the input elements identified
 - [learn.jquery.com](https://learn.jquery.com/)
 - [jQuery documentation](http://api.jquery.com/)
 
-### [Solution](solutions/7.md)
+### [Walkthrough](walkthroughs/7.md)

@@ -12,4 +12,4 @@
 
 ### Resources
 
-### [Solution](solutions/9.md)
+### [Walkthrough](walkthroughs/9.md)

@@ -1,4 +1,4 @@
-# Solution - Airport Challenge in JavaScript
+# Walkthrough - Airport Challenge in JavaScript
 
 [Back to the Challenge](../4_airport_challange_js.md)
 

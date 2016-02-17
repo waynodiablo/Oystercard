@@ -17,4 +17,4 @@ In this challenge, you will build the skeleton of a UI, so that you can then sta
 
 ### Resources
 
-### [Solution](solutions/6.md)
+### [Walkthrough](walkthroughs/6.md)

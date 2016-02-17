@@ -25,4 +25,4 @@ In this challenge, you will install Jasmine, set up a new project and try to fin
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 - [A detailed breakdown of the &lt;script&gt; tag](http://www.sitepoint.com/a-detailed-breakdown-of-the-script-tag/)
 
-### [Solution](solutions/2.md)
+### [Walkthrough](walkthroughs/2.md)
