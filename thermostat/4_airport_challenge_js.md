@@ -23,4 +23,4 @@ Take your Ruby code and attempt to rewrite it in JavaScript - don't dwell too lo
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 
-### [Solution](solutions/4.md)
+### [Walkthrough](walkthroughs/4.md)

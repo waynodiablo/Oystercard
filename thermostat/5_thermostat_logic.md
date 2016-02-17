@@ -32,4 +32,4 @@ Specification:
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 
-### [Solution](solutions/5.md)
+### [Walkthrough](walkthroughs/5.md)

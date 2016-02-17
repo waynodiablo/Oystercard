@@ -27,4 +27,4 @@ You'll need to find a suitable weather API - [Weather Underground](http://www.wu
 - [MDN documentation on AJAX](https://developer.mozilla.org/en-US/docs/AJAX)
 - [jQuery shortcut methods](http://api.jquery.com/category/ajax/shorthand-methods/)
 
-### [Solution](solutions/8.md)
+### [Walkthrough](walkthroughs/8.md)

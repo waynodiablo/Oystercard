@@ -28,4 +28,4 @@ In case you've forgotten the rules of FizzBuzz:
 - [Learn X in Y minutes - JavaScript](http://learnxinyminutes.com/docs/javascript/)
 - [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
-### [Solution](solutions/3.md)
+### [Walkthrough](walkthroughs/3.md)

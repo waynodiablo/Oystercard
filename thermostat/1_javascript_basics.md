@@ -32,5 +32,5 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
 - :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
-### [Solution](solutions/1.md)
+### [Walkthrough](walkthroughs/1.md)
 
