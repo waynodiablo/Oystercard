@@ -30,18 +30,18 @@ feature 'Game over' do
       expect(page).to have_content 'Dave loses!'
     end
   end
-end 
+end
 ```
 
 Because I was attacking so much, I defined an `attack_and_confirm` method in the `web_helpers.rb` file:
 
 ```ruby
-# in spec/web_helpers.rb
+# in spec/features/web_helpers.rb
 
 def attack_and_confirm
   click_button 'Attack'
   click_button 'OK'
-end 
+end
 ```
 
 With this feature test, I recognised that I needed some changes to my `Game` class. Here are the tests for those things:
@@ -57,7 +57,7 @@ With this feature test, I recognised that I needed some changes to my `Game` cla
 +  let(:player_1) { double :player, hit_points: 60 }
 +  let(:player_2) { double :player, hit_points: 60 }
 +  let(:dead_player) { double :player, hit_points: 0 }
- 
+
    describe '#player_1' do
      it 'retrieves the first player' do
  @@ -36,4 +38,20 @@
@@ -80,7 +80,7 @@ With this feature test, I recognised that I needed some changes to my `Game` cla
 +      expect(finished_game.loser).to eq dead_player
 +    end
 +  end
- end 
+ end
 ```
 
 And the implementation:
@@ -169,9 +169,9 @@ And creating a `game_over.erb` view file with a losing message:
 ```erb
 <!-- in views/game_over.erb -->
 
-<%= @game.loser.name %> loses! 
+<%= @game.loser.name %> loses!
 ```
 
-Everything passes, and we're done! Now let's move on to some extension exercises.
+Everything passes, and we're done!
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Next challenge](30_killing_the_global_variable.md)

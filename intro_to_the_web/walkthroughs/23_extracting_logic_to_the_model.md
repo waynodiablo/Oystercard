@@ -25,9 +25,9 @@ Let's create a `lib` file to store our model layer. Our project directory will l
     ├── spec
     │   ├── features
     │   │   ├── enter_names_spec.rb
-    │   │   └── hit_points_spec.rb
-    │   ├── spec_helper.rb
-    │   └── web_helpers.rb
+    │   │   ├── hit_points_spec.rb
+    │   │   └── web_helpers.rb
+    │   └── spec_helper.rb
     ├── .rspec
     ├── Gemfile
     ├── Gemfile.lock
