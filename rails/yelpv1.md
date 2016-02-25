@@ -3,7 +3,7 @@
 
 # Yelp
 
-***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
+***We try to squash them, but there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 
 ### V1 Walkthrough
@@ -66,7 +66,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 * `app` – **where your code goes**. Contains models, views and controllers; as well also JavaScript & CSS assets
 * `bin` – contains specific versions of executables such as rails and rake for doing low level tasks
 * `config` – configuration information, including `database.yml` which includes database configuration details and a routes file
-* `db` - all our database related code for migrating and seeding the databse
+* `db` - all our database related code for migrating and seeding the database
 * `lib` - place to put non-rails ruby code
 * `log` – keeps server logs and terminal output
 * `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default
@@ -156,7 +156,7 @@ We should now see rspec fail with 'No route matches [GET] "/restaurants"' which 
 get 'restaurants' => 'restaurants#index'
 ```
 
-which links up the '/restaurants' URL to the index action on the restaurants controller.  As we have more actions we could continue to add individual routes such as "get 'restaurants/new' => 'restaurants#new'", but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
+which links up the '/restaurants' URL to the index action on the restaurants controller.  As we have more actions we could continue to add individual routes such as `get 'restaurants/new' => 'restaurants#new'`, but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
 
 ```ruby
 resources :restaurants
@@ -164,7 +164,7 @@ resources :restaurants
 
 ##### Rails Routing
 
-If you now run `bin/rake routes` you'll get a list of the different routes created by `resources :restaurants`. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.  Here's the output from the bin/rake routes` command:
+If you now run `bin/rake routes` you'll get a list of the different routes created by `resources :restaurants`. **This is one of the more powerful features of Rails:** it has conventions about routing that do a lot of work for you.  Here's the output from the `bin/rake routes` command:
 
 ```sh
 
@@ -180,7 +180,7 @@ edit_restaurants  GET     /restaurants/:id/edit(.:format) restaurants#edit
 
 ```
 
-on the left we see special prefixes that we can use to refer to these routes in  our rails code.  More on those soon.  The Verb is the HTTP verb used to access this route given the specific URI pattern, which includes optional formatting and in some cases id variables.  Each route is mapped to a specific action method on a controller; for example a 'GET' request to '/restaurants/3/edit' would lead us to call the edit action on the restaurants controller with an id variable set to the value 3.
+On the left we see special prefixes that we can use to refer to these routes in  our rails code.  More on those soon.  The Verb is the HTTP verb used to access this route given the specific URI pattern, which includes optional formatting and in some cases id variables.  Each route is mapped to a specific action method on a controller; for example a 'GET' request to '/restaurants/3/edit' would lead us to call the edit action on the restaurants controller with an id variable set to the value 3.
 
 Notice also the way `resources :restaurants` has automatically created paths for `create`, `read`, `update` and `destroy` methods. You can see how fast it can be to get a simple [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app off the ground!
 
