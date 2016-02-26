@@ -38,11 +38,11 @@ Here you will find other, relevant materials and challenges that will help you o
 
 - Your alumni helpers are [William](https://github.com/Willibaur), [Adam](https://github.com/Adzz), [Michael](https://github.com/michaellennox), [Giamir](https://github.com/giamir), and [Chris](https://github.com/Wynndow) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
-![William](https://avatars1.githubusercontent.com/u/12820932?v=3&s=400)
-![Adam](https://avatars2.githubusercontent.com/u/8428277?v=3&s=400)
-![Michael](https://avatars2.githubusercontent.com/u/14293463?v=3&s=400)
-![Giamir](https://avatars2.githubusercontent.com/u/6231616?v=3&s=400)
-![Chris](https://avatars3.githubusercontent.com/u/13836290?v=3&s=400)
+![William](https://avatars1.githubusercontent.com/u/12820932?v=3&s=128)
+![Adam](https://avatars2.githubusercontent.com/u/8428277?v=3&s=128)
+![Michael](https://avatars2.githubusercontent.com/u/14293463?v=3&s=128)
+![Giamir](https://avatars2.githubusercontent.com/u/6231616?v=3&s=128)
+![Chris](https://avatars3.githubusercontent.com/u/13836290?v=3&s=128)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
