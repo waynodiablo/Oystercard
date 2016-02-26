@@ -36,13 +36,13 @@ Here you will find other, relevant materials and challenges that will help you o
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 
-- Your alumni helpers are [Diego](https://github.com/dregules), [Siv](https://github.com/sivanpatel), [Sarah](https://github.com/tealpaintedduck), [Adrian](https://github.com/adrianw1832), and [Bex](https://github.com/katylouise) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [William](https://github.com/Willibaur), [Adam](https://github.com/Adzz), [Michael](https://github.com/michaellennox), [Giamir](https://github.com/giamir), and [Chris](https://github.com/Wynndow) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
 
-![Diego](https://avatars3.githubusercontent.com/u/1048262?v=3&s=128)
-![Siv](https://avatars1.githubusercontent.com/u/10670079?v=3&s=128)
-![Sarah](https://avatars1.githubusercontent.com/u/5543916?v=3&s=128)
-![Adrian](https://avatars3.githubusercontent.com/u/12715033?v=3&s=128)
-![Bex](https://avatars0.githubusercontent.com/u/8373317?v=3&s=128)
+![William](https://avatars1.githubusercontent.com/u/12820932?v=3&s=400)
+![Adam](https://avatars2.githubusercontent.com/u/8428277?v=3&s=400)
+![Michael](https://avatars2.githubusercontent.com/u/14293463?v=3&s=400)
+![Giamir](https://avatars2.githubusercontent.com/u/6231616?v=3&s=400)
+![Chris](https://avatars3.githubusercontent.com/u/13836290?v=3&s=400)
 
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
