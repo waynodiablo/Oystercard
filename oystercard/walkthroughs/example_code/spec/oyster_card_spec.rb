@@ -15,11 +15,11 @@ describe OysterCard do
   end
 
   it "can't deduct if the balance goes below zero" do
-    expect{oystercard.touch_in(station)}.to raise_error(BalanceError, "You don't have enough.")
+    expect{oystercard.touch_in(station)}.to raise_error(BalanceError, "Insufficient balance to touch in.")
   end
 
   it "won't let you touch in if you don't have enough balance" do
-    expect{oystercard.touch_in(station)}.to raise_error(BalanceError, "You don't have enough.")
+    expect{oystercard.touch_in(station)}.to raise_error(BalanceError, "Insufficient balance to touch in.")
   end
 
   context 'it has a full balance' do

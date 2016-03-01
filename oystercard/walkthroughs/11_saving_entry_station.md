@@ -14,7 +14,7 @@ end
 
 ```ruby
 def touch_in(station)
-  fail "You don't have enough" if balance < MINIMUM_CHARGE
+  fail "Insufficient balance to touch in" if balance < MINIMUM_CHARGE
   @in_journey = true
 end
 ```

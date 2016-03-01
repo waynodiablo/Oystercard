@@ -20,7 +20,7 @@ Now we are back in the green phase (don't forget to high five!), let's see about
 
 - [ ] Make '#deduct' a private method
 
-Now we are using our touch_out method to deduct from the balance, we are actually testing our deduct method implicitly whilst testing touch_out. Our deduct method is not needed by any other object, so let's move it into private. This helps to keep functionality encapsulated and prevents excessive dependencies from being created in the future. Once you've made a method private, you no longer need to have a test for it as our test for `touch_out` covers the logic in the `deduct` method that we were previously testing, so you should now delete this test.
+Now we are using our `touch_out` method to deduct from the balance, we are actually testing our `deduct` method implicitly whilst testing `touch_out`. Our `deduct` method is not needed by any other object, so let's move it into private. This helps to keep functionality encapsulated and prevents excessive dependencies from being created in the future. Once you've made a method private, you no longer need to have a test for it as our test for `touch_out` covers the logic in the `deduct` method that we were previously testing, so you should now delete this test.
 
 - [ ] Keep the code DRY
 

@@ -6,7 +6,7 @@ Let's think about what specific behaviour we want to protect against. In this ca
 
 ```ruby
 it 'will not touch in if below minimum balance' do
-  expect{ subject.touch_in }.to raise_error "You don't have enough"
+  expect{ subject.touch_in }.to raise_error "Insufficient balance to touch in"
 end
 ```
 
@@ -18,7 +18,7 @@ Write code to make this test pass:
 
 ```ruby
 def touch_in
-  fail "You don't have enough" if balance < 1
+  fail "Insufficient balance to touch in" if balance < 1
   @in_journey = true
 end
 ```

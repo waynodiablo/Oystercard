@@ -6,7 +6,7 @@ context 'given an exit station' do
   let(:other_station) { double :other_station }
 
   before do
-    subject.exit(other_station)
+    subject.finish(other_station)
   end
 
   it 'calculates a fare for zone 1 to zone 1' do
@@ -43,3 +43,5 @@ end
 - [ ] Consider whether some methods should be private
 - [ ] If appropriate, consider extracting some code into new methods to make the code easier to read
 - [ ] Implement a mechanism to deduct the penalty fare from the card if the user forgets to touch out
+
+[Back to README](../README.md)

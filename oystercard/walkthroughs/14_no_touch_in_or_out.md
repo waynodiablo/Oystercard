@@ -1,8 +1,8 @@
 - [ ] Update your test suite to reflect a new Journey class. Make a new spec file journey_spec.rb
 - [ ] Create a new class Journey and move the functionality that relates to a journey from Oystercard to Journey.
-Test drive the development of your journey class. Each journey should have an entry and an exit station. Instances of journey should be initialized with an entry station, and should respond to `#exit`, `#fare` and `#complete` methods.
+Test drive the development of your journey class. Each journey should have an entry and an exit station. Instances of journey should be initialized with an optional entry station, and respond to `#finish`, `#fare` and `#complete?` methods.
 - [ ] Make sure all tests pass, all existing functionality is preserved. You will need to send messages to your Journey class from your Oystercard class - remember to use doubles to test that the correct messages are being sent.
-- [ ] The `#fare` method should return the correct fare, or the penalty fare of 6 if there was either no `entry_station` or no `exit_station`.
+- [ ] The `#fare` method should return the correct fare, or the penalty fare of 6 if there was either no entry station or no exit_station.
 
 Remember to test all the different combinations of zones. You may need to write some private methods to keep your external interface clean.
 
@@ -27,7 +27,7 @@ describe Journey do
   end
 
   it "returns itself when exiting a journey" do
-    expect(subject.exit(station)).to eq(subject)
+    expect(subject.finish(station)).to eq(subject)
   end
 
   context 'given an entry station' do
@@ -38,20 +38,14 @@ describe Journey do
     end
 
     it "returns a penalty fare if no exit station given" do
-      subject.exit
       expect(subject.fare).to eq Journey::PENALTY_FARE
-    end
-
-    it "completes journey if exit with no station given" do
-      subject.exit
-      expect(subject).to be_complete
     end
 
     context 'given an exit station' do
       let(:other_station) { double :other_station }
 
       before do
-        subject.exit(other_station)
+        subject.finish(other_station)
       end
 
       it 'calculates a fare' do
