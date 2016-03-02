@@ -36,7 +36,7 @@ Here you will find other, relevant materials and challenges that will help you o
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
 
-- Your alumni helpers are [William](https://github.com/Willibaur), [Adam](https://github.com/Adzz), [Michael](https://github.com/michaellennox), [Giamir](https://github.com/giamir), and [Chris](https://github.com/Wynndow) - please do ask them for help if you and your pair partner are stuck for any longer than 20 minutes
+- Your alumni helpers are [William](https://github.com/Willibaur), [Adam](https://github.com/Adzz), [Michael](https://github.com/michaellennox), [Giamir](https://github.com/giamir), and [Chris](https://github.com/Wynndow) - please do ask them for help if you and your pair partner are stuck, and have tried the escalation process!
 
 ![William](https://avatars1.githubusercontent.com/u/12820932?v=3&s=128)
 ![Adam](https://avatars2.githubusercontent.com/u/8428277?v=3&s=128)
