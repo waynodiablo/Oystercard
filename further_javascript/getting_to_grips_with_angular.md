@@ -83,6 +83,8 @@ _Avoid going down the Node rabbithole. This week is for learning Frontend stuff;
 
 ##### Resources
 
+- [He cares, he shares, he's Nathan Le Claire](http://nathanleclaire.com/blog/2013/12/13/how-to-unit-test-controllers-in-angularjs-without-setting-your-hair-on-fire/)
+
 ### 12. Unit Testing with Karma ([2](https://docs.angularjs.org/tutorial/step_02))
 - What is `karma.conf.js` for?
 - How is Karma similar to RSpec?
@@ -93,6 +95,8 @@ _Avoid going down the Node rabbithole. This week is for learning Frontend stuff;
 - Why is '2-way' data binding considered a key feature of Angular?
 
 ##### Resources
+
+- [Stack Overflow Post: What is two-way data providing?](http://stackoverflow.com/questions/13504906/what-is-two-way-binding)
 
 ### 14. Services/Factories/Providers ([5](https://docs.angularjs.org/tutorial/step_05))
 - What are the similar uses of Services and Factories?
