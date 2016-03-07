@@ -57,9 +57,6 @@ _Avoid going down the Node rabbithole. This week is for learning Frontend stuff;
 - What is the difference between Views and Templates in Angular?
 - How is Mustache used in Angular templates?
 
-##### Resources
-- TBC
-
 ### 8. Controllers and `$scope` ([2](https://docs.angularjs.org/tutorial/step_02))
 - What is an Angular controller?
 - What is meant by `$scope` of an Angular controller? How does it relate to the concept of 'scope' you've already met?
