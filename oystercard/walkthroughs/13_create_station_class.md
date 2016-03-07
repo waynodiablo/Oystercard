@@ -19,6 +19,6 @@ describe Station do
   end
 end
 ```
-Getting these tests to pass should be trivial for you by this point, so take the opportunity to experiment with Struct or OpenStruct.
+> Getting these tests to pass should be trivial for you by this point, so bonus points if you can figure out a way to generate new stations based on a file of station names and their correct zones (you might consider coming back to this at the end of the challenge).
 
-Bonus points if you can figure out a way to generate new stations based on a constant list of station names and their correct zones.
+[Next challenge](../14_no_touch_in_or_out.md)

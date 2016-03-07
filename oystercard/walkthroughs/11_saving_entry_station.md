@@ -14,7 +14,7 @@ end
 
 ```ruby
 def touch_in(station)
-  fail "You don't have enough" if balance < MINIMUM_CHARGE
+  fail "Insufficient balance to touch in" if balance < MINIMUM_CHARGE
   @in_journey = true
 end
 ```
@@ -43,3 +43,5 @@ end
 ```
 
 Make sure that all your tests are green and you have looked for opportunities to refactor before moving on to the next challenge.
+
+[Next challenge](../12_journey_history.md)

@@ -6,7 +6,7 @@ Let's think about what specific behaviour we want to protect against. In this ca
 
 ```ruby
 it 'will not touch in if below minimum balance' do
-  expect{ subject.touch_in }.to raise_error "You don't have enough"
+  expect{ subject.touch_in }.to raise_error "Insufficient balance to touch in"
 end
 ```
 
@@ -18,7 +18,7 @@ Write code to make this test pass:
 
 ```ruby
 def touch_in
-  fail "You don't have enough" if balance < 1
+  fail "Insufficient balance to touch in" if balance < 1
   @in_journey = true
 end
 ```
@@ -27,3 +27,5 @@ end
 - [ ] Refactor to remove any magic numbers and replace with a constant
 
 Once all your tests are green, consider a refactor - currently there is a magic number `1` in your touch_in method - this is a [code smell](https://en.wikipedia.org/wiki/Code_smell), as a subsequent developer looking at the code will have to work out what that number means. If the rules change in future, and you want to change the minimum balance to 5, you would have to look in a seemingly unrelated method. Refactor this by using a constant to store the minimum balance.
+
+[Next challenge](../10_charge_on_touch_in.md)

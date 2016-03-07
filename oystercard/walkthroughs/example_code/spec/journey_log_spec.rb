@@ -3,12 +3,12 @@ describe JourneyLog do
 
   let(:journey){ double :journey, entry_station: nil, complete?: false, fare: 1}
   let(:station){ double :station }
-  let(:journey_klass){double :journey_klass, new: journey}
-  subject(:journey_log){described_class.new(journey_klass: journey_klass)}
+  let(:journey_class){double :journey_class, new: journey}
+  subject(:journey_log){described_class.new(journey_class: journey_class)}
 
   describe '#start_journey' do
     it 'starts a journey' do
-      expect(journey_klass).to receive(:new).with(entry_station: station)
+      expect(journey_class).to receive(:new).with(entry_station: station)
       journey_log.start_journey(station)
     end
 
@@ -19,20 +19,20 @@ describe JourneyLog do
   end
 
   it 'stops a current journey' do
-    allow(journey_klass).to receive(:new).and_return journey
+    allow(journey_class).to receive(:new).and_return journey
     journey_log.start_journey(station)
     expect(journey).to receive(:exit).with(station)
     journey_log.exit_journey(station)
   end
 
   it 'creates a journey if there is no current journey' do
-    expect(journey_klass).to receive(:new).and_return(journey)
+    expect(journey_class).to receive(:new).and_return(journey)
     allow(journey).to receive(:exit).with(station)
     journey_log.exit_journey(station)
   end
 
   it "returns a new journey when stopping when no current journeys" do
-    allow(journey_klass).to receive(:new).and_return journey
+    allow(journey_class).to receive(:new).and_return journey
     allow(journey).to receive(:exit).with(station).and_return(journey)
     expect(journey_log.exit_journey(station)).to eq journey
   end

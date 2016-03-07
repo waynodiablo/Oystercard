@@ -18,7 +18,7 @@ class OysterCard
   end
 
   def touch_in(station)
-    fail(BalanceError, "You don't have enough.") if balance < MINIMUM_CHARGE
+    fail(BalanceError, "Insufficient balance to touch in.") if balance < MINIMUM_CHARGE
     deduct(journey_log.outstanding_charges)
     journey_log.start_journey(station)
   end

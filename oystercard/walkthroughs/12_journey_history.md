@@ -17,14 +17,14 @@ it 'stores exit station' do
 end
 ```
 
-Making this test pass will break a number of previous tests, so you will need to go through those 1 by 1 and fix them. Once you are back at green, have a look at refactoring your tests - you are now duplicating `subject.touch_in(station)` so maybe you could create a new context for an oystercard that is already in a journey.
+Making this test pass will break a number of previous tests, so you will need to go through those 1 by 1 and fix them. Once you are back at green, have a look at refactoring your tests - you are now duplicating `subject.touch_in(station)` so maybe you could create a new `context` for an oystercard that is already in a journey.
 
 Now let's store the journeys in an instance variable:
 
 - [ ] Write a test that checks that the card has an empty list of journeys by default
 
 ```ruby
-it 'holds a journey log' do
+it 'has an empty list of journeys by default' do
   expect(subject.journeys).to be_empty
 end
 ```
@@ -48,3 +48,5 @@ Once you make this test pass, consider refactoring to add a new context for comp
 - [ ] Keep all code including tests DRY
 
 Once your tests are green look at refactoring - do we still need the `@entry_station` and `@exit_station` variables?
+
+[Next challenge](../13_create_station_class.md)

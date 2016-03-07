@@ -2,15 +2,13 @@
 
 [Back to the challenge map](README.md)
 
-You did a pretty difficult job when you moved from using doubles to represent a station to using actual station objects. However, this will really help us to close the next few issues.
+So far we have assumed that our users behave well: they touch in at every station and touch out at every station. However, in real life it's not like this. Sometimes people forget to touch in or touch out. Our code should expect this to happen. This is called an edge case: an unlikely but possible situation.
 
-So far we have assumed that our users behave well: they touch in on every station and touch out on every station. However, in real life it's not like this. Sometimes people forget to touch in or touch out. Our code should expect this to happen. This is called an edge case: an unlikely but possible situation.
-
-Discuss with your pairing partner what will happen to your journey history right now if a person forgets to touch in or touch out. What will be stored in your journey history?
+Discuss with your pair partner what will happen to your journey history right now if a person forgets to touch in or touch out. What will be stored in your journey history?
 
 Right now we are referencing Journey throughout our code. We are talking about journey repeatedly - we are adding journeys, completing journeys and knowing if a journey is incomplete. It is becoming clear that a journey object would be useful. A Journey class is screaming to get out!
 
-Let's create a new Journey class, it should be responsible for starting a journey, ending a journey, calculating the fare of a journey, and returning whether or not the journey is complete.
+Let's create a new Journey class, it should be responsible for starting a journey, finishing a journey, calculating the fare of a journey, and returning whether or not the journey is complete.
 
 ```
 In order to be charged correctly
@@ -32,7 +30,7 @@ I need a penalty charge deducted if I fail to touch in or out
 - [ ] Update your test suite to reflect a new Journey class
 - [ ] Create a new class Journey and move the functionality that relates to a journey from Oystercard to Journey
 - [ ] Make sure all tests pass, all existing functionality is preserved
-- [ ] The `#fare` method should return the minimum fare (for the moment), or the penalty fare of 6 if there was either no `entry_station` or no `exit_station`.
+- [ ] The `#fare` method should return the minimum fare (for the moment), or the penalty fare of 6 if there was either no entry station or no  exit station.
 - [ ] Make sure the entire codebase is DRY
 - [ ] Make sure all methods are three lines or shorter
 

@@ -1,13 +1,13 @@
 - [ ] test drive the development of JourneyLog class
-- [ ] use dependency injection to inject a journey_klass
+- [ ] use dependency injection to inject a journey_class
 ```ruby
 class JourneyLog
-  def initialize(journey_klass: )
-    @journey_klass = journey_klass
+  def initialize(journey_class: )
+    @journey_class = journey_class
     @journeys = []
   end
 ```
-- [ ] `#start_journey` should start a new journey with an entry station
+- [ ] `#start` should start a new journey with an entry station
 Here is an example of how you might write the tests:
 
 ```ruby
@@ -16,18 +16,18 @@ describe JourneyLog do
 
   let(:journey){ double :journey } #this may need to have some methods
   let(:station){ double :station }
-  let(:journey_klass){double :journey_klass, new: journey}
-  subject {described_class.new(journey_klass: journey_klass)}
+  let(:journey_class){double :journey_class, new: journey}
+  subject {described_class.new(journey_class: journey_class)}
 
-  describe '#start_journey' do
+  describe '#start' do
     it 'starts a journey' do
-      expect(journey_klass).to receive(:new).with(entry_station: station)
-      subject.start_journey(station)
+      expect(journey_class).to receive(:new).with(entry_station: station)
+      subject.start(station)
     end
 
     it 'records a journey' do
-      allow(journey_klass).to receive(:new).and_return journey
-      subject.start_journey(station)
+      allow(journey_class).to receive(:new).and_return journey
+      subject.start(station)
       expect(subject.journeys).to include journey
     end
   end
@@ -40,39 +40,22 @@ You could achieve this like so:
 ```ruby
 private
 def current_journey
-  incomplete_journey || journey_klass.new
+  @current_journey || journey_class.new
 end
 ```
 
-- [ ] `#exit_journey` should add a new exit station to the `current_journey`
+- [ ] `#finish` should add an exit station to the `current_journey`.  It should also set the current_journey to `nil` - can you reason why?  Discuss this with your pair partner.
 - [ ] `#journeys` should return a list of all previous journeys without exposing the internal array to external modification
 
-One issue with using an attr_reader when for an instance variable that is an array, is that the attr_reader allows you to modify that array. To prevent this, return a `.dup` like so:
+The issue with using attr_reader to access an instance variable that is an Array (or other more complex type), is that the attr_reader _returns the actual object_.  Once you have the actual object, you can call any of its methods and potentially change its state in a way that is not consistent with the rules of your domain.  This is very bad.  In the case of an array, you can prevent this by returning a _copy_ of the object using `.dup` like so:
 ```ruby
 def journeys
   @journeys.dup
 end
 ```
-- [ ] `#outstanding_charges` should close an incomplete journey and return its fare
-
-There are many ways to do this. We used a simple conditional:
-```ruby
-def outstanding_charges
-  incomplete_journey ? incomplete_journey.exit.fare : NO_CHARGES
-end
-```
-
-- [ ] refactor to using Forwardable module from Standard Library to delegate the method `#exit_journey` to the `current_journey`'s `#exit` method.
-
-```ruby
-class JourneyLog
-  extend Forwardable
-
-  def_delegator :current_journey, :exit, :exit_journey
-```
-
-Discuss with your partner what is happening here - why is this helpful?
 
 - [ ] remove redundant code from OysterCard class
 
-Your Oystercard should now only send messages to the JourneyLog. Although it does pass instances of station around, station is never aware of OysterCards existence. OysterCard should never communicate directly with Journey.
+Your Oystercard should now only send messages to the JourneyLog. Although it does pass instances of station around, station is never aware of OysterCard's existence. OysterCard should never communicate directly with Journey.
+
+[Next challenge](../16_fare_for_zones.md)
