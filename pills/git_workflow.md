@@ -1,22 +1,45 @@
 #Github Workflow
 
-When developing a project as a group, using Git branches and Github's pull request feature can make your life much easier. Ensuring separation from the master branch creates opportunity to review and reflect upon code before you are commited to it. It allows for a team to divide into pairs and work asynchronously on different features, each pair working on their own feature branch. Using pull requests creates a space in your team's workflow for code reviews and reflection.
+# Our process for adding a new feature/fixing a bug on one of our engineering repos
 
-There are many different best practices, these are by no means "the right way". However, we find this is a relatively simple workflow that uses Git to facilitate the development of your project.
+1. Create a Github issue in the relevant repository relating to the feature/bug if it has not been created already. You can also create issues directly in [Waffle](https://www.waffle.io) if you decide to use Waffle, just make sure they belong to the correct repo.
+2. When you are ready to work on the story (normally as part of a sprint - it will be moved in the to-do column during the sprint kick-off meeting), create a branch that begins with the issue number and then explains the task at hand, e.g. `295-dates-on-apply-page`. Note if you now push your new branch to origin, waffle will automatically mark it as in progress
+3. When you are done, create a pull request from your branch to `master` - put the ticket number in the PR comment, e.g. "closes #295" so Waffle will know to link it to the appropriate ticket.
+4. Get another member of the team to review your PR - when reviewing CSS changes they should check out the branch onto their own computer and check **both on desktop and mobile** that it looks ok.
+5. When you get a :shipit: or other similarly appropriate emoji, merge your PR. 
+6. When you're happy, merge your changes on GitHub. You should then deploy immediately - if you have CI setup you can get it to do this for you automatically.
+7. Do some QA on your live site if you have it setup.
+8. Highfive someone/something.
 
-![gitflow](https://github.com/makersacademy/course/blob/master/images/gitflow.png)
+## Example
 
-##What are this?!
+An example command line workflow using [hub](https://github.com/github/hub) to create pull requests on the command line, the headers correspond to the stage the story will automatically move to in waffle
 
-1. At the beginning of your project, develop should mirror master. 
-2. Create a new branch 'newFeature': ``` git checkout -b newFeature ```
-3. Once your feature is complete ``` git pull origin develop ``` then ``` git push origin newFeature ```. In Github, you can now create a pull request from newFeature branch to develop.
-4. Other team members review your code and together you reflect upon it.
-5. Assuming all happy and tests pass, merge the pull request on Github and run tests again. At this stage it is a good idea to push to staging to ensure nothing unexpected occurs.
-6. Assuming all tests pass and staging looks fine, push to master and then push master to production. Congratulations your code is now live.
+### In Progress
+```
+git checkout -b 295-dates-on-apply-page
+git push -u origin 295-dates-on-apply-page
+```
+
+### QA
+```
+git checkout 295-dates-on-apply-page
+git commit -am "Adds dates on apply page. Closes #295"
+git push
+git pull-request
+```
+
+Once you've got the thumbs up, merge on GitHub.
+
+### Done
+```
+git checkout master
+git pull
+```
 
 ##External resources
 
 * [Git Flow - a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+* [A more advanced workflow with rebasing](http://www.integralist.co.uk/posts/github-workflow.html)
 * [what are this?](https://www.youtube.com/watch?v=t4sXjJJjcWQ)
 
