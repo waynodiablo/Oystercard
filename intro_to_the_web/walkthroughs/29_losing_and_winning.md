@@ -174,4 +174,4 @@ And creating a `game_over.erb` view file with a losing message:
 
 Everything passes, and we're done!
 
-[Next challenge](30_killing_the_global_variable.md)
+[Next challenge](../30_killing_the_global_variable.md)
