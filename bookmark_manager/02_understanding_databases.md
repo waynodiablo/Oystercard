@@ -11,10 +11,6 @@ In order to support the user stories created in the first challenge, we'll need 
 * Describe the structure of a database, referencing 'tables' and 'rows'
 * Define 'PostgreSQL' as 'a particular type of relational database'
 
-## To complete this challenge, you will need to
-
-- [ ] Research the relative merits of Relational databases vs NoSQL databases or flat files
-- [ ] Write a blog post with your partner on the above
 
 ## Resources
 
