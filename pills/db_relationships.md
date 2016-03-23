@@ -121,7 +121,7 @@ don't have a blog post.
 
 ###Many-to-Many Relationships
 
-This is where things get a little gnarly. Bloggig software often has a way of
+This is where things get a little gnarly. Blogging software often has a way of
 tagging each post based on it's content. For instance 'animals', 'cats', 'gardening' and
 'diminutive pop-stars' would all be valid tags for Bob and Tom's posts.  The
 'animal' tag would apply to both the dog and the cat post, and the cat post
