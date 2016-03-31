@@ -1,7 +1,7 @@
 # Lab Week
 
 ### What is Lab Week?
-Lab Week is one of the most important weeks at Makers Academy. It marks your transition from the first half of the course, where foundational concepts and technologies are introduced; to the second half of the course, where these are applied in increasingly more project-based scenarios. Since working in teams is a huge part of being a professional developer, Lab week will also introduce group work.
+Lab Week is one of the most important weeks at Makers Academy. It marks your transition from the first half of the course - where foundational concepts and technologies are introduced - to the second half of the course, where these are applied in increasingly more project-based scenarios. Since working in teams is a huge part of being a professional developer, Lab week will also introduce group work.
 
 In addition to this, we will introduce a completely new way of working on software projects, which gives a much closer experience to interpreting a real-world brief using industry-standard processes to plan and execute the tasks at hand.
 
@@ -11,7 +11,7 @@ You will be working on a project where you will learn how to:
 
 * Extract User Stories from the specification as a team **(Workshop: Monday morning)**
 * Convert User Stories to Tickets on a Card Wall using Github and Waffle **(Part of above workshop)**
-* Interpret the kind of specification you’d get from a well-financed design team/marketing agency/entrepreneur
+* Interpret the kind of specification you’d get from a well-organised design team/marketing agency/entrepreneur
 * Take clearly laid out mockups for a user interface and recreate them in the browser
 
 ### Who will I be working with?
@@ -21,8 +21,8 @@ Each team will consist of approximately 4 people. The teams will be selected by 
 ### How should I approach Lab Week?
 We believe that it's extremely important to work from our space here at MA for the week, so from a logistical perspective, we would expect:
 
-* That you be at Makers Academy from **9AM, Monday through Friday**.
-* That you work in a team, pair with members of your team, and run twice-daily stand-ups within that team.
+* That you be at Makers Academy from **9:30am, Monday through Friday**.
+* That you work in a team, pair with members of your team, and run daily stand-ups within that team.
 * Coordinate on Slack (e.g. in private groups)
 
 ### What are the delivery expectations?
@@ -34,7 +34,6 @@ We are asking you to deliver the project in MVP steps. ​**You are unlikely to 
 * You are going to use the technologies, skills and techniques you have been practicing. That is: Sinatra, Databases, Authentication, great Ruby, connecting to APIs, and a little JavaScript, HTML, and CSS. You should rotate within your groups to ensure you get to focus on the techs you want practice at most. ​_Avoid doing whatever is easiest: do what you find hard._​ So, one reason is ‘so you can consolidate and practice stuff you’ve been working on in the past 5 weeks’.
 * You know how to do TDD in controlled circumstances, but this tends to fall apart in a project setting. You need to experience why this happens, the pressures that conflict with good software practices, and how to retrospect on them so when you reach the later Project Weeks (9, and 10 & 11) you know how to handle these things.
 * You’re picking up ‘battle scars’. The main thing our Hiring Partners tell us they want is more experience doing things in a project setting. This is your first real opportunity to do so.
-* Historically 'Lab Week' has been self-directed: to new technology, or to consolidation. Two things inevitably happen: students who go to a new tech get a bit more confident at learning new things (usually Node), but it doesn’t provide lasting impact. Students who opt to consolidate grow tired without a progression structure and leave it be after two days, tops. I have seen this happen literally dozens of times. Talk to the current graduating seniors if you’d like to know more. We want to structure Week 6 so you can pick up specifically useful, hireable skills. We also want you to get a chance to consolidate things in an exciting new setting.
 
 ### What support can I expect during Lab Week?
 
