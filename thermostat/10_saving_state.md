@@ -1,4 +1,7 @@
-# Saving state
+# Thermostat: saving state
+
+[Back to the Challenge Map](0_challenge_map.md)
+
 There is an issue with your thermometer interface!  If you close your browser and reopen it, it forgets what settings you had. It has no persistence. Over the last couple of weeks how have we managed persistence in our applications?
 
 * Create a remote API that the thermostat can talk to. (hint: you can build your own web server to provide this API using Sinatra!).
