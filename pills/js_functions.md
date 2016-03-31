@@ -53,7 +53,7 @@ bark();  //invoking the function will return 'Woof'
 ```
 You must include the parentheses when invoking a function, even if there are no arguments.  Can you reason why?  What is `bark;` on its own with no parentheses?
 
-You can define arguments in functions, as you would expect:
+You can declare arguments in functions, as you would expect:
 ```javascript
 var bark = function(name) {
   return name + ' says Woof';
@@ -166,7 +166,8 @@ We can then call the `bark` 'method' on any instance of `Dog`:
 fido = new Dog('fido');
 fido.bark();
 ```
-It's easy to think of `bark` as being a method of `Dog`.  But it isn't.  Objects in JavaScript are just bags of properties.  So `fido` is just a bag of properties, some of which it inherits from the prototype of `Dog`.  And `bark` is just a property that happens to contain a Function object.  It behaves like a method _because of the way it is invoked_:  ```javascript
+It's easy to think of `bark` as being a method of `Dog`.  But it isn't.  Objects in JavaScript are just bags of properties.  So `fido` is just a bag of properties, some of which it inherits from the prototype of `Dog`.  And `bark` is just a property that happens to contain a Function object.  It behaves like a method _because of the way it is invoked_:
+```javascript
 fido.bark();
 ```
 This syntax invokes the function inside the `bark` property...
