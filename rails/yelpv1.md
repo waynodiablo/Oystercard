@@ -13,7 +13,7 @@
         - [Installing Rails and initialising your app](#installing-rails-and-initialising-your-app)
         - [Where'd all the files go?](#whered-all-the-files-go)
         - [Boot the server](#boot-the-server)
-        - [Add some testing gems](#add-some-testing-gems)
+        - [Add some testing gems](#adding-gems-for-testing)
     - [The first test – home page with a link](#the-first-test--home-page-with-a-link)
         - [Rails Routing](#rails-routing)
         - [Creating controllers](#creating-controllers)
