@@ -7,7 +7,7 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 1. *???* Try to gather some words about the problem, even in vague terms. "It's broken" is not a problem description.
 
-2. *Pair Partner.* Bounce off them, discuss, and rubber-duck debug. Imagine you are seeing the problem for the first time, together.
+2. *Pair Partner.* Bounce off them, discuss, and [rubber-duck debug](https://en.wikipedia.org/wiki/Rubber_duck_debugging). Imagine you are seeing the problem for the first time, together.
 
 3. *Isolate Keywords.* Gather a small group of keywords that describe the problem area, like `Array`, ‘Websockets’, or ‘Terminal’.
 
