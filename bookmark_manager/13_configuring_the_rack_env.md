@@ -1,4 +1,4 @@
-## Creating Links
+## Configuring the Rack Environment
 
 [Back to the Challenge Map](00_challenge_map.md)
 
