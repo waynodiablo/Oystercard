@@ -9,8 +9,8 @@ One of the main advantages of this system is the independence from a certain ser
 ... your server can serve a RESTful API. Rails is a superb tool to query data from the database and deliver it through an API.
 
 ##3 - API
-A [RESTful API](http://www.restapitutorial.com/lessons/httpmethods.html) is built on the internet protocol HTTP. Among others the protocol offers the following actions: 
-  - Post - create 
+A [RESTful API](http://www.restapitutorial.com/lessons/httpmethods.html) is built on the internet protocol HTTP. Among others the protocol offers the following actions:
+  - Post - create
   - Get - read
   - Update - update
   - Delete - delete
@@ -23,7 +23,7 @@ Angular runs in the browser. This is why it needs to be included with a ```<scri
 Communication between the server and the client usually happens in the model layer (factories or services) using one of the built in Angular services [$http](https://docs.angularjs.org/api/ng/service/$http) or [$resource](https://docs.angularjs.org/api/ngResource/service/$resource). Like jQuery's AJAX $http and $resource can interact with APIs using GET, POST, DELETE and UPDATE.
 
 ##5 - External APIs
-Angular is very goo if you want to query content from different external APIs to mash it up in your app. You would usually create a factory that gets data from an external API and hands over well formatted content to your controller.
+Angular is very good if you want to query content from different external APIs to mash it up in your app. You would usually create a factory that gets data from an external API and hands over well formatted content to your controller.
 
 ##6 - ngController
 The controller connects the models to the page the user interacts with. It has access to both. When you start writing your app the control naturally grows rapidly. It shouldn´t though. Besides from aesthetics the reason is that models are much easier to test on their own than a big controller would be. If you install angular mocks (```npm install angular-mocks --save-dev```) you can [inject your service into your test](https://docs.angularjs.org/guide/services#unit-testing) and test it's functions.
