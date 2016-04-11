@@ -29,4 +29,4 @@ module RestaurantsHelper
 end
 ```
 
-You write methods in that module and call them elsewhere. In the [Yelp walkthrough](https://github.com/makersacademy/course/blob/master/yelpv3.md#diy-helper-methods), there's an example of using a helper method to generate star ratings from a number. You can simply call that helper method in the view.
+You write methods in that module and call them elsewhere. In the [Yelp walkthrough](https://github.com/makersacademy/course/blob/master/rails/yelpv3.md#diy-helper-methods), there's an example of using a helper method to generate star ratings from a number. You can simply call that helper method in the view.
