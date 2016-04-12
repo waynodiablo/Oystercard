@@ -92,6 +92,7 @@ analyse/experiment on the problem
   bugs
 * Make sure you're checking the against the actual data your system is receiving
   when running tests
+* Don't forget to take out all of your debugging statements when you're done fixing the problem!
 
 ## Some further reading:
 
