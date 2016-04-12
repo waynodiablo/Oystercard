@@ -23,26 +23,10 @@ Here you will find other, relevant materials and challenges that will help you o
 - [Challenges](https://github.com/makersacademy/course/blob/master/challenges/challenges.md)
 - [Pills](https://github.com/makersacademy/course/blob/master/pills.md)
 
-## Archive
-
-* [Github Profiles in JavaScript & Angular](https://github.com/makersacademy/course/blob/master/github_report.md)
-* [Instagram](https://github.com/makersacademy/course/blob/master/instagram.md)
-* [Instagram Marketplace](https://github.com/makersacademy/course/blob/master/instagram-marketplace.md)
-
 ## Resources
 
 - A list of [good resources online and in the wider world of code](https://github.com/makersacademy/course/blob/master/resources.md)
 - Library - we have a library of coding textbooks - please ask any coach to check one out
-- Scaffolded Pairing and Challenge Review - please add your names to the [waiting list](https://github.com/makersacademy/course/wiki/Scaffolded-Pairing-Schedule-(includes-Challenge-Review)) to book a session
-
-- Your alumni helpers are [William](https://github.com/Willibaur), [Adam](https://github.com/Adzz), [Michael](https://github.com/michaellennox), [Giamir](https://github.com/giamir), and [Chris](https://github.com/Wynndow) - please do ask them for help if you and your pair partner are stuck, and have tried the escalation process!
-
-![William](https://avatars1.githubusercontent.com/u/12820932?v=3&s=128)
-![Adam](https://avatars2.githubusercontent.com/u/8428277?v=3&s=128)
-![Michael](https://avatars2.githubusercontent.com/u/14293463?v=3&s=128)
-![Giamir](https://avatars2.githubusercontent.com/u/6231616?v=3&s=128)
-![Chris](https://avatars3.githubusercontent.com/u/13836290?v=3&s=128)
-
 - List of good places to work at the weekend
   - [Trade Made](http://www.trade-made.co.uk/)
   - [Look Mum No Hands](http://www.lookmumnohands.com)
