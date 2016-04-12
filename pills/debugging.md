@@ -97,7 +97,6 @@ analyse/experiment on the problem
 ## Some further reading:
 
    * [Zen of debugging](http://webadvent.org/2012/debugging-zen-by-ben-ramsey)
-   * [Debugging with puts](https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html)
    * [The psychology of debugging](https://docs.google.com/file/d/13hFUiT8lD1FiaRkwrM5AOdbT2xSVZF8eg0JXdcqU4mZSAzXkwonp1M-TFqR8/edit)
    * [The StackOverflow founder on Rubber Duck
      Debugging](http://blog.codinghorror.com/rubber-duck-problem-solving/)
