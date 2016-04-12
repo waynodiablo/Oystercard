@@ -57,3 +57,8 @@ Although there's of course much more to REST, understanding that it's all about
 - [A beginners guide to REST](http://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340)
 - [A simple guide to
   HTTP](https://www.safaribooksonline.com/library/view/head-first-servlets/9780596516680/ch01s08.html) - click on the next link on the top right to keep reading, there's some good diagrams here!
+
+## Exercises
+
+- Design the urls for a RESTful API for the Makers Bnb project (a clone of Airbnb)
+- Design a RESTful API for Gmail
