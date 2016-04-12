@@ -75,4 +75,4 @@ There are many techniques associated with agile development such as programming 
 
 This doesn't mean that changes should be made carelessly or quickly.  It is best to avoid making too many changes in the process at one time because otherwise it is difficult to determine which change led to any benefits or deficits.  The critical component is that all members of the team are clear about what is being changed for what reason and everyone has agreed to give the changes a try.
 
-[Back to course folder](..)
+[Back to README](README.md)
