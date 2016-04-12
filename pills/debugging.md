@@ -46,9 +46,8 @@ method, a time-honoured way of quickly testing our assumptions:
   incorrect (or just choose any), then make a hypothesis, such as _the data is
 being passed incorrectly into the user model_
 * **Analysis** - you'll need to break your task down into something smaller, the
-  key here being to hone down and isolate only the part of our application that
-we need to test our assumption against e.g. isolating a specific
-line indicated in our stack trace, or testing our user model in the Rails console
+  key here being to isolate only the part of our application that
+we need to test our assumption against. The easiest way of doing this is to use a serious of `puts`/`p`/`console.log` statements throughout your system to hone down which part of the system is causing the problem.
 * **Experimentation** - now run a series of experiments on the isolated part of
   our application. This is often as simple as saying "what would happen if I
 perform a certain action?". Go slowly here and only change one thing at a time,
