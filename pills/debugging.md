@@ -65,8 +65,8 @@ everything from using sophisticated debuggers such as [byebug](https://github.co
 to the simply using `puts` or `console.log` to check what your data is
 outputting in various stages of your code.
 
-> Generally the simpler the tool the better, start with `puts` and `console.log`
-and move to more advanced tools if/when you need to
+> Generally the simpler the tool the better, start with `p`/`puts` and `console.log`
+and move to more advanced tools if/when you need to. And don't forget sometimes fixing a bug is as simple as putting a series of of `p` statements throughout your system, following the data as it flows through the system
 
 ## 5 - Repeat until it's fixed
 
@@ -96,7 +96,6 @@ analyse/experiment on the problem
 
 ## Some further reading:
 
+   * [The StackOverflow founder on Rubber Duck Debugging](http://blog.codinghorror.com/rubber-duck-problem-solving/)
    * [Zen of debugging](http://webadvent.org/2012/debugging-zen-by-ben-ramsey)
    * [The psychology of debugging](https://docs.google.com/file/d/13hFUiT8lD1FiaRkwrM5AOdbT2xSVZF8eg0JXdcqU4mZSAzXkwonp1M-TFqR8/edit)
-   * [The StackOverflow founder on Rubber Duck
-     Debugging](http://blog.codinghorror.com/rubber-duck-problem-solving/)
