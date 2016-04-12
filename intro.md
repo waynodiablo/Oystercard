@@ -38,9 +38,9 @@ Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | 
 
 **Senior Portion**
 
-7     |  8                 | 9         | 10    | 11     | 12              |
-------|--------------------|-----------|-------|--------|-----------------|
-Rails | Further Javascript | Makerthon | Final projects |   Hiring Week   |
+7     |  8                 | 9         | 10             | 11             | 12              |
+------|--------------------|-----------|----------------|----------------|-----------------|
+Rails | Further Javascript | Makerthon | Final projects | Final projects |   Hiring Week   |
 
 
 Each week there will be learning objectives relating to the particular project and pre-reading materials based on the learning objectives.
@@ -75,4 +75,4 @@ There are many techniques associated with agile development such as programming 
 
 This doesn't mean that changes should be made carelessly or quickly.  It is best to avoid making too many changes in the process at one time because otherwise it is difficult to determine which change led to any benefits or deficits.  The critical component is that all members of the team are clear about what is being changed for what reason and everyone has agreed to give the changes a try.
 
-[Back to README](../README.md)
+[Back to course folder](..)
