@@ -31,9 +31,9 @@ The weekly structure is maintained consistently for the first five weeks, then g
 
 **Junior Portion**
 
-1             |  2          | 3               | 4                | 5          | 6            |
---------------|-------------|-----------------|------------------|------------|--------------|
-Boris Bikes   | Battleships | Battleships Web | Bookmark Manager | JavaScript | Project Week |
+1             |  2         | 3           | 4                | 5          | 6            |
+--------------|------------|-------------|------------------|------------|--------------|
+Boris Bikes   | Oystercard | Battles Web | Bookmark Manager | JavaScript | Project Week |
 
 
 **Senior Portion**
@@ -75,4 +75,4 @@ There are many techniques associated with agile development such as programming 
 
 This doesn't mean that changes should be made carelessly or quickly.  It is best to avoid making too many changes in the process at one time because otherwise it is difficult to determine which change led to any benefits or deficits.  The critical component is that all members of the team are clear about what is being changed for what reason and everyone has agreed to give the changes a try.
 
-[Back to README](README.md)
+[Back to course outline](course_outline.md)
