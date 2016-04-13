@@ -51,7 +51,6 @@ Although there's of course much more to REST, understanding that it's all about
 *resources*/*nouns* (like restaurants in this example), and *verbs*
 (POST/GET/PATCH/DELETE) is the main thing you need to understand.
 
-
 ## More Resources (geddit?)
 
 - [A beginners guide to REST](https://codeplanet.io/principles-good-restful-api-design/)
@@ -60,5 +59,5 @@ Although there's of course much more to REST, understanding that it's all about
 
 ## Exercises
 
-- Design the urls for a RESTful API for the Makers Bnb project (a clone of Airbnb)
-- Design a RESTful API for Gmail
+- Design the url schema for a RESTful API for the Makers Bnb project (a clone of Airbnb)
+- Design a RESTful API schema for Gmail
