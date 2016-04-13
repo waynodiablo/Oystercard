@@ -715,7 +715,7 @@ Let's write a test:
 ...
 context 'viewing restaurants' do
 
-  let!(:kfc){Restaurant.create(name:'KFC')}
+  let!(:kfc){ Restaurant.create(name:'KFC') }
 
   scenario 'lets a user view a restaurant' do
    visit '/restaurants'
@@ -876,7 +876,7 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 context 'deleting restaurants' do
 
-  before {Restaurant.create name: 'KFC'}
+  before { Restaurant.create name: 'KFC' }
 
   scenario 'removes a restaurant when a user clicks a delete link' do
     visit '/restaurants'
@@ -945,7 +945,7 @@ Let's add some reviews for our restaurants.
 require 'rails_helper'
 
 feature 'reviewing' do
-  before {Restaurant.create name: 'KFC'}
+  before { Restaurant.create name: 'KFC' }
 
   scenario 'allows users to leave a review using a form' do
      visit '/restaurants'
@@ -1185,7 +1185,7 @@ But our expectation of `not_to be_valid` is pretty vague – a restaurant might 
 ```ruby
 require 'spec_helper'
 
-describe Restaurant, :type => :model do
+describe Restaurant, type: :model do
   it 'is not valid with a name of less than three characters' do
     restaurant = Restaurant.new(name: "kf")
     expect(restaurant).to have(1).error_on(:name)
@@ -1203,7 +1203,7 @@ To pass this test we need to add a validation to our restaurant model.
 `app/models/restaurant.rb`:
 
 ```ruby
-validates :name, length: {minimum: 3}
+validates :name, length: { minimum: 3 }
 ```
 
 That will pass our model test – the model will now prevent restaurants with a name shorter than 3 characters from being saved – but not the original feature test. Let's fix our feature test now.
@@ -1273,7 +1273,7 @@ end
 This test fails because we haven't implemented a validation on uniqueness yet. Fix it by updating this line in your restaurant model as follows:
 
 ```ruby
-validates :name, length: {minimum: 3}, uniqueness: true
+validates :name, length: { minimum: 3 }, uniqueness: true
 ```
 
 (RailsGuides has lots of information on the [different validations](http://guides.rubyonrails.org/active_record_validations.html) that are available to you.)
@@ -1285,7 +1285,7 @@ Lets also make sure that the rating cannot be more than 5. Add a `review_spec.rb
 ```ruby
 require 'rails_helper'
 
-describe Review, :type => :model do
+describe Review, type: :model do
   it "is invalid if the rating is more than 5" do
     review = Review.new(rating: 10)
     expect(review).to have(1).error_on(:rating)
