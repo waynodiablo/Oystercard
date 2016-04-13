@@ -3,7 +3,7 @@
 [Back to the Challenge Map](0_challenge_map.md)
 
 > You get a van, Jez. We could be men...with ven.
-> _Superhands, Peep Show_
+> _Super Hans, Peep Show_
 
 Now we have a system capable of fulfilling all of our User Stories, and therefore all of our features. Our Unit Tests are isolated, and our Feature Tests are thorough.
 
