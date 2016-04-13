@@ -54,8 +54,8 @@ Although there's of course much more to REST, understanding that it's all about
 ## More Resources (geddit?)
 
 - [A beginners guide to REST](https://codeplanet.io/principles-good-restful-api-design/)
-- [A simple guide to
-  HTTP](https://www.safaribooksonline.com/library/view/head-first-servlets/9780596516680/ch01s08.html) - click on the next link on the top right to keep reading, there's some good diagrams here!
+- [A simple guide to HTTP](https://www.safaribooksonline.com/library/view/head-first-servlets/9780596516680/ch01s08.html) - click on the next link on the top right to keep reading, there's some good diagrams here!
+- [GitHub has a well-designed RESTful API that's worth taking a look](https://developer.github.com/v3/)
 
 ## Exercises
 
