@@ -4,6 +4,8 @@
 
 You now have a static website with some basic data binding functionality going on thanks to some Angular magic. Now we need to break the magic down so we can build a simple 'To Do' List.
 
+In this challenge, you will set up the *root module* of an Angular application.
+
 ### Challenge Setup
 
 Over the next few challenges, we're going to try and build a basic 'To Do' list. This is the standard project frontend developers build when they are learning a new frontend framework. Later, you'll build the 'To Do' list in a Test-Driven style. There are many Frontend frameworks, and having one unified project helps to understand the difference between them. If you are interested in Frontend development, you should build lots of To Do lists.
