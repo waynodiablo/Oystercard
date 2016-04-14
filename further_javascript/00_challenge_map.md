@@ -23,4 +23,4 @@ Your aim for this week is to answer 'yes' with some confidence to the following 
 1. [Setting up with Angular](01_setting_up_with_angular.md)
 2. [Angular Modules](02_angular_modules.md)
 3. [Using a Controller to keep track of State](03_using_a_controller_to_keep_track_of_state.md)
-4. [More than one thing](04_more_that_one_thing.md)
+4. [More than one thing](04_more_than_one_thing.md)

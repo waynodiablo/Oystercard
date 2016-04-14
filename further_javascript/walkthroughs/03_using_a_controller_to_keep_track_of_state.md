@@ -57,7 +57,7 @@ toDoApp.controller('ToDoController', function() {
 
 Great! We now have a controller with some **state**. The state is a string, equal to `"ToDo1"`. Let's render this state in our HTML.
 
-First, we need to hook our controller module up to our HTML. First, we include our script in the HTML (below Angular and below our root module declaration script, `app.js`). 
+First, we need to hook our controller module up to our HTML. Before we start, don't forget to include our `controllers.js` script in our `<head>` (below Angular and below our root module declaration script, `app.js`). 
 
 Remember how we used `ng-app` to hook our application module up to our HTML? We can do a similar thing; this time using a different `ng-` keyword. Specifically, `ng-controller`.
 
@@ -106,7 +106,7 @@ OK, now let's use {{Mustache}} syntax to interpolate the `todo` attribute on our
 </html>
 ```
 
-> Notice how {{Mustache}} syntax works kind of like Ruby's "#{string interpolation}".
+> Notice how {{Mustache}} syntax works kind of like Ruby's `"#{string interpolation}"`.
 
 We're done! We can now track application state using the controller, so long as that state is a simple string. Now let's try using more complex state, containing more than one item.
 
