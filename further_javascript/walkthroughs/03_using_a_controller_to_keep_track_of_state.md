@@ -55,13 +55,13 @@ toDoApp.controller('ToDoController', function() {
 });
 ```
 
-Great! We now have a controller with some *state*. The state is a string, equal to `"ToDo1"`. Let's render this state in our HTML.
+Great! We now have a controller with some **state**. The state is a string, equal to `"ToDo1"`. Let's render this state in our HTML.
 
 First, we need to hook our controller module up to our HTML. First, we include our script in the HTML (below Angular and below our root module declaration script, `app.js`). 
 
 Remember how we used `ng-app` to hook our application module up to our HTML? We can do a similar thing; this time using a different `ng-` keyword. Specifically, `ng-controller`.
 
-> These `ng-` (pronounced 'ng' like 'codi*ng*' or 'A*ng*ular') keywords are called `directives`, and they act as the main way to bond your JavaScript modules and HTML. In fact, Angular is essentially directives, modules, and Mustache syntax. Its simplicity is key to its popularity.
+> These `ng-` (pronounced 'ng' like 'codi**ng**' or 'A**ng**ular') keywords are called `directives`, and they act as the main way to bond your JavaScript modules and HTML. In fact, Angular is essentially directives, modules, and Mustache syntax. Its simplicity is key to its popularity.
 
 ```html
 <!doctype html>

@@ -4,7 +4,7 @@
 
 You now have a static website with some basic data binding functionality going on thanks to some Angular magic. Now we need to break the magic down so we can build a simple 'To Do' List.
 
-In this challenge, you will set up the *root module* of an Angular application.
+In this challenge, you will set up the **root module** of an Angular application.
 
 ### Challenge Setup
 

@@ -4,7 +4,7 @@
 
 Out application is now tracking state via a controller (and specifically, a `ViewModel`). But we want to display multiple things on the page!
 
-In this challenge, you will store more than one item in the ViewModel, and iterate over it using *`ng-repeat`*. You will also use more complex Mustache syntax in the *Template* to interpolate results to the *View*.
+In this challenge, you will store more than one item in the ViewModel, and iterate over it using **`ng-repeat`**. You will also use more complex Mustache syntax in the **Template** to interpolate results to the **View**.
 
 ### Learning Objectives covered
 - Use iteration directives.

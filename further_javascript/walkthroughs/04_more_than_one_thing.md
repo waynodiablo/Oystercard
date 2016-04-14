@@ -49,14 +49,14 @@ toDoApp.controller('ToDoController', function() {
 });
 ```
 
-Let's take a look at our *View* (that is, the rendered result of our application). Currently we output (some classes omitted for brevity):
+Let's take a look at our **View** (that is, the rendered result of our application). Currently we output (some classes omitted for brevity):
 
 ```html
 <p>{ text: "ToDo1", completed: true }</p>
 <p>{ text: "ToDo2", completed: false }</p>
 ```
 
-> Angular Views are not the same as Rails views. In Angular, the View is what is actually output as the rendered result of combining javascript objects - like the controller - and a *Template*. Rails views are, in Angular-speak, *Templates*. Technically, Angular Views are 'projections' of the ViewModel through a Template.
+> Angular Views are not the same as Rails views. In Angular, the View is what is actually output as the rendered result of combining javascript objects - like the controller - and a **Template**. Rails views are, in Angular-speak, **Templates**. Technically, Angular Views are 'projections' of the ViewModel through a Template.
 
 Our HTML View now prints the entire objects, but we want to _interpolate_ their attributes into a nice, human-readable sentence like this:
 

@@ -2,9 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Angular runs entirely on the Client. That means that you don't need a Server to run, load, or deploy an Angular app. A *server-less* website is usually called a *static* website.
+Angular runs entirely on the Client. That means that you don't need a Server to run, load, or deploy an Angular app. A **server-less** website is usually called a **static** website.
 
-In this challenge, you will create a *static* webpage and set up an *Angular application* within that static site.
+In this challenge, you will create a **static** webpage and set up an **Angular application** within that static site.
 
 ### Learning Objectives covered
 - Set up a static website.

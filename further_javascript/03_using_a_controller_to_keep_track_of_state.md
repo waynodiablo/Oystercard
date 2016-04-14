@@ -4,11 +4,11 @@
 
 You now have a static website hooked up to an Angular application via a root module. At the moment, your website can only store _one thing_: whatever string is typed into the input.
 
-This isn't much use: we want to store multiple things in our application, and to display multiple things on a page. To do that, we need something that can track the *state* of the application (much like we need `@instance_variables` to store the *state* of a Ruby object).
+This isn't much use: we want to store multiple things in our application, and to display multiple things on a page. To do that, we need something that can track the **state** of the application (much like we need `@instance_variables` to store the **state** of a Ruby object).
 
-In this challenge, you will set up an *Angular Controller* and use it to keep track of the *state* of your application.
+In this challenge, you will set up an **Angular Controller** and use it to keep track of the **state** of your application.
 
-> State tracked by a Controller is often referred to as a *ViewModel*.
+> State tracked by a Controller is often referred to as a **ViewModel**.
 
 ### Learning Objectives covered
 - Use an Angular controller to keep track of a ViewModel.
