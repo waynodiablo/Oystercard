@@ -21,3 +21,4 @@ Your aim for this week is to answer 'yes' with some confidence to the following 
 # Challenges
 
 1. [Setting up with Angular](01_setting_up_with_angular.md)
+2. [More than one thing](02_more_than_one_thing.md)
