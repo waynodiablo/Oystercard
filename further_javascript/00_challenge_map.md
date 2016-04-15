@@ -14,7 +14,7 @@ This week, you will:
 
 - 'Spike' a basic Angular app without tests, so you can understand how Angular fits together (1 Day)
 - Test-Drive that same Angular app, so you can understand how Angular handles feature and unit testing (1 Day)
-- Spike and Test Drive a more complex Angular project (3 Days).
+- Spike and Test Drive a more complex Angular project (2 Days).
 
 Your aim for this week is to answer 'yes' with some confidence to the following question: *Can I build a frontend application?*
 
