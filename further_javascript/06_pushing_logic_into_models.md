@@ -14,12 +14,12 @@ In this challenge, we will upgrade our object literals to more functional object
 
 ### Challenge Setup
 
-Angular refers to parts of the application that do 'heavy lifting' as **services**. Confusingly, there are two main kinds of service:
+Angular refers to parts of the application that do 'heavy lifting' as **services**. Services are all built in the same way, but differ in how they're used:
 
-- **Factories** for building models, and
-- **Services** (confusing naming!) for doing other things, such as connecting to APIs.
+- **Factories** for building models,
+- **Services** for doing other things, such as connecting to APIs.
 
-Both Factories and Services are kinds of Angular service. Here, we're using a Factory. Next challenge, we'll use a Service. You'll learn more about the difference between them by using both.
+Both Factories and Services are kinds of Angular service (Google is well aware that they've messed up the naming here). Here, we're using a Factory. Next challenge, we'll use a Service. You'll learn more about the difference between them by using both.
 
 ### Learning Objectives covered
 - Use Factories to construct Models.
@@ -34,6 +34,6 @@ Both Factories and Services are kinds of Angular service. Here, we're using a Fa
 
 ### Resources
 
-- [Angular Docs: Factory Reciple](https://docs.angularjs.org/guide/providers#factory-recipe)
+- [Angular Docs: Factory Recipe](https://docs.angularjs.org/guide/providers#factory-recipe)
 
 ### [Walkthrough](walkthroughs/06_pushing_login_into_models.md)
