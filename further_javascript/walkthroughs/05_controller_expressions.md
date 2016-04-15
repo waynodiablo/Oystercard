@@ -87,7 +87,7 @@ Let's now update the controller expression to use our custom text:
 toDoApp.controller('ToDoController', function() {
   var self = this;
 
-  self.todos = [{text: "Hi", completed: false}];
+  self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
 
   // we want to accept a parameter...
   self.addToDo = function(todoText) {
@@ -126,7 +126,7 @@ And in the Controller, an expression:
 toDoApp.controller('ToDoController', function() {
   var self = this;
 
-  self.todos = [{text: "Hi", completed: false}];
+  self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
 
   self.addToDo = function(todoText) {
     self.todos.push({text: todoText, completed: true})
