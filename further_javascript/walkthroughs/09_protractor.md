@@ -26,7 +26,7 @@ Also, don't forget to `npm install --save-dev protractor` within your project - 
 
 ## Configuration
 
-Now create the protractor configuration file. Create a `test` folder and copy the following into `test/protractor-conf.js`:
+Now create the protractor configuration file. Create a `test` folder and copy the following into `test/protractor.conf.js`:
 
 ```js
 exports.config = {
@@ -54,7 +54,7 @@ The `describe` and `it` syntax is from the Jasmine framework. `browser` is a glo
 
 Now run the test with
 
-    protractor test/protractor-conf.js
+    protractor test/protractor.conf.js
 
 You should see a Chrome browser window open up and navigate to the app, then close itself (this should be very fast!).
 
@@ -81,15 +81,25 @@ retries looking for angular exceeded
 ```
 with the browser just showing a list of the directories in your app directory.
 
-You need to create an `index.html` page, and load in `angular.js` which
-Protractor needs before it can do anything else. Copy into `app/index.html`
+You need to create an `index.html` page, and load in an angular which
+Protractor needs before it can do anything else.
+
+Copy into `app/js/app.js`
+
+
+```javascript
+var toDoApp = angular.module('toDoApp', []);
+```
+
+and then in `app/index.html`
 
 ```html
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="toDoApp">
   <head>
     <meta charset="utf-8">
     <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
     <title>Todos App</title>
   </head>
   <body>

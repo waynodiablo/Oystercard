@@ -20,8 +20,8 @@ Don't forget to do this challenge test-first!
 - [ ] Install Protractor
 - [ ] Create a simple test that checks for "Hello world" on the page
 - [ ] Create a command called `npm server` which starts a `http-server`
-- [ ] Set up a basic `index.html` with a title of "Todos app" and containing the
-  `angular.js` file you installed previously using bower.
+- [ ] Set up `index.html` with a title of "Todos app", and load in an angular
+  module called `toDoApp`
 - [ ] Get a green feature test
 
 ### Resources
