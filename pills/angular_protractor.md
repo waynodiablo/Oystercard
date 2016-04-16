@@ -72,3 +72,4 @@ $('create').click();
 
 - [Debugging Protractor](https://github.com/angular/protractor/blob/master/docs/debugging.md)
 - [Protractor Docs](https://angular.github.io/protractor/#/)
+- [Protractor API Reference](http://angular.github.io/protractor/#/api)
