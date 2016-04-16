@@ -24,7 +24,7 @@ your app to help you write your tests.
 
 ### Resources
 
-- [Protractor selectors](http://luxiyalu.com/protractor-locators-selectors/)
+- :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/angular_protractor.md)
 - [Karma documentation](https://docs.angularjs.org/guide/unit-testing)
 
 ### [Walkthrough](walkthroughs/10_karma.md)

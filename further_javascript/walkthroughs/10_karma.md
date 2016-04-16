@@ -11,7 +11,7 @@ a slightly more interesting feature test
 ```js
 describe('Todos tracker', function() {
   it('has a todo', function() {
-    browser.get('http://localhost:8080');
+    browser.get('/');
     var todo = $('#todo');
     expect(todo.getText()).toEqual('ToDo1');
   });
@@ -73,16 +73,16 @@ Notice that this will throw an error since we haven't got any tests!
 
 ## Writing our first unit test
 
-Create a file in your `test/unit` folder called **toDoController.spec.js** and enter the following code - does any of it look familiar from RSpec?
+Create a file in your `test/unit` folder called **ToDoController.spec.js** and enter the following code - does any of it look familiar from RSpec?
 
 ```js
-describe('toDoController', function() {
+describe('ToDoController', function() {
   beforeEach(module('toDoApp'));
 
   var ctrl;
 
   beforeEach(inject(function($controller) {
-    ctrl = $controller('toDoController');
+    ctrl = $controller('ToDoController');
   }));
 });
 ```
@@ -97,10 +97,10 @@ it('initialises with a toDo', function() {
 });
 ```
 
-Restart karma by running `karma start test/karma.conf.js`. You should be getting a failed test now, this is because we need to define a controller. Create a file named `controllers/toDoController.js` and define a controller inside the file:
+Restart karma by running `karma start test/karma.conf.js`. You should be getting a failed test now, this is because we need to define a controller. Create a file named `controllers/ToDoController.js` and define a controller inside the file:
 
 ```js
-toDoApp.controller('toDoController', [function() {
+toDoApp.controller('ToDoController', [function() {
   this.todo = "ToDo1";
 }]);
 ```
@@ -114,14 +114,14 @@ up the controller to our `index.html` file, by adding a script tag that points
 to the controller
 
 ```html
-<script src="js/controllers/toDoController.js"></script>
+<script src="js/controllers/ToDoController.js"></script>
 ```
 
 and finally change the body to:
 
 ```html
 <body>
-  <div id="todo" ng-controller="toDoController as controller">
+  <div id="todo" ng-controller="ToDoController as controller">
     {{ controller.todo }}
   </div>
 </body>

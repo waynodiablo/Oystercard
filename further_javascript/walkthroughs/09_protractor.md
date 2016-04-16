@@ -31,11 +31,12 @@ Now create the protractor configuration file. Create a `test` folder and copy th
 ```js
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['e2e/*.js']
+  specs: ['e2e/*.js'],
+  baseUrl: 'http://localhost:8000'
 }
 ```
 
-This configuration tells Protractor where your test files (`specs`) are, and where to talk to your Selenium Server (`seleniumAddress`). It will use the defaults for all other configuration. Chrome is the default browser.
+This configuration tells Protractor where your test files (`specs`) are, where to talk to your Selenium Server (`seleniumAddress`), and the url where your angular `http-server` will be running (`baseUrl`). It will use the defaults for all other configuration. Chrome is the default browser.
 
 ## Writing a test
 
@@ -44,7 +45,8 @@ With our configuration setup, we're ready to write our first test. The usual Ang
 ```javascript
 describe('Todos tracker', function() {
   it('has a title', function() {
-    browser.get('http://localhost:8080');
+    // We don't need to put in the full url as we set baseUrl in our config
+    browser.get('/');
     expect(browser.getTitle()).toEqual('Todos App');
   });
 });
