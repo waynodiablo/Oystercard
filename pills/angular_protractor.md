@@ -43,6 +43,7 @@ $$('ul li')                   // select all children inside parent - note the tw
 $$('ul li').first()           // select first of children
 $$('ul li').last()            // select last of children
 $$('ul li').get(index)        // select index-th of children
+$$('ul li').count()           // count the number of elements
 ```
 
 ## Protractor Commands
