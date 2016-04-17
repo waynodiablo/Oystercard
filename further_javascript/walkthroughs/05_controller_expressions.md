@@ -27,7 +27,9 @@ Before we wire this controller expression to our Template, let's rewrite our ref
 // in controllers.js
 
 toDoApp.controller('ToDoController', function() {
-  // 'hoist' the current context to the controller
+  // Save this to a variable as this can change depending on the context of
+where it is being called, see
+  // https://github.com/johnpapa/angular-styleguide/tree/master/a1#style-y032
   var self = this;
 
   self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
@@ -67,13 +69,14 @@ Let's add an input to our HTML so we can make a custom ToDo. We'll use `ng-model
       {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
     </p>
     <!-- 
-      ng-model will set aside some named scope
-      here the named scope is 'todoText'
+      ng-model allows us to tell angular to link
+      what happens on the input to a parameter in
+      our controller, in this case one called "todoText"
      -->
     <input type="text" ng-model="todoText">
     <!-- 
-      now we can pass that chunk of named scope
-      into our controller expression as a parameter
+      now we can pass that parameter (todoText)
+      into our controller expression as an argument
     -->
     <button ng-click="ctrl.addToDo(todoText);">Add a ToDo</button>
   </div>
@@ -92,7 +95,7 @@ toDoApp.controller('ToDoController', function() {
   // we want to accept a parameter...
   self.addToDo = function(todoText) {
     // ...and use that parameter to construct our custom text!
-    self.todos.push({text: todoText, completed: true})
+    self.todos.push({text: todoText, completed: false})
   };
 });
 ```
@@ -129,7 +132,7 @@ toDoApp.controller('ToDoController', function() {
   self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
 
   self.addToDo = function(todoText) {
-    self.todos.push({text: todoText, completed: true})
+    self.todos.push({text: todoText, completed: false})
   };
 
   // the simplest thing is to just pop() the last ToDo
