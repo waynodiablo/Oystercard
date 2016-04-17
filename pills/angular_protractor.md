@@ -37,6 +37,8 @@ $('.some-class')             // element(by.className('.some-class'))
 $('tag-name')               // element(by.tagName('tag-name'))
 $('[ng-message=required]')   // remember to leave out the double quotes around the value of attribute
 $('#parent #child')          // select one child inside parent
+$('input').sendKeys('hello') // input a value in form
+$('button').click()          // click a button
 $$('ul li')                   // select all children inside parent - note the two $$ symbols, equivalent of `element.all`
 $$('ul li').first()           // select first of children
 $$('ul li').last()            // select last of children
