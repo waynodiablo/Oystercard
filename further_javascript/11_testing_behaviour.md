@@ -20,7 +20,7 @@ Protractor and unit tests using Karma.
   it is initialised with two ToDos, one completed and one not completed, as you
 did in [Challenge 4](04_more_than_one_thing.md)
 - [ ] Test adding a new ToDo
-- [ ] Test removing a new ToDo
+- [ ] Test removing a ToDo
 
 ### Resources
 
