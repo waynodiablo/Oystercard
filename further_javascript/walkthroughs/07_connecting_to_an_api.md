@@ -5,30 +5,30 @@
 Let's construct a **Service** that connects to our API:
 
 ```javascript
-// in todoFetcher.js
+// in ToDoService.js
 
-toDoApp.service('todoFetcher', function() {
+toDoApp.service('ToDoService', function() {
   // service code
 });
 ```
 
 > This is how you construct the barebones of an Angular Service.
 
-Services are a service recipe, like Factories. Services are designed to be **singletons**: there exists only one of them in an application. So, there is only one `todoFetcher` in our entire application, and we can use it from wherever we like. In addition, they will return the return value from a function when injected; where Factories will return a constructor itself. Confused? Here are some [great explanations of the differences](http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory).
+Services are a service recipe, like Factories. Services are designed to be **singletons**: there exists only one of them in an application. So, there is only one `ToDoService` in our entire application, and we can use it from wherever we like. In addition, they will return the return value from a function when injected; where Factories will return a constructor itself. Confused? Here are some [great explanations of the differences](http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory).
 
 Let's write the **code we wish we had** in the controller, and inject this service:
 
 ```javascript
 // in controllers.js
 
-// add the todoFetcher to the list of injections
-toDoApp.controller('ToDoController', ['todoFetcher', 'todoFactory', function(todoFetcher, todoFactory) {
+// add the ToDoService to the list of injections
+toDoApp.controller('ToDoController', ['ToDoService', 'ToDoFactory', function(ToDoService, ToDoFactory) {
   var self = this;
   // this is the code we wished we had
-  self.todos = todoFetcher.index();
+  self.todos = ToDoService.getAll();
 
   self.addToDo = function(todoText) {
-    self.todos.push(new Todo(todoText));
+    self.todos.push(new ToDoFactory(todoText));
   };
 
   self.removeToDo = function() {
@@ -37,13 +37,13 @@ toDoApp.controller('ToDoController', ['todoFetcher', 'todoFactory', function(tod
 }]);
 ```
 
-Now to make that code work! First, we need it to stop throwing an error because the method isn't defined. So, in our service, we'll define a method `index()`:
+Now to make that code work! First, we need it to stop throwing an error because the method isn't defined. So, in our service, we'll define a method `getAll()`:
 
 ```javascript
-// in todoFetcher.js
+// in ToDoService.js
 
-toDoApp.service('todoFetcher', function() {
-  this.index = function() {
+toDoApp.service('ToDoService', function() {
+  this.getAll = function() {
     // code that constructs an array of Todos from the API
   };
 });
@@ -52,11 +52,11 @@ toDoApp.service('todoFetcher', function() {
 We can use the Angular module `$http` to fetch data from the API. Let's inject it into our service, and set up the structure:
 
 ```javascript
-// in todoFetcher.js
+// in ToDoService.js
 
 // remember Angular's weird array injection thing
-toDoApp.service('todoFetcher', ['$http', function($http) {
-  this.index = function() {
+toDoApp.service('ToDoService', ['$http', function($http) {
+  this.getAll = function() {
     // use $http's built-in .get() method
     // that uses promises to stay synchronous
     $http.get('<URL>')
@@ -74,10 +74,10 @@ toDoApp.service('todoFetcher', ['$http', function($http) {
 Inside our `$http.get()` method, we want to call our URL. We know that the base URL is http://quiet-beach-24792.herokuapp.com, and that the resource, todos, are RESTful. So our URL will be `url/resources.json`, or http://quiet-beach-24792.herokuapp.com/todos.json. Let's make a GET request from our service to that URL, and see what we get back:
 
 ```javascript
-// in todoFetcher.js
+// in ToDoService.js
 
-toDoApp.service('todoFetcher', ['$http', function($http) {
-  this.index = function() {
+toDoApp.service('ToDoService', ['$http', function($http) {
+  this.getAll = function() {
     // update our URL
     $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
       .then(function(resp) {
@@ -94,19 +94,21 @@ Our service needs to return an array of `Todo` objects, and it's currently recei
 
 ```javascript
 
-toDoApp.service('todoFetcher', ['$http', function($http) {
-  this.index = function() {
+toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http,
+ToDoFactory) {
+  this.getAll = function() {
     // let's initialize an empty array...
     var todos = [];
     $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
-      .then(function(resp) {
+      .then(function(response) {
         // ...and iterate through the JSON objects...
-        for(var i = 0; i < resp.data.length; i++) {
+        response.data.forEach(function(data) {
           // ...and construct a new Todo from each JSON object
           // pushing them to the todos array...
-          todos.push(new Todo(resp.data[i].text))
-        }
+          todos.push(new ToDoFactory(data.text));
+        });
       }, function(err) {});
+
     // ...then we return the todos array we constructed
     return todos;
   };
@@ -118,28 +120,28 @@ It works! Loading the page, we see a list of Todos loaded from the API. We've bu
 Let's refactor our service a bit, as it's looking super-messy. There are some private methods begging to get out. Here's my efforts (you can do better!):
 
 ```javascript
-// in todoFetcher.js
-
-toDoApp.service('todoFetcher', ['$http', function($http) {
+// in ToDoService.js
+toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFactory) {
   var self = this;
 
-  self.index = function() {
+  self.getAll = function() {
     var todos = [];
-    self._fetchTodosFromApi(todos);
+    _fetchTodosFromApi(todos);
     return todos;
   };
 
-  self._fetchTodosFromApi = function(todos) {
+  // Why have we not set this private function to self?
+  function _fetchTodosFromApi(todos) {
     $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
       .then(function(resp) {
-        self._handleResponseFromApi(resp.data, todos)
+        _handleResponseFromApi(resp.data, todos)
       }, function(err) {});
   };
 
-  self._handleResponseFromApi = function(data, todos) {
-    for(var i = 0; i < data.length; i++) {
-      todos.push(new Todo(data[i].text))
-    }
+  function _handleResponseFromApi (data, todos) {
+    data.forEach(function(toDoData){
+      todos.push(new ToDoFactory(toDoData.text));
+    });
   }
 }]);
 ```
