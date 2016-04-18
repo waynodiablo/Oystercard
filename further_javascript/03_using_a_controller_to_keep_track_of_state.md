@@ -17,7 +17,7 @@ In this challenge, you will set up an **Angular Controller** and use it to keep 
 ### To complete this challenge, you will need to:
 
 - [ ] Create a file, `controllers.js`, that will store your Angular Controllers.
-- [ ] Build an Angular Controller, `ToDoController`, inside `controllers.js`. Use the [Angular website](https://angularjs.org/) ('Add Some Control') to guide you.
+- [ ] Build an Angular Controller, `ToDoController`, inside `controllers.js`.
 - [ ] Add an attribute to your `ToDoController` called `todo`.
 - [ ] Set this attribute equal to a string `"ToDo1"`.
 - [ ] Bind your `ToDoController` to your HTML inside `index.html` using `ng-controller`. Remember to include the `controllers.js` script in your HTML first.
