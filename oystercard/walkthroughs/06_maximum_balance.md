@@ -7,7 +7,7 @@ This checkbox gives clear directions for the expectation of our test, and thus t
 ``` ruby
 
   it 'raises an error if the maximum balance is exceeded' do
-    maximum_balance = Oystercard::BALANCE_LIMIT
+    maximum_balance = Oystercard::MAXIMUM_BALANCE
     subject.top_up(maximum_balance)
     expect{ subject.top_up 1 }.to raise_error 'Maximum balance exceeded'
   end
