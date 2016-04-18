@@ -10,7 +10,7 @@ At current, our models are just object literals (constructed on-the-fly using `{
 self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
 ```
 
-In this challenge, we will upgrade our object literals to more functional objects that can take more of the 'heavy lifting' of construction our of the Controller. In general programming, an object that handles the 'heavy lifting' of construction is called a **Factory**.
+In this challenge, we will upgrade our object literals to more functional objects that can take more of the 'heavy lifting' of construction out of the Controller. In general programming, an object that handles the 'heavy lifting' of construction is called a **Factory**.
 
 ### Challenge Setup
 
