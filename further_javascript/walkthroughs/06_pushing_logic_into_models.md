@@ -69,7 +69,7 @@ When we couple modules together in Angular, we have to _inject_ them in to one a
 
 ```javascript
 // in controllers.js
-toDoApp.controller('ToDoController', ['todoFactory', function() {
+toDoApp.controller('ToDoController', ['todoFactory', function(todoFactory) {
   // controller code
 }]);
 ```
@@ -80,7 +80,7 @@ OK, let's refactor the `addToDo()` method in our `ToDoController` to use a Facto
 
 ```diff
 // in controllers.js
-toDoApp.controller('ToDoController', ['todoFactory', function() {
+toDoApp.controller('ToDoController', ['todoFactory', function(todoFactory) {
   var self = this;
 
   self.todos = [];

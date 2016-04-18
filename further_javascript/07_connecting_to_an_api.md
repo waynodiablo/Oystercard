@@ -11,7 +11,7 @@ In this challenge, you will import ToDos from an API via a **Service**.
 
 ### To complete this challenge, you will need to:
 
-- [ ] Construct an Angular Service that has one method, `index()`.
+- [ ] Construct an Angular Service that has one public method, `index()`.
 - [ ] Within the `index()` method, retrieve all ToDos from an API located at https://quiet-beach-24792.herokuapp.com/ . Think about the precise path for todos: it follows RESTful conventions.
 - [ ] Refactor your controller such that when the application loads, it populates the contents of `this.todos` with `Todo` instances created from information in the API.
 
