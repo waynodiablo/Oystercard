@@ -12,7 +12,7 @@ In this case, our 'top-level' Angular module is our application, which we will c
 var toDoApp = angular.module('toDoApp', []);
 ```
 
-> What is the empty array for?
+> The first argument is the name of the module. What is the empty array for?
 
 Now that we've declared our top-level module, we need to wire it up with the HTML we wrote. Remember to include the `app.js` in our HTML first:
 
@@ -28,6 +28,6 @@ Then we use the `ng-app` directive to 'wire' our module to our HTML (more on **d
   <!-- rest of index.html -->
 ```
 
-We have now created a named Angular module, `toDoApp`, and all HTML on this page is within its scope. Now, we will attach a controller module to our `toDoApp` module, so we can track (and later, manipulate) application state.
+We have now created a named Angular module, `toDoApp`, and all HTML on this page is within its scope. Now, we will attach a controller to our `toDoApp` module, so we can track (and later, manipulate) application state.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
