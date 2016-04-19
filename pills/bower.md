@@ -14,7 +14,7 @@ npm install -g bower
 
 Let's check everything is okay, run `node -v` and `bower -v` and make sure they both return a version number.
 
-Now lets get some boilerplate working. Make a new directory, cd into it then run:
+Now let's get some boilerplate working. Make a new directory, cd into it then run:
 
 ```
 npm install --save-dev bower
