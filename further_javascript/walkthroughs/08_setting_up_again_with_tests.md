@@ -29,7 +29,7 @@ Now let's use npm to install bower. Bower is a npm package (like a Gem in Ruby)
 which is used for installing front-end JavaScript, CSS, HTML and font packages.
 
 ```shell
-npm install bower --save-dev
+npm install bower -g --save-dev
 ```
 
 > We put `--save-dev` so that bower gets saved in our `package.json` as a
