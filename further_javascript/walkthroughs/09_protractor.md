@@ -20,7 +20,7 @@ Now start up a server with:
 
     webdriver-manager start
 
-(You may need to install a Java runtime if you don't have one already.)
+(You may need to install a [Java runtime](https://helpx.adobe.com/x-productkb/global/install-java-jre-mac-os.html) if you don't have one already.)
 
 This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. Leave this server running throughout the tutorial. You can see information about the status of the server at `http://localhost:4444/wd/hub`.
 
