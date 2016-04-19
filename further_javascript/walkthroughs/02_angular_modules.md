@@ -12,7 +12,7 @@ In this case, our 'top-level' Angular module is our application, which we will c
 var toDoApp = angular.module('toDoApp', []);
 ```
 
-> What is the empty array for?
+> The first argument is the name of the module. What is the empty array for?
 
 Now that we've declared our top-level module, we need to wire it up with the HTML we wrote. Remember to include the `app.js` in our HTML first:
 
