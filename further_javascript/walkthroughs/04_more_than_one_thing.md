@@ -45,15 +45,15 @@ Simple strings are dull, though: we need to show more complex ToDo items. Let's 
 // in controllers.js
 toDoApp.controller('ToDoController', function() {
   // two objects, each with two attributes
-  this.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
+  this.todos = [{ task: "ToDo1", completed: true }, { task: "ToDo2", completed: false }];
 });
 ```
 
 Let's take a look at our **View** (that is, the rendered result of our application). Currently we output (some classes omitted for brevity):
 
 ```html
-<p>{ text: "ToDo1", completed: true }</p>
-<p>{ text: "ToDo2", completed: false }</p>
+<p>{ task: "ToDo1", completed: true }</p>
+<p>{ task: "ToDo2", completed: false }</p>
 ```
 
 > Angular Views are not the same as Rails views. In Angular, the View is what is actually output as the rendered result of combining javascript objects - like the controller - and a **Template**. Rails views are, in Angular-speak, **Templates**. Technically, Angular Views are 'projections' of the ViewModel through a Template.
@@ -81,7 +81,7 @@ So, we need to update the Mustache syntax in our Template:
     <div ng-controller="ToDoController as ctrl">
       <p ng-repeat="todo in ctrl.todos">
         <!-- I've used a ternary (shorthand) operator to output the completed status -->
-        {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
+        {{ todo.task }}: {{ todo.completed ? "completed" : "not completed" }}
       </p>
     </div>
   </body>
