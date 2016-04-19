@@ -35,5 +35,6 @@ Both Factories and Services are kinds of Angular service (Google is well aware t
 ### Resources
 
 - [Angular Docs: Factory Recipe](https://docs.angularjs.org/guide/providers#factory-recipe)
+- [Angular Style Guide: Factories](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#factories)
 
 ### [Walkthrough](walkthroughs/06_pushing_logic_into_models.md)

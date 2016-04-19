@@ -28,7 +28,7 @@ Before we wire this controller expression to our Template, let's rewrite our ref
 
 toDoApp.controller('ToDoController', function() {
   // Save this to a variable as this can change depending on the context of
-where it is being called, see
+  // where it is being called, see
   // https://github.com/johnpapa/angular-styleguide/tree/master/a1#style-y032
   var self = this;
 

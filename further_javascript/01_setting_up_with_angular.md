@@ -21,5 +21,6 @@ In this challenge, you will create a **static** webpage and set up an **Angular 
 
 - [A minimal HTML5 document (SitePoint)](http://www.sitepoint.com/a-minimal-html-document-html5-edition/)
 - [Official Angular website](https://angularjs.org/)
+- [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
 ### [Walkthrough](walkthroughs/01_setting_up_with_angular.md)

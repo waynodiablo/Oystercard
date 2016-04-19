@@ -28,6 +28,8 @@ Don't forget to do this challenge test-first!
 
 - :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/angular_protractor.md)
 - [Proctractor documentation](http://angular.github.io/protractor/#/)
+- [Protractor
+  locators](https://github.com/angular/protractor/blob/master/docs/locators.md)
 - [Debugging
   Protractor](https://github.com/angular/protractor/blob/master/docs/debugging.md)
 - [npm http-server](https://www.npmjs.com/package/http-server)
