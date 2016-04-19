@@ -14,7 +14,7 @@ In this challenge, you will store more than one item in the ViewModel, and itera
 
 - [ ] Change the `todo` attribute of your `ToDoController` to use an array of strings instead of a single string. (Rename the attribute to `todos` to reflect this)
 - [ ] Use the `ng-repeat` directive in your HTML to display all ToDos in the `ToDoController`.
-- [ ] Instead of displaying simple strings, make each ToDo in `todos` a JavaScript object with two attributes: `text` (string) and `completed` (boolean).
+- [ ] Instead of displaying simple strings, make each ToDo in `todos` a JavaScript object with two attributes: `task` (string) and `completed` (boolean).
 - [ ] Use Mustache syntax to output your ToDos like this: 
 
 ```html
