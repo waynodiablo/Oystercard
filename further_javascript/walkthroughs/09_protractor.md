@@ -20,6 +20,8 @@ Now start up a server with:
 
     webdriver-manager start
 
+(You may need to install a Java runtime if you don't have one already.)
+
 This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. Leave this server running throughout the tutorial. You can see information about the status of the server at `http://localhost:4444/wd/hub`.
 
 Also, don't forget to `npm install --save-dev protractor` within your project - this will add it to the list of development dependencies, similar to what we did when installing bower, ensuring that others who use this project know that protractor is required
