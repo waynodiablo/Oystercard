@@ -53,7 +53,9 @@ toDoApp.factory('ToDoFactory', function() {
   // just like Thermostat
   var Todo = function(todoText){
     this.text = todoText;
-    this.completed = false;
+    // We can't just set a default value of false until ES6 so we have to do this
+    // See: http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function
+    this.completed = (typeof completed !== 'undefined') ? completed : false;
   };
 
   // then we return the constructor from the Factory
@@ -113,9 +115,9 @@ Now that we have a model that handles its own construction, let's add a `complet
 // in ToDoFactory.js
 
 toDoApp.factory('ToDoFactory', function() {
-  Todo = function(todoText){
+  Todo = function(todoText, completed){
     this.text = todoText;
-    this.completed = false;
+    this.completed = (typeof completed !== 'undefined') ? completed : false;
   };
 
   // we attach a new method to the Todo prototype

@@ -1,11 +1,12 @@
-# Walkthrough - Testing Factories
+# Walkthrough - Testing Services
 
-[Back to the Challenge](../12_testing_factories.md)
+[Back to the Challenge](../13_testing_services.md)
 
-The first feature we're testing for is being able to mark a ToDo as complete:
+This time around we're going to start with a unit test. We want to write a test for our `ToDoService` that returns a list of ToDo objects created by the `ToDoFactory`
 
 ```js
-// in ToDosFeature.js
+see https://docs.angularjs.org/api/ngMock/service/$httpBackend#flushing-http-requests
+// in toDosFeature.js
 it('can mark a ToDo as complete', function(){
   browser.get('/');
   var todo = $$('#todos p').last();
@@ -96,9 +97,9 @@ Now build the factory to pass this test.
 ```js
 // ToDoFactory.js
 toDoApp.factory('ToDoFactory', function() {
-  var ToDo = function(text, completed){
-    this.text = text;
-    this.completed = (typeof completed !== 'undefined') ? completed : false;
+  var ToDo = function(todoText){
+    this.text = todoText;
+    this.completed = false;
   };
 
   // we attach a new method to the Todo prototype
@@ -130,8 +131,11 @@ describe('ToDoController', function() {
 
   it('initialises with several todos', function() {
     // Create todos now using the factory
-    var todo1 = new ToDoFactory("ToDo1", true);
-    var todo2 = new ToDoFactory("ToDo2", false);
+    var todo1 = new ToDoFactory("ToDo1");
+    var todo2 = new ToDoFactory("ToDo2");
+
+    // First todo needs to be marked as complete
+    todo1.complete();
 
     expect(ctrl.todos).toEqual([todo1, todo2]);
   });
@@ -157,10 +161,13 @@ describe('ToDoController', function() {
 And our updated controller:
 
 ```js
-toDoApp.controller('ToDoController', ['ToDoFactory', function(ToDoFactory) {
+toDoApp.controller('ToDoController', ['ToDoService', 'ToDoFactory', function(ToDoService, ToDoFactory) {
   var self = this;
 
-  self.todos = [new ToDoFactory('ToDo1', true), new ToDoFactory('ToDo2', false)];
+  self.todos = [new ToDoFactory('ToDo1'), new ToDoFactory('ToDo2')];
+
+  // The first todo needs to be marked as complete
+  self.todos[0].complete();
 
   self.addToDo = function(todoText) {
     self.todos.push(new ToDoFactory(todoText));

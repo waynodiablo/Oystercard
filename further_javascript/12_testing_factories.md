@@ -1,9 +1,9 @@
-## Testing factories and services
+## Testing factories
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-As a final step in replicating the original design spike, we're going to test
-building a `ToDoFactory`.
+Now we've got the basic app working, we're going to test
+refactoring some logic into a `ToDoFactory`.
 
 You'll need to inject your factory into your unit test, the resource on injecting mocks should help you with this.
 

@@ -1,4 +1,4 @@
-# Walkthrough - More than One Thing
+# Walkthrough - Testing Behaviour
 
 [Back to the Challenge](../11_testing_behaviour.md)
 

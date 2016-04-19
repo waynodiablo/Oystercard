@@ -105,7 +105,7 @@ ToDoFactory) {
         response.data.forEach(function(data) {
           // ...and construct a new Todo from each JSON object
           // pushing them to the todos array...
-          todos.push(new ToDoFactory(data.text));
+          todos.push(new ToDoFactory(data.text, data.completed));
         });
       }, function(err) {});
 
@@ -140,7 +140,7 @@ toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFact
 
   function _handleResponseFromApi (data, todos) {
     data.forEach(function(toDoData){
-      todos.push(new ToDoFactory(toDoData.text));
+      todos.push(new ToDoFactory(toDoData.text, toDoData.completed));
     });
   }
 }]);
