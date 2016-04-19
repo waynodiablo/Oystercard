@@ -41,7 +41,6 @@ describe('ToDoService', function() {
 To get this passing we'll need to do a refactored version of our `ToDoService`
 
 ```js
-//test/unit/ToDoService.spec.js
 toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFactory) {
   var self = this;
 
