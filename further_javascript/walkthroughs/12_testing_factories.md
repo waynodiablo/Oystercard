@@ -172,7 +172,9 @@ toDoApp.controller('ToDoController', ['ToDoFactory', function(ToDoFactory) {
 }]);
 ```
 
-To get the feature tests passing we need to include the factory in `index.html` (if only Protractor made this clear in its error messages!). Put in the `<head>` of the page
+To get the feature tests passing we need to include the factory in `index.html` (if only Protractor made this clear in its error messages!). To see the proper error message, go to http://localhost:8080 and check the error console.
+
+To fix this put in the `<head>` of the page
 
 ```html
 <script src="js/factories/ToDoFactory.js"></script>

@@ -2,172 +2,111 @@
 
 [Back to the Challenge](../13_testing_services.md)
 
-This time around we're going to start with a unit test. We want to write a test for our `ToDoService` that returns a list of ToDo objects created by the `ToDoFactory`
+This time around we're going to start with a unit test. We want to write a test for our `ToDoService` that returns a list of ToDo objects created by the `ToDoFactory`. Note that our test has forced us to change how `getIndex` works so it now returns a promise rather than an empty array of `todos` that gets updated later:
 
 ```js
-see https://docs.angularjs.org/api/ngMock/service/$httpBackend#flushing-http-requests
-// in toDosFeature.js
-it('can mark a ToDo as complete', function(){
-  browser.get('/');
-  var todo = $$('#todos p').last();
-  todo.element(by.css('.complete')).click();
-
-  expect(todo.getText()).toEqual("ToDo2: completed");
-});
-```
-
-Running this indicates that it can't find the element `.complete`. Let's add this in to `index.html` along with the action we want to call on our factory.
-
-```html
-<p ng-repeat="todo in ctrl.todos">
-{{ todo.text }}: {{ todo.completed ? "completed" : "not
-completed" }}
-<span class="complete" ng-click="todo.complete();">Complete</span>
-</p>
-```
-
-Try re-running your feature tests now. Can you work out why the others are now not working?
-
-To fix them, we're going to need to change the [Jasmine matcher](http://jasmine.github.io/2.0/introduction.html#section-Included_Matchers) we're using to `toMatch`:
-
-```js
-describe('Todos tracker', function() {
-  it('has several ToDos', function() {
-    browser.get('/');
-    var todos = $$('#todos p');
-    expect(todos.first().getText()).toMatch('ToDo1: completed');
-    expect(todos.last().getText()).toMatch('ToDo2: not completed');
-  });
-
-  it('can add a ToDo', function() {
-    browser.get('/');
-    $('#new-todo-name').sendKeys("NewTodo");
-    $('#add-todo').click();
-
-    var todo = $$('#todos p').last().getText();
-    expect(todo).toMatch('NewTodo: not completed');
-  });
-
-  it('can remove a ToDo', function() {
-    browser.get('/');
-    var todos = $$('#todos p');
-    var initialCount = todos.count();
-
-    $('#remove-todo').click();
-
-    expect(todos.count()).toEqual(1);
-  });
-
-  it('can mark a ToDo as complete', function(){
-    browser.get('/');
-    var todo = $$('#todos p').last();
-    todo.element(by.css('.complete')).click();
-
-    expect(todo.getText()).toMatch("ToDo2: completed");
-  });
-});
-```
-
-Time now to implement our `todo.complete()` method. To do that we're going to need to change todo into a factory to store our logic. Start with a new karma test that tests that `ToDoFactory` can mark a ToDo as complete
-
-```js
-// test/unit/ToDoFactory.spec.js
-describe('ToDoFactory', function() {
+describe('ToDoService', function() {
   beforeEach(module('toDoApp'));
 
-  var toDo;
+  var ToDoService, httpBackend;
 
-  beforeEach(inject(function(ToDoFactory) {
-    toDo = new ToDoFactory('New ToDo');
+  var toDoData = [{text: "ToDo1", completed: true}, {text: "ToDo2", completed: false}];
+
+  beforeEach(inject(function(_ToDoService_, _ToDoFactory_, $httpBackend) {
+    ToDoService = _ToDoService_;
+    ToDoFactory = _ToDoFactory_;
+    httpBackend = $httpBackend;
   }));
 
-  it('is incomplete by default', function(){
-    expect(toDo.completed).toBe(false);
-  });
+  it('fetches a list of todos', function(){
 
-  it('can be marked as complete', function() {
-    toDo.complete();
-    expect(toDo.completed).toBe(true);
+    // Mock out our http call
+    httpBackend.expectGET("http://quiet-beach-24792.herokuapp.com/todos.json").respond(toDoData);
+
+    var todo1 = new ToDoFactory("ToDo1", true);
+    var todo2 = new ToDoFactory("ToDo2", false);
+
+    ToDoService.getAll().then(function(todos) {
+      // Wait for the response to come back before doing our expectation
+      expect(todos).toEqual([todo1, todo2]);
+    });
+
+    // We have to flush httpBackend at the end of the test see
+    // see https://docs.angularjs.org/api/ngMock/service/$httpBackend#flushing-http-requests
+    httpBackend.flush();
   });
 });
 ```
 
-Now build the factory to pass this test.
+To get this passing we'll need to do a refactored version of our `ToDoService`
 
 ```js
-// ToDoFactory.js
-toDoApp.factory('ToDoFactory', function() {
-  var ToDo = function(todoText){
-    this.text = todoText;
-    this.completed = false;
+//test/unit/ToDoService.spec.js
+toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFactory) {
+  var self = this;
+
+  self.getAll = function() {
+    // Here we're now just returning the value of the `then` method
+    // Due to how promises work this returns another promise, which in our test
+    // or controller we can call `.then` on again, and it will pass this method
+    // the array of `ToDoFactory` objects returned from the `then` method below
+    //
+    // It sounds complicated, but basically it's a way of being able to in our
+    // controller do
+    //
+    // ToDoService.getAll().then(function(todos) {
+    //   self.todos = todos;
+    // });
+    //
+    // More on this here
+    // http://blog.ninja-squad.com/2015/05/28/angularjs-promises/
+    return $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
+      .then(_handleResponseFromApi);
   };
 
-  // we attach a new method to the Todo prototype
-  // just like we did Thermostat
-  ToDo.prototype.complete = function() {
-    this.completed = true;
-  };
-
-  return ToDo;
-});
+  function _handleResponseFromApi (response) {
+    return response.data.map(function(toDoData){
+      return new ToDoFactory(toDoData.text, toDoData.completed);
+    });
+  }
+}]);
 ```
 
-Now we need to update our controller test as we need to tell our controller to use instances of the `ToDoFactory` we've just built instead of the object literal todos (created using `{text: "Todo2", completed: false}`):
+Now this needs to be integrated into our controller. We'll update our `toDoController.spec.js` to use `$httpBackend`:
 
 ```js
-//test/unit/toDoController.spec.js
 describe('ToDoController', function() {
   beforeEach(module('toDoApp'));
 
-  var ctrl, ToDoFactory;
+  var ctrl, httpBackend, ToDoFactory;
+  var toDoData = [{text: "ToDo1", completed: true}, {text: "ToDo2", completed: false}];
 
-  beforeEach(inject(function($controller, _ToDoFactory_) {
+  beforeEach(inject(function($httpBackend, $controller, _ToDoFactory_) {
     ctrl = $controller('ToDoController');
-    // This has underscores around it so we can then set it to a variable called
-    // ToDoFactory, see:
-    // https://docs.angularjs.org/api/ngMock/function/angular.mock.inject
     ToDoFactory = _ToDoFactory_;
+    httpBackend = $httpBackend;
+
+    // Mock out our http call
+    httpBackend.expectGET("http://quiet-beach-24792.herokuapp.com/todos.json").respond(toDoData);
+
+    // We have to flush straight away here so that by the time we do our tests
+    // the ToDos have been set to `self.todos`
+    httpBackend.flush();
   }));
 
-  it('initialises with several todos', function() {
-    // Create todos now using the factory
-    var todo1 = new ToDoFactory("ToDo1");
-    var todo2 = new ToDoFactory("ToDo2");
-
-    // First todo needs to be marked as complete
-    todo1.complete();
-
-    expect(ctrl.todos).toEqual([todo1, todo2]);
-  });
-
-  it('adds a new todo', function() {
-    ctrl.addToDo('NewToDo');
-
-    // Similarly this now uses a factory
-    var todo = new ToDoFactory("NewToDo");
-    expect(ctrl.todos.pop()).toEqual(todo);
-  });
-
-  it('removes the last todo', function() {
-    initialCount = ctrl.todos.length;
-
-    ctrl.removeToDo();
-
-    expect(ctrl.todos.length).toEqual(initialCount - 1);
-  });
-});
+  ...
 ```
 
-And our updated controller:
+And we can finally use our new service, injecting it into our `ToDoController.js`
 
 ```js
 toDoApp.controller('ToDoController', ['ToDoService', 'ToDoFactory', function(ToDoService, ToDoFactory) {
   var self = this;
 
-  self.todos = [new ToDoFactory('ToDo1'), new ToDoFactory('ToDo2')];
-
-  // The first todo needs to be marked as complete
-  self.todos[0].complete();
+  // Use the ToDoService to fetch our todos
+  ToDoService.getAll().then(function(todos){
+    self.todos = todos;
+  });
 
   self.addToDo = function(todoText) {
     self.todos.push(new ToDoFactory(todoText));
@@ -179,12 +118,8 @@ toDoApp.controller('ToDoController', ['ToDoService', 'ToDoFactory', function(ToD
 }]);
 ```
 
-To get the feature tests passing we need to include the factory in `index.html` (if only Protractor made this clear in its error messages!). Put in the `<head>` of the page
+Now turning to our feature tests, they'll be failing for the same reason as in [Challenge 12](12_testing_factories.md), so add to the `index.html` in the `<head>` a link to the `ToDoService`
 
-```html
-<script src="js/factories/ToDoFactory.js"></script>
-```
-
-And everything should be green. Almost there now!
+But it's still failing! And it's taking ages...that's because it's actually hitting the API (four times) and it's not returning the data we want. We're going to need to mock http controllers in Protractor.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
