@@ -2,7 +2,7 @@
 
 [Back to the Challenge](../13_testing_services.md)
 
-This time around we're going to start with a unit test. We want to write a test for our `ToDoService` that returns a list of ToDo objects created by the `ToDoFactory`. Note that our test has forced us to change how `getIndex` works so it now returns a promise rather than an empty array of `todos` that gets updated later:
+This time around we're going to start with a unit test. We want to write a test for our `ToDoService` that returns a list of ToDo objects created by the `ToDoFactory`. Note that our test has forced us to change how `getAll()` works so it now returns a promise rather than an empty array of `todos` that gets updated later:
 
 ```js
 describe('ToDoService', function() {
