@@ -32,7 +32,7 @@ Now create the protractor configuration file. Create a `test` folder and copy th
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['e2e/*.js'],
-  baseUrl: 'http://localhost:8000'
+  baseUrl: 'http://localhost:8080'
 }
 ```
 
