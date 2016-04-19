@@ -28,6 +28,6 @@ Then we use the `ng-app` directive to 'wire' our module to our HTML (more on **d
   <!-- rest of index.html -->
 ```
 
-We have now created a named Angular module, `toDoApp`, and all HTML on this page is within its scope. Now, we will attach a controller module to our `toDoApp` module, so we can track (and later, manipulate) application state.
+We have now created a named Angular module, `toDoApp`, and all HTML on this page is within its scope. Now, we will attach a controller to our `toDoApp` module, so we can track (and later, manipulate) application state.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
