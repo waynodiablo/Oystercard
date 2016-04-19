@@ -24,13 +24,13 @@ This is a problem with spiking and not coding test-first in general - it makes i
 - [ ] Test-drive in Karma building a `ToDoService` with a `getAll()` method which retrieves ToDos from http://quiet-beach-24792.herokuapp.com/todos.json - you'll
   need to use [`httpBackend`](https://docs.angularjs.org/api/ngMock/service/$httpBackend) to mock out the API calls that your service does.
 - [ ] Update your controller test so that it saves to `self.todos` all of the ToDos return from `ToDoService.getAll()`. You'll need to use `$httpBackend` again
-- [ ] Change your controller to make this new test pass
-- [ ] Get your Protractor tests passing following this refactor -->
+- [ ] Use [Protractor HTTP Mock](https://github.com/atecarlos/protractor-http-mock) to mock out HTTP calls in protractor (warning the documentation is not great for that repo!).
 
 ### Resources
 
 - [Tips on Promises](http://blog.ninja-squad.com/2015/05/28/angularjs-promises/)
 - [Angular Docs: Mocking HTTP calls using httpBackend](https://docs.angularjs.org/api/ngMock/service/$httpBackend)
+- [Protractor HTTP Mock](https://github.com/atecarlos/protractor-http-mock)
 - [Angular Docs: Services](https://docs.angularjs.org/guide/services)
 
 ### [Walkthrough](walkthroughs/13_testing_services.md)

@@ -120,6 +120,57 @@ toDoApp.controller('ToDoController', ['ToDoService', 'ToDoFactory', function(ToD
 
 Now turning to our feature tests, they'll be failing for the same reason as in [Challenge 12](12_testing_factories.md), so add to the `index.html` in the `<head>` a link to the `ToDoService`
 
-But it's still failing! And it's taking ages...that's because it's actually hitting the API (four times) and it's not returning the data we want. We're going to need to mock http controllers in Protractor.
+But it's still failing! And it's taking ages...that's because it's actually hitting the API (four times) and it's not returning the data we want. We're going to need to mock http requests in Protractor.
+
+For this we'll use [Protractor HTTP Mock](https://github.com/atecarlos/protractor-http-mock). Install it using npm:
+
+```bash
+npm install protractor-http-mock --save-dev
+```
+
+Update the protractor configuration file to configure it to use http-mocks
+
+```js
+// test/protractor.conf.js
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['e2e/*.js'],
+  baseUrl: 'http://localhost:8080',
+  onPrepare: function(){
+    require('protractor-http-mock').config = {
+      rootDirectory: process.cwd(),
+      protractorConfig: 'test/protractor.conf.js'
+    };
+  }
+};
+```
+
+And then we need to update our feature test to require in the library and set up mocking our data in our before loop. We'll tell it whenever a request is made to the ToDo external API to return the same two ToDos we originally tested our app with:
+
+```js
+var mock = require('protractor-http-mock');
+
+beforeEach(function(){
+  mock([{
+    request: {
+      path: 'http://quiet-beach-24792.herokuapp.com/todos.json',
+      method: 'GET'
+    },
+    response: {
+      data: [{text: "ToDo1", completed: true}, {text: "ToDo2", completed: false}]
+    }
+  }]);
+});
+```
+
+Finally at the bottom of the test we need to add an `afterEach` method which cleans ups our mocks.
+
+```js
+afterEach(function(){
+  mock.teardown();
+});
+```
+
+Everything should be passing again, and running a bit quicker as well! Now, if the data changes on the API it won't make a difference as we're never actually hitting our API.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
