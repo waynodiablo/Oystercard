@@ -60,7 +60,7 @@ toDoApp.service('ToDoService', ['$http', function($http) {
     // use $http's built-in .get() method
     // that uses promises to stay synchronous
     $http.get('<URL>')
-      .then(function(resp) {
+      .then(function(response) {
         // good response
       }, function(err) {
         // error response
@@ -80,9 +80,9 @@ toDoApp.service('ToDoService', ['$http', function($http) {
   this.getAll = function() {
     // update our URL
     $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
-      .then(function(resp) {
+      .then(function(response) {
         // and print whatever we get back
-        console.log(resp)
+        console.log(response)
       }, function(err) {});
   };
 }]);
@@ -133,8 +133,8 @@ toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFact
   // Why have we not set this private function to self?
   function _fetchTodosFromApi(todos) {
     $http.get('http://quiet-beach-24792.herokuapp.com/todos.json')
-      .then(function(resp) {
-        _handleResponseFromApi(resp.data, todos)
+      .then(function(response) {
+        _handleResponseFromApi(response.data, todos)
       }, function(err) {});
   };
 
