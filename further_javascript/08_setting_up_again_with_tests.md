@@ -20,7 +20,7 @@ our dependencies.
 ### To complete this challenge, you will need to:
 
 - [ ] Start from scratch creating a completely new repository
-- [ ] Use nmp to install bower
+- [ ] Use npm to install bower
 - [ ] Use bower to install angular into a folder called `app`
 
 ### Resources
