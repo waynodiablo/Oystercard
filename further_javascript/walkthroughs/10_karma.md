@@ -63,7 +63,7 @@ module.exports = function(config){
 };
 ```
 
-Now you can run fire up your test runner and watch your tests pass and fail.
+Now you can fire up your test runner and watch your tests pass and fail.
 
 ```bash
 karma start test/karma.conf.js
@@ -89,7 +89,7 @@ describe('ToDoController', function() {
 
 This just sets up our test - the interesting things to look at here are the `beforeEach` and `inject`. `beforeEach` is running before each test. `inject` is a built-in Angular function that allows us to access the Angular app and our controller from inside our tests.
 
-Now let's add a test - place this below the beforeEach with the describe callback.
+Now let's add a test - place this below the beforeEach within the describe callback.
 
 ```js
 it('initialises with a toDo', function() {
