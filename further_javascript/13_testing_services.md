@@ -11,7 +11,7 @@ You'll also note that the way we spiked our `ToDoService` made it hard to unit-t
 
 This is a problem with spiking and not coding test-first in general - it makes it harder to see when we're building code that is hard to test. This is why you should always throw away anything you build with a spike and rebuild it test-first!
 
-> If you're wondering why returning an empty array in your service worked in [Challenge 7](walkthroughs/07_connecting_to_an_api), it's because of Angular's two way data-binding. It actually was an empty array at first that you set to `this.todos` in your controller. But when the ToDos returned from the API and were pushed onto the `todos` array (ADD GITHUB LINK SLACK LEO IF HE FORGOT in the `_handleResponseFromApi` function inside of `ToDoService`), two way data-binding means Angular automatically updates the view so you see them on the page. It all happens so quickly you probably didn't notice it was happening asynchronously! This is the magic and the danger of Angular...
+> If you're wondering why returning an empty array in your service worked in [Challenge 7](walkthroughs/07_connecting_to_an_api), it's because of Angular's two way data-binding. It actually was an empty array at first that you set to `this.todos` in your controller. But when the ToDos returned from the API and were pushed onto the `todos` array (in the `_handleResponseFromApi` function inside of `ToDoService`), two way data-binding means Angular automatically updates the view so you see them on the page. It all happens so quickly you probably didn't notice it was happening asynchronously! This is the magic and the danger of Angular...
 
 ### Learning Objectives covered
 - Testing services
