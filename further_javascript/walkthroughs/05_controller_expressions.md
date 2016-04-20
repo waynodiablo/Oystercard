@@ -14,7 +14,7 @@ toDoApp.controller('ToDoController', function() {
 
   // here's our new method
   this.addToDo = function() {
-    this.todos.push({ text: "Hello World!", completed: false })
+    this.todos.push({ text: "Hello World!", completed: false });
   };
 });
 ```
@@ -37,7 +37,7 @@ toDoApp.controller('ToDoController', function() {
   self.addToDo = function() {
     // now, no matter what, we'll push new ToDos
     // to the controller.
-    self.todos.push({ text: "Hello World!", completed: false })
+    self.todos.push({ text: "Hello World!", completed: false });
   };
 });
 ```
@@ -95,7 +95,7 @@ toDoApp.controller('ToDoController', function() {
   // we want to accept a parameter...
   self.addToDo = function(todoText) {
     // ...and use that parameter to construct our custom text!
-    self.todos.push({text: todoText, completed: false})
+    self.todos.push({text: todoText, completed: false});
   };
 });
 ```
@@ -132,7 +132,7 @@ toDoApp.controller('ToDoController', function() {
   self.todos = [{ text: "ToDo1", completed: true }, { text: "ToDo2", completed: false }];
 
   self.addToDo = function(todoText) {
-    self.todos.push({text: todoText, completed: false})
+    self.todos.push({text: todoText, completed: false});
   };
 
   // the simplest thing is to just pop() the last ToDo

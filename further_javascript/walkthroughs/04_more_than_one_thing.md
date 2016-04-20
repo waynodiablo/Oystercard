@@ -26,12 +26,12 @@ Now that we have multiple items in our controller's state, let's iterate through
     <script type="text/javascript" src="controllers.js"></script>
   </head>
   <body>
-    <div ng-controller="ToDoController as ctrl">
-      <!-- 
+    <div ng-controller="ToDoController as controller">
+      <!--
         ng-repeat assigns temporary variable 'todo' to
-        every item in ctrl.todos, our ViewModel. 
+        every item in controller.todos, our ViewModel.
       -->
-      <p ng-repeat="todo in ctrl.todos">
+      <p ng-repeat="todo in controller.todos">
         {{ todo }}
       </p>
     </div>
@@ -78,8 +78,8 @@ So, we need to update the Mustache syntax in our Template:
     <script type="text/javascript" src="controllers.js"></script>
   </head>
   <body>
-    <div ng-controller="ToDoController as ctrl">
-      <p ng-repeat="todo in ctrl.todos">
+    <div ng-controller="ToDoController as controller">
+      <p ng-repeat="todo in controller.todos">
         <!-- I've used a ternary (shorthand) operator to output the completed status -->
         {{ todo.task }}: {{ todo.completed ? "completed" : "not completed" }}
       </p>

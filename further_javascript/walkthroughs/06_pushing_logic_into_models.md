@@ -134,15 +134,15 @@ Now that `Todo` objects can complete themselves, wiring the functionality up to 
 
 ```html
 <body>
-  <div ng-controller="ToDoController as ctrl">
-    <p ng-repeat="todo in ctrl.todos">
+  <div ng-controller="ToDoController as controller">
+    <p ng-repeat="todo in controller.todos">
       {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
       <!-- Click this and complete the Todo -->
       <span ng-click="todo.complete();">Complete</span>
     </p>
     <input type="text" ng-model="todoText">
-    <button ng-click="ctrl.addToDo(todoText);">Add a ToDo</button>
-    <button ng-click="ctrl.removeToDo();">Remove last ToDo</button>
+    <button ng-click="controller.addToDo(todoText);">Add a ToDo</button>
+    <button ng-click="controller.removeToDo();">Remove last ToDo</button>
   </div>
 </body>
 ```

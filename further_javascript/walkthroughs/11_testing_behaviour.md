@@ -21,8 +21,8 @@ updated to `todos` to indicate there are now multiple todos.
 
 ```html
 <body>
-  <div id="todos" ng-controller="ToDoController as ctrl">
-    <p ng-repeat="todo in ctrl.todos">
+  <div id="todos" ng-controller="ToDoController as controller">
+    <p ng-repeat="todo in controller.todos">
       {{ todo.text }}: {{ todo.completed ? "completed" : "not completed" }}
     </p>
   </div>
@@ -91,13 +91,13 @@ like. Updating that file gives us:
 
 ```html
   <body>
-    <div id="todos" ng-controller="ToDoController as ctrl">
-      <p ng-repeat="todo in ctrl.todos">
+    <div id="todos" ng-controller="ToDoController as controller">
+      <p ng-repeat="todo in controller.todos">
       {{ todo.text  }}: {{ todo.completed ? "completed" : "not
       completed"  }}
       </p>
       <input id="new-todo-name" type="text" ng-model="todoText">
-      <button id="add-todo" ng-click="ctrl.addToDo(todoText);">Add a
+      <button id="add-todo" ng-click="controller.addToDo(todoText);">Add a
 ToDo</button>
     </div>
   </body>
@@ -157,7 +157,7 @@ it('can remove a ToDo', function() {
 Update `index.html`
 
 ```html
-<button id="remove-todo" ng-click="ctrl.removeToDo();">Remove last ToDo</button>
+<button id="remove-todo" ng-click="controller.removeToDo();">Remove last ToDo</button>
 ```
 
 Write a new unit test for the `removeToDo` method we need
