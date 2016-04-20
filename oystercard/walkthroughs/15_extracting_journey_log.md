@@ -31,6 +31,7 @@ describe JourneyLog do
       expect(subject.journeys).to include journey
     end
   end
+end
   ```
 
 - [ ] a private method `#current_journey` should return an incomplete journey or create a new journey
