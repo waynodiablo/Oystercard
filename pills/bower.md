@@ -17,7 +17,7 @@ Let's check everything is okay, run `node -v` and `bower -v` and make sure they 
 Now lets get some boilerplate working. Make a new directory, cd into it then run:
 
 ```
-npm install --save-dev bower
+npm install bower --save-dev
 bower init
 ```
 
