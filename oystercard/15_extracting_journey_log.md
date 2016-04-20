@@ -22,6 +22,7 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [ ] `#journeys` should return a list of all previous journeys without exposing the internal array to external modification
 - [ ] remove redundant code from OysterCard class
 
-## Suggested resources: Ruby](http://www.getlaura.com/dependency-inversion-principle-in-ruby/)
+## Suggested resources: 
+- [Ruby](http://www.getlaura.com/dependency-inversion-principle-in-ruby/)
 
 ## [Walkthrough](walkthroughs/15_extracting_journey_log.md)
