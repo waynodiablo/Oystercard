@@ -143,8 +143,7 @@ test:
 it('can remove a ToDo', function() {
   browser.get('/');
   var todos = $$('#todos p');
-  var initialCount = todos.count();
-
+  
   $('#remove-todo').click();
 
   // This has a magic number, how could this magic number be avoided?
