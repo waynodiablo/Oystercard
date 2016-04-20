@@ -165,7 +165,7 @@ Write a new unit test for the `removeToDo` method we need
 ```js
 // toDoController.spec.js
 it('removes the last todo', function() {
-  initialCount = ctrl.todos.length;
+  var initialCount = ctrl.todos.length;
 
   ctrl.removeToDo();
 
