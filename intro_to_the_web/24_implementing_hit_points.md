@@ -7,7 +7,7 @@ We have just refactored our code, separating our Controller layer from our Model
 ```
 As Player 1,
 So I can start to win a game of Battle,
-I want my attack to reduce Player 2's HP
+I want my attack to reduce Player 2's HP by 10
 ```
 
 In this challenge, you will implement a feature that meets this User Story. You should make only minimal changes in views or in the controller: almost all the changes required to solve this can happen in the Model.
