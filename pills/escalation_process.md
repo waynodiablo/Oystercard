@@ -20,3 +20,7 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 7. *Slack Overflow.* (Jrs) or *Stack Overflow.* (Srs) Format your question well. Post a link to your question on Slack - that way you can ask for formatting feedback on your query from coaches, and support from fellow students/graduates.
 
 8. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
+
+## Further Reading
+
+* :pill: - [How to debug your code](https://github.com/makersacademy/course/blob/master/pills/debugging.md)
