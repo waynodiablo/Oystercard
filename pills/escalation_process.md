@@ -23,4 +23,4 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 ## Further Reading
 
-* :pill: - [How to debug your code](https://github.com/makersacademy/course/blob/master/pills/debugging.md)
+* :pill: [How to debug your code](https://github.com/makersacademy/course/blob/master/pills/debugging.md)
