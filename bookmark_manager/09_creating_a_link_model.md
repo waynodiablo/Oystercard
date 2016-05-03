@@ -18,8 +18,8 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 
 - [ ] Discuss with your pair partner what a "model" is and how it relates to a class or table/relation
 - [ ] Create a model (DataMapper backed ruby class) in `app/models/link.rb` with `:id`, `:title` and `:url` properties
+- [ ] Create a database called 'bookmark_manager_test'
 - [ ] At the bottom of `link.rb`, instruct DataMapper to:
-  - [ ] create a database called 'bookmark_manager_test'
   - [ ] setup a connection to the `bookmark_manager_test` database (if you're doing git pong, create on both machines)
   - [ ] finalize your DataMapper model
   - [ ] update your DataMapper models
