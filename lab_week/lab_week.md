@@ -19,9 +19,9 @@ You will be working on a project where you will learn how to:
 Each team will consist of approximately 4 people. The teams will be selected by the coaches (and randomised)
 
 ### How should I approach Lab Week?
-We believe that it's extremely important to work from our space here at MA for the week, so from a logistical perspective, we would expect:
+We believe that it's extremely important for onsite students to work from our space here at MA for the week, so from a logistical perspective, we would expect:
 
-* That you be at Makers Academy from **9:30am, Monday through Friday**.
+* That onsite students be at Makers Academy from **9:30am, Monday through Friday**. Ronin students to be present and available on slack for the same times.
 * That you work in a team, pair with members of your team, and run daily stand-ups within that team.
 * Coordinate on Slack (e.g. in private groups)
 
