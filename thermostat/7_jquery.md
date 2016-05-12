@@ -4,7 +4,7 @@
 
 Now, you are at the point which excites a lot of people, and is also JavaScript's unique superpower - dynamically changing content on a webpage. Using JavaScript, we can grab any element on the page, change its HTML and CSS, delete it, move it elsewhere, draw on the page, and many other funtastic things. Seeing as so far all user interaction you've done so far has been through the medium of forms and links, this will hopefully excite you.
 
-In this challenge, you will manipuate the DOM using JavaScript and jQuery.
+In this challenge, you will manipuate the Document Object Model (DOM) using JavaScript and jQuery.
 
 ### Challenge setup
 
