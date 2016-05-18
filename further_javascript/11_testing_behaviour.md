@@ -24,7 +24,7 @@ did in [Challenge 4](04_more_than_one_thing.md)
 
 ### Resources
 
-- :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/angular_protractor.md)
+- :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/protractor.md)
 - [Karma documentation](https://docs.angularjs.org/guide/unit-testing)
 
 ### [Walkthrough](walkthroughs/11_testing_behaviour.md)

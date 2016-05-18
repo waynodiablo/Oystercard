@@ -2,100 +2,9 @@
 
 [Back to the Challenge](../09_protractor.md)
 
-Before starting, ensure you have the [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed - this is used to run the Selenium server protractor uses. Check this by running `java -version` from the command line.
+## Setting up your app
 
-## Setup
-
-Use npm to install Protractor globally with:
-
-    npm install -g protractor
-
-This will install two command line tools, `protractor` and `webdriver-manager`. Try running `protractor --version` to make sure it's working.
-
-The `webdriver-manager` is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries with:
-
-    webdriver-manager update
-
-Now start up a server with:
-
-    webdriver-manager start
-
-(You may need to install a [Java runtime](https://helpx.adobe.com/x-productkb/global/install-java-jre-mac-os.html) if you don't have one already.)
-
-This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. Leave this server running throughout the tutorial. You can see information about the status of the server at `http://localhost:4444/wd/hub`.
-
-Also, don't forget to `npm install --save-dev protractor` within your project - this will add it to the list of development dependencies, similar to what we did when installing bower, ensuring that others who use this project know that protractor is required
-
-## Configuration
-
-Now create the protractor configuration file. Create a `test` folder and copy the following into `test/protractor.conf.js`:
-
-```js
-exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['e2e/*.js'],
-  baseUrl: 'http://localhost:8080'
-}
-```
-
-This configuration tells Protractor where your test files (`specs`) are, where to talk to your Selenium Server (`seleniumAddress`), and the url where your angular `http-server` will be running (`baseUrl`). It will use the defaults for all other configuration. Chrome is the default browser.
-
-## Writing a test
-
-With our configuration setup, we're ready to write our first test. The usual Angular convention is to name your feature folder `e2e`, so create that within your test folder, then type the following into type the following into `test/e2e/todoFeatures.js`:
-
-```javascript
-describe('Todos tracker', function() {
-  it('has a title', function() {
-    // We don't need to put in the full url as we set baseUrl in our config
-    browser.get('/');
-    expect(browser.getTitle()).toEqual('Todos App');
-  });
-});
-```
-
-The `describe` and `it` syntax is from the Jasmine framework. `browser` is a global created by Protractor, which is used for browser-level commands such as navigation with `browser.get`.
-
-Now run the test with
-
-    protractor test/protractor.conf.js
-
-You should see a Chrome browser window open up and navigate to the app, then close itself (this should be very fast!).
-
-But, in fact, you won't. You should have one of two failures, depending on how closely you've been following the instructions.
-
-* 1) `Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444`
-
-This is because you didn't leave WebDriver running in the background. Restart it with `webdriver-manager start`
-
-* 2) The window pops up, but says "This webpage is not available"
-
-This is because your app is not being served anywhere (especially not at the http://localhost:8080 address you specified in your test!). This is easily fixed, by installing http-server, by running the commands `npm install --save http-server`, `npm install http-server -g`.
-
-Now go into your app directory and run `http-server`, and then re-run your tests. You should see a new failure.
-
-## Passing the test
-
-All being well you should have an error along the lines of
-
-```
-    Failed: Angular could not be found on the page http://localhost:8080/ :
-retries looking for angular exceeded
-
-```
-with the browser just showing a list of the directories in your app directory.
-
-You need to create an `index.html` page, and load in an angular which
-Protractor needs before it can do anything else.
-
-Copy into `app/js/app.js`
-
-
-```javascript
-var toDoApp = angular.module('toDoApp', []);
-```
-
-and then in `app/index.html`
+Create an index page at `app/index.html` and put in the code below:
 
 ```html
 <!doctype html>
@@ -112,6 +21,37 @@ and then in `app/index.html`
 </html>
 ```
 
-Now rerun your tests. They should be passing finally!
+Create an `app/js` directory.
+
+Create an app file at `app/js/app.js` and put in the code below:
+
+```javascript
+var toDoApp = angular.module('toDoApp', []);
+```
+
+## Setting up Protractor
+
+Follow the instructions in :pill: [Protractor](../pills/protractor.md) up to and including the "Running your test" section.
+
+## Adding a test that checks for "Hello world"
+
+Add this code to the file at `test/e2e/app.spec.js':
+
+```javascript
+describe("app", function() {
+  it("should say 'Hello world' on the page", function() {
+    browser.get('/');
+    expect($$("p").first().getText()).toEqual("Hello world");
+  });
+});
+```
+
+## Running your new test
+
+Run the tests with:
+
+    $ npm run protractor test/protractor.conf.js
+
+You should see all dots to indicate that your tests have passed!
 
 [Forward to the Challenge Map](../00_challenge_map.md)
