@@ -2,6 +2,16 @@
 
 Node is a program for running JavaScript on the command line, rather than in a web browser.  Node can run web backend code.
 
+## Installing Node
+
+In your terminal, run:
+
+    $ node -v
+
+If you get a message that says `node: command not found`, run:
+
+    $ brew install node
+
 ## More about Node
 
 Node is one of the newest technologies on offer at Makers Academy. One of the first things you are likely to hear about Node.js is that it allows you to "build fast, scalable network applications" using Javascript on the server side.
@@ -50,5 +60,3 @@ Node examples
 ---------
 * [Leo's Test-Driven Chat Site](https://github.com/pitchinvasion/node-mocha)
 * [OS node project: ShareLatex](https://github.com/sharelatex/web-sharelatex)
-
-
