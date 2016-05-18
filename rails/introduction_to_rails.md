@@ -1,8 +1,8 @@
-#Introduction to Rails
+# Introduction to Rails
 
-Welcome to Rails week! 
+Welcome to Rails week!
 
-Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration - the trick to enjoying Rails is to know the conventions and stick to them wherever possible. 
+Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration - the trick to enjoying Rails is to know the conventions and stick to them wherever possible.
 
 ## Learning Objectives
 
@@ -32,7 +32,7 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 ## Old Walkthroughs (DEPRECATED - provided for reference purposes only)
 
 * [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md)
-* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) 
+* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md)
 * [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md)
 * [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
 * [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)
