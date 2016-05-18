@@ -20,7 +20,7 @@ Don't forget to do this challenge test-first!
 - [ ] Install Protractor
 - [ ] Create a simple test that checks for "Hello world" on the page
 - [ ] Serve up angular using `http-server`
-- [ ] Set up `index.html` with a title of "Todos app", and load in an angular
+- [ ] Set up `index.html` with a title of "Todos App", and load in an angular
   module called `toDoApp`
 - [ ] Get a green feature test
 
