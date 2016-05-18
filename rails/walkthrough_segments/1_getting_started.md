@@ -13,8 +13,7 @@ Right. All installed? Then let's begin.
 
 `$ rails new yelp_clone`
 
-
-##### The Makers way:
+##### The 'we want RSpec and PostgreSQL way':
 
 `$ rails new yelp_clone -d postgresql -T`
 
@@ -35,7 +34,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 * `config` – configuration information, including `database.yml` which includes database configuration details and a routes file
 * `db` - all our database related code for migrating and seeding the database
 * `lib` - place to put non-rails ruby code
-* `lib/tasks` - the home for your custom rake tasks
+* `lib/tasks` - the home for your custom rake tasks ([Rake Tasks Pill](https://github.com/makersacademy/course/blob/master/pills/rake_tasks_for_database_management.md))
 * `log` – keeps server logs and terminal output
 * `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default
 * `tmp` - temporary stuff gets stored here
@@ -46,6 +45,8 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 
 `$ bin/rails server` or `$ bin/rails s` will get you started. (Rails has lots of these little command-line shortcuts.) Now visit http://localhost:3000.
 
+> You've just typed in `bin/rails server` - but what would happen if you just typed `rails server`? What is the difference between these commands, and why do you think we insist on `bin/rails` instead of `bin`?
+
 If you see an error, you'll likely need to run a `rake` task to get your database built:
 
 `$ bin/rake db:create`
@@ -54,7 +55,7 @@ If you see an error, you'll likely need to run a `rake` task to get your databas
 
 `$ bin/rake db:create RAILS_ENV=test`
 
-This is a frustrating and intermittent problem. The most frustrating part of it, is that `rake db:` things are magic, and the very best advice you can heed at this stage is this: **ACCEPT THE MAGIC.** You may be filled with a burning desire to understand every little part of how Rails works, but at this stage it is unnecessary.
+This is a frustrating and intermittent problem. The most frustrating part of it, is that `rake db:` things are magic, and the very best advice you can heed as a Junior is this: **ACCEPT THE MAGIC.** You may be filled with a burning desire to understand every little part of how Rails works, but at this stage it is unnecessary.
 
 The ideal level of knowledge at this point, is that you need to run a `rake` task to build your database before you can get anywhere with your app - and sometimes you need to run a slightly different version of that `rake` task if the first doesn't work.
 

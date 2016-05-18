@@ -1,6 +1,22 @@
 # Section 3: Routes
 
-We currently have a failing test, which informs us that 'No route matches [GET] "/restaurants"' which indicates that we should make a change in 'config/routes.rb'
+We currently have a failing test, which informs us that 'No route matches [GET] "/restaurants"'
+
+In Sinatra, we updated routes within the controller (we mixed 'routing' concerns and 'controller action' concerns:
+
+```ruby
+# in Sinatra's app.rb
+
+get '/path' do # there's the routing concern
+  # action associated with this path, the controller action concern
+end
+```
+
+Rails separates the routing concerns from the controller action concerns by placing them in different files.
+
+> Why is it a good idea to separate concerns in this way?
+
+In Rails, our routing concerns live in the `config/routes.rb` file, and our controller action concerns live in `app/controllers/<controller name>_controller.rb`. So we need to update both concerns. We will cover controller actions in a later segment, but for now, we should make a change in 'config/routes.rb'
 
 ```ruby
 get 'restaurants' => 'restaurants#index'
@@ -14,7 +30,9 @@ resources :restaurants
 
 ### Wait, Resources?
 
-If the mention of `resources` is confusing, fear not! That just means it's time to dive into the world of R.E.S.T. and start with these links:
+> What is a RESTful resource? Why are `restaurants` a RESTful resource? What routes will be generated to interact with it?
+
+If the mention of `resources` is confusing, fear not! That just means it's time to dive into the world of REST and start with these links:
 
 [Leo's Pill on REST](https://github.com/makersacademy/course/blob/master/pills/rest.md)
 

@@ -19,15 +19,9 @@ Once installed we want to run this command (details on the rspec-rails website):
 
 `$ bin/rails generate rspec:install`
 
-This gets RSpec going by creating a `spec` directory and two helper files ('spec/spec_helper.rb' and 'spec/rails_helper.rb'). It also creates a '.rspec' file which we should edit to look like this:
+This gets RSpec going by creating a `spec` directory and two helper files ('spec/spec_helper.rb' and 'spec/rails_helper.rb'). It also creates a `.rspec` file to configure RSpec's behaviour.
 
-```sh
---color
---format documentation
---require spec_helper
-```
-
-Then, in your `spec/rails_helper.rb` file add the following require statement below the other require statements:
+In your `spec/rails_helper.rb` file add the following require statement below the other require statements:
 
 `require 'capybara/rails'`
 
@@ -52,6 +46,7 @@ feature 'restaurants' do
   end
 end
 ```
+> Why are we requiring `rails_helper` in this file? What does `rails_helper` do?
 
 Our test should fail - because we have not yet set up any routes. Let's find out how to do this in the next section!
 
