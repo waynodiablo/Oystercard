@@ -1,5 +1,6 @@
 # Extending Active Record Associations
-In [Active Record associations and encapsulating business logic in the model](reviewed_restaurants.md) we saw how to use associations to encapsulate `reviewed_restaurants` in the `User` model.  We also saw an example of encapsulating the creation of the `Review` association with the current user by creating a `build_review` method in `Restaurant`.  Your `build_review` method may have looked something like this:
+Your `build_review` method should now look something like this:
+
 ```
 def build_review(attributes = {}, user)
   review = reviews.build(attributes)
@@ -8,6 +9,7 @@ def build_review(attributes = {}, user)
 end
 ```
 or perhaps:
+
 ```
 def build_review(attributes = {}, user)
   attributes[:user] ||= user
@@ -107,3 +109,7 @@ has_many :reviews,
 Not only should this pass all our tests, we can use this extension module to extend _any_ association where we want to pass the user alongside the model attributes.  And that's pretty cool.
 
 For more information on extending Active Record associations, see the [Rails Guides](http://guides.rubyonrails.org/association_basics.html#association-extensions).
+
+
+* **Users can only edit/delete restaurants which they've created**
+* **Users can delete only their own reviews**

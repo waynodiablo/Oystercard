@@ -8,11 +8,17 @@
 
 ### V3 Walkthrough
 
-- [Setting limits on users](#setting-limits-on-users)
-    - [A user must be logged in to create restaurants](#a-user-must-be-logged-in-to-create-restaurants)
-    - [Users can only edit/delete restaurants which they've created](#users-can-only-editdelete-restaurants-which-theyve-created)
-    - [Users can only leave one review per restaurant](#users-can-only-leave-one-review-per-restaurant)
-    - [Users can delete only their own reviews](#users-can-delete-only-their-own-reviews)
+#### Setting limits on users
 
+Now we want to set limits on what site visitors can do. From our [specification](yelp.md#v3-specification):
 
-***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles at least as often as you see the :twisted_rightwards_arrows: sign.***
+* A user must be logged in to create restaurants
+* Users can only edit/delete restaurants **which they've created**
+* Users can only leave **one review per restaurant**
+* Users can delete their own reviews
+
+Let's tackle these one by one. Remember to always write tests first, commit often to git and swap driver/navigator roles frequently&nbsp;:twisted_rightwards_arrows:. (Before attempting this, we strongly recommend you read up on [Active Record Associations](http://guides.rubyonrails.org/association_basics.html))
+
+- [Setting limits on users](yelp_v3/1_user_must_log_in.md)
+- [One review per restaurant per user](yelp_v3/2_one_review_per_user.md)
+- [Extending Active Record Associations](yelp_v3/3_extending_associations.md)
