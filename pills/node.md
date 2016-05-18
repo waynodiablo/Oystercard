@@ -1,5 +1,9 @@
 # Introduction to Node
 
+Node is a program for running JavaScript on the command line, rather than in a web browser.  Node can run web backend code.
+
+## More about Node
+
 Node is one of the newest technologies on offer at Makers Academy. One of the first things you are likely to hear about Node.js is that it allows you to "build fast, scalable network applications" using Javascript on the server side.
 
 This means that if you choose the path of Javascript, you can become full-stack with a single language. function(){} ftw!
