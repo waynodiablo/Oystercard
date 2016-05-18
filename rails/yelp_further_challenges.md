@@ -1,5 +1,5 @@
-| [← Yelp V2](yelpv2.md) | [Yelp home](yelp.md) | Yelp V3 |
-|------------------------|----------------------|--------:|
+| [← Yelp V3](yelpv3.md) | [Yelp home](yelp.md) | Yelp Further Challenges |
+|------------------------|----------------------|------------------------:|
 
 # Yelp
 
