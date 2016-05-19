@@ -1,4 +1,4 @@
-# Section 9: Updating (CR"U"D)
+x# Section 9: Updating (CR"U"D)
 
 #### Adding a description to restaurants – migrations
 
