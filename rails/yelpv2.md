@@ -13,12 +13,6 @@
 - [Adding OmniAuth login](#adding-omniauth-login)
     - [Register a Facebook Developer application](#register-a-facebook-developer-application)
     - [Keeping secrets properly](#keeping-secrets-properly)
-- [Setting limits on users](#setting-limits-on-users)
-    - [A user must be logged in to create restaurants](#a-user-must-be-logged-in-to-create-restaurants)
-    - [Users can only edit/delete restaurants which they've created](#users-can-only-editdelete-restaurants-which-theyve-created)
-    - [Users can only leave one review per restaurant](#users-can-only-leave-one-review-per-restaurant)
-    - [Users can delete only their own reviews](#users-can-delete-only-their-own-reviews)
-
 
 ***Please work through this walkthrough with a pair partner. Please take turns on the keyboard as the driver as described in the [pairing pill](pills/pairing.md) :pill:.   Please swap driver/navigator roles at least as often as you see the :twisted_rightwards_arrows: sign.***
 
@@ -186,7 +180,7 @@ For this example, we'll be adding a 'sign in with Facebook' link.
 
 Create a [Facebook Developer application](http://developers.facebook.com), making note of the two keys you're given.
 
-Before you go to the devise wiki, finish reading this whole section. 
+Before you go to the devise wiki, finish reading this whole section.
 
 Go to the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview) to set up facebook authentication, ensuring you read the next section straight after about keeping your private details safe!
 
@@ -217,33 +211,6 @@ Then set these environment variables using the relevant shell commands.
 If you accidentally commit secrets to your git repository, try following [this tutorial](https://help.github.com/articles/remove-sensitive-data/) - but be warned, it's not for the faint-hearted!
 
 
-#### Setting limits on users
-
-Now we want to set limits on what site visitors can do. From our [specification](yelp.md#v2-specification):
-
-* A user must be logged in to create restaurants
-* Users can only edit/delete restaurants **which they've created**
-* Users can only leave **one review per restaurant**
-* Users can delete their own reviews
-
-Let's tackle these one by one. Remember to always write tests first, commit often to git and swap driver/navigator roles frequently&nbsp;:twisted_rightwards_arrows:.
-
-
-##### A user must be logged in to create restaurants
-
-In `restaurants_controller.rb`, we can add a `before_action` at the top of the controller that checks to see if a user is logged in before the action runs. See if you can write a test first before adding the code below. You'll also need to update some of your other feature specs as this breaks those as well.
-
-```ruby
-before_action :authenticate_user!, :except => [:index, :show]
-```
-
-As you can guess, this will apply to all of the methods in the controller except for `index` and `show`, so guests will still be able to see the list of restaurants and the individual restaurant pages.
-
-Now try adding tests/code for the following scenarios:  (Before attempting this, we strongly recommend you read up on [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)).  To see how this relates to the following features, read [this pill](reviewed_restaurants.md)
-
-* **Users can only edit/delete restaurants which they've created**
-* **Users can only leave one review per restaurant**
-* **Users can delete only their own reviews**
 
 ### Related Videos
 
