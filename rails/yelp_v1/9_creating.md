@@ -190,4 +190,4 @@ class RestaurantsController < ApplicationController
 
 Much better.
 
-### [Next Stage - Updating (CR"U"D)](10_updating.md)
+### [Next Section - Updating (CR"U"D)](10_updating.md)

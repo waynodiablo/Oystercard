@@ -32,4 +32,4 @@ Finally for this stage, we want to achieve the `Hello World` of Rails, which loo
 * [Ruby on Rails Guides](http://guides.rubyonrails.org/getting_started.html)
 
 ### [Walkthrough](walkthroughs/1.md)
-### [Next Stage - Setting Up Tests](2_setting_up_tests.md)
+### [Next Section - Setting Up Tests](2_setting_up_tests.md)

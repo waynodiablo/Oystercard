@@ -50,4 +50,4 @@ which creates a web server running on port 3000 that we can browse to at http://
 
 Go to http://localhost:3000/restaurants and we'll see an error response in the RestaurantsController index action.  Notice the error page is showing us exactly the line in the controller where the error we raised occurred.  To move on we'll need a view and a model to give a response back to the user. Let's start with a view, which we'll explore in the next section.
 
-### [Next Stage - Views](5_views.md)
+### [Next Section - Views](5_views.md)

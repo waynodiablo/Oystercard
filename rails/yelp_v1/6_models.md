@@ -95,4 +95,4 @@ which will run all of your database migrations.
 
 (A word on migrations – if you need to change something, **don't edit the schema file**. If you want to remove database tables or change the schema in any way, instead write another migration that does that).
 
-### [Next Stage - Separating Concerns](7_separating_concerns.md)
+### [Next Section - Separating Concerns](7_separating_concerns.md)

@@ -13,4 +13,4 @@ If you shouted **"RSPEC"** at the screen, congratulate yourself with a high-five
 At this stage, the training wheels are starting to come off - and it's vital to your success as a Developer that you are able to look in the most logical places for the information you require. So we're going to show a bit of tough love, and let you find your own way on this one. You can do it - we know you can :heart:
 
 ### [Walkthrough](walkthroughs/2.md)
-### [Next Stage - Routing](3_routing.md)
+### [Next Section - Routing](3_routing.md)

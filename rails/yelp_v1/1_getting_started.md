@@ -59,4 +59,4 @@ This is a frustrating and intermittent problem. The most frustrating part of it,
 
 The ideal level of knowledge at this point, is that you need to run a `rake` task to build your database before you can get anywhere with your app - and sometimes you need to run a slightly different version of that `rake` task if the first doesn't work.
 
-### [Next Stage - Setting Up Tests](2_setting_up_tests.md)
+### [Next Section - Setting Up Tests](2_setting_up_tests.md)

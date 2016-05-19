@@ -1,4 +1,4 @@
-**Users can only leave one review per restaurant**
+# Section 2: Users Can Only Leave One Review per Restaurant
 
 The temptation is to start adding logic in the `ReviewsController` to test whether the current user has already reviewed the given restaurant.  **But this is bad**.  Why?
 
@@ -137,4 +137,6 @@ What is `build_review` and what does it do? Try to build this method with your p
 
 Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
 
-Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto Now move onto [one review per restaurant per user](yelp_v3/3_extending_associations.md) to complete this feature.
+Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto Now move onto the next section to complete this feature.
+
+### [Next Section - Extending Associations](3_extending_associations.md)

@@ -50,4 +50,4 @@ end
 
 Our test should fail - because we have not yet set up any routes. Let's find out how to do this in the next section!
 
-### [Next Stage - Routing](3_routing.md)
+### [Next Section - Routing](3_routing.md)

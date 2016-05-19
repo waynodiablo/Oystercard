@@ -71,4 +71,4 @@ Now all we need is a view for the restaurant show method. Let's make one.
 ```
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
 
-### [Next Stage - Creating ("C"RUD)](9_creating.md)
+### [Next Section - Creating ("C"RUD)](9_creating.md)

@@ -8,14 +8,7 @@
 
 ### V3 Walkthrough
 
-#### Setting limits on users
 
-Now we want to set limits on what site visitors can do. From our [specification](yelp.md#v3-specification):
-
-* A user must be logged in to create restaurants
-* Users can only edit/delete restaurants **which they've created**
-* Users can only leave **one review per restaurant**
-* Users can delete their own reviews
 
 Let's tackle these one by one. Remember to always write tests first, commit often to git and swap driver/navigator roles frequently&nbsp;:twisted_rightwards_arrows:. (Before attempting this, we strongly recommend you read up on [Active Record Associations](http://guides.rubyonrails.org/association_basics.html))
 

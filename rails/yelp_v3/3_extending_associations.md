@@ -1,4 +1,5 @@
-# Extending Active Record Associations
+# Section 3: Extending Active Record Associations
+
 Your `build_review` method should now look something like this:
 
 ```
@@ -113,3 +114,5 @@ For more information on extending Active Record associations, see the [Rails Gui
 
 * **Users can only edit/delete restaurants which they've created**
 * **Users can delete only their own reviews**
+
+### Version 3 Complete! - End of Tutorial!
