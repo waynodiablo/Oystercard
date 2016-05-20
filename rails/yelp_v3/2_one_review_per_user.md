@@ -139,4 +139,4 @@ Now you've seen how to move business logic into the model, have a look at your c
 
 Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto Now move onto the next section to complete this feature.
 
-### [Next Section - Extending Associations](3_extending_associations.md)
+### [Next Section - Extending Active Record Associations](3_extending_associations.md)
