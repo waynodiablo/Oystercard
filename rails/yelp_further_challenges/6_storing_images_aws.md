@@ -70,4 +70,4 @@ However you will still need to find a way to get all of the values in your secre
 
 * [Rails Ajax and AWS](https://www.youtube.com/watch?v=OIjiJotzTnA)
 
-# End of Bonus Section!
+## End of Bonus Section!
