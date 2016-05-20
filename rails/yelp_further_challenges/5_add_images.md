@@ -1,4 +1,4 @@
-#### Adding images to restaurants
+# Bonus Stage 5: Adding images to restaurants
 
 It's all looking a bit plain-text at the moment. Why can't we add an image to our restaurants?
 
@@ -87,4 +87,6 @@ In `views/restaurants/index.html.(erb/haml)`, you now want to include a photo.
 ```haml
 = image_tag restaurant.image.url(:thumb)
 ```
-**Exercise – work out how to test this with Capybara!** Then commit and :twisted_rightwards_arrows:.
+**Exercise – work out how to test this with Capybara!**
+
+#[Bonus Stage 6: Storing Images on AWS](6_storing_images_aws.md)
