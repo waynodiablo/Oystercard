@@ -4,6 +4,14 @@ Welcome to Rails week!
 
 Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration - the trick to enjoying Rails is to know the conventions and stick to them wherever possible.
 
+
+## This Week's Project: Yelp
+
+Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails. 
+
+
+* [Yelp Project Specification](https://github.com/makersacademy/course/blob/master/rails/yelp.md)
+
 ## Learning Objectives
 
 * [Learning Objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
@@ -13,10 +21,6 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 * :pill: [MVC](../pills/mvc.md)
 * :pill: [Rails console](../pills/rails_console.md)
 * :pill: [Active Record](../pills/activerecord.md)
-
-## Walkthrough
-
-* [Yelp clone](https://github.com/makersacademy/course/blob/master/rails/yelp.md)
 
 ## Resources
 
