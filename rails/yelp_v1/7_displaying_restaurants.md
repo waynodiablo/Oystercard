@@ -65,4 +65,4 @@ haml:
 
 So in summary our URL http://localhost:3000/restaurants hits the Rails routing system, which passes the request to the index action in the restaurants controller, which queries the database for any restaurant models.  The controller then 'passes' (using some Rails magic) an instance variable containing all the restaurant models to the view, where they can be correctly formatted.  The controller returns the resulting HTML back to the browser for display to the end user.
 
-### [Next Section - Reading (C"R"UD)](8_reading.md)
+### [Next Section - Creating ("C"RUD)](8_creating.md)
