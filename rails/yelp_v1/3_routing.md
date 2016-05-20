@@ -12,6 +12,8 @@ In Rails, our routing concerns live in the `config/routes.rb` file, and our cont
 get 'restaurants' => 'restaurants#index'
 ```
 
+If you are unsure where to put this line, look at the auto-generated comments in `config/routes.rb` for clues.
+
 which links up the '/restaurants' URL to the index action on the restaurants controller.  As we have more actions we could continue to add individual routes such as `get 'restaurants/new' => 'restaurants#new'`, but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
 
 ```ruby
