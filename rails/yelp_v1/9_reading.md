@@ -1,6 +1,4 @@
-# Section 8: Reading (C"R"UD)
-
-You remember [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), right? That's all Yelp is, at its core. Just a fancy CRUD app.
+# Section 9: Reading (C"R"UD)
 
 So far we've got creating restaurants down, but we can't update or delete them, nor can we really 'read' them (though we can see an index page of them).
 
@@ -71,4 +69,4 @@ Now all we need is a view for the restaurant show method. Let's make one.
 ```
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
 
-### [Next Section - Creating ("C"RUD)](9_creating.md)
+### [Next Section - Updating (CR"U"D)](10_updating.md)

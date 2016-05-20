@@ -1,8 +1,10 @@
-# Section 9: Creating ("C"RUD)
+# Section 8: Creating ("C"RUD)
 
 #### Creating a restaurant via the client
 
-Currently we can browse a list of restaurants, but we don't have a way for users of our site to add restaurants. Let's add a test for that now.
+You remember [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete), right? That's all Yelp is, at its core. Just a fancy CRUD app.
+
+Currently we should be able to browse a list of restaurants, but we don't have a way for users of our site to add restaurants to the database. Let's add a test for that now.
 
 `spec/features/restaurants_feature_spec.rb`:
 
@@ -190,4 +192,4 @@ class RestaurantsController < ApplicationController
 
 Much better.
 
-### [Next Section - Updating (CR"U"D)](10_updating.md)
+### [Next Section - Reading (C"R"UD)](9_reading.md)
