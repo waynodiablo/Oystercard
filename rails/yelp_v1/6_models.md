@@ -61,7 +61,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :name
       t.integer :rating
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
