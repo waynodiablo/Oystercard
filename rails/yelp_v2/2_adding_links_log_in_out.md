@@ -1,4 +1,4 @@
-#### Adding links to log in and out
+# Section 2: Adding links to log in and out
 
 So we've got routes that let our users sign-in/-out/-up, but they have no way of getting to them. Time to update our view logic!
 
