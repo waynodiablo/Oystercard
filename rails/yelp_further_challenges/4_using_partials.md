@@ -1,4 +1,4 @@
-#### Refactoring using partials
+# Bonus Stage 4: Refactoring Using Partials
 
 A good rule of thumb is that if you do something twice, you should consider refactoring (if you're doing it three times, *definitely* refactor).
 
@@ -14,4 +14,6 @@ Now, in both places we refer to the form (`app/views/restaurants/edit.html.erb` 
 <%= render "form" %>
 ```
 
-So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.  Commit and :twisted_rightwards_arrows:.
+So much cleaner! Rails knows to refer to the `_form` file we just created and slot it into the layout when the page is rendered.
+
+# [Bonus Stage 5: Add Images](5_add_images.md)
