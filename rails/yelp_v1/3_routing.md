@@ -6,7 +6,7 @@ Rails separates the routing concerns from the controller action concerns by plac
 
 > Why is it a good idea to separate concerns in this way?
 
-In Rails, our routing concerns live in the `config/routes.rb` file, and our controller action concerns live in `app/controllers/<controller name>_controller.rb`. So we need to update both concerns. We will cover controller actions in a later segment, but for now, we should make a change in 'config/routes.rb'
+In Rails, our routing concerns live in the `config/routes.rb` file, and our controller action (methods) live in `app/controllers/<controller name>_controller.rb`. So we need to update both concerns. We will cover controller actions in a later segment, but for now, we should make a change in 'config/routes.rb'
 
 ```ruby
 get 'restaurants' => 'restaurants#index'
