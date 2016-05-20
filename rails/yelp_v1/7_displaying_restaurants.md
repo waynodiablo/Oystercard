@@ -1,4 +1,4 @@
-# Section 7: Separating Concerns
+# Section 7: Displaying Restaurants
 
 ##### Rendering restaurants in the view
 

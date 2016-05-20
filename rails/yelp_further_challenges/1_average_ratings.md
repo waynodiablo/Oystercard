@@ -1,4 +1,4 @@
-#### Average ratings
+# Bonus Stage 1: Average ratings
 
 We want our restaurants to show their average rating. Test!
 
@@ -296,3 +296,5 @@ Ensuring all our tests are green it's time to commit and we could swap driver/na
 ## Related Videos
 
 * [Rails Helpers and Acceptance/Unit Testing Cycle](https://www.youtube.com/watch?v=M7pUtGRO-zg)
+
+# [Bonus Stage 2: Adding Endorsements](2_adding_endorsements.md)

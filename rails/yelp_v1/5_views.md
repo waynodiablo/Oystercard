@@ -25,26 +25,26 @@ Now our error is that there's no text on the page! Fix it:
 `app/views/restaurants/index.html.erb`:
 
 ```html
-No restaurants yet!
+No restaurants yet
 ```
 
 `app/views/restaurants/index.html.haml`:
 
 ```haml
-No restaurants yet!
+No restaurants yet
 ```
 
 Cool – but now RSpec is telling us we need a link on the page.
 
 `app/views/restaurants/index.html.erb`:
 ```erb
-No restaurants yet!
+No restaurants yet
 <a href='#'>Add a restaurant</a>
 ```
 
 `app/views/restaurants/index.html.haml`:
 ```haml
-No restaurants yet!
+No restaurants yet
 %a(href='#') Add a restaurant
 ```
 We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same. And our test is passing.
@@ -88,7 +88,5 @@ haml:
     = yield
 ```
 The yield statement is the place that the controller specific template will be inserted.
-
-Note also that we can see the available routes in an error message if we get our route wrong, e.g. going to http://localhost:3000/restaurants we'll get an error and the same routing table that we get from running `bin/rake routes`.  Note also we will only get these sorts of error messages in our development environment.
 
 ### [Next Section - Models](6_models.md)

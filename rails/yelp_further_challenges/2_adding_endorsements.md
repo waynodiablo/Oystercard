@@ -1,4 +1,4 @@
-#### Adding endorsements
+# Bonus Stage 2: Adding endorsements
 
 We want users to be able to 'endorse' reviews. We're going to follow the same method as last time: testing, then adding a new resource to routes, then creating a model and a controller.
 
@@ -123,3 +123,5 @@ In that block you want to call the number of endorsements that each review has. 
 Note that because we are relying on basic rails functionality up to this point that we haven't had to write any unit tests yet - we are assuming that Rails own unit tests will already cover this functionality effectively and our acceptance test is sufficient for us to get the necessary test coverage.  We're also being a bit naughty in that we're adding a display to the view without an acceptance test to cover it ...!
 
 **Exercise:** Go back and make an acceptance test that checks for the correct number of endorsements is displayed for each review.  This is not TDD, but sometimes it happens.  You wrote some functionality in your excitement.  It's not the end of the world, but if you are a professional software engineer you will go back, put the acceptance test in place, watch it pass AND THEN comment out the code in your app, **watch it fail**, and then get it to pass again.  This ensures you have not written a vacuous test after the fact and keeps you on the straight and narrow!
+
+# [Bonus Stage 3: Using AJAX](3_using_ajax.md)

@@ -21,7 +21,7 @@ Right. All installed? Then let's begin.
 #### Anatomy of the `new` generator:
 
 * `yelp_clone` is the name of your app – Rails will create this in a new directory.
-* By default, Rails uses Test::Unit for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
+* By default, Rails uses `Test::Unit` for testing. The `-T` switch turns off the built-in Rails test suite, because we're going to use RSpec for this project.
 * `-d` preconfigures your app for a particular type of database. By default, this is SQLite – which is a useful toy database, but can't be used on Heroku. In this case, we're overriding the default to use PostgreSQL.
 
 
@@ -36,7 +36,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 * `lib` - place to put non-rails ruby code
 * `lib/tasks` - the home for your custom rake tasks ([Rake Tasks Pill](https://github.com/makersacademy/course/blob/master/pills/rake_tasks_for_database_management.md))
 * `log` – keeps server logs and terminal output
-* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default
+* `public` – public resources. These will remain available even if the server goes down. Includes all your error pages by default (Note: in Sinatra you would expect to see your css & javascript directories in here, but with Rails, we put these in `app/assets` instead.)
 * `tmp` - temporary stuff gets stored here
 * `vendors` – a place for resources that you didn't write but are needed for the project, like jQuery; also called 3rd party assets
 

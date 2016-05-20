@@ -2,27 +2,17 @@
 
 We currently have a failing test, which informs us that 'No route matches [GET] "/restaurants"'
 
-In Sinatra, we updated routes within the controller (we mixed 'routing' concerns and 'controller action' concerns:
-
-```ruby
-# in Sinatra's app.rb
-
-get '/path' do # there's the routing concern
-  # action associated with this path, the controller action concern
-end
-```
-
 Rails separates the routing concerns from the controller action concerns by placing them in different files.
 
 > Why is it a good idea to separate concerns in this way?
 
-In Rails, our routing concerns live in the `config/routes.rb` file, and our controller action concerns live in `app/controllers/<controller name>_controller.rb`. So we need to update both concerns. We will cover controller actions in a later segment, but for now, we should make a change in 'config/routes.rb'
+In Rails, our routing concerns live in the `config/routes.rb` file, and our controller action (methods) live in `app/controllers/<controller name>_controller.rb`. So we need to update both concerns. We will cover controller actions in a later segment, but for now, we should make a change in 'config/routes.rb'
 
 ```ruby
 get 'restaurants' => 'restaurants#index'
 ```
 
-which links up the '/restaurants' URL to the index action on the restaurants controller.  As we have more actions we could continue to add individual routes such as `get 'restaurants/new' => 'restaurants#new'`, but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
+which links up the '/restaurants' URL to the index action on the restaurants controller (if you are unsure where to put this line, look at the auto-generated comments in `config/routes.rb` for clues.) As we have more actions we could continue to add individual routes such as `get 'restaurants/new' => 'restaurants#new'`, but rails gives us a shortcut for creating all the commonly used routes associated with a resource, e.g.
 
 ```ruby
 resources :restaurants
@@ -64,4 +54,4 @@ Notice also the way `resources :restaurants` has automatically created paths for
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller.
 
-### [Next Section - Routing](4_controllers.md)
+### [Next Section - Controllers](4_controllers.md)
