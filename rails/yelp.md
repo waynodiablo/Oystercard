@@ -45,7 +45,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
-### [V1 Walkthrough →](yelpv1.md)
+### [V1 Walkthrough →](yelp_v1/1_getting_started.md)
 
 ## Version 2 - User login
 
@@ -66,7 +66,7 @@ We can solve both of these problems by adding a user login system, as we did wit
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
-### [V2 Walkthrough →](yelpv2.md)
+### [V2 Walkthrough →](yelp_v2/1_installing_devise.md)
 
 ## Version 3 - Setting limits on users
 
@@ -79,7 +79,7 @@ Although our version 2 serves its purpose - it's limited in a few respects. Firs
 * Users can only leave **one review per restaurant**
 * Users can delete their own reviews
 
-### [V3 Walkthrough →](yelpv3.md)
+### [V3 Walkthrough →](yelp_v3/1_user_must_log_in.md)
 
 ### Further challenges (OPTIONAL)
 
