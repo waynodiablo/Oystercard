@@ -2,16 +2,6 @@
 
 We currently have a failing test, which informs us that 'No route matches [GET] "/restaurants"'
 
-In Sinatra, we updated routes within the controller (we mixed 'routing' concerns and 'controller action' concerns:
-
-```ruby
-# in Sinatra's app.rb
-
-get '/path' do # there's the routing concern
-  # action associated with this path, the controller action concern
-end
-```
-
 Rails separates the routing concerns from the controller action concerns by placing them in different files.
 
 > Why is it a good idea to separate concerns in this way?
