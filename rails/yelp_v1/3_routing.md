@@ -54,4 +54,4 @@ Notice also the way `resources :restaurants` has automatically created paths for
 
 Running `rspec` again, we get another `RoutingError` – this time, there's no Restaurants controller.
 
-### [Next Section - Routing](4_controllers.md)
+### [Next Section - Controllers](4_controllers.md)
