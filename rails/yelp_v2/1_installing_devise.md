@@ -1,4 +1,4 @@
-#### Installing Devise
+# Section 1: Installing Devise
 
 First, have refer to [Devise](https://github.com/plataformatec/devise) for documentation.
 
