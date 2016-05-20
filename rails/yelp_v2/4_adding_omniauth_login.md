@@ -1,4 +1,4 @@
-#### Adding OmniAuth login
+# Section 4: Adding OmniAuth Login
 
 Omniauth allows a user to log in to your site using a 3rd party login such as Facebook, Twitter, Github or other trusted 3rd party. This avoids the need for the user to create a new login/password just for your site.  Omniauth is a particular implementation of 3rd party authentication which involves a callback process as shown in this diagram:
 
@@ -15,3 +15,5 @@ Go to the [Devise wiki](https://github.com/plataformatec/devise/wiki/OmniAuth:-O
 Note that Devise will add the link to Facebook sign-up automatically and you don't need to add the sign out to the config/routes (since Devise also does that), so you don't need to follow those steps on the wiki.
 
 Under Settings => Advanced in your Facebook Developer dashboard, you need to add http://localhost:3000 as a valid redirect URI. Make sure the user logging in through facebook has privacy settings that permit their email to be viewed by 3rd parties.
+
+# [Next Stage - User Restrictions (Setting limits on Users)](../yelp_v3/1_user_must_log_in.md)
