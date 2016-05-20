@@ -119,4 +119,4 @@ For more information on extending Active Record associations, see the [Rails Gui
 
 Congratulations on reaching the end. However, if you are sad that you have run out of Yelp - fear not! We have put together some additional tasks which you may be interested in.
 
-# [Bonus Stage: Average Ratings](../yelp_further_challenges/1_average_ratings.md)
+# [Bonus Stage 1: Average Ratings](../yelp_further_challenges/1_average_ratings.md)
