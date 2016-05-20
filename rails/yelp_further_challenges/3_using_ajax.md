@@ -1,4 +1,4 @@
-# Bonus Stage 4: Using AJAX to update endorsements in real-time
+# Bonus Stage 3: Using AJAX to update endorsements in real-time
 
 This is where it gets fun. :twisted_rightwards_arrows: We can use AJAX to update the page in real-time without having to refresh. Broadly, it works like this:
 
