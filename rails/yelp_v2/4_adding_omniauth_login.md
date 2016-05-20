@@ -16,4 +16,4 @@ Note that Devise will add the link to Facebook sign-up automatically and you don
 
 Under Settings => Advanced in your Facebook Developer dashboard, you need to add http://localhost:3000 as a valid redirect URI. Make sure the user logging in through facebook has privacy settings that permit their email to be viewed by 3rd parties.
 
-# [Next Stage - User Restrictions (Setting limits on Users)](../yelp_v3/1_user_must_log_in.md)
+# [Next Stage - Setting limits on Users](../yelp_v3/1_user_must_log_in.md)
