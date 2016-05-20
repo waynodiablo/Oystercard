@@ -28,11 +28,3 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
-
-## Old Walkthroughs (DEPRECATED - provided for reference purposes only)
-
-* [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md)
-* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md)
-* [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md)
-* [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
-* [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)
