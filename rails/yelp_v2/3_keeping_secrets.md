@@ -1,4 +1,4 @@
-##### Keeping secrets properly
+# Section 3: Keeping Secrets
 
 In the subsequent section, we will be using OmniAuth to enable sign-in through an external service. The first stage will be to set up an application and obtain an API key. The proper way of saving secrets is to abstract them out into a separate file.
 
