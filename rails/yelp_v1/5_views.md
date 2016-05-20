@@ -89,6 +89,4 @@ haml:
 ```
 The yield statement is the place that the controller specific template will be inserted.
 
-Note also that we can see the available routes in an error message if we get our route wrong, e.g. going to http://localhost:3000/restaurants we'll get an error and the same routing table that we get from running `bin/rake routes`.  Note also we will only get these sorts of error messages in our development environment.
-
 ### [Next Section - Models](6_models.md)
