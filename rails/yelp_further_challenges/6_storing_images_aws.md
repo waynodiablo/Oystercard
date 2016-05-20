@@ -1,4 +1,4 @@
-#### Uploading images to Amazon Web Services S3
+#  Bonus Section 6: Uploading images to Amazon Web Services S3
 
 So far we've got images being saved straight to your web server – which is okay, and certainly fine for testing, but in practice may not be what you'd do. For example, Heroku has a strict size limit on dynos, which you'll quickly exceed if you upload files directly onto Heroku. So we want to store images somewhere else.
 
@@ -69,3 +69,5 @@ However you will still need to find a way to get all of the values in your secre
 ## Related Videos
 
 * [Rails Ajax and AWS](https://www.youtube.com/watch?v=OIjiJotzTnA)
+
+# End of Bonus Section!
