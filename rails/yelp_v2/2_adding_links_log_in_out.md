@@ -82,4 +82,4 @@ And now we need sign in and sign up links, so add this to the above:
 
 And now we should be green. A good time to  commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
 
-### [Next Stage - Keeping secrets](2_keeping_secrets.md)
+### [Next Stage - Keeping secrets](3_keeping_secrets.md)
