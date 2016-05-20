@@ -116,3 +116,7 @@ For more information on extending Active Record associations, see the [Rails Gui
 * **Users can delete only their own reviews**
 
 ### Version 3 Complete! - End of Tutorial!
+
+Congratulations on reaching the end. However, if you are sad that you have run out of Yelp - fear not! We have put together some additional tasks which you may be interested in.
+
+# [Bonus Stage: Average Ratings](../yelp_further_challenges/1_average_ratings.md)
