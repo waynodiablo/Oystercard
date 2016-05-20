@@ -1,4 +1,4 @@
-#### Using AJAX to update endorsements in real-time
+# Bonus Stage 4: Using AJAX to update endorsements in real-time
 
 This is where it gets fun. :twisted_rightwards_arrows: We can use AJAX to update the page in real-time without having to refresh. Broadly, it works like this:
 
@@ -194,6 +194,6 @@ In `app/views/restaurants/index.html.(erb/haml)`, add this code replacing your e
       %span.endorsements_count= review.endorsements.count
       = 'endorsement'.pluralize review.endorsements.count
 ```
-Here, the `span` tag with class 'endorsements_count' is populated with the current review endorsements count when the page is first loaded. Then, when the user clicks on 'Endorse', our JS is fired and posts to the URL linked to by the 'Endorse' link. It takes the response and replaces the number in the `span` with it.
+Here, the `span` tag with class 'endorsements_count' is populated with the current review endorsements count when the page is first loaded. Then, when the user clicks on 'Endorse', our JS is fired and posts to the URL linked to by the 'Endorse' link. It takes the response and replaces the number in the `span` with it. Your tests should now be passing.
 
-Your tests should now be passing. Commit and :twisted_rightwards_arrows:.
+# [Bonus Stage 4: Using Partials](4_using_partials.md)
