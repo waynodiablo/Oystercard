@@ -1,1 +1,0 @@
-# Rails Week - Challenge Map
