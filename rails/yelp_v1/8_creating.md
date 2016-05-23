@@ -131,9 +131,9 @@ ActiveModel::ForbiddenAttributesError
 
 Hmmm... why doesn't this work?
 
-### `permit`
-
 Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
+
+### `permit`
 
 As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Let's create a utility method that does this for us and add it to our controller:
 
