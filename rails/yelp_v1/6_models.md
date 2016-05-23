@@ -61,11 +61,13 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :name
       t.integer :rating
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
 ```
+
+
 
 Note that as well as the string name property that we specified in the generator, two timestamp columns are automatically added so we know when a given record was created or last updated. The migration itself is timestamped based on when we ran the generate command.
 
