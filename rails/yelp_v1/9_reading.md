@@ -65,7 +65,6 @@ Now all we need is a view for the restaurant show method. Let's make one.
 
 ```haml
 %p= @restaurant.name
-%p= @restaurant.description
 ```
 That'll do for this view for the moment, but we'll be coming back here as we expand the app to have reviews for restaurants.
 
