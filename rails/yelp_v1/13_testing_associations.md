@@ -1,4 +1,4 @@
-# Section 13: Testing Associations
+# Section 13: Testing Validations
 
 #### Stop users creating duplicate restaurants – validations
 
