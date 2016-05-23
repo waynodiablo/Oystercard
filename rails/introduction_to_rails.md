@@ -10,7 +10,7 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails. 
 
 
-* [Yelp Project Specification](yelp.md)
+* [Yelp Project Specification](yelp_project_specification.md)
 
 ## Learning Objectives
 
