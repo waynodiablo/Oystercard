@@ -16,18 +16,10 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 ***As you know, as with all Makers Academy materials, there may be subtle errors in the following code snippets.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
 
 **Contents**
-- [Version 1 - MVP](#version-1---mvp)
-    - [V1 Specification](#v1-specification)
-    - [V1 Walkthrough](#v1-walkthrough)
-- [Version 2 - User login](#version-2---user-login)
-    - [V2 Specification](#v2-specification)
-    - [V2 Walkthrough](#v2-walkthrough)
-- [Version 3 - adding common constraints to users](#version-3---enhanced-ux)
-    - [V3 Specification](#v3-specification)
-    - [V3 Walkthrough](#v3-walkthrough)
-- [Resources](#resources)
-- [Walkthroughs](#walkthroughs-under-construction)
-
+- [V1 Walkthrough → MVP](yelp_v1/1_getting_started.md)
+- [V2 Walkthrough → User Login](yelp_v2/1_installing_devise.md)
+- [V3 Walkthrough → Setting limits on users](yelp_v3/1_user_must_log_in.md)
+- [Further challenges walkthrough → extra features](yelp_further_challenges/yelp_further_challenges.md)
 
 Model View Controller (MVC) is an architectural pattern for dividing up responsibilities for serving a view, by having the presentation logic in a view, the business logic in a model and the two managed by a controller.  Very often the presentation of the final view will involve the controller coordinating the merging of model data with a view template for display to a user.  Please see this [diagram](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png).  As we go through building Yelp you'll see how Rails works in terms of Models, Views and Controllers.
 
@@ -93,4 +85,4 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Refactor your more complex views to use partials
 * Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### [Further challenges walkthrough →](yelp_further_challenges.md)
+### [Further challenges walkthrough →](yelp_further_challenges/yelp_further_challenges.md)
