@@ -22,7 +22,7 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 - [Version 2 - User login](#version-2---user-login)
     - [V2 Specification](#v2-specification)
     - [V2 Walkthrough](#v2-walkthrough)
-- [Version 3 - Enhanced UX](#version-3---enhanced-ux)
+- [Version 3 - adding common constraints to users](#version-3---enhanced-ux)
     - [V3 Specification](#v3-specification)
     - [V3 Walkthrough](#v3-walkthrough)
 - [Resources](#resources)
@@ -45,11 +45,11 @@ Remember to drive the addition of all features using feature tests, and unit tes
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
 - [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md) should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional)
 
-### [V1 Walkthrough →](yelpv1.md)
+### [V1 Walkthrough →](yelp_v1/1_getting_started.md)
 
 ## Version 2 - User login
 
-Although our initial version serves its purpose - it's limited in a few respects. First any visitor can freely delete or edit restaurants, leaving our site open to vandalism. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
+Although our initial version serves its purpose - it's limited in a few respects. Any visitor to the site can freely add, edit or delete. We also have very few options to track or constrain the visitors to our site.
 
 We can solve both of these problems by adding a user login system, as we did with Bookmark Manager. This time though, we'll use a popular gem - [Devise](https://github.com/makersacademy/course/blob/master/walkthroughs/devise.md) - to accelarate the implementation of our user system.
 
@@ -61,26 +61,36 @@ We can solve both of these problems by adding a user login system, as we did wit
 ### V2 Specification
 
 * Users can register/login
-* A user must be logged in to create restaurants
-* Users can only edit/delete restaurants **which they've created**
-* Users can only leave **one review per restaurant**
-* Users can delete their own reviews
+
 * Some indication should be given on the page (as part of the layout) whether the user is currently logged in, along with links to the available actions (i.e. Logout/Edit account is signed in, otherwise Sign In/Sign Up)
 * The email address of the reviewer should be displayed as part of the review
 * *Optional* - Users can't review a restaurant which they created
 
-### [V2 Walkthrough →](yelpv2.md)
+### [V2 Walkthrough →](yelp_v2/1_installing_devise.md)
 
-## Version 3 - Enhanced UX
+## Version 3 - Setting limits on users
 
-Finally, let's focus on creating a better user experience. This will introduce us to [Rails helper methods] and [AJAX in Rails]. We'll also use CSS to enhance the look of our front-end.
+Although our version 2 serves its purpose - it's limited in a few respects. First any user can freely create, delete or edit restaurants. Additionally, a user can leave multiple reviews for the same restaurant - making it easy for restaurant scores to be skewed.
 
 ### V3 Specification
+
+* A user must be logged in to create restaurants
+* Users can only edit/delete restaurants **which they've created**
+* Users can only leave **one review per restaurant**
+* Users can delete their own reviews
+
+### [V3 Walkthrough →](yelp_v3/1_user_must_log_in.md)
+
+### Further challenges (OPTIONAL)
+
+Finally, let's focus on creating a better user experience. This will introduce us to Rails helper methods and using AJAX in conjunction with Rails.
+
+### Further specifications
 
 * Currently, when writing a review, we have to go to a separate page and trigger a page refresh. Migrate the functionality to happen asynchronously with AJAX. We'll also have to set up [Poltergeist](https://github.com/teampoltergeist/poltergeist) to enable us to run JS-enabled tests.
 * Create a helper method to allow ratings and average ratings to be displayed as stars (e.g.) rather than numbers
 * Use CSS to enhance the overall design of the site
 * Refactor your more complex views to use partials
-* *Optional* - Add the ability for users to add an image to a restaurant, by pointing to an external image URL
+* Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### [V3 Walkthrough →](yelpv3.md)
+### [Further challenges walkthrough →](yelp_further_challenges.md)

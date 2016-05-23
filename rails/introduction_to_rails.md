@@ -1,22 +1,26 @@
-#Introduction to Rails
+# Introduction to Rails
 
-Welcome to Rails week! 
+Welcome to Rails week!
 
-Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration - the trick to enjoying Rails is to know the conventions and stick to them wherever possible. 
+Rails is a popular Model View Controller (MVC) web applications framework. Sinatra, by comparison, is just a web applications framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  Rails is, well... like being on rails. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours convention over configuration - the trick to enjoying Rails is to know the conventions and stick to them wherever possible.
+
+
+## This Week's Project: Yelp
+
+Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails. 
+
+
+* [Yelp Project Specification](yelp_project_specification.md)
 
 ## Learning Objectives
 
-* [Learning Objectives](https://github.com/makersacademy/course/blob/master/rails/learning_objectives.md)
+* [Learning Objectives](learning_objectives.md)
 
 ## Related Pills
 
 * :pill: [MVC](../pills/mvc.md)
 * :pill: [Rails console](../pills/rails_console.md)
 * :pill: [Active Record](../pills/activerecord.md)
-
-## Walkthrough
-
-* [Yelp clone](https://github.com/makersacademy/course/blob/master/rails/yelp.md)
 
 ## Resources
 
@@ -28,11 +32,3 @@ Rails is a popular Model View Controller (MVC) web applications framework. Sinat
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
-
-## Old Walkthroughs (DEPRECATED - provided for reference purposes only)
-
-* [Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/rails.md)
-* [More Rails](https://github.com/makersacademy/course/blob/master/walkthroughs/more_rails.md) 
-* [Validations](https://github.com/makersacademy/course/blob/master/walkthroughs/validations.md)
-* [Helpers](https://github.com/makersacademy/course/blob/master/walkthroughs/helpers.md)
-* [Rails Create Update](https://github.com/makersacademy/course/blob/master/walkthroughs/rails_create_update.md)

@@ -9,7 +9,7 @@
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/00_challenge_map.md)
 * Week 5: [Intro to Javascript: Thermostat](thermostat/0_challenge_map.md)
 * Week 6: [Lab week](lab_week/lab_week.md)
-* Week 7: [Intro to Rails](https://github.com/makersacademy/course/blob/master/rails/introduction_to_rails.md)
+* Week 7: [Intro to Rails](rails/introduction_to_rails.md)
 * Week 8: [Further JavaScript: Angular](https://github.com/makersacademy/course/blob/master/further_javascript/00_challenge_map.md)
 * Week 9: [[Makerthon](https://github.com/makersacademy/course/blob/master/makerthon/introduction.md), [MakerMix](https://github.com/makersacademy/course/blob/master/makermix/intro_to_makermix.md)\]
 * Weeks 10-11: Final Projects
