@@ -58,7 +58,6 @@ Now all we need is a view for the restaurant show method. Let's make one.
 
 ```erb
 <p><%= @restaurant.name %></p>
-<p><%= @restaurant.description %></p>
 ```
 
 `app/views/restaurants/show.html.haml`:
