@@ -45,7 +45,7 @@ True to its 'opinionated' name, Rails is full of files and folders right from th
 
 `$ bin/rails server` or `$ bin/rails s` will get you started. (Rails has lots of these little command-line shortcuts.) Now visit http://localhost:3000.
 
-> You've just typed in `bin/rails server` - but what would happen if you just typed `rails server`? What is the difference between these commands, and why do you think we insist on `bin/rails` instead of `bin`?
+> You've just typed in `bin/rails server` - but what would happen if you just typed `rails server`? What is the difference between these commands, and why do you think we insist on `bin/rails` instead of `rails`?
 
 If you see an error, you'll likely need to run a `rake` task to get your database built:
 
