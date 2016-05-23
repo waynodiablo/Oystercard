@@ -74,7 +74,7 @@ Unable to find field "Name"
 
 We're currently missing anything on that page to allow a user to submit restaurant details - let's make a form to fix that!
 
-#### Making forms in Rails – `form_for`, `create`, and `permit`
+#### Making forms in Rails – `form_for`
 
 HTML forms are the common way to submit data through web applications and Rails provides a lot of helpers to streamline the process of creating them.  Adjust our new template as follows:
 
@@ -107,6 +107,8 @@ AbstractController::ActionNotFound:
 The action 'create' could not be found for RestaurantsController
 ```
 
+### `create`
+
 We need a `create` method!  Before implementing the following, please experiment with create doing a `raise params` instead of the below and see what that gives you.  The params is what is returned from the form submisson and it's very important to understand how it works.
 
 ```ruby
@@ -128,6 +130,8 @@ ActiveModel::ForbiddenAttributesError
 ```
 
 Hmmm... why doesn't this work?
+
+### `permit`
 
 Well, before Rails 3.2, it would have worked – and that was a huge security hole. `params[:restaurant]` passes in *all* the params received from the submitted form. If an unscrupulous user were to modify the form in their browser to include extra form fields, then our controller would blindly accept them as well!
 
