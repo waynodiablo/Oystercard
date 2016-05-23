@@ -19,7 +19,7 @@ This week's project is a clone of [Yelp](http://www.yelp.co.uk). The goal is to 
 - [V1 Walkthrough → MVP](yelp_v1/1_getting_started.md)
 - [V2 Walkthrough → User Login](yelp_v2/1_installing_devise.md)
 - [V3 Walkthrough → Setting limits on users](yelp_v3/1_user_must_log_in.md)
-- [Further challenges walkthrough → extra features](yelp_further_challenges/yelp_further_challenges.md)
+- [Further challenges walkthrough → extra features](yelp_further_challenges/1_average_ratings.md)
 
 Model View Controller (MVC) is an architectural pattern for dividing up responsibilities for serving a view, by having the presentation logic in a view, the business logic in a model and the two managed by a controller.  Very often the presentation of the final view will involve the controller coordinating the merging of model data with a view template for display to a user.  Please see this [diagram](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png).  As we go through building Yelp you'll see how Rails works in terms of Models, Views and Controllers.
 
@@ -85,4 +85,4 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Refactor your more complex views to use partials
 * Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### [Further challenges walkthrough →](yelp_further_challenges/yelp_further_challenges.md)
+### [Further challenges walkthrough →](yelp_further_challenges/1_average_ratings.md.md)
