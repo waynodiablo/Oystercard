@@ -16,7 +16,7 @@ Form params are parameters that are passed from a web page to an application via
 server.rb
 
   post ‘/form’ do
-    @name = params[:name]
+    @username = params[:username]
     puts params
     erb :params
   end
@@ -26,7 +26,7 @@ server.rb
 ``` ruby
 form.erb
   <form name="input" action=“/form” method=“post”>
-  username: <input type=“text” name=“user”>
+  username: <input type=“text” name=“username”>
   password: <input type=“password” name=“password”>
 
   <input type=“submit” value=“Submit”>
@@ -38,7 +38,7 @@ In form.erb you can see the first `<form>` tag contains 3 attributes:
 * `action` - this is the path to which the form will be sent
 * `method` - this is the type of HTTP request via which the form will be sent
 
-When the user fills in their username and password, a POST request is sent to the `/form` path with a params hash. The server identifies this request and defines an instance variable `@name` that is available to the erb. It then prints the params to the console and serves a new template `params.erb` to the user.
+When the user fills in their username and password, a POST request is sent to the `/form` path with a params hash. The server identifies this request and defines an instance variable `@username` that is available to the erb. The params hash identifies with the input's name, in this case the name="username". It then prints the params to the console and serves a new template `params.erb` to the user.
 
 ### Query String Params
 
