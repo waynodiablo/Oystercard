@@ -4,8 +4,8 @@
 
 Currently, our database has a restaurants table with a few columns (much like a spreadsheet in Excel). Let's say it looks something like this:
 
-| Id | Name          |
-| -- | --------------|
+| ID | Name          |
+| -- | ------------- |
 | 1  | KFC           |
 | 2  | Pret a Manger |
 | 3  | ..            |
