@@ -4,11 +4,11 @@
 
 Currently, our database has a restaurants table with a few columns (much like a spreadsheet in Excel). Let's say it looks something like this:
 
-Id | Name
--- | ---
-1  | KFC
-2  | Pret a Manger
-3  | ..
+| Id | Name          |
+| -- | --------------|
+| 1  | KFC           |
+| 2  | Pret a Manger |
+| 3  | ..            |
 
 We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**. Let's look at migrations again.
 
