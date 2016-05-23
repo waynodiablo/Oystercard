@@ -30,6 +30,24 @@ $ bin/rake db:migrate
 
 The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
 
+So if we go and [take a look at our database](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md), we expect to see a `description` field. We also need to update our views to incorporate this new information.
+
+`app/views/restaurants/show.html.erb`:
+
+```erb
+<p><%= @restaurant.name %></p>
+<p><%= @restaurant.description %></p>
+```
+
+`app/views/restaurants/show.html.haml`:
+
+```haml
+%p= @restaurant.name
+%p= @restaurant.description
+```
+
+And now the good news - we get to go back and amend our old tests to accomodate this new data! 
+
 #### Updating restaurants
 
 Now let's tackle updating restaurants. Testing first:
