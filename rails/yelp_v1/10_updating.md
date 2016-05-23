@@ -11,7 +11,15 @@ Currently, our database has a restaurants table with a few columns (much like a 
 | 3  | Trade     |
 
 
-We want to add another column to the table for a description. In Rails, the way you do this is by creating a **migration**. Let's look at migrations again.
+We want to add another column to the table for a description, so it would look like this:
+
+| ID | Name      | Description                            |
+|----|-----------|----------------------------------------|
+| 1  | KFC       | The filthiest 'chicken' money can buy. |
+| 2  | Hawksmoor | Best steak in London - hands down.     |
+| 3  | Trade     | Heart-stopping melted cheese sarnies.  |
+
+In Rails, the way you do this is by creating a **migration**. Let's look at migrations again.
 
 Migrations describe a set of changes you're making to your database – Rake can interpret them and run the actual SQL commands that make those changes happen without you having to get your hands dirty. They're also super-useful because if something goes wrong, you can roll your database back to a previous state by using those migration files (which provide a record of every change to your data).
 
