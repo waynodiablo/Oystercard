@@ -97,11 +97,39 @@ def create
   @restaurant.reviews.create(review_params)
 end
 
+private
+
 def review_params
   params.require(:review).permit(:thoughts, :rating)
 end
 ```
 
 (Remember all the `permit` weirdness from before!)
+
+we should now be seeing the folowing error:
+
+```
+Failure/Error: click_button 'Leave Review'
+     NoMethodError:
+       undefined method `reviews' for #<Restaurant:0x007fd120bd40b8>
+     # ./app/controllers/reviews_controller.rb:10:in `create'
+     # ./spec/features/reviews_feature_spec.rb:11:in `block (2 levels) in <top (required)>'
+```
+
+This is really the meat of this walkthrough - our Restaurant class does not have an instance method '#reviews'. Rails can auto-magically generate this method for us, we just need to set up the association.
+
+In `/app/models/restaurant.rb`:
+```ruby
+class Restaurant < ActiveRecord::Base
+  has_many :reviews
+end
+```
+
+We should now see an `UnknownAttributeError` for 'restaurant_id'. This is because we haven't added a reference to restaurant in our review table. Let's use a generator to build a migration:
+
+```
+$ bin/rails g migration AddRestaurantRefToReviews restaurant:references
+```
+Finally, to get our tests to pass, redirect back to the restaurants path, and add the review to your view template.
 
 ### [Next Section - Testing Validations](13_testing_validations.md)
