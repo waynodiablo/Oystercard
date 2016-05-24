@@ -135,7 +135,7 @@ Well, before Rails 3.2, it would have worked – and that was a huge security ho
 
 ### `permit`
 
-As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Let's create a utility method that does this for us and add it to our controller:
+As a result, we need to explicitly state which params we're going to allow our controller to accept, using `permit`. Let's create a private method that does this for us and add it to our controller:
 
 ```ruby
   def restaurant_params
