@@ -1,3 +1,5 @@
+This Pill is also available as [a video](https://www.youtube.com/watch?v=sFAxF6QSPas).
+
 ## Scenario:
 
 Ben, Roi, Ana and Irina are students and rotate pairs each day.  Each day they
