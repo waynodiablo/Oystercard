@@ -1,4 +1,4 @@
-# Section 11: Destroying (CR"U"D)
+# Section 11: Destroying (CRU"D")
 
 ##### Deleting restaurants
 
