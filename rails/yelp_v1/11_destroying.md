@@ -12,7 +12,7 @@ In `restaurants_feature_spec.rb`, let's add a test:
 
 context 'deleting restaurants' do
 
-  before { Restaurant.create name: 'KFC' }
+  before { Restaurant.create name: 'KFC', description: 'Deep fried goodness' }
 
   scenario 'removes a restaurant when a user clicks a delete link' do
     visit '/restaurants'
