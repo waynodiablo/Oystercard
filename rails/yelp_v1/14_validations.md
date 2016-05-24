@@ -50,4 +50,4 @@ Your tests should now all be passing.  Commit and High Five!!!!!
 * [Rails](https://www.youtube.com/watch?v=iOJUBnC0imE)
 * [Rails Cont](https://www.youtube.com/watch?v=Tm7kjJBDa-8)
 
-### [Next Section - Athentication with Devise](../yelp_v2/1_authentication_with_devise.md)
+### [Next Section - Authentication with Devise](../yelp_v2/1_installing_devise.md)
