@@ -9,6 +9,8 @@ The BDD Cycle lives at the heart of crafting well-designed, stable applications.
 
 The BDD Cycle splits application development into separate 'stages'. As a result of moving up and down between these stages, a clear **Application Design** and **Domain Model** _emerge_.
 
+The Red - Green - Refactor process, which is intrinsic to BDD, is available as a video [here](https://www.youtube.com/watch?v=Q2aIYwuU4TM).
+
 #####Stage 1: Distilling client requirements into User Stories
 
 Let's imagine we have a client, who says
