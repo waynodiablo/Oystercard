@@ -80,6 +80,6 @@ And now we need sign in and sign up links, so add this to the above:
   = link_to "Sign up", new_user_registration_path
 ```
 
-And now we should be green. A good time to  commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+And now we should be green!
 
 ### [Next Stage - Keeping secrets](3_keeping_secrets.md)
