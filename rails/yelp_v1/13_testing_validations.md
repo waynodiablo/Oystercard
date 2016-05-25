@@ -53,7 +53,7 @@ describe Restaurant, type: :model do
 end
 ```
 
-To get this test to run, you will need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.  Time to commit our latest code to git, and switch Driver/Navigator Roles&nbsp;:twisted_rightwards_arrows:.
+To get this test to run, you will need to add `rspec-collection_matchers` to the `test` group of your Gemfile and run `bundle install`.
 
 ##### Adding validations – restaurant name length
 
