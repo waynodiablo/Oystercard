@@ -41,7 +41,7 @@ Your test will fail because our review model doesn't stop someone from submittin
 validates :rating, inclusion: (1..5)
 ```
 
-Your tests should now all be passing.  Commit and High Five!!!!!
+Your tests should now all be passing. High Five!!!!!
 
 ### Version 1 Complete!
 
