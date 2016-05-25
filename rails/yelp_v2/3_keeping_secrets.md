@@ -4,7 +4,7 @@ In the subsequent section, we will be using OmniAuth to enable sign-in through a
 
 * Create a [Facebook Developer application](http://developers.facebook.com), making note of the two keys you're given.
 
-Add your API keys to the Rails `secrets.yml` file. They can then get called into the above code without needing to check them into version control. You will be able to call them using the following:
+Add your API keys to the Rails `secrets.yml` file. They can then get called into our code without needing to check them into version control. You will be able to call them using the following:
 
 `Rails.application.secrets.[name_of_secret]`
 
