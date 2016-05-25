@@ -1,6 +1,6 @@
 # Section 1: Installing Devise
 
-First, have refer to [Devise](https://github.com/plataformatec/devise) for documentation.
+First, we have refer to [Devise](https://github.com/plataformatec/devise) for documentation.
 
 Add Devise to your Gemfile –
 
