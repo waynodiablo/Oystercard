@@ -31,7 +31,7 @@ Remember to drive the addition of all features using feature tests, and unit tes
 
 ### V1 Specification
 
-- Visitors can create new restaurants using a form, specifying a name and rating
+- Visitors can create new restaurants using a form, specifying a name and description
 - Restaurants can be edited and deleted
 - Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience
 - The restaurants listings page should display all the reviews, along with the average rating of each restaurant
