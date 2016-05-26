@@ -2,7 +2,7 @@
 
 ### User Must Log in to Create Restaurants
 
-Now we want to set limits on what site visitors can do. From our [specification](yelp.md#v3-specification):
+Now we want to set limits on what site visitors can do. From our [specification](../yelp_project_specification.md):
 
 * A user must be logged in to create restaurants
 * Users can only edit/delete restaurants **which they've created**
