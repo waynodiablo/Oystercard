@@ -37,7 +37,7 @@ end
 ...
 ```
 
-Now we have failing acceptance tests and failing unit tests.  Not a bad time to commit to git (not on master ideally) and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+Now we have failing acceptance tests and failing unit tests.
 
 ##### Making an `average_rating` helper
 
@@ -78,8 +78,6 @@ def average_rating
 end
 ```
 
-A good time to commit to git and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
-
 And now for multiple reviews...
 
 `restaurant_spec.rb`:
@@ -116,7 +114,7 @@ end
 reviews.average(:rating)
 ```
 
-Rails has lots of great methods like this.  Check out the [Active Record Calculations API docs](http://api.rubyonrails.org/classes/ActiveRecord/Calculations.html) for more details.  Our unit tests should now be green (acceptance test still red); a good time to commit our changes to our feature branch in git and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+Rails has lots of great methods like this.  Check out the [Active Record Calculations API docs](http://api.rubyonrails.org/classes/ActiveRecord/Calculations.html) for more details.  Our unit tests should now be green (acceptance test still red).
 
 ##### Displaying the average rating
 
@@ -189,9 +187,7 @@ describe ReviewsHelper, :type => :helper do
 end
 ```
 
-It's been a while so let's commit our changes to our feature branch in git and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
-
-Now the new driver can write that helper method. Rails has auto-generated some placeholder files that we can open up and edit.
+Now to write that helper method. Rails has auto-generated some placeholder files that we can open up and edit.
 
 `app/helpers/reviews_helper.rb`:
 
@@ -210,10 +206,7 @@ it 'returns five black stars for five' do
   expect(helper.star_rating(5)).to eq '★★★★★'
 end
 ```
-
-Commit our changes to git and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.  We're using the [ping-pong pairing](pills/pairing.md#ping-pong-pairing-between-programmer-a-and-b) method here.
-
-Now the new driver needs to update the same method again in order to make our unit test pass.
+Now we need to update the same method again in order to make our unit test pass.
 
 ```ruby
 module ReviewsHelper
@@ -224,7 +217,7 @@ module ReviewsHelper
 end
 ```
 
-Once ping pong pairing is up and running the driver keeps making a test pass and then creates a new failing test.  It's almost like a game of chess with two players taking turns of move and counter-move.  Driver, let's have another test for the navigator to chew on!
+Our next test should look something like this:
 
 ```ruby
 it 'returns three black stars and two white stars for three' do
@@ -232,9 +225,7 @@ it 'returns three black stars and two white stars for three' do
 end
 ```
 
-Of course we're always running rspec to check that our tests fail before going on to make the pass, but of course we don't need to remind you of that :-)  We're at a new test failure point - time to commit and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
-
-The new driver needs to work out the remainder to put on the end as white stars:
+We're at a new test failure point - we want to work out the remainder to put on the end as white stars:
 
 ```ruby
 module ReviewsHelper
@@ -246,7 +237,7 @@ module ReviewsHelper
 end
 ```
 
-Now the driver can make a final unit test:
+Now we can make a final unit test:
 
 ```ruby
 it 'returns four black stars and one white star for 3.5' do
@@ -254,9 +245,11 @@ it 'returns four black stars and one white star for 3.5' do
 end
 ```
 
-Before you run this test think about whether you expect it to pass or fail.  Then run rspec to check. Consider the result carefully.  Whatever happens it's time to commit and swap driver/navigator roles&nbsp;:twisted_rightwards_arrows:.
+Before you run this test think about whether you expect it to pass or fail.  Then run rspec to check. Consider the result carefully. This is a good process to get into the habit of...
 
-Were you surprised to see the test fail? When either of you was in navigator mode you might have started to worry about a more strategic issue arising from the current helper implementation, that we've tied things to a class type.  The problem for this test in particular is that we'll get '3.5' back as 3.5, which in Ruby is a Float, and not a Fixnum. A good navigator here might well suggest a bit of [duck typing](http://en.wikipedia.org/wiki/Duck_typing) to identify the input as valid - perhaps we could check not whether we have a Fixum, but whether the incoming rating responds to the `round` method?
+Were you surprised to see the test fail? You may have started to worry about a more strategic issue arising from the current helper implementation, that we've tied things to a class type.  The problem for this test in particular is that we'll get '3.5' back as 3.5, which in Ruby is a Float, and not a Fixnum. 
+
+What could you do to identify the input as valid? Perhaps we could check not whether we have a Fixum, but whether the incoming rating responds to the `round` method?
 
 If it does, we could then proceed with the method, which involves rounding the review to make sure we get an integer back (rather than using half stars).
 
@@ -274,7 +267,7 @@ module ReviewsHelper
 end
 ```
 
-And that should pass those tests. We've completed our run of unit test ping pong and depending on how long it took you to get the last chunk working you might want to swap driver/navigator roles or not.  At the end of the day the critical thing is that both pair partners spend an equal amount of time on the keyboard, and also that you both get a nice balance of activity at the different testing levels and through the applicaiton logic.  Whether you swap roles here or not it's time to jump back up to our failing acceptance test to see if we can now fix it. We can make that pass with something like the following:
+And that should pass those tests. Time to jump back up to our failing acceptance test to see if we can now fix it. We can make that pass with something like the following:
 
 ```erb
 ...
@@ -287,11 +280,9 @@ And that should pass those tests. We've completed our run of unit test ping pong
 = star_rating(restaurant.average_rating)
 ...
 ```
-Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](/pills/rails_helpers.md)** to learn more.
+Done. We've made our own helper method – but there are lots of built-in helpers that are very useful. Have a look at :pill: **[Helper methods](https://github.com/makersacademy/course/tree/master/pills/rails_helpers.md)** to learn more.
 
-**Exercise - having reviewed the helper pill see if you can ping pong pair through an acceptance test unit test cycle to get the reviews to display when they were created relative to now (e.g. '5 hours ago').**
-
-Ensuring all our tests are green it's time to commit and we could swap driver/navigator roles before we start a new feature &nbsp;:twisted_rightwards_arrows:, but use your best judgement about how much keyboard time you are getting. Consider that you could place each feature on it's own feature branch and then merge back to master once completed and green.
+Our tests should be all green at this point. Consider that you could place each feature on it's own feature branch and then merge back to master once completed and green - this would be an ideal practice to get into.
 
 ## Related Videos
 
