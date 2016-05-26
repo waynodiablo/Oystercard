@@ -85,4 +85,4 @@ Finally, let's focus on creating a better user experience. This will introduce u
 * Refactor your more complex views to use partials
 * Add the ability for users to add an image to a restaurant, by pointing to an external image URL
 
-### [Further challenges walkthrough →](yelp_further_challenges/1_average_ratings.md.md)
+### [Further challenges walkthrough →](yelp_further_challenges/1_average_ratings.md)
