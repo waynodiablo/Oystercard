@@ -17,9 +17,7 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 6. *Cohort channel in Slack.* Ask your cohort for help, explaining clearly: what’s the issue, why did it happen, and what have you tried?
 
-7. *Slack Overflow.* (Jrs) or *Stack Overflow.* (Srs) Format your question well. Post a link to your question on Slack - that way you can ask for formatting feedback on your query from coaches, and support from fellow students/graduates.
-
-8. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
+7. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions, or a suggestion to post on *Slack Overflow*/*Stack Overflow*
 
 ## Further Reading
 
