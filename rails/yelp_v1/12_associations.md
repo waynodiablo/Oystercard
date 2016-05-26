@@ -116,12 +116,12 @@ Failure/Error: click_button 'Leave Review'
      # ./spec/features/reviews_feature_spec.rb:11:in `block (2 levels) in <top (required)>'
 ```
 
-This is really the meat of this walkthrough - our Restaurant class does not have an instance method '#reviews'. Rails can auto-magically generate this method for us, we just need to set up the association.
+This is really the meat of this walkthrough - our Restaurant class does not have an instance method '#reviews'. Rails can auto-magically generate this method for us, we just need to set up the association. We also need to make sure that we are able to delete restaurants, even if they have reviews. 
 
 In `/app/models/restaurant.rb`:
 ```ruby
 class Restaurant < ActiveRecord::Base
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 end
 ```
 
