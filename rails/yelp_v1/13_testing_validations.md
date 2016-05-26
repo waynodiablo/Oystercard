@@ -1,6 +1,6 @@
 # Section 13: Testing Validations
 
-#### Stop users creating duplicate restaurants – validations
+#### Stop users creating restaurants with invalid names – validations
 
 First, write a test. We'll add this within our existing feature spec for restaurants.
 
