@@ -58,8 +58,12 @@ end
 ```
 
 This sets up `@restaurant` and `@review` instance variables which get passed into the 'new review' form in the next step.
+Now we need a model for reviews – currently they aren't being stored in the database!
 
-Keep following the errors RSpec is giving you. Now we need a view:
+`$ bin/rails g model review thoughts:text rating:integer`
+
+Keep following the errors RSpec is giving you.
+Now we need a view:
 
 `app/views/reviews/new.html.erb`:
 
@@ -82,10 +86,6 @@ Keep following the errors RSpec is giving you. Now we need a view:
   = f.select :rating, (1..5)
   = f.submit 'Leave Review'
 ```
-
-Cool. Now we need a model for reviews – currently they aren't being stored in the database!
-
-`$ bin/rails g model review thoughts:text rating:integer`
 
 Let's add a create method to our reviews controller.
 
