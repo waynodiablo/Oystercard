@@ -12,6 +12,8 @@ If you get a message that says `node: command not found`, run:
 
     $ brew install node
 
+> What is `brew`? What is it for? What other tools do the same thing?
+
 ## More about Node
 
 Node is one of the newest technologies on offer at Makers Academy. One of the first things you are likely to hear about Node.js is that it allows you to "build fast, scalable network applications" using Javascript on the server side.

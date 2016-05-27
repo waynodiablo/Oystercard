@@ -48,6 +48,8 @@ Edit the `package.json` file in the root of your project.  Add an npm script ali
 
 This alias assumes that your web app code is in a folder called `app`.
 
+> For more on `package.json` and npm, see :pill: [npm](npm.md).
+
 ### Running http-server
 
     $ npm run start

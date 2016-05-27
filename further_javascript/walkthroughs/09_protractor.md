@@ -46,11 +46,15 @@ describe("app", function() {
 });
 ```
 
+> Do you recognise the `describe` and `it` syntax from somewhere else? Where? Why are we using it here?
+
 ## Running your new test
 
 Run the tests with:
 
     $ npm run protractor test/protractor.conf.js
+
+> How does `npm run protractor` run our Protractor tests? If you're not sure, have a look at `package.json`.
 
 You should see all dots to indicate that your tests have passed!
 
