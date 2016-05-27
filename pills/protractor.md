@@ -56,7 +56,7 @@ This alias assumes that your web app code is in a folder called `app`.
 
 ### Checking that your app is available
 
-Go to `http://localhost:8080` in your browser.  You should see your Angular app.
+Go to `http://localhost:8080` in your browser.  You should see whatever is written in `app/index.html`.
 
 #### Installing Java Development Kit
 
