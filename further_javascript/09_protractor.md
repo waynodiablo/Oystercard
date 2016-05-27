@@ -17,11 +17,10 @@ Don't forget to do this challenge test-first!
 
 ### To complete this challenge, you will need to:
 
+- [ ] Set up an `index.html`. Load in an angular module called `toDoApp`.
 - [ ] Install Protractor
 - [ ] Create a simple test that checks for "Hello world" on the page
 - [ ] Serve up angular using `http-server`
-- [ ] Set up `index.html` with a title of "Todos App", and load in an angular
-  module called `toDoApp`
 - [ ] Get a green feature test
 
 ### Resources
