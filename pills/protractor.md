@@ -22,7 +22,7 @@ All the defaults are fine.
 
 [http-server](https://www.npmjs.com/package/http-server) serves static files (eg HTML, CSS and JavaScript) from a directory at a local URL (eg `http://localhost:8080`).
 
-It's replacement for running your web app by opening the `index.html` file in a web browser.  Serving the web app files using `http-server` means they are available at a URL that can be accessed by Protractor.
+It's a replacement for running your web app by opening the `index.html` file in a web browser.  Serving the web app files using `http-server` means they are available at a URL that can be accessed by Protractor.
 
 ### Installing http-server
 
