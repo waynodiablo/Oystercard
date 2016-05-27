@@ -2,6 +2,8 @@
 
 [Back to the Challenge](../09_protractor.md)
 
+This walkthrough will set up you with an Angular app that you can test with Protractor.
+
 ## Setting up your app
 
 Create an index page at `app/index.html` and put in the code below:
