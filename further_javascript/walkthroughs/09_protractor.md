@@ -33,7 +33,7 @@ var toDoApp = angular.module('toDoApp', []);
 
 ## Setting up Protractor
 
-Follow the instructions in :pill: [Protractor](../pills/protractor.md) up to and including the "Running your test" section.
+Follow the instructions in :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/protractor.md) up to and including the "Running your test" section.
 
 ## Adding a test that checks for "Hello world"
 
