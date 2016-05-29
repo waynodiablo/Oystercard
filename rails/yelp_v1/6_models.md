@@ -48,7 +48,7 @@ This command does a couple of things:
 
 Specifically, we've added 'name' and rating properties for each restaurant. Each item gets an ID automatically.
 
-**Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you plurarise things, so be very careful of this!
+**Vitally**, in the model 'restaurant' is singular, but the controller refers to 'restaurants'. Rails makes lots of assumptions based on how you pluralise things, so be very careful of this!
 
 Unlike in Datamapper where we might add a property :name, String in the model file, in Rails active record the properties are all specified in migrations, so that we have a precise record of the changes that the database goes through as we evolve our models over time, and they can all be stored in our version control system.
 
