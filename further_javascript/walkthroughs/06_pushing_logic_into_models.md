@@ -1,4 +1,4 @@
-// Walkthrough - Pushing Logic into Models
+# Walkthrough - Pushing Logic into Models
 
 [Back to the Challenge](../06_pushing_logic_into_models.md)
 
@@ -81,7 +81,7 @@ Notice how we _inject_ the `ToDoFactory` by passing it as a string and as the fi
 OK, let's refactor the `addToDo()` method in our `ToDoController` to use a Factory instead of constructing an object literal on-the-fly:
 
 ```diff
-// in controllers.js
+# in controllers.js
 toDoApp.controller('ToDoController', ['ToDoFactory', function(ToDoFactory) {
   var self = this;
 
@@ -101,7 +101,7 @@ toDoApp.controller('ToDoController', ['ToDoFactory', function(ToDoFactory) {
 That looks much better! Now it feels like we're constructing a real object. Drawing on our earlier Ruby example, it's like we've refactored our Rails controller:
 
 ```diff
-// in articles_controller.rb
+# in articles_controller.rb
 
 - @todos << { text: params[:text], completed: false }
 + @todos << Todo.new(text: params[:text])
