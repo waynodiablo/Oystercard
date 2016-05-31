@@ -1,4 +1,4 @@
-# Walkthrough - Pushing Logic into Models
+// Walkthrough - Pushing Logic into Models
 
 [Back to the Challenge](../06_pushing_logic_into_models.md)
 
@@ -101,7 +101,7 @@ toDoApp.controller('ToDoController', ['ToDoFactory', function(ToDoFactory) {
 That looks much better! Now it feels like we're constructing a real object. Drawing on our earlier Ruby example, it's like we've refactored our Rails controller:
 
 ```diff
-# in articles_controller.rb
+// in articles_controller.rb
 
 - @todos << { text: params[:text], completed: false }
 + @todos << Todo.new(text: params[:text])
