@@ -145,9 +145,9 @@ The Angular convention is to put your feature tests in an `e2e` directory.
 
 The `describe` and `it` syntax is from the Jasmine framework. `browser` is a global created by Protractor, which is used for browser-level commands such as navigation with `browser.get`.
 
-### Setting up a node script alias to webdriver-manager
+### Setting up a node script alias to protractor
 
-Edit the `package.json` file in the root of your project.  Add an npm script alias for `webdriver-manager`:
+Edit the `package.json` file in the root of your project.  Add an npm script alias for `protractor`:
 
     "protractor": "./node_modules/protractor/bin/protractor"
 
