@@ -2,7 +2,7 @@
 
 [Back to the Challenge](../09_protractor.md)
 
-This walkthrough will set up you with an Angular app that you can test with Protractor.
+This walkthrough will set you up with an Angular app that you can test with Protractor.
 
 ## Setting up your app
 
