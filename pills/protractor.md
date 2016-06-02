@@ -54,6 +54,8 @@ This alias assumes that your web app code is in a folder called `app`.
 
     $ npm run start
 
+**This server needs to stay running in order for your tests to work.  Don't kill it.**
+
 ### Checking that your app is available
 
 Go to `http://localhost:8080` in your browser.  You should see whatever is written in `app/index.html`.
@@ -101,6 +103,8 @@ In a new terminal tab:
     $ npm run webdriver-manager start
 
 You can check the Selenium server is running by going to `http://localhost:4444/wd/hub`.  This URL will also show you what's going on inside the server.
+
+**This server needs to stay running in order for your tests to work.  Don't kill it.**
 
 ### Creating the Protractor config file
 
@@ -162,6 +166,18 @@ You should see a Chrome browser window open up and navigate to the app, then clo
 If you don't see a dot, when you solve the problem, tell Mary what happened so she can improve this pill.
 
 [Written with the help of Yasmin's [notes on setting up Angular, Karma and Protractor](https://github.com/yasgreen93/setting_up_angular_notes). Thanks, Yasmin!]
+
+### Debugging your Protractor setup
+
+If the tests don't pass, check these things:
+
+* Are `npm run start` and `npm run webdriver-manager start` both running?
+
+* Can you access your app at `http://localhost:8080`? Does it seem to be working? If not, get it working, then try running the tests again.
+
+* Are there any errors in your JavaScript console when you open `http://localhost:8080` in your browser? If there are, fix them first, then try running the tests again.
+
+* Can you access the Selenium server at `http://localhost:4444/wd/hub`? If not, try and run the Selenium server (see previous section).
 
 ## Selecting elements in a web page
 
