@@ -167,6 +167,18 @@ If you don't see a dot, when you solve the problem, tell Mary what happened so s
 
 [Written with the help of Yasmin's [notes on setting up Angular, Karma and Protractor](https://github.com/yasgreen93/setting_up_angular_notes). Thanks, Yasmin!]
 
+### Debugging your Protractor setup
+
+If the tests don't pass, check these things:
+
+* Are `npm run start` and `npm run webdriver-manager start` both running?
+
+* Can you access your app at `http://localhost:8080`? Does it seem to be working? If not, get it working, then try running the tests again.
+
+* Are there any errors in your JavaScript console when you open `http://localhost:8080` in your browser? If there are, fix them first, then try running the tests again.
+
+* Can you access the Selenium server at `http://localhost:4444/wd/hub`? If not, try and run the Selenium server (see previous section).
+
 ## Selecting elements in a web page
 
 The most common selectors are
