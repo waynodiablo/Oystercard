@@ -4,8 +4,6 @@ For this week's project, you'll create an app that summarises the news.  Your ap
 
 You'll write all of your logic in JavaScript.  You'll use Angular as your MVC framework.  You'll build a "serverless" architecture: you'll serve your HTML, CSS and JavaScript files, and APIs to get data from the Guardian and summarise text.
 
-You'll deploy your project to Heroku.
-
 We'll present these projects on Monday.
 
 ## Starter app
