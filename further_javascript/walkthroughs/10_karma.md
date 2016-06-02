@@ -97,7 +97,7 @@ it('initialises with a toDo', function() {
 });
 ```
 
-Restart karma by running `karma start test/karma.conf.js`. You should be getting a failed test now, this is because we need to define a controller. Create a file named `controllers/ToDoController.js` and define a controller inside the file:
+Restart karma by running `karma start test/karma.conf.js`. You should be getting a failed test now, this is because we need to define a controller. Create a file named `./app/js/controllers/ToDoController.js` and define a controller inside the file:
 
 ```js
 toDoApp.controller('ToDoController', [function() {
