@@ -54,6 +54,8 @@ This alias assumes that your web app code is in a folder called `app`.
 
     $ npm run start
 
+**This server needs to stay running in order for your tests to work.  Don't kill it.**
+
 ### Checking that your app is available
 
 Go to `http://localhost:8080` in your browser.  You should see whatever is written in `app/index.html`.
@@ -101,6 +103,8 @@ In a new terminal tab:
     $ npm run webdriver-manager start
 
 You can check the Selenium server is running by going to `http://localhost:4444/wd/hub`.  This URL will also show you what's going on inside the server.
+
+**This server needs to stay running in order for your tests to work.  Don't kill it.**
 
 ### Creating the Protractor config file
 
