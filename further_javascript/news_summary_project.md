@@ -70,11 +70,19 @@ So that this project can focus on the front-end, we've provided an API that you 
 
 > Why is it bad to store API keys in your front-end?  If we hadn't provided this API for you to use, how would you avoid this?
 
+### API request rate limits and stubbing
+
+The Guardian and Aylien text summarisation APIs are severely rate-limited.
+
+**Please stub your tests so we don't exceed the daily limit.  Otherwise, all requests will be rejected and everyone's apps will stop working!**
+
 ### API Overview
 
 The basic idea is to send an `apiRequestUrl` query parameter to the News Summary API.  The value of this parameter is the URL of the request you *would* have made to the Guardian or Aylien API, minus any API credentials.
 
 ### Guardian API example
+
+**Please stub your tests to avoid exceeding the API rate limit**
 
 If you wanted to get the content of an article from the Guardian API, this is the cURL request you might make.  Notice how it has a query parameter for `api-key`.
 
@@ -91,6 +99,8 @@ curl "http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://conten
 Note how the `apiRequestUrl` parameter value is just the request you would have made to the Guardian API, minus `api-key`.
 
 ### Alyien text summarisation API example
+
+**Please stub your tests to avoid exceeding the API rate limit**
 
 If you wanted to use the Aylien API to summarise an article by Bret Victor, this is the cURL request you might make.  Notice how it has headers to authenticate with the Aylien API.
 
