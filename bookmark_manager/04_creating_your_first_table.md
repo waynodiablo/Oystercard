@@ -2,7 +2,11 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Now that we have a database set up we would like to be able to interact with it, and persist data in it.  There are a number of ways to do this.  A simple method is to do that through the `psql` command line tool.  In the long run we shouldn't rely on this approach but it's important to practice with it as a backup in order to sanity check how the database is set up.
+We've just set up a Postgres database that can store (_persist_) data forever - even if you shut down and restart your computer.
+
+In this challenge, you will use Postgres' built-in command-line program, `psql`, to interact with the database using a database-specific language, `SQL`. You will create a **database table** with two **database columns**.
+
+> You rarely have to interact with databases from the command-line like this, but play around to create and destroy a few tables so you know what's going on at the data storage level.
 
 ## Learning Objectives covered
 
@@ -17,7 +21,7 @@ Now that we have a database set up we would like to be able to interact with it,
 - [ ] Connect `psql` to an existing database
 - [ ] List the tables in that database
 - [ ] Create a basic table called 'students' with a single primary key (id) and name field
-- [ ] List the existing tables again to check 'students' shows up
+- [ ] List the existing tables again to check that the 'students' table shows up
 
 ## Resources
 
