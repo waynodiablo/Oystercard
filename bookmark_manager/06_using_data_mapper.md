@@ -2,7 +2,17 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You should now see how it's possible to manipulate database data using SQL. However, we're having to write out syntactically difficult and unfamiliar SQL to perform basic read / write commands. This is where DataMapper comes in. DataMapper allows us to deal with our database via a Ruby interface. In this challenge you'll use DataMapper to manipulate a database table using ruby commands.
+We've built a database, added a database table, and played with some data in that table. To do all of this, we used the command-line program `psql`, and a bunch of SQL code.
+
+Reading and writing data from and to a database using SQL is a painful thing to do. SQL isn't a great language for programmers to interact with data: it's cumbersome and abstract.
+
+In this challenge, you will do all the interactions with a database you just did in SQL, using an **Object-Relational Map** (**ORM**). You will use **DataMapper** as your ORM.
+
+## Challenge Setup
+
+ORMs translate between two 'object models'. In this case, DataMapper will translate between Ruby objects: classes, instances, instance variables, and so on; and database objects: tables, rows, and columns.
+
+Basically, you can use DataMapper to interact with a database using Ruby, instead of the finicky SQL.
 
 ## Learning Objectives covered
 
@@ -13,16 +23,16 @@ You should now see how it's possible to manipulate database data using SQL. Howe
 
 ## To complete this challenge, you will need to
 
-- [ ] Create a new project including the "data_mapper" and "dm-postgres-adapter" gems
-- [ ] Connect with `psql` and create a database called `datamapper_play`
-- [ ] Start an IRB session and require the "data_mapper" and "dm-postgres-adapter" gems
-- [ ] Setup DataMapper to *connect* to the `datamapper_play` database
-- [ ] Turn on DataMapper's error logging
-- [ ] Create a `Student` model in IRB:
+- [ ] Create a new Ruby project including the `data_mapper` and `dm-postgres-adapter` gems.
+- [ ] Create a database called `datamapper_play` using `psql`.
+- [ ] Start `irb`, and require the ORM gems from step 1.
+- [ ] In `irb`, set up DataMapper to *connect* to the `datamapper_play` database.
+- [ ] In `irb`, turn on DataMapper's error logging.
+- [ ] In `irb`, create a `Student` class, and include the DataMapper ORM inside it:
   - [ ] Declare a `Student` class and include the module `DataMapper::Resource`.
-  - [ ] Give the `Student` model the properties `id` and `name`.
-- [ ] Create an entry in your student table from within IRB
-- [ ] Delete that new student from within IRB
+  - [ ] Give the `Student` class the properties `id` and `name`.
+- [ ] In `irb`, use the `Student` class you built to create an entry in your `students` table.
+- [ ] In `irb`, use the `Student` class you built to delete that new student.
 
 ## Resources
 
