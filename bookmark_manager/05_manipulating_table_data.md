@@ -2,7 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You should now have a students table (also known as a 'relation').  However it currently contains nothing, so we need to start putting things in it in order to make use of it. In this challenge you will query, add, delete and update data in the table.
+We have created a Postgres database, and added one table to it. At the moment, there's no data in the table. However, we have added a data structure, ready to be filled with custom data.
+
+In this challenge, you will use SQL to add, delete, update, and **query** data in the table you created, inside your Postgres database.
 
 ## Learning Objectives covered
 
