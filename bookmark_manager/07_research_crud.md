@@ -2,7 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You should now see how it's possible to manipulate database data using Ruby via DataMapper. There are lots of different ways to manipulate database data but whether we are using SQL or a library like DataMapper there is a unifying concept called **CRUD**.  In this challenge you will research and write up about the CRUD concept and how it relates to database persistence.
+You've now created a database and manipulated data within it, entirely from within Ruby: thanks to the power of an ORM.
+
+In this challenge, you will learn the basic building blocks of how to interact with data inside a database: **Create, Read, Update, Delete** (**CRUD**).
 
 ## Learning Objectives covered
 
