@@ -8,7 +8,9 @@ You'll create an app that summarises the news.  You'll get to practice:
 
 ## Starter repo
 
-[Starter repo](https://github.com/makersacademy/news-summary).  You won't have to worry about setup because the repo already has a working Angular app, and passing Protractor feature test and Karma unit test.
+[Starter repo](https://github.com/makersacademy/news-summary).
+
+You won't have to worry about setup because the repo already has a working Angular app, and passing Protractor feature test and Karma unit test.
 
 ## The project description
 
