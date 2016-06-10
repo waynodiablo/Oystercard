@@ -126,3 +126,5 @@ If you're interested, you can see the code for the News Summary API in this repo
 
 * [Guardian newspaper API homepage](http://open-platform.theguardian.com/documentation/)
 * [Aylien text summary API docs](http://docs.aylien.com/docs/summarize)
+* cURL [man page](https://curl.haxx.se/docs/manpage.html)
+* [Hurl](https://www.hurl.it/), a web interface for sending HTTP requests
