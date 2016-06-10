@@ -2,7 +2,9 @@
 
 For this week's project, you'll create an app that summarises the news.  Your app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
 
-You'll write all of your logic in JavaScript.  You'll use Angular as your MVC framework.  You'll build a "serverless" architecture: you'll serve your HTML, CSS and JavaScript files, and APIs to get data from the Guardian and summarise text.
+You'll write all of your logic in JavaScript.  You'll use Angular as your MVC framework.  You'll use a static web server to serve your HTML, CSS and JavaScript files.  You'll send requests to an API to get data from the Guardian and to summarise text.
+
+> The API is hosted on an external server that you don't have to worry about.  You only need a static web server.  That's why this type of architecture is called "serverless".
 
 ## Starter app
 
