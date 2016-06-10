@@ -1,18 +1,22 @@
 # News Summary Project
 
-For this week's project, you'll create an app that summarises the news.  Your app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
+You'll create an app that summarises the news.  You'll get to practice:
+
+* Collaborating on a full app.
+* Working with less external structure.
+* Contributing to an existing project (you'll begin with a starter repo).
+
+## Starter repo
+
+[Starter repo](https://github.com/makersacademy/news-summary).  You won't have to worry about setup because the repo already has a working Angular app, and passing Protractor feature test and Karma unit test.
+
+## The project description
+
+Your app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
 
 You'll write all of your logic in JavaScript.  You'll use Angular as your MVC framework.  You'll use a static web server to serve your HTML, CSS and JavaScript files.  You'll send requests to an API to get data from the Guardian and to summarise text.
 
 > The API is hosted on an external server that you don't have to worry about.  You only need a static web server.  That's why this type of architecture is called "serverless".
-
-## Starter app
-
-You'll begin with a [starter app](https://github.com/makersacademy/news-summary).  This is so that:
-
-* You don't have to worry about setup, because the repo already has a working Angular app, and a passing Protractor feature test and Karma unit test.
-
-* You can practice the skill of contributing to an existing app.
 
 ## User Stories
 
