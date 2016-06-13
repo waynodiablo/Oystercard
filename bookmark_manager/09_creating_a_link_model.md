@@ -2,11 +2,11 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You have the error "uninitialized constant Link". Let's think about what a Link is.
+You have now built a feature test checking that you can read data from the database. At the moment, it's failing, because you don't have a `Link` class.
 
-We know that links need to be saved (persisted) somewhere and that we want to use a database. So we want our Link class to map to a database.
+Additionally, we know that `Link`s need to be persisted to a database.
 
-In this challenge you'll create your "model" using a Ruby class and DataMapper
+In this challenge, you will construct a `Link` **model** that uses the Datamapper ORM to map to a database table.
 
 ## Learning Objectives covered
 
@@ -17,13 +17,13 @@ In this challenge you'll create your "model" using a Ruby class and DataMapper
 ## To complete this challenge, you will need to
 
 - [ ] Discuss with your pair partner what a "model" is and how it relates to a class or table/relation
-- [ ] Create a model (DataMapper backed ruby class) in `app/models/link.rb` with `:id`, `:title` and `:url` properties
+- [ ] Create a `Link` model that uses Datamapper in `app/models/link.rb` with `:id`, `:title` and `:url` properties
 - [ ] Create a database called 'bookmark_manager_test'
-- [ ] At the bottom of `link.rb`, instruct DataMapper to:
+- [ ] At the bottom of `app/models/link.rb`, instruct DataMapper to:
   - [ ] setup a connection to the `bookmark_manager_test` database (if you're doing git pong, create on both machines)
-  - [ ] finalize your DataMapper model
-  - [ ] update your DataMapper models
-- [ ] Ensure that you have a new error related to visiting the links page
+  - [ ] `finalize` your DataMapper model
+  - [ ] `upgrade` the database with any new properties
+- [ ] Run your feature test again.
 
 ## Resources
 
