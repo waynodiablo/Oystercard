@@ -26,6 +26,8 @@ You should now see how it's possible to manipulate database data using SQL. Howe
 
 ## Resources
 
+* [Introduction to Datamapper _1hr video by Makers_] (https://vimeo.com/112068478)
+* [Associations in Datamapper _1hr video by Makers_] (https://vimeo.com/112158606) 
 * [DataMapper Getting Started](http://datamapper.org/getting-started.html)
 * [DataMapper CRUD operations](http://datamapper.org/docs/create_and_destroy.html)
 * [DataMapper Website](http://datamapper.org/)
