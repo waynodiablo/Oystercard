@@ -1,6 +1,6 @@
 # Welcome to JavaScript
 
-### Challenges
+## Challenges
 
 1. [JavaScript Basics](1_javascript_basics.md)
 2. [Setting up Jasmine](2_setting_up_jasmine.md)
@@ -13,26 +13,46 @@
 9. [Thermostat: styling](9_styling.md)
 10. [Thermostat: saving state](10_saving_state.md)
 
-### What is JavaScript?
+## What is JavaScript?
 
-From [Eloquent JavaScript](http://eloquentjavascript.net/):
+JavaScript is a fully-featured programming language.  It runs in the web browser.  It lets you write web apps with which a user can interact without a page refresh.
 
->JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible—applications with which you can interact directly, without doing a page reload for every action. But it is also used in more traditional websites to provide various forms of interactivity and cleverness.
+It's a great second language to learn, as it introduces many new language concepts not found in Ruby. It will also let you reinforce concepts you've already learned.
 
-JavaScript is a confusing language. It was written in only 10 days by developer Brendan Eich, and has since become one of the most popular and widely used languages. This is mainly due to it being the only language that can be run natively in the browser, but also because it offers a huge amount of flexibility in how it's written (e.g. object-oriented, functional), as well as having a great community and ecosystem.
+## Goals for the week
 
-JavaScript is often referred to as the "language of the Web" - it powers most of the dynamic content on websites, as well as increasingly being used elsewhere in the stack, such as servers and databases.
+Ask yourself the same two questions:
 
-### Why JavaScript?
+* Are you having fun?
 
-If you want to be a web developer, you can't get away from it. At the time of writing JavaScript is the only language that covers the whole stack, as it's the only language that really counts as "front-end" (other than HTML/CSS, which may or may not be considered languages depending who you speak to).
+* Are you a better developer than you were yesterday?
 
-It's also a great second language to learn, as it introduces many new language concepts not found in Ruby, as well as reinforcing fundamental programming concepts while learning a whole new syntax. Most importantly, you can build exciting dynamic user interfaces, single page apps, games, music players and even ROBOTS.
+By the end of the week, the goal is to be able to answer yes to the week's primary question:
 
-![Nodecopter](https://lilydev.files.wordpress.com/2013/03/ardrone2-404.jpg)
+* Do you have an effective process for understanding unfamiliar language features and patterns?
 
-### How to JavaScript?
+To guide your learning, ask yourself the following:
 
-This week will begin with revisiting some exercises familiar from Ruby to map underlying language concepts to the new syntax: the infamous FizzBuzz kata, followed by translating your Airport challenge into a new language. You will then build the business logic to model a simple thermostat, and learn to hook it up to a dynamic visual interface using jQuery - all within the browser. Finally, you'll use JavaScript to fetch data from external sources and display that on the page - again, all right from the page. Underpinning all this will be a new testing framework to help you test-drive your JavaScript code - Jasmine.
+* Can you use your knowledge of the constructor and prototype pattern to encapsulate behaviour?
+
+* Can you use your knowledge of context to correctly predict the value of `this`?
+
+* Can you use your knowledge of Ajax to write JavaScript code that gets data from a server?
+
+* Can you use your knowledge of lexical scope and closures to correctly predict variable values?
+
+## Workshops and the Count project
+
+The workshops this week will all be based around a tiny project called [Count](https://github.com/maryrosecook/count).  You'll use the code as a way to investigate the four JavaScript concepts above.  It's very worthwhile spending time investigating and playing with the code in this project to understand how and why it works.
+
+## Challenges
+
+### Rewrite fizz buzz and the airport challenge
+
+You'll revisit some familiar exercises to map the knowledge you learnt in the first four weeks to JavaScript: the FizzBuzz kata, followed by translating the Airport challenge.
+
+### Thermostat
+
+You'll then build the business logic to model a simple thermostat, and learn to hook it up to a dynamic visual interface using jQuery - all within the browser. Finally, you'll use JavaScript to fetch data from external sources and display that on the page - again, all right from the page. Underpinning all this will be a new testing framework to help you test-drive your JavaScript code - Jasmine.
 
 [Let's get started!](1_javascript_basics.md)
