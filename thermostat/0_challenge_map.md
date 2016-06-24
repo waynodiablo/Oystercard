@@ -41,9 +41,15 @@ To guide your learning, ask yourself the following:
 
 * Can you follow the flow of control through code that uses callbacks?
 
-## Workshops and the Count project
+## The Count project
 
-The workshops this week will all be based around a tiny project called [Count](https://github.com/maryrosecook/count).  You'll use the code as a way to investigate the four JavaScript concepts above.  It's very worthwhile spending time investigating and playing with the code in this project to understand how and why it works.
+The [Count](https://github.com/maryrosecook/count) project is a tiny, model full stack web app.  It exemplifies:
+
+* Making Ajax requests.
+* Testing frontend code.
+* Separating frontend concerns into model, view and controller.
+
+It's very worthwhile spending time investigating and playing with the code in this project to understand how and why it works.
 
 ## Challenges
 
