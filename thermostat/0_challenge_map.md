@@ -35,11 +35,11 @@ To guide your learning, ask yourself the following:
 
 * Can you use your knowledge of the constructor and prototype pattern to encapsulate behaviour?
 
-* Can you use your knowledge of context to correctly predict the value of `this`?
+* Can you understand the rules that govern the behaviour of the `this` keyword?
 
-* Can you use your knowledge of Ajax to write JavaScript code that gets data from a server?
+* Can you follow the flow of an Ajax request and response?
 
-* Can you use your knowledge of lexical scope and closures to correctly predict variable values?
+* Can you follow the flow of control through code that uses callbacks?
 
 ## Workshops and the Count project
 
