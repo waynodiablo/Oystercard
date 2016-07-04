@@ -14,11 +14,12 @@ Normally, you've built systems outside in: writing a feature test, writing unit 
 
 ### To complete this challenge, you will need to:
 
-- [ ] Install :pill: [node](../pills/node.md) and :pill: [npm](../pills/npm.md).
+- [ ] Install :pill: [node](../pills/node.md).
 - [ ] Install Mocha from :pill: [npm](../pills/npm.md).
-- [ ] Install the Chai assertion library and Sinon mocking library from :pill: [npm](../pills/npm.md).
-- [ ] Write tests that check you can create a to do, and store and retrieve a `task` string like `Eat breakfast` and a `complete` boolean.
-- [ ] Implement a to do model that passes the tests.
+- [ ] Install the Chai assertion library from :pill: [npm](../pills/npm.md).
+- [ ] Install the Sinon mocking library from :pill: [npm](../pills/npm.md).
+- [ ] Write tests that check you can instantiate a to do JavaScript object.  Write tests that check that a to do object can store and retrieve a `task` string like `Eat breakfast` and a `complete` boolean.
+- [ ] Implement a to do model as a JavaScript object.  Make your tests pass.
 
 ### Resources
 

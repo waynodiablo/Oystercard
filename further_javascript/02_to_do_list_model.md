@@ -11,7 +11,7 @@ In this challenge, you'll test and write code for a model that holds a list of t
 
 ### To complete this challenge, you will need to:
 
-- [ ] Write tests that check you can store and retrieve a list of to dos, and also create a new to do from a `task` string like `Eat breakfast`.
+- [ ] Write tests that check you can instantiate a JavaScript object that represents a list of to do objects.  Write tests to check that you can give the to do list object a string like `Eat breakfast` and it will store a new to do object.
 - [ ] Implement a to do list model that passes the tests.
 
 ### Resources

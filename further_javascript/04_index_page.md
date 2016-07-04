@@ -6,7 +6,7 @@ In this challenge, you'll create a **static** web page and make it available for
 
 ### Learning objectives covered
 
-- Set up a static web page.
+- Create an HTML page.
 - Serve a static website on localhost.
 
 ### To complete this challenge, you will need to:
@@ -14,7 +14,7 @@ In this challenge, you'll create a **static** web page and make it available for
 - [ ] Create an `index.html` file containing the minimal HTML structure.
 - [ ] Install `http-server` from :pill: [npm](../pills/npm.md).
 - [ ] Run `http-server` to serve your `index.html`.
-- [ ] View `index.html` page in a web browser.
+- [ ] View your `index.html` page in a web browser.
 
 ### Resources
 

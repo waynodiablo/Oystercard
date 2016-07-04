@@ -8,7 +8,7 @@
 
 ### To complete this challenge, you will need to:
 
-- [ ] Write a test that checks that your `index.html` page contains some to dos.
+- [ ] Write a test that checks that your `index.html` page contains some to dos.  The test will fail.
 - [ ] Create an `index.js` file and load it in your `index.html` file.
 - [ ] Instantiate your to do list model and populate it with a few to dos.
 - [ ] Generate HTML for your to dos and insert it into the DOM.

@@ -6,16 +6,17 @@ The [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/A
 
 [Zombie.js](http://zombie.js.org/) is a test runner that can run your Mocha feature tests against a "virtual DOM".  This makes your feature tests faster and more reliable because they don't have to be run in a real browser.
 
-In this challenge, you'll install Zombie.js and use it to write a simple feature test.
+In this challenge, you'll install Zombie.js and use it to write a small feature test.
 
 ### Learning objectives covered
 
+- Install and run Zombie.js.
 - Feature test web code.
 
 ### To complete this challenge, you will need to:
 
-- [ ] Install `zombie` from :pill: [npm](../pills/npm.md). (It's called `zombie` on npm, not `zombiejs`.)
-- [ ] Write a feature test that checks that the `<title>` attribute of your app is `To Do List`.  Have a look at the :pill: [http-server](../pills/http_server.md) for information on how to serve your app to your feature tests.
+- [ ] Install Zombie.js from :pill: [npm](../pills/npm.md). (It's called `zombie` on npm, not `zombiejs`.)
+- [ ] Write a feature test that checks that the `<title>` attribute of your app is `To Do List`.  Have a look at the :pill: [http-server](../pills/http_server.md) for information on how to allow your feature test to access the running version of your app.
 - [ ] Make the test pass.
 
 ### Resources
