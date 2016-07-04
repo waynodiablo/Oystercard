@@ -1,5 +1,7 @@
 # Guidance
 
+* How will you serve your app? Maybe a very simple library like :pill: [http-server](../pills/http_server.md)?
+
 * How will you write and run unit and functional tests? Have a look at [Mocha](https://mochajs.org).
 
 * How will you let your functional tests interact with a realistic imitation of your app running in a web browser? Have a look at [Zombie.js](http://zombie.js.org).
