@@ -12,6 +12,8 @@ If you get a message that says `node: command not found`, run:
 
     $ brew install node
 
+npm will automatically be installed when you install node.
+
 > What is `brew`? What is it for? What other tools do the same thing?
 
 ## More about Node
