@@ -1,6 +1,6 @@
 # Project track
 
-For this track, there's almost no structure.
+For this track, there's almost no structure. You will build your own JavaScript Frontend Framework.
 
 You'll work in unchanging groups of about four for the whole week.
 
@@ -9,6 +9,8 @@ You'll work in unchanging groups of about four for the whole week.
 ### Monday, Tuesday and Wednesday
 
 Take [user stories for a to do list app](to_do_list_app_user_stories.md).  Use them to build a frontend, single page web app.
+
+You may not use any existing frameworks (e.g. Angular, React, EmberJS).
 
 Extract your own web framework from your app.
 
