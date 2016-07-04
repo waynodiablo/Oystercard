@@ -23,3 +23,9 @@ As a personal assistant
 I can see which to dos I have completed and which I haven't yet completed
 So I can quickly decide what to do next
 ```
+
+```
+As a personal assistant
+I can see the to dos specified at http://quiet-beach-24792.herokuapp.com/todos.json when the app loads
+So I can begin with some to dos I use regularly
+```
