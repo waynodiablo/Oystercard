@@ -14,6 +14,7 @@ Normally, you've built systems outside in: writing a feature test, writing unit 
 
 ### To complete this challenge, you will need to:
 
+- [ ] Install :pill: [node](../pills/node.md) and :pill: [npm](../pills/npm.md).
 - [ ] Install Mocha from :pill: [npm](../pills/npm.md).
 - [ ] Install the Chai assertion library and Sinon mocking library from :pill: [npm](../pills/npm.md).
 - [ ] Write tests that check you can create a to do, and store and retrieve a `task` string like `Eat breakfast` and a `complete` boolean.
@@ -21,6 +22,8 @@ Normally, you've built systems outside in: writing a feature test, writing unit 
 
 ### Resources
 
+- :pill: [node](../pills/node.md)
+- :pill: [npm](../pills/npm.md)
 - [Mocha website](https://mochajs.org/)
 - [Chai website](http://chaijs.com/)
 - [Sinon website](http://sinonjs.org/)
