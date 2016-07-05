@@ -2,6 +2,8 @@
 
 [Back to the Challenge Map](00_challenge_track.md)
 
+In this challenge, you'll write a feature test that checks that a to do is displayed in your `index.html` page.  To do this, you'll tie together your model and template code, and write code to modify the DOM.
+
 ### Learning objectives covered
 
 - Insert content into the DOM.
