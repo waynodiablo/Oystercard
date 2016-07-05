@@ -1,5 +1,7 @@
 # To do list app user stories
 
+![To do app mock-up](images/to-do-mock-up.png)
+
 ```
 As a personal assistant
 I can see a list of my to dos
