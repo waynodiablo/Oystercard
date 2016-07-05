@@ -8,7 +8,8 @@ You could create the HTML through string concatenation, or use the Mustache temp
 
 ### Learning objectives covered
 
-- Implement a simple template.
+- Generate HTML for an unordered list.
+- Implement a simple dynamic template.
 
 ### To complete this challenge, you will need to:
 

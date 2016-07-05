@@ -11,7 +11,8 @@ In this challenge, you'll install Zombie.js and use it to write a small feature 
 ### Learning objectives covered
 
 - Install and run Zombie.js.
-- Feature test web code.
+- Give Zombie.js access to the code for your app.
+- Write a feature test that spans your whole web stack.
 
 ### To complete this challenge, you will need to:
 

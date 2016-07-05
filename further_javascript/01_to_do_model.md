@@ -8,8 +8,8 @@ Normally, you've built systems outside in: writing a feature test, writing unit 
 
 ### Learning objectives covered
 
-- Install Mocha.
-- Write tests with Mocha.
+- Install Mocha, Chai and Sinon.
+- Write a test with Mocha.
 - Use the constructor and prototype pattern to implement a model for a to do.
 
 ### To complete this challenge, you will need to:

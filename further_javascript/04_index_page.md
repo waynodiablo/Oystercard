@@ -6,8 +6,8 @@ In this challenge, you'll create a **static** web page and make it available for
 
 ### Learning objectives covered
 
-- Create an HTML page.
-- Serve a static website on localhost.
+- Create a minimal HTML page.
+- Serve a static website.
 
 ### To complete this challenge, you will need to:
 
