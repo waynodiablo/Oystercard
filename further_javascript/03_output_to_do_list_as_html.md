@@ -14,7 +14,7 @@ You could create the HTML through string concatenation, or use the Mustache temp
 ### To complete this challenge, you will need to:
 
 - [ ] Write tests that check you take a to do list model and return a string of HTML that structures the to dos as an unordered HTML list.  For example, `<ul><li><div>Eat breakfast</div></li></ul>`.
-- [ ] Write code to pass the tests.
+- [ ] Write code to pass the tests.  (Interesting question: where does this code belong? In ToDoList? In its own module?)
 
 ### Resources
 
