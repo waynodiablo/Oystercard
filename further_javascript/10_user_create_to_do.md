@@ -20,4 +20,3 @@ In this challenge, you'll write code to let the user submit a new to do.  You'll
 - [Functional (feature) testing for node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
 - [Zombie.js](http://zombie.js.org/)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
-- [An enumeration of the different cool console APIs available in Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/console/console-reference?hl=en)

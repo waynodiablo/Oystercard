@@ -22,9 +22,10 @@ Build a to do list app as a frontend, single page web app.  You'll be guided thr
 8. [Play around to intercept a form `submit` event emitted by the form that creates a to do](08_intercept_submit_event.md)
 9. [Play around to extract a task from a `submit` event](09_extract_form_data_from_submit_event.md)
 10. [Test and write code that takes a task from a `submit` event and creates a to do](10_user_create_to_do.md)
-11. [Test and write code that implements a to do `Complete` button](11_complete_button.md)
-12. [Use Ajax to request some to dos stored on a remote server; display them](12_request_to_dos_with_ajax.md)
-13. [Refactor](13_refactor.md)
+11. [Test and write code that displays to dos as complete or not complete](11_show_to_do_complete_status.md)
+12. [Test and write code that implements a to do `Complete` button](12_complete_button.md)
+13. [Use Ajax to request some to dos stored on a remote server, then display them](13_request_to_dos_with_ajax.md)
+14. [Refactor](14_refactor.md)
 
 ### Thursday and Friday
 

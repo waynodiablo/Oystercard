@@ -6,8 +6,8 @@ In this challenge, you'll learn how to listen for the event triggered when a use
 
 ### Learning objectives covered
 
-- Learn how to listen for events.
-- Learn how to stop an event from triggering a default action.
+- Listen for events.
+- Stop an event from triggering a default action.
 
 ### To complete this challenge, you will need to:
 
