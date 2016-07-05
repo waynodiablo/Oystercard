@@ -10,6 +10,8 @@ You'll work in pairs as usual, swapping pairs each day.
 
 Build a to do list app as a frontend, single page web app.  You'll be guided through this by the high level challenges listed below.  However, there will be no walkthroughs.
 
+To get an idea of what you'll be building, here are some [user stories and a mockup](to_do_list_app_user_stories.md) for the to do list app.  (This is just to give you an idea of the app.  You'll work through the challenges below to build the app.)
+
 #### Challenges
 
 1. [Use Mocha to unit test and write a model for a to do](01_to_do_model.md)
