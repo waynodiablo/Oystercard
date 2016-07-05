@@ -18,6 +18,6 @@ In this challenge, you'll write a feature test that checks that a to do is displ
 ### Resources
 
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-- [Functional (feature) testing For node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
+- [Functional (feature) testing for node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
 - [Zombie.js](http://zombie.js.org/)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
