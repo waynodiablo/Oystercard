@@ -1,4 +1,4 @@
-# Write a functional test that checks that a to do is displayed in the `index.html` page
+# Write a feature test that checks that a to do is displayed in the `index.html` page
 
 [Back to the Challenge Map](00_challenge_track.md)
 
