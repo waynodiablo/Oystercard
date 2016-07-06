@@ -21,4 +21,3 @@ In this challenge, you'll change your app to download some to dos from an API vi
 - [You don't need jQuery (Ajax)](http://blog.garstasio.com/you-dont-need-jquery/ajax/)
 - [Callbacks workshop](https://github.com/maryrosecook/callbacks-workshop)
 - [Functional (feature) testing for node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
-- [Zombie.js](http://zombie.js.org/)

@@ -24,5 +24,4 @@ In this challenge, you'll install Zombie.js and use it to write a small feature 
 
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [Functional (feature) testing for node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
-- [Zombie.js](http://zombie.js.org/)
 - :pill: [http-server](../pills/http_server.md)

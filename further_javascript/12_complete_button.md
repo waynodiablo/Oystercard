@@ -25,6 +25,5 @@ In this challenge, you'll write code to let a user mark a to do as complete.
 - [HTML forms on W3 schools](http://www.w3schools.com/html/html_forms.asp)
 - [RESTful routing question on Stack Overflow](http://stackoverflow.com/questions/2441962/what-is-restful-routing)
 - [Functional (feature) testing for node using Mocha and Zombie.js](http://www.redotheweb.com/2013/01/15/functional-testing-for-nodejs-using-mocha-and-zombie-js.html)
-- [Zombie.js](http://zombie.js.org/)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 - [You don't need jQuery - ways of interacting with the DOM without using jQuery](http://blog.garstasio.com/you-dont-need-jquery/)
