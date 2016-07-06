@@ -16,7 +16,7 @@ In your project, run:
 
 Browse your project at the URL in the console output.
 
-## Running from your code
+## Running from your code (for example, in your tests)
 
 This is useful when you need to serve a version of your project for your tests to run against.
 
@@ -24,10 +24,15 @@ This is useful when you need to serve a version of your project for your tests t
     $ npm install http-server --save-dev
 
 ```js
-var createServer = require("http-server").createServer;
-var server = createServer({ root: path.join(__dirname, "path/to/your/project/root") });
+var httpServer = require("http-server");
+var path = require("path");
+
+var pathToHtmlAndJsFiles = path.join(__dirname, "path/from/current/dir/to/html/and/js/files");
+var server = httpServer.createServer({ root: pathToHtmlAndJsFiles });
 server.listen(3000);
 ```
+
+> If you get an `EADDRINUSE` error, you may be forgetting to close your server after your test has run.  Or, maybe you are running a server on the same port in another terminal tab.
 
 ## Resources
 
