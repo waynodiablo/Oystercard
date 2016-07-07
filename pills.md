@@ -104,6 +104,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [JS conventions](https://github.com/makersacademy/course/blob/master/pills/js_conventions.md)
 
+:pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)
+
 :pill: [http-server](https://github.com/makersacademy/course/blob/master/pills/http_server.md)
 
 :pill: [jQuery events](https://github.com/makersacademy/course/blob/master/pills/jquery_events.md)
