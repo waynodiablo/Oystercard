@@ -56,19 +56,19 @@ This cycle continues until the end of the day, at which point the navigator make
 ###Using Github Pong with a new pair###
 
 So, it's day two and you're now with a new pair who you've added as a remote. Once you have decided who's code to use, the pair-partner pulling down this code will need to do the following to prevent merge conflicts (first making sure you are on the branch you used yesterday):
-```s
+```sh
 git checkout <day-one-branch>
 git checkout --orphan <day-two-branch-name>
 git reset --hard
 ```
 The pair with the code being used will need to checkout a new branch for today and push this to Github
-```s
+```sh
 git checkout <day-one-branch>
 git checkout -b <day-two-branch-name>
 git push origin <day-two-branch>
 ```
 Then continue sharing code using the commands from day-one, pushing to your own repo and pulling from your pair's:
-```d
+```sh
 git pull <pair-name> <branch-name>
 git push origin <branch-name>
 ```
@@ -76,7 +76,7 @@ git push origin <branch-name>
 ###Merging back to master###
 
 Once you've completed the project, probably going through a series of branches, use the following commands to merge the last branch to your master branch:
-```s
+```sh
 git checkout <latest branch name>
 git merge -s ours master
 git checkout master
