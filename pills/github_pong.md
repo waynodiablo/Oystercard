@@ -34,9 +34,10 @@ So now you both have local and remote repos for the project, which include your 
 
 ###Pairing using Github Pong###
 
-Firstly, you will need to add eachother's GitHub repo's as remotes:
+Firstly, you will need to add each other's GitHub repo's as remotes, and then check the set up has succeeded:
 ```sh
 git remote add <pair-name> <URL-to-pair-partners-repo>
+git remote -v
 ```
 The driver will then write code as normal, commiting changes and pushing to their day-one branch:
 ```sh
