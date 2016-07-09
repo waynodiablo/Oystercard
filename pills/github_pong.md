@@ -42,26 +42,26 @@ The driver will then write code as normal, commiting changes and pushing to thei
 ```sh
 git push origin day-one
 ```
-when you are ready to swap, the new driver will need to pull down the code from their pair's branch:
+when you are ready to swap and after the final push from the current driver, the new driver will need to pull down the most recent code from their pair partner's branch:
 ```sh
 git pull <pair-name> day-one
 ```
-they then push working code up to their own branch, ready for their pair to pull down.
+Throughout the day the driver pushes working code up to their own branch, ready for their pair to pull down when they are back in the driving seat.
 ```sh
 git push origin day-one
 git pull <pair-name> day-one
 ```
-This cycle continues until the end of the day, at which point the navigator makes sure they have pulled the latest code from their pair before finishing for the day.
+This cycle continues until the end of the day, at which point both parties make sure they have pulled the latest code before finishing for the day.
 
 ###Using Github Pong with a new pair###
 
-So, it's day two and you're now with a new pair who you've added as a remote. Once you have decided who's code to use, the pair-partner pulling down this code will need to do the following to prevent merge conflicts (first making sure you are on the branch you used yesterday):
+So, it's day two and you're now with a new pair who you've added as a remote. Once you have decided whose code to use, the pair-partner pulling down this code will need to do the following to prevent merge conflicts (first making sure you are on the branch you used yesterday):
 ```sh
 git checkout <day-one-branch>
 git checkout --orphan <day-two-branch-name>
 git reset --hard
 ```
-The pair with the code being used will need to checkout a new branch for today and push this to Github
+The pair with the code being used will need to checkout a new branch for today, from yesterday's branch, and push the new branch to Github:
 ```sh
 git checkout <day-one-branch>
 git checkout -b <day-two-branch-name>
