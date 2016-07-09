@@ -52,6 +52,9 @@ Throughout the day the driver pushes working code up to their own branch, ready 
 git push origin day-one
 git pull <pair-name> day-one
 ```
+
+![Alt text](http://i.imgur.com/We9Hfv7.jpg)
+
 This cycle continues until the end of the day, at which point both parties make sure they have pulled the latest code before finishing for the day.
 
 ###Using Github Pong with a new pair###
