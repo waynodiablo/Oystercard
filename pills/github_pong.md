@@ -7,18 +7,18 @@ Github Pong involves pushing code back and forth over related Github branches to
 
 Before writing any code, you and your pair will both need to complete the following steps:
 
-Set up a new directory for the project on your machine, change into the new directory, initiate git and create a new README file (leave this empty)
+Set up a new directory for the project on your machine, change into the new directory, initiate git and create a new README file (leave this empty).
 ```sh
 mkdir <new-project-name>
 cd <new-project-name>
 git init
 touch README.md
 ```
-Create a corresponding repositry on GitHub, and set this up as a remote origin to your local <new-project> repo
+Create a corresponding repositry on GitHub, and set this up as a remote origin to your local <new-project> repo.
 ```sh
 git remote add origin <github-repo-URL>
 ```
-Stage and commit your README file, and push the changes to origin
+Stage and commit your README file, and push the changes to origin.
 ```sh
 git status
 git add README.md
