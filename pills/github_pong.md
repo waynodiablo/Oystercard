@@ -8,75 +8,80 @@ Github Pong involves pushing code back and forth over related Github branches to
 Before writing any code, you and your pair will both need to complete the following steps:
 
 Set up a new directory for the project on your machine, change into the new directory, initiate git and create a new README file (leave this empty)
-```s
-mkdir new-project
-cd new-project
+```sh
+mkdir <new-project-name>
+cd <new-project-name>
 git init
 touch README.md
 ```
-Create a corresponding repositry on GitHub, and set this up as a remote origin to your local boris-bikes repo
-```s
+Create a corresponding repositry on GitHub, and set this up as a remote origin to your local <new-project> repo
+```sh
 git remote add origin <github-repo-URL>
 ```
 Stage and commit your README file, and push the changes to origin
-```s
+```sh
 git status
 git add README.md
 git push origin master
 ``` 
 Checkout a new branch for this day's work and push this new branch to your Github repo.
-```s
+```sh
 git checkout -b day-one
 git push origin day-one
 ```
 
 So now you both have local and remote repos for the project, which include your master branch, and the branch you will be working on today.
 
-###Pairing using Git Pong###
+###Pairing using Github Pong###
 
 Firstly, you will need to add eachother's GitHub repo's as remotes:
-```s
+```sh
 git remote add <pair-name> <URL-to-pair-partners-repo>
 ```
-
-
-
-
-
-
-
+The driver will then write code as normal, commiting changes and pushing to their day-one branch:
 ```sh
-git remote add <pair-partner> <URL-to-pair-partners-repo>
+git push origin day-one
 ```
-use git remote -v to check that's set up correctly.  Then to get your partners code use the following:
-
+when you are ready to swap, the new driver will need to pull down the code from their pair's branch:
 ```sh
-git fetch <pair-partner>
-git checkout <pair-partner>/<branch-name>
-git checkout -b <branch-name>
+git pull <pair-name> day-one
 ```
-
-Note that the above assumes a new branch name that you don't currently have on your local system.  If you are planning to ping pong on master then you can just pull your partners changes in directly like so
-
+they then push working code up to their own branch, ready for their pair to pull down.
 ```sh
-git pull <pair-partner> master
+git push origin day-one
+git pull <pair-name> day-one
+```
+This cycle continues until the end of the day, at which point the navigator makes sure they have pulled the latest code from their pair before finishing for the day.
+
+###Using Github Pong with a new pair###
+
+So, it's day two and you're now with a new pair who you've added as a remote. Once you have decided who's code to use, the pair-partner pulling down this code will need to do the following to prevent merge conflicts (first making sure you are on the branch you used yesterday):
+```s
+git checkout <day-one-branch>
+git checkout --orphan <day-two-branch-name>
+git reset --hard
+```
+The pair with the code being used will need to checkout a new branch for today and push this to Github
+```s
+git checkout <day-one-branch>
+git checkout -b <day-two-branch-name>
+git push origin <day-two-branch>
+```
+Then continue sharing code using the commands from day-one, pushing to your own repo and pulling from your pair's:
+```d
+git pull <pair-name> <branch-name>
+git push origin <branch-name>
 ```
 
-To sync after your partner makes additional changes:
+###Merging back to master###
 
-```sh
-git pull <pair-partner> <branch-name>
+Once you've completed the project, probably going through a series of branches, use the following commands to merge the last branch to your master branch:
+```s
+git checkout <latest branch name>
+git merge -s ours master
+git checkout master
+git merge <latest branch name>
 ```
 
-It's also great to have tab completion for branch names:
-
-http://code-worrier.com/blog/autocomplete-git/
-
-and it's absolutely essential to have branch names displayed in your command prompt:
-
-http://stackoverflow.com/questions/17333531/how-can-i-display-the-current-branch-and-folder-path-in-terminal
-
-See examples in the following repos:
-
-* https://github.com/PairProgramming/StackExercise
-* https://github.com/PairProgramming/AddUserExercise
+###Additional resources###
+A great video about Github Pong: https://www.youtube.com/watch?v=sFAxF6QSPas&feature=youtu.be
