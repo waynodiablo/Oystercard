@@ -23,7 +23,7 @@ Model View Controller (MVC) is an architectural pattern for dividing up concerns
 
 - A '**M**odel layer' for the business logic of an application, wrapped in classes and communicating with the database via Rails' ORM, ActiveRecord
 - A '**V**iew layer' for presenting information, and _small_ presentational logic
-- A '**C**ontroller layer' for linking the model layer to the view layer. Routes are managed by the Rails Router.
+- A '**C**ontroller layer' for messaging between the model layer and the view layer. Routes are managed by the Rails Router.
 
 Please see this [diagram](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png). As we go through building Yelp you'll see how Rails works in terms of Models, Views and Controllers.
 
