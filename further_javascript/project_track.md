@@ -26,4 +26,4 @@ No challenges.  No walkthroughs.
 
 ## Guidance
 
-Make sure to look at this [guidance](guidance.md)! It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things.
+Make sure to look at this [guidance](news_summary_project_guidance.md)! It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things.
