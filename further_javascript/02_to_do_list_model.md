@@ -20,3 +20,4 @@ In this challenge, you'll test and write code for a model that holds a list of t
 - [Chai website](http://chaijs.com/)
 - [Sinon website](http://sinonjs.org/)
 - [Constructor and prototype pattern workshop](https://github.com/maryrosecook/constructor-and-prototype-pattern-workshop)
+- :pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)

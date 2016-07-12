@@ -22,4 +22,5 @@ You could create the HTML through string concatenation, or use the Mustache temp
 
 - [Array join](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 - [HTML lists on MDN](https://developer.mozilla.org/en/docs/Web/HTML/Element/ul)
+- :pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)
 - [Mustache templates](https://github.com/janl/mustache.js/)
