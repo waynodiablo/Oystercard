@@ -6,6 +6,10 @@ You'll work in pairs as usual, swapping pairs each day.
 
 ## Structure of the week
 
+### Group code reviews
+
+We'll have group code reviews at 10am on Tuesday, Wednesday, Thursday and Friday.  These will last 30 minutes.  The format will be similar to the Monday weekend challenge code reviews.
+
 ### Monday, Tuesday and Wednesday
 
 Build a to do list app as a frontend, single page web app.  You'll be guided through this by the high-level challenges listed below.  However, there will be no walkthroughs.
