@@ -10,11 +10,20 @@ Ask yourself the same two questions:
 
 * Are you a better developer than you were yesterday?
 
+#### Primary goal
+
 By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
-* **Do you have an effective process for researching, understanding and using new technologies?**
+* **Can you write a frontend app using only pure JavaScript?**
 
-* Your secondary aim is to answer "yes" with some confidence to the question, "Can I build a frontend, single page web app?"
+#### Secondary goal
+
+To help you towards your primary goal, your secondary goal will be to produce a diagram of how all the parts of a frontend application interact.
+
+* Draw the diagram on Monday.
+* Each morning, update the diagram with your latest understanding.
+
+Your diagram should aim to include, as a minimum: model, view, controller, external API, browser page, unit tests, feature tests, static server, node, XMLHttpRequest, the DOM.
 
 ### Concepts and concretes
 
