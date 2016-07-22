@@ -14,7 +14,7 @@ cd <new-project-name>
 git init
 touch README.md
 ```
-Create a corresponding repository on GitHub, and add this as a remote call ```origin``` to your local repo.
+Create a corresponding repository on GitHub, and add this as a remote called ```origin``` to your local repo.
 ```sh
 git remote add origin <github-repo-URL>
 ```
