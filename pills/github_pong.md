@@ -53,7 +53,7 @@ git push origin day-one
 git pull <pair-name> day-one
 ```
 
-![Alt text](http://imgur.com/a/BInvu)
+![Alt text](http://i.imgur.com/eDBDnQv.jpg)
 
 This cycle continues until the end of the day, at which point both parties make sure they have pulled the latest code before finishing for the day.
 
