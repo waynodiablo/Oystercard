@@ -14,7 +14,7 @@ cd <new-project-name>
 git init
 touch README.md
 ```
-Create a corresponding repositry on GitHub, and set this up as a remote origin to your local <new-project> repo.
+Create a corresponding repository on GitHub, and add this as a remote call ```origin``` to your local repo.
 ```sh
 git remote add origin <github-repo-URL>
 ```
@@ -53,7 +53,7 @@ git push origin day-one
 git pull <pair-name> day-one
 ```
 
-![Alt text](http://i.imgur.com/We9Hfv7.jpg)
+![Alt text](http://imgur.com/a/BInvu)
 
 This cycle continues until the end of the day, at which point both parties make sure they have pulled the latest code before finishing for the day.
 
@@ -69,7 +69,7 @@ The pair with the code being used will need to checkout a new branch for today, 
 ```sh
 git checkout <day-one-branch>
 git checkout -b <day-two-branch-name>
-git push origin <day-two-branch>
+git push origin <day-two-branch-name>
 ```
 Then continue sharing code using the commands from day-one, pushing to your own repo and pulling from your pair's:
 ```sh
