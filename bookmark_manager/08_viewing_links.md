@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-You should now have a understand the following key database concepts:
+You should now have an understanding of the following key database concepts:
 
 - how to set up a database; 
 - creating tables; 

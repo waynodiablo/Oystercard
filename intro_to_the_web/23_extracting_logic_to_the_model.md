@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We have now implemented a handful of User Stories. At the moments, our Battle app is going through the motions, but nothing is really happening. Our next User Story asks us to do something about that:
+We have now implemented a handful of User Stories. At the moment, our Battle app is going through the motions, but nothing is really happening. Our next User Story asks us to do something about that:
 
 ```
 As Player 1,

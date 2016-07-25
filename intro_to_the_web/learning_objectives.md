@@ -1,8 +1,8 @@
-#Learning Objectives: Battleships Web
+#Learning Objectives: Intro to the Web
 
 *Learning Objectives are organised by topic and subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
-[Back to Battleships Web](battle_ships_web_rspec.md)
+[Back to Challenge Map](00_challenge_map.md)
 
 ## The Web
 

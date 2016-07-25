@@ -96,6 +96,8 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 
 :pill: [RSpec - Predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)
 
+:pill: [Writing tests without a testing framework](https://github.com/makersacademy/course/blob/master/pills/writing_tests_without_a_testing_framework.md)
+
 ## JavaScript/jQuery
 
 :pill: [Functions](https://github.com/makersacademy/course/blob/master/pills/js_functions.md)
