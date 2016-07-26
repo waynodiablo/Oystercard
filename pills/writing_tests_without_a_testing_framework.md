@@ -65,7 +65,7 @@ Now our test becomes:
 ```js
 // circle-tests.js
 
-var assert = require("./tiny-assertion-library");
+var assert = require("./assert");
 
 function testCircleRadiusDefaultsTo10() {
   var circle = new Circle();
