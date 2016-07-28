@@ -13,32 +13,32 @@ The essence of a single page app is that the browser never refreshes the page.  
   </head>
 
   <body>
-    <a href="" id="hello-link">Say hello</a>
-    <div id="greeting"></div>
+    <a href="" id="tiger-link">Tiger</a>
+    <div id="animal"></div>
 
     <script>
-      makeSayHelloLinkClickSayHello();
+      makeTigerLinkClickSayTiger();
 
-      function makeSayHelloLinkClickSayHello() {
+      function makeTigerLinkClickSayTiger() {
         document
-          .getElementById("hello-link")
+          .getElementById("tiger-link")
           .addEventListener("click", function(clickEvent) {
             clickEvent.preventDefault();
-            sayHello();
+            sayTiger();
           });
       };
 
-      function sayHello() {
+      function sayTiger() {
         document
-          .getElementById("greeting")
-          .innerHTML = "hello";
+          .getElementById("animal")
+          .innerHTML = "tiger";
       };
     </script>
   </body>
 </html>
 ```
 
-When the user clicks the `Say hello` link, the text `hello` is displayed.  This text is inserted into the page dynamically, not sent from a server after a request/response cycle and a page refresh.
+When the user clicks the `Tiger` link, the text `tiger` is displayed.  This text is inserted into the page dynamically, not sent from a server after a request/response cycle and a page refresh.
 
 ### Prevent default
 
@@ -52,9 +52,9 @@ How can a single page app have a navigation architecture (a web of different pag
 
 ### URLs with hashes
 
-What about if we think of the `hello` greeting as content that belongs on its own "page" at its own URL?
+What about if we think of the `tiger` as content that belongs on its own "page" at its own URL?
 
-Let's update our code to redirect the user to a new page when they click the `Say hello` link.  This subsequent page will show the `hello`.
+Let's update our code to redirect the user to a new "page" when they click the `Tiger` link.  This subsequent page will show the `tiger`.
 
 ```html
 <!DOCTYPE html>
@@ -65,43 +65,43 @@ Let's update our code to redirect the user to a new page when they click the `Sa
   </head>
 
   <body>
-    <a href="/#/hello">Say hello</a>
-    <div id="greeting"></div>
+    <a href="#tiger">Tiger</a>
+    <div id="animal"></div>
 
     <script>
-      makeUrlChangeShowGreetingForCurrentPage();
+      makeUrlChangeShowAnimalForCurrentPage();
 
-      function makeUrlChangeShowGreetingForCurrentPage() {
-        window.addEventListener("hashchange", showGreetingForCurrentPage);
+      function makeUrlChangeShowAnimalForCurrentPage() {
+        window.addEventListener("hashchange", showAnimalForCurrentPage);
       };
 
-      function showGreetingForCurrentPage() {
-        showGreeting(getGreetingFromUrl(window.location));
+      function showAnimalForCurrentPage() {
+        showAnimal(getAnimalFromUrl(window.location));
       };
 
-      function getGreetingFromUrl(location) {
-        return location.hash.split("/")[1];
+      function getAnimalFromUrl(location) {
+        return location.hash.split("#")[1];
       };
 
-      function showGreeting(greeting) {
+      function showAnimal(animal) {
         document
-          .getElementById("greeting")
-          .innerHTML = greeting;
+          .getElementById("animal")
+          .innerHTML = animal;
       };
     </script>
   </body>
 </html>
 ```
 
-Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigatating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#hello`, then clicks a link to `http://localhost:4000#howdy`, no page refreshes will occur.  This is the crux of how a single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
+Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigatating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#tiger`, then clicks a link to `http://localhost:4000#lion`, no page refreshes will occur.  This is the crux of how a single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
 
 Notice how we don't need `event.preventDefault()` anymore.  There's no page refresh to prevent.
 
-Notice how we don't need to bind an event handler to the `Say hello` link.  Instead, the `makeUrlChangeShowGreetingForCurrentPage()` function listens for `hashchange` events.  When one is fired, it takes the greeting from the hash part of the URL and displays that greeting.
+Notice how we don't need to bind an event handler to the `Tiger` link.  Instead, the `makeUrlChangeShowAnimalForCurrentPage()` function listens for `hashchange` events.  When one is fired, it takes the animal from the hash part of the URL and displays that animal.
 
 ### Many pages
 
-What about if we have a list of greetings that we want to show on separate "pages" of our single page app? This is super easy! We just add links for each greeting page that we want.
+What about if we have a list of animals that we want to show on separate "pages" of our single page app? This is super easy! We just add links for each animal page that we want.
 
 ```html
 <!DOCTYPE html>
@@ -112,33 +112,32 @@ What about if we have a list of greetings that we want to show on separate "page
   </head>
 
   <body>
-    <a href="#hello">Say hello</a> |
-    <a href="#howdy">Say howdy</a> |
-    <a href="#yo">Say yo</a> |
-    <a href="#hey">Say hey</a> |
-    <a href="#wotcha">Say wotcha</a>
+    <a href="#tiger">Tiger</a> |
+    <a href="#lion">Lion</a> |
+    <a href="#cheetah">Cheetah</a> |
+    <a href="#leopard">Leopard</a>
 
-    <div id="greeting"></div>
+    <div id="animal"></div>
 
     <script>
-      makeUrlChangeShowGreetingForCurrentPage();
+      makeUrlChangeShowAnimalForCurrentPage();
 
-      function makeUrlChangeShowGreetingForCurrentPage() {
-        window.addEventListener("hashchange", showGreetingForCurrentPage);
+      function makeUrlChangeShowAnimalForCurrentPage() {
+        window.addEventListener("hashchange", showAnimalForCurrentPage);
       };
 
-      function showGreetingForCurrentPage() {
-        showGreeting(getGreetingFromUrl(window.location));
+      function showAnimalForCurrentPage() {
+        showAnimal(getAnimalFromUrl(window.location));
       };
 
-      function getGreetingFromUrl(location) {
+      function getAnimalFromUrl(location) {
         return location.hash.split("#")[1];
       };
 
-      function showGreeting(greeting) {
+      function showAnimal(animal) {
         document
-          .getElementById("greeting")
-          .innerHTML = greeting;
+          .getElementById("animal")
+          .innerHTML = animal;
       };
     </script>
   </body>
