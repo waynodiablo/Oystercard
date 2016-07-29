@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_track.md)
 
-In this challenge, you'll learn how to listen for the event triggered when a user submits an HTML form.  You'll also learn how to stop the form being submitted, thus avoiding a page refresh that would break your single page app.
+In this challenge, you'll learn how to listen for the event triggered when a user submits an HTML form.  You'll also learn how to stop the form being submitted, thus avoiding a page refresh that would break your frontend, single page app.
 
 ### Learning objectives covered
 
@@ -18,6 +18,6 @@ In this challenge, you'll learn how to listen for the event triggered when a use
 
 ### Resources
 
-- :pill: [Single page app](https://github.com/makersacademy/course/blob/master/pills/single_page_app.md)
+- :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [You don't need jQuery - ways of interacting with the DOM without using jQuery](http://blog.garstasio.com/you-dont-need-jquery/)
 - [`preventDefault()` on MDN](https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault)

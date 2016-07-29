@@ -6,7 +6,7 @@ In this challenge, you'll complete the code for a page that shows a single note.
 
 ### Learning objectives covered
 
-- Support multiple content "pages" in a single page app.
+- Support multiple content "pages" in a frontend, single page app.
 - Use the `hashchange` event to load page content when the browser URL changes.
 
 ### To complete this challenge, you will need to:
@@ -17,7 +17,7 @@ In this challenge, you'll complete the code for a page that shows a single note.
 
 #### Link each note to a page that displays the full note
 
-- [ ] Read :pill: [single page app](https://github.com/makersacademy/course/blob/master/pills/single_page_app.md).
+- [ ] Read :pill: [frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md).
 - [ ] Use TDD to update the note list view so that each note is linked to an appropriate URL for displaying that individual note.  You can use the note `id` in the URL.
 - [ ] Go to `http://localhost:8080` in your browser.  You should be able to click on a note and be redirected to the URL for that note.  The page content shouldn't change.  There should be no page refresh.
 
@@ -28,6 +28,6 @@ In this challenge, you'll complete the code for a page that shows a single note.
 
 ### Resources
 
-- :pill: [Single page app](https://github.com/makersacademy/course/blob/master/pills/single_page_app.md)
+- :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [Getting the current browser URL](http://stackoverflow.com/questions/1034621/get-current-url-in-web-browser)
 - [JavaScript string methods (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)

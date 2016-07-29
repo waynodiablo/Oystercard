@@ -39,4 +39,4 @@ Build a [frontend, single page web app that summarises the news](news_summary_pr
 
 #### Guidance
 
-Make sure to look at this [guidance](single_page_app_guidance.md) for the news summariser app!  It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things. (The guidance shouldn't be necessary for the to do app.  The challenges will guide you with that.)
+Make sure to look at this [guidance](frontend_single_page_app_guidance.md) for the news summariser app!  It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things. (The guidance shouldn't be necessary for the to do app.  The challenges will guide you with that.)

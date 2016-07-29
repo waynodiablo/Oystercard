@@ -18,6 +18,6 @@ In this challenge, you'll create a non-functioning HTML form that, in the future
 
 ### Resources
 
-- :pill: [Single page app](https://github.com/makersacademy/course/blob/master/pills/single_page_app.md)
+- :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [HTML forms on W3 schools](http://www.w3schools.com/html/html_forms.asp)
 - [RESTful routing question on Stack Overflow](http://stackoverflow.com/questions/2441962/what-is-restful-routing)
