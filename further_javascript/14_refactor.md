@@ -10,6 +10,6 @@ In this challenge, you'll refactor your app.  Your aim will be to decompose it i
 
 ### To complete this challenge, you will need to:
 
-- [ ] Look at index.js.  List its responsibilities.
+- [ ] Look at note-controller.js.  List its responsibilities.
 - [ ] For each responsibility, design a module that will take over than responsibility.  Write tests for the module.
 - [ ] Refactor the code to make the tests pass.

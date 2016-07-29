@@ -1,8 +1,8 @@
-# Play around to create and serve an `index.html` page for your app
+# Spuke to create and serve an `index.html` page for your app
 
 [Back to the Challenge Map](00_challenge_track.md)
 
-In this challenge, you'll create a **static** web page and make it available for browsing on your computer.
+In this challenge, you'll create a static HTML page and make it available for browsing on your computer.
 
 ### Learning objectives covered
 
@@ -11,10 +11,13 @@ In this challenge, you'll create a **static** web page and make it available for
 
 ### To complete this challenge, you will need to:
 
+- [ ] You can spike this code.
 - [ ] Create an `index.html` file containing the minimal HTML structure.
+- [ ] Add a `div` that has an `id` attribute set to `app` and contains the text `hello`.
+- [ ] Install :pill: [node](../pills/node.md).
 - [ ] Install `http-server` from :pill: [npm](../pills/npm.md).
 - [ ] Run `http-server` to serve your `index.html`.
-- [ ] View your `index.html` page in a web browser.
+- [ ] Go to `http://localhost:8080/` in a browser to view your `index.html` page.  It should say `hello`.
 
 ### Resources
 

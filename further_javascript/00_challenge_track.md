@@ -14,23 +14,23 @@ We'll have group code reviews at 10am on Tuesday, Wednesday, Thursday and Friday
 
 Build a to do list app as a frontend, single page web app.  You'll be guided through this by the high-level challenges listed below.  However, there will be no walkthroughs.
 
-To get an idea of what you'll be building, here are some [user stories and a mockup](to_do_list_app_user_stories.md) for the to do list app.  (This is just to give you an idea of the app.  You'll work through the challenges below to build the app.)
+To get an idea of what you'll be building, here are some [user stories and a mockup](notes_app_user_stories.md) for the to do list app.  (This is just to give you an idea of the app.  You'll work through the challenges below to build it.)
 
 #### Challenges
 
-1. [Use Mocha to unit test and write a model for a to do](01_to_do_model.md)
-2. [Unit test and write a model for a to do list](02_to_do_list_model.md)
-3. [Unit test and write some code that outputs a to do list model as HTML](03_output_to_do_list_as_html.md)
-4. [Play around to create and serve an `index.html` page for your app](04_index_page.md)
-5. [Use Zombie.js to write a feature test that tests that your app displays a title](05_zombie_set_up_and_app_title.md)
-6. [Write a feature test that checks that a to do is displayed in the `index.html` page](06_display_to_do_in_page.md)
-7. [Play around to add a form for creating a to do to `index.html`](07_create_to_do_form.md)
-8. [Play around to intercept a form `submit` event emitted by the form that creates a to do](08_intercept_submit_event.md)
-9. [Play around to extract a task from a `submit` event](09_extract_form_data_from_submit_event.md)
-10. [Test and write code that takes a task from a `submit` event and creates a to do](10_user_create_to_do.md)
-11. [Test and write code that displays to dos as complete or not complete](11_show_to_do_complete_status.md)
-12. [Test and write code that implements a to do `Complete` button](12_complete_button.md)
-13. [Use Ajax to request some to dos stored on a remote server, then display them](13_request_to_dos_with_ajax.md)
+1. [TDD a model for a note](01_note_model.md)
+2. [TDD a model for a list of notes](02_note_list_model.md)
+3. [TDD a note view that outputs a note list model as HTML](03_note_list_view.md)
+4. [Spike creating and serving an `index.html` page for your app](04_index_page.md)
+5. [Spike code that inserts some HTML into the `index.html` page](05_insert_html_into_page.md)
+6. [Spike and test code that shows a note in the `index.html` page](06_display_note_list.md)
+7. [TDD a note view](07_note_view.md)
+8. [Use TDD to show only the first 20 characters of each note on the main note list page](08_show_abbreviated_notes_in_note_list_view.md)
+9. [Use TDD to finish the implementation of a single note page](09_finish_single_note_page.md)
+10. [Spike adding a form to `index.html` for creating a note](10_create_note_form.md)
+11. [Spike to intercept a form `submit` event emitted by the create note form](11_intercept_submit_event.md)
+12. [Spike to extract note text from a form `submit` event](12_extract_note_text_from_submit_event.md)
+13. [Use TDD to finish support for user note creation](13_user_create_note.md)
 14. [Refactor](14_refactor.md)
 
 ### Thursday and Friday
