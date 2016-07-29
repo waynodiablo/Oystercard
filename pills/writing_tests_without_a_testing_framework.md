@@ -35,7 +35,9 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-This is pretty janky:
+You could write this code in a file that you run with [node](node.md).  Or you could create an HTML page that uses a script tag to include your test file, and open the HTML page in a browser to run your tests.
+
+This is pretty ugly.
 
 * We have to use a three line block of code to assert one thing.
 * We have to supply a custom error description in case the assertion fails.
