@@ -1,4 +1,4 @@
-# Challenges and walkthroughs track
+# Challenge and walkthrough track
 
 This track has the same challenge and walkthrough structure you are used to from the first half of the course.
 
