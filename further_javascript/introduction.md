@@ -1,4 +1,4 @@
-# Researching, understanding and using new technologies in JavaScript (further JS)
+# Writing a frontend, single page app using only pure JavaScript (further JS)
 
 ## Learning objectives
 
@@ -14,7 +14,7 @@ Ask yourself the same two questions:
 
 By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
-* **Can you write a frontend app using only pure JavaScript?**
+* **Can you write a frontend, single page app using only pure JavaScript?**
 
 #### Secondary goal
 
