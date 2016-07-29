@@ -8,9 +8,9 @@
 
 * How will you intercept form submissions so they don't reload the page? `form submit event` and `preventDefault` may prove useful.
 
-* How will you intercept URL changes so that they don't reload the page? The `hashchange` event may be useful.
+* How will you intercept URL changes so that they don't reload the page? Have a look at :pill: [single page app](https://github.com/makersacademy/course/blob/master/pills/single_page_app.md).
 
-* How will you implement the domain model? Maybe the constructor and prototype pattern?
+* How will you implement the domain model? Maybe the [constructor and prototype pattern](https://github.com/maryrosecook/constructor-and-prototype-pattern-workshop)?
 
 * How will you construct your HTML content? You could write a view module.  Maybe it will concatenate strings? Maybe it will use a tiny tiny templating framework that you write.
 
