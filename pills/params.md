@@ -18,7 +18,7 @@ server.rb
   post ‘/form’ do
     @username = params[:username]
     puts params
-    erb :params
+    erb :form
   end
   
 ```
