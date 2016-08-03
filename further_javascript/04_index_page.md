@@ -1,4 +1,4 @@
-# Spuke to create and serve an `index.html` page for your app
+# Spike to create and serve an `index.html` page for your app
 
 [Back to the Challenge Map](00_challenge_track.md)
 
