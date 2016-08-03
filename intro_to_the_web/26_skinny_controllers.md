@@ -23,7 +23,7 @@ In this challenge, you will refactor your controller to make it more 'skinny'. Y
 
 ### Resources
 
-- [Skinny Controllers, Skinny Models (Thoughtbot)*](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
+- [Forget fat models: it’s time for skinny controllers and skinny models](https://medium.com/makers-academy/forget-fat-models-its-time-for-skinny-controllers-and-skinny-models-a9b84ec481b7#.8vs2uzw1f)
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
  
 *This article contains some bad taste in their analogies - we apologise and are working on a suitable replacement.

@@ -102,7 +102,7 @@ To consider how to build an app properly, generally you need to be just applying
 
 ### Resources
 
-* You can go even further than fat models/skinny controllers and aim for [skinny controllers, skinny models](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
+* You can go even further than fat models/skinny controllers and aim for [Forget fat models: it’s time for skinny controllers and skinny models](https://medium.com/makers-academy/forget-fat-models-its-time-for-skinny-controllers-and-skinny-models-a9b84ec481b7#.8vs2uzw1f)
 * One way we sometimes useto take our code even further is using [Service Objects](https://robots.thoughtbot.com/skinny-controllers-skinny-models)
 * There's even more solutions to improving your approach to MVC [in this article on 7 ways to decompose fat models](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
 

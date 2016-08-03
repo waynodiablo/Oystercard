@@ -27,6 +27,5 @@ a password confirmation mismatch
 
 * [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 * [Web Form Usability](http://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/)
-* [Web Forms](http://thoughtfulweb.com/thoughts/on/web-forms-a-great-big-user-experience-brick-wall)
 
 ## [Walkthrough](walkthroughs/20.md)

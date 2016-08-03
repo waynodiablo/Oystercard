@@ -16,7 +16,7 @@ use of multiple accounts on the same browser in this challenge you will allow us
   - [ ] A user can sign out
   - [ ] A goodbye message is displayed on signing out
   - [ ] The user is redirected to `/link`
-- [ ] Extract the `sign_in` and `sign_out` methods into a helper module and include it
+- [ ] Extract the `sign_in` and `sign_up` methods into a helper module and include it
 in your spec helper
 - [ ] Ensure to test manually, locally and on Heroku
 
