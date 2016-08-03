@@ -12,9 +12,9 @@ We'll have group code reviews at 10am on Tuesday, Wednesday, Thursday and Friday
 
 ### Monday, Tuesday and Wednesday
 
-Build a to do list app as a frontend, single page web app.  You'll be guided through this by the high-level challenges listed below.  However, there will be no walkthroughs.
+Build a notes app as a frontend, single page web app.  You'll be guided through this by the high-level challenges listed below.  However, there will be no walkthroughs.
 
-To get an idea of what you'll be building, here are some [user stories and a mockup](notes_app_user_stories.md) for the to do list app.  (This is just to give you an idea of the app.  You'll work through the challenges below to build it.)
+To get an idea of what you'll be building, here are some [user stories and a mockup](notes_app_user_stories.md) for the notes app.  (This is just to give you an idea of the app.  You'll work through the challenges below to build it.)
 
 #### Challenges
 
@@ -36,8 +36,8 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 
 ### Thursday and Friday
 
-Build a [frontend, single page web app that summarises the news](news_summary_project.md).  No challenges.  No walkthroughs.  You'll be able to build on what you've learnt from making the to do list app.
+Build a [frontend, single page web app that summarises the news](news_summary_project.md).  No challenges.  No walkthroughs.  You'll be able to build on what you've learnt from making the notes app.
 
 #### Guidance
 
-Make sure to look at this [guidance](frontend_single_page_app_guidance.md) for the news summariser app!  It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things. (The guidance shouldn't be necessary for the to do app.  The challenges will guide you with that.)
+Make sure to look at this [guidance](frontend_single_page_app_guidance.md) for the news summariser app!  It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things. (The guidance shouldn't be necessary for the notes app.  The challenges will guide you with that.)
