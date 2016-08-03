@@ -11,7 +11,8 @@ In this challenge, you'll create a static HTML page and make it available for br
 
 ### To complete this challenge, you will need to:
 
-- [ ] You can spike this code.
+(You can spike this code.)
+
 - [ ] Create an `index.html` file containing the minimal HTML structure.
 - [ ] Add a `div` that has an `id` attribute set to `app` and contains the text `hello`.
 - [ ] Install :pill: [node](../pills/node.md).

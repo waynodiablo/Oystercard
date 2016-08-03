@@ -11,7 +11,7 @@ In this challenge, you'll create a non-functioning HTML form that, in the future
 ### To complete this challenge, you will need to:
 
 - [ ] You can spike this code.
-- [ ] Add a <form> tag to `index.html`. It should send a post request to an appropriate RESTful, hash URL.
+- [ ] Add a <form> tag to `index.html`. It should send a post request to an appropriate RESTful, **hash** URL.
 - [ ] Add a `textarea` with an id of `text`.
 - [ ] Add a submit button.
 - [ ] If you click the submit button, you should be redirected to a new page that won't work.

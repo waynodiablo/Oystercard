@@ -10,7 +10,8 @@ In this challenge, you'll write code that inserts some HTML into your `index.htm
 
 ### To complete this challenge, you will need to:
 
-- [ ] You can spike this code.
+(You can spike this code.)
+
 - [ ] Create a `note-controller.js` file and use a `script` tag to load it in your `index.html` file.
 - [ ] Add code that gets hold of the `app` `div` element in your `index.html` page.  `console.log` the element to be sure you've got it.
 - [ ] Add code that can change the `app` greeting from `hello` to `howdy`.

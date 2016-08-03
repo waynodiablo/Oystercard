@@ -11,7 +11,7 @@ The text in a note could be too long to be shown in full in the main note list. 
 
 ### To complete this challenge, you will need to:
 
-- [ ] You'll change the note list view you created way back in challenge 3.  TDD updating the code to only show the first 20 characters of each note in the list.
+- [ ] Change the note list view you created way back in challenge 3.  TDD updating the code to only show the first 20 characters of each note in the list.
 
 ### Resources
 

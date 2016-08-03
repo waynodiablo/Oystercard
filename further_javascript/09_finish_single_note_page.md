@@ -18,12 +18,12 @@ In this challenge, you'll complete the code for a page that shows a single note.
 #### Link each note to a page that displays the full note
 
 - [ ] Read :pill: [frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md).
-- [ ] Use TDD to update the note list view so that each note is linked to an appropriate URL for displaying that individual note.  You can use the note `id` in the URL.
-- [ ] Go to `http://localhost:8080` in your browser.  You should be able to click on a note and be redirected to the URL for that note.  The page content shouldn't change.  There should be no page refresh.
+- [ ] Use TDD to update the note list view so that each note is linked to an appropriate URL for displaying that individual note.
+- [ ] Go to `http://localhost:8080` in your browser.  You should be able to click on a note and be redirected to the URL for that note.  There should be no page refresh.  The page content shouldn't change.  (And you won't see the note, yet.)
 
 #### Load the content for the single note page
 
-- [ ] Using TDD, update your `note-controller.js` to load content for the single note page.  The note controller code should listen for `hashchange` events.  When one happens, if the current browser URL is for a single note page, it should use the `app` element to set the page content to the HTML for that note.
+- [ ] Using TDD, update your `note-controller.js` to load content for the single note page.  The note controller code should listen for `hashchange` events.  When one happens, if the new browser URL is for a single note page, it should use the `app` element to set the web page content to the HTML for that note.
 - [ ] Go to `http://localhost:8080` in your browser.  You should be able to click on a note and see the full text of that note.  There should be no page refresh.
 
 ### Resources

@@ -24,14 +24,14 @@ Because you'll need to integrate several different elements to make the code wor
 - Code is in a file called `note-controller.js`.
 - Code is wrapped in the module pattern.
 - Uses the constructor and prototype pattern to define a note controller that can be instantiated.
-- Takes a note list model upon instantiation. Adds a note that says `Favourite drink: seltzer`.
-- Has a method that uses your note list view to convert the note list model to HTML.
-- Has a method that inserts the HTML into the `app` element so the note list appears in the `index.html` page.
+- Takes a note list model upon instantiation. Adds a note that says `Favourite drink: seltzer`.  (You could create another file, `index.js`, to instantiate the `NoteController` from.)
+- Sets up a note list view with the note list model passed in.
+- Has a method that gets HTML from the note list view and inserts it into the `app` element.
 
 ### Tests to write
 
 - A note controller can be instantiated.
-- When the method that puts the note list HTML into the `index.html` page is called, the `app` element has its `innerHTML` property set to the HTML for a note list with one note.  This may require a mocked `app` element.
+- When the method that puts the note list HTML into the `index.html` page is called, the `app` element has its `innerHTML` property set to the HTML for a note list with one note.  What will you need to mock to achieve this?
 
 ### Resources
 
