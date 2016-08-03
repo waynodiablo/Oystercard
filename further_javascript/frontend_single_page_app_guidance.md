@@ -1,4 +1,4 @@
-# Frontent, single page app guidance
+# Frontend, single page app guidance
 
 * How will you serve your app? Maybe a very simple library like :pill: [http-server](../pills/http_server.md)?
 
