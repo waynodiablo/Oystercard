@@ -1,4 +1,4 @@
-# Spike and test code that shows a note in the `index.html` page
+# Spike and then TDD code that shows a note in the `index.html` page
 
 [Back to the Challenge Map](00_challenge_track.md)
 

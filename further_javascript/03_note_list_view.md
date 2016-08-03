@@ -1,4 +1,4 @@
-# Test and write code that implements a note list view
+# TDD a note list view
 
 [Back to the Challenge Map](00_challenge_track.md)
 

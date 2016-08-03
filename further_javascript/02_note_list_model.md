@@ -1,4 +1,4 @@
-# Test and write a model for a list of notes
+# TDD a model for a list of notes
 
 [Back to the Challenge Map](00_challenge_track.md)
 
