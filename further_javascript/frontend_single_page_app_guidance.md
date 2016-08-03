@@ -8,7 +8,7 @@
 
 * How will you intercept form submissions so they don't reload the page? `form submit event` and `preventDefault` may prove useful.
 
-* How will you intercept URL changes so that they don't reload the page? Have a look at :pill: [frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md).
+* How will you intercept URL changes so that they don't reload the page? Have a look at :pill: [frontend, single page app](../pills/frontend_single_page_app.md).
 
 * How will you implement the domain model? Maybe the [constructor and prototype pattern](https://github.com/maryrosecook/constructor-and-prototype-pattern-workshop)?
 
