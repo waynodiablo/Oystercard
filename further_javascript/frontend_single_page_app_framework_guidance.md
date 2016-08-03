@@ -8,7 +8,7 @@ The notes app needs to do lots of things: generate HTML from data and static HTM
 
 ## A good abstraction
 
-Once you've decided that your framework should have a feature, you need to decide what abstraction it should use.  This often means deciding how the user should structure their code when they use this feature.
+Once you've decided that your framework should have a particular feature, you need to decide what abstraction it should use.  This often means deciding how the user should structure their code when they use this feature.
 
 As an example, take the abstraction that Sinatra provides to let the user decide what code should be run for an incoming HTTP request:
 
@@ -33,6 +33,8 @@ end
 
 sinatra.add_route("/hello", hello_action)
 ```
+
+When you decide on the API for your abstraction and feature, try to make it as terse and readable as you can.
 
 ## Resources
 
