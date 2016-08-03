@@ -1,15 +1,15 @@
-# Single page apps
+# Frontend, single page app
 
-## What is a single page app?
+## What is a frontend, single page app?
 
-The essence of a single page app is that the browser never refreshes the page.  This means that, once the page loads, all changes happen by inserting HTML into the existing page.  Here is the a very hiny single page app.  (This code should be abstracted into separate files.  It's been put in one file for clarity.)
+The essence of a frontend, single page app is that the browser never refreshes the page.  This means that, once the page loads, all changes happen by inserting HTML into the existing page.  Here is the a very hiny single page app.  (This code should be abstracted into separate files.  It's been put in one file for clarity.)
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Single page app</title>
+    <title>Frontend, single page app</title>
   </head>
 
   <body>
@@ -48,7 +48,7 @@ Create an `index.html` page and paste in the code above.  Open the page in a web
 
 ## Navigation
 
-How can a single page app have a navigation architecture (a web of different pages)?
+How can a frontend, single page app have a navigation architecture (a web of different pages)?
 
 ### URLs with hashes
 
@@ -61,7 +61,7 @@ Let's update our code to redirect the user to a new "page" when they click the `
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Single page app</title>
+    <title>Frontend, single page app</title>
   </head>
 
   <body>
@@ -93,7 +93,7 @@ Let's update our code to redirect the user to a new "page" when they click the `
 </html>
 ```
 
-Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigatating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#tiger`, then clicks a link to `http://localhost:4000#lion`, no page refreshes will occur.  This is the crux of how a single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
+Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigatating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#tiger`, then clicks a link to `http://localhost:4000#lion`, no page refreshes will occur.  This is the crux of how a frontend, single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
 
 Notice how we don't need `event.preventDefault()` anymore.  There's no page refresh to prevent.
 
@@ -101,14 +101,14 @@ Notice how we don't need to bind an event handler to the `Tiger` link.  Instead,
 
 ### Many pages
 
-What about if we have a list of animals that we want to show on separate "pages" of our single page app? This is super easy! We just add links for each animal page that we want.
+What about if we have a list of animals that we want to show on separate "pages" of our frontend, single page app? This is super easy! We just add links for each animal page that we want.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Single page app</title>
+    <title>Frontend, single page app</title>
   </head>
 
   <body>
