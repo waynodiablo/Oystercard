@@ -38,9 +38,9 @@ Boris Bikes   | Oystercard | Battles Web | Bookmark Manager | JavaScript | Proje
 
 **Senior Portion**
 
-7     |  8                 | 9         | 10             | 11             | 12              |
-------|--------------------|-----------|----------------|----------------|-----------------|
-Rails | Further Javascript | Makerthon | Final projects | Final projects |   Hiring Week   |
+7                  |   8   | 9         | 10             | 11             | 12              |
+-------------------|-------|-----------|----------------|----------------|-----------------|
+Further JavaScript | Rails | Makerthon | Final projects | Final projects |   Hiring Week   |
 
 
 Each week there will be learning objectives relating to the particular project and pre-reading materials based on the learning objectives.
