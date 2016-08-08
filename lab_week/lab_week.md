@@ -37,7 +37,6 @@ We are asking you to deliver the project in MVP steps. ​**You are unlikely to 
 
 ### What support can I expect during Lab Week?
 
-* A workshop on Monday morning on User Story creation, using specifications, and using a card wall.
 * Coaches spend Week 6 intensively focussed on curriculum development, conducting their own retrospectives and planning activities related to developing the course and related materials. As a result, there is no coach support for standup or retrospectives beyond the first day.
 
 ### What happens next?
