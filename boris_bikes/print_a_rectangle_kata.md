@@ -13,7 +13,7 @@
 ## Example output
 
 ```
-$ ruby print_rectangle 20 10
+$ ruby print_rectangle.rb 20 10
 --------------------
 |                  |
 |                  |
