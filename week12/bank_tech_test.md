@@ -4,7 +4,7 @@ Today, you'll practice doing a tech test.
 
 ## Outline
 
-* 09.30 - 14.00.  Work **solo** to fulfil the bank account requirements and acceptance criteria below.  Have breaks whenever you like.
+* 09.30 - 14.00.  Work **solo** to implement the bank account requirements and acceptance criteria in Ruby.  Have breaks whenever you like.
 
 * 14.00 - 14.20.  Review your own code.  Look for places it could be refactored.
 
