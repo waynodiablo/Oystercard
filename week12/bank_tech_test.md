@@ -18,9 +18,9 @@ Today, you'll practice doing a tech test.
 
 ### Requirements
 
-* Deposits, withdrawal
-* Account statement (date, amount, balance)
-* Statement printing
+* Deposits, withdrawal.
+* Account statement (date, amount, balance) printing.
+* Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 ### Acceptance criteria
 
