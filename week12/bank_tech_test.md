@@ -24,6 +24,7 @@ You'll work alone, and you'll also review your own code so you can practice refl
 
 ### Requirements
 
+* The app should run on the command line.
 * Deposits, withdrawal.
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
