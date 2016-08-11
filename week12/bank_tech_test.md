@@ -8,7 +8,7 @@ You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
-## Outline
+## Schedule
 
 * 09.30 - 14.00.  Work **solo** to implement the bank account requirements and acceptance criteria in Ruby.  Have breaks whenever you like.
 
