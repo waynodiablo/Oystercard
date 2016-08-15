@@ -108,7 +108,7 @@ Here is a tiny module:
 })(this);
 ```
 
-To explore this code, let's try and use the exclaim function.  (Normally, you would not call a module inside the module itself, but we'll do that just for explanatory purposes.)
+To explore this code, let's try and use the exclaim function:
 
 ```js
 (function(exports) {
