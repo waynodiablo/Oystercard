@@ -2,7 +2,7 @@
 
 ## What is a frontend, single page app?
 
-The essence of a frontend, single page app is that the browser never refreshes the page.  This means that, once the page loads, all changes happen by inserting HTML into the existing page.  Here is the a very hiny single page app.  (This code should be abstracted into separate files.  It's been put in one file for clarity.)
+The essence of a frontend, single page app is that the browser never refreshes the page.  This means that, once the page loads, all changes happen by inserting HTML into the existing page.  Here is a very tiny single page app.  (This code should be abstracted into separate files.  It's been put in one file for clarity.)
 
 ```html
 <!DOCTYPE html>
