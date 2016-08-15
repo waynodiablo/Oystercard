@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_track.md)
 
-So far in the course, you've mostly built systems outside in: write a feature test, write unit tests to match the unit test failure and write code to pass the tests.  For this app, you'll focus on unit tests.  You'll write tests for a unit (e.g. the object that represents a note). Then you'll implement the unit.  You'll keep on going in this fashion all the way through building your.  There's a lot of new material in this week's curriculum.  Focusing on unit tests will help you methodically write solid, expandable code.
+So far in the course, you've mostly built systems outside in: write a feature test, write unit tests to match the unit test failure and write code to pass the tests.  For this app, you'll focus on unit tests.  You'll write tests for a unit (e.g. the object that represents a note). Then you'll implement the unit.  You'll keep on going in this fashion all the way through building your app.  There's a lot of new material in this week's curriculum.  Focusing on unit tests will help you methodically write solid, expandable code.
 
 ### Learning objectives covered
 
