@@ -54,7 +54,7 @@ This code does the same thing the IIFE does.  But it's more verbose. And it crea
 
 It's kind of useless to wrap just a call to `console.log` in an IIFE.  The `console.log` would be fine on its own, without an IFFE.  So why do we use IFFEs? To hide stuff.
 
-Imagine we wanted we formulate a more complex greeting than just `hi`.
+Imagine we wanted to formulate a more complex greeting than just `hi`.
 
 ```js
 (function () {
