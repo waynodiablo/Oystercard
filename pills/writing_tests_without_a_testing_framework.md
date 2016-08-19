@@ -77,7 +77,7 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-> We're assuming we're running our tests in node.
+> We're assuming we're running our tests in node for this particular exercise. However, note that you could also write your testing framework to operate in the browser, much like Jasmine.
 
 Ten or twenty more lines of testing framework code would get us most of the way to having 80% of the `describe`, `it`, mocking and asserting framework deliciousness that we're used to.
 
