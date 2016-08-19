@@ -11,7 +11,7 @@ In this challenge, you'll practice exploring the contents of a JavaScript object
 ### To complete this challenge, you will need to:
 
 - [ ] You can spike this code.
-- [ ] Use your JavaScript p everywhere techniques to extract the submitted note text (e.g. `Favourite drink: seltzer`) from a `submit` event triggered by submitting the note create form.
+- [ ] Use your JavaScript out'P'ut everywhere techniques to extract the submitted note text (e.g. `Favourite drink: seltzer`) from a `submit` event triggered by submitting the note create form.
 
 ### Resources
 
