@@ -29,7 +29,7 @@ Right. All installed? Then let's begin.
 
 True to its 'opinionated' name, Rails is full of files and folders right from the start. This is an example of Rails touting a certain kind of configuration, which is a strong recommendation for how to organise the files in your project. Here's what some of them do:
 
-* `app` – **where your code goes**. Contains models, views and controllers; as well also JavaScript & CSS assets
+* `app` – **where your code goes**. Contains models, views and controllers; as well as also JavaScript & CSS assets
 * `bin` – contains specific versions of executables such as rails and rake for doing low level tasks
 * `config` – configuration information, including `database.yml` which includes database configuration details and a routes file
 * `db` - all our database related code for migrating and seeding the database
