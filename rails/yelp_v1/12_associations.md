@@ -106,7 +106,7 @@ end
 
 (Remember all the `permit` weirdness from before!)
 
-we should now be seeing the folowing error:
+We should now be seeing the folowing error:
 
 ```
 Failure/Error: click_button 'Leave Review'
