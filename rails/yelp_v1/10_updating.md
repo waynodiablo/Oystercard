@@ -46,7 +46,7 @@ So if we go and [take a look at our database](https://github.com/makersacademy/c
 %p= @restaurant.description
 ```
 
-And now the good news - we get to go back and amend our old tests to accomodate this new data! 
+And now the good news - we get to go back and amend our old tests to accommodate this new data!
 
 #### Updating restaurants
 
@@ -114,6 +114,8 @@ Now we need to create the missing `edit` view.
 <%= form_for @restaurant do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
   <%= f.submit %>
 <% end %>
 ```
@@ -124,6 +126,8 @@ Now we need to create the missing `edit` view.
 = form_for @restaurant do |f|
   = f.label :name
   = f.text_field :name
+  = f.label :description
+  = f.text_area :description
   = f.submit
 ```
 
@@ -139,6 +143,8 @@ Cool. But we still haven't got an `update` action, as RSpec will tell you – so
   end
 ...
 ```
+
+Let's not forget to update our `restaurant_params` method to reflect the new restaurant properties we're trying to update.
 
 Now simply update your `app/views/restaurants/index` file and we're done for this section! Next, we'll tackle what happens when you want something to go away forever...
 
