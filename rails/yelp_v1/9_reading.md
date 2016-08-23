@@ -50,7 +50,7 @@ def show
 end
 ```
 
-This method gets called when you go to `/restaurants/:restaurant_id`, and uses the ID passed in the URL to look up the correct record from the database.
+This method gets called when you go to `/restaurants/:id`, and uses the ID passed in the URL to look up the correct record from the database.
 
 Now all we need is a view for the restaurant show method. Let's make one.
 
