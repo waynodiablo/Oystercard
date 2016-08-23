@@ -22,6 +22,7 @@ Stage and commit your README file, and push the changes to origin.
 ```sh
 git status
 git add README.md
+git commit -m "first commit: README.md"
 git push origin master
 ``` 
 Checkout a new branch for this day's work and push this new branch to your Github repo.
