@@ -67,6 +67,8 @@ Don't forget to display the `flash[:notice]` in `application.html.erb` or `appli
 = yield
 ```
 
+If you are using Haml rather than ERB, delete the file `application.html.erb`, as Rails will attempt to use it by default. 
+
 And now our tests pass and we've got all four CRUD methods!
 
 ### [Next Section - Associations](12_associations.md)
