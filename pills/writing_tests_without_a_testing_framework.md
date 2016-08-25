@@ -9,13 +9,13 @@ A test does two things:
 
 ## What are testing frameworks for?
 
-A testing framework gives you:
+A testing framework supplies:
 
-1. Library functions to help you isolate the part of your code you want to test from the rest of your code.
-2. Assertion functions that help you check specific things are true.
+1. Mocking functions to help isolate the part of the code being tested.
+2. Assertion functions that help check that specific things are true.
 3. A standard way to describe what a test or group of tests is doing.
-4. A structure to organise your tests.
-5. A way to easily run lots of tests.
+4. A structured to organise tests.
+5. An easy way to run lots of tests.
 
 ## Writing tests without a testing framework
 
@@ -35,30 +35,35 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-You can create an HTML page that uses a script tag to include your test file, and open the HTML page in a browser to run your tests.
+To run these tests:
+
+* Create an HTML page that uses a script tag to include the test file.
+* Open the HTML page in a browser.
 
 This is pretty ugly.
 
-* We have to use a three line block of code to assert one thing.
-* We have to supply a custom error description in case the assertion fails.
-* We have to use camel case to describe what the test is testing.
-* We have to instantiate the test function as a first step and call it as a second step.
+* It takes three lines of code to assert one thing.
+* A custom error description must be supplied.
+* The description of the test has to be expressed as a function name.
+* The test function is instantiated as a first step and called as a second step.
 
 But it works.
 
 ## Writing nicer tests without a testing framework
 
-It's fine to potter along for quite a while writing test code in this style.  We could make a whole file of test functions and end up with app that is just as robust and well-tested as an app tested with a testing framework.
+It's fine to potter along for quite a while writing test code in this style.  It would be possible to make a whole file of test functions like this and have app that is just as robust and well-tested as an app tested with a testing framework.
 
-But we could also reduce the eye-watering agony by abstracting some of the ugliness.  Here is one easy but big improvement:
+But the eye-watering agony could be reduced by abstracting some of the ugliness.  Here are a few lines that can be used to greatly improve the test code:
 
 ```js
 // assert.js
 
-function isTrue(assertionToCheck) {
-  if (!assertionToCheck) {
-    throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-  }
+var assert = {
+  isTrue: function(assertionToCheck) {
+    if (!assertionToCheck) {
+      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
+    }
+  };
 };
 ```
 
@@ -75,6 +80,6 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-Ten or twenty more lines of testing framework code would get us most of the way to having 80% of the `describe`, `it`, mocking and asserting framework deliciousness that we're used to.
+Ten or twenty more lines of testing framework code would supply 80% of the standard `describe`, `it`, mocking and asserting framework deliciousness.
 
 What would you abstract next?
