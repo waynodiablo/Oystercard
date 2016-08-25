@@ -74,7 +74,7 @@ ActiveRecord does not know what model to build the association with.  We've told
 ```
 has_many :restaurants, through: :reviews
 ```
-and this would have worked as `reviews` has an association called `restaurant` and ActiveRecord just infers the association from this.  But we can't do that here because `User` _already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurant` is not an association in `Review`.
+and this would have worked as `reviews` has an association called `restaurant` and ActiveRecord just infers the association from this.  But we can't do that here because `User` already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurant` is not an association in `Review`.
 So we have to declare it this way:
 ```
 has_many :reviewed_restaurants, through: :reviews, source: :restaurant
