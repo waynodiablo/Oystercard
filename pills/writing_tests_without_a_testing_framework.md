@@ -35,7 +35,7 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-You could write this code in a file that you run with [node](node.md).  Or you could create an HTML page that uses a script tag to include your test file, and open the HTML page in a browser to run your tests.
+You can create an HTML page that uses a script tag to include your test file, and open the HTML page in a browser to run your tests.
 
 This is pretty ugly.
 
@@ -67,8 +67,6 @@ Now our test becomes:
 ```js
 // circle-tests.js
 
-var assert = require("./assert");
-
 function testCircleRadiusDefaultsTo10() {
   var circle = new Circle();
   assert.isTrue(circle.radius === 10);
@@ -76,8 +74,6 @@ function testCircleRadiusDefaultsTo10() {
 
 testCircleRadiusDefaultsTo10();
 ```
-
-> We're assuming we're running our tests in node for this particular exercise. However, note that you could also write your testing framework to operate in the browser, much like Jasmine.
 
 Ten or twenty more lines of testing framework code would get us most of the way to having 80% of the `describe`, `it`, mocking and asserting framework deliciousness that we're used to.
 
