@@ -31,7 +31,7 @@ Because you'll need to integrate several different elements to make the code wor
 ### Tests to write
 
 - A note controller can be instantiated.
-- The `innerHTML` property of the `app` element contains the HTML for a note list that contains one note.  (You'll need to mock some stuff to achieve this.)
+- The `innerHTML` property of the `app` element contains HTML somewhat similar to: `<ul><li><div>Favourite food: pesto</div></li></ul>`.  (You'll need to mock some stuff to achieve this.)
 
 ### Resources
 
