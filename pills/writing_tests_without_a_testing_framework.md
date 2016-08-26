@@ -14,7 +14,7 @@ A testing framework supplies:
 1. Mocking functions to help isolate the part of the code being tested.
 2. Assertion functions that help check that specific things are true.
 3. A standard way to describe what a test or group of tests is doing.
-4. A structured to organise tests.
+4. A way to organise tests.
 5. An easy way to run lots of tests.
 
 ## Writing tests without a testing framework
