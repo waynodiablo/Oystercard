@@ -11,8 +11,4 @@ In this challenge, you'll practice exploring the contents of a JavaScript object
 ### To complete this challenge, you will need to:
 
 - [ ] You can spike this code.
-- [ ] Use your `console.log(ALL THE THINGS)` techniques to extract the submitted note text (e.g. `Favourite drink: seltzer`) from a `submit` event triggered by submitting the note create form.
-
-### Resources
-
-- [An enumeration of the different cool console logging APIs available in Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/console/console-reference?hl=en)
+- [ ] Fill out and submit the note create form.  Find where the note text you entered (e.g. `Favourite drink: seltzer`) is stored on the `submit` event that was triggered.  To do this, `console.log` the `submit` event and use your browser JavaScript console to explore it.  `console.log` the note text to prove to yourself that you've got it.
