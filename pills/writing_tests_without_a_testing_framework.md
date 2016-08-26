@@ -51,7 +51,7 @@ But it works.
 
 ## Writing nicer tests without a testing framework
 
-It's fine to potter along for quite a while writing test code in this style.  It would be possible to make a whole file of test functions like this and have app that is just as robust and well-tested as an app tested with a testing framework.
+It's fine to potter along for quite a while writing test code in this style.  It would be possible to make a whole file of test functions like this and have an app that is just as robust and well-tested as an app tested with a testing framework.
 
 But the eye-watering agony could be reduced by abstracting some of the ugliness.  Here are a few lines that can be used to greatly improve the test code:
 
