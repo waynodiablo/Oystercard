@@ -18,6 +18,8 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 
 #### Challenges
 
+"Spike" means writing code without writing tests.  "TDD" means develop test first.
+
 1. [TDD a model for a note](01_note_model.md)
 2. [TDD a model for a list of notes](02_note_list_model.md)
 3. [TDD a note list view](03_note_list_view.md)
