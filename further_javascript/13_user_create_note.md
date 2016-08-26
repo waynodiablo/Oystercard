@@ -24,6 +24,7 @@ You will probably need to do some serious mocking for these tests.  To get the m
 ### Resources
 
 - :pill: [Mocking in JavaScript](../pills/mocking_in_javascript.md)
+- [In what order do the parts of an HTML page load?](http://stackoverflow.com/questions/1795438/load-and-execution-sequence-of-a-web-page)
 - :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [getElementById on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
