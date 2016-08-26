@@ -35,6 +35,7 @@ Because you'll need to integrate several different elements to make the code wor
 
 ### Resources
 
+- :pill: [Mocking in JavaScript](../pills/mocking_in_javascript.md)
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [getElementById on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
