@@ -32,4 +32,3 @@ Here you will find other, relevant materials and challenges that will help you o
   - [Look Mum No Hands](http://www.lookmumnohands.com)
   - [Fix](http://www.fix-coffee.co.uk)
   - [Timber Yard](http://timberyardlondon.com)
-  - [Salvation Jane](www.salvationjanecafe.co.uk/)
