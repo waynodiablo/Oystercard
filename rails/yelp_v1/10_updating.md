@@ -28,7 +28,7 @@ $ bin/rails g migration AddDescriptionToRestaurants description:text
 $ bin/rake db:migrate
 ```
 
-The first command above creates a migration with adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
+The first command above creates a migration which adds a 'description' column (of type text) to our 'restaurants' table. The second command actually runs that migration, updating our database schema to add that column.
 
 So if we go and [take a look at our database](https://github.com/makersacademy/course/blob/master/pills/playing_with_postgres_and_datamapper.md), we expect to see a `description` field. We also need to update our views to incorporate this new information.
 
