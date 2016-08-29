@@ -2,7 +2,7 @@
 
 #### The second test – creating a restaurant on the backend
 
-Add the following inside the 'restaurants' describe block in `spec/features/restaurants_feature_spec.rb`:
+Add the following inside the 'restaurants' feature block in `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 ...
