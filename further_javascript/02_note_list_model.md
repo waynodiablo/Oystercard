@@ -20,7 +20,7 @@ In this challenge, you'll test and write code for a model that holds a list of n
 - Uses the constructor and prototype pattern to define a note list model object that can be instantiated.
 - Stores an array of note models.
 - Has a method that will return all the note models stored in the array.
-- Has a method that creates and stores a new single note model.  This function takes as an argument a string that contains the text of a note e.g. `Favourite drink: seltzer`.
+- Has a method that creates and stores a new single note model.  This function takes as an argument a string that will be the value of the `text` property of the note e.g. `Favourite drink: seltzer`.
 
 ### Resources
 
