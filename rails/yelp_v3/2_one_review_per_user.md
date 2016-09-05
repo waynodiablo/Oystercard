@@ -33,7 +33,7 @@ So we are part of the way there.  How do we use this to relate `User` to the res
 
 What we have here is a _many-to-many_ relationship.  A user can review many restaurants and restaurants can be reviewed by many users.  Many-to-many relationships occur frequently, but they cannot be modeled directly.  There must always be a _joining model_.  In this case, the joining model has a context of its own and is obvious - it's `Review`; but sometimes this is not the case and a join model (and hence a _join table_) has to be created specifically to handle the relationship.
 
-Anyway, let's make sure that all the necessary associations are in place (using shoulda to TDD of course):
+Anyway, let's make sure that all the necessary associations are in place (you will need the [shoulda](https://rubygems.org/gems/shoulda/versions/3.5.0) gem installed for testing):
 
 `Restaurant`:
 ```
