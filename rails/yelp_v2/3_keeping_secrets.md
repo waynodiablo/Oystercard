@@ -6,7 +6,7 @@ In the subsequent section, we will be using OmniAuth to enable sign-in through a
 
 Add your API keys to the Rails `secrets.yml` file. They can then get called into our code without needing to check them into version control. You will be able to call them using the following:
 
-`Rails.application.secrets.[name_of_secret]`
+`Rails.application.secrets.name_of_secret`
 
 **Never commit production secrets to public git repositories. Especially when using Amazon Web Services because *those secrets are linked to your credit card details*.** Be careful!
 
