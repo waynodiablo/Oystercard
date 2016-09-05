@@ -16,6 +16,7 @@ Make sure you run these commands after installing:
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
+To see why that was necessary there is [information here](https://robots.thoughtbot.com/starting-and-stopping-background-services-with-homebrew)
 
 You can check your installation by running `psql`
 
