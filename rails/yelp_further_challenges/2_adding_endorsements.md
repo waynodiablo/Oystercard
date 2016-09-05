@@ -30,8 +30,6 @@ end
 
 Now that we've got our failing test, time to add a new route so we have a way of accessing our endorsements. We need to think about what kind of relationship endorsements and reviews are going to have before we do this - specifically, each review is going to have many endorsements.
 
-To get a ping pong rotation based on red you should swap driver/navigator roles here &nbsp;:twisted_rightwards_arrows:.#What does this mean?
-
 Open up `config/routes.rb`. We want to add a nested resource route to reviews, so update your routes with the following code:
 
 ```ruby
