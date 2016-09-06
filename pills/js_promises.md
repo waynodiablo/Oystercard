@@ -1,7 +1,7 @@
 JavaScript Promises
 ===================
 
-Promises are a technique for ensuring that certain actions will not execute in JavaScript unless certain conditions have been fulfilled. Immediately this might sound familiar to you as something that usually we simply use callbacks for.
+Promises are a technique for ensuring that certain actions will not execute in JavaScript unless certain conditions have been fulfilled. Immediately this might sound familiar to you as something that we usually use callbacks for.
 Consider the following code that does an AJAX request:
 
 ```javascript
@@ -10,7 +10,7 @@ get('story.json', function(response) {
 });
 ```
 
-Remember AJAX is asynchronous, which means that javascript will keep on running after this line of code any other code that follows it, and only runs that callback when it gets a response from the server.
+Remember AJAX is asynchronous, which means that JavaScript will keep on running after this line of code and any other code that follows it. It only runs that callback when it gets a response from the server.
 
 One issue with this code is it doesn't handle errors. We could pass the error into our callback like so:
 
@@ -25,7 +25,7 @@ get('story.json', function(error, response) {
 });
 ```
 
-This is perfectly valid code, but it's already looking messy and we've created pretty much the most simple code possible. What if we want to do another action which needs another callback following this? Before long we're going to be in a complete mess:
+This is perfectly valid code, but it's already looking messy and we've created pretty much the simplest code possible. What if we want to do another action which needs another callback following this? Before long we're going to be in a complete mess:
 
 ```javascript
 get('story.json', function(error, response) {
@@ -56,7 +56,7 @@ get('story.json', function(error, response) {
 
 ## Promises to the rescue
 
-Enter Promises! Promises take this mess of callback code and give us a way for asyncronous request can be handled effectively and neatly, and at the the time they complete. They work by providing a `then` function that handles in a much more clean way what to do when our asyncronous request has been completed, and any error handling as well.
+Enter Promises! Promises take this mess of callback code and give us a way for asyncronous request can be handled effectively and neatly, at the very time they complete. They work by providing a `then` function that handles the task in a much cleaner way once our asynchronous request has been completed together with any error handling.
 
 Now by getting our get function to use promises we can tidy up the code: 
 
@@ -69,14 +69,14 @@ get('story.json')
   });
 ```
 
-Promises are especially powerful in that the `then` method will always return another promise so they can be chained. This means we can tidy up the really messy example from before with multiple callbacks like so:
+Promises are especially powerful in that the `then` method will always return another promise so they can be chained. This means we can tidy up the really messy example with multiple callbacks from before like so:
 
 ```javascript
 get('story.json')
   .then(function(response){
     console.log("Success!", response);
   })
-  .then(get('story.json'))
+  .then(get('story2.json'))
   .then(JSON.parse, function(error) {
     console.error("Failed!", error);
 });
