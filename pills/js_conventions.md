@@ -82,6 +82,8 @@ With ES6, there is new way to declare constants:
 const NUMBER_OF_LEGS = 4;
 ~~~
 
+> Note this won't work in older browsers (for example Internet Explorer 10) - see more [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)
+
 
 ## Resources
 
