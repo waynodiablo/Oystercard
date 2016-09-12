@@ -8,13 +8,12 @@
 
 ## Specification
 
-* A Ruby program that prints out a rectangle to the console.
-* The user should be able to input the width and height of the rectangle they want to print.
+* A Ruby program that prints out a 20 by 10 rectangle to the console.
 
-## Example output
+## Output
 
 ```
-$ ruby print_rectangle.rb 20 10
+$ ruby print_rectangle.rb
 --------------------
 |                  |
 |                  |
