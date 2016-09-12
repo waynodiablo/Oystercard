@@ -19,7 +19,7 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will return "Hello, Maker!" when you type `greeting.hello("Maker")`
 - [ ] Create a `hi` function which will return "Hi, Maker!" when you type `hi("Maker")`
 - [ ] Experiment with the following basic language features: strings, numbers, arrays, objects. This point may seem trivial but there are some very important differences between Ruby and Javascript!
-- [ ] Ensure all your code follows [basic JavaScript conventions](/pills/js_conventions.md)
+- [ ] Ensure all your code follows [basic JavaScript conventions](../pills/js_conventions.md)
 - [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
 - [ ] Discuss why JavaScript is the "language of the Web"
 
