@@ -28,6 +28,7 @@ Here you will find other, relevant materials and challenges that will help you o
 - A list of [good resources online and in the wider world of code](https://github.com/makersacademy/course/blob/master/resources.md)
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - List of good places to work at the weekend
+  - [Ace hotel](https://www.acehotel.com/london)
   - [Trade Made](http://www.trade-made.co.uk/)
   - [Look Mum No Hands](http://www.lookmumnohands.com)
   - [Fix](http://www.fix-coffee.co.uk)
