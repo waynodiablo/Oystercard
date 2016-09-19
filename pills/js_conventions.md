@@ -76,6 +76,15 @@ There's no concept of constants in the current version of JS. By convention thou
 Dog.prototype.NUMBER_OF_LEGS = 4;
 ~~~
 
+With ES6, there is new way to declare constants:
+
+~~~javascript
+const NUMBER_OF_LEGS = 4;
+~~~
+
+> Note this won't work in older browsers (for example Internet Explorer 10) - see more [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)
+
+
 ## Resources
 
 * [Airbnb's JS style guide](https://github.com/airbnb/javascript) - (very in-depth)

@@ -16,7 +16,7 @@ You'll work alone, and you'll also review your own code so you can practice refl
 
 * 14.20 - 15.00.  Refactor your code.
 
-* 15.00 - 15.30.  Read through and understand Leo's solution.
+* 15.00 - 15.30.  Read through and understand Leo's solution.  (Message to the coach: Leo's solution is linked from [here](https://github.com/makersacademy/course-design/blob/master/sequence/week12.md).)
 
 * 15.30 - 16.30.  We'll all come together and discuss Leo's solution on the projector.
 

@@ -33,7 +33,7 @@ So we are part of the way there.  How do we use this to relate `User` to the res
 
 What we have here is a _many-to-many_ relationship.  A user can review many restaurants and restaurants can be reviewed by many users.  Many-to-many relationships occur frequently, but they cannot be modeled directly.  There must always be a _joining model_.  In this case, the joining model has a context of its own and is obvious - it's `Review`; but sometimes this is not the case and a join model (and hence a _join table_) has to be created specifically to handle the relationship.
 
-Anyway, let's make sure that all the necessary associations are in place (using shoulda to TDD of course):
+Anyway, let's make sure that all the necessary associations are in place (you will need the [shoulda](https://rubygems.org/gems/shoulda/versions/3.5.0) gem installed for testing):
 
 `Restaurant`:
 ```
@@ -74,7 +74,7 @@ ActiveRecord does not know what model to build the association with.  We've told
 ```
 has_many :restaurants, through: :reviews
 ```
-and this would have worked as `reviews` has an association called `restaurant` and ActiveRecord just infers the association from this.  But we can't do that here because `User` _already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurant` is not an association in `Review`.
+and this would have worked as `reviews` has an association called `restaurant` and ActiveRecord just infers the association from this.  But we can't do that here because `User` already has an association called `restaurants`.  That's why we've called our new association `reviewed_restaurants`.  ActiveRecord cannot infer the association to use because `reviewed_restaurant` is not an association in `Review`.
 So we have to declare it this way:
 ```
 has_many :reviewed_restaurants, through: :reviews, source: :restaurant
@@ -137,6 +137,6 @@ What is `build_review` and what does it do? Try to build this method with your p
 
 Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
 
-Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto Now move onto the next section to complete this feature.
+Once you've created your own `build_review` method and have everything working, discuss the advantages and disadvantages of this approach.  Does it feel 'right'?  To explore an alternative (and smarter) approach, move onto the next section to complete this feature.
 
 ### [Next Section - Extending Active Record Associations](3_extending_associations.md)

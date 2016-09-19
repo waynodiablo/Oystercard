@@ -2,7 +2,7 @@
 
 #### The second test – creating a restaurant on the backend
 
-Add the following inside the 'restaurants' describe block in `spec/features/restaurants_feature_spec.rb`:
+Add the following inside the 'restaurants' feature block in `spec/features/restaurants_feature_spec.rb`:
 
 ```ruby
 ...
@@ -87,13 +87,13 @@ bin/rake db:migrate RAILS_ENV=test
 
 (Here, **string** and **integer** are types of data that your database can store. Rails will interpret these terms differently depending on what type of database you use, but in principle *string* has a length limit of 255 characters while integer is a number.)
 
-It's easy to make a mistake during generation.  You can quickly erase your work using the above command but using instead `rails d` – for destroy – to remove the migration.
-
-Then:
-
+It's easy to make a mistake during generation. You can quickly erase your work using `rails d migration MigrationName`. This will remove the migration (in our case, MigrationName is CreateRestaurants).
+ 		 
+You'll then need to drop the tables in the databases that were made earlier, before running:
+ 		 
 `$ bin/rake db:migrate`
-
-which will run all of your database migrations.
+ 		 
+This will run all of your database migrations once more.
 
 (A word on migrations – if you need to change something, **don't edit the schema file**. If you want to remove database tables or change the schema in any way, instead write another migration that does that).
 

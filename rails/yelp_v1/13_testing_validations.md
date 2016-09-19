@@ -14,7 +14,7 @@ context 'creating restaurants' do
 ...
 
   context 'an invalid restaurant' do
-    it 'does not let you submit a name that is too short' do
+    scenario 'does not let you submit a name that is too short' do
       visit '/restaurants'
       click_link 'Add a restaurant'
       fill_in 'Name', with: 'kf'
@@ -42,7 +42,7 @@ end
 But our expectation of `not_to be_valid` is pretty vague – a restaurant might be invalid for a variety of reasons. Let's narrow it down:
 
 ```ruby
-require 'spec_helper'
+require 'rails_helper'
 
 describe Restaurant, type: :model do
   it 'is not valid with a name of less than three characters' do

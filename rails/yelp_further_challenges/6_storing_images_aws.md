@@ -17,7 +17,7 @@ AWS has a gem (of course), so let's start by installing that.
 `Gemfile`:
 
 ```ruby
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 ```
 
 Now run `bundle install`.

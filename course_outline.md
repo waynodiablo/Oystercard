@@ -28,8 +28,15 @@ Here you will find other, relevant materials and challenges that will help you o
 - A list of [good resources online and in the wider world of code](https://github.com/makersacademy/course/blob/master/resources.md)
 - Library - we have a library of coding textbooks - please ask any coach to check one out
 - List of good places to work at the weekend
+  - [Ace hotel](https://www.acehotel.com/london)
   - [Trade Made](http://www.trade-made.co.uk/)
   - [Look Mum No Hands](http://www.lookmumnohands.com)
   - [Fix](http://www.fix-coffee.co.uk)
   - [Timber Yard](http://timberyardlondon.com)
-  - [Salvation Jane](www.salvationjanecafe.co.uk/)
+
+## Makers Academy - The Company
+
+We warmly encourage every student at Makers Academy to introduce themselves to all members of staff - we're a friendly bunch and extremely keen to meet all of you! And if you're not sure who can help you with a specific issue, just put a shout out on Slack; you'll find the relevant person is only a few clicks (or steps) away :smile:
+
+- Curious to know about the staff? [Meet the team!](http://www.makersacademy.com/team/)
+- Interested to know more about [how we work as an organisation?](https://blog.makersacademy.com/search?q=management)

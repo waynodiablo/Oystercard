@@ -24,3 +24,10 @@ FIRST AID
 --------
 
 * If somebody gets injured, get help from one of the first aiders - Ana, Nikesh
+
+FACILITIES
+--------
+* This is a listed building, please don't mark the walls or hang from the rafters
+* Shower on 2nd floor, please leave it clean
+* Take bikes home in the evening
+* Breakfast is provided, but when it's gone, it's gone

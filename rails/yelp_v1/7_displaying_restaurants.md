@@ -30,7 +30,7 @@ The tests should all pass now, but what cardinal sin have we committed?
 
 We're talking directly to our model from our view, and this can lead to dangerous spaghetti code.  We should prefer to have our controller mediate communication between the model and view.
 
-Let's add a method to suppport that (*the method below replaces the old method*):
+Let's add a method to support that (*the method below replaces the old method*):
 
 ```ruby
 def index
