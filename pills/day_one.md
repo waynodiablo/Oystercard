@@ -4,7 +4,7 @@
 
 * 08.30 - 09.30 Breakfast
 * 09.30 - 10.00 Welcome to Makers (lead coach)
-* 10.00 - 11.30 Name Game
+* 10.00 - 11.30 Name Game (All staff, Juniors)
 * 11.30 - 12.30 Photos/Laptops/Saberr surveys
 * 12.30 - 13.30 Lunch
 * 13.30 - 14.30 Life at Makers/Inclusivity & Diversity (Dana)
