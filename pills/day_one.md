@@ -1,6 +1,6 @@
 # Your first day at Makers Academy
 
-## Schedule
+## Schedule for the first day
 
 * 08.30 - 09.30 Breakfast
 * 09.30 - 10.00 Welcome to Makers (lead coach)
@@ -13,9 +13,9 @@
 * 16.00 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/course/blob/master/boris_bikes/print_a_rectangle_kata.md) (lead coach)
 * 17.30 - 18.30 Social with pizza
 
-## Typical day/week at Makers
+## Rough weekly schedule
 
-https://github.com/makersacademy/course/blob/master/pills/example_schedule.md
+See [here](./example_schedule.md) for the rough weekly schedule.
 
 ## Growth mindset
 
