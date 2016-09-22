@@ -15,10 +15,11 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 5. *Google.* Research the problem using your keywords. Also use the keywords to identify relevant results (i.e. not just the first one).
 
-6. *Cohort channel in Slack.* Ask your cohort for help, explaining clearly: what’s the issue, why did it happen, and what have you tried?
+6. *Slack Overflow.* Post a [Slack Overflow](https://github.com/makersacademy/slack-overflow) issue.
 
-7. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions, or a suggestion to post on *Slack Overflow*/*Stack Overflow*
+7. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
 
 ## Further Reading
 
 * :pill: [How to debug your code](https://github.com/makersacademy/course/blob/master/pills/debugging.md)
+* [Slack Overflow](https://github.com/makersacademy/slack-overflow)
