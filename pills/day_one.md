@@ -3,16 +3,15 @@
 ## Schedule for the first day
 
 * 08.30 - 09.30 Breakfast
-* 09.30 - 10.00 Welcome to Makers (lead coach)
-* 10.00 - 10.30 Name tag making (All staff, Juniors)
-* 10.30 - 11.30 To be decided!
-* 11.30 - 12.30 Photos/Laptops/Saberr surveys
-* 12.30 - 13.30 Lunch
-* 13.30 - 14.30 Life at Makers/Inclusivity & Diversity (Dana)
-* 14.30 - 15.30 XP values and learning at Makers (lead coach)
-* 15.30 - 16.00 Knowledge Worker (Will)
-* 16.00 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/course/blob/master/boris_bikes/print_a_rectangle_kata.md) (lead coach)
-* 17.30 - 18.30 Social with pizza
+* 09.30 - 10.30 Welcome to Makers (lead coach)
+* 10.30 - 11.00 Name tag making (All staff, Juniors)
+* 11.00 - 12.00 Photos/Laptops/Saberr surveys
+* 12.00 - 13.00 Lunch
+* 13.00 - 14.00 Life at Makers/Inclusivity & Diversity (Dana)
+* 14.00 - 15.00 XP values and learning at Makers (lead coach)
+* 15.00 - 15.30 Knowledge Worker (Will)
+* 15.30 - 17.00 [Print rectangle kata workshop](https://github.com/makersacademy/course/blob/master/boris_bikes/print_a_rectangle_kata.md) (lead coach)
+* 17.00 - 18.00 Social with pizza
 
 ## Today's photo schedule
 
