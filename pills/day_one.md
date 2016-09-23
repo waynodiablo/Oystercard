@@ -8,7 +8,7 @@
 * 11.00 - 12.00 Photos/Laptops/Saberr surveys
 * 12.00 - 13.00 Lunch
 * 13.00 - 14.00 Life at Makers/Inclusivity & Diversity (Dana)
-* 14.00 - 15.00 XP values and learning at Makers (lead coach)
+* 14.00 - 15.00 Learning at Makers (lead coach)
 * 15.00 - 15.30 Knowledge Worker (Will)
 * 15.30 - 17.00 [Print rectangle kata workshop](https://github.com/makersacademy/course/blob/master/boris_bikes/print_a_rectangle_kata.md) (lead coach)
 * 17.00 - 18.00 Social with pizza
@@ -20,6 +20,10 @@ We have a professional photographer here to take a headshot that you can use for
 ## Rough weekly schedule
 
 See [here](./example_schedule.md) for the rough weekly schedule.
+
+## Learning at Makers
+
+[A summary](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md).
 
 ## Growth mindset
 
