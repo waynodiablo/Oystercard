@@ -48,13 +48,9 @@
 
 * Behaviours are a focus at Makers.
 
-## Challenge-based learning
+## Structures for learning at Makers
 
-* You'll spend lots of the first six weeks working through challenges. These are worksheets that ask you to do things like "implement a method that does BLANK".
-
-* The goal is not progress, but learning.  It's fine to complete 10 out of 22 challenges, as long as you played and explored.
-
-## Pair programming
+### Pair programming
 
 * Pair programming means means collaborating on the same programming task at the same time.  One person is the driver.  This person does the typing.  The other person is the navigator.  This person thinks about where the code is going, acts as a sounding board, and makes suggestions.  Both programmers are completely engaged with the task.  They swap roles at least every half an hour.
 
@@ -63,13 +59,13 @@
 * Read more about pairing in the :pill: [pairing](./pairing.md).
 
 * Before you begin pairing, do a quick check in with each other about your energy levels, moods and working styles.
+
 ### Challenge-based learning
 
 * You'll spend lots of the first six weeks working through challenges. These are worksheets that ask you to do things like "implement a method that does BLANK".
 
 * The goal is not progress, but learning.  It's fine to complete 10 out of 22 challenges, as long as you played and explored.
 
-## Escalation process
 ### Weekend challenges
 
 * Small projects you build over the weekend.
@@ -78,12 +74,15 @@
 
 * Designed to test your understanding and your ability to make progress alone.
 
+### Escalation process
+
 * One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.  It includes coming up with a clear problem explanation, talking to your pair programming partner, Googling, asking on Slack Overflow, and finally asking a coach.
 
-## The role of the coaches
 ### Standups
 
 [Standups](./student_standups.md)
+
+### Coaches
 
 * We're here to support you learning to learn.  We might sometimes be less helpful in order to support your learning.
 
