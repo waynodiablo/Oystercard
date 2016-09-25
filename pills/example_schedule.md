@@ -10,35 +10,35 @@
 
 #### Monday
 
-* Morning - code review of weekend challenge
-* Late morning - kick off for the week
+* Morning - Code review of weekend challenge
+* Late morning - Kick off for the week
 
 #### Tuesday, Wednesday, Thursday
 
-* 09.30 - byte 1 standup
-* 09.45 - byte 2 standup
-* 10.00 - possible skills workshop
-* 13.30 - byte 3 standup
+* 09.30 - Byte 1 standup
+* 09.45 - Byte 2 standup
+* 10.00 - Possible skills workshop
+* 13.30 - Byte 3 standup
 
 #### Friday
 
-* 09.30 - byte 1 standup
-* 09.45 - byte 2 standup
-* 10.00 - possible skills workshop
-* 13.30 - byte 3 standup
-* 16.00 - confidence survey
-* 16.30 - weekly retro
-* 17.00 - weekend challenge release
+* 09.30 - Byte 1 standup
+* 09.45 - Byte 2 standup
+* 10.00 - Possible skills workshop
+* 13.30 - Byte 3 standup
+* 16.00 - Confidence survey
+* 16.30 - Weekly retro
+* 17.00 - Weekend challenge release
 
 ### Joy
 
 #### Every weekday
 
-* 14.00 to 14.30 - meditation
+* 14.00 to 14.30 - Meditation
 
 #### Tuesday and Thursday
 
-* 17.00 to 18.00 - yoga
+* 17.00 to 18.00 - Yoga
 
 ### Careers
 
