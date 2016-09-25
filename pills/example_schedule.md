@@ -13,6 +13,7 @@
 * Morning - Code review of weekend challenge
 * Late morning - Kick off for the week
 * Late morning - Release weekly challenges
+* 18.00 - Daily feedback
 
 #### Tuesday, Wednesday, Thursday
 
@@ -20,6 +21,7 @@
 * 09.45 - Byte 2 standup
 * 10.00 - Possible skills workshop
 * 13.30 - Byte 3 standup
+* 18.00 - Daily feedback
 
 #### Friday
 
@@ -30,6 +32,7 @@
 * 16.00 - Confidence survey
 * 16.30 - Weekly retro
 * 17.00 - Weekend challenge release
+* 18.00 - Daily feedback
 
 ### Joy
 
