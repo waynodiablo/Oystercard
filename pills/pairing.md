@@ -51,6 +51,7 @@ General Pair Programming Tips
 
 ### Do's:
 
+* Before you begin, check in with each other about your energy levels, moods and working styles.
 * Talk
 * Listen
 * Rotate Roles
