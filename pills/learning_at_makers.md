@@ -64,6 +64,13 @@
 * Before you begin pairing, do a quick check in with each other about your energy level, mood and working style.
 
 ## Escalation process
+### Weekend challenges
+
+* Small projects you build over the weekend.
+
+* You work on them on your own.
+
+* Designed to test your understanding and your ability to make progress alone.
 
 * One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.  It includes coming up with a clear problem explanation, talking to your pair programming partner, Googling, asking on Slack Overflow, and finally asking a coach.
 
