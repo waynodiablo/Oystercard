@@ -26,12 +26,13 @@
 
 ### Concretes
 
-* E.g. what arguments does `slice` take in Ruby?
 * Facts.
+
+* E.g. what arguments does `slice` take in Ruby?
 
 ### Concepts
 
-* E.g. the idea of a variable and how it works.
+* E.g. the idea of a variable, how it works and why it's useful.
 
 ### Skills
 
@@ -61,7 +62,7 @@
 
 * Read more about pairing in the :pill: [pairing](./pairing.md).
 
-* Before you begin pairing, do a quick check in with each other about your energy level, mood and working style.
+* Before you begin pairing, do a quick check in with each other about your energy levels, moods and working styles.
 ### Challenge-based learning
 
 * You'll spend lots of the first six weeks working through challenges. These are worksheets that ask you to do things like "implement a method that does BLANK".
