@@ -68,6 +68,9 @@
 * One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.  It includes coming up with a clear problem explanation, talking to your pair programming partner, Googling, asking on Slack Overflow, and finally asking a coach.
 
 ## The role of the coaches
+### Standups
+
+[Standups](./student_standups.md)
 
 * We're here to support you learning to learn.  We might sometimes be less helpful in order to support your learning.
 
