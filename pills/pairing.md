@@ -49,7 +49,7 @@ If you'd like help mastering the different pairing styles please do see the [pai
 General Pair Programming Tips
 --------------
 
-###Do's:
+### Do's:
 
 * Talk
 * Listen
@@ -61,8 +61,7 @@ General Pair Programming Tips
 * Take care of Personal Hygiene
 * Have Fun
 
-
-###Don't:
+### Don't:
 
 * Be Bossy
 * Be Intimidated
