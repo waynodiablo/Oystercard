@@ -12,6 +12,7 @@
 
 * Morning - Code review of weekend challenge
 * Late morning - Kick off for the week
+* Late morning - Release weekly challenges
 
 #### Tuesday, Wednesday, Thursday
 
