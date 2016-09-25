@@ -62,6 +62,11 @@
 * Read more about pairing in the :pill: [pairing](./pairing.md).
 
 * Before you begin pairing, do a quick check in with each other about your energy level, mood and working style.
+### Challenge-based learning
+
+* You'll spend lots of the first six weeks working through challenges. These are worksheets that ask you to do things like "implement a method that does BLANK".
+
+* The goal is not progress, but learning.  It's fine to complete 10 out of 22 challenges, as long as you played and explored.
 
 ## Escalation process
 ### Weekend challenges
