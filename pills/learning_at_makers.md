@@ -2,7 +2,7 @@
 
 ## Learning to learn
 
-* 60% of a junior developer's time is spent learning.
+* 60% of a junior developer's time is spent learning.  But learning never stops.  Experienced devs spend 30% of their time learning.
 
 * The better you are at learning, the faster you'll get better at being a developer.
 
@@ -13,8 +13,6 @@
 * Some of these learning skills will be general: learning to research, to get information into a format in which you can manipulate it, learning to teach someone else, learning to abstract...
 
 * Ultimately, learning to to reflect on what you're doing and figure out ways to do it better next time.
-
-* When does learning to learn stop? Never.  Even very skilled developers spend a lot of their time learning.
 
 ## Self-led learning
 
@@ -86,7 +84,7 @@
 
 * We're here to support you learning to learn.  We might sometimes be less helpful in order to support your learning.
 
-### Examples
+#### Examples
 
 * You don't have a clear problem explanation.  We might ask you questions to help you clarify your explanation.
 
