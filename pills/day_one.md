@@ -34,6 +34,10 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
+## Saberr surveys
+
+https://team-vs.saberr.com/signup?orgName=Makers%20Academy&hash=FhXCcDozL2gVpfgtKmePb6dnd
+
 ## Makersinit
 
 This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it sometime today.  Thanks!
