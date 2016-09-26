@@ -16,18 +16,25 @@ In the event of a fire:
 
 * Follow the fire exit signs to vacate the building
 
-* Follow the instructions of the Fire Marshals (Ana, Dana, Steve and Nikesh) to leave the building, fire exit signs and do not use lifts
+* Don't stop to collect personal belongings
 
-* Assembly point is in the corner of Thrawl street and Commercial Street - Turn right out of door
+* Follow the instructions of the Fire Marshals (Ana, Nikesh, Roi, Emily & Dana) to leave the building, fire exit signs and do not use lifts
+
+* Assembly point is in the corner of Thrawl street and Commercial Street - Turn right out of the front door
 
 FIRST AID
 --------
 
-* If somebody gets injured, get help from one of the first aiders - Ana, Nikesh
+* If somebody gets injured, get help from one of the first aiders - Ana, Nikesh and Dana
+
+* There are first aid boxes on the 3rd floor
 
 FACILITIES
 --------
 * This is a listed building, please don't mark the walls or hang from the rafters
+
 * Shower on 2nd floor, please leave it clean
+
 * Take bikes home in the evening
+
 * Breakfast is provided, but when it's gone, it's gone
