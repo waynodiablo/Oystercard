@@ -9,10 +9,10 @@
 * 12.00 - 13.00 Lunch
 * 13.00 - 14.00 Life at makers/Inclusivity & diversity (Dana)
 * 14.00 - 14.30 Meditation
-* 14.30 - 15.00 Learning at Makers (lead coach)
-* 15.00 - 15.30 Knowledge Worker (Will)
-* 15.30 - 17.00 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/print_rectangle_kata) (lead coach)
-* 17.00 - 18.00 Social with pizza
+* 14.30 - 15.15 Learning at Makers (lead coach)
+* 15.15 - 16.15 Knowledge Worker (Will)
+* 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/print_rectangle_kata) (lead coach)
+* 17.30 - 18.30 Social with pizza
 
 ## Today's photo schedule
 
