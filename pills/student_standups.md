@@ -29,4 +29,4 @@ In most standups, people report what they worked on yesterday and what they plan
 
 ## Minutes
 
-* Normally, minutes aren't taken at a standup.  However, to support your learning, it will help to have a record of what people said.  Please allot someone to take brief notes on what people's learning reports.  Post the notes in your cohort Slack channel.
+* Normally, minutes aren't taken at a standup.  However, to support your learning, it will help to have a record of what people said.  Please allot someone to take brief notes on people's learning reports.  Commit and push the notes to the [standup minutes repo](https://github.com/makersacademy/student_standup_minutes/) using the format described in the repo README.md.
