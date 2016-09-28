@@ -64,7 +64,7 @@ Here’s where this gets exciting: pair programming involves mixing two people a
 
 ## Resources
 
-* [Samm's blog](sjmog.github.io)
+* [Samm's blog](http://sjmog.github.io)
 * The original paper (Bloom 1956)
 * Revised version of Bloom's paper (Krathwohl 2001).
 
