@@ -14,6 +14,7 @@
 
 * Standups happen on Tuesdays, Wednesdays, Thursdays and Fridays.
 * Your coach will let you know which standup group you are in and what time it meets.
+* The groups are randomised each Monday.  When this happens, you'll be assigned to a group that meets at a time.  This group and time will stay the same for the rest of the week.
 
 ## What to say at a standup
 
