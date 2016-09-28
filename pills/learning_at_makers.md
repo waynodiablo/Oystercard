@@ -50,6 +50,10 @@
 
 A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effective-learning-strategies-for-programmers/) about what a growth mindset is and how to practice it.
 
+## Bloom's taxonomy
+
+:pill: [Bloom's taxonomy](./blooms_taxonomy.md)
+
 ## Structures for learning at Makers
 
 ### Pair programming
