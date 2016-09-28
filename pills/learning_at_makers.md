@@ -50,7 +50,9 @@
 
 ### Pair programming
 
-* Pair programming means means collaborating on the same programming task at the same time.  One person is the driver.  This person does the typing.  The other person is the navigator.  This person thinks about where the code is going, acts as a sounding board, and makes suggestions.  Both programmers are completely engaged with the task.  They swap roles at least every half an hour.
+* Pair programming means means collaborating on the same programming task at the same time.  One person is the driver.  This person does the typing.  The other person is the navigator.  This person thinks about where the code is going, acts as a sounding board, and makes suggestions.  Both programmers collaborate.  They are both completely engaged with the task.  It may sometimes feel like they are sharing the same mind.
+
+* The pair swaps roles at least every half an hour.
 
 * You'll spend a lot of your time at Makers pair programming.
 
