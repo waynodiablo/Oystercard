@@ -26,10 +26,6 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md).
 
-## Growth mindset
-
-A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effective-learning-strategies-for-programmers/) about what a growth mindset is and how to practice it.
-
 ## Health and safety
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
