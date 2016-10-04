@@ -5,6 +5,10 @@ week in Boris Bikes, giving you the chance to reinforce what you learned last
 week. You'll then be challenged to build a more complex system which should
 really stretch your skills in Code Design, Ruby, RSpec and Object-Oriented Programming.
 
+## Kickoff
+
+In the [kickoff and overview of the week](./kickoff_and_overview_of_the_week.md), we'll talk about some high level techniques for writing object-oriented code that is easy to understand, easy to reuse, and easy to change.
+
 ## User Stories
 
 Here are the user stories you will be working on for this project:
