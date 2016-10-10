@@ -1,21 +1,45 @@
-# Intro to the Web
+# Intro to the web
 
-This week is designed to introduce you to the web. Some of the key topics you'll cover include:
+## Learning objectives
 
-- Servers and Clients
-- HTTP requests and responses
-- `params`
-- `session`s
-- Web frameworks
-- Feature testing with Capybara
-- Implementing User Stories that use all of the above.
+### Goals for the week
 
-At a high level, your introduction involves:
+Ask yourself the same two questions:
 
-- Some basic exercises to get you familiar with Requests, Responses, and HTTP
-- A basic project to get you familiar with Servers, `params`, `session`s
-- Some basic exercises to get you familiar with Capybara
-- An extended project to wrap it all together and build on previous weeks.
+- Are you having fun?
+
+- Are you a better developer than you were yesterday?
+
+#### Primary goal
+
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
+
+- **Can you build a web app?**
+
+## Concepts and skills for the week
+
+### Concepts
+
+- The relationship between a client and a server.
+- How HTTP encodes information sent over the web.
+- RESTful APIs.
+- The request/response cycle.
+- Web templating with HTML/CSS.
+
+### Skills
+
+- How to debug programs that use multiple languages.
+- How to use a framework (Sinatra) in your code.
+- How to architect apps that have user interaction and visual output.
+- How to test apps that have user interaction and visual output.
+- How to trace data between the browser and server.
+
+## Structure of the challenges
+
+- Some exercises to get you familiar with Requests, Responses, and HTTP
+- A project to get you familiar with Servers, `params`, `session`s
+- Some exercises to get you familiar with Capybara
+- An extended project to wrap it all together
 
 ### Challenges
 
