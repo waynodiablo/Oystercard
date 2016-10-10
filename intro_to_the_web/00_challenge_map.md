@@ -41,7 +41,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 - Some exercises to get you familiar with Capybara
 - An extended project to wrap it all together
 
-### Challenges
+## Challenges
 
 1. [The Web](01_theweb.md)
 2. [HTTP](02_http.md)
