@@ -28,11 +28,11 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 ### Skills
 
-- How to debug programs that use multiple languages.
-- How to use a framework (Sinatra) in your code.
-- How to architect apps that have user interaction and visual output.
-- How to test apps that have user interaction and visual output.
-- How to trace data between the browser and server.
+- Debugging programs that use multiple languages.
+- Using a framework (Sinatra) in your code.
+- Structuring the code for apps that have user interaction and visual output.
+- Testing apps that have user interaction and visual output.
+- Tracing data between the browser and server.
 
 ## Structure of the challenges
 
