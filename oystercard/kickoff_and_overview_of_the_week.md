@@ -1,6 +1,20 @@
 # Kickoff and overview of the week
 
-This week, you'll get to strengthen your OO and TDD skills.  We'll cover the following things:
+## Learning objectives
+
+### Goals for the week
+
+Ask yourself the same two questions:
+
+* Are you having fun?
+
+* Are you a better developer than you were yesterday?
+
+#### Primary goal
+
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
+
+* **Can you use object-oriented design principles to write cleaner code?**
 
 ## Refining your process for writing code
 
