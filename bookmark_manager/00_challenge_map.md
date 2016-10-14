@@ -20,8 +20,6 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 ### Concepts and skills for the week
 
-As well as the things listed below, you'll deepen your understanding of many of the skills and concepts from week 3.
-
 #### Concepts
 
 - Object-relational mappers
@@ -40,6 +38,8 @@ As well as the things listed below, you'll deepen your understanding of many of 
 - Structuring more complex MVC applications
 - Refactoring more complex apps
 - Creating user stories
+
+As well as these things, you'll deepen your understanding of many of the skills and concepts from week 3.
 
 ## The project
 
