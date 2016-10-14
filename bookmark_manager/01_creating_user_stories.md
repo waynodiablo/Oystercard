@@ -29,7 +29,7 @@ I want to purchase a new alarm clock
 - [ ] Write User stories/features for adding tags to links
 - [ ] Write User stories/features for filtering links by a tag
 - [ ] Draw a rough model of the domain
-- [ ] Put all these user stories in your README for the project on Github
+- [ ] Put all these user stories in your project README
 
 ## Resources
 
