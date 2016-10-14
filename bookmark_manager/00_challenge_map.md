@@ -48,28 +48,3 @@ This is the basic view of the website. You will build it by working through the 
  25. [Refactoring](25_refactoring.md)
  26. [Password Recovery](26_password_recovery.md)
  27. [Mailing the Token](27_mailing_the_token.md)
-
-
-
----------------
-
-## Old Bookmark Manager Outline (Reference Only)
-
-* [Viewing and creating links](bookmark_manager_stage_0.md)
-* [Tagging links](bookmark_manager_stage_1.md)
-* Adding user accounts
-  * [Signing up](bookmark_manager_stage_2.md)
-  * [Password confirmation](bookmark_manager_stage_3.md)
-  * [Sanitizing user inputs](bookmark_manager_stage_4.md)
-  * [Validation](bookmark_manager_stage_5.md)
-  * [Preventing duplicate registrations](bookmark_manager_stage_6.md)
-  * [Signing in and out](bookmark_manager_stage_7.md)
-  * [Password recovery](bookmark_manager_stage_8.md)
-* [Styling the website](bookmark_manager_stage_style.md)
-
-[First stage](bookmark_manager_stage_0.md)
-
-## Resources
-
-* [Three Tier Web Database Architecture :pill: ](/pills/three_tier_architecture.md)
-* [Three Tier Web Database Diagram](https://docs.google.com/drawings/d/17ES4_vO90p3x3np1K3X5b5C_JVs14VbJZ5N8KraVRUw/edit)
