@@ -11,7 +11,6 @@ In order to support the user stories created in the first challenge, we'll need 
 * Describe the structure of a database, referencing 'tables' and 'rows'
 * Define 'PostgreSQL' as 'a particular type of relational database'
 
-
 ## Resources
 
 * [Relational Database - Wikipedia](https://en.wikipedia.org/wiki/Relational_database)
