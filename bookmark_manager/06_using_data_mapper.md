@@ -12,7 +12,6 @@ In this challenge, you will do all the interactions with a database you just did
 
 ORMs translate between two 'object models'. In this case, DataMapper will translate between Ruby objects and database objects:
 
-Basically, you can use DataMapper to interact with a database using Ruby, instead of the finicky SQL.
 ```
 | Ruby objects       | Database objects |
 | -------------------|------------------|
@@ -21,6 +20,7 @@ Basically, you can use DataMapper to interact with a database using Ruby, instea
 | Instance variables | Columns          |
 ```
 
+Basically, you can use DataMapper to interact with a database using Ruby, instead of using finicky SQL.
 
 ## Learning Objectives covered
 
