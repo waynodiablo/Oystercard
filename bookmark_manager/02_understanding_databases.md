@@ -6,7 +6,7 @@ In order to support the user stories created in the first challenge, we'll need 
 
 ## Learning Objectives covered
 
-* Define 'persistence' as the storage of information long-term
+* Define 'persistence' as the long term storage of information
 * Contrast database persistence with session persistence and persistence on the filesystem
 * Describe the structure of a database, referencing 'tables' and 'rows'
 * Define 'PostgreSQL' as 'a particular type of relational database'
