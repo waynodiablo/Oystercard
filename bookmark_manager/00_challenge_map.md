@@ -1,21 +1,53 @@
 # Bookmark Manager
 
-This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development:
+This week, you will build a web app that stores web bookmarks in a database.
 
-* Relational databases
-* Security considerations
-* More feature testing with Capybara
+## Learning objectives
 
-In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to last week. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc.
+### Goals for the week
 
-We are going to build a bookmark manager, similar to pineapple.io or delicious.com in spirit. A bookmark manager is a good use case for exploring how relational databases work.
+Ask yourself the same two questions:
 
-A bookmark manager is a website to maintain a collection of links, organised by tags. You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse links other users have added.
+- Are you having fun?
 
-User Interface Sketch (Hi-Fi)
-------
+- Are you a better developer than you were yesterday?
 
-This is the basic view of the website. You will build it by working through the sequence of challenges. As we go on we will be challenging you to extend the functionality of this website.
+#### Primary goal
+
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
+
+- **Can you build a web app that uses a database?**
+
+### Concepts and skills for the week
+
+As well as the things listed below, you'll deepen your understanding of many of the skills and concepts from week 3.
+
+#### Concepts
+
+- Object-relational mappers
+- Relationships between data in a database
+- SQL, the database query language
+- Data encryption
+- Rake
+- HTML forms
+- Web app deployment
+
+#### Skills
+
+- Designing data relationships using an object-relational mapper
+- Designing a database schema
+- Manipulating data using the CRUD cycle
+- Structuring more complex MVC applications
+- Refactoring more complex apps
+- Creating user stories
+
+## The project
+
+You're going to build a bookmark manager.  A bookmark manager is a website to maintain a collection of URLs. You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse links other users have added.
+
+### User Interface Sketch (Hi-Fi)
+
+This is the basic view of the website. You will build it by working through the sequence of challenges. As you go on, we will be challenging you to extend the functionality of this website.
 
 ![](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
