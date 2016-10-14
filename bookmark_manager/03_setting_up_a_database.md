@@ -14,9 +14,7 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 
 - [ ] Using `brew`, install the `postgresql` package and follow the instructions carefully
 - [ ] Check your installation by running `psql` in the terminal. Use the resources to understand any errors that you see.
-- [ ] Create a database in Postgres with the same name as your username:
-  - [ ] Connect to the default postgres database with `psql postgres`.
-  - [ ] Using the `CREATE DATABASE yourusername` command, create a database with your username.
+- [ ] Create a database in Postgres with the same name as your computer username e.g. `timmy507`.
 
 ## Resources
 
