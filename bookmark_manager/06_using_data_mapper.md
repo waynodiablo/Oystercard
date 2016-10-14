@@ -10,9 +10,17 @@ In this challenge, you will do all the interactions with a database you just did
 
 ## Challenge Setup
 
-ORMs translate between two 'object models'. In this case, DataMapper will translate between Ruby objects: classes, instances, instance variables, and so on; and database objects: tables, rows, and columns.
+ORMs translate between two 'object models'. In this case, DataMapper will translate between Ruby objects and database objects:
 
 Basically, you can use DataMapper to interact with a database using Ruby, instead of the finicky SQL.
+```
+| Ruby objects       | Database objects |
+| -------------------|------------------|
+| Classes            | Tables           |
+| Instances          | Rows             |
+| Instance variables | Columns          |
+```
+
 
 ## Learning Objectives covered
 
