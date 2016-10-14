@@ -12,7 +12,7 @@ In this challenge, you will use SQL to create, update, delete and **query** data
 
 ## To complete this challenge, you will need to
 
-- [ ] List the existing rows in the students table
+- [ ] List the existing rows in the students table (there aren't any)
 - [ ] Add two entries to the students table
 - [ ] List the two entries
 - [ ] Delete one of them
