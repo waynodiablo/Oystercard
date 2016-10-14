@@ -39,7 +39,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 - Refactoring more complex apps
 - Creating user stories
 
-As well as these things, you'll deepen your understanding of many of the skills and concepts from week 3.
+As well as these things, you'll deepen your understanding of many of the [skills and concepts from week 3](../intro_to_the_web/00_challenge_map.md#concepts-and-skills-for-the-week).
 
 ## The project
 
