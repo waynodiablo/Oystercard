@@ -20,7 +20,6 @@ Now that you understand the pros and cons of different persistence mechanisms, i
 ## Resources
 
 * [Homebrew Package Manager](http://brew.sh/)
-* [Creating a database - Official Documentation](http://www.postgresql.org/docs/9.5/static/tutorial-createdb.html)
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
 ## [Walkthrough - Mac OS](walkthroughs/03_mac.md)
