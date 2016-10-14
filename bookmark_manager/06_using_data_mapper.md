@@ -4,7 +4,7 @@
 
 We've built a database, added a database table, and played with some data in that table. To do all of this, we used the command-line program `psql`, and a bunch of SQL code.
 
-Reading and writing data from and to a database using SQL is a painful thing to do. SQL isn't a great language for programmers to interact with data: it's cumbersome and abstract.
+Reading and writing data from and to a database using SQL is a painful thing to do. SQL isn't a great language for programmers to interact with data.  It's verbose.  And it's abstracted from the relationships you care about: the ones between the objects in your domain model.
 
 In this challenge, you will do all the interactions with a database you just did in SQL, using an **Object-Relational Map** (**ORM**). You will use **DataMapper** as your ORM.
 
