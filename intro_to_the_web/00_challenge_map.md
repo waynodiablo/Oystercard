@@ -16,9 +16,9 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 - **Can you build a web app?**
 
-## Concepts and skills for the week
+### Concepts and skills for the week
 
-### Concepts
+#### Concepts
 
 - The relationship between a client and a server.
 - How HTTP encodes information sent over the web.
@@ -26,7 +26,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 - The request/response cycle.
 - Web templating with HTML/CSS.
 
-### Skills
+#### Skills
 
 - Debugging programs that use multiple languages.
 - Using a framework (Sinatra) in your code.
