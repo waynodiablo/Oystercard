@@ -4,7 +4,7 @@
 
 We have created a Postgres database, and added one table to it. At the moment, there's no data in the table. However, we have added a data structure, ready to be filled with custom data.
 
-In this challenge, you will use SQL to add, delete, update, and **query** data in the table you created, inside your Postgres database.
+In this challenge, you will use SQL to create, update, delete and **query** data in the table you created, inside your Postgres database.
 
 ## Learning Objectives covered
 
