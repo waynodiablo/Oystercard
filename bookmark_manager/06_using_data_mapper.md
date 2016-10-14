@@ -24,7 +24,7 @@ Basically, you can use DataMapper to interact with a database using Ruby, instea
 
 ## Learning Objectives covered
 
-* Define DataMapper as a gem for interacting with a database in Ruby ('models')
+* Define DataMapper as an ORM for interacting with a database in Ruby
 * Configure DataMapper to use a Postgres database
 * Include DataMapper in a ruby class so that it can be persisted into a database
 * Construct a data schema within a Ruby **model**
