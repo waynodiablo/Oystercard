@@ -12,8 +12,8 @@
 * Week 7: [Further JavaScript](further_javascript/introduction.md)
 * Week 8: [Intro to Rails](rails/introduction_to_rails.md)
 * Week 9: [Practice project week](practice_project_week/introduction.md)
-* Weeks 10-11: Final Projects
-* Week 12: Hiring week
+* Week 10: [Individual challenges (tech test week)](individual_challenges/introduction.md)
+* Weeks 11-12: Final Projects
 
 ## Supporting Materials
 
