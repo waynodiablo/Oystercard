@@ -8,18 +8,6 @@ You'll get to practice your OO design and TDD skills.
 
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
-## Schedule
-
-* 09.30 - 14.00.  Work **solo** to implement the bank account requirements and acceptance criteria in Ruby.  Have breaks whenever you like.
-
-* 14.00 - 14.20.  Review your own code.  Look for places it could be refactored.
-
-* 14.20 - 15.00.  Refactor your code.
-
-* 15.00 - 15.30.  Read through and understand Leo's solution.
-
-* 15.30 - 16.30.  We'll all come together and discuss Leo's solution on the projector.
-
 ## Specification
 
 ### Requirements
