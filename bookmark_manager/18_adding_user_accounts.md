@@ -24,7 +24,7 @@ In this challenge you will create the functionality for signing up for a user ac
 - [ ] Make the test pass
 - [ ] Ensure that your `User` model supports an encrypted Password
 - [ ] Ensure that Sinatra is configured to have encrypted sessions
-- [ ] Deploy to heroku and perform manual test for this functionality
+- [ ] Deploy to Heroku and check your code works online
 
 ## Resources
 
