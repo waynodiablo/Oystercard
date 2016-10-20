@@ -21,7 +21,7 @@ Now that you understand about the different database environments and have datab
 ## Resources
 
 * [What is Heroku?](https://www.heroku.com/about)
-* [Create Heroku App from the Command Line](https://devcenter.heroku.com/articles/creating-apps)
+* [Deploying a Ruby app to Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby-o)
 * [Configuring DataMapper for Heroku](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel)
 * [Adding Postgres support to Heroku instance](https://devcenter.heroku.com/articles/heroku-postgresql)
 * [Viewing your app's logs (getting visibility) on Heroku](https://devcenter.heroku.com/articles/logging)
