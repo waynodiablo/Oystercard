@@ -13,7 +13,8 @@ Now that you understand about the different database environments and have datab
 
 ## To complete this challenge, you will need to
 
-- [ ] Create a Heroku app
+- [ ] Set up your app as a Heroku app
+- [ ] Add a config file that tells Heroku how to start your app
 - [ ] Configure the Heroku app to include a postgresql database
 - [ ] Adjust the bookmark manager app so the database url will work with Heroku
 - [ ] Deploy to Heroku and check that all the functionality works
