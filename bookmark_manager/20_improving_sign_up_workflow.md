@@ -14,14 +14,13 @@ In this challenge you will create functionality for handling the situation when 
 
 ## To complete this challenge, you will need to
 
-- [ ] Extend your existing test for password confirmation to include checks for:
-  - [ ] The browser stays on the `/users` page
-  - [ ] The page should display a message that 'Password and confirmation password do not match'
+- [ ] You already have a test that checks that a user cannot signup if they enter a password and password confirmation that don't match.  Extend this test by:
+  - [ ] Checking the browser stays on the `/users` page
+  - [ ] Checking the page displays a message that 'Password and confirmation password do not match'
 - [ ] Make the test pass by:
   - [ ] Updating the controller logic
   - [ ] Using the sinatra-flash gem to show the error message in the view
-- [ ] Improve the user experience by ensuring that the email is persisted in the form after
-a password confirmation mismatch
+- [ ] Improve the user experience by ensuring that the user's email is persisted in the signup form after a password confirmation mismatch
 
 ## Resources
 
