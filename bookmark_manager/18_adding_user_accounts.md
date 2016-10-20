@@ -18,9 +18,11 @@ In this challenge you will create the functionality for signing up for a user ac
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that checks the following:
-  - [ ] when a user signs up, the `User` count increases by 1
-  - [ ] the page displays a welcome message to the new user
-  - [ ] the email address for that user in the database is correct.
+  - [ ] The user can visit a RESTful URL and enter their email and password into the signup form.
+  - [ ] When the user submits the form, their data is posted to a RESTful URL.
+  - [ ] When the user submits the from, the are directed to a new page where they see a welcome message.
+  - [ ] The email address the user entered is displayed on the welcome page.
+  - [ ] The `User` count increases by 1.
 - [ ] Make the test pass
 - [ ] Ensure that your `User` model supports an encrypted Password
 - [ ] Ensure that Sinatra is configured to have encrypted sessions
@@ -28,6 +30,7 @@ In this challenge you will create the functionality for signing up for a user ac
 
 ## Resources
 
+* [RESTful URLs](http://microformats.org/wiki/rest/urls)
 * [Password Hashing](https://crackstation.net/hashing-security.html)
 * [Sinatra Sessions](http://www.sinatrarb.com/intro.html#Using%20Sessions)
 * [Bcrypt Ruby](https://github.com/codahale/bcrypt-ruby)
