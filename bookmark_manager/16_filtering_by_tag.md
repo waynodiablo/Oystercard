@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Now that you have links that are taggable. This allows you to implement the next user story, which is filtering by tags. Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag.
+Now you have links that are taggable. This allows you to implement the next user story, which is filtering by tags. Adding tags to links is useful but it'd be even more useful to be able to filter links by a tag.
 
 ```
 As a time-pressed user
