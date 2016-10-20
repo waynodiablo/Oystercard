@@ -1,4 +1,4 @@
-## Filtering Tags
+## Filtering by tag
 
 [Back to the Challenge Map](00_challenge_map.md)
 
@@ -13,7 +13,7 @@ I would like to filter links by tag
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that:
-  - [ ] visits `/tags/bubbles` 
+  - [ ] visits `/tags/bubbles`
   - [ ] checks that only Links tagged with `bubbles` are present
 - [ ] Make the test pass
 - [ ] Deploy and confirm everything is running fine on Heroku

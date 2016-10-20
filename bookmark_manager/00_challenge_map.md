@@ -68,7 +68,7 @@ This is the basic view of the website. You will build it by working through the 
  13. [Configuring the Rack Env](13_configuring_the_rack_env.md)
  14. [Deploying to Heroku](14_deploying_to_heroku.md)
  15. [Tagging Links](15_tagging_links.md)
- 16. [Filtering Tags](16_filtering_tags.md)
+ 16. [Filtering by tag](16_filtering_by_tag.md)
  17. [Multiple Tags](17_multiple_tags.md)
  18. [Adding User Accounts](18_adding_user_accounts.md)
  19. [Password confirmation](19_password_confirmation.md)
