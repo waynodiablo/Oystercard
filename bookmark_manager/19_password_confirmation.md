@@ -13,11 +13,14 @@ In this challenge you will create password confirmation functionality.
 
 ## To complete this challenge, you will need to
 
-- [ ] Write a failing feature test that checks that when a user signs up with a mismatching password confirmation that no new users are created
+- [ ] Write a failing feature test that:
+  - [ ] Fills in an email and password into the user signup form.
+  - [ ] Fills in a **mismatching** confirmation password into the user signup form.
+  - [ ] Checks that when the form is submitted, no new users are created.
 - [ ] As usual this test should fail, make it pass with the appropriate changes to your
 models, views and controllers.
-- [ ] Use `validates_confirmation_of` to validate the passwords match
-- [ ] Deploy to heroku and perform manual test for this functionality
+- [ ] Use `validates_confirmation_of` to validate that the passwords match
+- [ ] Deploy to Heroku and perform manual test for this functionality
 
 ## Resources
 
