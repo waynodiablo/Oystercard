@@ -17,13 +17,13 @@ In this challenge you will create the functionality for signing up for a user ac
 
 ## To complete this challenge, you will need to
 
-- [ ] Write a failing feature test that checks the following:
-  - [ ] The user can visit a RESTful URL and enter their email and password into the signup form.
-  - [ ] When the user submits the form, their data is posted to a RESTful URL.
-  - [ ] When the user submits the from, the are directed to a new page where they see a welcome message.
-  - [ ] The email address the user entered is displayed on the welcome page.
-  - [ ] The `User` count increases by 1.
+- [ ] Write a failing feature test that:
+  - [ ] Visits a URL, sees a signup form, enters an email and password and submits the form.
+  - [ ] Checks that, when the form is submitted, the browser is directed to a new page that shows a user welcome message.
+  - [ ] Checks that the email address entered is displayed on the welcome page.
+  - [ ] Checks that the `User` count increases by 1.
 - [ ] Make the test pass
+- [ ] Ensure that both the signup form URL and welcome page URL are RESTful.
 - [ ] Ensure that your `User` model supports an encrypted Password
 - [ ] Ensure that Sinatra is configured to have encrypted sessions
 - [ ] Deploy to Heroku and check your code works online
