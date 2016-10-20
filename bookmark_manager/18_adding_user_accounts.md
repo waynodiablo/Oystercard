@@ -24,6 +24,7 @@ In this challenge you will create the functionality for signing up for a user ac
   - [ ] Checks that the user's email address is displayed as part of the welcome message.
   - [ ] Checks that the `User` count increases by 1.
 - [ ] Make the test pass
+- [ ] Store the new user's id in the session.  Add a helper method called `current_user` that returs the current user object.
 - [ ] Ensure that the signup form URL is RESTful.
 - [ ] Ensure that your `User` model supports an encrypted Password
 - [ ] Ensure that Sinatra is configured to have encrypted sessions
