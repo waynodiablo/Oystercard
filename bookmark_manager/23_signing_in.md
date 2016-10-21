@@ -26,7 +26,6 @@ In this challenge you will develop sign in functionality.
 
 * [Bcrypt Ruby](https://github.com/codahale/bcrypt-ruby)
 * [Bcrypt - Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)
-* [Representational State Transfer(REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)
-
+* [RESTful URLs](http://microformats.org/wiki/rest/urls)
 
 ## [Walkthrough](walkthroughs/23.md)
