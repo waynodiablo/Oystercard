@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The User experience of sign up is somewhat improved.  We are validating that the user is setting their password correctly.  However we need some additional validations, such as ensuring that a user provides an email address and that it is correctly formatted.
+The user experience of sign up is somewhat improved.  We are validating that the user is setting their password correctly.  However we need some additional validations, such as ensuring that a user provides an email address and that it is correctly formatted.
 
 In this challenge you will create functionality for validating the user supplied email address.
 
