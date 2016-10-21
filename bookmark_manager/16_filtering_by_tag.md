@@ -20,6 +20,7 @@ I would like to filter links by tag
 
 ## Resources
 
+* [Sinatra routes](http://www.sinatrarb.com/intro.html#Routes)
 * [DataMapper associations](http://datamapper.org/docs/associations.html)
 * [Database relations - Pill](https://github.com/makersacademy/course/blob/master/pills/db_relationships.md)
 * [DataMapper collection documentation](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection)
