@@ -9,7 +9,7 @@ In this challenge you will develop sign in functionality.
 ## Learning Objectives covered
 
 * Construct a form for signing in ('authenticating') a user
-* Use session to manage a user's authenticated state
+* Use sessions to manage a user's authenticated state
 * Create a basic registration/authentication system from scratch
 
 ## To complete this challenge, you will need to
