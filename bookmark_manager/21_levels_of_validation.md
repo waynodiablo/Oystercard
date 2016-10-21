@@ -14,12 +14,16 @@ In this challenge you will create functionality for validating the user supplied
 
 - [ ] Ensure a user can't sign up with a blank email address:
   - [ ] Write a failing feature test to ensure a user can't sign up without entering an email
-  - [ ] Add a check on the client side using HTML5 and confirm that this will not make the test pass and try it manually
+  - [ ] Use HTML5 client side validation to prevent the form being submitted when the email field is empty.
+  - [ ] Research why it's important to have model validation **as well as** client side validation.
+  - [ ] Confirm that, despite your client side validation, your feature test still fails.
   - [ ] Add an appropriate DataMapper validation, and check the test now passes
+  - [ ] Research why it's important to have database validation **as well as** model and client side validation.
   - [ ] Add a database level constraint for the same thing, and see if the test passes without the DataMapper validation
-- [ ] Ensure a user can't sign in with an invalid formatted email adress (e.g. `invalid@email`):
-  - [ ] Write a failing feature test to ensure a user can't sign up with an invalid formatted email address
-  - [ ] Add a check on the client side using HTML5 and confirm that this will not make the test pass and try it manually
+- [ ] Ensure a user can't sign in with an email address that has an invalid format (e.g. `invalid@email`):
+  - [ ] Write a failing feature test to ensure a user can't sign up with an email address that has an invalid format.
+  - [ ] Use HTML5 client side validation to check the user's email address has a valid format.
+  - [ ] Confirm that this will not make the test pass.
   - [ ] Add an appropriate DataMapper validation, and check the test now passes
 - [ ] Ensure to test manually, locally and on Heroku
 
