@@ -2,9 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The application now validates that a user can not sign up without an email address. Currently it does not provide any form of feedback to the user as to why the sign up fails. As we saw in the Improving Sign Up Workflow challenge this can be improved.
+In this challenge, you'll add a validation that checks that no existing user has already registered with the entered email.  You'll also add code that shows a meaningful error message to the user in this case.
 
-In this challenge you will add a validation that checks that email addresses are unique and display meaningful messages to the user.
+And you'll add code that shows the user a meaningful error message if they doesn't enter an email address at all.
 
 ## Learning Objectives covered
 
@@ -17,11 +17,11 @@ In this challenge you will add a validation that checks that email addresses are
 ## To complete this challenge, you will need to
 
 - [ ] Write a failing feature test that checks that:
-  - [ ] A user can not sign up with an already registered email address
-  - [ ] The correct message is displayed to the user based on the error
+  - [ ] A user can not sign up with an already registered email address.
+  - [ ] An error message is displayed to the user
 - [ ] Make the test pass by adding the correct validation and displaying the message using the flash
-- [ ] Update your previous feature tests for validating email addresses the correct message
-- [ ] Make the test pass
+- [ ] Update your previous feature tests that check email validation to check that appropriate messages are shown to the user
+- [ ] Make those tests pass
 - [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
