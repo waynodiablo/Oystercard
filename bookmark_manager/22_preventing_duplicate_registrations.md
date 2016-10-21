@@ -19,9 +19,12 @@ And you'll add code that shows the user a meaningful error message if they doesn
 - [ ] Write a failing feature test that checks that:
   - [ ] A user can not sign up with an already registered email address.
   - [ ] An error message is displayed to the user
-- [ ] Make the test pass by adding the correct validation and displaying the message using the flash
+- [ ] Make the test pass:
+  - [ ] Add the correct validation
+  - [ ] Get the validation failure message from the array of errors on the model.
+  - [ ] Display the message using the flash
 - [ ] Update your previous feature tests that check email validation to check that appropriate messages are shown to the user
-- [ ] Make those tests pass
+- [ ] Make those tests pass.
 - [ ] Ensure to test manually, locally and on Heroku
 
 ## Resources
