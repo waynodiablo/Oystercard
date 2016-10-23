@@ -18,15 +18,31 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 * **Can you learn a new language and its patterns?**
 
-To guide your learning, aim to be able to answer "yes" to these questions:
+### Check your understanding
 
-* Can you use your knowledge of the constructor and prototype pattern to encapsulate behaviour?
+To guide your learning, aim to be able to answer "yes" to the questions below.
+
+#### JavaScript
+
+* Can you read and write JavaScript syntax?
 
 * Can you understand the rules that govern the behaviour of the `this` keyword?
 
 * Can you follow the flow of an Ajax request and response?
 
 * Can you follow the flow of control through code that uses callbacks?
+
+* Are you comfortable using the Document Object Model (DOM)? Can you get data from it and manipulate it?
+
+#### Transferring your existing skills
+
+* Can you encapsulate behaviour in JavaScript?
+
+* Can you get visibility effectively in JavaScript?
+
+* Can you TDD in JavaScript?
+
+* Can you follow the flow of control over the whole web app cycle? e.g. the interface of a thermostat is displayed in HTML/CSS, the "increase temperature" button is clicked, a JavaScript click event fires, JavaScript code runs to handle the event, an Ajax request is made, a Sinatra controller POST action handler is run, a Thermostat Ruby model is updated, the new temperature is saved to a Postgres database, the new temperature is returned as JSON by the Ruby controller, JavaScript code runs to update the temperature in the web page.
 
 ## The Count project
 
