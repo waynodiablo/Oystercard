@@ -14,11 +14,11 @@ Ask yourself the same two questions:
 
 * Are you a better developer than you were yesterday?
 
-By the end of the week, the goal is to be able to answer yes to the week's primary question:
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
-* Do you have an effective process for understanding unfamiliar language features and patterns?
+* **Do you have an effective process for understanding and using unfamiliar language features and idioms?**
 
-To guide your learning, ask yourself the following:
+To guide your learning, aim to be able to answer "yes" to these questions:
 
 * Can you use your knowledge of the constructor and prototype pattern to encapsulate behaviour?
 
@@ -36,7 +36,7 @@ The [Count](https://github.com/maryrosecook/count) project is a tiny, model full
 * Testing frontend code.
 * Separating frontend concerns into model, view and controller.
 
-It's very worthwhile spending time investigating and playing with the code in this project to understand how and why it works.
+It's very worthwhile spending time investigating and playing with the code in this project to understand how it works.
 
 ## Challenges
 
