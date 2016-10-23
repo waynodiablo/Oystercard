@@ -6,10 +6,6 @@ Wouldn't it be good if before setting your thermometer's temperature, you knew w
 
 Add a feature to display the weather in a city selected by the user.
 
-### Challenge setup
-
-You'll need to find a suitable weather API - [Weather Underground](http://www.wunderground.com/weather/api) or [Open Weather Map](http://openweathermap.org/api) are popular choices.
-
 ### Learning Objectives covered
 
 - [ ] Define 'AJAX' as 'Asynchronous JavaScript And XML'
@@ -23,6 +19,7 @@ You'll need to find a suitable weather API - [Weather Underground](http://www.wu
 
 ### Resources
 
+- [Open Weather Map API](http://openweathermap.org/api)
 - [Learn jQuery: AJAX](https://learn.jquery.com/ajax/)
 - [MDN documentation on AJAX](https://developer.mozilla.org/en-US/docs/AJAX)
 - [jQuery shortcut methods](http://api.jquery.com/category/ajax/shorthand-methods/)
