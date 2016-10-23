@@ -2,7 +2,7 @@
 
 ## What is JavaScript?
 
-JavaScript is a fully-featured programming language.  It runs in the web browser.  It lets you write web apps with which a user can interact without a page refresh.
+JavaScript is a fully-featured programming language.  It runs in the web browser.  It lets you write web apps that can update the page without a page refresh.
 
 It's a great second language to learn, as it introduces many new language concepts not found in Ruby. It will also let you reinforce concepts you've already learned.
 
