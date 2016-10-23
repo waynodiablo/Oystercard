@@ -16,7 +16,7 @@ Ask yourself the same two questions:
 
 By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
-* **Do you have an effective process for understanding and using unfamiliar language features and idioms?**
+* **Can you learn a new language and its patterns?**
 
 To guide your learning, aim to be able to answer "yes" to these questions:
 
