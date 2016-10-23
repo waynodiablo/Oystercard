@@ -1,4 +1,4 @@
-# Thermostat: APIs
+8# Thermostat: APIs
 
 [Back to the Challenge Map](0_challenge_map.md)
 
@@ -14,7 +14,7 @@ Add a feature to display the weather in a city selected by the user.
 
 ### To complete this challenge, you will need to:
 
-- [ ] Use a jQuery AJAX call to get the weather information for a specific city and display it to the user.
+- [ ] Use a jQuery AJAX call to get the weather information for London from a weather API.  Display the weather information to the user.
 - [ ] Add further functionality so that the user can select their current city and the weather provided is for the selected city.
 
 ### Resources
