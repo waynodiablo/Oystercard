@@ -8,12 +8,14 @@ In this challenge, you will build the skeleton of a UI, so that you can then sta
 
 ### Learning Objectives covered
 
-- Use Jasmine to Test-Drive Development of a web page with advanced JavaScript functionality
+- Using HTML/CSS to create a user interface on the web.
 
 ### To complete this challenge, you will need to:
-- [ ] Decide what elements you will need as input and output for your thermostat
-- [ ] Build a static HTML page with these elements, labelling them with appropriate classes and/or IDs
-- [ ] Add your thermostat JavaScript to the page
+
+- [ ] Decide what HTML elements you will need to serve as controls on the thermostat.  Decide what HTML elements you will need to display the thermostat data.
+- [ ] Build a static HTML page with these elements, labelling them with appropriate classes and/or IDs.
+- [ ] Add a `script` tag to load your thermostat JavaScript file into the page.
+- [ ] Open the developer console and check you can instantiate a thermostat object and call methods on it.
 
 ### Resources
 
