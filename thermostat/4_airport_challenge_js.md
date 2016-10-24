@@ -22,5 +22,6 @@ Take your Ruby code and attempt to rewrite it in JavaScript - don't dwell too lo
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
+- [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
 ### [Walkthrough](walkthroughs/4.md)
