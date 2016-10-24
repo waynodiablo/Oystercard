@@ -39,9 +39,13 @@ Some example assumptions:
 
 ## 4 - `p` Everywhere
 
-You'll need to break your task down into something smaller, the key here being to isolate only the part of our application that we need to test our assumption against. To do this you'll need some sort of tool which you use to tighten the loop until you get to the root cause of your problem.
+As you follow the flow of your program, there are two basic things you'll want to find out.
 
-Some tools are:
+**Which parts of your program are running, and what order are they running in?**
+
+**What are the values of variables, and are they what I expected?**
+
+Here are some techniques for doing that:
 
 * `p`/`puts` (Ruby) or `console.log` (JavaScript)
 * `byebug`/`binding.pry` (Ruby) or `debugger` (JavaScript) to pause your code
