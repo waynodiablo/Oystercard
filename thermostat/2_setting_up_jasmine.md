@@ -18,7 +18,7 @@ In this challenge, you will install Jasmine, set up a new project and try to fin
 - [ ] Inspect the files in the `src` and `spec` folders and discuss the similarities and differences to Ruby and RSpec with your pair partner
 - [ ] Create empty `fizzBuzz.js` and `fizzBuzzSpec.js` files in appropriate locations.
 - [ ] Use script tags to load these files in your `SpecRunner.html`.
-- [ ] Open `SpecRunner.html` in Chrome.  You should see "No specs found".
+- [ ] Open `SpecRunner.html` in Chrome.
 - [ ] Look in the Console tab of the Chrome dev tools.  You should see no errors.
 - [ ] Look in the Network tab of the Chrome dev tools to check your JavaScript files are being loaded.
 - [ ] Delete the unused files in `src/` and `spec/` that came with the original Jasmine installation from `SpecRunner.html` and from your jasmine directory.
