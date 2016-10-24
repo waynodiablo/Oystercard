@@ -39,23 +39,23 @@ Some example assumptions:
 
 ## 4 - Follow the flow and get visibility
 
-As you try to understand your program, there are two basic things you'll want to find out.
+As you try to understand your program, there are two basic things you'll want to find out:
 
 **Which parts of your program are running, and what order are they running in?**
 
-**What are the values of variables, and are they what you expected?**
+**What are the values of relevant variables, and are they what you expected?**
 
-Here are some techniques for finding out these things:
+Here are some techniques:
 
-* Print out a variable or a "hello we reached this point in the code!"
+* Print out a variable or a "hello we reached this point in the code!" string
   * Ruby: `p`
   * JavaScript: `console.log`
 
-* The Network tab of the Chrome developer tools to see request and response data.
+* Look at the Network tab of the Chrome developer tools to see request and response data.
 
-* The Elements tab of the Chrome developer tools to see the content and styling of web pages.
+* Look at the Elements tab of the Chrome developer tools to see the content and styling of web pages.
 
-* Pause and step through your code, line by line
+* Pause and step through your code, line by line:
   * Ruby: `binding.pry`
   * JavaScript: `debugger` (JavaScript)
 
