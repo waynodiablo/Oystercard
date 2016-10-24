@@ -21,6 +21,7 @@ In case you've forgotten the rules of FizzBuzz:
 ### To complete this challenge, you will need to:
 
 - [ ] Write FizzBuzz in JavaScript, fully test-driven
+- [ ] Refactor the code so it's clean.
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
