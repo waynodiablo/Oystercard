@@ -5,21 +5,22 @@ At Makers Academy we're interested in students becoming autonomous problem-solve
 
 ### The Process
 
-1. *???* Try to gather some words about the problem, even in vague terms. "It's broken" is not a problem description.
+1. If you're stuck on a bug, follow the process in the [debugging](./debugging.md) :pill:.
 
-2. *Pair Partner.* Bounce off them, discuss, and [rubber-duck debug](https://en.wikipedia.org/wiki/Rubber_duck_debugging). Imagine you are seeing the problem for the first time, together.
+2. *???* Try to gather some words about the problem, even in vague terms. "It's broken" is not a problem description.
 
-3. *Isolate Keywords.* Gather a small group of keywords that describe the problem area, like `Array`, ‘Websockets’, or ‘Terminal’.
+3. *Pair Partner.* Bounce off them, discuss, and [rubber-duck debug](https://en.wikipedia.org/wiki/Rubber_duck_debugging). Imagine you are seeing the problem for the first time, together.
 
-4. *Isolate Error Keywords.* If you have an error message, identify and add these keywords to your results from 3).
+4. *Isolate Keywords.* Gather a small group of keywords that describe the problem area, like `Array`, ‘Websockets’, or ‘Terminal’.
 
-5. *Google.* Research the problem using your keywords. Also use the keywords to identify relevant results (i.e. not just the first one).
+5. *Isolate Error Keywords.* If you have an error message, identify and add these keywords to your results from 3).
 
-6. *Slack Overflow.* Post a [Slack Overflow](https://github.com/makersacademy/slack-overflow) issue.
+6. *Google.* Research the problem using your keywords. Also use the keywords to identify relevant results (i.e. not just the first one).
 
-7. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
+7. *Slack Overflow.* Post a [Slack Overflow](https://github.com/makersacademy/slack-overflow) issue.
+
+8. *Coach.* If all else fails, get some 1-1 support. Don't be disappointed if the answer comes as more questions.
 
 ## Further Reading
 
-* :pill: [How to debug your code](https://github.com/makersacademy/course/blob/master/pills/debugging.md)
 * [Slack Overflow](https://github.com/makersacademy/slack-overflow)
