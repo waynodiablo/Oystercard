@@ -28,7 +28,7 @@ So let's say at this point you turn to your pair and describe the problem as "wh
 
 ## 3 - Check your assumptions
 
-List the things that you assume about what happens when your code is running.  Actually write them down! Prove to yourself that each assumption is correct by following the flow and getting visibility.  Start with the assumptions that are most likely to be incorrect.
+List your assumptions about what happens when your code runs.  Actually write them down! Prove to yourself that each assumption is correct by following the flow and getting visibility.  Start with the assumptions that are most likely to be incorrect.
 
 Some example assumptions:
 
