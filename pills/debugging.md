@@ -47,12 +47,21 @@ As you try to understand your program, there are two basic things you'll want to
 
 Here are some techniques for finding out these things:
 
-* `p`/`puts` (Ruby) or `console.log` (JavaScript)
-* `byebug`/`binding.pry` (Ruby) or `debugger` (JavaScript) to pause your code
-* `launchy`/`browser.pause` to save and open a webpage at a specific point in your tests
-* `chrome dev tools` to check your networks requests
-* `pry`/`irb`/`node`/`chrome console` to test code snippets
+* Print out a variable or a "hello we reached this point in the code!"
+  * Ruby: `p`
+  * JavaScript: `console.log`
 
+* The Network tab of the Chrome developer tools to see request and response data.
+
+* The Elements tab of the Chrome developer tools to see the content and styling of web pages.
+
+* Pause and step through your code, line by line
+  * Ruby: `binding.pry`
+  * JavaScript: `debugger` (JavaScript)
+
+* Try out and understand code snippets:
+  * Ruby: `irb`.
+  * JavaScript: the Chrome developer tools console, or `node`.
 
 For further tips, see our blog post by Sam Morgan [How I solve hard problems](http://blog.makersacademy.com/how-i-solve-problems/)
 
