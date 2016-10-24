@@ -8,7 +8,7 @@ The steps are:
 
 1. Take a break
 2. Rubber duck
-3. Assume nothing
+3. Check your assumptions
 4. `p` everywhere
 5. Repeat
 
@@ -26,14 +26,15 @@ If you don't have a pair (or you can't pair as it is a tech test) doing some [ru
 
 So let's say at this point you turn to your pair and describe the problem as "whenever I try and save my user to the database in Rails, no error is thrown but the user does not get saved into the database"
 
-## 3 - Assume Nothing
+## 3 - Check your assumptions
 
-Now you need to look at what assumptions are behind the problem you've mentioned
-to your pair. In this case we could list our assumptions as:
+List the things that you assume about what happens when your code is running.  Actually write them down! Prove to yourself that each assumption is correct by following the flow and getting visibility.  Start with the assumptions that are most likely to be incorrect.
 
-* The data is being passed correctly through to the user model
-* The method used to save the user model to the DB is working
-* The data is not reaching the DB
+Some example assumptions:
+
+* The data is being passed correctly through to the user model.
+* The method used to save the user model to the DB is working.
+* The data is not reaching the DB.
 * An error should be thrown when the user is saved.
 
 ## 4 - P Everywhere
