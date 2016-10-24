@@ -18,9 +18,9 @@ As soon as you've become aware that you have a difficult bug and you're stuck th
 
 ## 2 - Rubber Duck
 
-Unless you're doing a weekend challenge or tech test, you'll be aware that we advise you always pair, and debugging is one of those times when having another set of eyes on a problem is a godsend. Just by one of you talking through the problem to the other you will often find the problem you're struggling on becomes so much clearer.
+Explaining a bug out loud is can really help with clarifying a bug or thinking of possible reasons the bug is happening.  It's surprising how often you'll get half way thorough your explanation and suddenly say "Of course! I should try [blank]".
 
-If you don't have a pair (or you can't pair as it is a tech test) doing some [rubber duck pairing](http://blog.codinghorror.com/rubber-duck-problem-solving/) as ridiculous as it sounds, our plastic ducks have solved more than their fair share of bugs in our codebase!
+If you're pairing, talk the bug thorough together.  If you're not pairing, ask someone to let you explain the problem to them.  If there's no one else around, explain your bug to a yellow rubber duck (or other inanimate object).  (It really does work!)
 
 ![Rubber Duck](https://hattonsimages.blob.core.windows.net/products/RubberDuck_3170853_Qty1_1.jpg)
 
