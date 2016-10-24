@@ -9,7 +9,7 @@ The steps are:
 1. Take a break
 2. Rubber duck
 3. Check your assumptions
-4. `p` everywhere
+4. Follow the flow and get visibility
 5. Repeat
 
 ## 1 - Take a Break
@@ -37,15 +37,15 @@ Some example assumptions:
 * The data is not reaching the DB.
 * An error should be thrown when the user is saved.
 
-## 4 - `p` Everywhere
+## 4 - Follow the flow and get visibility
 
-As you follow the flow of your program, there are two basic things you'll want to find out.
+As you try to understand your program, there are two basic things you'll want to find out.
 
 **Which parts of your program are running, and what order are they running in?**
 
-**What are the values of variables, and are they what I expected?**
+**What are the values of variables, and are they what you expected?**
 
-Here are some techniques for doing that:
+Here are some techniques for finding out these things:
 
 * `p`/`puts` (Ruby) or `console.log` (JavaScript)
 * `byebug`/`binding.pry` (Ruby) or `debugger` (JavaScript) to pause your code
