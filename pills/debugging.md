@@ -7,10 +7,10 @@ So you're stuck on a problem. Something in your code doesn't work, and you can't
 The steps are:
 
 1. Take a break
-1. Rubber duck
-1. Assume nothing
-1. P everywhere
-1. Repeat
+2. Rubber duck
+3. Assume nothing
+4. `p` everywhere
+5. Repeat
 
 ## 1 - Take a Break
 
