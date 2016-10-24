@@ -14,7 +14,7 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 
 ### To complete this challenge, you will need to:
 
-- [ ] Find the Chrome DevTools Console
+- [ ] Find the Chrome DevTools Console (see super helpful JS debugging tip below)
 - [ ] Write your first "Hello world!" using `console.log()`
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will return "Hello, Maker!" when you type `greeting.hello("Maker")`
 - [ ] Create a `hiTimmy()` function which will return `'Hi, Timmy!'` when you type `hiTimmy()`.
@@ -23,6 +23,12 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [ ] Ensure all your code follows [basic JavaScript conventions](../pills/js_conventions.md)
 - [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
 - [ ] Discuss why JavaScript is the "language of the Web"
+
+### Super helpful JavaScript debugging tip
+
+When you run Ruby code, errors and the things you `p` out are shown in your terminal program (Terminal or iTerm).
+
+The JavaScript equivalent is the Console tab of the Chrome developer tools.  Whenever you're running JavaScript code, have the Console tab open.  It will show you all the errors that are thrown by your JavaScript code, and also all the things that you print out with `console.log()`.
 
 ### Resources
 - [Using the console](https://developers.google.com/web/tools/javascript/console/index?hl=en)
