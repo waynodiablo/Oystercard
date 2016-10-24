@@ -59,7 +59,7 @@ Here are some techniques:
   * Ruby: `binding.pry`
   * JavaScript: `debugger` (JavaScript)
 
-* Try out and understand code snippets:
+* Write yourself small, self-contained examples of things language features or methods you're trying to understand:
   * Ruby: `irb`.
   * JavaScript: the Chrome developer tools console, or `node`.
 
