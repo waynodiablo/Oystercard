@@ -17,7 +17,8 @@ In this challenge, you will learn to interact with the JavaScript REPL, create a
 - [ ] Find the Chrome DevTools Console
 - [ ] Write your first "Hello world!" using `console.log()`
 - [ ] Create a `Greeting` object with a method `hello(person)`, which will return "Hello, Maker!" when you type `greeting.hello("Maker")`
-- [ ] Create a `hi` function which will return "Hi, Maker!" when you type `hi("Maker")`
+- [ ] Create a `hiTimmy()` function which will return `'Hi, Timmy!'` when you type `hiTimmy()`.
+- [ ] Create a `hi` function which will return `'Hi, Jenny!'` when you type `hi('Jenny')`.
 - [ ] Experiment with the following basic language features: strings, numbers, arrays, objects.  Find some ways they behave differently from their equivalents in Ruby.
 - [ ] Ensure all your code follows [basic JavaScript conventions](../pills/js_conventions.md)
 - [ ] Discuss the difference between client-side (browser) and server-side with your pair partner
