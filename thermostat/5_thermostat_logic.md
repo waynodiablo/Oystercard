@@ -32,5 +32,6 @@ Specification:
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 - [Strict Mode on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Master the `this` keyword](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 
 ### [Walkthrough](walkthroughs/5.md)
