@@ -14,7 +14,7 @@ The steps are:
 
 ## 1 - Take a Break
 
-Normally we only consider that we're even debugging, as opposed to regular programming, when we've been stuck on something for a while and we can't fix it. As soon as you've become aware that you have a difficult bug and you're stuck the most important thing you can do is take a break at that point. There's been many times when we've been stuck for a long time on something and reluctantly taken a break, only to come back five minutes later and instantly see the solution to the problem.
+As soon as you've become aware that you have a difficult bug and you're stuck the most important thing you can do is take a break at that point. There's been many times when we've been stuck for a long time on something and reluctantly taken a break, only to come back five minutes later and instantly see the solution to the problem.
 
 ## 2 - Rubber Duck
 
