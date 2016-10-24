@@ -31,6 +31,7 @@ Specification:
 
 ### Resources
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
+- [Constructor functions, prototypes and the new keyword](https://blog.pivotal.io/labs/labs/javascript-constructors-prototypes-and-the-new-keyword)
 - [Strict Mode on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - [Master the `this` keyword](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 
