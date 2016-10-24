@@ -51,6 +51,8 @@ Here are some techniques:
   * Ruby: `p`
   * JavaScript: `console.log`
 
+* Read the error description and stack trace.
+
 * Look at the Network tab of the Chrome developer tools to see request and response data.
 
 * Look at the Elements tab of the Chrome developer tools to see the content and styling of web pages.
