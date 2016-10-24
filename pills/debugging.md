@@ -53,7 +53,6 @@ Here are some techniques for doing that:
 * `chrome dev tools` to check your networks requests
 * `pry`/`irb`/`node`/`chrome console` to test code snippets
 
-When experimenting, pick a tool and run lots of little experiments (often this is simply putting a load of `puts` statements in your code), generally the sign of an experienced debugger is someone who uses a large number of tests like this to analyse/experiment on the problem.
 
 For further tips, see our blog post by Sam Morgan [How I solve hard problems](http://blog.makersacademy.com/how-i-solve-problems/)
 
