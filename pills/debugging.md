@@ -37,7 +37,7 @@ Some example assumptions:
 * The data is not reaching the DB.
 * An error should be thrown when the user is saved.
 
-## 4 - P Everywhere
+## 4 - `p` Everywhere
 
 You'll need to break your task down into something smaller, the key here being to isolate only the part of our application that we need to test our assumption against. To do this you'll need some sort of tool which you use to tighten the loop until you get to the root cause of your problem.
 
