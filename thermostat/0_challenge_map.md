@@ -22,6 +22,8 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 To guide your learning, aim to be able to answer "yes" to the questions below.
 
+Return to these questions each day to check your understanding.
+
 #### JavaScript
 
 * Can you read and write JavaScript syntax?
