@@ -67,7 +67,7 @@ For further tips, see our blog post by Sam Morgan [How I solve hard problems](ht
 
 ## 5 - Repeat
 
-Once you've reached some conclusions based on your tests, if you still haven't
+Once you've reached some conclusions based on your experiments, if you still haven't
 fixed the problem then you'll need to run the steps again - at least you have ruled out one train of investigation.
 
 ## Further tips
@@ -75,7 +75,7 @@ fixed the problem then you'll need to run the steps again - at least you have ru
 * It doesn't matter what debugging tools you are using, but you should *always* be using
 some sort of tool - if you're using nothing you're going to have a really hard
 time conducting your experiments and fixing the bug.
-* When experimenting run lots of little tests (often this is simply putting a
+* When trying to understand your code, run lots of little experiments (often this is simply putting a
   load of `puts` statements in your code), generally the sign of an
   experienced debugger is someone who uses a large number of tests like this to
 analyse/experiment on the problem
