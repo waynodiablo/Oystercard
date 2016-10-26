@@ -34,5 +34,6 @@ Specification:
 - [Constructor functions, prototypes and the new keyword](https://blog.pivotal.io/labs/labs/javascript-constructors-prototypes-and-the-new-keyword)
 - [Strict Mode on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - [Master the `this` keyword](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
+- [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
 ### [Walkthrough](walkthroughs/5.md)
