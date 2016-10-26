@@ -23,7 +23,7 @@ The first part of this challenge is intentionally left really open. When you fir
 - [ ] Play with jQuery a bit more
 - [ ] Go to [You Might Not Need jQuery](http://youmightnotneedjquery.com/) and see the vanilla JavaScript you would have to write. It's good to at least know that you can do it without jQuery, and to understand that it's all just JavaScript under the hood.
 - [ ] Create another file that will hold your JavaScript code that manages the interface between the UI and the thermostat object.  Load the file into your HTML page.
-- [ ] Hook up your buttons/links to the underlying thermostat logic
+- [ ] Hook up your buttons/links so they run the methods on the underlying thermostat model
 
 ### Resources
 - [How jQuery works](http://learn.jquery.com/about-jquery/how-jquery-works/)
