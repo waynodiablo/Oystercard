@@ -8,5 +8,9 @@ There is an issue with your thermometer interface!  If you close your browser an
 * Update your UI so that the thermostat communicates changes to the API. For example, it could make a POST request to localhost:4567/temperature, with the new temperature.  On page refresh, the thermostat could make a GET request to localhost:4567/temperature to get the temperature.
 * Save the selected city information using the API too.
 
-#### Resources
+## Resources
 See the video overview of Ajax for how to talk to a remote API with jQuery: https://www.youtube.com/watch?v=QDsrErWpizI
+
+## Walkthrough
+
+You'll be able to use a lot of the same techniques as the ones you used in week 4. Consider having a look at those walkthroughs if you get stuck.
