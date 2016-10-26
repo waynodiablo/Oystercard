@@ -8,7 +8,7 @@ While fully functional, it's rare to see a thermostat (or any app, really) in th
 
 Instead, what we really want is something exploding with awesome, maybe even looking a bit like a Reservoir Dogs poster:
 
-![you gonna bark all day doggie?](images/reservoir-dogs.jpg)
+![you gonna bark all day little doggie?](images/reservoir-dogs.jpg)
 ![styled](images/thermostat-styled.png)
 
 Or, influenced by whatever else you take your visual inspiration from.
