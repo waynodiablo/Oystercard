@@ -17,10 +17,12 @@ Or, influenced by whatever else you take your visual inspiration from.
 
 ### To complete this challenge, you will need to:
 
-- [ ] Style the thermostat
+- [ ] Style the thermostat.  Go wild!
 
 ### Resources
 
 - [Learn layout](http://learnlayout.com/)
 
-### [Walkthrough](walkthroughs/9.md)
+### Walkthrough
+
+There's no detailed walkthrough for this challenge.  How much and what styling you'd like to do is up to you.  However, the [walkthrough](walkthroughs/9.md) does contain some questions to consider when styling your thermostat.
