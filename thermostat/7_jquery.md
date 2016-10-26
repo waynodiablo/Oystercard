@@ -15,6 +15,7 @@ The first part of this challenge is intentionally left really open. When you fir
 - Explain some benefits of using jQuery above 'raw' JavaScript
 - Explain some common jQuery idioms, such as `$(document).ready();`
 - Use jQuery to build interactive functionality into a webpage
+- Understand some things about how jQuery uses the technique of callbacks
 
 ### To complete this challenge, you will need to:
 - [ ] Add jQuery to the page
@@ -28,5 +29,7 @@ The first part of this challenge is intentionally left really open. When you fir
 - [How jQuery works](http://learn.jquery.com/about-jquery/how-jquery-works/)
 - [learn.jquery.com](https://learn.jquery.com/)
 - [jQuery documentation](http://api.jquery.com/)
+* [Callbacks tutorial](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
+
 
 ### [Walkthrough](walkthroughs/7.md)
