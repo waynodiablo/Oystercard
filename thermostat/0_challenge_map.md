@@ -34,8 +34,6 @@ Return to these questions each day to check your understanding.
 
 * Can you follow the flow of control through code that uses callbacks?
 
-* Are you comfortable using the Document Object Model (DOM)? Can you get data from it and manipulate it?
-
 #### Transferring your existing skills
 
 * Can you encapsulate behaviour in JavaScript?
