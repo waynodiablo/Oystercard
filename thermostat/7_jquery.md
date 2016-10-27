@@ -26,7 +26,7 @@ The first part of this challenge is intentionally left really open. When you fir
 - [ ] Hook up your buttons/links so they run the methods on the underlying thermostat model
 
 ### Resources
-- [How jQuery works](http://learn.jquery.com/about-jquery/how-jquery-works/)
+- [Short jQuery tutorial](http://learn.jquery.com/about-jquery/how-jquery-works/)
 - [jQuery documentation](http://api.jquery.com/)
 
 ### [Walkthrough](walkthroughs/7.md)
