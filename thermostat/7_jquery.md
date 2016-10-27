@@ -27,9 +27,6 @@ The first part of this challenge is intentionally left really open. When you fir
 
 ### Resources
 - [How jQuery works](http://learn.jquery.com/about-jquery/how-jquery-works/)
-- [learn.jquery.com](https://learn.jquery.com/)
 - [jQuery documentation](http://api.jquery.com/)
-* [Callbacks tutorial](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
-
 
 ### [Walkthrough](walkthroughs/7.md)
