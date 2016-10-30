@@ -12,7 +12,7 @@
 
 ## Overview of the week
 
-* You'll work in teams to build a clone of Airbnb.
+* You'll work in teams to build a clone of Airbnb.  (I'll announce the teams on Slack.)
 
 * You'll organise your own work.
 
