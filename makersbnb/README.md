@@ -44,9 +44,9 @@ To guide your learning, aim to be able to answer "yes" to the questions below.  
 
 * Can you keep code quality and test coverage high whilst building new features?
 
-### Specification
+### Specification and mockups
 
-Build your project from this [specification](./specification.md).
+Build your project from this [specification and mockups](./specification_and_mockups.md).
 
 ### Minimum viable product (MVP)
 
