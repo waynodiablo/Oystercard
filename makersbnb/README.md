@@ -4,13 +4,11 @@
 
 1. We'll talk through the important things for this week.
 
-2. I'll [demo](./developer-workflow-demo.md) the [developer workflow](#developer-workflow) that you'll practice this week.
+2. You'll get into your teams and run through the [project setup](#project-setup).
 
-3. You'll get into your teams and run through the [project setup](#project-setup).
+3. We'll gather back in 15 minutes for a quick Q&A.
 
-4. We'll gather back in 15 minutes for a quick Q&A.
-
-5. You'll build Airbnb!
+4. You'll build Airbnb!
 
 ## Overview of the week
 
