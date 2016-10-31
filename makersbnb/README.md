@@ -80,14 +80,15 @@ If your specification asks for a car, don't build the wheels in the first week, 
 
 1. Turn the spec into user stories.
 2. Create one GitHub issue for each user story.
-3. Pick a user story to work on.
-4. Create a branch for your user story.
-5. Pair on the code to implement the user story.
-6. Create a pull request on GitHub asking to merge the user story branch into master.
-7. Get another pair to code review the pull request.
-8. Use the pull request comments section to discuss the code and make improvements until the code reviewing pair are satisfied.
-9. The code reviewing pair signal the code is ready to be merged with :shipit:
-10. Merge the branch for the user story into master.
+3. Pick a user story (GitHub issue):
+  * Create a branch for your user story.
+  * Pair on the code to implement the user story.
+  * Create a pull request on GitHub asking to merge the user story branch into master.
+  * Get another pair to code review the pull request.
+  * Use the pull request comments section to discuss the code and make improvements until the code reviewing pair are satisfied.
+  * The code reviewing pair signal the code is ready to be merged with :shipit:
+  * Merge the branch for the user story into master.
+4. Return to step 3.
 
 ### Project setup
 
