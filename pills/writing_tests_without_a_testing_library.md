@@ -1,4 +1,4 @@
-# Writing tests without a testing framework
+# Writing tests without a testing library
 
 ## What is a test?
 
@@ -7,9 +7,9 @@ A test does two things:
 1. Sets some conditions up.
 2. Checks that some things are true.
 
-## What are testing frameworks for?
+## What are testing libraries for?
 
-A testing framework supplies:
+A testing library supplies:
 
 1. Mocking functions to help isolate the part of the code being tested.
 2. Assertion functions that help check that specific things are true.
@@ -17,7 +17,7 @@ A testing framework supplies:
 4. A way to organise tests.
 5. An easy way to run lots of tests.
 
-## Writing tests without a testing framework
+## Writing tests without a testing library
 
 All of these things are either optional for test code, or can be easily achieved with adhoc code.  For example:
 
@@ -49,9 +49,9 @@ This is pretty ugly.
 
 But it works.
 
-## Writing nicer tests without a testing framework
+## Writing nicer tests without a testing library
 
-It's fine to potter along for quite a while writing test code in this style.  It would be possible to make a whole file of test functions like this and have an app that is just as robust and well-tested as an app tested with a testing framework.
+It's fine to potter along for quite a while writing test code in this style.  It would be possible to make a whole file of test functions like this and have an app that is just as robust and well-tested as an app tested with a testing library.
 
 But the eye-watering agony could be reduced by abstracting some of the ugliness.  Here are a few lines that can be used to greatly improve the test code:
 
@@ -80,6 +80,22 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
-Ten or twenty more lines of testing framework code would supply 80% of the standard `describe`, `it`, mocking and asserting framework deliciousness.
+Ten or twenty more lines of testing library code would supply 80% of the standard `describe`, `it`, mocking and asserting library deliciousness.
 
 What would you abstract next?
+
+## Extracting a testing library
+
+If you want, you can go all the way and make your test helper code into its own testing library.
+
+Here are some things to consider:
+
+* How can you move your test helper code into its own repo?
+
+* How can you allow your notes app to access your test library repo?
+
+* How can you write tests for your test library? (!)
+
+* What API should your test library have?
+
+* How will you publish your library? npm?

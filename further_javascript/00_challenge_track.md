@@ -34,7 +34,7 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 12. [Spike to extract note text from a form `submit` event](12_extract_note_text_from_submit_event.md)
 13. [Use TDD to finish support for user note creation](13_user_create_note.md)
 14. [Refactor](14_refactor.md)
-15. [Extract a frontend, single page app framework](15_extract_framework.md)
+15. [Extract a standalone test library](15_extract_test_library.md)
 
 ### Thursday and Friday
 

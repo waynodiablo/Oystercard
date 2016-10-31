@@ -6,7 +6,7 @@ In this challenge, you'll test and write code for a model that holds a list of n
 
 ### Learning objectives covered
 
-- Write unit tests without using a testing framework.
+- Write unit tests without using a testing library.
 - Use the constructor and prototype pattern.
 
 ### To complete this challenge, you will need to:
@@ -24,6 +24,6 @@ In this challenge, you'll test and write code for a model that holds a list of n
 
 ### Resources
 
-- :pill: [Writing tests without a framework](https://github.com/makersacademy/course/blob/master/pills/writing_tests_without_a_testing_framework.md)
+- :pill: [Writing tests without a testing library](https://github.com/makersacademy/course/blob/master/pills/writing_tests_without_a_testing_library.md)
 - [Constructor and prototype pattern workshop](https://github.com/maryrosecook/constructor-and-prototype-pattern-workshop)
 - :pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)
