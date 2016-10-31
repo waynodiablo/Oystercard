@@ -16,7 +16,7 @@ No challenges.  No walkthroughs.
 
 #### Guidance
 
-Make sure to look at this [guidance on building a fronend, single page app](frontend_single_page_app_guidance.md)! It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things.
+Make sure to look at this [guidance on building a frontend, single page app](frontend_single_page_app_guidance.md)! It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things.
 
 #### Test library
 
