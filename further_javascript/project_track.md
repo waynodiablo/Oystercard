@@ -1,6 +1,6 @@
 # Project track
 
-For this track, there's almost no structure. You will build your own test library.
+For this track, there's almost no structure. You'll build two frontend, single page web apps.  And you'll build your own test library.
 
 You'll work in unchanging groups of about four for the whole week.
 
