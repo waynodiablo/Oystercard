@@ -2,7 +2,7 @@
 
 * How will you serve your app? Maybe a very simple library like :pill: [http-server](../pills/http_server.md)?
 
-* How will you write and run unit tests? Have a look at :pill: [writing tests without a testing framework](../pills/writing_tests_without_a_testing_framework.md).
+* How will you write and run unit tests? Have a look at :pill: [writing tests without a testing library](../pills/writing_tests_without_a_testing_library.md).
 
 * Maybe you won't write any feature tests.  If you do, how will you do it? Maybe you could write tests as functions that use DOM methods like `click` to click on things, and include your test file into your `index.html` when you want to run your tests?
 
