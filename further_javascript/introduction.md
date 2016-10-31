@@ -25,9 +25,14 @@ To help you towards your primary goal, your secondary goal will be to produce a 
 
 Your diagram should aim to include, as a minimum: model, view, controller, external API, browser page, unit tests, feature tests, static server, node, XMLHttpRequest, the DOM.
 
-### Concepts and concretes
+### Concepts
 
-You'll create two frontend, [single page](https://msdn.microsoft.com/en-gb/magazine/dn463786.aspx) web apps.  You'll learn about events and manipulating the [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).  You'll deepen your understanding of Ajax and JavaScript.  And you'll learn about frontend versions of familiar concepts like templating and routing.
+* Frontend, [single page](https://msdn.microsoft.com/en-gb/magazine/dn463786.aspx) web apps.
+* Events and event handlers.
+* Manipulating the [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+* Ajax.
+* Frontend templating.
+* Frontend routing.
 
 ## Tracks
 
