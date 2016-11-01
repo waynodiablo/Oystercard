@@ -8,7 +8,7 @@
 * Week 3: [Welcome to the web: Battle in the browser](intro_to_the_web/00_challenge_map.md)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/00_challenge_map.md)
 * Week 5: [Intro to Javascript: Thermostat](thermostat/0_challenge_map.md)
-* Week 6: [MakersBnB](makersbnb/introduction.md)
+* Week 6: [MakersBnB](makersbnb)
 * Week 7: [Further JavaScript](further_javascript/README.md)
 * Week 8: [Intro to Rails](rails/introduction_to_rails.md)
 * Week 9: [Practice project week](practice_project_week/introduction.md)
