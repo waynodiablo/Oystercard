@@ -11,7 +11,7 @@
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 Learning at Makers (lead coach)
 * 15.15 - 16.15 Knowledge Worker (Will)
-* 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/print_rectangle_kata) (lead coach)
+* 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata) (lead coach)
 * 17.30 - 18.30 Social with pizza
 
 ## Today's photo schedule
