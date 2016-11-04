@@ -1,8 +1,10 @@
 # Project track
 
-For this track, there's almost no structure. You'll build two frontend, single page web apps.  And you'll build your own test library.
+You'll work in unchanging **teams of about four** for the whole week.
 
-You'll work in unchanging groups of about four for the whole week.
+You'll **implement user stories** for a note-taking app.  No challenges, no walkthroughs.
+
+And you'll implement user stories for an app that summarises the news.  No challenges, no walkthroughs.
 
 ## Structure of the week
 

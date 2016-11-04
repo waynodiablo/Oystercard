@@ -1,8 +1,10 @@
 # Challenge track
 
-There is some structure to guide you on this track.
+You'll work in **pairs** as usual, swapping pairs each day.
 
-You'll work in pairs as usual, swapping pairs each day.
+You'll build a note-taking app by working through **challenges**.  No walkthroughs.
+
+And you'll implement user stories for an app that summarises the news.  No challenges, no walkthroughs.
 
 ## Structure of the week
 

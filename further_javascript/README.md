@@ -36,10 +36,11 @@ Your diagram should aim to include, as a minimum: model, view, controller, exter
 
 ## Tracks
 
-This week is composed of separate tracks.  You'll choose one and stay on it for the whole week.
+This week is composed of two separate tracks.  You'll choose one track and stay on it for the whole week.
 
-* The [challenge track](00_challenge_track.md) has some structure to guide you, but less than normal.
-* The [project track](project_track.md) has almost no structure.
+* In the [challenge track](00_challenge_track.md), you'll work in changing pairs as normal.  You'll implement an app using challenges to guide you (no walkthroughs).  And you'll implement another app using only user stories to guide you (no challenges or walkthroughs).
+
+* In the [project track](project_track.md), you'll work in small teams for the whole week.  You'll implement two apps using only user stories to guide you (no challenges, no walkthroughs).
 
 ## Get started
 
