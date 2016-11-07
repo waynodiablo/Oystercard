@@ -20,3 +20,5 @@ As a programmer
 I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
+
+(NB: notes do not need to be permanently stored.  If the user refreshes their web page, they'll lose their notes, and that's fine.)
