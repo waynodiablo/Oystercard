@@ -20,7 +20,7 @@ In this challenge, you'll create a static HTML page and make it available for br
 - [ ] Run `http-server` to serve your `index.html`.
 - [ ] Go to `http://localhost:8080/` in a browser to view your `index.html` page.  It should say `hello`.
 
-> Why are you using node and a "server"? Does this mean that your frontend-only app actually has a backend? Kind of.  But it's a backend with very limited responsibilities.  Try diagramming the architecture of your app so far to understand this better.
+> Why are you using node and a "server"? Does this mean that your frontend-only app actually has a backend? Kind of.  But it's a backend with very limited logic.  Try diagramming the architecture of your app so far to understand this better.
 
 ### Resources
 
