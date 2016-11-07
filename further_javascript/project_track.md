@@ -12,7 +12,7 @@ And you'll implement user stories for an app that summarises the news.  No chall
 
 Take [user stories for a notes app](notes_app_user_stories.md).  Use them to build a frontend, single page web app.
 
-You may not use any existing web frameworks, libraries or even a test library (e.g. Angular, React, Jasmine, jQuery).
+You can't use existing web frameworks, libraries or even a test library (e.g. no Angular, React, Jasmine, jQuery etc.).
 
 No challenges.  No walkthroughs.
 
@@ -28,7 +28,7 @@ Extract your own test library from your app.  See here for more [guidance on tes
 
 Build an [app that summarises the news](news_summary_project.md).
 
-You may not use any existing web frameworks or libraries (e.g. Angular, React, Jasmine, jQuery).  (But you can use your new testing library!)
+You can't use existing web frameworks or libraries (e.g. no Angular, React, Jasmine, jQuery etc.). (But you can use your new testing library!)
 
 No challenges.  No walkthroughs.
 
