@@ -16,4 +16,4 @@
 
 * How will you map URLs to resources? How will you render HTML to the page? How will you let your HTML interface interact with your models in a clean way? Maybe a controller or two?
 
-* How will you make requests to external APIs? Maybe Ajax with jQuery? Maybe Ajax with raw XMLHttpRequest objects?
+* How will you make requests to external APIs? Maybe Ajax with raw XMLHttpRequest objects?
