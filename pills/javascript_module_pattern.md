@@ -335,11 +335,11 @@ var exclaim = (function() {
 })();
 ```
 
-The way the pattern is achieved isn't very important.  The important part is achieving the same goals of hiding internal details and exposing an external API.
+The way the pattern is achieved isn't very important.  The important part is achieving the goal of encapsulation.
 
 ## Build tools
 
-The module pattern is a hack to deal with the fact that earlier browser JavaScript specifications don't provide a standard way to import code from a module.  Using `require` is much nicer.  Some people use build tools like Webpack and Browserify to let them use require in browser JavaScript code.  These tools take all JavaScript files in a project and lightly rewrite the code to turn the `require` expressions into code that will work in the browser.
+The module pattern is a hack to deal with the fact that earlier browser JavaScript specifications don't provide a standard way to import code from a module.  Using `require` is much nicer.  Some people use build tools like Webpack and Browserify to let them use require in browser JavaScript code.  These tools take all the JavaScript files in a project and lightly rewrite the code to turn the `require` expressions into code that will work in the browser.
 
 However, while using a build tool can solve this problem, it adds another layer of complexity to your setup.
 
