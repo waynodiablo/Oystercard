@@ -10,7 +10,7 @@
 
 * How will you intercept URL changes so that they don't reload the page? Have a look at :pill: [frontend, single page app](../pills/frontend_single_page_app.md).
 
-* How will you implement the domain model? Maybe the [constructor and prototype pattern](https://github.com/maryrosecook/constructor-and-prototype-pattern-workshop)?
+* How will you implement the domain model? Maybe the [constructor and prototype pattern](https://github.com/makersacademy/skills-workshops/tree/master/week-5/encapsulation_with_constructor_and_prototype_pattern)?
 
 * How will you construct your HTML content? You could write a view module.  Maybe it will concatenate strings? Maybe it will use a tiny tiny templating framework that you write.
 
