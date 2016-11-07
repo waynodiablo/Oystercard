@@ -1,6 +1,6 @@
 # Frontend, single page app guidance
 
-* How will you serve your app? Maybe a very simple library like :pill: [http-server](../pills/http_server.md)?
+* How will you serve your app? Maybe a very simple node library like :pill: [http-server](../pills/http_server.md)? (This is exempt from the "no frameworks, no libraries" rule.)
 
 * How will you write and run unit tests? Have a look at :pill: [writing tests without a testing library](../pills/writing_tests_without_a_testing_library.md).
 
