@@ -18,12 +18,12 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 #### Secondary goal
 
-To help you towards your primary goal, your secondary goal will be to produce a diagram of how all the parts of a frontend application interact.
+To help you towards your primary goal, your secondary goal will be to produce a diagram of how all the parts of your notes app interact.
 
 * Draw the diagram on Tuesday.
 * Each morning, update the diagram with your latest understanding.
 
-Your diagram should aim to include, as a minimum: model, view, controller, external API, browser page, unit tests, feature tests, static server, node, XMLHttpRequest, the DOM.
+Your diagram might include: model, view, controller, external API, browser page, unit tests, feature tests, static server, node, XMLHttpRequest, the DOM.
 
 ### Concepts
 
