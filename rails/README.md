@@ -2,10 +2,9 @@
 
 Welcome to Rails week!
 
-Rails is a popular Model View Controller (MVC) web application framework. Sinatra, by comparison, is just a web application framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.  
+Rails is a popular Model View Controller (MVC) web application framework. Sinatra, by comparison, is just a web application framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.
 
-Rails is, well...like being 'on rails'. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours _convention over configuration_ - the trick to enjoying Rails is to know the conventions and stick to them wherever possible. 
-
+Rails is, well...like being 'on rails'. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours _convention over configuration_ - the trick to enjoying Rails is to know the conventions and stick to them wherever possible.
 
 ## Learning objectives
 
@@ -34,11 +33,11 @@ Your diagram can include boxes for every directory and file inside a standard Ra
 
 ## This Week's Project: Yelp
 
-Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails. 
+Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails.
 
-There are two tracks: 
+There are two tracks:
 
-1. Build the project in teams, without the walkthrough; or 
+1. Build the project in teams, without the walkthrough; or
 2. Take the road oft travelled, and complete the project using the walkthrough.
 
 Both tracks will take you to the same place, but Track 1 is entirely self-led. See the following specification for both.
