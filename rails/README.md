@@ -6,7 +6,31 @@ Rails is a popular Model View Controller (MVC) web application framework. Sinatr
 
 Rails is, well...like being 'on rails'. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours _convention over configuration_ - the trick to enjoying Rails is to know the conventions and stick to them wherever possible. 
 
-> You will find Rails infinitely easier to understand if you try to build a diagram of how all the parts fit together. You can iterate throughout the week. _There are lots of parts, and your biggest danger is getting overwhelmed._ Make sure you have a map with you!
+
+## Learning objectives
+
+### Goals for the week
+
+Ask yourself the same two questions:
+
+* Are you having fun?
+
+* Are you a better developer than you were yesterday?
+
+#### Primary goal
+
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
+
+* **Can you use Rails and its conventions to build a web app?**
+
+#### Secondary goal
+
+To help you towards your primary goal, your secondary goal will be to produce a diagram of how all the parts of Rails interact.
+
+* Draw the diagram on Tuesday.
+* Each morning, update the diagram with your latest understanding.
+
+Your diagram can include boxes for every directory and file inside a standard Rails app.
 
 ## This Week's Project: Yelp
 
