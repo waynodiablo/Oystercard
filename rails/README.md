@@ -1,10 +1,41 @@
 # Introduction to Rails
 
-Welcome to Rails week!
+You'll use Rails to build a clone of Yelp, an app for reviewing restaurants.
 
-Rails is a popular Model View Controller (MVC) web application framework. Sinatra, by comparison, is just a web application framework. Unlike Sinatra, Rails provides guidance as to your higher level architecture such as patterns like MVC.
+## Convention over configuration
 
-Rails is, well...like being 'on rails'. There are fewer decisions for you to make, and more decisions that are made for you. It's 'opinionated'. It favours _convention over configuration_ - the trick to enjoying Rails is to know the conventions and stick to them wherever possible.
+Last week, you did tons of low-level stuff.  You had to do lots of work that would have been much quicker and easier with libraries.
+
+This week, you'll use Rails. Rails is a web application framework that prioritises convention over configuration.  This means two things:
+
+1. You don't tell Rails how your code is structured.  You structure your code in the way Rails thinks is best.
+2. The API tries to be very consistent.  You can often guess how a Rails API will work, based on the way other Rails APIs work.
+
+### Advantages and disadvantages
+
+#### Advantages
+
+* You have to write less code, because you don't need to tell Rails the things it has already assumed.
+* Your code is automatically structured is a half-decent way.
+* You can learn the Rails API quite quickly by following its patterns.
+
+#### Disadvantages
+
+* It's easy to do things the way Rails wants you to.  It can be quite hard when you need to leave the Rails.
+* Rails has a lot of magic in the way it does things because of the higher level abstractions it gives you.  It can be hard to understand what's going on under the covers.
+
+### Example 1
+
+When you write tests with rspec,  you run `rspec`, it will run all the files whose names match the pattern `*_spec.rb`.  This convention means:
+
+* You have to write less code because you don't need to bother telling rspec where your tests are.
+* Your test files are structured more sensibly because their names clearly name them as "specs".
+
+### Example 2
+
+In rspec, the `.to be()` matcher has the same syntax as `.to eq()`.  This convention means that:
+
+* If you learn `.to be()` first and then you hear about `eq`, you can make a guess about how you use it and you're more likely to be right.
 
 ## Learning objectives
 
@@ -31,6 +62,10 @@ To help you towards your primary goal, your secondary goal will be to produce a 
 
 Your diagram can include boxes for every directory and file inside a standard Rails app.
 
+#### Detailed learning objectives
+
+* [Learning Objectives](learning_objectives.md)
+
 ## This Week's Project: Yelp
 
 Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails.
@@ -44,9 +79,17 @@ Both tracks will take you to the same place, but Track 1 is entirely self-led. S
 
 * [Yelp Project Specification](yelp_project_specification.md)
 
-## Learning Objectives
+## Code reviews
 
-* [Learning Objectives](learning_objectives.md)
+We'll have code reviews 9.30 to 10 on Tuesday, Wednesday, Thursday and Friday.  They will be for both tracks.
+
+## MVP
+
+Remember to focus on getting to an MVP ASAP.
+
+## Use Rails 4
+
+
 
 ## Related Pills
 
