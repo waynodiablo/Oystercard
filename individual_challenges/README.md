@@ -26,8 +26,8 @@ By the end of the week, you should:
 ### Structure of the week
 
 * Each day you will face a different technical challenge, to be approached solo.
-* At the end of each day, we will use a randomiser to select a few people to show their code for a discussion.
 * At 5.30pm, you'll review your code in pairs.
+* At 6pm, we'll review code as a group.
 * In the morning each day we will reflect on the previous day and present the next challenge.
 * There will be two sessions where we get together as a group to practice technical interview questions and technical language.
 * Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
