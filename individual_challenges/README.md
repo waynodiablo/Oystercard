@@ -32,24 +32,39 @@ Each day, you'll work solo to complete a diffeent technical challenge.
 * At 5.30pm, you'll review your code in pairs.
 * At 6pm, we'll review code as a group.
 
+### Interviews
+
+There will be two sessions where we get together as a group to practice technical interview questions and technical language.
+
+### Processes
+
+Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
+
+### Challenges
+
+Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
+
 #### Monday
+
 * [Database server](database_server.md)
 * Technical interview practice
 
 #### Tuesday
+
 * [Bank tech test](bank_tech_test.md)
 
 #### Wednesday
+
 * [tic-tac-toe](tic_tac_toe.md)
 * Technical interview practice
 
 #### Thursday
+
 * [Gilded rose tech test](gilded_rose.md)
 
 #### Friday
-* [Till tech test](till_tech_test.md)
 
-Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
+* [Till tech test](till_tech_test.md)
 
 ### Resources
 [The Coding Dojo Handbook (recommended reading post-course)](https://leanpub.com/codingdojohandbook)
