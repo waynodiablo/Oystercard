@@ -9,6 +9,8 @@ Ask yourself the same two questions:
 
 #### Primary goal
 
+By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
+
 * **Can you solve a challenging technical problem by writing well crafted code?**
 
 By "well crafted code", we mean code that is well tested and follows Kent Beck's 4 rules of simple design.
