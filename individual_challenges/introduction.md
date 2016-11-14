@@ -9,7 +9,7 @@ Ask yourself the same two questions:
 
 #### Primary goal
 
-* **Can you solve a challenging technical problem by writing well crafted code**
+* **Can you solve a challenging technical problem by writing well crafted code?**
 
 By "well crafted code", we mean code that is well tested and follows Kent Beck's 4 rules of simple design.
 
