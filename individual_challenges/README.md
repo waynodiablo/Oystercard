@@ -40,6 +40,10 @@ There will be two sessions where we get together as a group to practice technica
 
 Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
 
+### Code reviews from your coach
+
+You can message your coach on Slack and ask for a code review of one of your repos anytime you like.
+
 ### Challenges
 
 Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
