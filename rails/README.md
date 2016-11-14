@@ -87,8 +87,6 @@ Remember to focus on getting to an MVP ASAP.
 
 ## Use Rails 4
 
-
-
 ## Related Pills
 
 * :pill: [MVC](../pills/mvc.md)
