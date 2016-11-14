@@ -72,12 +72,10 @@ Yelp is a popular web application that allows users to rate and review restauran
 
 There are two tracks:
 
-1. Build the project in teams, without the walkthrough; or
-2. Take the road oft travelled, and complete the project using the walkthrough.
+1. Build the project in teams using the [specification](yelp_project_specification.md), without the walkthrough; or
+2. Take the road oft travelled, and complete the project using the [walkthrough](yelp_project_specification.md).
 
-Both tracks will take you to the same place, but Track 1 is entirely self-led. See the following specification for both.
-
-* [Yelp Project Specification](yelp_project_specification.md)
+Both tracks will take you to the same place, but Track 1 is entirely self-led.
 
 ## Code reviews
 
