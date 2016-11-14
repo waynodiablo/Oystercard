@@ -20,7 +20,7 @@ By "well crafted code", we mean code that is well tested and follows Kent Beck's
 By the end of the week, you should:
 
 * Feel more confident in your ability to complete a tech test.
-* Have developed a structured process to approaching complex problems, utilising TDD and SOLID principles.
+* Have developed a structured process to approaching complex problems, utilising TDD and good OO design skills.
 * Be able to discuss your code using more technical language, and with a wider vocabulary.
 
 ### Structure of the week
