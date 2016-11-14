@@ -67,4 +67,5 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 * [Till tech test](till_tech_test.md)
 
 ### Resources
+
 [The Coding Dojo Handbook (recommended reading post-course)](https://leanpub.com/codingdojohandbook)
