@@ -25,12 +25,12 @@ By the end of the week, you should:
 
 ### Structure of the week
 
-* Each day you will face a different technical challenge, to be approached solo.
+Each day, you'll work solo to complete a diffeent technical challenge.
+
+* 9.30am (except Monday): We'll reflect briefly on the previous day's challenge.  Then your coach will announce the day's technical challenge.
+* 9.30am - 5.30pm: You'll work solo on the day's technical challenge.
 * At 5.30pm, you'll review your code in pairs.
 * At 6pm, we'll review code as a group.
-* In the morning each day we will reflect on the previous day and present the next challenge.
-* There will be two sessions where we get together as a group to practice technical interview questions and technical language.
-* Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
 
 #### Monday
 * [Database server](database_server.md)
