@@ -12,7 +12,7 @@ Let's make use of our deduct method to charge the card with the minimum charge.
 ```ruby
 def touch_out
   deduct(MINIMUM_CHARGE)
-  @in_journey = true
+  @in_journey = false
 end
 ```
 
