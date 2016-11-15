@@ -81,6 +81,12 @@ Both tracks will take you to the same place, but Track 1 is entirely self-led.
 
 We'll have code reviews 9.45 to 10.15 on Tuesday, Wednesday, Thursday and Friday.  They will be for both tracks.
 
+## Standups
+
+* **Project track:** Organise standups in your teams.
+
+* **Walkthrough track:** 9.30am in the bytes announced.
+
 ## MVP
 
 Remember to focus on getting to an MVP ASAP.
