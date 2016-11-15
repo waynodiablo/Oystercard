@@ -79,7 +79,7 @@ Both tracks will take you to the same place, but Track 1 is entirely self-led.
 
 ## Code reviews
 
-We'll have code reviews 9.30 to 10 on Tuesday, Wednesday, Thursday and Friday.  They will be for both tracks.
+We'll have code reviews 9.45 to 10.15 on Tuesday, Wednesday, Thursday and Friday.  They will be for both tracks.
 
 ## MVP
 
