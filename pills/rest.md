@@ -51,6 +51,29 @@ Although there's of course much more to REST, understanding that it's all about
 *resources*/*nouns* (like restaurants in this example), and *verbs*
 (POST/GET/PATCH/DELETE) is the main thing you need to understand.
 
+## Routing for a real application
+
+When you want to write a web app, you need a few more routes on top of the basic create, read, update and delete.  You need:
+
+* A route for listing all the records for a certain resource (e.g. all the restaurants).
+* A route to show a web form for entering the details of a new record.
+* A route to show a web form for entering the new details of an existing record.
+
+Rails has a set of conventions for what URLs to use for these extra things:
+
+```sh
+Verb    URI Pattern            Controller#action
+------  ---------------------  ------------------
+GET     /restaurants           restaurants#index
+POST    /restaurants           restaurants#create
+GET     /restaurants/new       restaurants#new
+GET     /restaurants/:id/edit  restaurants#edit
+GET     /restaurants/:id       restaurants#show
+PATCH   /restaurants/:id       restaurants#update
+PUT     /restaurants/:id       restaurants#update
+DELETE  /restaurants/:id       restaurants#destroy
+```
+
 ## More Resources (geddit?)
 
 - [Slides based on this pill[(http://slides.com/makersacademy/rest)
