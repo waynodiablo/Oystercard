@@ -4,7 +4,7 @@
 
 By now your Oystercard application is pretty sophisticated: the card can hold the balance, be touched in and out and remember the history of journeys. You learned a lot although right now it probably all seems very confusing.
 
-Now that we have zone information in the system, it's time to make our fare calculation more sophisticated. At the moment a flat fare (one pound) is charged for any journey, including incomplete ones. However, let's make the fare depend on the number of zones crossed. We will charge £1  for every journey, plus £1 for every zone boundary crossed. So, a journey within the same zone will cost £1, the journey between zones 1 and 2 will cost £2, and the journey between zones 3 and 5 will cost £3. For simplicity sake, assume that the smallest possible number of zones is crossed, e.g. a journey from zone 2 to zone 2 doesn't cross any boundaries (as opposed to, say, going via zone 1).
+Now that we have zone information in the system, it's time to make our fare calculation more sophisticated. At the moment a flat fare (one pound) is charged for any journey, except incomplete ones where the penalty charge is issued (six pounds). However, let's make the fare depend on the number of zones crossed. We will charge £1  for every journey, plus £1 for every zone boundary crossed. So, a journey within the same zone will cost £1, the journey between zones 1 and 2 will cost £2, and the journey between zones 3 and 5 will cost £3. For simplicity sake, assume that the smallest possible number of zones is crossed, e.g. a journey from zone 2 to zone 2 doesn't cross any boundaries (as opposed to, say, going via zone 1).
 
 Update your test suite to check that a correct fare is charged.
 
