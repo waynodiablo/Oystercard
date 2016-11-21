@@ -10,7 +10,7 @@
 
 5. When you get a :shipit: or other similarly appropriate emoji, merge your PR.
 
-6. When you're happy, merge your changes on GitHub. You should then deploy immediately - if you have CI setup you can get it to do this for you automatically.
+6. When you're happy, merge your changes on GitHub. You should then deploy immediately. If you have CI setup you can get it to do this for you automatically.
 
 7. Do some QA on your live site if you have it setup.
 
