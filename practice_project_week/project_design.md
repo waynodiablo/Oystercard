@@ -33,3 +33,7 @@ You've probably come up with a lot of great features.  Choose the one that will 
 Design a user flow, design a screen interface, sketch, draw flowcharts, whatever you like.
 
 **Deliverable: user stories.**
+
+## 5. When you've implemented the interaction, return to step 3
+
+Choose the next most important feature of your MVP, design it and build it.
