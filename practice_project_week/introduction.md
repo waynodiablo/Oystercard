@@ -43,4 +43,4 @@ You can use any technology you like! It will be easier to use technologies you'v
 
 ## Resources
 
-* :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
+* :pill: [Development workflow](https://github.com/makersacademy/course/blob/master/pills/development_workflow.md)
