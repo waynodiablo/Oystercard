@@ -47,6 +47,10 @@ You can have standups and retros in your teams.
 * 11.00am: group code review.
 * 12.00pm: announcement of teams and [design your project](./project_design_workshop.md) workshop.
 
+### Wednesday
+
+* 2.00pm: Final projects idea generation workshop (like the one for practice projects).
+
 ### Friday
 
 * 4.00pm: Technical presentations. You'll give a technical presentation about your project.  See the [guidelines](./presentation_guidelines.md).
