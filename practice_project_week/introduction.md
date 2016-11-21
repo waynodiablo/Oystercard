@@ -38,4 +38,3 @@ You can use any technology you like! It will be easier to use technologies you'v
 
 * :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
 * [How much design upfront?](http://sjmog.github.io/posts/503_software-design-up-front-how-much/)
-* [Card wall is not Kanban](http://blog.silvabox.com/card-wall-is-not-kanban/)

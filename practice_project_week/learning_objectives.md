@@ -8,11 +8,6 @@
   * Apply Agile methodologies throughout the project.
   * Identify a Minumum Viable Product (/Prototype) for your project.
 
-## Kanban
-  * Define Kanban as a process for managing workflow.
-  * Reflect on the benefits of pull- rather than push-based workflow.
-  * Explain how 'Work in Progress' (WIP) limits are necessary to enable pull systems.
-
 ## User stories
   * Express the application as a set of user stories before writing a line of code.
 
