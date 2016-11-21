@@ -40,10 +40,16 @@ You can have standups and retros in your teams.
 
 ## Schedule
 
+### Monday
+
 * 09.30am: [project idea generation workshop](./project_idea_generation_workshop.md) (aka jambouree).
 * 10.00am: code review in your pairs.
 * 11.00am: group code review.
 * 12.00pm: announcement of teams and [design your project](./project_design_workshop.md) workshop.
+
+### Friday
+
+* 4.00pm: Technical presentations. You'll give a technical presentation about your project.  See the [guidelines](./presentation_guidelines.md).
 
 ## Resources
 
