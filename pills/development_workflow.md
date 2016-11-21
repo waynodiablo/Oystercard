@@ -12,6 +12,6 @@
 
 6. When you're happy, merge your changes on GitHub. You should then deploy immediately. If you have CI setup you can get it to do this for you automatically.
 
-7. Do some QA on your live site if you have it setup.
+7. Do some QA on your live site if you have it set up.
 
 8. Highfive someone/something.
