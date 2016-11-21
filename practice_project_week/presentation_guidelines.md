@@ -1,4 +1,4 @@
-# Practice project presentations
+# Practice project presentation guidelines
 
 * You'll have 8 minutes to present.
 
