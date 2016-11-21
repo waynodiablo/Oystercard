@@ -28,7 +28,7 @@ The practice and final projects also provide a safe environment for you to be cr
 
 ## What is a successful project?
 
-This is not a test, nor a challenge to see how many features you can cram into a few days. Far more important is that you have 1 feature that is fully tested end-to-end, and that you have worked well together as a team using Agile methodologies.
+This is not a test, nor a challenge to see how many features you can cram into a few days. Far more important is that you have one feature that is fully tested end-to-end, and that you have worked well together as a team using Agile methodologies.
 
 ## What technology should we use?
 
