@@ -34,6 +34,13 @@ This is not a test, nor a challenge to see how many features you can cram into a
 
 You can use any technology you like! It will be easier to use technologies you've already used at Makers.  But you can use ones that are completely new.
 
+## Schedule
+
+* 09.30am: [project idea generation workshop](./project_idea_generation_workshop.md) (aka jambouree).
+* 10.00am: code review in your pairs.
+* 11.00am: group code review.
+* 12.00pm: announcement of teams and [design sprint](./design_sprint.md).
+
 ## Resources
 
 * :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
