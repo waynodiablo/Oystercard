@@ -18,7 +18,7 @@
 
 8. Highfive someone/something.
 
-##External resources
+## External resources
 
 * [Git Flow - a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 * [A more advanced workflow with rebasing](http://www.integralist.co.uk/posts/github-workflow.html)
