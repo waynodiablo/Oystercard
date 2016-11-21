@@ -39,9 +39,8 @@ You can use any technology you like! It will be easier to use technologies you'v
 * 09.30am: [project idea generation workshop](./project_idea_generation_workshop.md) (aka jambouree).
 * 10.00am: code review in your pairs.
 * 11.00am: group code review.
-* 12.00pm: announcement of teams and [design sprint](./design_sprint.md).
+* 12.00pm: announcement of teams and [design your project](./project_design.md) workshop.
 
 ## Resources
 
 * :pill: [Github Workflow](https://github.com/makersacademy/course/blob/master/pills/git_workflow.md)
-* [How much design upfront?](http://sjmog.github.io/posts/503_software-design-up-front-how-much/)
