@@ -10,10 +10,12 @@
 
 5. Get another member of the team to review your PR.
 
-6. When you get a :shipit: or other similarly appropriate emoji, merge your PR.
+6. Use the pull request comments section to discuss the code and make improvements until the code reviewing pair are satisfied.
 
-7. When you're happy, merge your changes on GitHub. You should then deploy immediately. If you have CI setup you can get it to do this for you automatically.
+7. When you get a :shipit: or other similarly appropriate emoji, merge your PR.
 
-8. Do some QA on your live site if you have it set up.
+8. When you're happy, merge your changes on GitHub. You should then deploy immediately. If you have CI setup you can get it to do this for you automatically.
 
-9. Highfive someone/something.
+9. Do some QA on your live site if you have it set up.
+
+10. Highfive someone/something.
