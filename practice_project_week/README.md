@@ -34,6 +34,10 @@ This is not a test, nor a challenge to see how many features you can cram into a
 
 You can use any technology you like! It will be easier to use technologies you've already used at Makers.  But you can use ones that are completely new.
 
+## MVP
+
+Try to get to your MVP by Tuesday evening.
+
 ## Standups and retros
 
 You'll have standups and retros in your teams.
