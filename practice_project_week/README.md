@@ -39,7 +39,7 @@ You can use any technology you like! It will be easier to use technologies you'v
 * 09.30am: [project idea generation workshop](./project_idea_generation_workshop.md) (aka jambouree).
 * 10.00am: code review in your pairs.
 * 11.00am: group code review.
-* 12.00pm: announcement of teams and [design your project](./project_design.md) workshop.
+* 12.00pm: announcement of teams and [design your project](./project_design_workshop.md) workshop.
 
 ## Resources
 
