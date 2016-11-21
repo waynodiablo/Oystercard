@@ -18,32 +18,6 @@
 
 8. Highfive someone/something.
 
-## Example
-
-An example command line workflow using [hub](https://github.com/github/hub) to create pull requests on the command line.
-
-### In Progress
-```
-git checkout -b 295-dates-on-apply-page
-git push -u origin 295-dates-on-apply-page
-```
-
-### QA
-```
-git checkout 295-dates-on-apply-page
-git commit -am "Adds dates on apply page. Closes #295"
-git push
-git pull-request
-```
-
-Once you've got the thumbs up, merge on GitHub.
-
-### Done
-```
-git checkout master
-git pull
-```
-
 ##External resources
 
 * [Git Flow - a successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
