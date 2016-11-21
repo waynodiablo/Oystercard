@@ -36,7 +36,7 @@ You can use any technology you like! It will be easier to use technologies you'v
 
 ## Standups and retros
 
-You can have standups and retros in your teams.
+You'll have standups and retros in your teams.
 
 ## Schedule
 
