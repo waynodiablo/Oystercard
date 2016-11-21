@@ -2,7 +2,7 @@
 
 1. Create a Github issue in the relevant repository relating to the user story or bug.
 
-2. When you are ready to work on the story (normally as part of a sprint - it will be moved in the to-do column during the sprint kick-off meeting), create a branch that begins with the issue number and then explains the task at hand, e.g. `295-dates-on-apply-page`.
+2. When you are ready to work on the user story, create a branch it, e.g. `dates-on-apply-page`.
 
 3. When you are done, create a pull request from your branch to `master`.
 
