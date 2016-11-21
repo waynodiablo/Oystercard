@@ -24,7 +24,7 @@ You've probably come up with a lot of great features.  Choose the one that will 
 
 * Space Invaders: a ship that can fire.
 * Eliza automated therapist: a box where you can submit a message.
-* A compiler: a program that can parse the program `1` and return the result.
+* A compiler: a program that can parse and execute the program `1` and print the result.
 
 **Deliverable: a one-sentence description of the MVP.**
 
