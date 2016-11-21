@@ -1,6 +1,6 @@
 # Project design workshop
 
-In this workshop, you'll do steps 1 to 4 below:
+In this workshop you'll come up with a basic design what your project does. You'll do steps 1 to 4 below:
 
 1. Create a one sentence project description.
 2. List features.
