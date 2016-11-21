@@ -3,7 +3,7 @@
 In this workshop you'll come up with a basic design what your project does. You'll do steps 1 to 4 below:
 
 1. Create a one sentence project description.
-2. List features.
+2. List interactions.
 3. Choose the MVP interaction.
 4. Design the MVP interaction.
 5. When you've implemented the interaction, return to 3.
@@ -24,7 +24,7 @@ Come up with a list of things your user could do with your app.  Whiteboard, bra
 
 ### 3. Choose the MVP interaction
 
-You've probably come up with a lot of great features.  Choose one interaction that will define your MVP.  The "skateboard" of your "car".  It often feels like you need lots of features for the MVP, but you usually only need one.  For example:
+You've probably come up with a lot of great interactions.  Choose one interaction that will define your MVP.  The "skateboard" of your "car".  It often feels like you need lots of interactions for the MVP, but you usually only need one.  For example:
 
 * Space Invaders: a ship that can fire.
 * Eliza automated therapist: a box where you can submit a message.
@@ -40,7 +40,7 @@ Design a user flow, design a screen interface, sketch, draw flowcharts, whatever
 
 ### 5. When you've implemented the interaction, return to step 3
 
-Choose the next most important feature of your MVP, design it and build it.
+Choose the next most important interaction of your MVP, design it and build it.
 
 ## Announce project description and MVP interaction (10m)
 
