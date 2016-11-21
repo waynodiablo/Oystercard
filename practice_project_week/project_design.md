@@ -4,7 +4,7 @@
 2. List features.
 3. Choose the MVP interaction.
 4. Design the MVP interaction.
-5. When you've implemented the feature, return to 3.
+5. When you've implemented the interaction, return to 3.
 
 ## Create one sentence project description
 
