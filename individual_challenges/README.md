@@ -51,7 +51,6 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 #### Monday
 
 * [Database server](database_server.md)
-* Technical interview practice
 
 #### Tuesday
 
@@ -60,7 +59,6 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 #### Wednesday
 
 * [tic-tac-toe](tic_tac_toe.md)
-* Technical interview practice
 
 #### Thursday
 
