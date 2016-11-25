@@ -27,10 +27,6 @@ By the end of the week, you should:
 
 Each day, you'll work solo to complete a different technical challenge.  We'll also do quick code reviews and retros on each tech test.
 
-### Interviews
-
-There will be two sessions where we get together as a group to practice technical interview questions and technical language.
-
 ### Processes
 
 Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
