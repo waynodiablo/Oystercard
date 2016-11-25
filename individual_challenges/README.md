@@ -25,7 +25,7 @@ By the end of the week, you should:
 
 ### Structure of the week
 
-Each day, you'll work solo to complete a diffeent technical challenge.
+Each day, you'll work solo to complete a different technical challenge.
 
 * 9.30am: We'll reflect briefly on the previous day's challenge.  Then your coach will announce the day's technical challenge.
 * 9.30am - 5.30pm: You'll work solo on the day's technical challenge.
