@@ -1,8 +1,8 @@
 # Practice project presentation guidelines
 
-* You'll have 8 minutes to present.
+* You'll have 8 minutes to present.  You don't have to use all the time if you don't want to.
 
-* Practice your presentation to make sure it flows smoothly, and to make sure you keep to the time limit.
+* Practice your presentation so it flows smoothly and is within the time limit.
 
 * Focus your presentation on the technical details of how your project works.  Try to show the core technical accomplishment in your app.  This might involve a diagram that explains the architecture, a flow diagram of information moving through the app, or a very quick code walkthrough of a crucial algorithm in your code.
 
