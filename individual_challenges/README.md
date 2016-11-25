@@ -59,6 +59,7 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 * 9.30am: We'll do a mini retro on yesterday's tech test.
 * No tech test today.
 * 10am - 12pm: Write your CV session.
+* 1:30pm: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
 * 2.30pm: Careers session.
 
 #### Thursday
