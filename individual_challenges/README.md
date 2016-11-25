@@ -27,7 +27,7 @@ By the end of the week, you should:
 
 Each day, you'll work solo to complete a different technical challenge.
 
-* 9.30am: We'll reflect briefly on the previous day's challenge.  Then your coach will announce the day's technical challenge.
+* 9.30am: We'll do a very quick retro on the previous day's challenge.  Then your coach will announce the day's technical challenge.
 * 9.30am - 5.30pm: You'll work solo on the day's technical challenge.
 * At 5.30pm, you'll review your code in pairs.
 * At 6pm, we'll review code as a group.
