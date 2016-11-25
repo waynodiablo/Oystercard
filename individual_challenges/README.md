@@ -25,12 +25,7 @@ By the end of the week, you should:
 
 ### Structure of the week
 
-Each day, you'll work solo to complete a different technical challenge.
-
-* 9.30am: We'll do a very quick retro on the previous day's challenge.  Then your coach will announce the day's technical challenge.
-* 9.30am - 5.30pm: You'll work solo on the day's technical challenge.
-* At 5.30pm, you'll review your code in pairs.
-* At 6pm, we'll review code as a group.
+Each day, you'll work solo to complete a different technical challenge.  We'll also do quick code reviews and retros on each tech test.
 
 ### Interviews
 
@@ -50,25 +45,41 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Monday
 
-* [Database server](database_server.md)
+* 9.30am: Your coach will introduce today's tech test: [Database server](database_server.md)
+* 10am: You'll work solo on the tech test.
+* 5.30pm: You'll review your code in pairs.
+* 6pm: We'll review your code in a group.
 
 #### Tuesday
 
-* [Bank tech test](bank_tech_test.md)
+* 9.30am: We'll do a mini retro on yesterday's tech test.
+* 9.45am: Your coach will introduce today's tech test: [Bank tech test](bank_tech_test.md)
+* 10am: You'll work solo on the tech test.
+* 5.30pm: You'll review your code in pairs.
+* 6pm: We'll review your code in a group.
 
 #### Wednesday
 
+* 9.30am: We'll do a mini retro on yesterday's tech test.
+* No tech test today.
 * 10am - 12pm: Write your CV session.
 * 2.30pm: Careers session.
 
 #### Thursday
 
-* [Gilded rose tech test](gilded_rose.md)
-* 1pm: Will’s 2nd talk.
+* 9.30am: Your coach will introduce today's tech test: [Gilded rose tech test](gilded_rose.md)
+* 10am: You'll work solo on the tech test.
+* 1pm: **Will’s 2nd talk.**
+* 5.30pm: You'll review your code in pairs.
+* 6pm: We'll review your code in a group.
 
 #### Friday
 
-* [tic-tac-toe](tic_tac_toe.md)
+* 9.30am: We'll do a mini retro on yesterday's tech test.
+* 9.45am: Your coach will introduce today's tech test: [tic-tac-toe](tic_tac_toe.md)
+* 10am: You'll work solo on the tech test.
+* 5.30pm: You'll review your code in pairs.
+* 6pm: We'll review your code in a group.
 
 ### Resources
 
