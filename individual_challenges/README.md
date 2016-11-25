@@ -27,6 +27,8 @@ By the end of the week, you should:
 
 Each day, you'll work solo to complete a different technical challenge.  We'll also do quick code reviews and retros on each tech test.
 
+You'll also come up with ideas for final projects and your coach will announce your final projects teams.
+
 ### Processes
 
 Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
@@ -68,6 +70,7 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 * 10am: You'll work solo on the tech test.
 * 1pm: **Will’s 2nd talk.**
 * 5.30pm: You'll review your code in pairs.
+* 6pm: Your coach will announce the teams for final projects.
 * 6pm: We'll review your code in a group.
 
 #### Friday
