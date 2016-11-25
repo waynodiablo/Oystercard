@@ -58,15 +58,13 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Wednesday
 
-* [tic-tac-toe](tic_tac_toe.md)
-
 #### Thursday
 
 * [Gilded rose tech test](gilded_rose.md)
 
 #### Friday
 
-* [Till tech test](till_tech_test.md)
+* [tic-tac-toe](tic_tac_toe.md)
 
 ### Resources
 
