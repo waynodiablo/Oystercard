@@ -58,9 +58,13 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Wednesday
 
+* 10am - 12pm: Write your CV session.
+* 2.30pm: Careers session.
+
 #### Thursday
 
 * [Gilded rose tech test](gilded_rose.md)
+* 1pm: Will’s 2nd talk.
 
 #### Friday
 
