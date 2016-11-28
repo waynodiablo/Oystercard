@@ -38,6 +38,10 @@ There are four tech tests this week.  This means you can start from scratch four
 
 You can message your coach on Slack and ask for a code review of one of your repos anytime you like.
 
+### Tech test repo checklist
+
+Use this [tech test repo checklist](./tech_test_repo_checklist.md) while you're writing your code.  And use it when doing pair reviews at the end of each day.
+
 ### Language
 
 You can use Ruby or JavaScript for any of the challenges.
