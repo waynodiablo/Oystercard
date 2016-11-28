@@ -47,16 +47,16 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 * 9.30am: Your coach will introduce today's tech test: [Database server](database_server.md)
 * 10am: You'll work solo on the tech test.
-* 5.30pm: You'll review your code in pairs.
-* 6pm: We'll review your code in a group.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: We'll review your code in a group.
 
 #### Tuesday
 
 * 9.30am: We'll do a mini retro on yesterday's tech test.
 * 9.45am: Your coach will introduce today's tech test: [Bank tech test](bank_tech_test.md)
 * 10am: You'll work solo on the tech test.
-* 5.30pm: You'll review your code in pairs.
-* 6pm: We'll review your code in a group.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: We'll review your code in a group.
 
 #### Wednesday
 
@@ -71,17 +71,17 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 * 9.30am: Your coach will introduce today's tech test: [Gilded rose tech test](gilded_rose.md)
 * 10am: You'll work solo on the tech test.
 * 1pm: **Will’s 2nd talk.**
-* 5.30pm: You'll review your code in pairs.
-* 6pm: Your coach will announce the teams for final projects.
-* 6pm: We'll review your code in a group.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: Your coach will announce the teams for final projects.
+* 5.30pm: We'll review your code in a group.
 
 #### Friday
 
 * 9.30am: We'll do a mini retro on yesterday's tech test.
 * 9.45am: Your coach will introduce today's tech test: [tic-tac-toe](tic_tac_toe.md)
 * 10am: You'll work solo on the tech test.
-* 5.30pm: You'll review your code in pairs.
-* 6pm: We'll review your code in a group.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: We'll review your code in a group.
 
 ### Resources
 
