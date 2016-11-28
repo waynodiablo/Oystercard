@@ -31,7 +31,9 @@ You'll also come up with ideas for final projects and your coach will announce y
 
 ### Processes
 
-Focus on your process - each day should be a practice not just of that new problem, but problem solving in general.
+This week is especially good for focusing on the question, "am I a better developer than I was yesterday?"
+
+There are four tech tests this week.  This means you can start from scratch four times.  It means you can reflect on what was good and what was bad four times.  And it means you can try new things to improve four times.
 
 ### Code reviews from your coach
 
