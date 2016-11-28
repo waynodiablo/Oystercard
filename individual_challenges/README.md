@@ -39,6 +39,10 @@ There are four tech tests this week.  This means you can start from scratch four
 
 You can message your coach on Slack and ask for a code review of one of your repos anytime you like.
 
+### Language
+
+You can use Ruby or JavaScript for any of the challenges.
+
 ### Challenges
 
 Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
