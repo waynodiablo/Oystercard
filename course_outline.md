@@ -13,7 +13,7 @@
 * Week 8: [Intro to Rails](rails/README.md)
 * Week 9: [Practice project week](practice_project_week/README.md)
 * Week 10: [Individual challenges (tech test week)](individual_challenges/README.md)
-* Weeks 11-12: Final Projects
+* Weeks 11-12: [Final Projects](final_projects/README.md)
 
 ## Supporting Materials
 
