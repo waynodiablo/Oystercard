@@ -38,7 +38,7 @@ You can use any technology you like! It will be easier to use technologies you'v
 
 ## MVP
 
-Try to get to your MVP by Wednesday evening.
+Try to get to complete your MVP by Wednesday evening.
 
 ## XP values
 
