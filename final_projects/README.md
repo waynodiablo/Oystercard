@@ -36,6 +36,14 @@ This is not a test, nor a challenge to see how many features you can cram in. Fa
 
 You can use any technology you like! It will be easier to use technologies you've already used at Makers.  But you can use ones that are completely new.
 
+## Designing your project
+
+It's highly recommended that you spend time designing your project.  To guide your design, you can use the [same method you used to design your practice project](../practice_project_week/project_design_workshop.md).
+
+## Development workflow
+
+Remember to use a [development workflow](https://github.com/makersacademy/course/blob/master/pills/development_workflow.md) similar to the one you used for Makersbnb and practice projects.
+
 ## MVP
 
 Try to get to complete your MVP by Wednesday evening.
@@ -43,10 +51,6 @@ Try to get to complete your MVP by Wednesday evening.
 ## XP values
 
 If you're ever stuck, or facing a problem, turn to the [XP values](http://www.extremeprogramming.org/values.html) for guidance to how to act.
-
-## Development workflow
-
-Remember to use a [development workflow](https://github.com/makersacademy/course/blob/master/pills/development_workflow.md) similar to the one you used for Makersbnb and practice projects.
 
 ## Standups and retros
 
