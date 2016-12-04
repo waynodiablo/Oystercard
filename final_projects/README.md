@@ -74,7 +74,7 @@ Codecodecode.
 
 ### Tuesday night: :snowflake: :snowflake: Feature freeze :snowflake: :snowflake:
 
-On Tuesday night of week 12, you'll stop building new features.  You'll spend time refactoring to make your code as well-crafted as you can.  You'll spend time working on your presentation.
+On Tuesday night of week 12, you'll stop building new features.  You'll spend the rest of the time refactoring to make your code as well-crafted as you can.  You'll also spend time working on your presentation.
 
 ### Thursday afternoon: Practice presentations
 
