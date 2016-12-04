@@ -1,6 +1,6 @@
 # Final projects
 
-You'll spend the next two weeks working in teams on a project.
+You'll spend the next two weeks working in teams on an extended project.
 
 ## Learning objectives
 
