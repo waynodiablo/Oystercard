@@ -68,16 +68,20 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 
 ### Week 11
 
-Codecodecode.
+#### Monday to Friday
+
+Project work.
 
 ### Week 12
 
-### Tuesday night: :snowflake: :snowflake: Feature freeze :snowflake: :snowflake:
+#### Tuesday
 
-On Tuesday night of week 12, you'll stop building new features.  You'll spend the rest of the time refactoring to make your code as well-crafted as you can.  You'll also spend time working on your presentation.
+* Evening: :snowflake: :snowflake: Feature freeze :snowflake: :snowflake: You stop building new features.  You'll spend the rest of the time refactoring to make your code as well-crafted as you can.  You'll also spend time working on your presentation.
 
-### Thursday afternoon: Practice presentations
+#### Thursday
 
-This will be a session where you can practice your presentations and get feedback from each other and your coach.
+* 5pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from each other and your coach.
 
-### Friday late afternoon: graduation
+#### Friday
+
+* 5.00pm - 7.30pm: Graduation and project presentations
