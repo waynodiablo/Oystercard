@@ -31,7 +31,7 @@ When you run Ruby code, errors and the things you `p` out are shown in your term
 The JavaScript equivalent is the Console tab of the Chrome developer tools.  Whenever you're running JavaScript code, have the Console tab open.  It will show you all the errors that are thrown by your JavaScript code, and also all the things that you print out with `console.log()`.
 
 ### Resources
-- [Using the console](https://developers.google.com/web/tools/javascript/console/index?hl=en)
+- [Using the console](https://developers.google.com/web/tools/chrome-devtools/console/)
 - [Explore and Master Chrome DevTools - Codeschool (Free Tutorial)](http://discover-devtools.codeschool.com/)
 - :pill: [`function` in JavaScript](../pills/js_functions.md)
 - :pill: [JavaScript conventions](../pills/js_conventions.md)
