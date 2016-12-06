@@ -41,7 +41,7 @@ You could achieve this like so:
 ```ruby
 private
 def current_journey
-  @current_journey || journey_class.new
+  @current_journey ||= journey_class.new
 end
 ```
 
