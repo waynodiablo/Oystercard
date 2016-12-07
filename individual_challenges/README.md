@@ -52,41 +52,43 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Monday
 
-* 9.30am: Your coach will introduce today's tech test: [Database server](database_server.md)
+* 9.30am: Your coach will introduce today's tech test: [Bank](bank_tech_test.md)
 * 10am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
 #### Tuesday
 
-* 9.30am: We'll do a mini retro on yesterday's tech test.
-* 9.45am: Your coach will introduce today's tech test: [Bank tech test](bank_tech_test.md)
+* 9.30am: We'll do a mini retro on yesterday's work.
+* 9.45am: Your coach will introduce the next tech test: [Gilded rose](gilded_rose.md)
 * 10am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
 #### Wednesday
 
-* 9.30am: We'll do a mini retro on yesterday's tech test.
-* No tech test today.
-* 10am - 12pm: Write your CV session.
+* 9.30am: We'll do a mini retro on yesterday's work.
+* 10am: In between the careers sessions, you'll continue to work on the Gilded rose tech test.  (You may not get much time to code today.)
+* 10am - 12pm: Write your CV careers session.
 * 1:30pm: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
 * 2.30pm: Careers session.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: We'll review your code in a group.
 
 #### Thursday
 
-* 9.30am: Your coach will introduce today's tech test: [Gilded rose tech test](gilded_rose.md)
+* 9.30am: We'll do a mini retro on yesterday's work.
+* 9.45am: Your coach will introduce the next tech test: [tic-tac-toe](tic_tac_toe.md)
 * 10am: You'll work solo on the tech test.
 * 1pm: **Will’s 2nd talk.**
 * 5.00pm: You'll review your code in pairs.
-* 5.30pm: Your coach will announce the teams for final projects.
 * 5.30pm: We'll review your code in a group.
+* 5.30pm: Your coach will announce the teams for final projects.
 
 #### Friday
 
-* 9.30am: We'll do a mini retro on yesterday's tech test.
-* 9.45am: Your coach will introduce today's tech test: [tic-tac-toe](tic_tac_toe.md)
-* 10am: You'll work solo on the tech test.
+* 9.30am: We'll do a mini retro on yesterday's work.
+* 10am: You'll continue to work solo on the tic-tac-toe tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
