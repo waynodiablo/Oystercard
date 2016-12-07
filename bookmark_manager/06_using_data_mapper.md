@@ -32,7 +32,7 @@ Basically, you can use DataMapper to interact with a database using Ruby, instea
 ## To complete this challenge, you will need to
 
 - [ ] Create a new Ruby project including the `data_mapper` and `dm-postgres-adapter` gems.
-- [ ] Create a database called `datamapper_play` using `psql`.
+- [ ] Create a database called `database_play` using `psql`.
 - [ ] Start `irb`, and require the ORM gems from step 1.
 - [ ] In `irb`, set up DataMapper to *connect* to the `datamapper_play` database.
 - [ ] In `irb`, turn on DataMapper's error logging.

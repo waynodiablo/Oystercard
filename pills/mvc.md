@@ -1,6 +1,6 @@
 # MVC
 
-![MVC Diagram](https://raw.githubusercontent.com/makersacademy/course/master/images/mvc.png?token=AAMwWhrA6SRi-lhd82Xv3q0ZULltxWz0ks5W5pQEwA%3D%3D)
+![MVC Diagram](../images/mvc.png)
 
 **MVC** stands for **model, view, controller** – the three key types of component that make up many web apps.
 

@@ -305,7 +305,7 @@ Note that if you like/prefer gherkin style 'given, when, then' syntax you can al
 
 ###Further Reading
 
-- [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL)
+- [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL.html)
 
 - [Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
 
