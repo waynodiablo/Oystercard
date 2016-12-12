@@ -1,12 +1,21 @@
 # Final Project Presentations
 
-Here are some guidelines to help you get started when planning your final project presentations:
+Here are some guidelines for your final project presentations:
 
-* The time limit is 5 minutes - practice, practice, practice to ensure you are around the correct length.
-* Ensure that you clearly define the problem you are solving.
-* Focus on the user story - if the audience empathises with the user, they will be able to see themselves using your app.
+* The time limit is 5 minutes.  Practice, practice, practice to ensure you come in under the time limit.  You'll be cut off at 5 minutes!
+
+* To guide you on what to include, think what you found interesting about other people’s presentations.
+
 * If appropriate, make it funny. If not, make it engaging.
-* Consider using a video for the technical demonstration, instead of using the live site.
-* If you had a real client, describe the learning you gained from working with them.
-* It's good to mention your code coverage - if you have coveralls or code climate on your app, feel free to boast about your score!
-* It's OK to talk about the technology you used, although bear in mind that the audience probably do not have great technical knowledge, so it may go over their heads - keep it short and simple.
+
+* Explain very briefly a scenario where someone might use your app.
+
+* Make a video that demonstrates a user using your app.  One of your team can describe what's going on as the video plays.  No need for a live demo (every time I've done a live demo, at least one thing has gone wrong).
+
+* Describe any interesting struggles you had with teamwork, learning or programming.  Describe how you overcame them.
+
+* Describe the architecture of your project.  Make sure a non-technical audience will be able to understand your description.  Don't just list the technologies you used.  Instead, perhaps describe how information flows through your architecture.
+
+* There's no need to talk about the future direction of the project.  Focus your presentation on what you've already achieved.
+
+* Make sure your presentation is on a computer that has HDMI.
