@@ -51,6 +51,10 @@ This is the basic view of the website. You will build it by working through the 
 
 ![](https://dchtm6r471mui.cloudfront.net/hackpad.com_jubMxdBrjni_p.52567_1380279073159_Screen%20Shot%202013-09-27%20at%2011.06.12.png "Bookmark Manager")
 
+## Learning, not challenge progress
+
+There is a **lot** of challenge material this week.  Don't expect to get through it all.  As always at Makers, focus on deep learning, rather than progression through the challenges.
+
 ## Challenges
 
  1. [Creating User stories](01_creating_user_stories.md)
