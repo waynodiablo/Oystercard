@@ -12,10 +12,10 @@ Here are some guidelines for your final project presentations:
 
 * Make a video that demonstrates a user using your app.  One of your team can describe what's going on as the video plays.  No need for a live demo (every time I've done a live demo, at least one thing has gone wrong).
 
-* Describe any interesting struggles you had with teamwork, learning or programming.  Describe how you overcame them.
+* Describe any interesting struggles you had with teamwork, learning or programming.  Describe how you overcame them.  Focus on behaviours and skills.  Be specific.  Don't say, "we communicated well".  Say, "We had a miscommunication where two pairs worked on the same feature.  We decided in the future to..."
 
-* Describe the architecture of your project.  Make sure a non-technical audience will be able to understand your description.  Don't just list the technologies you used.  Instead, perhaps describe how information flows through your architecture.
+* Describe the architecture of your project.  Make sure a non-technical audience will be able to understand your description.  Don't put up the wall of death (the slide that is just library and framework logos).  Instead, perhaps describe how information flows through your architecture.
 
 * There's no need to talk about the future direction of the project.  Focus your presentation on what you've already achieved.
 
-* Make sure your presentation is on a computer that has HDMI.
+* Make sure your presentation is on a computer that has HDMI.  Have your presentation ready on a backup computer (also with HDMI), just in case.
