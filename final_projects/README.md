@@ -80,7 +80,7 @@ Project work.
 
 #### Thursday
 
-* 5pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from each other and your coach.
+* 3pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from each other and your coach.
 
 #### Friday
 
