@@ -18,4 +18,10 @@ Here are some guidelines for your final project presentations:
 
 * There's no need to talk about the future direction of the project.  Focus your presentation on what you've already achieved.
 
-* Make sure your presentation is on a computer that has HDMI.  Have your presentation ready on a backup computer (also with HDMI), just in case.
+* Please **make your presentation in slides.com**.
+
+* Your coach's computer will be used as the presentation computer.  They will have all your slide decks opened in Chrome and ready for you to present.
+
+* By Friday afternoon, please send your coach:
+  * The link to your slides on slides.com
+  * A link to your demo video.  (This way I can have it downloaded on my machine in case the internet dies.)
