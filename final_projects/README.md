@@ -80,8 +80,18 @@ Project work.
 
 #### Thursday
 
-* 3pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from each other and your coach.
+* 3pm - 4.45pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from your coach.  You can drop in and out - you don't all have to be here.
 
 #### Friday
 
-* 5.00pm - 8pm: Demo day and project presentations
+* 9.30am - 1pm: Your coach will be available to give you feedback on your presentation.
+* 4pm: Restore your laptops to factory settings and return them to Cata.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
+
+##### Demo day ceremony
+
+* 5pm: Your guests and the public start arriving.
+* 6pm: Opening spiel from coach.
+* 6.05pm: First team presents.
+* 7pm: Closing spiel.
+* 7pm: Hanging out floor 2.
+* 8pm: Close.
