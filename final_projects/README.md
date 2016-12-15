@@ -84,4 +84,4 @@ Project work.
 
 #### Friday
 
-* 5.00pm - 7.30pm: Demo day and project presentations
+* 5.00pm - 8pm: Demo day and project presentations
