@@ -9,7 +9,7 @@ This is a kind reminder that the laptops have to be returned by the last Friday 
 3. Report any damages or hardware problems.
 
 
-# How to resetthe laptop by USB
+# How to reset the laptop by USB
 
 Make sure the Laptop has over 50% of battery or connected to power.
 
