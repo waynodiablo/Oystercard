@@ -93,5 +93,5 @@ Project work.
 * 5.30pm: Opening spiel from coach.
 * 5.35pm: First team presents.
 * 6.30pm: Closing spiel.
-* 6.30pm: Hanging out floor 2.
+* 6.30pm: Hanging out on floor 2.
 * 7.30pm: Close.
