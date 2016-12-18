@@ -46,7 +46,7 @@ Remember to use a [development workflow](https://github.com/makersacademy/course
 
 ## MVP
 
-Try to get to complete your MVP by Wednesday evening.
+Try to complete your MVP by Wednesday evening.
 
 ## XP values
 
