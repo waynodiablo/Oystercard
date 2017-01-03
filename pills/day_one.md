@@ -30,6 +30,10 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
+## Getting your laptop (onsite cohorts)
+
+At 11.30am, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
+
 ## Makersinit
 
 This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it sometime today.  Thanks!
