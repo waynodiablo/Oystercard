@@ -16,9 +16,9 @@ As part of the Makers experience you will be placed in a 'byte' which consists o
 
 A standup should consist of each member in turn answering three questions to the group of the form 'what is something I learned yesterday?', 'what do I hope to learn or improve today?', and 'what, if anything, is blocking me?'.  The ideal is to give only as much detail as necessary for everyone to be in the loop.  Any longer discussion should be moved to another meeting - potentially immediately after the standup.  It's the responsibility of everyone in the standup to ensure that long discussions do not break out, and that if longer discussions are needed that these are scheduled for later.
 
-Weekend coding challenges are released every Friday and your attempted solution must be submitted via pull request by Monday at 9am.  It does not matter if you 'complete' the challenge; submit your solution with as much code as you have working.  Also note that you can submit the pull request as early as you like; subsequent pushes to the branch will automatically update the pull request.  You will receive automated feedback on your solution which will appear on the pull request.  Mondays are code review days and you will receive both peer and coach feedback on your code.
+Weekend coding challenges are released every Friday and your attempted solution must be submitted via pull request by Monday at 9am.  It does not matter if you 'complete' the challenge; submit your solution with as much code as you have working.  Also note that you can submit the pull request as early as you like; subsequent pushes to the branch will automatically update the pull request.  You will receive automated feedback on your solution which will appear on the pull request.  Monday mornings are reserved for code reviews.
 
-Tuesdays, Wednesday and Thursdays are pair-programming project days.  You will work in a pair with another student on a coding project. You will swap pair partners each day.  The following diagram summarizes the flow of the week:
+The remaining time is for pair-programming, working through the course material.  You will work in a pair with another student on a coding project. You will swap pair partners each day.  The following diagram summarizes the flow of the week:
 
 ![Makers Week](images/makers-week.png)
 
@@ -31,16 +31,16 @@ The weekly structure is maintained consistently for the first five weeks, then g
 
 **Junior Portion**
 
-1             | 2          | 3           | 4                | 5          | 6            |
---------------|------------|-------------|------------------|------------|--------------|
-Boris Bikes   | Oystercard | Battles Web | Bookmark Manager | JavaScript | Project Week |
+1             | 2          | 3          | 4                | 5          | 6         |
+--------------|------------|------------|------------------|------------|-----------|
+Boris Bikes   | Oystercard | Battle Web | Bookmark Manager | JavaScript | MakersBnB |
 
 
 **Senior Portion**
 
-7                  | 8     | 9         | 10             | 11             | 12            |
--------------------|-------|-----------|----------------|----------------|---------------|
-Further JavaScript | Rails | Makerthon | Final projects | Final projects | Hiring Week   |
+7                  | 8     | 9         | 10             | 11             | 12             |
+-------------------|-------|-----------|----------------|----------------|----------------|
+Further JavaScript | Rails | Makerthon | Tech Test Week | Final projects | Final projects |
 
 
 Each week there will be learning objectives relating to the particular project and pre-reading materials based on the learning objectives.
