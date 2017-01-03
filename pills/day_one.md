@@ -3,15 +3,15 @@
 ## Schedule for the first day
 
 * 08.30 - 09.30 Breakfast
-* 09.30 - 10.30 Welcome to Makers (lead coach)
-* 10.30 - 11.00 Name tag making (All staff, Juniors)
+* 09.30 - 10.30 Welcome to Makers (Mary)
+* 10.30 - 11.00 Name tag making (Kay, rest of staff, Juniors)
 * 11.00 - 12.00 Photos/laptops
 * 12.00 - 13.00 Lunch
 * 13.00 - 14.00 Life at makers/Inclusivity & diversity (Dana)
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (lead coach)
 * 15.15 - 16.15 Knowledge Worker (Will)
-* 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata) (lead coach)
+* 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata) (Kay)
 * 17.30 - 18.30 Social with pizza
 
 ## Today's photo schedule
