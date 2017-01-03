@@ -30,9 +30,15 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
-## Getting your laptop (onsite cohorts)
+## Laptops
+
+### Getting your laptop (onsite cohorts)
 
 At 11.30am, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
+
+### Setting up your laptop
+
+Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what to software to install to prepare for the Makers course.
 
 ## Makersinit
 
