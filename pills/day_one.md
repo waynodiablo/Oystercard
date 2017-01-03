@@ -16,7 +16,7 @@
 
 ## Today's photo schedule
 
-We have a professional photographer here to take a headshot that you can use for LinkedIn/GitHub etc. Find your five minute time slot in [this spreadsheet](https://docs.google.com/spreadsheets/d/1L1IfBWvLyQGKREQew6XyYsXrvTYioa5yq3V61wWKims/edit?usp=sharing)).  A couple of minutes before your timeslot, please leave whatever session you're in and go to the kitchen.
+We have a professional photographer here to take a headshot that you can use for LinkedIn/GitHub etc. You'll get a five minute time slot. A couple of minutes before your timeslot, please leave whatever session you're in and go to the kitchen.
 
 ## Rough weekly schedule
 
