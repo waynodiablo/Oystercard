@@ -74,6 +74,8 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 
 * The goal is not progress, but learning.  It's fine to complete 10 out of 22 challenges, as long as you played and explored.
 
+* Avoid the walkthroughs as much as possible.  Spending half an hour struggling might feel painful, but you'll learn so much from following dead-ends.  Before you look at the walkthrough, follow the whole [escalation process](./escalation_process).
+
 ### Weekend challenges
 
 * Small projects you build over the weekend.
