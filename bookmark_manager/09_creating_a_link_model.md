@@ -20,7 +20,7 @@ In this challenge, you will construct a `Link` **model** that uses the Datamappe
 - [ ] Create a `Link` model that uses Datamapper in `app/models/link.rb` with `:id`, `:title` and `:url` properties
 - [ ] Create a database called 'bookmark_manager_test'
 - [ ] At the bottom of `app/models/link.rb`, instruct DataMapper to:
-  - [ ] setup a connection to the `bookmark_manager_test` database (if you're doing git pong, create on both machines)
+  - [ ] setup a connection to the `bookmark_manager_test` database
   - [ ] `finalize` your DataMapper model
   - [ ] `upgrade` the database with any new properties
 - [ ] Run your feature test again.
