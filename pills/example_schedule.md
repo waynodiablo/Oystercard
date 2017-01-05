@@ -29,9 +29,9 @@
 * 09.45 - Byte 2 standup
 * 10.00 - Possible skills workshop
 * 13.30 - Byte 3 standup
-* 16.00 - Confidence survey
-* 16.30 - Weekly retro
-* 17.00 - Weekend challenge release
+* 17.00 - Confidence survey
+* 17.30 - Weekly retro
+* 18.00 - Weekend challenge release
 * 18.00 - Daily feedback
 
 ### Joy
