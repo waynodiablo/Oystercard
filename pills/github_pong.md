@@ -1,6 +1,8 @@
 Github Pong
 ============
 
+(Not to be confused with [ping pong pairing](./pairing.md#ping-pong-pairing-between-programmer-a-and-b).)
+
 Github Pong involves pushing code back and forth over related Github branches to make for quick driver/navigator swaps during pairing (remote or face-to-face).  This pill will guide you through your first GitHub Pong set up, setting up with a new pair, and merging branches once a challenge is 'complete'.
 
 ###First Steps###
@@ -24,7 +26,7 @@ git status
 git add README.md
 git commit -m "first commit: README.md"
 git push origin master
-``` 
+```
 Checkout a new branch for this day's work and push this new branch to your Github repo.
 ```sh
 git checkout -b day-one
