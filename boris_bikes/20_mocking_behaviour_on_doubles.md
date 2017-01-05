@@ -38,7 +38,7 @@ let(:bike) { double :bike }
 it 'releases working bikes' do
   # let's superpower our double
   # using allow().to receive().and_return()
-  allow(bike).to receive(:working).and_return(true)
+  allow(bike).to receive(:working?).and_return(true)
   subject.dock(bike)
   released_bike = subject.release_bike
   # Now the double responds to working?
