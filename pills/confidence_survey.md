@@ -1,6 +1,6 @@
 # Confidence survey
 
-At the end of each week, your coach will run a confidence survey session.
+At the end of many of the weeks on the course, your coach will run a confidence survey session.
 
 ## Process
 
