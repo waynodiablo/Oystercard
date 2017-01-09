@@ -118,13 +118,13 @@ end
 
 class Car
   def initialize
-    @engine = Engine.new
+    Engine.new.start
   end
 end
 
 class Plane
   def initialize
-    @engine = Engine.new
+    Engine.new.start
   end
 end
 ```
