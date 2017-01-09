@@ -49,7 +49,7 @@ No restaurants yet
 ```
 We've just fudged this by setting the link's `href` value to '#', so it doesn't go anywhere – but it is a link all the same. And our test is passing.
 
-Now let's try running out server again (if we didn't shut it down previously).  Note that we can use the following shorthand (where s is short for server)
+Now let's try running our server again (if we didn't shut it down previously).  Note that we can use the following shorthand (where s is short for server)
 
 ```sh
 bin/rails s
