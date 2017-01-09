@@ -80,7 +80,7 @@ Now, writing the Skateboard is just a matter of writing the class.  The code abo
 
 #### Program to an interface, not an implementation
 
-This is exemplified above.  Car, Plane and Skateboard have all agreed on using the same interface (`move`), rather than exposing their different interfaces (`drive, `fly`, `skate`).
+This is exemplified above.  Car, Plane and Skateboard have all agreed on using the same interface (`move`), rather than exposing their different implementations (`drive, `fly`, `skate`).
 
 #### Prefer composition to inheritance
 
