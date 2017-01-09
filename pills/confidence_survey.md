@@ -8,7 +8,7 @@ Time: 30 minutes.
 
 * Get into groups of about 4.
 
-* Every student, log into [Hub](hub.makersacademy.com) and click the button ‘Take Week 1 confidence survey’
+* Every student, log into [Hub](http://hub.makersacademy.com) and click the button ‘Take Week 1 confidence survey’
 
 * You'll see a list of questions about how confident you feel about different concepts, skills and behaviours
   * e.g.: "How's your Ruby? Could you write a method in Ruby? Could you use some common methods, like `chars` or `inject`? How are you with metaprogramming functions like `lambda`s and `Proc`s? What about keywords like `require`?"
