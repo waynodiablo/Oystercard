@@ -7,7 +7,10 @@ really stretch your skills in Ruby, TDD and object-oriented design.
 
 ## Kickoff
 
-In the [kickoff and overview of the week](./kickoff_and_overview_of_the_week.md), we'll talk about some high level techniques for writing object-oriented code that is easy to understand, easy to reuse, and easy to change.
+In the kickoff and overview of the week, we'll talk about some high level techniques for writing object-oriented code that is easy to understand, easy to reuse, and easy to change.
+
+[Normal kickoff document](./kickoff_and_overview_of_the_week.md)
+[January 2017 onsite kickoff document](./kickoff_and_overview_of_the_week_january2017_onsite.md)
 
 ## User Stories
 
