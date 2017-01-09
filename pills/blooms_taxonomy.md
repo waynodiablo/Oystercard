@@ -13,7 +13,7 @@ Of course, they mean wildly different things. Bloom's taxonomy tries to give mor
 
 ## Why is it useful?
 
-A key part of learning is accurate self-assessment. Bloom's taxonomy gives you some language to evaluate and discuss your progress and others' progress. Also, it helps you to pick appropriate tasks to improve your ability in a particular topic. Finally, it helps you learn effectively when you're worknig with people who have more or less ability than you.
+A key part of learning is accurate self-assessment. Bloom's taxonomy gives you some language to evaluate and discuss your progress and others' progress. Also, it helps you to pick appropriate tasks to improve your ability in a particular topic. Finally, it helps you learn effectively when you're working with people who have more or less ability than you.
 
 ## The taxonomy
 
