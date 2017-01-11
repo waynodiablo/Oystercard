@@ -5,7 +5,7 @@
 Now we want to set limits on what site visitors can do. From our [specification](../yelp_project_specification.md):
 
 * A user must be logged in to create restaurants
-* Users can only edit/delete restaurants **which they've created**
+* Users can only edit/delete restaurants **which they've created** (this will require you adding some associations...)
 * Users can only leave **one review per restaurant**
 * Users can delete their own reviews
 
