@@ -1,8 +1,4 @@
-# Version Control 1
-
-Congratulations and welcome to lesson 2. By finishing lesson 1, you're 1/60th of the way through. (That sounded more inspirational in my head)
-
-The good news is that we're already building on what you learned in lesson 1 with version control.
+# Version Control
 
 Version control is the process and technology used to "control" various "versions" of the code that you write. If, for example, you were building a house, you'd likely start with the foundation and make sure it's solid before you started building the walls. You'd want to stop after the walls were built to make sure everything lined up properly before adding the roof. You wouldn't want to build the entire thing and *realize* after the roof is built that there is a crack in the foundation.
 
@@ -306,7 +302,7 @@ git status
 
 ![Step ten](https://dchtm6r471mui.cloudfront.net/hackpad.com_mKMM4CQ89LW_p.52567_1381248728928_Screen%20Shot%202013-10-08%20at%2017.11.59.png)
 
-Git is an incredibly powerful tool and it can be a bit daunting when you're first introduced to it. We'll cover some more commands and use-case scenarios in future lessons, but know for now that it's here to help your workflow.
+Git is an incredibly powerful tool and it can be a bit daunting when you're first introduced to it.  But know for now that it's here to help your workflow.
 
 
 ### Going back in history
@@ -636,11 +632,9 @@ There is no point in repeating what's already out there. The point of this tutor
 - [Try Git](https://www.codeschool.com/courses/try-git) – interactive git game
 - [Pro Git book](http://git-scm.com/book) – a reference book on git.
 - [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys) – you'll need to do this before connecting to Github from the command line
-- [Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - An explanation of the sort of workflows you'll come across when using Git in the real world 
+- [Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - An explanation of the sort of workflows you'll come across when using Git in the real world
 
 
-### Challenges 
+### Challenges
 
-Before moving on to the next lesson, complete each of the following [tasks](https://github.com/makersacademy/course/blob/master/challenges/git_challenge.md).
-
-
+https://github.com/makersacademy/course/blob/master/challenges/git_challenge.md
