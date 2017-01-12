@@ -1,6 +1,13 @@
 # Git
 
-## Version control
+## Contents
+
+1. [What is version control?](#what-is-version-control)
+2. [Using Git commands to version control your own code](#using-git-commands-to-version-control-your-own-code)
+3. [GitHub](#github)
+5. [More resources](#resources)
+
+## What is version control?
 
 Version control is the process and technology used to "control" various "versions" of the code that you write. If, for example, you were building a house, you'd likely start with the foundation and make sure it's solid before you started building the walls. You'd want to stop after the walls were built to make sure everything lined up properly before adding the roof. You wouldn't want to build the entire thing and *realize* after the roof is built that there is a crack in the foundation.
 
@@ -23,7 +30,7 @@ Version control doesn't stop here. What if you decide to do a renovation to your
 It may sound like a science-fiction film but that's actually how version control works. Not using version control is like having time-travel skills and not using them! It's important to know and use version control because it's an awesome developer superpower.
 
 
-## Git
+## Using Git commands to version control your own code
 
 The most common version control system used by web developers is git. With git you get all of the benefits of controlling various versions of your code and the ability to handle distributed work among a team. [This isn't the only version control software](http://www.infoq.com/articles/dvcs-guide) out there, but it's what a large portion of software developers use and it's what we're going to cover here.
 
@@ -338,10 +345,10 @@ git checkout master
 By now you should know how to initialise a new repo, stage new files, commit changes, including removed files, and how to take a look at the past version of the code by checking out a specific commit. We'll explore more advanced git features in week 2.
 
 
-### Github 
+## Github
 
 
-Making all of these changes on your local computer are great, but we'll need some additional functionality provided by [Github](https://github.com/) to collaborate with other developers and browse code online. 
+Making all of these changes on your local computer are great, but we'll need some additional functionality provided by [Github](https://github.com/) to collaborate with other developers and browse code online.
 
 Github does three things. Firstly, it displays git repos in a visual way, so you can look at them online. Secondly, it serves as a common place for open source projects, so if you're using some open source library, the chances are you can find it on Github. Finally, Github provides a set of tools (forking, issues, wiki, etc) to help developers collaborate on projects. If you'd like to see an example Github project, check out [Bootstrap](https://github.com/twbs/bootstrap), [jQuery](https://github.com/jquery/jquery) or [Cocktails for Programmers](https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md).
 
@@ -623,8 +630,8 @@ Nothing new here. We just created a new local repo, added a remote and pulled th
 A common mistake is to forget that `git clone` created a folder for you. You need to run `git clone` in your projects folder, not the folder you want the repo files to be in.
 
 
-### Additional Resources
 
+## Resources
 
 There are many fantastic tutorials on the web covering git and Github in depth. Go through them to better understand how git works.
 
