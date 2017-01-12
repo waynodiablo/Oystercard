@@ -8,7 +8,7 @@ Software version control helps us avoid these problems by allowing us to keep va
 
 Additionally, version control allows multiple versions to be built simultaneously and then brought together. It doesn't matter whether you're working in a team or writing code alone, version control is something you absolutely need to understand.
 
-## What would version control in real world look like
+### What would version control in real world look like
 
 If our lives were version controller, we'd be able to travel back in time. Imagine going back to any given day being able to live through the life from that point onwards again?
 
