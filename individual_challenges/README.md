@@ -59,18 +59,15 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Tuesday
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 10am: In between the careers sessions, you'll continue to work on the Gilded rose tech test.  (You may not get much time to code today.)
 * 10am - 12pm: Write your CV careers session.
 * 1:30pm: Lunch
 * 2.30pm: Careers session.
-* 5.00pm: You'll review your code in pairs.
-* 5.30pm: We'll review your code in a group.
+* 5.00pm: Your coach will introduce the next tech test: [Gilded rose](gilded_rose.md)
+* 5.15pm: You'll work solo on the tech test.
 
 
 #### Wednesday
-* 9.30am: We'll do a mini retro on yesterday's work.
-* 9.45am: Your coach will introduce the next tech test: [Gilded rose](gilded_rose.md)
-* 10am: You'll work solo on the tech test.
+* 9.30am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
