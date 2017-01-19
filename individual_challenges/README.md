@@ -52,6 +52,8 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Monday
 
+* Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week. 
+
 * 9.30am: Your coach will introduce today's tech test: [Bank](bank_tech_test.md)
 * 10am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
@@ -59,9 +61,9 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Tuesday
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 10am - 12pm: Write your CV careers session.
-* 1:30pm: Lunch
-* 2.30pm: Careers session.
+* 10am - 11pm: Careers session: Practice Tech Interviews
+* 12pm: Lunchtime talk: Howard from Endjiin
+* 3.00 - 4pm: Careers session: How to network
 * 5.00pm: Your coach will introduce the next tech test: [Gilded rose](gilded_rose.md)
 * 5.15pm: You'll work solo on the tech test.
 
