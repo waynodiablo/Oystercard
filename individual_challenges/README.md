@@ -79,9 +79,7 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 9.45am: Your coach will introduce the next tech test: [tic-tac-toe](tic_tac_toe.md)
 * 10am: You'll work solo on the tech test.
-* 5.00pm: You'll review your code in pairs.
-* 5.30pm: We'll review your code in a group.
-* 5.30pm: Your coach will announce the teams for final projects.
+
 
 #### Friday
 
