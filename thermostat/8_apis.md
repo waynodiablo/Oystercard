@@ -1,4 +1,4 @@
-8# Thermostat: APIs
+# Thermostat: APIs
 
 [Back to the Challenge Map](0_challenge_map.md)
 
