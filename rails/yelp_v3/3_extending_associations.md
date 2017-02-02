@@ -111,8 +111,6 @@ Not only should this pass all our tests, we can use this extension module to ext
 
 For more information on extending Active Record associations, see the [Rails Guides](http://guides.rubyonrails.org/association_basics.html#association-extensions).
 
-
-* **Users can only edit/delete restaurants which they've created**
 * **Users can delete only their own reviews**
 
 ### Version 3 Complete! - End of Tutorial!
