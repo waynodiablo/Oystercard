@@ -40,7 +40,7 @@ To guide your learning, aim to be able to answer "yes" to the questions below.  
 
 * Can you use the [XP values](#xp-values) to guide your behaviour?
 
-* Can you follow the full [developer workflow](#developer-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
+* Can you follow the full [developer workflow](#development-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
 
 * Can you keep code quality and test coverage high whilst building new features?
 
