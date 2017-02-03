@@ -40,7 +40,7 @@ You can message your coach on Slack and ask for a code review of one of your rep
 
 ### Tech test repo checklist
 
-Use this [tech test repo checklist](./tech_test_repo_checklist.md) while you're writing your code.  And use it when doing pair reviews at the end of each day.
+Use this [tech test checklist](https://github.com/makersacademy/jobhunters/blob/master/tech_tests_how_to_succeed.md) while you're writing your code.  And use it when doing pair reviews at the end of each day.
 
 ### Language
 
@@ -52,7 +52,7 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 #### Monday
 
-* Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week. 
+* Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week.
 
 * 9.30am: Your coach will introduce today's tech test: [Bank](bank_tech_test.md)
 * 10am: You'll work solo on the tech test.
