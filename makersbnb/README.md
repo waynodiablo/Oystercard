@@ -20,7 +20,7 @@
 
 * Your coach will be around as usual.
 
-* Two careers sessions this week: Wednesday at 11.00 and Friday at 14.30.  Rest of the course: a careers session every Wednesday at 14.30.
+* Careers sessions begin this week.
 
 ## Goals for the week
 
