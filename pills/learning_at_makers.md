@@ -115,3 +115,7 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 * You ask us for an intro to a concept.  We might suggest a good blog post on the concept.
 
 * You have a bug you're stuck on.  We might guide you through a methodical debugging process.
+
+### Skills workshops
+
+* Skills workshops are interactive sessions where you practice a developer skill.  For example: debugging, or domain modelling.  They are guided by your coach, but you will spend most of your time doing, rather than listening.
