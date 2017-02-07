@@ -46,6 +46,10 @@
 
 * Behaviours are a focus at Makers.
 
+## XP values
+
+These are five, high-level values that help developers make good decisions.  Read about them [here](http://www.extremeprogramming.org/values.html).
+
 ## Growth mindset
 
 A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effective-learning-strategies-for-programmers/) about what a growth mindset is and how to practice it.
