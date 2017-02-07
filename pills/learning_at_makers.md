@@ -12,7 +12,7 @@
 
 * Some of these learning skills will be general: learning to research, to get information into a format in which you can manipulate it, learning to teach someone else, learning to abstract...
 
-* Ultimately, learning to to reflect on what you're doing and figure out ways to do it better next time.
+* Ultimately, learning to reflect on what you're doing and figure out ways to do it better next time.
 
 ## Self-led learning
 
