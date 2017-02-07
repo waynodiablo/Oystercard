@@ -2,7 +2,7 @@
 
 ### Office hours
 
-* Monday to Friday. Core hours: 09.30 to 18.00. You can stay until the office is closed - usually around 20.30.
+* Monday to Friday. Core hours: 09.30 to 18.00. You can stay until the office is closed at 7pm.
 
 * Saturday and Sunday.  The office is closed.
 
