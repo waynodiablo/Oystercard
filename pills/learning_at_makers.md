@@ -90,7 +90,7 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 
 ### Escalation process
 
-* One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.  It includes coming up with a clear problem explanation, talking to your pair programming partner, Googling, asking on Slack Overflow, and finally asking a coach.
+* One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.
 
 ### Daily feedback
 
