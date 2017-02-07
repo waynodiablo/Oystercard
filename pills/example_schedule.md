@@ -10,29 +10,27 @@
 
 #### Monday
 
-* Morning - Code review of weekend challenge
+* Morning - Code review of [weekend challenge](./learning_at_makers.md#weekend-challenges)
 * Late morning - Kick off for the week
-* Late morning - Release weekly challenges
-* 18.00 - Daily feedback
+* Late morning - Release [weekly challenges](./learning_at_makers.md#challenge-based-learning)
+* 18.00 - [Daily feedback](./learning_at_makers.md#daily-feedback)
 
 #### Tuesday, Wednesday, Thursday
 
-* 09.30 - Byte 1 standup
-* 09.45 - Byte 2 standup
-* 10.00 - Possible skills workshop
-* 13.30 - Byte 3 standup
-* 18.00 - Daily feedback
+* 09.30 - Byte 1 [standup](./student_standups.md)
+* 09.45 - Byte 2 [standup](./student_standups.md)
+* 10.00 - [Possible skills workshop](./learning_at_makers.md#skills-workshops)
+* 18.00 - [Daily feedback](./learning_at_makers.md#daily-feedback)
 
 #### Friday
 
-* 09.30 - Byte 1 standup
-* 09.45 - Byte 2 standup
-* 10.00 - Possible skills workshop
-* 13.30 - Byte 3 standup
-* 17.00 - Confidence survey
-* 17.30 - Weekly retro
-* 18.00 - Weekend challenge release
-* 18.00 - Daily feedback
+* 09.30 - Byte 1 [standup](./student_standups.md)
+* 09.45 - Byte 2 [standup](./student_standups.md)
+* 10.00 - [Possible skills workshop](./learning_at_makers.md#skills-workshops)
+* 17.00 - [Confidence survey](./confidence_survey.md)
+* 17.30 - [Weekly retro](./student_retrospective.md)
+* 18.00 - [Weekend challenge](./learning_at_makers.md#weekend-challenges) release
+* 18.00 - [Daily feedback](./learning_at_makers.md#daily-feedback)
 
 ### Joy
 
