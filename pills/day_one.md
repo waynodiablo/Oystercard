@@ -1,5 +1,7 @@
 # Your first day at Makers Academy
 
+If you have any questions, just ask!
+
 ## Schedule for the first day
 
 * 08.30 - 09.30 Breakfast
@@ -30,14 +32,14 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 ### Getting your laptop (onsite cohorts)
 
-At 11.30am, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
+At 11.30am on the first day, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
 
 ### Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what to software to install to prepare for the Makers course.
 
-## Makersinit
+### Installing Makersinit
 
-This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it sometime today.  Thanks!
+This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it.  Thanks!
 
 https://github.com/makersacademy/makersinit
