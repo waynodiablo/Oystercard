@@ -5,7 +5,7 @@
 * 08.30 - 09.30 Breakfast
 * 09.30 - 10.30 Welcome to Makers (Coach)
 * 10.30 - 11.00 Name tag making (Coach, staff, all students)
-* 11.00 - 12.00 Photos/get laptops
+* 11.00 - 12.00 Get laptops
 * 12.00 - 13.00 Lunch
 * 13.00 - 14.00 Life at makers/Inclusivity & diversity (Dana)
 * 14.00 - 14.30 Meditation
@@ -13,10 +13,6 @@
 * 15.15 - 16.15 Knowledge Worker (Will)
 * 16.30 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata) (Coach)
 * 17.30 - 18.30 Social with pizza
-
-## Today's photo schedule
-
-We have a professional photographer here to take a headshot that you can use for LinkedIn/GitHub etc. You'll get a five minute time slot. A couple of minutes before your timeslot, please leave whatever session you're in and go to the kitchen.
 
 ## Rough weekly schedule
 
