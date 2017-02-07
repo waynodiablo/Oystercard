@@ -5,7 +5,7 @@
 * 08.30 - 09.30 Breakfast
 * 09.30 - 10.30 Welcome to Makers (Coach)
 * 10.30 - 11.00 Name tag making (Coach, staff, all students)
-* 11.00 - 12.00 Get laptops
+* 11.00 - 12.00 Get and setup your laptops
 * 12.00 - 13.00 Lunch
 * 13.00 - 14.00 Life at Makers/Inclusivity & diversity (Dana)
 * 14.00 - 14.30 Meditation
