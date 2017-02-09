@@ -32,7 +32,6 @@ Here you will find other, relevant materials and challenges that will help you o
   - [Trade Made](http://www.trade-made.co.uk/)
   - [Look Mum No Hands](http://www.lookmumnohands.com)
   - [Fix](http://www.fix-coffee.co.uk)
-  - [Timber Yard](http://timberyardlondon.com)
 
 ## Makers Academy - The Company
 
