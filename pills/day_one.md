@@ -32,7 +32,7 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 ### Getting your laptop (onsite cohorts)
 
-At 11.30am on the first day, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
+At 11.00am on the first day, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
 
 ### Setting up your laptop
 
