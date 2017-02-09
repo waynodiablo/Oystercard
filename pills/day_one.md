@@ -12,7 +12,7 @@ If you have any questions, just ask!
 * 12.30 - 14.00 Lunch and more laptop setup
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Sam)
-* 15.15 - 16.15 Knowledge worker (Will)
+* 15.15 - 16.15 Knowledge worker talk, intro to the careers team (Will and the careers team)
 * 16.15 - 17.30 [Print rectangle kata workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata) (Coach)
 * 17.30 - 18.30 Social with pizza
 
