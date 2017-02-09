@@ -16,7 +16,7 @@ Ask yourself the same two questions:
 
 By the end of the week, the goal is to be able to answer "yes" to the week's primary question:
 
-* **Can you specify and build an extended project in a team?**
+* **Can you use high-quality processes to build an extended project in a team?**
 
 Production code is generally built by a team of developers. It is important that you leave Makers with the skills needed to work in a team, and this is the primary reason that project weeks exist in the curriculum.
 
