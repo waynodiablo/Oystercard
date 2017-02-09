@@ -20,6 +20,14 @@
 
 * This is a powerful position to be in, because you can teach yourself anything.
 
+## Learning, not progress
+
+It doesn't matter how many challenges you complete.  It doesn't matter how many web frameworks you've tried out.  All that matters is:
+
+* Learning
+* Building developer skills
+* Improving your development processes
+
 ## Concretes, concepts, skills, behaviours
 
 ### Concretes
