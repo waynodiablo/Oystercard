@@ -10,7 +10,7 @@ And you'll implement user stories for an app that summarises the news.  No chall
 
 ### Group code reviews
 
-We'll have group code reviews at 9.30am on Tuesday, Wednesday, Thursday and Friday.  These will last 30 minutes.  The format will be similar to the Monday weekend challenge code reviews.
+We'll have group code reviews on Wednesday, Thursday and Friday.  These will last 30 minutes.  The format will be similar to the Monday weekend challenge code reviews.
 
 ### Monday, Tuesday and Wednesday
 
