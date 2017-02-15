@@ -1,7 +1,8 @@
 Pair Programming
 ================
 
-
+Introduction
+------------
 
 Pair programming is the process whereby two people actively collaborate on developing code.  Used as part of a general teamwork approach it leads to improved code quality, team communication, knowledge share and huge learning gains.  [Large scale studies of computer science students](http://www.cs.pomona.edu/classes/cs121/supp/williams_prpgm.pdf) have shown greatly improved outcomes when students pair program on coding problems.  In the past, pair programming has been restricted to those able to meet in the same location, however it is now possible to remote pair program very easily using tools such as ScreenHero, c9.io or simply Google Hangouts, Skype (or any similar screen share tool).
 
