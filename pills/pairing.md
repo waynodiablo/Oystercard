@@ -1,6 +1,8 @@
 Pair Programming
 ================
 
+
+
 Pair programming is the process whereby two people actively collaborate on developing code.  Used as part of a general teamwork approach it leads to improved code quality, team communication, knowledge share and huge learning gains.  [Large scale studies of computer science students](http://www.cs.pomona.edu/classes/cs121/supp/williams_prpgm.pdf) have shown greatly improved outcomes when students pair program on coding problems.  In the past, pair programming has been restricted to those able to meet in the same location, however it is now possible to remote pair program very easily using tools such as ScreenHero, c9.io or simply Google Hangouts, Skype (or any similar screen share tool).
 
 The key component of pair programming is regular driver/navigator switching&nbsp;:twisted_rightwards_arrows:.  When pair programming, at any one time, one person should be the driver, i.e. the person actually typing, while the other pair should be the navigator.  The navigator's role is to try and think more broadly about where the code is going; to act as a sounding board to the driver and to offer suggestions on architectural design or to be looking up documentation related to the task at hand.  The navigator should avoid constantly mentioning spelling mistakes and other typos unless the driver is really stuck.
@@ -40,6 +42,24 @@ This 'fugue state' is not trivial to achieve, but well worth the effort.  In ord
 
 Another alternative that's probably best attempted when you are confident in your pairing and basic syntax is 'silent pairing' where you say nothing at all during the whole session and let the code do the talking.  Silent pairing requires extra discipline and must be combined with regular driver/navigator rotation; as well as a clear agreement on the context in which keyboard swapping takes place.  Silent pairing can sometimes be a useful technique if debate has gotten out of hand and there is a desire to move on and explore the problem in code as quickly as possible.
 
+### 'Ping Pong' Pairing between Programmer A and B:
+
+attributed to Jim Shore in his 2007 book "The Art of Agile Development"
+
+![Ping Pong Protocol](/images/PingPongProtocol.png)
+
+### 'Change the Message' between Programmer A and B:
+
+attributed to John Wilger
+
+![Change the Message](/images/ChangeTheMessage.png)
+
+### 'One Undermanship' between Programmer A and B:
+
+attributed to Sam Livingston Gray
+
+![OneUndermanship](/images/OneUndermanShip.png)
+
 ### Style Summary
 
 In review there are a lot of ways that you can approach pairing and a lot of ways that a pairing session can end up.  As an advanced pair programmer you are not absolutist about what particular style you are using moment to moment; it is all about compromise, 'give and take', with your current partner.  Professional pair programmers may swap backwards and forwards through a number of the above styles during the course of a single days work.  As a novice programmer we recommend that you initially strive for the 'Shared Head Space' pattern.  Once you feel you are achieving that on a semi-regular basis you can loosen up a bit; but the most important thing in the first instance is to recognize the pros and cons of the different styles and have an open discussion with your pair partner about which styles you are finding yourself in and how to push yourself towards a 'shared head space'.
@@ -68,29 +88,6 @@ General Pair Programming Tips
 * Be Intimidated
 * Be Quiet
 * Suffer in Silence
-
-Detailed Pair Programming Methodologies
--------------------------------
-
-### 'Ping Pong' Pairing between Programmer A and B:
-
-attributed to Jim Shore in his 2007 book "The Art of Agile Development"
-
-![Ping Pong Protocol](/images/PingPongProtocol.png)
-
-
-### 'Change the Message' between Programmer A and B:
-
-attributed to John Wilger
-
-![Change the Message](/images/ChangeTheMessage.png)
-
-
-### 'One Undermanship' between Programmer A and B:
-
-attributed to Sam Livingston Gray
-
-![OneUndermanship](/images/OneUndermanShip.png)
 
 Articles on Pair Programming
 -------------
