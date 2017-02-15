@@ -1,6 +1,17 @@
 Pair Programming
 ================
 
+Contents
+--------
+
+* [Introduction](#introduction)
+* [Pairing styles](#pairing-styles)
+* [General Pair Programming dos and don'ts](#general-pair-programming-dos-and-donts)
+* [Pairing on weekly challenges](#pairing-on-weekly-challenges)
+* [Articles on Pair Programming](#articles-on-pair-programming)
+* [Pair Programming Research](#pair-programming-research)
+* [Pair Programming Videos](#pair-programming-videos)
+
 Introduction
 ------------
 
@@ -14,8 +25,8 @@ Pair programming can be very exhausting as it will often lead to a state of very
 
 Please do read through the pair programming styles, tips and methodologies below and make sure to watch the videos referenced at the end of this document!
 
-Styles
-------
+Pairing styles
+--------------
 
 ### Side by Side
 
@@ -67,7 +78,7 @@ In review there are a lot of ways that you can approach pairing and a lot of way
 
 If you'd like help mastering the different pairing styles please do see the [pair_scaffolding](pair_scaffolding.md) :pill: pill for how someone can help 'scaffold' a pairing session for you.
 
-General Pair Programming Tips
+General Pair Programming Dos and Don'ts
 --------------
 
 ### Do's:
