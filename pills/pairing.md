@@ -90,6 +90,13 @@ General Pair Programming Tips
 * Be Quiet
 * Suffer in Silence
 
+Pairing on weekly challenges
+----------------------------
+
+When you're working on the weekly challenges, you'll rotate pairs each day.  Each day, when you start with your new pair, figure out which of you made it *least* far through the challenges.  You'll start the day's work at that challenge.  You'll also start with that person's repository.
+
+To collaborate on the weekly challenges, you can use the GitHub collaborator approach described in the [Git and Research workshop](https://github.com/makersacademy/skills-workshops/blob/master/week-1/git_and_research/README.md).
+
 Articles on Pair Programming
 -------------
 
