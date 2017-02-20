@@ -31,3 +31,17 @@ sudo make install
 ```
 openssl version
 ```
+
+## Reinstall Ruby versions
+
+* Run this command to remove all currently installed Ruby versions
+
+```
+rvm remove all
+```
+
+* Install Ruby again with RVM, for example:
+
+```
+rvm install 2.4.0
+```
