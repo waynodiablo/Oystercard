@@ -77,12 +77,6 @@ There are two tracks:
 
 Both tracks will take you to the same place, but Track 1 is entirely self-led.
 
-## Code reviews
-
-* **Project track:** Organise code review in your team.
-
-* **Walkthrough track:** We will have group code reviews on Tuesday, Wednesday, Thursday and Friday. The times may differ to fit around the skills workshops. Your coach will announce the timings on Slack.
-
 ## Standups
 
 * **Project track:** Organise standups in your teams.
