@@ -18,12 +18,16 @@ This guide assumes that the basic problem is that OS X is using an insecure vers
 
 4. Run these commands to compile and install OpenSSL:
 
-    ./Configure darwin64-x86_64-cc shared enable-ec_nistp_64_gcc_128 no-ssl2 no-ssl3 no-comp --openssldir=/usr/local/ssl/macos-x86_64
-    make depend
-    sudo make install
+```
+./Configure darwin64-x86_64-cc shared enable-ec_nistp_64_gcc_128 no-ssl2 no-ssl3 no-comp --openssldir=/usr/local/ssl/macos-x86_64
+make depend
+sudo make install
+```
 
 5. Link the installed OpenSSL binaries to your bin and lib folders:
 
-    sudo ln -s /usr/local/ssl/macos-x86_64/bin/openssl /usr/local/bin/openssl
-    sudo ln -s /usr/local/ssl/macos-x86_64/lib/libssl.1.0.0.dylib /usr/local/lib/libssl.1.0.0.dylib
-    sudo ln -s /usr/local/ssl/macos-x86_64/lib/libcrypto.1.0.0.dylib /usr/local/lib/libcrypto.1.0.0.dylib
+```
+sudo ln -s /usr/local/ssl/macos-x86_64/bin/openssl /usr/local/bin/openssl
+sudo ln -s /usr/local/ssl/macos-x86_64/lib/libssl.1.0.0.dylib /usr/local/lib/libssl.1.0.0.dylib
+sudo ln -s /usr/local/ssl/macos-x86_64/lib/libcrypto.1.0.0.dylib /usr/local/lib/libcrypto.1.0.0.dylib
+```
