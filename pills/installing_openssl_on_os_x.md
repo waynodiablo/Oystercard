@@ -23,3 +23,11 @@ This guide assumes that the basic problem is that OS X is using an insecure vers
 make depend
 sudo make install
 ```
+
+5. Open a new terminal window.
+
+6. Check that you have OpenSSL version 1.1.0 installed with
+
+```
+openssl version
+```
