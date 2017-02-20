@@ -26,7 +26,7 @@ sudo make install
 
 * Open a new terminal window.
 
-* Check that you have OpenSSL version 1.1.0 installed with
+* Check that you have OpenSSL version 1.1.0 installed with:
 
 ```
 openssl version
