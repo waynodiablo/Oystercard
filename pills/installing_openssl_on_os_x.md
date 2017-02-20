@@ -10,13 +10,13 @@ This guide assumes that the basic problem is that OS X is using an insecure vers
 
 ## Upgrade OS X's version of OpenSSL
 
-1. Go to https://www.openssl.org/source/ and download the `1.1.0e` version of OpenSSL.
+* Go to https://www.openssl.org/source/ and download the `1.1.0e` version of OpenSSL.
 
-2. Unpack the downloaded file by double clicking on it.
+* Unpack the downloaded file by double clicking on it.
 
-3. `cd` into the unpacked directory.
+* `cd` into the unpacked directory.
 
-4. Run these commands to compile and install OpenSSL:
+* Run these commands to compile and install OpenSSL:
 
 ```
 ./Configure darwin64-x86_64-cc shared enable-ec_nistp_64_gcc_128 no-ssl2 no-ssl3 no-comp --openssldir=/usr/local/ssl/macos-x86_64
@@ -24,9 +24,9 @@ make depend
 sudo make install
 ```
 
-5. Open a new terminal window.
+* Open a new terminal window.
 
-6. Check that you have OpenSSL version 1.1.0 installed with
+* Check that you have OpenSSL version 1.1.0 installed with
 
 ```
 openssl version
