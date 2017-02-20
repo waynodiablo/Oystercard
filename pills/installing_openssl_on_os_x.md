@@ -23,11 +23,3 @@ This guide assumes that the basic problem is that OS X is using an insecure vers
 make depend
 sudo make install
 ```
-
-5. Link the installed OpenSSL binaries to your bin and lib folders:
-
-```
-sudo ln -s /usr/local/ssl/macos-x86_64/bin/openssl /usr/local/bin/openssl
-sudo ln -s /usr/local/ssl/macos-x86_64/lib/libssl.1.0.0.dylib /usr/local/lib/libssl.1.0.0.dylib
-sudo ln -s /usr/local/ssl/macos-x86_64/lib/libcrypto.1.0.0.dylib /usr/local/lib/libcrypto.1.0.0.dylib
-```
