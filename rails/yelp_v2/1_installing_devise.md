@@ -39,18 +39,6 @@ If you are using .haml you should still generate these views and then convert th
 
 See [How To Create Haml](https://github.com/plataformatec/devise/wiki/How-To:-Create-Haml-and-Slim-Views)
 
-You can copy Devise views (for customization) to your app by running:
-
-	`gem install html2haml`
-  
-  followed by the command below to find the .erb files to convert to haml.
-
-`find ./app/views/devise -name \*.erb -print | sed 'p;s/.erb$/.haml/' | xargs -n2 html2haml`
-
-  then delete the .erb files
-
-`rm ./app/views/devise/**/*.erb`
-
 #### How do I log into this thing?
 
 Have a look at `app/models/user.rb` to get the gist of your new User class.
