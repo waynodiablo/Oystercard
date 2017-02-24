@@ -1,6 +1,6 @@
 # Multiplayer
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our game can now attack a player and change turns. It shows us hit points, and we can damage player hit points. Now it's time to get two players in on the fun.
 

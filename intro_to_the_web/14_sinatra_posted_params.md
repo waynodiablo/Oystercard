@@ -1,6 +1,6 @@
 # Sinatra: `POST`ed `params`
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our form allows a user to set their cat's name. It will construct a query string and make a request to `/named-cat` with that string appended. Sinatra will parse the query string to a `params` hash and use that to render the view. Sinatra will then respond with the rendered view as an HTML string.
 

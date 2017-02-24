@@ -40,4 +40,4 @@ We just called `erb` a _templating system_. The reason is that it's actually muc
 
 In the next Challenge, we'll execute Ruby code within a View.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

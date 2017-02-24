@@ -1,6 +1,6 @@
 # HTTP: GET / POST Requests
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 So far we've seen that HTTP is used as a means of communicating between clients and servers. We've composed HTTP *requests* that ask a server for information, typically a web page. In the language of HTTP, this kind of request is usually done as a **GET** request: a request that "gets" information. All the requests we have made so far have been "GET" requests.
 

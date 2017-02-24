@@ -1,6 +1,6 @@
 # Extracting Logic to the Model
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We have now implemented a handful of User Stories. At the moment, our Battle app is going through the motions, but nothing is really happening. Our next User Story asks us to do something about that:
 

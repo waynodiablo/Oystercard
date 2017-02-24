@@ -1,6 +1,6 @@
 # Entering Players
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We have a basic project structure. Let's consider our first User Story:
 

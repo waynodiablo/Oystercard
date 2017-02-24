@@ -1,6 +1,6 @@
 # Switching Turns
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We now have a game where we can damage an opponent. It's neatly refactored with 'skinny' controllers, and our Model layer is handling most of the calculations (like hit points). However, our game is kind of one-sided. While that might be quite fun enough for some people, the majority of our users at least want the opportunity to lose the game.
 

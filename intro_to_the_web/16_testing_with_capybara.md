@@ -1,6 +1,6 @@
 # Testing with an Automated Browser and Capybara
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Recall that a web application is a kind of program that sends and receives messages over *HTTP*. The content of these messages is typically HTML.
 

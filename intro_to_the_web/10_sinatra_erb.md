@@ -1,6 +1,6 @@
 # Sinatra: `erb`
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our web application is far more manageable now we have separated the _routing_ (or 'controller') and _presentation_ (or 'view') concerns. We can still render our delightful cat picture, too:
 

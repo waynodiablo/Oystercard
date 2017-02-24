@@ -1,6 +1,6 @@
 # Sinatra: Introducing `params`
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Now we have an application that serves dynamic pages with random cat names. However, truly dynamic web applications must do more than translate paths to routes, and spit out pages depending on route. 
 

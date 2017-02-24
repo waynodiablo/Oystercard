@@ -2,7 +2,7 @@
 
 *Learning Objectives are organised by topic and subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
-[Back to Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 ## The Web
 

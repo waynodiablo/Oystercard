@@ -74,4 +74,4 @@ That's much neater! Plus, we now have a handy method `sign_in_and_play` that wil
 
 OK, let's implement another user story.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

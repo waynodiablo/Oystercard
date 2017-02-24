@@ -1,6 +1,6 @@
 # Sinatra: Defining a route
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 You have just set up a server within your local machine. At the moment, it doesn't do very much. You saw an error message something like this:
 

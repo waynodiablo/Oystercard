@@ -56,4 +56,4 @@ Shotgun works by reloading your entire application on every request. While this 
 
 Webpages that return strings are kind of boring. Next up, let's add some [HTML](pills/html.md) to the mix.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

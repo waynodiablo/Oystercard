@@ -57,4 +57,4 @@ What this method does is tell Sinatra to respond to a `GET` HTTP request to the 
 
 The '/' part of the address is the last slash in `http://localhost:4567/`. Next up, let's try adding another page.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

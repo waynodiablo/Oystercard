@@ -1,6 +1,6 @@
 # POST/`redirect`/GET pattern
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We've passed our first User Story, and users can enter their names. Before we move on, we should refactor our code to avoid rendering a view directly from a POST route.
 

@@ -1,6 +1,6 @@
 # Sinatra: Keeping views clean
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our web application now serves a **dynamic** page. That is: a webpage that does not always look the same.
 

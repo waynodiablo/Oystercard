@@ -59,4 +59,4 @@ And so, a page that looks like this:
 
 So, we've just learned how to evaluate Ruby expressions within our views, using `erb`. Next up, we'll move this kind of logic in to the controller (or 'routing') layer to better separate our concerns. Naturally you'll want to commit the code, push it to Github and switch Driver/Navigator Roles &nbsp;:twisted_rightwards_arrows:.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

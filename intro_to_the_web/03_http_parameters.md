@@ -1,6 +1,6 @@
 # HTTP: Parameters
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 So far we've seen that HTTP requests and responses are the signals pinging between servers and clients. Every HTTP-based interaction involves a server-client relationship. In the previous challenge, we used httpie client to retrieve some data. Often, however, when we make a request of a server, we want to *tell* the server something with that request.
 

@@ -48,4 +48,4 @@ Running `rspec`, our error essentially says 'Where are my hit points!? I don't s
 
 Ta-da! Our test passes. But our tests are starting to duplicate the same user actions again and again: visiting the home page, entering names, and signing in. In the next challenge, we will DRY up our tests using a **helper**.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

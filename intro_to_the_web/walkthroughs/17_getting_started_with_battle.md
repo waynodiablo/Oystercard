@@ -73,4 +73,4 @@ end
 
 OK, we're done with this challenge. Next up, we'll implement our first User Story.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

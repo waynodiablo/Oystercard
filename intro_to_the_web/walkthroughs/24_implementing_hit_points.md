@@ -125,4 +125,4 @@ Amazing - we implemented a User Story, all virtually without having to touch con
 
 Since we're now firmly back in the land of OOD, let's refactor our code so far to take advantage of some OOD principles.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

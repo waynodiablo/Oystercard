@@ -74,4 +74,4 @@ Secondly, the `params` we print to the console have not changed. This is what we
 
 In the next challenge, we will take a closer look at the HTTP requests we are sending by using the Chrome inspector.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

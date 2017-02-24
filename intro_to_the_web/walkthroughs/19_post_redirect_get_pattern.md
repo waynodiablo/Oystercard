@@ -63,4 +63,4 @@ end
 
 If we run `rspec` again, our feature test will pass. Congratulations, you have refactored a POST request that renders a view to use a POST-redirect loop! OK, let's do another user story.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

@@ -1,6 +1,6 @@
 # Sinatra: Using forms
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our web application now serves an **interactive** page. That is: a webpage that does not always look the same, and changes based on user-supplied information.
 

@@ -1,6 +1,6 @@
 # Sinatra: Using the Chrome DevTools
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our app now expects users to visit one page - found at the `/cat-form` path - and submit a form which takes them to another - the `/named-cat` path.
 

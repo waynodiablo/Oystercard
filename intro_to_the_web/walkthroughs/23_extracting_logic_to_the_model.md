@@ -103,4 +103,4 @@ end
 
 OK! We've extracted a bunch of logic into our Model layer. Now, let's implement the hit points functionality from the User Story we're trying to solve.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

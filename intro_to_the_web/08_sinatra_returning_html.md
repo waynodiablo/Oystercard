@@ -1,6 +1,6 @@
 # Sinatra: Returning HTML
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We've created a web application that returns basic strings as responses to client requests.
 

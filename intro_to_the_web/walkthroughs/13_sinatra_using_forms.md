@@ -76,4 +76,4 @@ Github and switch! :twisted_rightwards_arrows:
 
 Next up, we'll hide our query parameters by using the `POST` action.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

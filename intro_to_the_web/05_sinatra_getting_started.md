@@ -1,6 +1,6 @@
 # Sinatra: Getting Started
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 You should now understand that clients - such as browsers, or command-line tools like _HTTPie_ - can make requests for resources from servers. Those servers will respond with the resource, and some associated metadata. The resource itself is usually contained within the response _body_. The metadata is contained within the response _headers_. All of this communication is done via HTTP.
 

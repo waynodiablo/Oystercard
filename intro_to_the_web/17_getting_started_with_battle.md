@@ -1,6 +1,6 @@
 # Getting Started with Battle
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Now that you have a basic understanding of HTTP, response-request mechanisms, Sinatra, and Capybara we are going to construct a project that uses these technologies.
 

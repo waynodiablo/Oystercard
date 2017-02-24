@@ -1,6 +1,6 @@
 # Sinatra: Start and Restart
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 So far we've defined a single route, '/', that responds with a HTTP message containing "hello!".
 

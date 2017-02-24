@@ -1,6 +1,6 @@
 # Implementing Hit Points
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We have just refactored our code, separating our Controller layer from our Model layer. This refactor will make it easier to approach our next User Story:
 

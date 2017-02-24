@@ -42,4 +42,4 @@ By this point, I was concerned that `Game` was getting overly-responsible again,
 
 Once you're happy you have approximated solutions to these feature tests, let's move on to losing and winning the game.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

@@ -64,9 +64,9 @@ But you could just as well use a `form` element (so long as I changed my feature
 <!-- alternative play.erb -->
 <form action="/attack">
   <input type="submit" value="Attack">
-</form> 
+</form>
 ```
 
 Let's run `rspec` - everything passes. On to the next User Story!
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

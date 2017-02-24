@@ -199,4 +199,4 @@ We want to Start a fight by entering our names and seeing them
 
 It feels like we've solved that. Let's move on to the next one!
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

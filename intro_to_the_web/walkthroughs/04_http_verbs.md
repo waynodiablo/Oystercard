@@ -63,4 +63,4 @@ As you can see, when the server sends back a response to POST request, that resp
 
 > A note on browsers: while HTTPie is a client that provides a means of making POST requests to a server, browsers by default make GET requests. When you type in the url "https://getpostworkout.herokuapp.com/" and press enter, your browser is making a GET request to the named server. This is important because when building a web application we want to carefully control our data. By ensuring that our server only responds to GET requests with information, and do not create or manipulate any data as a result, we can be confident users casually browsing our site won't accidentally make unintended changes. In short, the distinction between the HTTP methods, or verbs, is relevant to the control of data.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

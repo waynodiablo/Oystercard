@@ -1,6 +1,6 @@
 # The Hypertext Transfer Protocol (HTTP)
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 As we have seen, the web is a system of clients and servers talking to each other. But how do they talk to each other? Usually, clients and servers talk to each other using the **HyperText Transfer Protocol**. A client makes a **request** to a server and gets back a **response**. It is called a "protocol" because it has a defined structure for requests and responses.
 

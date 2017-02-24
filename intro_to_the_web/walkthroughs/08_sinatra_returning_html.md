@@ -45,4 +45,4 @@ Before we move on let's commit our code, push it to Github and switch Driver/Nav
 
 Next up, we'll see if we can modularize some of our code into a _view_.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

@@ -127,4 +127,4 @@ end
 
 Let's check our feature tests - everything passes. Nice, we can switch turns! Now let's ensure the other player can join in our game.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

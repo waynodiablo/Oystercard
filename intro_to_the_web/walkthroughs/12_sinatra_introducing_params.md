@@ -62,4 +62,4 @@ Github and switch! :twisted_rightwards_arrows:
 
 It's a pain to interact with our app via the URL bar. Next up, let's allow our users to interact with our app via a `<form>` element.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

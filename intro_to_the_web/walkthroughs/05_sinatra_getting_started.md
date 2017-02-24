@@ -4,4 +4,4 @@
 
 There is no strict 'solution' to this challenge - simply proceed!
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

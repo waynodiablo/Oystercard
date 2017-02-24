@@ -1,6 +1,6 @@
 # Test Helpers
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We've implemented two user stories, but our tests are starting to repeat themselves. They're duplicating the same user actions again and again:
 

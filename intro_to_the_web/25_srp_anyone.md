@@ -1,6 +1,6 @@
 # Single Responsibility Principle, anyone?
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We just implemented a User Story almost entirely from the Model layer. Before we proceed to the next one, let's make sure our Model is following OOD best practices.
 

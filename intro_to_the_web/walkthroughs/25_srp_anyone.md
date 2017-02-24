@@ -51,4 +51,4 @@ end
 
 Our `Player` class has one less responsibility. Great! Now let's minimise those pesky global variables using our new `Game` class.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

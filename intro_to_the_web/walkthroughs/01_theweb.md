@@ -13,4 +13,4 @@ The information we get back is in the form of text, marked up with HTML.
 
 > In this example, the command line & httpie act as a client. When we browse the internet, the browser acts as the client. In other situations, web applications can play the role of client to other web "server" applications.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

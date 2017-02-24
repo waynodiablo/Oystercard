@@ -41,4 +41,4 @@ Above are the *response* headers. They originate from the server. We can see *me
 ```
 Lastly, the *body* of the response. This is the information that motivated our request in the first place. It originated from the server.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

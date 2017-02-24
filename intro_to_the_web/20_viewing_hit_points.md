@@ -1,6 +1,6 @@
 # Viewing hit points
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We've passed our first User Story and refactored to use a POST-redirect loop. You might notice that we have been sticking closely to the Red-Green-Refactor loop. It's easy to refactor when we have thorough feature tests, as we'll know straight away if we break anything!
 

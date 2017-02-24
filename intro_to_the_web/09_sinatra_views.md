@@ -1,6 +1,6 @@
 # Sinatra: Views
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Our web application now responds to client requests across a range of paths. For some of them, our web application returns complex cat-based HTML. Miaow.
 

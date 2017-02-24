@@ -17,4 +17,4 @@ I can visit 'http://makersipsum.herokuapp.com/' passing my name as a parameter w
 
 This greets me. When I revisit the page, however, without passing a parameter, the greeting disappears. What this tells us is that passing data in this way does not cause changes to persist to the server.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

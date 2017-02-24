@@ -1,6 +1,6 @@
 # Attacking Player 2
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We now have a couple of implemented User Stories, and a handy helper. Let's implement another User Story:
 

@@ -10,4 +10,4 @@ While there is no formal 'solution' to this exercise, do read the - [Chrome DevT
 
 Once you are satisfied you know how the DevTools work, let's move on.
 
-[Forward to the Challenge Map](../00_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

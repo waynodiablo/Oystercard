@@ -1,6 +1,6 @@
 # Skinny Controllers
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 We just refactored the Model layer so our classes have one responsibility each. Now we're going to shrink some of the repetition in our Controller layer (in `app.rb`).
 
