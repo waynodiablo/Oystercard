@@ -34,7 +34,7 @@ feature 'View hit points' do
     click_button 'Submit'
     expect(page).to have_content 'Mittens: 60HP'
   end
-end 
+end
 ```
 
 Running `rspec`, our error essentially says 'Where are my hit points!? I don't see any!'. We can solve that very simply. In our `play.erb` view:

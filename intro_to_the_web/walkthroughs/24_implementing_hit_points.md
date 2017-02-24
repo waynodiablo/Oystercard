@@ -44,7 +44,7 @@ Since we have a `Player` model, let's move those responsibilities into `Player` 
 describe Player do
   subject(:dave) { Player.new('Dave') }
   subject(:mittens) { Player.new('Mittens') }
- 
+
   describe '#name' do
     it 'returns the name' do
       expect(dave.name).to eq 'Dave'
@@ -95,7 +95,7 @@ class Player
   def receive_damage
     @hit_points -= 10
   end
-end 
+end
 ```
 
 OK. Now we need to make a tiny addition to our controller, inside the `get '/attack'` route:
@@ -115,7 +115,7 @@ And update our view to show the results:
 <!-- in views/play.erb -->
 
 <%= @player_1.name %> vs. <%= @player_2.name %>
- 
+
 <%= @player_2.name %>: <%= @player_2.hit_points %>HP
 ```
 

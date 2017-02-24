@@ -23,7 +23,7 @@ feature 'Attacking' do
     click_link 'Attack'
     expect(page).to have_content 'Dave attacked Mittens'
   end
-end 
+end
 ```
 
 There are many routes we could take to solve this. Personally, I felt you should show this attack confirmation on a new page. You might disagree, and that's absolutely fine: so long as we pass the feature test, our preferences are a matter of taste.
@@ -33,7 +33,7 @@ Let's create a view that contains the expected text:
 ```erb
 <!-- in views/attack.erb -->
 
-<%= @player_1_name %> attacked <%= @player_2_name %> 
+<%= @player_1_name %> attacked <%= @player_2_name %>
 ```
 
 Now we need a route to serve that. Let's implement that in `app.rb`:

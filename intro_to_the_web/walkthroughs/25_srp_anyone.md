@@ -20,7 +20,7 @@ describe Game do
       game.attack(player_2)
     end
   end
-end 
+end
 ```
 
 Let's make a class that solves our failure:
@@ -32,7 +32,7 @@ class Game
   def attack(player)
     player.receive_damage
   end
-end 
+end
 ```
 
 Finally, we need to change up our controller route to use our new `Game.new.attack(player)` instead of asking player to do the job:

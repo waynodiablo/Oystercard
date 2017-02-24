@@ -33,4 +33,3 @@ Within HTTP, we call data sent from a client to a server a **parameter**. Just l
 - [Anatomy of a URL](http://doepud.co.uk/blog/anatomy-of-a-url)
 
 ### [Walkthrough](walkthroughs/03_http_parameters.md)
-

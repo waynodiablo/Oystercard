@@ -8,7 +8,7 @@ However, it's a pain to interact with our app via the URL bar. Let's allow our u
 
 In this challenge, you will add a **form** to your view and observe how modifying its attributes alters:
 
-- the query string it generates, and 
+- the query string it generates, and
 - the `params` your server receives.
 
 ### Learning Objectives covered

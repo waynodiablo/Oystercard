@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](README.md)
 
-Now we have an application that serves dynamic pages with random cat names. However, truly dynamic web applications must do more than translate paths to routes, and spit out pages depending on route. 
+Now we have an application that serves dynamic pages with random cat names. However, truly dynamic web applications must do more than translate paths to routes, and spit out pages depending on route.
 
 Much of the time, clients need only communicate a path to a server. For more complex interactions, they might need to communicate more information. For example, submitting an insurance form involves a client sending hundreds of pieces of information to a server.
 

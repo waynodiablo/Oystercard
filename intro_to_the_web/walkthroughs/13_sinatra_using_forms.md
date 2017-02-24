@@ -68,7 +68,7 @@ Since the second input tag doesn't have any data in it (it's a button, after all
 
 So, when you click the submit button, your browser:
 
-1. Constructs a request to the path specified in the `action` attribute of the form tag 
+1. Constructs a request to the path specified in the `action` attribute of the form tag
 2. Constructs a query string depending on the inputs within the form, and appends this to the request
 3. Sends the request to the server.
 

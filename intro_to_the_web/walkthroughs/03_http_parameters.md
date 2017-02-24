@@ -6,7 +6,7 @@ Let's try to dissect the URL, "http://www.example.com/home?name=Bob&age=21"
 
 - "http://www.example.com" The first part specifies the domain name. It indicates which web server to make the request to.
 - "/home" This part specifies the path to the resource we want on that server, the home page.
-- "?name=Bob&age=21" This part is the query string. Notice the following: 
+- "?name=Bob&age=21" This part is the query string. Notice the following:
   - It is separated from the path by a "?"
   - It contains two parameters, "name=Bob" and "age=21".
   - The two parameters are separated by an ampersand ("&").

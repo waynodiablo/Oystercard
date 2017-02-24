@@ -6,7 +6,7 @@ Our web application now responds to client requests across a range of paths. For
 
 However, things are starting to get messy. Web pages usually have hundreds - or thousands - of lines of HTML. It's inefficient to store them all in the same place as we define our routes.
 
-In this challenge, you will use **views** to separate the Ruby and HTML code. This is the first of several steps you will take when developing a web application to encourage a clean **separation of concerns**. 
+In this challenge, you will use **views** to separate the Ruby and HTML code. This is the first of several steps you will take when developing a web application to encourage a clean **separation of concerns**.
 
 > In our case, `app.rb` will be for _routing_ (or _controlling_) concerns, and we will use another file for our _presentation_ (or _view_) concerns.
 

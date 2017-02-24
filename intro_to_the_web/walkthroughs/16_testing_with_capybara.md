@@ -11,7 +11,7 @@ gem 'capybara'
 gem 'selenium-webdriver'
 ```
 
-Then run the commands as instructed, in IRB. What this will do is start an instance 
+Then run the commands as instructed, in IRB. What this will do is start an instance
 of the "headed" browser with which we can play with Capybara commands.
 
 [Forward to the Challenge Map](../README.md)

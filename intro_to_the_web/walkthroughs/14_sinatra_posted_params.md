@@ -66,7 +66,7 @@ end
 ```
 Now try using your app. It should work just fine.
 
-Some interesting things have happened as a result of changing our `GET` request to a `POST` request. 
+Some interesting things have happened as a result of changing our `GET` request to a `POST` request.
 
 First of all, the query string on the `/named-cat` page has disappeared. This is because `POST` requests do not store their query parameters in the request string. Instead, they store them in the body of the request as 'Form Data'.
 
