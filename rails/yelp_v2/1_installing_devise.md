@@ -29,9 +29,16 @@ This does the following:
 
 Make sure you then follow the on-screen instructions to finish setting up devise, but change the root declaration in **routes.rb** to:
 
-```ruby
-root "restaurants#index"
-```
+`root "restaurants#index" `
+
+#### What if I opted for haml views?
+
+Step 4 of the on-screen instructions `rails g devise:views` will generate views as `html.erb`.
+
+If you are using .haml you should still generate these views and then convert them to html.haml.
+
+See [How To Create Haml](https://github.com/plataformatec/devise/wiki/How-To:-Create-Haml-and-Slim-Views)
+
 #### How do I log into this thing?
 
 Have a look at `app/models/user.rb` to get the gist of your new User class.
