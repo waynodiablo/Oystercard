@@ -132,7 +132,7 @@ def create
   end
 end
 ```
-
+Note how to display a rails flash alert upon redirect. Use of alert: or notice: is dependent on set up in a view.
 What is `build_review` and what does it do? Try to build this method with your pair. A possible solution will be revealed in the next section.
 
 Now you've seen how to move business logic into the model, have a look at your controllers and see where else you might do this.
