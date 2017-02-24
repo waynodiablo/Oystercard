@@ -53,7 +53,7 @@ We want to see that your code has been well-thought through in terms of design. 
 ### Resources
 
 * ([This article](http://www.chris-granger.com/2015/01/26/coding-is-not-the-new-literacy/) explains the importance of modelling as a way of thinking
-* [POODR](poodr.info) by Sandi Metz is the best resource out there for understanding OOD
+* [POODR](http://www.poodr.com/) by Sandi Metz is the best resource out there for understanding OOD
 
 ## OOP - Are your objects SOLID?
 
