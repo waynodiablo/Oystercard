@@ -132,6 +132,7 @@ def create
   end
 end
 ```
+You'll notice that we are setting the alert in the controller here, but don't forget to also add it to the view template to ensure it actually appears.
 
 What is `build_review` and what does it do? Try to build this method with your pair. A possible solution will be revealed in the next section.
 
