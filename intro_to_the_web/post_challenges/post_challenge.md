@@ -1,6 +1,6 @@
 # Post-Challenge 1: Extending Battle
 
-[Back to the Challenge Map](README.md)
+[Back to the Challenge Map](../README.md)
 
 Welcome to the Post-Challenges! Now you must decide whether to:
 
@@ -49,4 +49,4 @@ You have met all the concepts required to implement these User Stories, but they
 - Skinny controllers
 - Full Test-Driven Development using Capybara
 
-[Back to the Challenge Map](README.md)
+[Back to the Challenge Map](../README.md)
