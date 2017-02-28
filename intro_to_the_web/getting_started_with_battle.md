@@ -101,7 +101,9 @@ I want a sexy user interface
 - [ ] Set up a Sinatra application called `Battle` inside `app.rb` using Sinatra's Modular Style.
 - [ ] Add a `config.ru` file.  Check you can use it to run your app.
 - [ ] Check you can see your app's homepage content.
-- [ ] Use the `rspec` init command to initialize an rspec skeleton directory and file structure.  Check you can run `rspec` and see 0 examples and 0 failures.
+- [ ] Use the `rspec` init command to initialize an rspec skeleton directory and file structure.
+- [ ] In your `spec/spec_helper.rb` file, set your RACK_ENV to `test`.  Require your Sinatra app file.  Require `capybara` and `capybara/rspec`.  Set your `Capybara.app` to your app class.
+- [ ] Check you can run `rspec` and see 0 examples and 0 failures.
 
 ### Resources
 

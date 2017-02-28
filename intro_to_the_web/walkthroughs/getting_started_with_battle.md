@@ -61,6 +61,19 @@ We run it with `rackup`.  Our console outputs a URL like `localhost:XXXX`.  We c
 
 We use `rspec --init` to create a `spec/spec_helper.rb` and `.rspec` file.  This gives us a skeletal rspec setup.
 
+We add these lines to `spec/spec_helper.rb` to set rspec up for testing our app:
+
+```
+ENV['RACK_ENV'] = 'test'
+
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+require 'capybara'
+require 'capybara/rspec'
+
+Capybara.app = Battle
+```
+
 We run our tests with `rspec` and see 0 examples and 0 failures.
 
 Our project directory now looks like this:
