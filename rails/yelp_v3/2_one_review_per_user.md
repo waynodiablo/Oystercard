@@ -115,7 +115,7 @@ validates :user, uniqueness: { scope: :restaurant, message: "has reviewed this r
 Now in our controller, we don't need to check `current_user.has_reviewed?(@restaurant)` because the review validation takes care of it.  So we should have something like this in `ReviewsController`:
 ```
 def create
-  @restaurant = Restaurant.find review_params[:restaurant_id]
+  @restaurant = Restaurant.find params[:restaurant_id]
   @review = @restaurant.build_review review_params, current_user
 
   if @review.save
@@ -132,6 +132,7 @@ def create
   end
 end
 ```
+You'll notice that we are setting the alert in the controller here, but don't forget to also add it to the view template to ensure it actually appears.
 
 What is `build_review` and what does it do? Try to build this method with your pair. A possible solution will be revealed in the next section.
 
