@@ -96,14 +96,16 @@ I want a sexy user interface
 ### To complete this challenge, you will need to:
 
 - [ ] Start a new project directory (you could call it `Battle`)
-- [ ] Add dependencies for `sinatra`, `rspec-sinatra`, and `capybara` using a Gemfile, and install using `bundle`
-- [ ] Initialize the app using `rspec-sinatra`
-- [ ] Add an `app.rb` file at the root
-- [ ] Set up a Sinatra Application called `Battle` inside `app.rb` using Sinatra's Modular Style.
+- [ ] Add dependencies for `sinatra`, and `capybara` using a Gemfile, and install using `bundle`
+- [ ] Add an `app.rb` file at the root.
+- [ ] Set up a Sinatra application called `Battle` inside `app.rb` using Sinatra's Modular Style.
+- [ ] Add a `config.ru` file.  Check you can use it to run your app.
+- [ ] Check you can see your app's homepage content.
+- [ ] Use the `rspec` init command to initialize an rspec skeleton directory and file structure.  Check you can run `rspec` and see 0 examples and 0 failures.
 
 ### Resources
 
-- [`rspec-sinatra` gem](https://github.com/tansaku/rspec-sinatra)
 - [Sinatra Modular Style](http://www.sinatrarb.com/intro.html#Sinatra::Base%20-%20Middleware,%20Libraries,%20and%20Modular%20Apps)
+- [Rspec init](https://relishapp.com/rspec/rspec-core/v/2-8/docs/command-line/init-option)
 
 ### [Walkthrough](walkthroughs/getting_started_with_battle.md)
