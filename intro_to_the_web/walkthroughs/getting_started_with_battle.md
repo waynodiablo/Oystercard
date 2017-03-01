@@ -25,8 +25,8 @@ Inside our Gemfile, let's add the dependencies:
 # In Gemfile
 source 'https://rubygems.org'
 
+gem 'rspec'
 gem 'sinatra'
-gem 'capybara'
 ```
 
 And use `bundle` to install those dependencies to our project (generating a Gemfile.lock).
@@ -57,22 +57,9 @@ require_relative "./app"
 run Battle
 ```
 
-We run it with `rackup`.  Our console outputs a URL like `localhost:XXXX`.  We check we can visit that URL in our web browser and see `Hello Battle!`.
+We run it with `rackup`.  Our console outputs a port and we use that to create a URL like `localhost:XXXX`.  We check we can visit that URL in our web browser and see `Hello Battle!`.
 
 We use `rspec --init` to create a `spec/spec_helper.rb` and `.rspec` file.  This gives us a skeletal rspec setup.
-
-We add these lines to `spec/spec_helper.rb` to set rspec up for testing our app:
-
-```
-ENV['RACK_ENV'] = 'test'
-
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
-require 'capybara'
-require 'capybara/rspec'
-
-Capybara.app = Battle
-```
 
 We run our tests with `rspec` and see 0 examples and 0 failures.
 

@@ -60,6 +60,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 * [Sinatra: using the Chrome Devtools](sinatra_using_the_chrome_devtools.md)
 * [Testing with Capybara](testing_with_capybara.md)
 * [Getting Started with Battle](getting_started_with_battle.md)
+* [Getting test infrastructure set up](getting_test_infrastructure_set_up.md)
 * [Entering Players](entering_players.md)
 * [POST/`redirect`/GET pattern](post_redirect_get_pattern.md)
 * [Viewing hit points](viewing_hit_points.md)
