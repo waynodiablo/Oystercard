@@ -9,7 +9,7 @@ Inside our Gemfile, let's add the dependency
 gem 'capybara'
 ```
 
-And use `bundle` to install those dependencies to our project (generating a Gemfile.lock).
+And use `bundle` to install that dependency to our project (generating a Gemfile.lock).
 
 We set up our spec_helper.rb with the things it needs to prepare Capybara and to get Capybara to test our app.
 
