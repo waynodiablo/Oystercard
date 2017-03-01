@@ -61,7 +61,7 @@ We run it with `rackup`.  Our console outputs a port and we use that to create a
 
 We use `rspec --init` to create a `spec/spec_helper.rb` and `.rspec` file.  This gives us a skeletal rspec setup.
 
-We run our tests with `rspec` and see 0 examples and 0 failures.
+We run our tests with `rspec` and see `0 examples, 0 failures`.
 
 Our project directory now looks like this:
 

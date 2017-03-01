@@ -75,7 +75,7 @@ end
 
 We run `rspec`.
 
-If RSpec and our `spec_helper.rb` are set up correctly, RSpec outputs `1 example and 1 failure`.
+If RSpec and our `spec_helper.rb` are set up correctly, RSpec outputs `1 example, 1 failure`.
 
 We now update our app so that the homepage displays `Testing infrastructure working!`:
 
@@ -85,6 +85,6 @@ get '/' do
 end
 ```
 
-We run `rspec`. RSpec outputs `1 example and 0 failures`.
+We run `rspec`. RSpec outputs `1 example, 0 failures`.
 
 [Forward to the Challenge Map](../README.md)

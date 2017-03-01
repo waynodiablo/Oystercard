@@ -102,7 +102,7 @@ I want a sexy user interface
 - [ ] Add a `config.ru` file.  Check you can use it to run your app.
 - [ ] Check you can visit your app's homepage in a web browser and see `Hello Battle!`.
 - [ ] Use the `rspec` init command to initialize an rspec skeleton directory and file structure.
-- [ ] Check you can run `rspec` and see 0 examples and 0 failures.
+- [ ] Check you can run `rspec` and see `0 examples, 0 failures`.
 
 ### Resources
 
