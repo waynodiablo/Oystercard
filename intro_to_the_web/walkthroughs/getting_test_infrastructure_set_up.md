@@ -60,7 +60,7 @@ Let's add a feature test within that directory:
     └── config.ru
 ```
 
-We'll write a very simple test that checks that we can visit the homepage and verify that it has some content.
+We write a very simple test that checks that we can visit the homepage and verify that it has some content.
 
 ```ruby
 # in spec/features/testing_infrastructure_spec.rb
