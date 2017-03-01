@@ -10,20 +10,7 @@ So we can play a personalised game of Battle,
 We want to Start a fight by entering our names and seeing them
 ```
 
-Inside our `spec` directory, let's create a `features` directory. This will house our feature tests, which will be written using Capybara. A separate directory will separate feature tests from unit tests, which will be written in raw RSpec.
-
-```
-.
-└── battle
-    ├── spec
-    │   ├── features
-    │   └── spec_helper.rb
-    ├── .rspec
-    ├── Gemfile
-    ├── Gemfile.lock
-    ├── app.rb
-    └── config.ru
-```
+Our a `features` directory houses our feature tests, which will be written using Capybara. A separate directory will separate feature tests from unit tests, which will be written in raw RSpec.
 
 Let's add our first feature test within that directory:
 
