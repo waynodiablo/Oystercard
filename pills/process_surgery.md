@@ -20,9 +20,9 @@ Work with a group to improve your developer processes.
   * "My pair partner kept grabbing the keyboard from me."
   * "I'm struggling to understand RSpec."
 
-* The person is encouraged to laser in on what the underlying problem was.
+* Through discussion, the group helps the person to laser in on what the underlying problem was.
 
-* Write a summary of the struggle in a few words on the whiteboard.
+* A very brief summary of the struggle is written on the whiteboard.
 
 * The group discusses what developer processes could be changed to help with the struggle e.g.
   * "Try diagramming the domain model on paper."
