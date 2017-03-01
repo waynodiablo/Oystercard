@@ -85,6 +85,6 @@ get '/' do
 end
 ```
 
-We run `rspec`. RSpec outputs `1 example and 1 failure`.
+We run `rspec`. RSpec outputs `1 example and 0 failures`.
 
 [Forward to the Challenge Map](../README.md)
