@@ -77,7 +77,7 @@ We run `rspec`.
 
 If RSpec and our `spec_helper.rb` are set up correctly, RSpec outputs `1 example and 1 failure`.
 
-We now update our app so that the homepage route displays `Testing infrastructure working!`:
+We now update our app so that the homepage displays `Testing infrastructure working!`:
 
 ```ruby
 get '/' do
