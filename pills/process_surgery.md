@@ -25,9 +25,9 @@ Work with a group to improve your developer processes.
 * A very brief summary of the struggle is written on the whiteboard.
 
 * The group discusses what developer processes could be changed to help with the struggle e.g.
-  * "Try diagramming the domain model on paper."
-  * "Deliver feedback to the pair partner about how it feels when they grab the keyboard."
-  * "Try drawing a semantic web."
+  * "Diagramming the domain model on paper."
+  * "Delivering feedback to the pair partner about how it feels when they grab the keyboard."
+  * "Drawing a semantic web."
 
 * Write the suggested developer processes on the board underneath the struggle summary.
 
