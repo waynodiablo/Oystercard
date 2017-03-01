@@ -15,7 +15,7 @@ We have a basic project structure. Let's get our testing infrastructure glued to
 - [ ] Add a dependency for `capybara` to your Gemfile, and install using `bundle`.
 - [ ] In your `spec/spec_helper.rb` file
   - [ ] Set your RACK_ENV to `test`.
-  - [ ] Require your Sinatra app file, `capybara` and `capybara/rspec`.
+  - [ ] Require your Sinatra app file, `capybara`, `capybara/rspec` and `rspec`.
   - [ ] Tell Capybara about your app class using `Capybara.app`.
 - [ ] In `spec/features`, write a feature test that checks that the hompage says `Testing infrastructure working!`.
 - [ ] Run `rspec` and check that your feature test fails with with `1 example, 1 failure`.
