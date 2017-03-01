@@ -6,6 +6,7 @@ We have a basic project structure. Let's get our testing infrastructure glued to
 
 ### Learning Objectives covered
 
+- Getting test infrastructure set up
 - Write a feature test using Capybara
 - Pass a feature test using Capybara
 
