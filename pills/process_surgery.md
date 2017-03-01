@@ -29,8 +29,8 @@ Work with a group to improve your developer processes.
   * "Delivering feedback to the pair partner about how it feels when they grab the keyboard."
   * "Drawing a semantic web."
 
-* Write the suggested developer processes on the board underneath the struggle summary.
+* The suggested developer processes are written on the board underneath the struggle summary.
 
 * Repeat.
 
-* At the end, circulate a photo of the whiteboard to the members of the group.
+* At the end, a photo of the whiteboard is circulated to the members of the group.
