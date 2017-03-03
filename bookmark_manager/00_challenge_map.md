@@ -53,7 +53,7 @@ This is the basic view of the website. You will build it by working through the 
 
 ## Learning, not challenge progress
 
-There is a **lot** of challenge material this week.  Don't expect to get through it all.  As always at Makers, focus on deep learning, rather than progression through the challenges.
+There is a **lot** of challenge material this week.  You probably won't get through it all.  As always at Makers, focus on deep learning, rather than progression through the challenges.
 
 ## Challenges
 
