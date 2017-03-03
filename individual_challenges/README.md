@@ -50,6 +50,10 @@ You can use Ruby or JavaScript for any of the challenges.
 
 Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
 
+### Schedule
+
+**Your coach will send you the schedule for the week. The schedule below is an example.**
+
 #### Monday
 
 * Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week.
@@ -62,24 +66,20 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 #### Tuesday
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 10am - 11pm: Careers session: Practice Tech Interviews
-* 12pm: Lunchtime talk: Howard from Endjiin
 * 3.00 - 4pm: Careers session: How to network
 * 5.00pm: Your coach will introduce the next tech test: [Gilded rose](gilded_rose.md)
 * 5.15pm: You'll work solo on the tech test.
-
 
 #### Wednesday
 * 9.30am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
-
 #### Thursday
 
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 9.45am: Your coach will introduce the next tech test: [tic-tac-toe](tic_tac_toe.md)
 * 10am: You'll work solo on the tech test.
-
 
 #### Friday
 
