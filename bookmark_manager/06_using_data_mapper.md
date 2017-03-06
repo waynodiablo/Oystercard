@@ -34,7 +34,7 @@ Basically, you can use DataMapper to interact with a database using Ruby, instea
 - [ ] Create a new Ruby project including the `data_mapper` and `dm-postgres-adapter` gems.
 - [ ] Create a database called `database_play` using `psql`.
 - [ ] Start `irb`, and require the ORM gems from step 1.
-- [ ] In `irb`, set up DataMapper to *connect* to the `datamapper_play` database.
+- [ ] In `irb`, set up DataMapper to *connect* to the `database_play` database.
 - [ ] In `irb`, turn on DataMapper's error logging.
 - [ ] In `irb`, create a `Student` class, and include the DataMapper ORM inside it:
   - [ ] Declare a `Student` class and include the module `DataMapper::Resource`.
@@ -45,7 +45,7 @@ Basically, you can use DataMapper to interact with a database using Ruby, instea
 ## Resources
 
 * [Introduction to Datamapper _1hr video by Makers_] (https://vimeo.com/112068478)
-* [Associations in Datamapper _1hr video by Makers_] (https://vimeo.com/112158606) 
+* [Associations in Datamapper _1hr video by Makers_] (https://vimeo.com/112158606)
 * [DataMapper Getting Started](http://datamapper.org/getting-started.html)
 * [DataMapper CRUD operations](http://datamapper.org/docs/create_and_destroy.html)
 * [DataMapper Website](http://datamapper.org/)
