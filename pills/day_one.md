@@ -8,7 +8,7 @@ If you have any questions, just ask!
 * 09.30 - 10.30 Welcome to Makers (Coach)
 * 10.30 - 11.00 Name tag making (Coach, staff, all students)
 * 11.00 - 11.30 Get and setup your laptops
-* 11.30 - 12.30 Life at Makers/Inclusivity & diversity (Dana)
+* 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (Dana)
 * 12.30 - 14.00 Lunch and more laptop setup
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Sam)
