@@ -1,6 +1,6 @@
 # Walkthrough - Airport Challenge in JavaScript
 
-[Back to the Challenge](../airport_challange_js.md)
+[Back to the Challenge](../airport_challenge_js.md)
 
 Let's start with a user story to drive a feature test:
 
