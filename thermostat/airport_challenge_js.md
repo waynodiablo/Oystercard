@@ -1,6 +1,6 @@
 # Airport Challenge in JavaScript
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Awesome! Now you are able to test one object in JavaScript - let's try testing a few objects together, and keep practicing basic JavaScript syntax.
 
@@ -24,4 +24,4 @@ Take your Ruby code and attempt to rewrite it in JavaScript - don't dwell too lo
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 - [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
-### [Walkthrough](walkthroughs/4.md)
+### [Walkthrough](walkthroughs/airport_challenge_js.md)

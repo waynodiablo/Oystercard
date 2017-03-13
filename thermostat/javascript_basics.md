@@ -1,6 +1,6 @@
 # JavaScript Basics
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 A new language means a new environment. So far, you've been used to using IRB or Pry to try out small code experiments and load your own files. However, this week, the focus is on browser-based (also known as client-side) JavaScript, which means that you'll need to get familiar with some new tools.
 
@@ -39,4 +39,4 @@ The JavaScript equivalent is the Console tab of the Chrome developer tools.  Whe
 - [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
 - :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
-### [Walkthrough](walkthroughs/1.md)
+### [Walkthrough](walkthroughs/javascript_basics.md)

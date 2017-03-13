@@ -1,6 +1,6 @@
 # Thermostat: APIs
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Wouldn't it be good if before setting your thermometer's temperature, you knew what the weather was like outside and then you could set the thermometer's interface appropriately?
 
@@ -24,4 +24,4 @@ Add a feature to display the weather in a city selected by the user.
 - [MDN documentation on AJAX](https://developer.mozilla.org/en-US/docs/AJAX)
 - [jQuery shortcut methods](http://api.jquery.com/category/ajax/shorthand-methods/)
 
-### [Walkthrough](walkthroughs/8.md)
+### [Walkthrough](walkthroughs/apis.md)

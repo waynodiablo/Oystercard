@@ -1,6 +1,6 @@
 # Walkthrough - Thermostat: styling
 
-[Back to the Challenge](../9_styling.md)
+[Back to the Challenge](../styling.md)
 
 #### Questions you will want to answer
 
@@ -23,4 +23,4 @@
 - CSS reset
 - Grouping rules
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

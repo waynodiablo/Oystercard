@@ -1,6 +1,6 @@
 # Walkthrough - JavaScript basics
 
-[Back to the Challenge](../1_javascript_basics.md)
+[Back to the Challenge](../javascript_basics.md)
 
 Let's write some JavaScript!
 
@@ -133,4 +133,4 @@ For further practice, you can check out the [Javascripting workshopper](https://
 
 Once you feel comfortable with JavaScript and using the browser's JavaScript console to play with code ideas, let's start writing some TDD JavaScript.
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

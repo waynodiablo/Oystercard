@@ -1,6 +1,6 @@
 # Walkthrough - Thermostat: business logic
 
-[Back to the Challenge](../5_thermostat_logic.md)
+[Back to the Challenge](../thermostat_logic.md)
 
 So let's start with the customer's requirements:
 
@@ -522,4 +522,4 @@ Thermostat.prototype.energyUsage = function() {
 
 Fantastic! Truly exciting! Now we have a fully-tested thermostat ready to go. Next step - hooking it up to an interface! Onward, brave Soldiers...
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

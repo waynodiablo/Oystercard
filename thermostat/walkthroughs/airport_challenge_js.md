@@ -1,6 +1,6 @@
 # Walkthrough - Airport Challenge in JavaScript
 
-[Back to the Challenge](../4_airport_challange_js.md)
+[Back to the Challenge](../airport_challange_js.md)
 
 Let's start with a user story to drive a feature test:
 
@@ -236,7 +236,7 @@ Feature Test: planes can be instructed to land at an airport
 Definitely time to get that clearForLanding method in there:
 
 ```javascript
-Airport.prototype.clearForLanding = function(plane) {  
+Airport.prototype.clearForLanding = function(plane) {
 };
 ```
 
@@ -260,7 +260,7 @@ function Airport(){
 }
 Airport.prototype.planes = function(){ return this._hangar; };
 Airport.prototype.clearForLanding = function(plane) {
-  this._hangar.push(plane);  
+  this._hangar.push(plane);
 };
 ```
 
@@ -364,7 +364,7 @@ And we can fix that with the following addition to the airport functionality:
 ```javascript
 // src/Airport.js
 Airport.prototype.clearForTakeOff = function(plane) {
-  this._hangar = [];  
+  this._hangar = [];
 };
 ```
 
@@ -390,7 +390,7 @@ For which we can write a test like:
 
 Checking that fails as expected `isStormy() method does not exist` we can create the matching unit test, which fails the same way:
 
-```javascript  
+```javascript
 // spec/AirportSpec.js
   it('can check for stormy conditions', function(){
     expect(airport.isStormy()).toBeFalsy();
@@ -422,7 +422,7 @@ describe('under stormy conditions',function(){
   it('does not clear planes for takeoff', function(){
     spyOn(airport,'isStormy').and.returnValue(true);
     expect(function(){ airport.clearForTakeOff(plane); }).toThrowError('cannot takeoff during storm');
-  });  
+  });
 });
 ```
 
@@ -434,7 +434,7 @@ Airport.prototype.clearForTakeOff = function(plane) {
   if(this.isStormy()) {
     throw new Error('cannot takeoff during storm');
   }
-  this._hangar = [];  
+  this._hangar = [];
 };
 ```
 
@@ -476,14 +476,14 @@ Airport.prototype.clearForLanding = function(plane) {
   if(this.isStormy()) {
     throw new Error('cannot land during storm');
   }
-  this._hangar.push(plane);  
+  this._hangar.push(plane);
 };
 
 Airport.prototype.clearForTakeOff = function(plane) {
   if(this.isStormy()) {
     throw new Error('cannot takeoff during storm');
   }
-  this._hangar = [];  
+  this._hangar = [];
 };
 
 Airport.prototype.isStormy = function() {
@@ -504,7 +504,7 @@ describe('Weather',function(){
   it('gives stormy sometimes', function(){
     spyOn(Math,'random').and.returnValue(1);
     expect(weather.isStormy()).toBeTruthy();
-  });  
+  });
   it('gives not stormy other times', function(){
     spyOn(Math,'random').and.returnValue(0);
     expect(weather.isStormy()).toBeFalsy();
@@ -543,14 +543,14 @@ Airport.prototype.clearForLanding = function(plane) {
   if(this._weather.isStormy()) {
     throw new Error('cannot land during storm');
   }
-  this._hangar.push(plane);  
+  this._hangar.push(plane);
 };
 
 Airport.prototype.clearForTakeOff = function(plane) {
   if(this._weather.isStormy()) {
     throw new Error('cannot takeoff during storm');
   }
-  this._hangar = [];  
+  this._hangar = [];
 };
 ```
 
@@ -636,7 +636,7 @@ describe('Airport', function(){
       airport.clearForLanding(plane);
       airport.clearForTakeOff(plane);
       expect(airport.planes()).toEqual([]);
-    });  
+    });
   });
 
   describe('under stormy conditions',function(){
@@ -648,7 +648,7 @@ describe('Airport', function(){
     });
     it('does not clear planes for takeoff', function(){
       expect(function(){ airport.clearForTakeOff(plane); }).toThrowError('cannot takeoff during storm');
-    });  
+    });
   });
 });
 ```
@@ -710,4 +710,4 @@ Full code for above available at: https://github.com/tansaku/airport_js
 
 
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

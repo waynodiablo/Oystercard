@@ -1,6 +1,6 @@
 # Walkthrough - Airport Challenge in JavaScript
 
-[Back to the Challenge](../4_airport_challange_js.md)
+[Back to the Challenge](../airport_challange_js.md)
 
 ### The Plane
 
@@ -159,4 +159,4 @@ Now you'll note that the test I wrote is looking for a `planesAvailable` method.
 
 
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

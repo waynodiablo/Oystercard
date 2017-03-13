@@ -1,6 +1,6 @@
 # Walkthrough - Thermostat: jQuery
 
-[Back to the Challenge](../7_jquery.md)
+[Back to the Challenge](../jquery.md)
 
 First. jQuery. Either download the script or grab one off a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). Load it in `index.html`.
 
@@ -205,4 +205,4 @@ And now the CSS can handle colour (don't forget to place this in its own file an
 }
 ```
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

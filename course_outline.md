@@ -7,7 +7,7 @@
 * Week 2: [Further OOD: Oystercard](oystercard/README.md)
 * Week 3: [Welcome to the web: Battle in the browser](intro_to_the_web)
 * Week 4: [Databases: Bookmark Manager](bookmark_manager/00_challenge_map.md)
-* Week 5: [Intro to Javascript: Thermostat](thermostat/0_challenge_map.md)
+* Week 5: [Intro to Javascript: Thermostat](thermostat/README.md)
 * Week 6: [MakersBnB](makersbnb)
 * Week 7: [Further JavaScript](further_javascript/README.md)
 * Week 8: [Intro to Rails](rails/README.md)

@@ -1,6 +1,6 @@
 # Walkthrough - Thermostat: interface
 
-[Back to the Challenge](../6_interface.md)
+[Back to the Challenge](../interface.md)
 
 Working from the code we had in the earlier walkthrough (your code may well be different) and the specification, there are a few input elements that are fairly obvious from the code, as they are functions that represent the thermostat's main API:
 
@@ -53,4 +53,4 @@ Now, add your thermostat code to the page, with a `<script>` tag just before the
 
 Make sure that the HTML elements are all present by trying to play with your thermostat in the console. Nothing will work at this stage - we'll get to that next...
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

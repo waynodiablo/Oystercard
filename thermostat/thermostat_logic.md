@@ -1,6 +1,6 @@
 # Thermostat: business logic
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Alrighty. Now that you've got the basics under your fingers, it's time for a new domain.
 
@@ -37,4 +37,4 @@ Specification:
 - [Master the `this` keyword](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 - [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
-### [Walkthrough](walkthroughs/5.md)
+### [Walkthrough](walkthroughs/thermostat_logic.md)

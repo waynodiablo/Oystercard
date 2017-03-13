@@ -1,6 +1,6 @@
 # Thermostat: jQuery
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Now, you are at the point which excites a lot of people, and is also JavaScript's unique superpower - dynamically changing content on a webpage. Using JavaScript, we can grab any element on the page, change its HTML and CSS, delete it, move it elsewhere, draw on the page, and many other funtastic things. Seeing as so far all user interaction you've done so far has been through the medium of forms and links, this will hopefully excite you.
 
@@ -29,4 +29,4 @@ The first part of this challenge is intentionally left really open. When you fir
 - [Short jQuery tutorial](http://learn.jquery.com/about-jquery/how-jquery-works/)
 - [jQuery documentation](http://api.jquery.com/)
 
-### [Walkthrough](walkthroughs/7.md)
+### [Walkthrough](walkthroughs/jquery.md)

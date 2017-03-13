@@ -1,14 +1,14 @@
 # Walkthrough - FizzBuzz in JavaScript
 
-[Back to the Challenge](../3_fizzbuzz_in_javascript.md)
+[Back to the Challenge](../fizzbuzz_in_javascript.md)
 
 If you struggled and clicked through before attempting a complete solution of your own, here is a step-by-step walkthrough: :pill: [JavaBuzz pill](/pills/javascript&JasminePill.md)
 
-Here is one possible TDD implementation of FizzBuzz, after refactoring - if yours looks different (it will!) discuss the differences with your pair partner. 
+Here is one possible TDD implementation of FizzBuzz, after refactoring - if yours looks different (it will!) discuss the differences with your pair partner.
 
 - What did you start by testing?
 - Did you directly translate your Ruby version or did you TDD from scratch?
-- When/why did you refactor your code? 
+- When/why did you refactor your code?
 - Did you use `beforeEach` to set up your object?
 - Did you use nested `describe` blocks to organize your tests?
 
@@ -97,4 +97,4 @@ for (var i = 1; i <= 100; i++) {
 }
 ```
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

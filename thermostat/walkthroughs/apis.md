@@ -1,6 +1,6 @@
 # Walkthrough - Thermostat: APIs
 
-[Back to the Challenge](../8_apis.md)
+[Back to the Challenge](../apis.md)
 
 Let's start by experimenting in the console.  You'll need to register for an API key - follow the instructions on the page to obtain one.
 
@@ -116,4 +116,4 @@ $('#select-city').submit(function(event) {
 
 ```
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

@@ -1,6 +1,6 @@
 # FizzBuzz in JavaScript
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 Now that we're set up with Jasmine, we can start writing code.
 
@@ -30,4 +30,4 @@ In case you've forgotten the rules of FizzBuzz:
 - [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 - :pill: [JavaBuzz pill](/pills/javascript&JasminePill.md)
 
-### [Walkthrough](walkthroughs/3.md)
+### [Walkthrough](walkthroughs/fizzbuzz_in_javascript.md)

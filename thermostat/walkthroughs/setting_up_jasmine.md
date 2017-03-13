@@ -1,6 +1,6 @@
 # Walkthrough - Setting up Jasmine
 
-[Back to the Challenge](../2_setting_up_jasmine.md)
+[Back to the Challenge](../setting_up_jasmine.md)
 
 To get started, go to the [latest build page for Jasmine](https://github.com/jasmine/jasmine/releases) and download the most recent standalone version in a zip file.
 
@@ -130,4 +130,4 @@ Finally, delete all the files in `spec` and `src` that are not needed - your fol
 4 directories, 10 files
 ```
 
-[Forward to the Challenge Map](../0_challenge_map.md)
+[Forward to the Challenge Map](../README.md)

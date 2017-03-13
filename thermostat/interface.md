@@ -1,6 +1,6 @@
 # Thermostat: interface
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 You now have some well tested business logic, representing simple model of a thermostat. However, at the moment, the only way you can interact with the code is either through the console or tests. It's time to build a user interface.
 
@@ -20,4 +20,4 @@ In this challenge, you will build the skeleton of a UI, so that you can then sta
 
 ### Resources
 
-### [Walkthrough](walkthroughs/6.md)
+### [Walkthrough](walkthroughs/interface.md)

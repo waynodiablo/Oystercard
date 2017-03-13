@@ -1,6 +1,6 @@
 # Setting up Jasmine
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 To be able to TDD, we need a testing framework. The very awesome [Pivotal Labs](http://pivotal.io/labs) have built [Jasmine](https://github.com/Jasmine/jasmine) which conveniently has syntax that is extremely similar to RSpec.
 
@@ -28,4 +28,4 @@ In this challenge, you will install Jasmine, set up a new project and try to fin
 - [Jasmine documentation](http://jasmine.github.io/2.3/introduction.html)
 - [A detailed breakdown of the &lt;script&gt; tag](http://www.sitepoint.com/a-detailed-breakdown-of-the-script-tag/)
 
-### [Walkthrough](walkthroughs/2.md)
+### [Walkthrough](walkthroughs/setting_up_jasmine.md)

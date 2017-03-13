@@ -1,6 +1,6 @@
 # Thermostat: styling
 
-[Back to the Challenge Map](0_challenge_map.md)
+[Back to the Challenge Map](README.md)
 
 While fully functional, it's rare to see a thermostat (or any app, really) in this sad state:
 
@@ -25,4 +25,4 @@ Or, influenced by whatever else you take your visual inspiration from.
 
 ### Walkthrough
 
-There's no detailed walkthrough for this challenge.  How much and what styling you'd like to do is up to you.  However, the [walkthrough](walkthroughs/9.md) does contain some questions to consider when styling your thermostat.
+There's no detailed walkthrough for this challenge.  How much and what styling you'd like to do is up to you.  However, the [walkthrough](walkthroughs/styling.md) does contain some questions to consider when styling your thermostat.
