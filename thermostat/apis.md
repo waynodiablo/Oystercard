@@ -19,7 +19,7 @@ Add a feature to display the weather in a city selected by the user.
 
 ### Resources
 
-- [Open Weather Map API](http://openweathermap.org/api)
+- [Open Weather Map API](https://openweathermap.org/api)
 - [Learn jQuery: AJAX](https://learn.jquery.com/ajax/)
 - [MDN documentation on AJAX](https://developer.mozilla.org/en-US/docs/AJAX)
 - [jQuery shortcut methods](http://api.jquery.com/category/ajax/shorthand-methods/)
