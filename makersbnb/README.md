@@ -70,8 +70,6 @@ If your specification asks for a car, don't build the wheels in the first week, 
 
 * Focus on getting a [minimum viable product](#minimum-viable-product-mvp) first.
 
-* Avoid JavaScript until you have an [MVP](#minimum-viable-product-mvp).
-
 * If you want to take this week to learn a new tech, great! Remember that this will also make things harder because it will make it harder to focus on the high level skills of the week.
 
 * Use this week to practice skills from the first five weeks that you feel you're weaker on.
