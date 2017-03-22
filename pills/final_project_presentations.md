@@ -2,7 +2,7 @@
 
 Here are some guidelines for your final project presentations:
 
-* The time limit is 5 minutes.  Practice, practice, practice to ensure you come in under the time limit.  You'll be cut off at 5 minutes!
+* The time limit is usually 5 minutes (this depends on the number of projects, your coach will advise if the time limit is different).  Practice, practice, practice to ensure you come in under the time limit.  You'll be cut off at 5 minutes!
 
 * To guide you on what to include, think what you found interesting about other people’s presentations.
 
@@ -18,6 +18,8 @@ Here are some guidelines for your final project presentations:
 
 * There's no need to talk about the future direction of the project.  Focus your presentation on what you've already achieved.
 
+### Onsite students:
+
 * Please **make your presentation in slides.com**.
 
 * Your coach's computer will be used as the presentation computer.  They will have all your slide decks opened in Chrome and ready for you to present.
@@ -25,3 +27,15 @@ Here are some guidelines for your final project presentations:
 * By Friday afternoon, please send your coach:
   * The link to your slides on slides.com
   * A link to your demo video.  (This way I can have it downloaded on my machine in case the internet dies.)
+
+### Remote students:
+
+* We will be presenting over youtube live. This has a lower maximum occupancy than Zoom, so teams will need to rotate into the hangout when it is their turn to present.
+
+* You will make the presentation by sharing your screen.
+
+* Please make your slides on a cloud-based service such as slides.com so that if one person's internet goes down, someone else can pick up and carry on. 
+
+* Have 1 person designated to run the slides / videos - but have a backup if their internet goes down.
+
+* We will have an extra practice run to ensure everyone is happy with the technology.
