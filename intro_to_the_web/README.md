@@ -41,6 +41,10 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 - Some exercises to get you familiar with Capybara
 - An extended project to wrap it all together
 
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week03.md)
+* [Remote](../sequence/remote/week03.md)
+
 ## Challenges
 
 * [The Web](theweb.md)

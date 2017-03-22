@@ -44,6 +44,11 @@ To guide your learning, aim to be able to answer "yes" to the questions below.  
 
 * Can you keep code quality and test coverage high whilst building new features?
 
+
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week06.md)
+* [Remote](../sequence/remote/week06.md)
+
 ### Specification and mockups
 
 Build your project from this [specification and mockups](./specification_and_mockups.md).

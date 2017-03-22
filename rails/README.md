@@ -77,6 +77,10 @@ There are two tracks:
 
 Both tracks will take you to the same place, but Track 1 is entirely self-led.
 
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week08.md)
+* [Remote](../sequence/remote/week08.md)
+
 ## Standups
 
 * **Project track:** Organise standups in your teams.
