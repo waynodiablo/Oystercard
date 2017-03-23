@@ -1,4 +1,4 @@
-#Introduction to Node
+# Introduction to Node
 
 Many thanks to [Spike](http://github.com/Spike01) for the original design of this walkthrough
 
@@ -30,7 +30,7 @@ It is also assumed that you have worked through the following:
 
 Additionally, [this Node style guide](https://github.com/felixge/node-style-guide) will help you write code that is clear and readable.
 
-##What we will be covering
+## What we will be covering
 
 Node is a whole new environment, so we will be covering __a lot__ of ground in a short space of time. Don't worry if you feel lost at any point, as there is huge amount of information to take in. Also, you are working in a new, unfamiliar paradigm. Where possible, examples linking Node back to more familiar concepts in Ruby will be used.
 
@@ -44,7 +44,7 @@ Here is a broad outline of what we hope to cover this week:
 * Building an API with node
 * Consuming that API with JQuery
 
-##Setting up your Node environment/starting a project
+## Setting up your Node environment/starting a project
 
 Please install Node with `brew install node` and follow any additional instructions.  Note that this can cause problems if you already have a node version manager (e.g. n, nvm, nodenv) installed.  Please contact a coach or alumni helper if you are having trouble with your node install. Please refer to :pill: [npm](https://github.com/makersacademy/course/blob/master/pills/npm.md) :pill: when setting up your project.
 
@@ -71,7 +71,7 @@ Navigate into the directory and run `npm init` and follow the on-screen instruct
 
 Interesting, but not very useful. Let's start adding some testing tools so we can start playing with Node.  
 
-##Unit testing with `jasmine-node`/Node modules
+## Unit testing with `jasmine-node`/Node modules
 
 At this point, it's a good idea to create a `.gitignore` file and add `node_modules` to it, as we don't want to add our local dependencies to Git, and ultimately to Github.
 
@@ -129,7 +129,7 @@ TypeError: object is not a function
 
 Thanks JavaScript. To explain this one, we need to take a brief sidestep and understand one of Node's key concepts: Node modules.
 
-###Node modules
+### Node modules
 
 One of Node's guiding principles is that your app should be made of many small modules, each of which does one thing very well. This encourages code re-use, unit testing and decoupled architecture. Sound familiar? These are all concepts that you have encountered in Ruby & Unix and are important elements of writing good code.
 
@@ -182,13 +182,13 @@ function Game(){
 
 _*compared to wrestling a lion._
 
-##Tasks:
+## Tasks:
 
 * Try repeating the above steps from memory
 * Try to convert one of your existing front-end Javascript projects to `jasmine-node`, remembering to use `module.exports` and `require` correctly. Some good project to try converting are Boris Bikes or airport, as they have lots of moving parts that you'll need to fit together.  
 * Research how to export multiple functions from a module. Bear in mind that you should not use this technique to export multiple functions that require state - if you find yourself doing this, you probably need a new module.
 
-###Further resources
+### Further resources
 * [jasmine-node](https://github.com/mhevery/jasmine-node)  
 * [Understanding module.exports in Node.js](http://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 * [Intro Video by Spike](https://www.youtube.com/watch?v=4J3PCKjRH-8)
