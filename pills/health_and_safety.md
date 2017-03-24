@@ -33,6 +33,8 @@ FACILITIES
 --------
 * This is a listed building, please don't mark the walls or hang from the rafters
 
+* Vaping is not allowed inside the building
+
 * Shower on 2nd floor, please leave it clean
 
 * Take bikes home in the evening
