@@ -384,7 +384,7 @@ if (exclaim(repeat, "hi") !== "hi!!!!!") {
 
 ## Other ways to achieve the module pattern
 
-Different people use different ways to achieve the module pattern.  The way the pattern is achieved isn't very important.  The important part is achieving the goal of encapsulation.
+Different developers use different syntaxes to achieve the module pattern.  In this article, we've explored one of those ways.  The way the pattern is achieved isn't very important.  The important part is achieving the goal of encapsulation.
 
 ## Build tools
 
