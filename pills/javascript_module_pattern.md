@@ -22,7 +22,7 @@ function() {
 }
 ```
 
-Second, there are a set of mysterious parentheses than wrap the anonymous function.  These are just to [keep the JavaScript syntax checker happy](http://benalman.com/news/2010/11/immediately-invoked-function-expression/).
+Second, there are a set of mysterious parentheses that wrap the anonymous function.  These are just to [keep the JavaScript syntax checker happy](http://benalman.com/news/2010/11/immediately-invoked-function-expression/).
 
 ```js
 (function() {
@@ -70,7 +70,7 @@ Imagine we wanted to formulate a more complex greeting than just `hi`.
 
 Using an IIFE to wrap all this code keeps the details of creating the greeting private.  None of the rest of the program has to worry about `exclaim` or what it is.  All the details of exclaiming `hi` are gathered together and hidden.
 
-What does "hidden" mean? It means none of the rest of the code can access any variables or functions inside the IIFE.
+What does "hidden" mean? It means none of the rest of the code can access any variables or functions inside the IIFE.  Look what happens when we try to use `exclaim` and `EXCLAMATION_MARK_COUNT` outside the IIFE:
 
 ```js
 (function () {
@@ -91,7 +91,7 @@ exclaim();
 console.log(EXCLAMATION_MARK_COUNT);
 ```
 
-## The module pattern in the browser
+## Using the module pattern in the browser
 
 The module pattern is basically just an IIFE.  But it uses a bit of extra code to export (or expose, or make available to the outside, or show) functions and variables that are part of the public interface of the module.
 
@@ -129,7 +129,7 @@ exclaim("hi");
 console.log(EXCLAMATION_MARK_COUNT);
 ```
 
-So we can access `exclaim`, but `EXCLAMATION_MARK_COUNT` is hidden.  Cool.  We've made available the function we want people to use, but hidden some implementation details that we don't want to bother them with.
+So we can access `exclaim`, but `EXCLAMATION_MARK_COUNT` is hidden.  Cool.  We've made available the function we want people to use, but hidden some implementation details that we don't want to bother them with.  We've also prevented our hidden variables from clashing with variables in the rest of our program.  For example, we could have two modules, each of which define and keep private their own `EXCLAMATION_MARK_COUNT`.
 
 ### How does `exports` work?
 
@@ -236,7 +236,7 @@ In the rewrite below, the programmer wants to abstract out the code that can rep
 })(this);
 ```
 
-This code works fine.  `repeat` is a global variable, so all is well.
+This works great.  `repeat` is a global variable, so all is well.
 
 ```js
 // index.html
@@ -251,7 +251,7 @@ This code works fine.  `repeat` is a global variable, so all is well.
 </html>
 ```
 
-## Node.js
+## Using the module pattern in Node.js
 
 (What is Node.js? See the [Node.js](./node.md) :pill:.  If you're just working on a frontend-only app, you don't need to worry about how to use the module pattern in Node.js.)
 
@@ -259,7 +259,7 @@ What happens if we want to use our `exclaim` module in Node.js? Well, it depends
 
 ### A module that doesn't include any other modules
 
-This version contains the repeat functionality.
+This version of `exclaim` contains the repeat functionality.
 
 ```js
 (function () {
@@ -273,7 +273,7 @@ This version contains the repeat functionality.
 })();
 ```
 
-We can just use this version of the `exclaim` module as we wrote it for the browser.  Look:
+This version that we wrote for the browser works perfectly, without any changes, in Node.js.  Look:
 
 ```js
 // exclaim-test.js
@@ -317,7 +317,7 @@ Run the code above in Node.js.  Play around. `console.log` some variables to und
 
 ### A module that requires other modules
 
-This version breaks out the `repeat` functionality into a separate module.
+This version of the `exclaim` module breaks out the `repeat` functionality into a separate module.
 
 ```js
 // repeat.js
@@ -345,9 +345,9 @@ This version breaks out the `repeat` functionality into a separate module.
 })(this);
 ```
 
-This version of exclaim won't work in Node.js.  The behaviour of the browser that makes `repeat` available as a global doesn't work in Node.js
+This version of the `exclaim` module won't work in Node.js.  The behaviour of the browser that makes `repeat` available as a global doesn't work in Node.js
 
-But this code doesn't work in Node.js.  Here is one way we can rewrite `exclaim` to support Node.js and the browser.  There are other ways, but this one is simple and clear.
+Here is one way we can rewrite `exclaim` to support Node.js and the browser.  There are other ways, but this one is simple and clear.
 
 ```js
 // exclaim.js
