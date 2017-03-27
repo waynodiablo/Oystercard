@@ -79,12 +79,10 @@ What does "hidden" mean? It means none of the rest of the code can access any va
   function exclaim(string) {
     return string + "!".repeat(EXCLAMATION_MARK_COUNT);
   };
-
-  console.log(exclaim("hi"));
 })();
 
 // throws a ReferenceError
-exclaim();
+exclaim("hi");
 
 // would throw a ReferenceError, if not for the ReferenceError thrown
 // by the previous line
@@ -122,8 +120,8 @@ To explore this code, let's try and use the exclaim function:
   exports.exclaim = exclaim;
 })(this);
 
-// returns "hi!!!!!"
-exclaim("hi");
+// prints "hi!!!!!"
+console.log(exclaim("hi"));
 
 // throws a ReferenceError
 console.log(EXCLAMATION_MARK_COUNT);
@@ -236,7 +234,7 @@ In the rewrite below, the programmer wants to abstract out the code that can rep
 })(this);
 ```
 
-This works great.  `repeat` is a global variable, so all is well.
+This works great.  `repeat` is available because it's a global variable, so all is well.
 
 ```js
 // index.html
@@ -262,15 +260,15 @@ What happens if we want to use our `exclaim` module in Node.js? Well, it depends
 This version of `exclaim` contains the repeat functionality.
 
 ```js
-(function () {
+(function(exports) {
   var EXCLAMATION_MARK_COUNT = 5
 
   function exclaim(string) {
     return string + "!".repeat(EXCLAMATION_MARK_COUNT);
   };
 
-  console.log(exclaim("hi"));
-})();
+  exports.exclaim = exclaim;
+})(this);
 ```
 
 This version that we wrote for the browser works perfectly, without any changes, in Node.js.  Look:
