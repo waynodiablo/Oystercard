@@ -130,7 +130,7 @@ console.log(EXCLAMATION_MARK_COUNT);
 
 So we can access `exclaim`, but `EXCLAMATION_MARK_COUNT` is hidden.  Cool.  We've made available the function we want people to use, but hidden some implementation details that we don't want to bother them with.
 
-How have we made `exclaim` available? Grab the code and paste it into your browser console.  (Make sure to use your browser console or a JS file you load in the browser.  Running this code in [Node.js](./node.md) will behave slightly differently.  See the [Using modules in node](#using-modules-in-node) section below.)
+How have we made `exclaim` available? Grab the code and paste it into your browser console.  (Make sure to use your browser console or a JS file you load in the browser.)
 
 Use `console.log` to see the data stored in variables.  Follow the flow of this data through the program.  Notice how the value of `this` is `window`, the place where all globals are stored.  What value does `exports` have? What happens when `exclaim` is added as an attribute to `exports`?
 
