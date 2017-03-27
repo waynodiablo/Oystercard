@@ -19,7 +19,7 @@ A testing library supplies:
 
 ## Writing tests without a testing library
 
-All of these things are either optional for test code, or can be easily achieved with adhoc code.  For example:
+All of these things are either optional for test code, or can be easily achieved with adhoc code.  For example, here is some code that tests a circle object:
 
 ```js
 // circle-tests.js
@@ -27,7 +27,7 @@ All of these things are either optional for test code, or can be easily achieved
 function testCircleRadiusDefaultsTo10() {
   var circle = new Circle();
 
-  if (circle.radius() !== 10) {
+  if (circle.radius !== 10) {
     throw new Error("Circle size is not 10");
   }
 };
@@ -35,9 +35,23 @@ function testCircleRadiusDefaultsTo10() {
 testCircleRadiusDefaultsTo10();
 ```
 
+Here is the code for the implementation of `Circle`:
+
+```js
+// circle.js
+
+function Circle() {
+  this.radius = 10;
+};
+```
+
 To run these tests:
 
-* Create an HTML page that uses a script tag to include the test file.
+* Create an HTML page.
+* Create the `circle.js` file.
+* Use a script tag to include `circle.js` in `index.html`.
+* Create the `circle-test.js` file.
+* Use a script tag to include `circle-test.js` in `index.html`.
 * Open the HTML page in a browser.
 
 This is pretty ugly.
