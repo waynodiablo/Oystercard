@@ -130,7 +130,7 @@ console.log(EXCLAMATION_MARK_COUNT);
 
 So we can access `exclaim`, but `EXCLAMATION_MARK_COUNT` is hidden.  Cool.  We've made available the function we want people to use, but hidden some implementation details that we don't want to bother them with.
 
-How have we made `exclaim` available? Grab the code and paste it into your browser console.  (Make sure to use your browser console or a JS file you load in the browser.  Running this code in node will behave slightly differently.  See the [Using modules in node](#using-modules-in-node) section below.)
+How have we made `exclaim` available? Grab the code and paste it into your browser console.  (Make sure to use your browser console or a JS file you load in the browser.  Running this code in [Node.js](./node.md) will behave slightly differently.  See the [Using modules in node](#using-modules-in-node) section below.)
 
 Use `console.log` to see the data stored in variables.  Follow the flow of this data through the program.  Notice how the value of `this` is `window`, the place where all globals are stored.  What value does `exports` have? What happens when `exclaim` is added as an attribute to `exports`?
 
@@ -197,9 +197,9 @@ We can now use `exclaim()` in `app.js` to say `howdy!!!!!`.
 console.log(exclaim("howdy"));
 ```
 
-## Using modules in node
+## Using modules in Node.js
 
-We've used our `exclaim` module in our browser code.  Now we want to use it in node.  For example, in our tests that we run with node.  This is pretty easy:
+We've used our `exclaim` module in our browser code.  Now we want to use it in Node.js.  For example, in our tests that we run with node.  This is pretty easy:
 
 ```js
 // exclaim-test.js
@@ -215,9 +215,9 @@ if (exclaim("hi") !== "hi!!!!!") {
 
 Play around with this code.  What value does `exclaim` have? Why does `require("./exclaim")` have `.exclaim` after it?
 
-So the module pattern we used with exclaim works in both the browser and in node.  Cool!
+So the module pattern we used with exclaim works in both the browser and in Node.js.  Cool!
 
-### How does `exclaim` export its API in node?
+### How does `exclaim` export its API in Node.js?
 
 ```js
 (function(exports) {
@@ -231,11 +231,11 @@ So the module pattern we used with exclaim works in both the browser and in node
 })(this);
 ```
 
-Remind yourself what `this` (at the top level) and `exports` are in the browser.  Things are a little different in node.  `this` at the top level points at a special object that node provides called `exports`.  Anything that you attach to `exports` will be available when you require the module.  In this case, `exclaim` is attached to `exports`, which means that you can write `var exclaim = require("./exclaim").exclaim;` in another file to get hold of the `exclaim` function.
+Remind yourself what `this` (at the top level) and `exports` are in the browser.  Things are a little different in Node.js.  `this` at the top level points at a special object that node provides called `exports`.  Anything that you attach to `exports` will be available when you require the module.  In this case, `exclaim` is attached to `exports`, which means that you can write `var exclaim = require("./exclaim").exclaim;` in another file to get hold of the `exclaim` function.
 
-> The values of `this` in the browser (`window`) and `this` in node (`exports`) are different.  But they are similar enough that they can both be massaged by this pattern to let us write code that will work in both environments.
+> The values of `this` in the browser (`window`) and `this` in Node.js (`exports`) are different.  But they are similar enough that they can both be massaged by this pattern to let us write code that will work in both environments.
 
-Run the code above in node.  Play around, `console.log` some variables to understand how all this stuff works.
+Run the code above in Node.js.  Play around, `console.log` some variables to understand how all this stuff works.
 
 ## What if one module needs to require another module?
 
@@ -282,7 +282,7 @@ In the browser, this code works fine.  `repeat` is a global variable, so all is 
 </html>
 ```
 
-But this code doesn't work in node.  Here is one way we can rewrite `exclaim` to support node and the browser.  There are other ways, but this one is simple and clear.
+But this code doesn't work in Node.js.  Here is one way we can rewrite `exclaim` to support node and the browser.  There are other ways, but this one is simple and clear.
 
 ```js
 // exclaim.js
@@ -298,7 +298,7 @@ But this code doesn't work in node.  Here is one way we can rewrite `exclaim` to
 })(this);
 ```
 
-We have injected the `repeat` function into `exclaim`.  To support this, here are the slightly rewritten `app.js` and node test file `exclaim-test.js`:
+We have injected the `repeat` function into `exclaim`.  To support this, here are the slightly rewritten `app.js` and Node.js test file `exclaim-test.js`:
 
 ```js
 // app.js
