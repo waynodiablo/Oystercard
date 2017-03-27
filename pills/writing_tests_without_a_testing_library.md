@@ -25,7 +25,6 @@ All of these things are either optional for test code, or can be easily achieved
 // circle-tests.js
 
 (function(exports) {
-
   function testCircleRadiusDefaultsTo10() {
     var circle = new Circle();
 
