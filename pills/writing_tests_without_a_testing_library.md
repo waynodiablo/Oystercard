@@ -50,8 +50,8 @@ To run these tests:
 * Create an HTML page.
 * Create the `circle.js` file.
 * Use a script tag to include `circle.js` in `index.html`.
-* Create the `circle-test.js` file.
-* Use a script tag to include `circle-test.js` in `index.html`.
+* Create the `circle-tests.js` file.
+* Use a script tag to include `circle-tests.js` in `index.html`.
 * Open the HTML page in a browser.
 
 This is pretty ugly.
