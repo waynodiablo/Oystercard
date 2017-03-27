@@ -4,7 +4,7 @@ A design pattern to encapsulate and share your JavaScript code.
 
 ## Immediately Invoked Function Expression (IIFE)
 
-Let's start by talking about a part of the module pattern: the Immediately Invoked Function Expression (or IFFE, pronounced "iffy").  At its simplest, it looks like this:
+Let's start by talking about a part of the module pattern: the Immediately Invoked Function Expression (or IIFE, pronounced "iffy").  At its simplest, it looks like this:
 
 ```js
 (function() {
@@ -52,7 +52,7 @@ This code does the same thing the IIFE does.  But it's more verbose. And it crea
 
 ### Why?
 
-It's kind of useless to wrap just a call to `console.log` in an IIFE.  The `console.log` would be fine on its own, without an IFFE.  So why do we use IFFEs? To hide stuff.
+It's kind of useless to wrap just a call to `console.log` in an IIFE.  The `console.log` would be fine on its own, without an IIFE.  So why do we use IIFEs? To hide stuff.
 
 Imagine we wanted to formulate a more complex greeting than just `hi`.
 
