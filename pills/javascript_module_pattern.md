@@ -321,23 +321,9 @@ if (exclaim(repeat, "hi") !== "hi!!!!!") {
 }
 ```
 
-## There are many ways to implement the module pattern
+## Other ways to achieve the module pattern
 
-Different people use different ways to achieve the module pattern.  For example, here is another way to put exclaim as a module pattern:
-
-```js
-var exclaim = (function() {
-  var EXCLAMATION_MARK_COUNT = 5
-
-  function exclaim(string) {
-    return string + "!".repeat(EXCLAMATION_MARK_COUNT);
-  };
-
-  return { exclaim: exclaim };
-})();
-```
-
-The way the pattern is achieved isn't very important.  The important part is achieving the goal of encapsulation.
+Different people use different ways to achieve the module pattern.  The way the pattern is achieved isn't very important.  The important part is achieving the goal of encapsulation.
 
 ## Build tools
 
