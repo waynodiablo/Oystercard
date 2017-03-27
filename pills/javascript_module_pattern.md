@@ -1,6 +1,6 @@
 # JavaScript module pattern
 
-A design pattern to encapsulate and share your JavaScript code.
+A design pattern to encapsulate your JavaScript code.
 
 ## Immediately Invoked Function Expression (IIFE)
 
@@ -14,7 +14,7 @@ Let's start by talking about a part of the module pattern: the Immediately Invok
 
 ### How does this code work?
 
-There's the anonymous function declaration.  This function prints `hi`.
+First, there's an anonymous function declaration.  This function prints `hi`.
 
 ```js
 function() {
@@ -22,7 +22,7 @@ function() {
 }
 ```
 
-There are the mysterious parentheses than wrap the anonymous function.  These are just to [keep the JavaScript syntax checker happy](http://benalman.com/news/2010/11/immediately-invoked-function-expression/).
+Second, there are a set of mysterious parentheses than wrap the anonymous function.  These are just to [keep the JavaScript syntax checker happy](http://benalman.com/news/2010/11/immediately-invoked-function-expression/).
 
 ```js
 (function() {
@@ -30,7 +30,7 @@ There are the mysterious parentheses than wrap the anonymous function.  These ar
 })
 ```
 
-There are the final set of parentheses after the wrapping parentheses.  These run the anonymous function.
+Third, there are a final set of parentheses after the wrapping parentheses.  These run the anonymous function.
 
 ```js
 (function() {
@@ -48,11 +48,11 @@ function printHi() {
 printHi();
 ```
 
-This code does the same thing the IIFE does.  But it's more verbose. And it creates an unnecessary variable that no one needs called `printHi`.
+This code does the same thing the IIFE does.  But it's more verbose. And it creates an unnecessary variable, `printHi` that no one needs.
 
 ### Why?
 
-It's kind of useless to wrap just a call to `console.log` in an IIFE.  The `console.log` would be fine on its own, without an IIFE.  So why do we use IIFEs? To hide stuff.
+It's pointless to wrap just a call to `console.log` in an IIFE.  We use IIFEs to hide variable and function declarations.  Calling `console.log` doesn't declare any variables, so it doesn't need to be wrapped in an IIFE.
 
 Imagine we wanted to formulate a more complex greeting than just `hi`.
 
@@ -68,9 +68,9 @@ Imagine we wanted to formulate a more complex greeting than just `hi`.
 })();
 ```
 
-Using an IIFE to wrap all this code keeps the details of creating the greeting private.  None of the rest of the program has to worry about `exclaim` or what it is.  All the details of exclaiming hi are gathered together and hidden.
+Using an IIFE to wrap all this code keeps the details of creating the greeting private.  None of the rest of the program has to worry about `exclaim` or what it is.  All the details of exclaiming `hi` are gathered together and hidden.
 
-What does "hidden" mean? It means none of the rest of the code can access any variables inside the IIFE.
+What does "hidden" mean? It means none of the rest of the code can access any variables or functions inside the IIFE.
 
 ```js
 (function () {
@@ -86,11 +86,12 @@ What does "hidden" mean? It means none of the rest of the code can access any va
 // throws a ReferenceError
 exclaim();
 
-// would throw a ReferenceError, if not for the previous reference error
+// would throw a ReferenceError, if not for the ReferenceError thrown
+// by the previous line
 console.log(EXCLAMATION_MARK_COUNT);
 ```
 
-## The module pattern
+## The module pattern in the browser
 
 The module pattern is basically just an IIFE.  But it uses a bit of extra code to export (or expose, or make available to the outside, or show) functions and variables that are part of the public interface of the module.
 
@@ -130,17 +131,25 @@ console.log(EXCLAMATION_MARK_COUNT);
 
 So we can access `exclaim`, but `EXCLAMATION_MARK_COUNT` is hidden.  Cool.  We've made available the function we want people to use, but hidden some implementation details that we don't want to bother them with.
 
+### How does `exports` work?
+
 How have we made `exclaim` available? Grab the code and paste it into your browser console.  (Make sure to use your browser console or a JS file you load in the browser.)
 
-Use `console.log` to see the data stored in variables.  Follow the flow of this data through the program.  Notice how the value of `this` is `window`, the place where all globals are stored.  What value does `exports` have? What happens when `exclaim` is added as an attribute to `exports`?
+Use `console.log` to print the data stored in variables like `this` and `exports`.  Follow the flow of this data through the program.  Some points to help you:
 
-As an experiment, try changing `exports` to `blahblah` in all the places it appears in the code snippet above.  Does the code still work?
+* Notice how the value of `this` is `window`, the place where all globals are stored.
+
+* What value does `exports` have?
+
+* What happens when `exclaim` is added as an attribute to `exports`?
+
+* As an experiment, try changing `exports` to `blahblah` in all the places it appears in the code snippet above.  Does the code still work?
 
 Have you investigated? You probably found that `this` and `exports` are the global object.  This means that adding `exclaim` onto `exports` is effectively making `exclaim` globally available.  That's why we can call `exclaim("hi")`.
 
-## Using modules in the browser
+### Using the module
 
-Let's put this module pattern into practice.
+Let's use this module.
 
 ```js
 // index.html
@@ -189,7 +198,7 @@ If we want to use our exclaim module, we can just source it in `index.html`.  Wh
 </html>
 ```
 
-We can now use `exclaim()` in `app.js` to say `howdy!!!!!`.
+We can now use `exclaim()` in `app.js` to say `howdy!!!!!`:
 
 ```js
 // app.js
@@ -197,51 +206,9 @@ We can now use `exclaim()` in `app.js` to say `howdy!!!!!`.
 console.log(exclaim("howdy"));
 ```
 
-## Using modules in Node.js
+### What if one module needs to require another module?
 
-We've used our `exclaim` module in our browser code.  What happens if we want to use it in Node.js?  For example, in our tests that we run with Node.js.  This is pretty easy:
-
-(What is Node.js? See the [Node.js](./node.md) :pill:.)
-
-```js
-// exclaim-test.js
-
-var exclaim = require("./exclaim").exclaim;
-
-if (exclaim("hi") !== "hi!!!!!") {
-  throw new Error("Exclaiming hi should equal hi!!!!!");
-} else {
-  console.log(".");
-}
-```
-
-Play around with this code.  What value does `exclaim` have? Why does `require("./exclaim")` have `.exclaim` after it?
-
-So the module pattern we used with exclaim works in both the browser and in Node.js.  Cool!
-
-### How does `exclaim` export its API in Node.js?
-
-```js
-(function(exports) {
-  var EXCLAMATION_MARK_COUNT = 5
-
-  function exclaim(string) {
-    return string + "!".repeat(EXCLAMATION_MARK_COUNT);
-  };
-
-  exports.exclaim = exclaim;
-})(this);
-```
-
-Remind yourself what `this` (at the top level) and `exports` are in the browser.  Things are a little different in Node.js.  `this` at the top level points at a special object that node provides called `exports`.  Anything that you attach to `exports` will be available when you require the module.  In this case, `exclaim` is attached to `exports`, which means that you can write `var exclaim = require("./exclaim").exclaim;` in another file to get hold of the `exclaim` function.
-
-> The values of `this` in the browser (`window`) and `this` in Node.js (`exports`) are different.  But they are similar enough that they can both be massaged by this pattern to let us write code that will work in both environments.
-
-Run the code above in Node.js.  Play around, `console.log` some variables to understand how all this stuff works.
-
-## What if one module needs to require another module?
-
-What if `exclaim` needs to use code from another module to do its work? In the rewrite below, the programmer has pretty pointlessly abstracted out the code that produces the repeated exclamation marks.
+In the rewrite below, the programmer wants to abstract out the code that can repeat the exclamation marks.  They create a new module, `repeat`.
 
 ```js
 // repeat.js
@@ -269,7 +236,7 @@ What if `exclaim` needs to use code from another module to do its work? In the r
 })(this);
 ```
 
-In the browser, this code works fine.  `repeat` is a global variable, so all is well.
+This code works fine.  `repeat` is a global variable, so all is well.
 
 ```js
 // index.html
@@ -284,7 +251,103 @@ In the browser, this code works fine.  `repeat` is a global variable, so all is 
 </html>
 ```
 
-But this code doesn't work in Node.js.  Here is one way we can rewrite `exclaim` to support node and the browser.  There are other ways, but this one is simple and clear.
+## Node.js
+
+(What is Node.js? See the [Node.js](./node.md) :pill:.  If you're just working on a frontend-only app, you don't need to worry about how to use the module pattern in Node.js.)
+
+What happens if we want to use our `exclaim` module in Node.js? Well, it depends which version of the exclaim module we're talking about: the one that contained the repeat functionality, or the one that used the separate repeat module.
+
+### A module that doesn't include any other modules
+
+This version contains the repeat functionality.
+
+```js
+(function () {
+  var EXCLAMATION_MARK_COUNT = 5
+
+  function exclaim(string) {
+    return string + "!".repeat(EXCLAMATION_MARK_COUNT);
+  };
+
+  console.log(exclaim("hi"));
+})();
+```
+
+We can just use this version of the `exclaim` module as we wrote it for the browser.  Look:
+
+```js
+// exclaim-test.js
+
+var exclaim = require("./exclaim").exclaim;
+
+if (exclaim("hi") !== "hi!!!!!") {
+  throw new Error("Exclaiming hi should equal hi!!!!!");
+} else {
+  console.log(".");
+}
+```
+
+Cool!
+
+Play around with this code.  Some questions:
+
+* What value does `exclaim` have?
+
+* Why does `require("./exclaim")` have `.exclaim` after it?
+
+#### How does this work?
+
+```js
+(function(exports) {
+  var EXCLAMATION_MARK_COUNT = 5
+
+  function exclaim(string) {
+    return string + "!".repeat(EXCLAMATION_MARK_COUNT);
+  };
+
+  exports.exclaim = exclaim;
+})(this);
+```
+
+Remind yourself what `this` (at the top level) and `exports` are in the browser.  Things are a little different in Node.js.  `this` at the top level points at a special object that node provides called `exports`.  Anything that you attach to `exports` will be available when you require the module.  In this case, `exclaim` is attached to `exports`, which means that you can write `var exclaim = require("./exclaim").exclaim;` in another file to get hold of the `exclaim` function.
+
+> The values of `this` in the browser (`window`) and `this` in Node.js (`exports`) are different.  But they are similar enough that they can both be massaged by this pattern to let us write code that will work in both environments.
+
+Run the code above in Node.js.  Play around. `console.log` some variables to understand how all this stuff works.
+
+### A module that requires other modules
+
+This version breaks out the `repeat` functionality into a separate module.
+
+```js
+// repeat.js
+
+(function(exports) {
+  function repeat(string, count) {
+    return string.repeat(count);
+  };
+
+  exports.repeat = repeat;
+})(this);
+```
+
+```js
+// exclaim.js
+
+(function(exports) {
+  var EXCLAMATION_MARK_COUNT = 5;
+
+  function exclaim(string) {
+    return string + repeat("!", EXCLAMATION_MARK_COUNT);
+  };
+
+  exports.exclaim = exclaim;
+})(this);
+```
+
+This version of exclaim won't work in Node.js.  The behaviour of the browser that makes `repeat` available as a global doesn't work in Node.js
+
+But this code doesn't work in Node.js.  Here is one way we can rewrite `exclaim` to support Node.js and the browser.  There are other ways, but this one is simple and clear.
 
 ```js
 // exclaim.js
