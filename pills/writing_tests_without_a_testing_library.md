@@ -24,15 +24,18 @@ All of these things are either optional for test code, or can be easily achieved
 ```js
 // circle-tests.js
 
-function testCircleRadiusDefaultsTo10() {
-  var circle = new Circle();
+(function(exports) {
 
-  if (circle.radius !== 10) {
-    throw new Error("Circle size is not 10");
-  }
-};
+  function testCircleRadiusDefaultsTo10() {
+    var circle = new Circle();
 
-testCircleRadiusDefaultsTo10();
+    if (circle.radius !== 10) {
+      throw new Error("Circle size is not 10");
+    }
+  };
+
+  testCircleRadiusDefaultsTo10();
+})(this);
 ```
 
 Here is the code for the implementation of `Circle`:
@@ -40,9 +43,13 @@ Here is the code for the implementation of `Circle`:
 ```js
 // circle.js
 
-function Circle() {
-  this.radius = 10;
-};
+(function(exports) {
+  function Circle() {
+    this.radius = 10;
+  };
+
+  exports.Circle = Circle;
+})(this);
 ```
 
 To run these tests:
