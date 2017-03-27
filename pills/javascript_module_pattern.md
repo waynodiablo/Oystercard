@@ -199,7 +199,9 @@ console.log(exclaim("howdy"));
 
 ## Using modules in Node.js
 
-We've used our `exclaim` module in our browser code.  What happens if we want to use it in [Node.js](./node.md)?  For example, in our tests that we run with Node.js.  This is pretty easy:
+We've used our `exclaim` module in our browser code.  What happens if we want to use it in Node.js?  For example, in our tests that we run with Node.js.  This is pretty easy:
+
+(What is Node.js? See the [Node.js](./node.md) :pill:.)
 
 ```js
 // exclaim-test.js
