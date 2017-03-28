@@ -17,4 +17,4 @@
 * 17.00 - Confidence Workshop.
 * 17.30 - [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md). Coach-facilitated.
 * 18.00 - Announcements for the weekend.
-* 18.00 - [Daily feedback](./learning_at_makers.md#daily-feedback)
+* 18.00 - [Daily feedback](../../pills/learning_at_makers.md#daily-feedback)
