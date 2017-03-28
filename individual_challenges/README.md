@@ -52,8 +52,8 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 ### Schedule
 
-* [Onsite](../sequence/onsite/week10)
-* [Remote](../sequence/remote/week10)
+* [Onsite](../sequence/onsite/week10.md)
+* [Remote](../sequence/remote/week10.md)
 
 ### Resources
 
