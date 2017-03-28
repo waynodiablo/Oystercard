@@ -2,24 +2,29 @@
 
 #### Monday
 
-- 9.30: Peer-led code review
-- 10.00: Group code review and Q&A with coach
-- 11.00: Weekly kickoff workshop
+[Challenges Monday schedule](./challenges_monday_schedule.md)
 
 #### Tuesday
-- 9.30: Standups (Student organised)
+
+Standups are student-organised.
+
+[Challenges mid-week schedule](./challenges_mid_week_schedule.md)
 
 #### Wednesday
-- 9.30: Standups (Student organised)
-- 17.00: Process surgery
+
+[Challenges mid-week schedule](./challenges_mid_week_schedule.md)
+
+- Standups are student-organised.
+- 14.30 - [Process surgery](https://github.com/makersacademy/course/blob/master/pills/process_surgery.md)
 
 #### Thursday
-- 9.30: Standups (Student organised)
-- 10.00: Workshop
+
+[Challenges mid-week schedule](./challenges_mid_week_schedule.md)
+
+Standups are student-organised.
 
 #### Friday
 
-- 9.30: Workshop
-- 5.00: Confidence Workshop
-- 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
-- 6.00: Announcements for the weekend
+Standups are student-organised.
+
+[Challenges Friday schedule](./challenges_friday_schedule.md)

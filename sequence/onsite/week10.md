@@ -10,15 +10,16 @@
 * 5.30pm: We'll review your code in a group.
 
 #### Tuesday
-* 9.45: Your coach will introduce the next tech test: [Database Server](../individual_challenges/database_server.md)
+* 9.45: Your coach will introduce the next tech test: [Gilded rose](../individual_challenges/gilded_rose.md)
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 10am - 11pm: Careers session: Practice Tech Interviews
+* 10am - 11am: Careers session: Practice Tech Interviews
+* 11am: You'll work solo on the tech test.
 * 3.00 - 4pm: Careers session: How to network
 * 5.15pm: You'll work solo on the tech test.
 
 #### Wednesday
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 9.45: Your coach will introduce the next tech test: [Gilded rose](../individual_challenges/gilded_rose.md)
+* 10am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
