@@ -1,4 +1,4 @@
-#Database Cleaner
+# Database Cleaner
 
 When a test runs, it assumes that the database is empty. The test is not obliged to leave the database clean, though. We need to take care of this ourselves, and DataBase cleaner is an excellent tool to do just that. 
 
