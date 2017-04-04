@@ -18,7 +18,7 @@ If you have any questions, just ask!
 
 ## Rough weekly schedule
 
-See [here](./example_schedule.md) for the rough weekly schedule.
+See [:pill: here](https://github.com/makersacademy/course/blob/master/pills/example_schedule.md) for the rough weekly schedule.
 
 ## Learning at Makers
 
