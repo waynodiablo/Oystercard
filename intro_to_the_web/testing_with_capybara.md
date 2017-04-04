@@ -26,12 +26,12 @@ To complete this challenge you will need to have Firefox installed.
 - [ ] Within the REPL, `$ include Capybara::DSL`.
 - [ ] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
 - [ ] Use Capybara's `visit` command to take the automated browser to [http://capybaraworkout.herokuapp.com/](http://capybaraworkout.herokuapp.com/).
-- [ ] Refer to a [capybara cheat sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet) and complete the capybara workout.
+- [ ] Refer to a [capybara cheat sheet](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf) and complete the capybara workout.
 - [ ] Explain to your pair partner what jobs `capybara` and `selenium-webdriver` do.
 
 ### Resources
 
 - [Selenium](http://www.seleniumhq.org/)
-- [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
+- [Capybara Cheat Sheet](https://thoughtbot.com/upcase/test-driven-rails-resources/capybara.pdf)
 
 ### [Walkthrough](walkthroughs/testing_with_capybara.md)
