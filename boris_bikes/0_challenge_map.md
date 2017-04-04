@@ -24,6 +24,10 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 * **Can you use a test-driven approach to write object-oriented code?**
 
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week01.md)
+* [Remote](../sequence/remote/week01.md)
+
 ### Challenges
 
 1. [Setting up a Project](1_setting_up_a_project.md)

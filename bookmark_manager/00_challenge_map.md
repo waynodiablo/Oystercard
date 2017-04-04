@@ -55,6 +55,10 @@ This is the basic view of the website. You will build it by working through the 
 
 There is a **lot** of challenge material this week.  You probably won't get through it all.  As always at Makers, focus on deep learning, rather than progression through the challenges.
 
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week04.md)
+* [Remote](../sequence/remote/week04.md)
+
 ## Challenges
 
  1. [Creating User stories](01_creating_user_stories.md)

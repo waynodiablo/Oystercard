@@ -34,6 +34,10 @@ Your diagram might include: model, view, controller, external API, browser page,
 * Frontend templating.
 * Frontend routing.
 
+### Sequence & Schedule
+* [Onsite](../sequence/onsite/week07.md)
+* [Remote](../sequence/remote/week07.md)
+
 ## Tracks
 
 This week is composed of two separate tracks.  You'll choose one track and stay on it for the whole week.
