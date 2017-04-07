@@ -11,7 +11,7 @@ Monday is [Day one](./day_one.md)
 - 11.00: Standup 2
 
 #### Friday
-
+- 4.00: Concepts, Skills and Behaviours reflection.
 - 5.00: Confidence Workshop.
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md). Coach-facilitated.
 - 6.00: Announcements for the weekend.
