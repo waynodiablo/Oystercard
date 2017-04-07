@@ -4,7 +4,7 @@
 
 In this challenge, you'll add a validation that checks that no existing user has already registered with the entered email.  You'll also add code that shows a meaningful error message to the user in this case.
 
-And you'll add code that shows the user a meaningful error message if they doesn't enter an email address at all.
+And you'll add code that shows the user a meaningful error message if they don't enter an email address at all.
 
 ## Learning Objectives covered
 
