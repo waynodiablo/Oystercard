@@ -4,7 +4,7 @@ If you have any questions, just ask!
 
 ## Schedule for the first day
 
-* 9.00 - 9.30 Welcome to Makers (lead coach)
+* 09.00 - 09.30 Welcome to Makers (lead coach)
 * 09.15 - 10.00 Learning at Makers (lead coach)
 * 10.00 - 10.15 Saberr workshop (lead coach)
 * 10.30 - 11.30 Life at Makers/Inclusivity & Diversity (Dana)
