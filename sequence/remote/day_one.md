@@ -4,17 +4,14 @@ If you have any questions, just ask!
 
 ## Schedule for the first day
 
-* 08.30 - 09.30 Breakfast
-* 09.30 - 10.30 Welcome to Makers (Coach)
-* 10.30 - 11.00 Name tag making (Coach, staff, all students)
-* 11.00 - 11.30 Get and setup your laptops
-* 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (Dana)
-* 12.30 - 14.00 Lunch and more laptop setup
-* 14.00 - 14.30 Meditation
-* 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Sam)
-* 15.15 - 16.15 Knowledge worker talk, intro to the careers team (Will and the careers team)
-* 16.15 - 17.15 Gender diversity presentation & workshop
-* 17.30 - 18.30 Social with pizza
+* 9.00 - 9.30 Pairwise introductions
+* 9.30 - 10.00 Welcome to Makers (lead coach)
+* 10.15 - 11.00 Learning at Makers (lead coach)
+* 11.00 - 11.15 Saberr workshop 
+* 11.30 - 12.30 Life at Makers/Inclusivity & Diversity (Dana)
+* 12.30 - 13.30 Lunch
+* 13.30 - 14.30 Transitioning to being a Knowledge Worker (Careers) - this could be rescheduled, will announce on the day.
+* 14.30 - pairing til close
 
 ## Rough weekly schedule
 
@@ -24,23 +21,6 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md).
 
-## Health and safety
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
-
-## Laptops
-
-### Getting your laptop (onsite cohorts)
-
-At 11.00am on the first day, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
-
 ### Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what to software to install to prepare for the Makers course.
-
-### Installing Makersinit
-
-This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it.  Thanks!
-
-https://github.com/makersacademy/makersinit
-
