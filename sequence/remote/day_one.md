@@ -4,13 +4,13 @@ Day one starts at 09.00 - please be available on slack from 08.50 in case there 
 
 ## Schedule for the first day
 
-* 09.00 - 09.30 Welcome to Makers (lead coach)
+* 09.00 - 09.15 Welcome to Makers (lead coach)
 * 09.15 - 10.00 Learning at Makers (lead coach)
 * 10.00 - 10.15 Saberr workshop (lead coach)
 * 10.30 - 11.30 Life at Makers/Inclusivity & Diversity (Dana)
-* 12.30 - 13.30 Lunch
-* 13.30 - 14.30 Transitioning to being a Knowledge Worker (Careers team) - this could be rescheduled, will announce on the day.
-* 14.30 - pairing til close
+* 11.45 - 12.30 Kick off week 1
+* ~~13.30 - 14.30 Transitioning to being a Knowledge Worker (Careers team) - this could be rescheduled, will announce on the day.~~
+* 13.30 - pairing til close
 
 ## Rough weekly schedule
 
