@@ -2,7 +2,9 @@
 
 #### Monday
 
-Monday is [Day one](./day_one.md)
+- 9.30: Peer-led code review
+- 10.00: Group code review and Q&A with coach
+- 11.00: Weekly kickoff workshop
 
 #### Tuesday, Wednesday, Thursday
 - 9.30: Workshop
