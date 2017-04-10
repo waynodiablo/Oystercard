@@ -22,4 +22,4 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 
 ### Setting up your laptop
 
-Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what to software to install to prepare for the Makers course.
+Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
