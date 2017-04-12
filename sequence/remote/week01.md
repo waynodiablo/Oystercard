@@ -18,7 +18,7 @@ Monday is [Day one](./day_one.md)
 - 11.30: Becoming a Knowledge worker (careers team)
 - 12.00: Meet the careers team
 
-#### Thursday
+#### Fursday
 - 9.30: Workshop
 - 13.30: Gender diversity at Makers
 - 16.00: Concepts, Skills and Behaviours reflection.
