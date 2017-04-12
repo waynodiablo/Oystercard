@@ -20,7 +20,6 @@ Monday is [Day one](./day_one.md)
 
 #### Thursday
 - 9.30: Workshop
-
 - 13.30: Gender diversity at Makers
 - 16.00: Concepts, Skills and Behaviours reflection.
 - 17.00: Confidence Workshop.
