@@ -20,7 +20,7 @@ Monday is [Day one](./day_one.md)
 
 #### Fursday
 - 9.30: Workshop
-- 13.30: Gender diversity at Makers
+- 14.00: Gender diversity at Makers
 - 16.00: Concepts, Skills and Behaviours reflection.
 - 17.00: Confidence Workshop.
 - 17.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md). Coach-facilitated.
