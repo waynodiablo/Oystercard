@@ -38,10 +38,6 @@ There are four tech tests this week.  This means you can start from scratch four
 
 You can message your coach on Slack and ask for a code review of one of your repos anytime you like.
 
-### Tech test repo checklist
-
-Use this [tech test checklist](https://github.com/makersacademy/jobhunters/blob/master/tech_tests_how_to_succeed.md) while you're writing your code.  And use it when doing pair reviews at the end of each day.
-
 ### Language
 
 You can use Ruby or JavaScript for any of the challenges.
@@ -50,6 +46,14 @@ You can use Ruby or JavaScript for any of the challenges.
 
 Enjoy these challenges - they are either adapted or directly copied from actual tech tests that employers send out. You will find other tech tests in this folder that you can attempt over the weekend or after graduation.
 
+### Doing a good tech test
+
+* Get into groups of around 4.
+
+* Spend five minutes making a list of the attributes of a good tech test submission e.g. full test coverage.
+
+* We'll get back together and make a list of every group's ideas.
+
 ### Schedule
 
 * [Onsite](../sequence/onsite/week10.md)
@@ -57,4 +61,5 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 ### Resources
 
-[The Coding Dojo Handbook (recommended reading post-course)](https://leanpub.com/codingdojohandbook)
+* [Tech test checklist](https://github.com/makersacademy/jobhunters/blob/master/tech_tests_how_to_succeed.md)
+* [The Coding Dojo Handbook (recommended reading post-course)](https://leanpub.com/codingdojohandbook)
