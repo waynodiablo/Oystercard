@@ -1,12 +1,12 @@
 # Week Two Structure
 
-#### Monday
+#### Tuesday
 
 - 9.30: Peer-led code review
 - 10.00: Group code review and Q&A with coach
 - 11.00: Weekly kickoff workshop
 
-#### Tuesday, Wednesday, Thursday
+#### Wednesday, Thursday
 - 9.30: Workshop
 - 10.30: Standup 0
 - 10.45: Standup 1
