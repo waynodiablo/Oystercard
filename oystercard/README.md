@@ -18,35 +18,6 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 * **Can you use object-oriented design principles to write better code?**
 
-## The process you use to write code
-
-* Break out into small groups of around four.
-
-* Spend five minutes discussing the process you use to write code.
-
-* E.g. test-first development.
-
-* We'll gather back for a five minute plenary.  Groups will report back on what they discussed.
-
-## Desirable qualities of code
-
-* Break out into small groups of around four.
-
-* Spend five minutes discussing what the qualities you want code to have.
-
-* E.g. code being easy to understand.
-
-* We'll gather back for a five minute plenary.  Groups will report back on what they discussed.
-
-## Guidelines for writing better code
-
-* Break out into small groups of around four.
-
-* Spend five minutes listing and discussing guidelines that help you write better code.
-
-* E.g. encapsulation.
-
-* We'll gather back for a five minute plenary.  Groups will report back on what they discussed.
 
 ## Weekly challenge user stories
 
