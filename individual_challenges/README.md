@@ -1,4 +1,4 @@
-#Individual technical challenges
+# Individual technical challenges
 
 ### Goals for the week
 
