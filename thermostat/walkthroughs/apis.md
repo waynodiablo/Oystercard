@@ -28,7 +28,7 @@ Now that you have the information that you need, you can put it on the page. Add
 
 ```html
 <section>
-  <h1>Current temperature: <span id="current-temperature"><span></h1>
+  <h1>Current temperature: <span id="current-temperature"></span></h1>
 </section>
 ```
 
