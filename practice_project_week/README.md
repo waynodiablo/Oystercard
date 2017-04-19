@@ -42,6 +42,12 @@ Try to get to your MVP by Tuesday evening.
 
 You'll have standups and retros in your teams.
 
+## Presentations
+
+At the end of the week, each group will give a presentation about their project.  They will talk through a very simple slide deck and do a quick demo of their project.  There's no need to spend ages planning or practicising the presentation.  It's mainly to communicate about your technical achievements, and show off your cool project to the rest of your cohort.
+
+Here are some [guidelines](./presentation_guidelines.md) to follow when planning your presentation.
+
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/week09.md)
 * [Remote](../sequence/remote/week09.md)
