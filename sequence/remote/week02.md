@@ -13,7 +13,8 @@
 - 11.00: Standup 2
 
 #### Friday
-
-- 5.00: Confidence Workshop
-- 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
-- 6.00: Announcements for the weekend
+- 9.30: Workshop
+- 10.30: Concepts, skills, behaviours workshop
+- 11.00: Confidence workshop
+- 11.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
+- 12.00: Announcements for the weekend
