@@ -35,5 +35,4 @@
 * 10am: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
 * 11:30am: You'll continue to work solo on the tic-tac-toe tech test.
 * 3.00pm: You'll review your code in pairs.
-* 3.30pm: Debugging Session
 * 5pm: Retro
