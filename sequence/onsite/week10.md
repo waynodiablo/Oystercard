@@ -36,4 +36,4 @@
 * 11:30am: You'll continue to work solo on the tic-tac-toe tech test.
 * 3.00pm: You'll review your code in pairs.
 * 3.30pm: Debugging Session
-* 4.30pm: Retro
+* 5pm: Retro
