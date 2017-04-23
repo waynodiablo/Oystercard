@@ -28,6 +28,18 @@ See [:pill: here](https://github.com/makersacademy/course/blob/master/pills/exam
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
+## Facilities
+
+[Facilities](https://github.com/makersacademy/course/blob/master/pills/facilities.md).
+
+## Low noise policy
+
+[A summary](https://github.com/makersacademy/course/blob/master/pills/low_noise_policy.md).
+
+## Seating plan
+
+[A summary](https://github.com/makersacademy/course/blob/master/pills/seating_plan.md).
+
 ## Laptops
 
 ### Getting your laptop (onsite cohorts)
@@ -43,4 +55,3 @@ Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide 
 This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it.  Thanks!
 
 https://github.com/makersacademy/makersinit
-
