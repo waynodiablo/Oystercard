@@ -16,7 +16,7 @@ Project work.
 
 #### Thursday
 
-* 3pm - 4.45pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from your coach.  You can drop in and out - you don't all have to be here.
+* 3.30pm - 5pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from your coach.  You can drop in and out - you don't all have to be here.
 
 #### Friday
 
