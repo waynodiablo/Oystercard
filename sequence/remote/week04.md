@@ -14,6 +14,7 @@
 
 - 9.30: Workshop
 - 10.00: Standups (Student organised)
+- 13.30: LunchnLearn
 
 #### Friday
 
