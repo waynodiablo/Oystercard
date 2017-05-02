@@ -9,7 +9,6 @@
 #### Wednesday
 
 - 9.30: Standups (Student organised)
-- 17.00: Process surgery
 
 #### Thursday
 
