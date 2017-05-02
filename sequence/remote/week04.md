@@ -3,7 +3,7 @@
 #### Tuesday
 
 - 9.30: Peer-led code review
-- 10.00: Group code review and Q&A with coach
+- 10.30: Group code review and Q&A with coach
 - 11.00: Weekly kickoff workshop
 
 #### Wednesday
