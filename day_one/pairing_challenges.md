@@ -10,20 +10,22 @@ All challenges are to transform data from one form to another in an _elegant_ wa
 
 ### Challenge Set 1: Arrays
 
+Transform the following first arrays into the second entities:
+
 ```
-Transform [1, 2, 3, 4, 5] => [2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5] => [2, 3, 4, 5, 6]
 ```
 
 ```
-Transform [1, 3, 5, 4, 2] => [1, 2, 3, 4, 5]
+[1, 3, 5, 4, 2] => [1, 2, 3, 4, 5]
 ```
 
 ```
-Transform [1, 3, 5, 4, 2] => [2, 3, 4, 5, 6]
+[1, 3, 5, 4, 2] => [2, 3, 4, 5, 6]
 ```
 
 ```
-Transform [1, 2, 3, 4, 5] => 15 (the sum)
+[1, 2, 3, 4, 5] => 15 (the sum)
 ```
 
 ```
@@ -31,6 +33,8 @@ Transform [1, 2, 3, 4, 5] => 15 (the sum)
 ```
 
 ### Challenge Set 2: Hashes
+
+Transform the following first hashes into the second entities:
 
 ```
 { a: 1, b: 2 } => { a: 2, b: 3 }
@@ -69,4 +73,3 @@ See the [list of house prices by area](./house_prices_by_area.rb). It contains a
 > This string should be as readable as possible. The `Date` is a particular challenge.
 
 2. Write a method that allows a user to search the hash _by district OR ward_ and return a filtered set of strings as above.
-```
