@@ -2,7 +2,8 @@
 
 #### Monday
 
-* Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week.
+Everyone who is looking for a job as a developer will have the opportunity to have a 121 with one of the careers team during week 10. We'll share the sign up sheet with you at the end of week 9. Slots will be available at various times throughout the week.
+
 * 9.30am: Your coach will introduce today's tech test: [Bank](../../individual_challenges/bank_tech_test.md)
 * 10am: You'll work solo on the tech test.
 * 5.00pm: You'll review your code in pairs.
