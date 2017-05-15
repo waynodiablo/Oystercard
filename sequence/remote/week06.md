@@ -4,12 +4,16 @@
 
 - 9.30: Weekly kickoff workshop & Project Team Reveal
 
-#### Tuesday, Wednesday, Thursday
-- Project teams set their own schedule
-- 5.00 on Wednesday: Process Surgery
+#### Tuesday
+- 10.00: Optional workshop (Ruby fundamentals)
+
+#### Wednesday
+- Project teams set your own schedule
+
+#### Thursday
+- 9.30: Optional workshop (TBC)
+- 15.30 Careers session
 
 #### Friday
-- 4.00: Individual group retros (organised in your groups)
-- 5.00: Confidence Workshop
-- 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
-- 6.00: Announcements for the weekend
+- 9.30: Retro planning, confidence workshop, weekend announcements
+- 16.00: Individual group retros (organised in your groups)
