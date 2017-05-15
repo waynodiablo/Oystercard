@@ -13,7 +13,7 @@ Everyone who is looking for a job as a developer will have the opportunity to ha
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 9.45: Your coach will introduce the next tech test: [Gilded rose](../../individual_challenges/gilded_rose.md)
 * 10am - onwards: You'll work solo on the tech test.
-* 4.30am: We'll do a mini retro on today's work.
+* 4.30pm: We'll do a mini retro on today's work.
 
 #### Wednesday
 * 9.30am: You'll work solo on the tech test.
