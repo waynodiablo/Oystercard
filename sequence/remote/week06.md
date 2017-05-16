@@ -12,7 +12,7 @@
 
 #### Thursday
 - 9.30: Optional workshop (TBC)
-- 15.30 Careers session
+- 14.30 Careers session
 
 #### Friday
 - 9.30: Retro planning, confidence workshop, weekend announcements
