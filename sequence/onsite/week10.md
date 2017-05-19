@@ -34,5 +34,6 @@ Everyone who is looking for a job as a developer will have the opportunity to ha
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 10am: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
 * 11:30am: You'll continue to work solo on the tic-tac-toe tech test.
-* 4.30pm: You'll review your code in pairs.
+* 4.00pm: You'll review your code in pairs.
+* 4:30pm Group code review
 * 5pm: Retro
