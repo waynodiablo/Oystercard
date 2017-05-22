@@ -14,6 +14,9 @@
 - 9.30: Standups (Student organised)
 - 17.00: Process surgery
 
+#### Thursday
+- 21:00 musical forms workshop
+
 #### Friday
 - 4.30: Skills, Behaviors, Concepts
 - 5.00: Confidence Workshop
