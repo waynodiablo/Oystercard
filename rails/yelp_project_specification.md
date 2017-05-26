@@ -76,6 +76,4 @@ Finally, let's focus on uploading images, and creating a better user experience.
 * Create a helper method to allow ratings and average ratings to be displayed as stars (e.g.) rather than numbers
 * Use SCSS to enhance the overall design of the site
 * Refactor your more complex views to use partials
-* Add the ability for users to add an image to a restaurant, by pointing to an external image URL
-
-### [Further challenges walkthrough →](yelp_further_challenges/1_average_ratings.md)
+* Add the ability for users to add an image to a restaurant
