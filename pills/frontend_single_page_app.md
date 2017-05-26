@@ -93,7 +93,7 @@ Let's update our code to redirect the user to a new "page" when they click the `
 </html>
 ```
 
-Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigatating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#tiger`, then clicks a link to `http://localhost:4000#lion`, no page refreshes will occur.  This is the crux of how a frontend, single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
+Notice how the link sends the user to a new URL that includes a hash (`#`).  Navigating to the current URL with a different hash doesn't refresh the page.  For example, if the user loads `http://localhost:4000`, then clicks a link to `http://localhost:4000#tiger`, then clicks a link to `http://localhost:4000#lion`, no page refreshes will occur.  This is the crux of how a frontend, single page app can retain data and have a site architecture.  Each hash maps to a different part of the app.  Each time the user moves to a new part of the app, the JavaScript execution context (all the variables and their data) are retained.
 
 Notice how we don't need `event.preventDefault()` anymore.  There's no page refresh to prevent.
 
