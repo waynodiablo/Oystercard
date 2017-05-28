@@ -168,7 +168,7 @@ Our tests pass! Now to refactor. Although our Ruby code is slim enough, our form
     Player 1 name
     <input type="text" name="player_1_name">
   </label>
-  <label for="player_1_name">
+  <label for="player_2_name">
     Player 2 name
     <input type="text" name="player_2_name">
   </label>
