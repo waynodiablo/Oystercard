@@ -48,7 +48,7 @@ At 11.00am on the first day, go to the mezzanine and ask for Cata.  To get to th
 
 ### Setting up your laptop
 
-Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what to software to install to prepare for the Makers course.
+Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
 
 ### Installing Makersinit
 
