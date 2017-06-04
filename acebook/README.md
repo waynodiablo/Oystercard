@@ -1,15 +1,15 @@
 # Introduction to Rails
 
-You'll use Rails to build a clone of Yelp, an app for reviewing restaurants.
+You'll use Rails to build a clone of a popular social media website. We'll call it Acebook.
 
 ## Convention over configuration
 
 Last week, you did tons of low-level stuff.  You had to do lots of work that would have been much quicker and easier with libraries.
 
-This week, you'll use Rails. Rails is a web application framework that prioritises convention over configuration.  This means two things:
+This week, you'll use Rails. Rails is a web application framework that prioritises convention over configuration. This means two things:
 
-1. You don't tell Rails how your code is structured.  You structure your code in the way Rails thinks is best.
-2. The API tries to be very consistent.  You can often guess how a Rails API will work, based on the way other Rails APIs work.
+1. You don't tell Rails how your code is structured. You structure your code in the way Rails thinks is best.
+2. The API tries to be very consistent. You can often guess how a Rails API will work, based on the way other Rails APIs work.
 
 ### Advantages and disadvantages
 
@@ -53,45 +53,17 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 * **Can you use Rails and its conventions to build a web app?**
 
-#### Secondary goal
-
-To help you towards your primary goal, your secondary goal will be to produce a diagram of how all the parts of Rails interact.
-
-* Draw the diagram on Tuesday.
-* Each morning, update the diagram with your latest understanding.
-
-Your diagram can include boxes for every directory and file inside a standard Rails app.
-
 #### Detailed learning objectives
 
 * [Learning Objectives](learning_objectives.md)
 
-## This Week's Project: Yelp
+## This Week's Project: Acebook
 
-Yelp is a popular web application that allows users to rate and review restaurants, and find other diner's ratings and comments. For the rest of the week you will be building a clone of this site using Rails.
-
-There are two tracks:
-
-1. Build the project in teams using the [specification](yelp_project_specification.md), without the walkthrough; or
-2. Take the road oft travelled, and complete the project using the [walkthrough](yelp_project_specification.md).
-
-Both tracks will take you to the same place, but Track 1 is entirely self-led.
+This week we will be working as a team to produce a social media platform. There are a number of large features that will need to be broken down into smaller tickets and estimated before they are assigned to a pair to complete. You coach will send through a project seed and a virtual cardwall with some initial tickets to get you started.
 
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/week08.md)
 * [Remote](../sequence/remote/week08.md)
-
-## Standups
-
-* **Project track:** Organise standups in your teams.
-
-* **Walkthrough track:** 9.30am in the bytes announced.
-
-## MVP
-
-Remember to focus on getting to an MVP ASAP.
-
-## Use Rails 4
 
 ## Related Pills
 
