@@ -13,7 +13,7 @@ If you have any questions, just ask!
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Sam)
 * 15.15 - 16.15 Knowledge worker talk, intro to the careers team (Will and the careers team)
-* 16.15 - 17.15 Gender diversity presentation & workshop
+* 16.15 - 17.30 [Print rectangle kata](https://github.com/makersacademy/skills-workshops/blob/master/week-1/rectangle_kata/README.md)
 * 17.30 - 18.30 Social with pizza
 
 ## Rough weekly schedule
