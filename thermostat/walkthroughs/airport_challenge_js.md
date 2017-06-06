@@ -491,7 +491,7 @@ Airport.prototype.isStormy = function() {
 };
 ```
 
-Airport is getting a bit bloated though and that weather functionality looks like a separate responsibility and our client is telling us that it reality the weather is somewhat random.  So let's extract that and use dependency injection to tell an Airport what kind of weather to have.  First up let's just test a weather object:
+Airport is getting a bit bloated though and that weather functionality looks like a separate responsibility and our client is telling us that in reality the weather is somewhat random.  So let's extract that and use dependency injection to tell an Airport what kind of weather to have.  First up let's just test a weather object:
 
 ```javascript
 'use strict';
