@@ -27,7 +27,7 @@
 * 09.30 - Byte 1 [standup](./student_standups.md)
 * 09.45 - Byte 2 [standup](./student_standups.md)
 * 10.00 - [Possible skills workshop](./learning_at_makers.md#skills-workshops)
-* 17.00 - [Confidence survey](./confidence_survey.md)
+* 17.00 - [Weekly confidence survey](./weekly_confidence_survey.md)
 * 17.30 - [Weekly retro](./student_retrospective.md)
 * 18.00 - [Weekend challenge](./learning_at_makers.md#weekend-challenges) release
 * 18.00 - [Daily feedback](./learning_at_makers.md#daily-feedback)
