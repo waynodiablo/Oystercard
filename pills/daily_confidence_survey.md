@@ -1,6 +1,6 @@
 # Daily confidence survey
 
-At the end of every day, your coach will send out a few questions that ask you how confident you're feeling about a certain skill or behaviour.  For example, "How confident do you feel about debugging?".
+At the end of each day, your coach will send out on Slack a few questions that ask you how confident you're feeling about a certain skill or behaviour.  For example, "How confident do you feel about debugging?".
 
 You answer by clicking an emoji that represents one of four different answers:
 
