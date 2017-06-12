@@ -18,21 +18,19 @@
 
 #### Wednesday
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 9.45: Your coach will introduce the next tech test: [Gilded rose](../../individual_challenges/gilded_rose.md)
+* 9.45am: Your coach will introduce the next tech test: [tic-tac-toe](../../individual_challenges/tic_tac_toe.md)
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
 #### Thursday
 
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 9.45am: Your coach will introduce the next tech test: [tic-tac-toe](../../individual_challenges/tic_tac_toe.md)
+* 10am: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
+* 9.45: Your coach will introduce the next tech test: [Gilded rose](../../individual_challenges/gilded_rose.md)
 * 10am: You'll work solo on the tech test.
 
 #### Friday
 
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 10am: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
 * 11:30am: You'll continue to work solo on the tic-tac-toe tech test.
-* 3.00pm: You'll review your code in pairs.
-* 3.30pm: Debugging Session
-* 4.30pm: Retro
+* 4.30pm: Retro (Student led)
