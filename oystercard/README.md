@@ -20,7 +20,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 
 ## Code quality kickoff workshop
 
-https://github.com/makersacademy/skills-workshops/blob/master/week-2/weekly_kick_off.md
+https://github.com/makersacademy/skills-workshops/blob/master/week-2/code_quality_discussion.md
 
 ## Weekly challenge user stories
 
