@@ -26,11 +26,12 @@
 
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 10am: [Final projects idea generation workshop](https://github.com/makersacademy/skills-workshops/blob/master/project_idea_generation_workshop.md)
-* 9.45: Your coach will introduce the next tech test: [Gilded rose](../../individual_challenges/gilded_rose.md)
-* 10am: You'll work solo on the tech test.
+* 10.45am: Your coach will introduce the next tech test: [Gilded rose](../../individual_challenges/gilded_rose.md)
+* 11am: You'll work solo on the tech test.
+* 5.00pm: If you are finished with Gilded Rose, you can watch an [exemplar video](https://www.youtube.com/watch?v=8bZh5LMaSmE)
 
 #### Friday
 
 * 9.30am: We'll do a mini retro on yesterday's work.
-* 11:30am: You'll continue to work solo on the tic-tac-toe tech test.
+* 11:30am: You'll continue to work solo. You can continue on [Gilded rose](../../individual_challenges/gilded_rose.md) or choose another tech test from the directory.
 * 4.30pm: Retro (Student led)
