@@ -14,7 +14,8 @@
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 10am - 11pm: Careers session: Practice Tech Interviews
 * 3.00 - 4pm: Careers session: How to network
-* 5.15pm: You'll work solo on the tech test.
+* 5.00pm: You'll review your code in pairs.
+* 5.30pm: We'll review your code in a group.
 
 #### Wednesday
 * 9.30am: We'll do a mini retro on yesterday's work.
