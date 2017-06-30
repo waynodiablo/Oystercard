@@ -16,6 +16,10 @@ If you have any questions, just ask!
 * 16.15 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
 * 17.30 - 18.30 Social with pizza
 
+## Code of conduct
+
+Make sure to read the [code of conduct guide](../../code_of_conduct_guide.md).  It's really important that you understand the code of conduct and abide by it.
+
 ## Rough weekly schedule
 
 See [:pill: here](https://github.com/makersacademy/course/blob/master/pills/example_schedule.md) for the rough weekly schedule.
