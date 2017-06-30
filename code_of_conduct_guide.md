@@ -10,7 +10,7 @@ Either [call it out](#calling-out-a-code-of-conduct-transgression) or [report it
 
 ### Calling out a code of conduct transgression
 
-If you feel comfortable doing so, you can say something directly to the person who transgressed the code of conduct.  This can be in public or private.
+If you feel comfortable doing so, you can say something directly to the person who transgressed the code of conduct.  This can be in public or private.  If you don't feel comfortable saying something publicly, [report it](#reporting-a-code-of-conduct-transgression).
 
 #### In public
 
