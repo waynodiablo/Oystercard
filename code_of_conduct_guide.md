@@ -18,7 +18,7 @@ This is best for minor transgressions where you expect that the person just made
 
 Person A: "Explain it to me in a way that my mum would understand". Person B: "That's subtly sexist." Person A: "Sorry, I wasn't thinking." Person B: "That's OK."
 
-If the person doesn't understand why what they said transgresses the code of conduct, or they argue back, it's often best to end the discussion.  In this case, report incident to a member of staff.
+If person A doesn't understand why what they said transgresses the code of conduct, or they argue back, it's often best to end the discussion.  In this case, report incident to a member of staff.
 
 #### In private
 
