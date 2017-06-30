@@ -11,6 +11,10 @@ Day one starts at 09.00 - please be available on slack from 08.50 in case there 
 * 11.45 - 12.30 Kick off week 1
 * 13.30 - pairing til close
 
+## Code of conduct
+
+Make sure to read the [code of conduct guide](../../code_of_conduct_guide.md).  It's really important that you understand the code of conduct and abide by it.
+
 ## Rough weekly schedule
 
 See [here](./example_schedule.md) for the rough weekly schedule.
