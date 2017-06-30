@@ -16,10 +16,7 @@ If you feel comfortable doing so, you can say something directly to the person w
 
 This is best for minor transgressions where you expect that the person just made an mistake.  For example:
 
-Other person: "Explain it to me in a way that my mum would understand".
-You: "That's subtly sexist."
-Other person: "Sorry, I wasn't thinking."
-You: "That's OK."
+Person A: "Explain it to me in a way that my mum would understand". Person B: "That's subtly sexist." Person A: "Sorry, I wasn't thinking." Person B: "That's OK."
 
 If the person doesn't understand why what they said transgresses the code of conduct, or they argue back, it's often best to end the discussion.  In this case, report incident to a member of staff.
 
@@ -49,10 +46,7 @@ Very roughly speaking, we categorise code of conduct transgressions into three g
 
 For example:
 
-Person A: "Explain it to me in a way that my mum would understand".
-Person B: "That's subtly sexist."
-Person A: "Sorry, I wasn't thinking."
-Person B: "That's OK."
+Person A: "Explain it to me in a way that my mum would understand". Person B: "That's subtly sexist." Person A: "Sorry, I wasn't thinking." Person B: "That's OK."
 
 Besides being called out, or having a talk with a member of staff, no further action is taken.
 
