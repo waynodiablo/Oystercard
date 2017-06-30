@@ -1,4 +1,4 @@
-# Code of conduct guide
+# Code of conduct guide (for Makers)
 
 Our [code of conduct](http://www.makersacademy.com/code-of-conduct) explains how we expect people in the Makers Academy community to behave.  It exists because we want everyone to be able to focus on learning and not be distracted by discrimination or harassment.
 
