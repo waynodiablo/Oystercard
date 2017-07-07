@@ -10,7 +10,6 @@
 - 9.30: Workshop
 - 10.30: Standup 0
 - 10.45: Standup 1
-- 11.00: Standup 2
 
 #### Friday
 - 9.30: Workshop
