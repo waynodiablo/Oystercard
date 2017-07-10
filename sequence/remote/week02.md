@@ -11,7 +11,7 @@
 - 9.30: [Workshop - OOP 2](https://github.com/makersacademy/skills-workshops/tree/master/week-2/oop_2)
 - 10.30: Standup 0
 - 10.45: Standup 1
-- 14.30: [Workshop - Domain Model Diagramming](https://github.com/makersacademy/skills-workshops/tree/master/week-2/domain_model_diagramming)
+- 17.00: [Workshop - Domain Model Diagramming](https://github.com/makersacademy/skills-workshops/tree/master/week-2/domain_model_diagramming)
 
 #### Wednesday
 - 8.30: *Optional* workshop: [Ruby fundamentals - the scope of a variable](https://github.com/makersacademy/skills-workshops/tree/master/ruby-fundamentals/scope-of-a-variable)
