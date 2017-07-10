@@ -59,6 +59,8 @@ The smallest thing that implements the core idea.  Think about what this is for 
 
 If your specification asks for a car, don't build the wheels in the first week, the doors in the second week, etc.  The customer can't try it! Instead, build a skateboard in the first week.
 
+*Aim to get to your MVP by the end of Tuesday*.
+
 ### XP values
 
 [XP values](http://www.extremeprogramming.org/values.html).  Use these to guide your behaviour on everything from class design to your standups.  If you get these behaviours right, everything else about being a software developer falls into place.
