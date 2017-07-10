@@ -17,7 +17,7 @@
 - 8.30: *Optional* workshop: [Ruby fundamentals - the scope of a variable](https://github.com/makersacademy/skills-workshops/tree/master/ruby-fundamentals/scope-of-a-variable)
 - 9.30 Standup 1 & Standup 0
 - CODE ALL DAY!!!! WOOT!!!
-- Dan is not around today, another coach (TBC) will be available
+- Dan is not around today, another coach (@mary) will be available
 
 #### Thursday
 - 8.30: *Optional* workshop: [Ruby fundamentals - Expressions in Ruby](https://github.com/makersacademy/skills-workshops/tree/master/ruby-fundamentals/scope-of-a-variable)
