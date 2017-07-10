@@ -11,7 +11,6 @@
 - 9.30: [Workshop - OOP 2](https://github.com/makersacademy/skills-workshops/tree/master/week-2/oop_2)
 - 10.30: Standup 0
 - 10.45: Standup 1
-
 - 14.30: [Workshop - Domain Model Diagramming](https://github.com/makersacademy/skills-workshops/tree/master/week-2/domain_model_diagramming)
 
 #### Wednesday
