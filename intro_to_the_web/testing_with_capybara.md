@@ -24,7 +24,7 @@ To complete this challenge you will need to have Firefox installed.
 - [ ] Make sure you have installed Firefox browser on your machine (you can use `brew cask install firefox` if you haven't).
 - [ ] List `capybara` and `selenium-webdriver` in a Gemfile.
 - [ ] make sure bundle install works - you may need to manually install xcode if you haven't already.
-- [ ] install Firefox GeckoDriver, `brew install geckdriver`.
+- [ ] install Firefox GeckoDriver, `brew install geckodriver`.
 - [ ] Open up *PRY* and require both `capybara/dsl` and `selenium-webdriver`.
 - [ ] Within the REPL, `$ include Capybara::DSL`.
 - [ ] [Set Capybara's default driver](https://github.com/jnicklas/capybara#selecting-the-driver) to be selenium.
