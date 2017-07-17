@@ -7,16 +7,23 @@
 - 11.00: Weekly kickoff workshop
 
 #### Tuesday
-- 9.30: Workshop
+- 9.00: Process Practice ([Game of Life Kata](https://github.com/makersacademy/skills-workshops/tree/master/week-2/game_of_life_4_rules))
+- 9.30: Workshop - [process modelling](https://github.com/makersacademy/skills-workshops/tree/master/week-3/process_modelling)
 - 10.30: Standups
 - 15.00: Check-in session with Dana
 
-#### Wednesday, Thursday
-- 9.30: Workshop
+#### Wednesday
+- 9.00: Process Practice ([Game of Life Kata](https://github.com/makersacademy/skills-workshops/tree/master/week-2/game_of_life_4_rules))
+- 9.30: Workshop - [Debugging 2](https://github.com/makersacademy/skills-workshops/tree/master/week-3/debugging_2)
+- 10.30: Standups
+- 17.00: Process Surgery
+
+#### Thursday
+- 9.00: Process Practice ([Game of Life Kata](https://github.com/makersacademy/skills-workshops/tree/master/week-2/game_of_life_4_rules))
+- 9.30: Optonal Workshop - [Dissecting a Rack Application](https://github.com/makersacademy/skills-workshops/tree/master/week-3/dissecting-rack-middleware)
 - 10.30: Standups
 
 #### Friday
-- 4.30: Skills, concepts, behaviours reflection
 - 5.00: Confidence Workshop
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
 - 6.00: Announcements for the weekend
