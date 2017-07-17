@@ -60,7 +60,7 @@ To run these tests:
 * Use a script tag to include `circle-tests.js` in `index.html`.
 * Open the HTML page in a browser.
 
-This is pretty ugly.
+This code is pretty ugly.
 
 * It takes three lines of code to assert one thing.
 * A custom error description must be supplied.
