@@ -14,8 +14,8 @@
 
 #### Wednesday
 - 9.00: Process Practice ([Game of Life Kata](https://github.com/makersacademy/skills-workshops/tree/master/week-2/game_of_life_4_rules))
-- 9.30: Workshop - [Debugging 2](https://github.com/makersacademy/skills-workshops/tree/master/week-3/debugging_2)
-- 10.30: Standups
+- 9.30: Standups
+- 16.00: Workshop - [Debugging 2](https://github.com/makersacademy/skills-workshops/tree/master/week-3/debugging_2)
 - 17.00: Process Surgery
 
 #### Thursday
