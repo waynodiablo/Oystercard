@@ -33,14 +33,14 @@ So I know what the big stories of the day are
 
 ```
 As a busy politician
-I can read a summary of a news article
-So I can get a few more details about an important story
+I can click a link to see the original news article
+So that I can get an in depth understanding of a very important story
 ```
 
 ```
 As a busy politician
-I can read a full news article
-So that I can get an in depth understanding of a very important story
+I can see a summary of a news article
+So I can get a few more details about an important story
 ```
 
 ```
