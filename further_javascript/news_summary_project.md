@@ -2,7 +2,7 @@
 
 You'll create an app that summarises the news.  You'll get to practice:
 
-* Collaborating on a full app.
+* Working on a full app.
 * Working with less external structure.
 
 ## Project overview
