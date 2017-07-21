@@ -13,6 +13,8 @@ Your app will grab all the headlines from the Guardian newspaper API and display
 
 You'll write a single page web app.  You'll write your code in frontend JavaScript, CSS and HTML.  You won't use Ruby or backend JavaScript.
 
+**And, as is the theme for this week, you won't use any libraries or frameworks!**
+
 ### Serving your app
 
 You'll use a static web server to serve your HTML, CSS and JavaScript files.  You'll send requests to an API to get data from the Guardian and to summarise text.
