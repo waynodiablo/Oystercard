@@ -12,7 +12,7 @@ And you'll implement user stories for an app that summarises the news.  No chall
 
 We'll have group code reviews on Wednesday, Thursday and Friday.  These will last 30 minutes.  The format will be similar to the Monday weekend challenge code reviews.
 
-### Monday, Tuesday and Wednesday
+### Notes app
 
 Build a notes app as a frontend, single page web app.  You'll be guided through this by the high-level challenges listed below.  However, there will be no walkthroughs.
 
@@ -37,10 +37,6 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 13. [Use TDD to finish support for user note creation](13_user_create_note.md)
 14. [Refactor](14_refactor.md)
 15. [Extract a standalone test library](15_extract_test_library.md)
-
-### Thursday and Friday
-
-Build a [frontend, single page web app that summarises the news](news_summary_project.md).  No challenges.  No walkthroughs.  You'll be able to build on what you've learnt from making the notes app.
 
 #### Guidance
 
