@@ -15,7 +15,7 @@ Don't worry if you need to jump around between the three parts of this challenge
 
 #### 1. Note model unique `id`
 
-- [ ] TDD giving each note model object a unique `id`.  The first note created would have an `id` of `0`.  The second note created would have an `id` of `1`.
+- [ ] TDD giving each note model object a unique `id`.  The first note created would have an `id` of `0`.  The second note created would have an `id` of `1`. etc.
 
 #### 2. Link each note to a page that displays the full note
 
@@ -25,7 +25,7 @@ Don't worry if you need to jump around between the three parts of this challenge
 
 #### 3. Load the content for the single note page
 
-- [ ] Using TDD, update your `note-controller.js` to load content for the single note page.  The note controller code should listen for `hashchange` events.  When one happens, if the new browser URL is for a single note page, it should use the `app` element to set the web page content to the HTML for that note.
+- [ ] Using TDD, update your `note-controller.js` to load content for the single note page.  The note controller code should listen for `hashchange` events.  When one happens, if the new browser URL is for a single note page, it should change the content of the `app` element to be the HTML for that note.
 - [ ] Go to `http://localhost:8080` in your browser.  You should be able to click on a note and see the full text of that note.  There should be no page refresh.
 
 ### Resources

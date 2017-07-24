@@ -23,10 +23,12 @@ Because you'll need to integrate several different elements to make the code wor
 
 - Code is in a file called `note-controller.js`.
 - Code is wrapped in the module pattern.
-- Uses the constructor and prototype pattern to define a note controller that can be instantiated.
-- Takes a note list model upon instantiation. Adds a note that says `Favourite drink: seltzer`.  (You could create another file, `index.js`, to instantiate the `NoteController`.)
-- Creates a note list view, passing in the note list model.
-- Has a method that gets HTML from the note list view and inserts it into the `app` element.
+- Code uses the constructor and prototype pattern to define a note controller that can be instantiated.
+- The note controller constructor does the following:
+  - Takes a note list model as a parameter.
+  - Adds a note that says `Favourite drink: seltzer`.
+  - Creates a note list view, passing in the note list model.
+- The note controller has a method that gets HTML from the note list view and inserts it into the `app` element.
 
 ### Tests to write
 
