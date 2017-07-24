@@ -4,8 +4,6 @@ You'll work in **pairs** as usual, swapping pairs each day.
 
 You'll build a note-taking app by working through **challenges**.  No walkthroughs.
 
-And you'll implement user stories for an app that summarises the news.  No challenges, no walkthroughs.
-
 ## Structure of the week
 
 ### Group code reviews
@@ -37,7 +35,3 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 13. [Use TDD to finish support for user note creation](13_user_create_note.md)
 14. [Refactor](14_refactor.md)
 15. [Extract a standalone test library](15_extract_test_library.md)
-
-#### Guidance
-
-Make sure to look at this [guidance](frontend_single_page_app_guidance.md) for the news summariser app!  It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things. (The guidance shouldn't be necessary for the notes app.  The challenges will guide you with that.)
