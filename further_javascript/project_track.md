@@ -8,7 +8,7 @@ And you'll implement user stories for an app that summarises the news.  No chall
 
 ## Structure of the week
 
-### Monday, Tuesday and Wednesday, Thursday
+### Notes app
 
 Take [user stories for a notes app](notes_app_user_stories.md).  Use them to build a frontend, single page web app.
 
@@ -23,16 +23,6 @@ Make sure to look at this [guidance on building a frontend, single page app](fro
 #### Test library
 
 Extract your own test library from your app.  See here for more [guidance on testing without a testing library and extracting your testing code into its own library](../pills/writing_tests_without_a_testing_library.md).
-
-### Thursday and Friday
-
-Build an [app that summarises the news](news_summary_project.md).
-
-You can't use existing web frameworks or libraries (e.g. no Angular, React, Jasmine, jQuery etc.). (But you can use your new testing library!)
-
-No challenges.  No walkthroughs.
-
-(If it's getting late into the week and you haven't started the news summarising app, don't rush through it.  Refactor your notes app and your test library.)
 
 #### Guidance
 
