@@ -21,7 +21,3 @@ Make sure to look at this [guidance on building a frontend, single page app](fro
 #### Test library
 
 Extract your own test library from your app.  See here for more [guidance on testing without a testing library and extracting your testing code into its own library](../pills/writing_tests_without_a_testing_library.md).
-
-#### Guidance
-
-Make sure to look at this [guidance on building a frontend, single page app](frontend_single_page_app_guidance.md)! It'll help you point yourself in the right direction when you're figuring out how to implement some of the trickier things.
