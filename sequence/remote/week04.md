@@ -25,3 +25,6 @@
 - 5.00: Confidence Workshop
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
 - 6.00: Announcements for the weekend
+
+#### Weekend challenge
+- [Chitter challenge](https://github.com/BenNoonan1991/chitter-challenge)
