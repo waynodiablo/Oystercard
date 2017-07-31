@@ -8,7 +8,7 @@
 
 ## A typical week
 
-### Monday, Wednesday, Friday
+### Monday, Wednesday, Friday
 
 * 09.30-10.00 — Preparatory work
 * 10.00-11.00 — Practical workshop
