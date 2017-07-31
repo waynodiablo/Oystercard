@@ -27,4 +27,4 @@
 - 6.00: Announcements for the weekend
 
 #### Weekend challenge
-- [Chitter challenge](https://github.com/BenNoonan1991/chitter-challenge)
+- [Chitter challenge](https://github.com/makersacademy/chitter-challenge)
