@@ -16,10 +16,10 @@
 - 10.30: Standups (Student organised)
 
 #### Thursday
-- 09.30: [Workshop - Ajax Request / Response](https://github.com/makersacademy/skills-workshops/tree/master/week-5/following_ajax_request_response_cycle)
+- 09.30: [Workshop - Following asynchronous flow of control](https://github.com/makersacademy/skills-workshops/tree/master/week-5/callbacks_following_the_flow_of_control)
 - 10.30: Standups (Student organised)
 #### Friday
-- 9.30: [Workshop - Following asynchronous flow of control](https://github.com/makersacademy/skills-workshops/tree/master/week-5/callbacks_following_the_flow_of_control)
+- 9.30: [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - 5.00: Confidence Workshop
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
 - 6.00: Announcements for the weekend
