@@ -24,7 +24,7 @@ By "well crafted code", we mean code that is:
 By the end of the week, you should:
 
 * Feel more confident in your ability to complete a tech test.
-* Have developed a structured process to approaching complex problems that utilises TDD and good OO design skills.
+* Have developed a structured process that uses TDD and OO design skills to solve complex problems.
 
 ### Structure of the week
 
