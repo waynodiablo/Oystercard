@@ -30,19 +30,23 @@ By the end of the week, you should:
 
 #### Tech tests
 
-1. On Monday at 9.30am, start working on the [Money Tracker](https://github.com/makersacademy/money_tracker_tech_test/blob/master/README.md) tech test.
+1. Get started on Monday at 9.30am.
 
-2. Work on the tech test until you've completed the features.
+2. Start by reading the [tech test guide](https://github.com/makersacademy/jobhunters/blob/master/pills/tech_test_guide.md).
 
-3. Use the [tech test guide](https://github.com/makersacademy/jobhunters/blob/master/pills/tech_test_guide.md) to review your code and repo.
+3. Start working on the [Money Tracker](https://github.com/makersacademy/money_tracker_tech_test/blob/master/README.md) tech test.
 
-4. Submit a pull request.  (If you're stuck or want feedback, feel free to submit a pull request before you complete the features.)
+4. Work on the tech test until you've completed the features.
 
-5. Your coach will review your code and send their thoughts back to you ASAP.
+5. Use the [tech test guide](https://github.com/makersacademy/jobhunters/blob/master/pills/tech_test_guide.md) to review your code and repo.
 
-6. Refactor your code, based on your coach's suggestions.  (That is, the suggestions you agree with!)
+6. Submit a pull request.  (If you're stuck or want feedback, feel free to submit a pull request before you complete the features.)
 
-7. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 2.
+7. Your coach will review your code and send their thoughts back to you ASAP.
+
+8. Refactor your code, based on your coach's suggestions.  (That is, the suggestions you agree with!)
+
+9. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 2.
 
 #### Final projects
 
