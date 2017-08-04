@@ -42,11 +42,13 @@ By the end of the week, you should:
 
 6. Submit a pull request.  (If you're stuck or want feedback, feel free to submit a pull request before you complete the features.)
 
-7. Your coach will review your code and send their thoughts back to you ASAP.
+7. Ping your coach to tell them you've submitted a pull request.
 
-8. Refactor your code, based on your coach's suggestions.  (That is, the suggestions you agree with!)
+8. Your coach will review your code and send their thoughts back to you ASAP.
 
-9. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 2.
+9. Refactor your code, based on your coach's suggestions.  (That is, the suggestions you agree with!)
+
+10. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 2.
 
 #### Final projects
 
