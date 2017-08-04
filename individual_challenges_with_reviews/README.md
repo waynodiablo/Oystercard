@@ -48,7 +48,7 @@ By the end of the week, you should:
 
 9. Refactor your code, based on your coach's suggestions.  (That is, the suggestions you agree with!)
 
-10. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 2.
+10. Keep going in this refactor/review loop until you and your coach agree you've got most of the learning out of the tech test.  At that point, your coach will send you the URL for the next tech test.  Start working on it and return to step 4.
 
 #### Final projects
 
