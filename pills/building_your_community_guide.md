@@ -10,7 +10,7 @@ Employers are looking for good developers.  Someone who has a developer communit
 
 ## Reasons to build your community
 
-* You'll learn and contribute to the most cutting-edge technologies that will make the developer community more productive.
+* You'll learn and contribute to the most cutting-edge technologies that make the developer community more productive.
 
 * You'll share techniques and build skills with other practitioners.
 
@@ -28,7 +28,7 @@ Employers are looking for good developers.  Someone who has a developer communit
 
 * You'll find mentors who can help guide your growth and you'll mentor others.
 
-* You'll be able to get and give feedback on code.
+* You'll be able to give and get feedback on code.
 
 The overall approach is to find ways to contribute to the community.  By contributing, you'll also benefit.
 
@@ -36,7 +36,7 @@ The overall approach is to find ways to contribute to the community.  By contrib
 
 ### Meetup
 
-* **What is it?** Regular meetings where people interested in a particular technology or development-related interest gather to socialise.  Sometimes, there are talks preceding the socialising.
+* **What is it?** Regular meetings where people interested in a particular technology or development-related topic gather to socialise.  Sometimes, there are talks preceding the socialising.
 
 * **What are some examples?** [London Ruby User Group](http://lrug.org/), [London Indies](http://www.londonindies.com/) game developer meetup, [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/).
 
@@ -50,7 +50,7 @@ The overall approach is to find ways to contribute to the community.  By contrib
 
 * **What are some examples?** [Codebar](https://codebar.io/).
 
-* **How do I join?** Sign up either to mentor or be mentored.
+* **How do I join?** Sign up either to mentor or to be mentored.
 
 * **How do I contribute?** The best way to contribute is by signing up as a mentor.  For example, many Makers mentor at Codebar.
 
@@ -60,15 +60,13 @@ The overall approach is to find ways to contribute to the community.  By contrib
 
 ### Hackathon / Game jam
 
-* **What is it?** An event that lasts a few days where people make a small product in teams.  Teams usually decide what to build and then build it.  There's often a theme for the projects to follow.  The atmosphere is quite intense because teams try to write as much code as possible in the time available.  Some hackathons awards prizes for the best projects.  Some hackathons happen in person at an event space.  Others happen remotely.
-
-A game jam is the same, but for making video games.
+* **What is it?** An event that lasts a few days where people make a small product in teams.  Teams usually decide what to build and then build it.  There's often a theme for the projects to follow.  The atmosphere is quite intense because teams try to write as much code as possible in the time available.  Some hackathons awards prizes for the best projects.  Some hackathons happen in person at an event space.  Others happen remotely.  A game jam is the same, but for making video games.
 
 * **What are some examples?** [Ludum Dare](http://ludumdare.com/), [Mozilla Fest](https://mozillafestival.org/).
 
 * **How do I join?** Register and go!
 
-* **How do I contribute?** Build a project.
+* **How do I contribute?** Build a project.  Or find others to collaborate with.
 
 ### Slack community
 
@@ -88,7 +86,7 @@ Basically the same as Slack communities, but via a different communication mediu
 
 * **What is it?** A site where users post links to things they find interesting.  Usually, the links are centred on a particular topic.  Users of the site vote up and comment on the links they like.
 
-* **What are some examples?** [Hacker News](https://news.ycombinator.com/) (focused on startups and development), [Programming Reddit](https://www.reddit.com/r/programming/).
+* **What are some examples?** [Hacker News](https://news.ycombinator.com/) (focused on startups and software development), [Programming Reddit](https://www.reddit.com/r/programming/).
 
 * **How do I join?** Sign up.
 
@@ -96,7 +94,7 @@ Basically the same as Slack communities, but via a different communication mediu
 
 ### GitHub repository
 
-* **What is it?** Almost every medium-sized and large language, framework and library has a GitHub repo.  Often, development of the technology happens via pull requests on that repo.
+* **What is it?** Almost every language, framework and library has a GitHub repo.  Often, development of the technology happens via pull requests on that repo.
 
 * **What are some examples?** [Ruby](https://github.com/ruby/ruby), -Your favourite library-.
 
@@ -118,7 +116,7 @@ Basically the same as Slack communities, but via a different communication mediu
 
 ### Company
 
-The company you work for is one of the most powerful communities you can belong to.  It's very important to choose one that you can contribute to, and where you can learn.  It's a community where you'll spend a lot of time, where you'll work on varied projects, where you'll get feedback, where you'll try to achieve a goal, and where you'll be constantly discussing new ideas.
+The company you work for is one of the most powerful communities you can belong to.  It's very important to choose one where you can contribute and learn.  It's a community where you'll spend a lot of time, where you'll work on varied projects, where you'll get feedback, where you'll try to achieve a goal, and where you'll be constantly discussing new ideas.
 
 Learn more about how to [find and introduce yourself to a company](https://github.com/makersacademy/jobhunters/blob/master/pills/finding_a_job_the_smart_way.md).
 
@@ -132,7 +130,7 @@ Learn more about how to [find and introduce yourself to a company](https://githu
 
 * **What are some examples?** [London Hackspace](https://london.hackspace.org.uk/)
 
-* **How do I join?** Register, and possible pay a subscription fee.
+* **How do I join?** Register, and possibly pay a subscription fee.
 
 * **How do I contribute?** Talk to other people there about what they're working on.  You may find projects you can contribute to.  Work on your own stuff there.  Just being there contributes to the community.
 
