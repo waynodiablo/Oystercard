@@ -6,14 +6,15 @@
 
 #### Tuesday
 - 10.00: Optional workshop (Ruby fundamentals)
+- 17.00: careers session with Becks
 
 #### Wednesday
 - Project teams set your own schedule
 
 #### Thursday
 - 9.30: Optional workshop (TBC)
-- 14.30 Careers session
 
 #### Friday
-- 9.30: Retro planning, confidence workshop, weekend announcements
-- 16.00: Individual group retros (organised in your groups)
+
+- 16.00: Retro planning
+- 17.00: Individual group retros
