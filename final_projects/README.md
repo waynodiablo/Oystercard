@@ -54,7 +54,8 @@ If you're ever stuck, or facing a problem, turn to the [XP values](http://www.ex
 
 ## Standups and retros
 
-You'll have standups and retros in your teams.
+* Have a standup every morning in your group.
+* Have a retro every evening in your group.
 
 ## Graduation and project presentations
 
