@@ -5,20 +5,20 @@
 - 9.30: Peer-led code review
 - 10.30: Group code review and Q&A with coach
 - 11.00: Weekly kickoff workshop
+- [Goals for the week](https://github.com/makersacademy/course/blob/master/further_javascript/README.md#goals-for-the-week)
 
 #### Tuesday
-- 9.30: Standups (Student organised)
-- 10.00: Workshop
+- 09.30: Standups (Student organised) 
+- 10.00: [Workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-7/javascript-module-pattern-workshop)
 
-#### Wednesday, Thursday
+#### Wednesday
 - 9.30: Standups (Student organised)
-- 17.00: Process surgery
+- 10.00: [Workshop](https://github.com/makersacademy/skills-workshops/tree/master/week-7/isolating-units-with-mocks)
 
 #### Thursday
-- 21:00 musical forms workshop
+- 9.30: Standups (Student organised)
 
 #### Friday
-- 4.30: Skills, Behaviors, Concepts
 - 5.00: Confidence Workshop
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
 - 6.00: Announcements for the weekend
