@@ -38,7 +38,7 @@ The overall approach is to find ways to contribute to the community.  By contrib
 
 * **What is it?** Regular meetings where people interested in a particular technology or development-related topic gather to socialise.  Sometimes, there are talks preceding the socialising.
 
-* **What are some examples?** [London Ruby User Group](http://lrug.org/), [London Indies](http://www.londonindies.com/) game developer meetup, [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/).
+* **What are some examples?** [London Ruby User Group](http://lrug.org/), [London Indies](http://www.londonindies.com/) game developer meetup, [London Software Craftsmanship Community](https://www.meetup.com/london-software-craftsmanship/), [Extreme Tuesday Club](https://www.meetup.com/eXtreme-Tuesday-Club-XTC/), [Queer Code London](https://www.meetup.com/Queer-Code-London/)
 
 * **How do I join?** Register, then go.
 
