@@ -22,7 +22,7 @@ Here is the project repo: https://github.com/makersacademy/acebook-remote-april-
 
 #### Wednesday, Thursday
 - 9.30: Standups (Student organised)
-- Wednesday 5.00: Process Surgery
+
 
 #### Friday
 - 5.00: Confidence Workshop
