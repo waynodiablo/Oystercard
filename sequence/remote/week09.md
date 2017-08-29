@@ -1,13 +1,15 @@
 # Week Nine Structure - Practice Project Week!
 
-#### Monday
+#### Tuesday
 
 - 9.30: Project idea generation workshop
 - 10.00: Pair code review
 - 11.00: Group code review & Q&A with coach
 - 12.00: Kick off workshop and team announcement
 
-#### Tuesday, Wednesday, Thursday
+- 17.00: Careers session
+
+#### Wednesday, Thursday
 
 - Teams organise their own schedules
 
