@@ -40,6 +40,6 @@ Close window.
 
 Click "Continue and Installed" .
 
-Let it installed. It takes about 12 minutes.
+Let it install. It takes about 12 minutes.
 
 Restart it. Once it’s done, it should be back to factory settings.
