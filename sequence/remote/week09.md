@@ -6,7 +6,6 @@
 - 10.00: Pair code review
 - 11.00: Group code review & Q&A with coach
 - 12.00: Kick off workshop and team announcement
-
 - 17.00: Careers session
 
 #### Wednesday, Thursday
