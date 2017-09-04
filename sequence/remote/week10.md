@@ -11,7 +11,7 @@
 #### Tuesday
 
 * 10am - 11pm: Careers session: Practice Tech Interviews
-* 3.00 - 4pm: Careers session: How to network
+* 5.00 - 6pm: Careers session: How to network
 * Work on Bank Tech test all day between sessions
 
 #### Wednesday
