@@ -48,7 +48,7 @@ See [:pill: here](https://github.com/makersacademy/course/blob/master/pills/exam
 
 ### Getting your laptop (onsite cohorts)
 
-At 11.00am on the first day, go to the mezzanine and ask for Cata.  To get to the mezzanine, go to floor 3, go into the room with all the desks and monitors, then go up the wooden stairs.
+At 11.00am on the first day, go to the first floor and ask for Cata. You can take the lift or the stairs to the first floor.
 
 ### Setting up your laptop
 
