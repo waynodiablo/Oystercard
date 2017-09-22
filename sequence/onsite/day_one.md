@@ -12,7 +12,7 @@ If you have any questions, just ask!
 * 12.30 - 14.00 Lunch and more laptop setup
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Coach)
-* 15.15 - 16.15 Introduction to careers (careers team)
+* 15.15 - 16.15 Introduction to careers team (Careers team)
 * 16.15 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
 * 17.30 - 18.30 Social with pizza
 
