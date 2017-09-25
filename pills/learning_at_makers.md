@@ -100,12 +100,6 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 
 * One of the learning tools at Makers is the [escalation process](./escalation_process.md).  This is a series of things to do to try to solve a problem.  It's designed to maximise the amount you learn, rather than getting an answer right away.
 
-### Daily feedback
-
-* This is a very short survey on how your day went.  It asks you to rate your day out of 10 and your pairing experience out of 10.  It also asks you to write any thoughts you have on how the day went.
-
-* There are two goals for daily feedback.  First,  to encourage you to reflect on your learning, and possibly find ways it could be improved.  Second, to give your coach an idea of how you're doing.
-
 ### Coaches
 
 * We're here to support you learning to learn.  We might sometimes be less helpful in order to support your learning.
