@@ -106,10 +106,6 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 
 * There are two goals for daily feedback.  First,  to encourage you to reflect on your learning, and possibly find ways it could be improved.  Second, to give your coach an idea of how you're doing.
 
-### Standups
-
-[Standups](./student_standups.md)
-
 ### Coaches
 
 * We're here to support you learning to learn.  We might sometimes be less helpful in order to support your learning.
