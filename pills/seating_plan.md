@@ -1,22 +1,31 @@
 # Seating plan
 
 ```
-    (door)
-             PP
-JJJJ         PP
-JJJJ  JJJJ
-      JJJJ   PP
-             PP
-JJ  OO  OO
-JJ  OO  OO   PP
-DJ  OO  OO   PP
-CJ  OO  OO
-CJ  OO  OO   PP
-CJ  OO  OO   PP
+-----DD--------------
+CJO    |    |    PP |
+       |____| SS PP |
+              SS    |
+JJJJJ  CCCC   SS PP |
+JJJJJ  OOOO      PP |
+                    |
+  XX    XX   XXW   |
+             WW    |
+     JO   OO   PPP |
+JJ   JO   OO   PPP |
+JJ   JO   OO       |
+CJ   JO   OO       |
+CJ   JO   OO   PPP |
+CJ   JO   OO   PPP |
+CJ   JO   OO       |
+--------------------
 
+-DD-: Door
+CJO: Dana
+X: Pillar
+W: Water Cooler
+S: Stairs to Mezz
 J: Junior
 C: Coach
-D: Dana
 O: Mid or senior or, if space, an alumni
 P: Mid or senior project team member
 ```
