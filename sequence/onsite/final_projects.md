@@ -6,7 +6,9 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 
 #### Monday to Friday
 
-Project work.
+* You'll each have a [session](../../pills/coach_developer_observation.md) where a coach observes you building a small project from scratch and gives you feedback on your developer processes.
+
+* Project work.
 
 ### Week 12
 
@@ -31,4 +33,3 @@ Project work.
 * 6.30pm: Closing spiel from coach.
 * 6.30pm: Hanging out on floor 2.
 * 7.00pm: Close.
-
