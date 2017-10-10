@@ -57,6 +57,10 @@ If you're ever stuck, or facing a problem, turn to the [XP values](http://www.ex
 * Have a standup every morning in your group.
 * Have a retro every evening in your group.
 
+## Coach-developer observations
+
+You'll each have a [session](../../pills/coach_developer_observation.md) where a coach observes you building a small project from scratch and gives you feedback on your developer processes.
+
 ## Graduation and project presentations
 
 On Friday of week 12 (next week), you'll graduate.  At the graduation ceremony, each team will give a presentation about their project.  It'll be similar in structure and content to your practice project presentation.  But it'll be less technical, because many of the audience members (your friends, parents, relatives and S.O.s) will be non-technical.
@@ -66,4 +70,3 @@ See the [guidelines](../pills/final_project_presentations.md).
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/final_projects.md)
 * [Remote](../sequence/remote/final_projects.md)
-
