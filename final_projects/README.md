@@ -59,7 +59,7 @@ If you're ever stuck, or facing a problem, turn to the [XP values](http://www.ex
 
 ## Coach-developer observations
 
-You'll each have a [session](../../pills/coach_developer_observation.md) where a coach observes you building a small project from scratch and gives you feedback on your developer processes.
+You'll each have a [session](../pills/coach_developer_observation.md) where a coach observes you building a small project from scratch and gives you feedback on your developer processes.
 
 ## Graduation and project presentations
 
