@@ -5,8 +5,9 @@ This is a kind reminder that the laptops have to be returned by the last Friday 
 ## Remember to
 
 1. Clean the laptop using the wipes in the stationary cabinet.
-2. Reset the laptop to Factory settings. I will forward you a page explaining how to do it. You can either use the IOS sticks we have or download the IOS online as you reset the laptop.
+2. Reset the laptop to Factory settings. You can either use the Mac OS sticks we have or download Mac OS online as you reset the laptop.
 3. Report any damages or hardware problems.
+4. Return it to Florence on the first floor
 
 
 # How to reset the laptop by USB
@@ -17,7 +18,7 @@ The laptop has to be off
 
 Insert USB
 
-Press and hold the 0N button and ALT at the same time.
+Press and hold the ON button and ALT at the same time.
 
 Choose "Install OSX Yosemite"  and wait for the OS X Installation box to appear.
 
