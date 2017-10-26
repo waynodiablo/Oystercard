@@ -12,8 +12,8 @@ In the couple of decades previous, desktop publishing was overwhelmingly concern
 
 ## Exercise 1: typeset me
 
-- Go to the [Motherfucking Website](http://motherfuckingwebsite.com/). Download it, and write a CSS file that uses the [26 Digital Typography Rules for Beginners](https://medium.com/product-design-ux-ui/26-digital-typography-rules-for-beginners-a04c6a5aaff3) to improve the type.
+- Go to [this website](txti.es/nzzbm). Download it, and write a CSS file that uses the [26 Digital Typography Rules for Beginners](https://medium.com/product-design-ux-ui/26-digital-typography-rules-for-beginners-a04c6a5aaff3) to improve the type.
 
 ## Exercise 2: vertical rhythm
 
-- Take your solution to Exercise 1, and use [4 Simple Steps to Vertical Rhythm](http://typecast.com/blog/4-simple-steps-to-vertical-rhythm) to establish a consistent vertical rhythm to the article.
+- Take your solution to Exercise 1, and use [4 Simple Steps to Vertical Rhythm](http://typecast.com/blog/4-simple-steps-to-vertical-rhythm) to establish a consistent vertical rhythm to the webpage.
