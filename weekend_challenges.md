@@ -2,7 +2,7 @@
 
 #### Week 1: [Airport Challenge ](https://github.com/makersacademy/airport_challenge)
 
-#### Week 2: [Takeaway Challenge ](https://github.com/makersacademy/airport_challenge)
+#### Week 2: [Takeaway Challenge ](https://github.com/makersacademy/takeaway-challenge)
 
 #### Week 3: [RPS Challenge ](https://github.com/makersacademy/rps-challenge)
 
