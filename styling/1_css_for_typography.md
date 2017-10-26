@@ -1,7 +1,5 @@
 # 1: CSS for typography
 
-# CSS for typography
-
 In the 90s, web pages were pretty text-centric: 
 
 ![Yahoo in 1996: a basic webpage almost entirely made of text](images/yahoo-1996.png)
