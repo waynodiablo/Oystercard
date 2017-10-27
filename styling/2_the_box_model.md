@@ -14,7 +14,7 @@ The best introduction to the CSS Box Model is [CSS-Tricks](https://css-tricks.co
 
 > Top tip: in the first line of your CSS, add the following: `* { outline: 1px dotted #777; }`. Now you'll be able to see every HTML box on the page.
 
-## Exercise 2: Centering with Flexbox
+## Exercise 2: Centering with Flexbox
 
 - Take [this webpage](./webpages/2-2.html) and make it look like [this design](./designs/2-2.jpg). _You can use another CSS-Tricks article, [The Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), to help you._
 
