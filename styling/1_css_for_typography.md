@@ -26,7 +26,9 @@ Text is still a dominant internet medium, and poor typography is a barrier to re
 
 ### Exercise 1: typeset me
 
-Go to [this website](http://txti.es/css-for-typography). Download it, and write a CSS file that uses the 26 Digital Typography Rules for Beginners to improve the typesetting.
+1. Fork the [Styling Exercises solutions repository](https://github.com/sjmog/styling_exercises). 
+2. Clone it, and open `1_css_for_typography/index.html`. 
+3. Use [26 Digital Typography Rules for Beginners](https://medium.com/product-design-ux-ui/26-digital-typography-rules-for-beginners-a04c6a5aaff3) to improve the typography of the page. Write CSS in the `1_css_for_typography/style.css` file to style the index file.
 
 > Advanced mode: Use [Richard Rutter's](https://twitter.com/clagnut) popular work, [Web Typography](http://webtypography.net/) to really fine-tune your web typographic skills. There is a [more up-to-date eBook](http://book.webtypography.net/), too.
 
