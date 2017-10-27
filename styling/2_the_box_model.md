@@ -4,7 +4,7 @@ Here's a secret:
 
 > Everything in HTML is a box. HTML is just boxes containing stuff.
 
-So, in addition to remembering that [CSS is for typography](./1_css_for_typography.md), remember one more thing: CSS is for moving boxes around. The bad news is that there are a few ways to move boxes containing content around on a page. The good news is that once you know them, they behave consistently and, sometimes, predictably.
+So, in addition to remembering that [CSS is for typography](./1_css_for_typography.md), remember one more thing: CSS is for moving boxes around. The bad news is that there are a few ways to move boxes containing content around on a page. The good news is that once you know them, they behave consistently and, mostly, predictably.
 
 The best introduction to the CSS Box Model is [CSS-Tricks](https://css-tricks.com/the-css-box-model/). It's a great resource for most things CSS.
 
