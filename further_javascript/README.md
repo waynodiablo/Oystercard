@@ -42,9 +42,9 @@ Your diagram might include: model, view, controller, external API, browser page,
 
 This week is composed of two separate tracks.  You'll choose one track and stay on it for the whole week.
 
-* In the [challenge track](00_challenge_track.md), you'll work in changing pairs as normal.  You'll implement an app using challenges to guide you (no walkthroughs).  And you'll implement another app using only user stories to guide you (no challenges or walkthroughs).
+* In the [challenge track](00_challenge_track.md), you'll work in changing pairs as normal.  You'll implement an app using challenges to guide you (no walkthroughs). And you'll extract a test framework from your app.
 
-* In the [project track](project_track.md), you'll work in small teams for the whole week.  You'll implement the same two apps as the challenge track, except you'll only use user stories to guide you (no challenges, no walkthroughs).
+* In the [project track](project_track.md), you'll work in small teams for the whole week.  You'll implement the same app as the challenge track, except you'll only use user stories to guide you (no challenges, no walkthroughs). You'll extract a testing framework, too.
 
 ## Get started
 
