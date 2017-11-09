@@ -7,9 +7,6 @@ Use this [form][1] to request a review of your weekend challenge or codebase. A 
 ---
 Most of the following are self-explanatory, but in order to submit the form the following information is required:
 
-### Date
-The date you are submitting the request.
-
 ### First & Last Name
 So the coach knows where to send feedback
 
