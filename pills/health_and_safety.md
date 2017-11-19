@@ -25,6 +25,6 @@ In the event of a fire:
 FIRST AID
 --------
 
-* If somebody gets injured, get help from one of the first aiders - Ana, Nikesh and Dana
+* If somebody gets injured, get help from one of the first aiders - Nikesh and Dana
 
 * There are first aid boxes on the 3rd floor
