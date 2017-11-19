@@ -53,9 +53,3 @@ At 11.00am on the first day, go to the first floor and ask for Cata. You can tak
 ### Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
-
-### Installing Makersinit
-
-This is a Ruby gem that will automatically add your Git commits to your student profile.  This will help us see that you're doing OK.  Please install it.  Thanks!
-
-https://github.com/makersacademy/makersinit
