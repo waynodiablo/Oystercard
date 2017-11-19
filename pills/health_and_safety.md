@@ -1,8 +1,6 @@
 Health and Safety - a very broad outline
 ========
 
-“If your mum would disapprove, it's probably best to save it for when you're not in the office.” - Jordan Poulton
-
 Also see the [facilities :pill:](./facilities.md).
 
 FIRE SAFETY
