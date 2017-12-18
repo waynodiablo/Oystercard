@@ -36,7 +36,6 @@ The JavaScript equivalent is the Console tab of the Chrome developer tools.  Whe
 - :pill: [`function` in JavaScript](../pills/js_functions.md)
 - :pill: [JavaScript conventions](../pills/js_conventions.md)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Why JavaScript is the future of programming (infographic)](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/11/infographic-Why_JS_is_the_Future_of_Programming.png)
 - :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
 ### [Walkthrough](walkthroughs/javascript_basics.md)
