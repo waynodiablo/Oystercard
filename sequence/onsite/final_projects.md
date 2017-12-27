@@ -23,7 +23,7 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 #### Friday
 
 * 9.30am - 1pm: Your coach will be available to give you feedback on your presentation.
-* 1pm: Restore your laptops to factory settings and return them to Cata.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
+* 1pm: Restore your laptops to factory settings and return them to Florence.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
 
 ##### Demo day ceremony
 

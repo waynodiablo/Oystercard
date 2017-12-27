@@ -21,7 +21,7 @@ Project work.
 #### Friday
 
 * 9.30am - 1pm: Your coach will be available to give you feedback on your presentation.
-* 1pm: Restore your laptops to factory settings and return them to Cata.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
+* 1pm: Restore your laptops to factory settings and return them to Florence.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
 
 ##### Demo day ceremony
 
@@ -31,4 +31,3 @@ Project work.
 * 6.30pm: Closing spiel from coach.
 * 6.30pm: Hanging out on floor 2.
 * 7.00pm: Close.
-

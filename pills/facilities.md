@@ -4,7 +4,7 @@ Also see the [health and safety :pill:](./health_and_safety.md).
 
 ## Broken or missing cables, sockets, monitors etc
 
-* If something is broken or missing, put a post post in the `#facilities` channel on Slack.  (Don't direct-message Cata - posting in `#facilities` will be quicker.)
+* If something is broken or missing, put a post post in the `#facilities` channel on Slack.  (Don't direct-message Florence - posting in `#facilities` will be quicker.)
 
 ## The building
 
@@ -36,6 +36,6 @@ There's a shower in the larger toilet on the second floor.  Please leave it clea
 
 ## Updates to facilities
 
-* If there will be any changes to the facilities, Cata will post a bulletin to `#facilities`.  This will include what is going to happen, why we're doing it, when it will happen and how long it will go on for.
+* If there will be any changes to the facilities, Florence will post a bulletin to `#facilities`.  This will include what is going to happen, why we're doing it, when it will happen and how long it will go on for.
 
 * As far as possible, painting and smaller facilities construction projects that affect you will happen outside the core hours.

@@ -48,7 +48,7 @@ See [:pill: here](https://github.com/makersacademy/course/blob/master/pills/exam
 
 ### Getting your laptop (onsite cohorts)
 
-At 11.00am on the first day, go to the first floor and ask for Cata. You can take the lift or the stairs to the first floor.
+At 11.00am on the first day, go to the first floor and ask for Egle or Florence. You can take the lift or the stairs to the first floor.
 
 ### Setting up your laptop
 
