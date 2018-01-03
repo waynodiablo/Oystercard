@@ -19,7 +19,7 @@ If you have any questions, just ask!
 
 ## Code of conduct
 
-Make sure to read the [code of conduct guide](../../code_of_conduct_guide.md).  It's really important that you understand the code of conduct and abide by it.
+Make sure to read the [code of conduct guide](https://github.com/makersacademy/course/blob/master/code_of_conduct_guide.md).  It's really important that you understand the code of conduct and abide by it.
 
 ## Rough weekly schedule
 
