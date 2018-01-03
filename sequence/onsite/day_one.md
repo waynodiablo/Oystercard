@@ -13,6 +13,7 @@ If you have any questions, just ask!
 * 14.00 - 14.30 Meditation
 * 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Coach)
 * 15.15 - 15.30 Introduction to careers team (Careers team)
+* 15:30 - 15.45 Explanation of MA's Fellowship/Welcome Fellows (Alex B)
 * 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
 * 17.30 - 18.30 Social with pizza
 
