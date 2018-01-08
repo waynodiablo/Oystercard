@@ -25,7 +25,7 @@ In this issue you will create a valid Gemfile for this project.
 - [ ] commit only this Gemfile
 
 ## Suggested resources
-- [RubyGems basics](http://guides.rubygems.org/rubygems-basics/)
+- [RubyGems basics](http://guides.rubygems.org/rubygems-basics)
 - [RVM documentation](http://www.rvm.io)
 - [Bundler documentation](http://www.bundler.io)
 - [Gemfile documentation on bundler.io](http://bundler.io/gemfile.html)
