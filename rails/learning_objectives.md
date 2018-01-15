@@ -1,4 +1,4 @@
-#Rails Week - Learning Objectives
+# Rails Week - Learning Objectives
 
 ### Concepts
 * Evaluate the benefits of convention over configuration.
