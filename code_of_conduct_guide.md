@@ -30,11 +30,11 @@ Choose the option below that makes you feel the most comfortable.  All reports a
 
 After you make a report, you'll have a conversation with a member of staff.  You'll talk through the incident.  And you'll decide together what to do next.  This might be a conversation mediated by the staff member between you and the person.  Or if might mean the staff member speaking to the person on your behalf.  Whichever it is, the member of staff will support you.
 
-#### Reporting a trasgression by speaking to a member of staff
+#### Reporting a transgression by speaking to a member of staff
 
 This can be your coach, or another member of staff you feel comfortable with.  Either message them over Slack or speak to them in person.
 
-#### Reporting a trasgression by filling out the report form
+#### Reporting a transgression by filling out the report form
 
 The form is [here](https://makersacademy.typeform.com/to/obuvVk).
 
