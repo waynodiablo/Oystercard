@@ -60,11 +60,15 @@ describe('Homepage Tests', function() {
 
   before(function(done) {
     client = webdriverio.remote({ desiredCapabilities: {browserName: 'chrome'}   });
-    client.init(done);
+    client.init().then(function() {
+      done();
+    });
   });
  
   after(function(done) {
-    client.end(done);
+    client.end().then(function() {
+      done();
+    });
   });
 
   it('Homepage Title Displays',function(done) {
