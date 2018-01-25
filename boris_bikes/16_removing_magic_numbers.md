@@ -20,6 +20,6 @@ In this challenge, you will further refactor your code, using a **constant**.
 ### Resources
 
 - [Ruby Constants (RubyDoc)](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html)
-- [Testing with Magic Numbers](http://blog.silvabox.com/testing-with-magic-numbers/)
+- [Magic Numbers](https://www.eliotsykes.com/magic-numbers)
 
 ### [Walkthrough](walkthroughs/16.md)
