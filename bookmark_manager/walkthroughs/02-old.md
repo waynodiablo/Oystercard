@@ -1,0 +1,11 @@
+# Walkthrough - Understanding Databases
+
+[Back to Challenge](../02_understanding_databases.md)
+
+#TODO Write out an explanation for each
+* Define 'persistence' as the storage of information long-term
+* Contrast database persistence with session persistence and persistence on the filesystem
+* Describe the structure of a database, referencing 'tables' and 'rows'
+* Define 'PostgreSQL' as 'a particular type of relational database'
+
+[next challenge](../03_setting_up_a_database.md)
