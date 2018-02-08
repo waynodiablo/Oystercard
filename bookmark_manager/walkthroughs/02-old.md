@@ -8,4 +8,4 @@
 * Describe the structure of a database, referencing 'tables' and 'rows'
 * Define 'PostgreSQL' as 'a particular type of relational database'
 
-[next challenge](../03_setting_up_a_database.md)
+[Next Challenge](../03_setting_up_a_database.md)
