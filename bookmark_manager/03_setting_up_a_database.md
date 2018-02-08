@@ -2,20 +2,50 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-Now that you understand the pros and cons of different persistence mechanisms, it's important for you to see them in action. In this challenge you will install a popular Relational Database Management System (RDBMS) called PostgreSQL
+We now have a web application with some **hard-coded** data (an array of Links). 
+
+In this challenge, you will prepare to move the hard-coded data into a **database**. To do this, you will set up **PostgreSQL**, a database management system, and a new database.
+
+### Challenge Setup
+
+Let's return to the specification:
+
+* Show a list of links :white_check_mark:
+* Add new links
+* Tag links into categories
+* Filter links by tag
+
+A user story for the next requirement, 'add new links', could look like this:
+
+```
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to bookmark manager
+```
+
+This user story requires that we persist links across interactions. At the moment, we _are_ persisting links as hard-coded strings in our code. This hard coding makes it tough to add new links while the program's running. 
+
+We could solve the persistence problem using a global variable (or the other horrorshow we constructed towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**. 
+
+> A database is simply organised part of a filesystem. It's optimised for storing and retrieving data.
+
+A common database system for modern web development is called [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL).
+
+> PostgreSQL is actually a server that runs a database. Therefore, it can be started, stopped, and interacted with through an interface, `psql`.
+
+In this challenge, you will **install the PostgreSQL database system**, and interact with it to create a database.
 
 ## Learning Objectives covered
 
-* Know that psql is a command-line tool to interact with a Postgres database
-* Install Postgres
-* Use the psql command to interact with Postgres
+* Install Postgres.
+* Create a database.
 
 ## To complete this challenge, you will need to
 
-- [ ] Using `brew`, install the `postgresql` package and follow the instructions carefully
+- [ ] Install the `postgresql` command-line package via Homebrew (use the command `brew`).
 - [ ] Start postgres and set it to run automatically when your computer starts. (See the instructions in the output that brew shows when it's installing postgres.)
-- [ ] Check your installation by running `psql` in the terminal. Use the resources to understand any errors that you see.
-- [ ] Create a database in Postgres with the same name as your computer username e.g. `timmy507`.
+- [ ] Check your installation by running `psql` in the terminal. Use the resources below to understand any errors that you see.
+- [ ] Create a PostgreSQL database with the same name as your computer username, e.g. `timmy507`.
 
 ## Resources
 

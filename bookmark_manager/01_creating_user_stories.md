@@ -4,7 +4,7 @@
 
 The website will have the following **specification**:
 
-* Show a list of links from the database
+* Show a list of links
 * Add new links
 * Tag links into categories
 * Filter links by tag
