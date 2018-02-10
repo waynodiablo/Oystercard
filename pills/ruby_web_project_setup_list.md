@@ -6,6 +6,8 @@ Use this list to set up a project with:
 - Capybara for feature testing
 - RSpec for unit testing
 
+The result of following this guide is available for cloning from [this commit](https://github.com/sjmog/bookmark_manager/commit/a63f3aaabe43be3a55c1b4dd5e7b3cde4673d60f).
+
 ### 1. Ready a project for Sinatra, RSpec, and Capybara
 
 Any Ruby project starts by creating a Gemfile, which lists all libraries (dependent programs, or 'gems') of this project. [Bundler](http://bundler.io/), which is a dependency management program for Ruby, can do this for us. Use Bundler's `init` command:
@@ -83,15 +85,13 @@ Your directory should now look like this:
 
 ```
 .
-└── bookmark_manager
-    ├── spec
-    │   ├── features
-    │   └── spec_helper.rb
-    ├── .rspec
-    ├── Gemfile
-    ├── Gemfile.lock
-    ├── app.rb
-    └── config.ru
+├── Gemfile
+├── Gemfile.lock
+├── app.rb
+├── config.ru
+└── spec
+    ├── features
+    └── spec_helper.rb
 ```
 
 ### 4. Make Capybara talk to Sinatra
@@ -106,7 +106,7 @@ To configure Capybara, we need to adjust the `spec_helper.rb`, which configures 
 Add the following to `spec/spec_helper.rb`:
 
 ```ruby
-# in spec/spec_helper.rb
+# at the top of spec/spec_helper.rb
 
 # Set the environment to "test"
 ENV['RACK_ENV'] = 'test'
@@ -121,12 +121,14 @@ require 'rspec'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
+
+### the rest of the file ###
 ```
 
 > Obviously, you don't need to add the comments. But you should understand what each line does, so you can vary them later with more advanced packages and setup scenarios.
 
 ### 5. Profit!
 
-You can now add feature tests to the `spec/features` directory, and run feature tests with `rspec features`.
+You can now add feature tests to the `spec/features` directory, and run feature tests with `rspec spec/features`.
 
 > Running `rspec` will run both features and regular unit specs.

@@ -1,0 +1,66 @@
+# Walkthrough
+
+[Back to Challenge](../09_creating_a_link_model.md)
+
+We have a failing feature test, because we don't have a `Link` class in our application: let's solve that.
+
+Let's create the first model in `/app/models/link.rb`:
+
+```ruby
+require 'data_mapper'
+require 'dm-postgres-adapter'
+
+# This class corresponds to a table in the database
+class Link
+
+  # add DataMapper functionality to this class so it can communicate with the database
+  include DataMapper::Resource
+
+  # these property declarations set the column headers in the 'links' table
+  property :id,     Serial # Serial means that it will be auto-incremented for every record
+  property :title,  String
+  property :url,    String
+
+end
+
+# Now let's set up a connection with a database
+DataMapper.setup(:default, "postgres://localhost/bookmark_manager_test")
+# Let's check that everything we wrote in our models was OK
+DataMapper.finalize
+# And let's build any new columns or tables we added
+DataMapper.auto_upgrade!
+```
+
+> Having all the setup, finalizing, and upgrading in a class declaration file feels dirty. Can you think of a better place to put this stuff?
+
+This class prescribes a relationship between a table in the database (which will be called 'links') and the `Link` class. An instance of the `Link` class is mapped to one row of the 'links' table.
+
+Also make sure to require the link model in your tests - for instance, you could `require` it in your `spec_helper`, which is itself `require`d into every test:
+
+```ruby
+# in spec/spec_helper.rb
+
+require './app/models/link'
+
+# More code
+```
+
+> How does RSpec know to `require` the `spec_helper.rb` in every test?
+
+Running our tests now should kick up the following error:
+```rspec
+Failures:
+
+ 1) Viewing links I can see existing links on the links page
+    Failure/Error: visit '/links'
+    ArgumentError:
+      rack-test requires a rack application, but none was given
+    # ./spec/features/viewing_links_spec.rb:4:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00136 seconds (files took 0.37153 seconds to load)
+1 example, 1 failure
+```
+
+Great! Our test is failing because we haven't built a controller yet: so we cannot visit the `/links` route.
+
+[To the Next Challenge](../10_creating_a_modular_sinatra_app.md)

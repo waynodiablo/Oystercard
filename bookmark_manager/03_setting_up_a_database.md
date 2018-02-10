@@ -4,6 +4,14 @@
 
 We now have a web application with some **hard-coded** data (an array of Links). 
 
+In the next few challenges, we are going to: 
+
+- set up a **database**, 
+- play with it a bit to understand its structure, and 
+- connect it to our Sinatra application.
+
+We'll return to building the web application in [this challenge](./08_creating_links.md), a few challenges down the line.
+
 In this challenge, you will prepare to move the hard-coded data into a **database**. To do this, you will set up **PostgreSQL**, a database management system, and a new database.
 
 ### Challenge Setup

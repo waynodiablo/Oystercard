@@ -1,0 +1,52 @@
+# Walkthrough
+
+[Back to Challenge](../08_viewing_links.md)
+
+Let's set up the project:
+
+* As you'd do with every new project, create a new repository on Github.  
+* Name your project 'bookmark_manager'.
+* From your project directory, run `bundle init` to generate a Gemfile.
+* In the Gemfile:
+  - specify the version of Ruby that you wish to use.
+  - make a test group and add `gem 'rspec'` and `gem 'capybara'`
+* Run `bundle`.
+* Add `require 'capybara/rspec'` to your spec_helper.rb (use `rspec --init` if you're not comfortable creating your own spec_helper).
+
+Now, let's write a feature test for the following user story:
+
+```
+As a time-pressed user
+So that I can quickly go to web sites I regularly visit
+I would like to see a list of links on the homepage
+```
+
+Create a feature test like the following in `spec/viewing_links_spec.rb`:
+
+```ruby
+feature 'Viewing links' do
+
+  scenario 'I can see existing links on the links page' do
+    # We can use `.create`, which we used in irb to make a Student, within our test!
+    Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+
+    visit '/links'
+
+    # this is a *temporary* sanity check - to make sure we
+    # can load the page :)
+    expect(page.status_code).to eq 200
+
+    within 'ul#links' do
+      expect(page).to have_content('Makers Academy')
+    end
+  end
+end
+```
+
+> Why do we use a `within` block to test for the presence of the link? What might happen if we _didn't_ use the `within` block?
+
+When you run this test, you will encounter a familiar error "uninitialized constant Link". At this stage we are being driven to create a class called `Link`.
+
+> From here on out, we're going to use the term 'model' for the classes we create that model a domain within a web application. Together, a bunch of 'models' constitute the 'model layer'.
+
+[Next Challenge](../09_creating_a_link_model.md)

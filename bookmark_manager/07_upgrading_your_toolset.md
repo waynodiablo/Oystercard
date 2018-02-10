@@ -25,6 +25,8 @@ In this challenge, you will play with some tooling that gives you more insight i
 - [ ] Use the `INSERT`, `UPDATE`, `DELETE`, and `SELECT` commands within TablePlus to add, update, delete, and read some data from the `links` table in the `bookmark_manager` database.
 - [ ] Run your Sinatra application, and watch new links appearing in the application when you add them to the database via TablePlus.
 
+> Adding and changing links to your database will probably break your feature test. We'll look at solving this problem in the next challenge.
+
 ## Resources
 
 * [Why we built TablePlus](https://medium.com/tableplus/modern-native-tool-for-relational-database-79efc35b647d)

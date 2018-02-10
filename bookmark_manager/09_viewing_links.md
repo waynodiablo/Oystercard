@@ -37,4 +37,4 @@ I would like to see a list of links on the homepage
 * [Capybara Documentation](https://github.com/jnicklas/capybara)
 * [Capybara Cheat Sheet](http://www.cheatography.com/ddovii/cheat-sheets/capybara-cheat-sheet/)
 
-## [Walkthrough](walkthroughs/08.md)
+## [Walkthrough](walkthroughs/09.md)
