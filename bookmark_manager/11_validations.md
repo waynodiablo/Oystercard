@@ -8,6 +8,8 @@ Let's return to our specification:
 
 * Show a list of links :white_check_mark:
 * Add new links :white_check_mark:
+* Delete links
+* Update links
 * Tag links into categories
 * Filter links by tag
 

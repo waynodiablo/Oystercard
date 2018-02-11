@@ -14,6 +14,8 @@ Now that we have a reliable persistent database, let's build the next feature in
 
 * Show a list of links :white_check_mark:
 * Add new links :construction:
+* Delete links
+* Update links
 * Tag links into categories
 * Filter links by tag
 

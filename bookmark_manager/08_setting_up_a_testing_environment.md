@@ -27,12 +27,13 @@ In this challenge, you will write a script to **reset your database** every time
 - [ ] Write a script that uses `pg` to:
   - [ ] Empty the `links` table in the database.
   - [ ] Add the three links the feature test expects to the database.
-- [ ] Figure out how to run this script automatically every time you run `rspec` for this application.
+- [ ] Figure out how to run this script right before **each** RSpec test, so every test starts with a 'clean' test database.
 
 ## Resources
 
 * [How do I get the current Rack Environment?](https://stackoverflow.com/questions/15459569/how-to-get-the-current-rack-environment-in-rake)
 * [PostgreSQL `DROP TABLE IF EXISTS` command](https://www.postgresql.org/docs/8.2/static/sql-droptable.html)
 * [PostgreSQL `TRUNCATE` command](https://www.postgresql.org/docs/8.2/static/sql-truncate.html)
+* [Running a command before each RSpec test](https://stackoverflow.com/questions/9958110/is-it-possible-to-add-somewhere-a-beforeeach-hook-so-that-all-spec-file-c)
 
 ## [Walkthrough](walkthroughs/08.md)

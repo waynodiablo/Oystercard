@@ -20,6 +20,8 @@ Let's return to the specification:
 
 * Show a list of links :white_check_mark:
 * Add new links
+* Delete links
+* Update links
 * Tag links into categories
 * Filter links by tag
 
