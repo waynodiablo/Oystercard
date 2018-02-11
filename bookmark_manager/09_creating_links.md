@@ -33,12 +33,6 @@ In this challenge, you will build the entire feature of 'adding links to the dat
   - [ ] Doing the simplest thing
   - [ ] Refactoring link creation into the `Link` model
   - [ ] Ensuring that your feature test passes
+- [ ] Test that your new feature also works in the development environment
 
-> To pass this feature test time-after-time, you might need to think about adding some 'test setup' instructions to your `spec_helper.rb` that ensures you have a 'clean' database to work with whenever you run your tests.
-
-## Resources
-
-* [PostgreSQL `DROP TABLE IF EXISTS` command](https://www.postgresql.org/docs/8.2/static/sql-droptable.html)
-* [PostgreSQL `TRUNCATE` command](https://www.postgresql.org/docs/8.2/static/sql-truncate.html)
-
-## [Walkthrough](walkthroughs/08.md)
+## [Walkthrough](walkthroughs/09.md)
