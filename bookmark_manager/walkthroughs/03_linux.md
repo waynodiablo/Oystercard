@@ -68,4 +68,4 @@ host    all             all             127.0.0.1/32            trust
 
 [Fedora Wiki](https://fedoraproject.org/wiki/PostgreSQL)
 
-[next challenge](../04_creating_your_first_table.md)
+[Next Challenge](../04_creating_your_first_table.md)

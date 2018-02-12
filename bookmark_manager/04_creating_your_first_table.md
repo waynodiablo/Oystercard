@@ -4,24 +4,22 @@
 
 We've just set up a Postgres database that can store (_persist_) data forever - even if you shut down and restart your computer.
 
-In this challenge, you will use Postgres' built-in command-line program, `psql`, to interact with the database using a database-specific language, `SQL`. You will create a **database table** with two **database columns**.
+In this challenge, you will use Postgres' built-in command-line program, `psql`, to interact with the database using a database-specific language, `SQL`. You will create a **table** with two **columns**.
 
 > You rarely have to interact with databases from the command-line like this, but play around to create and destroy a few tables so you know what's going on at the data storage level.
 
 ## Learning Objectives covered
 
 * Use the `psql` command to interact with Postgres
-* Know that 'SQL' means 'Structured Query Language'
-* Explain how SQL is used to query databases
-* Use SQL query terms like `SELECT`, `FROM`, `WHERE`, and `*`
+* Create tables using SQL.
 
 ## To complete this challenge, you will need to
 
-- [ ] List the existing database via `psql`
-- [ ] Connect `psql` to an existing database
-- [ ] List the tables in that database
-- [ ] Create a basic table called 'students' with a single primary key (id) and name field
-- [ ] List the existing tables again to check that the 'students' table shows up
+- [ ] Create a new PostgreSQL database for Bookmark Manager, called `bookmark_manager`.
+- [ ] Use `psql` to connect to this new database.
+- [ ] Use `psql` to create a table called `links` in the `bookmark_manager` database, with two columns: `id`, a `SERIAL PRIMARY KEY`, and `url`, a `VARCHAR` with a maximum length of `60`.
+
+> Don't forget that you can list databases and tables using `\l`.
 
 ## Resources
 

@@ -2,34 +2,32 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-The website will have the following specification:
+The website will have the following **specification**:
 
-* It shows a list of links from the database
-* New links can be added
-* Links can be tagged
-* Links can be filtered by a tag
+* Show a list of links
+* Add new links
+* Delete links
+* Update links
+* Tag links into categories
+* Filter links by tag
 
-First up we will create user stories for each of these in the Stakeholder/Motivation/Action format, e.g.
+> A specification is a list of **requirements**.
 
-```
-As a Makers Student
-So that I can be on time for standups
-I want to purchase a new alarm clock
-```
+We'll be using a BDD cycle (i.e. **outside-in testing**: Capybara first). 
+
+To guide us, create some User Stories and sketch a high-level domain model.
+
+> There's no need to create all user stories at once. In fact, doing so can trap us in having to build an app a particular way. Let's just create user stories for the first feature. Once we've built it, we can decide the next one. Same with domain models: don't draw the whole thing. Just jot down enough info to get started. Aim to get coding ASAP.
 
 ## Learning Objectives covered
 
-* Use the specification to generate user stories in the appropriate format
+* Generate User Stories from Requirements
 
 ## To complete this challenge, you will need to
 
-- [ ] Discuss each point of the specification with your pair partner
-- [ ] Write User stories/features for showing a list of links
-- [ ] Write User stories/features for adding new links
-- [ ] Write User stories/features for adding tags to links
-- [ ] Write User stories/features for filtering links by a tag
-- [ ] Draw a rough domain model
-- [ ] Put all these user stories in your project README
+- [ ] Write a user stories for showing a list of links
+- [ ] Draw a rough domain model for the above
+- [ ] Put all these user stories and a snap of your domain model in your project README
 
 ## Resources
 
