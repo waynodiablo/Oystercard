@@ -6,12 +6,12 @@ Our application is starting to look fully-formed: we can create, read, update, a
 
 However, our route structure is a mess. Right now we've got the following routes:
 
-- GET '/'
-- GET '/add-a-new-link'
-- POST '/create-new-link'
-- POST '/delete-link'
-- GET '/update-a-link/:id'
-- POST '/update-a-link'
+- `GET '/'`
+- `GET '/add-a-new-link'`
+- `POST '/create-new-link'`
+- `POST '/delete-link'`
+- `GET '/update-a-link/:id'`
+- `POST '/update-a-link'`
 
 As a new developer looking at this application, these routes are quite complicated. They don't follow a very consistent structure: and that's with only one resource (links). If we add tags to this, it's going to get horrendous. We need some sort of **agreed convention** for structuring these routes.
 
