@@ -39,4 +39,4 @@ In the next challenge, we'll see how so-called RESTful routing conventions relat
 
 * [CRUD (Wikipedia)](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
-## [Walkthrough](walkthroughs/13.md)
+## [Walkthrough](walkthroughs/14.md)

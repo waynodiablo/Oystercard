@@ -33,4 +33,4 @@ And you'll add code that shows the user a meaningful error message if they don't
 * [DM Validations](https://github.com/datamapper/dm-validations)
 * [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 
-## [Walkthrough](walkthroughs/22.md)
+## [Walkthrough](walkthroughs/24.md)

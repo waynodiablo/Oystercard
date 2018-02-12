@@ -27,4 +27,4 @@ In this challenge you will create functionality for handling the situation when 
 * [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
 * [Web Form Usability](http://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/)
 
-## [Walkthrough](walkthroughs/20.md)
+## [Walkthrough](walkthroughs/22.md)

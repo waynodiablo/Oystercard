@@ -27,4 +27,4 @@ In this challenge, you will create a **validation** that the submitted URL is, i
 * [How do I check if a URL is valid?](https://stackoverflow.com/questions/1805761/how-to-check-if-a-url-is-valid)
 * [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
-## [Walkthrough](walkthroughs/11.md)
+## [Walkthrough](walkthroughs/12.md)

@@ -29,4 +29,4 @@ REST is based around a simple idea: that CRUD applications are all about taking 
 
 * [:pill: REST](../pills/rest.md)
 
-## [Walkthrough](walkthroughs/14.md)
+## [Walkthrough](walkthroughs/15.md)

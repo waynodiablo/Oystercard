@@ -28,4 +28,4 @@ In this challenge you will develop sign in functionality.
 * [Bcrypt - Wikipedia](https://en.wikipedia.org/wiki/Bcrypt)
 * [RESTful URLs](http://microformats.org/wiki/rest/urls)
 
-## [Walkthrough](walkthroughs/23.md)
+## [Walkthrough](walkthroughs/25.md)

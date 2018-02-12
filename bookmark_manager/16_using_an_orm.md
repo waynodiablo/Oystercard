@@ -30,4 +30,4 @@ In this challenge, you will swap out `Link`'s database interaction logic for the
 
 * [DataMapper](http://datamapper.org/)
 
-## [Walkthrough](walkthroughs/15.md)
+## [Walkthrough](walkthroughs/16.md)

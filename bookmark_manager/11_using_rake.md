@@ -24,4 +24,4 @@ In this challenge, you will use **Rake**, a **task runner**, to automate the tas
 * [How do I run Rake tasks from Ruby files?](https://stackoverflow.com/questions/3530/how-do-i-run-rake-tasks-within-a-ruby-script)
 * [Rake .invoke versus .execute](https://stackoverflow.com/questions/32381017/running-rake-tasks-in-rspec-multiple-times-returns-nil)
 
-## [Walkthrough](walkthroughs/10.md)
+## [Walkthrough](walkthroughs/11.md)

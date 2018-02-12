@@ -41,4 +41,4 @@ The `Post` class would, in this case, _wrap_ the data in each row of the table, 
 
 * [What is an ORM?](https://stackoverflow.com/questions/1152299/what-is-an-object-relational-mapping-framework)
 
-## [Walkthrough](walkthroughs/12.md)
+## [Walkthrough](walkthroughs/13.md)

@@ -30,4 +30,4 @@ models, views and controllers.
 * [Why confirm password fields must die](http://uxmovement.com/forms/why-the-confirm-password-field-must-die/)
 * [Do You Need To Confirm/Verify Passwords On Sign Up?](http://www.leemunroe.com/confirm-passwords-signup/)
 
-## [Walkthrough](walkthroughs/19.md)
+## [Walkthrough](walkthroughs/21.md)

@@ -36,4 +36,4 @@ I would like to tag links in my bookmark manager
 * [Database relations - Pill](https://github.com/makersacademy/course/blob/master/pills/db_relationships.md)
 * [DataMapper collection documentation](http://www.rubydoc.info/github/datamapper/dm-core/master/DataMapper/Collection)
 
-## [Walkthrough](walkthroughs/15.md)
+## [Walkthrough](walkthroughs/17.md)

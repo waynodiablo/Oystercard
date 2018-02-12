@@ -21,4 +21,4 @@ with the token embedded.
 * [Service Objects](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html)
 * [Mailgun](https://github.com/HashNuke/mailgun)
 
-## [Walkthrough](walkthroughs/27.md)
+## [Walkthrough](walkthroughs/30.md)
