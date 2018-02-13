@@ -1,0 +1,62 @@
+# From User Stories to a Domain Model
+
+[Back to the Challenge Map](./_challenge_map.md)
+
+
+
+First things first. Open [this pill](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md) on behaviour-driven development and read up to the end of **stage 1**. By the end of this main challenge you'll have got through each stage. This development cycle will be key to your work here at Makers, so let's get straight into it!
+
+### User Stories
+A **User Story** describes one thing a program is expected to do, from the perspective of somebody using that program. When planning a program, the client's requirements will be decomposed into many User Stories. Much of a developer's work is spent translating User Stories into a functional system. In Object-Oriented Programming, these systems are made up of Objects and Messages. Objects describe the objects within the system, and Messages describe how those objects interact. We call these systems **Domain Models**.
+
+In this challenge, you will transform one User Story into a Domain Model.
+
+### Learning Objectives covered
+- Recall that BDD means Behaviour-Driven Development
+- Give the context of a User Story in the BDD cycle
+- Extract a Domain Model from User Stories
+
+### Challenge setup
+
+Here is an example of a user story:
+
+```
+As a user,
+So I can find customers,
+I want to search for my customers by their surnames.
+```
+
+And here is a functional representation of that story:
+
+Objects  | Messages
+------------- | -------------
+User  |
+Customer  | find_by_surname
+
+You must translate these two user stories into a functional representation:
+
+```
+As a person,
+So that I can use a bike,
+I'd like a docking station to release a bike.
+
+As a person,
+So that I can use a good bike,
+I'd like to see if a bike is working
+```
+
+### To complete this challenge, you will need to:
+
+- [ ] Write down all the nouns in the User Stories
+- [ ] Write down all the verbs in the User Stories
+- [ ] Draw a table like the one above
+- [ ] Organise the nouns and verbs into Objects and Messages within the table
+- [ ] Draw a diagram that shows how your Objects will use Messages to communicate with one another
+
+## [back](./setting_up_a_project.md) | [next](./from_domain_models_to_feature_tests.md)
+
+### Resources
+- [Introduction to User Stories](https://www.mountaingoatsoftware.com/agile/user-stories)
+- [What's a Domain Model?](http://sjmog.github.io/posts/502_domain-modelling/)
+- [Explain Like I'm 5 - Object-Oriented Programming](https://www.reddit.com/r/explainlikeimfive/comments/1pyhng/eli5_objected_oriented_programming/)
+- [What's a Class Structure?](http://sjmog.github.io/posts/504_whats-a-class-structure/)
