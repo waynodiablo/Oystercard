@@ -74,7 +74,7 @@ There is a **lot** of challenge material this week. You're not meant to get thro
  10. [Extracting a Database Setup object](10_extracting_a_database_setup_object.md)
  11. [Using Rake](11_using_rake.md)
  12. [Validations](12_validations.md)
- 13. [The ORM pattern](13_the_orm_pattern.md)
+ 13. [Wrapping Database data in program objects](13_wrapping_database_data_in_program_objects.md)
  14. [CRUD](14_crud.md)
  15. [REST and Resources](15_rest.md)
  16. [Using an ORM](16_using_an_orm.md)

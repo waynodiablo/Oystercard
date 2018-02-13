@@ -16,6 +16,7 @@ Now that we have a reliable persistent database, let's build the next feature in
 * Add new links :construction:
 * Delete links
 * Update links
+* Users manage their links
 * Tag links into categories
 * Filter links by tag
 

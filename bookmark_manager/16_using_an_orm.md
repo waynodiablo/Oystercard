@@ -12,6 +12,7 @@ Let's return to our specification:
 * Update links :white_check_mark:
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 Our next challenge involves introducing a new model: `Tag`. This model will require its own table, and that table needs to connect to the `links` table.
 
