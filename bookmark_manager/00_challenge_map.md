@@ -77,7 +77,7 @@ There is a **lot** of challenge material this week. You're not meant to get thro
  13. [Wrapping Database data in program objects](13_wrapping_database_data_in_program_objects.md)
  14. [CRUD](14_crud.md)
  15. [REST and Resources](15_rest.md)
- 16. [Using an ORM](16_using_an_orm.md)
+ 16. [Registration](16_registration.md)
  17. [Tagging Links](17_tagging_links.md)
  18. [Filtering by Tag](18_filtering_by_tag.md)
  19. [Multiple Tags](19_multiple_tags.md)
