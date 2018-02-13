@@ -8,6 +8,7 @@ The website will have the following **specification**:
 * Add new links
 * Delete links
 * Update links
+* Users manage their links
 * Tag links into categories
 * Filter links by tag
 

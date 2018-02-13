@@ -10,6 +10,7 @@ Let's return to our specification:
 * Add new links :white_check_mark:
 * Delete links :white_check_mark:
 * Update links :white_check_mark:
+* Users manage their links
 * Tag links into categories
 * Filter links by tag
 
