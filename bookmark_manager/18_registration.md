@@ -4,7 +4,7 @@
 
 We've built a CRUD application for managing links. The routes are RESTful.
 
-> Want to jump in to this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/83d4ecab9a293ec9d64a91a5043b244d6c291e97).
+> Want to jump in to this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/ecdcdbca3e859127a2123ce10791f27e20eac76b).
 
 Let's return to our specification:
 
@@ -12,9 +12,10 @@ Let's return to our specification:
 * Add new links :white_check_mark:
 * Delete links :white_check_mark:
 * Update links :white_check_mark:
+* Comment on Links :white_check_mark:
+* Tag links into categories :white_check_mark:
+* Filter links by tag :white_check_mark:
 * Users manage their links
-* Tag links into categories
-* Filter links by tag
 
 Our next challenge involves introducing a new model: `User`. This model will require its own table: `users`. Users are a very common kind of resource. Creating a new user is often called **registration** (or 'user sign up'). Registration usually involves creating a record with:
 
@@ -22,6 +23,10 @@ Our next challenge involves introducing a new model: `User`. This model will req
 * A password (which must be stored securely).
 
 In this challenge, you will **register** new users.
+
+## Learning Objectives
+
+* Build a registration system.
 
 ## To complete this challenge, you will need to
 
@@ -40,4 +45,4 @@ In this challenge, you will **register** new users.
 * [You're probably storing passwords incorrectly](https://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/)
 * [BCrypt, a secure password hasher](https://github.com/codahale/bcrypt-ruby)
 
-## [Walkthrough](walkthroughs/16.md)
+## [Walkthrough](walkthroughs/18.md)

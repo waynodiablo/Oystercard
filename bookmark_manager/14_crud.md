@@ -10,10 +10,16 @@ Let's return to our specification:
 * Add new links :white_check_mark:
 * Delete links
 * Update links
+* Comment on Links
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 In this challenge, you will add functionality to **delete** and **update** links.
+
+## Learning Objectives
+
+* Create a CRUD system.
 
 ## Challenge Setup
 

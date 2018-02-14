@@ -17,6 +17,10 @@ As a new developer looking at this application, these routes are quite complicat
 
 In this challenge, you will refactor your routes to a **RESTful** route structure.
 
+## Learning Objectives
+
+* Implement a RESTful routing convention.
+
 ## Challenge Setup
 
 REST is based around a simple idea: that CRUD applications are all about taking **actions** on **resources**.

@@ -14,11 +14,12 @@ Now that we have a reliable persistent database, let's build the next feature in
 
 * Show a list of links :white_check_mark:
 * Add new links :construction:
-* Delete links
-* Update links
-* Users manage their links
+* Delete links 
+* Update links 
+* Comment on Links 
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 In this challenge, you will build the entire feature of 'adding links to the database' from browser to database: across the whole stack.
 
