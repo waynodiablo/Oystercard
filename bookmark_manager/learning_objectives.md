@@ -1,13 +1,13 @@
-##Learning Objectives: Bookmark Manager
+## Learning Objectives: Bookmark Manager
 
 *Learning Objectives are organised by topic and subtopic. As you go down the bullet-point list below each subtopic header, skills become more advanced/involved.*
 
-## Agile & TDD
+### Agile & TDD
 
 * Generate User Stories from Requirements
 * Build a complete full-stack feature.
 
-## Engineering and 'Dev Recipes'
+### Engineering and 'Dev Recipes'
 
 * Set up a Ruby web project.
 * Attach a database to a web application.
@@ -20,7 +20,7 @@
 * Build a Registration system.
 * Build an Authentication system.
 
-## Databases
+### Databases
 
 * Install PostgreSQL.
 * Create a database.
@@ -31,7 +31,7 @@
 * Implement a one-to-many relationship.
 * Implement a many-to-many relationship.
 
-## Tooling
+### Tooling
 
 * Use database GUIs to interact with databases.
 * Set up a test environment.
