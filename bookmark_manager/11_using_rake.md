@@ -10,7 +10,7 @@ In this challenge, you will use **Rake**, a **task runner**, to automate the tas
 
 ## Learning Objectives covered
 
-* Use Rake to automate environment tasks
+* Use Rake to automate environment tasks.
 
 ## To complete this challenge, you will need to
 

@@ -9,14 +9,19 @@ Let's return to our specification:
 * Show a list of links :white_check_mark:
 * Add new links :white_check_mark:
 * Delete links
-* Update links
-* Users manage their links
+* Update links 
+* Comment on Links 
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 As part of the 'add new links' requirement, let's ensure that the user actually submits a link: not an empty string, or some other string.
 
 In this challenge, you will create a **validation** that the submitted URL is, in fact, a URL.
+
+## Learning Objectives
+
+* Validate in the model layer.
 
 ## To complete this challenge, you will need to
 

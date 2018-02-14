@@ -8,9 +8,10 @@ The website will have the following **specification**:
 * Add new links
 * Delete links
 * Update links
-* Users manage their links
+* Comment on Links
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 > A specification is a list of **requirements**.
 

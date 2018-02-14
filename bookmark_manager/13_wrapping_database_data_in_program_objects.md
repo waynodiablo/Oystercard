@@ -8,6 +8,10 @@ At the moment, when we use `Link.all` to get links from the database, we just re
 
 In this challenge, you will add a `title` column to the `links` table, and display it on the homepage instead of the link URL. To do this, you will need to **wrap database data in a Ruby object**.
 
+## Learning Objectives
+
+* Map objects across systems.
+
 ## Challenge Setup
 
 A normal connection between a database and an application mode works in this way:

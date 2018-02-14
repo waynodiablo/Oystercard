@@ -22,8 +22,10 @@ Let's return to the specification:
 * Add new links
 * Delete links
 * Update links
+* Comment on Links
 * Tag links into categories
 * Filter links by tag
+* Users manage their links
 
 A user story for the next requirement, 'add new links', could look like this:
 
@@ -47,7 +49,7 @@ In this challenge, you will **install the PostgreSQL database system**, and inte
 
 ## Learning Objectives covered
 
-* Install Postgres.
+* Install PostgreSQL.
 * Create a database.
 
 ## To complete this challenge, you will need to

@@ -15,6 +15,11 @@ Even worse – at the moment, we have no way of telling whether we're connecting
 
 In this challenge, you will extract an object which is used to setup a connection to the database when the application starts, and refactor `Link` to use it.
 
+## Learning Objectives
+
+* Separate application behaviour from database behaviour.
+* Wrap an adapter object.
+
 ## To complete this challenge, you will need to
 
 - [ ] Test-drive a new class, `DatabaseConnection`, with two methods:
