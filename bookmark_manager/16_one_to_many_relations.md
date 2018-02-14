@@ -19,7 +19,7 @@ Let's return to our specification:
 
 In this challenge, you will set up a **one to many relationship** between Links a new resource, Comments.
 
-## Learning Objectives
+## Learning Objectives
 
 * Implement a one-to-many relationship.
 
