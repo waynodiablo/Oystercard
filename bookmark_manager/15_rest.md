@@ -17,7 +17,7 @@ As a new developer looking at this application, these routes are quite complicat
 
 In this challenge, you will refactor your routes to a **RESTful** route structure.
 
-## Learning Objectives
+## Learning Objectives
 
 * Implement a RESTful routing convention.
 
