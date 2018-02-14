@@ -19,7 +19,7 @@ Let's return to our specification:
 
 In this challenge, you will set up a **many to many relationship** between Links a new resource, Tags.
 
-> A many-to-many relationship involves constructing a **join table**, which _has many_ of more than one model.
+> A many-to-many relationship involves constructing a **join table**, which _belongs to_ more than one model (i.e. it has multiple foreign keys).
 
 ## Learning Objectives
 
