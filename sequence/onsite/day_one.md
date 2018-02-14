@@ -11,9 +11,9 @@ If you have any questions, just ask!
 * 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (Dana)
 * 12.30 - 13.30 Lunch and more laptop setup
 * 13.30 - 14.00 Meditation
-* 14.30 - 15.15 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Coach)
-* 15.15 - 15.30 Introduction to careers team (Careers team)
-* 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
+* 14.30 - 15.30 [Learning at Makers](https://github.com/makersacademy/course/blob/master/pills/learning_at_makers.md) (Coach)
+* 15.30 - 15.45 Introduction to careers team (Careers team)
+* 15.45 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
 * 17.30 - 18.30 Social with pizza
 
 ## Code of conduct
