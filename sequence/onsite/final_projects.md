@@ -22,14 +22,29 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 
 #### Friday
 
-* 9.30am - 1pm: Your coach will be available to give you feedback on your presentation.
-* 1pm: Restore your laptops to factory settings and return them to Florence.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
+#### Career's Fair
+
+* 10am - 12:30pm: Career's Fair
+* 1:30pm - 3:30pm: Career's Fair (Depends on numbers of Hiring Partners)
+
+* By end of day: Restore your laptops to factory settings and return them to Florence.  [Instructions](https://github.com/makersacademy/course/blob/master/pills/returning_your_makers_laptop.md).
+
+#### Project Fair
+
+* 5pm - 5:30pm: Project Fair
+- Set up at 4:45pm.
+- Have team members ready:
+  - with a live demo of your app
+  - to show your project's codebase
+  
+This is a chance to interact and explain more deeply the journey and the processes you used to get to where you got in the two weeks of your project.
 
 ##### Demo day ceremony
 
-* 5pm: Your guests and the public start arriving.
-* 5.30pm: Opening spiel from coach.
-* 5.35pm: First team presents.
-* 6.30pm: Closing spiel from coach.
-* 6.30pm: Hanging out on floor 2.
-* 7.00pm: Close.
+* 4:45pm: Your guests and the public start arriving.
+* 5pm: Project Fair
+* 5.45pm: Opening spiel from coach.
+* 5.50pm: First team presents.
+* 6.45pm: Closing spiel from coach.
+* 6.45pm: Hanging out on floor 2.
+* 8.00pm: Close.
