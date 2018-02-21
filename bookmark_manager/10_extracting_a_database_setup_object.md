@@ -28,4 +28,10 @@ In this challenge, you will extract an object which is used to setup a connectio
 - [ ] Write a setup script that runs when the application boots, which calls `DatabaseConnection.setup` with the correct database for the environment.
 - [ ] Replace calls to `PG.connect` and `connection.exec` in `Link` with your new `DatabaseConnection` wrapper class.
 
+## Resources
+
+- [class instance variables1](http://thoughts.codegram.com/understanding-class-instance-variables-in-ruby/)
+- [class instance variables2](http://maximomussini.com/posts/ruby-class-variables/)
+- [variable scope](https://www.sitepoint.com/understanding-scope-in-ruby/)
+
 ## [Walkthrough](walkthroughs/10.md)
