@@ -1,6 +1,6 @@
 # Challenges Friday schedule
 
-- 09.30 - Arrive
+- 09.30 - Arrive at Makers.
 - 10.00 - [Possible skills workshop](../../pills/learning_at_makers.md#skills-workshops)
 
 - 17.00 - [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md). Coach-facilitated.
