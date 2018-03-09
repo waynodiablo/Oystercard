@@ -35,7 +35,7 @@ In this challenge, you will build the entire feature of 'adding links to the dat
 - [ ] Write a feature test for a user submitting a new link via a form. _Think carefully about how to set up the Sinatra routes for this!_
 - [ ] Solve the feature test by:
   - [ ] Doing the simplest thing
-  - [ ] Refactoring link creation into the `Link` model
+  - [ ] Refactoring link creation into the `Link` model (perhaps a `Link.create` method?)
   - [ ] Ensuring that your feature test passes
 - [ ] Test that your new feature also works in the development environment
 
