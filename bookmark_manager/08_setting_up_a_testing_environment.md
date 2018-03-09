@@ -26,7 +26,6 @@ In this challenge, you will write a script to **reset your database** every time
 - [ ] Use `ENV` to enable the following condition: when you run your application using `rackup`, Links are read from the `bookmark_manager` database. When you run your application tests using `rspec`, Links are read from the `bookmark_manager_test` database.
 - [ ] Write a script that uses `pg` to:
   - [ ] Empty the `links` table in the database.
-  - [ ] Add the three links the feature test expects to the database.
 - [ ] Figure out how to run this script right before **each** RSpec test, so every test starts with a 'clean' test database.
 
 ## Resources
