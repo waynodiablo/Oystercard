@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We now have a web application with some **hard-coded** data (an array of Links). 
+We now have a web application with some **hard-coded** data (an array of Bookmarks). 
 
 In the next few challenges, we are going to: 
 
@@ -10,7 +10,7 @@ In the next few challenges, we are going to:
 - play with it a bit to understand its structure, and 
 - connect it to our Sinatra application.
 
-We'll return to building the web application in [this challenge](./08_creating_links.md), a few challenges down the line.
+> We'll return to building the Bookmark Manager application in [this challenge](./06_interacting_with_postgres_from_ruby.md), a few challenges down the line. If you're already comfortable with how Relational Databases work, feel free to skip to that challenge.
 
 In this challenge, you will prepare to move the hard-coded data into a **database**. To do this, you will set up **PostgreSQL**, a database management system, and a new database.
 
@@ -18,16 +18,16 @@ In this challenge, you will prepare to move the hard-coded data into a **databas
 
 Let's return to the specification:
 
-* Show a list of links :white_check_mark:
-* Add new links
-* Delete links
-* Update links
-* Comment on Links
-* Tag links into categories
-* Filter links by tag
-* Users manage their links
+* Show a list of bookmarks :white_check_mark:
+* Add new bookmarks
+* Delete bookmarks
+* Update bookmarks
+* Comment on bookmarks
+* Tag bookmarks into categories
+* Filter bookmarks by tag
+* Users manage their bookmarks
 
-A user story for the next requirement, 'add new links', could look like this:
+A user story for the next requirement, 'add new bookmarks', could look like this:
 
 ```
 As a time-pressed user
@@ -35,7 +35,7 @@ So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
 
-This user story requires that we persist links across interactions. At the moment, we _are_ persisting links as hard-coded strings in our code. This hard coding makes it tough to add new links while the program's running. 
+This user story requires that we persist bookmarks across interactions. At the moment, we _are_ persisting bookmarks as hard-coded strings in our code. This hard coding makes it tough to add new bookmarks while the program's running. 
 
 We could solve the persistence problem using a global variable (or the other horrorshow we constructed towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**. 
 

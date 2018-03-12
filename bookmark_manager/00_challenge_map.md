@@ -31,7 +31,7 @@ As well as these things, you'll deepen your understanding of many of the [skills
 
 ## The project
 
-You're going to build a bookmark manager.  A bookmark manager is a website to maintain a collection of URLs. You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse links other users have added. You can comment on the links.
+You're going to build a bookmark manager.  A bookmark manager is a website to maintain a collection of bookmarks (URLs). You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse bookmarks other users have added. You can comment on the bookmarks.
 
 ### User Interface Sketch (Hi-Fi)
 
@@ -57,7 +57,7 @@ The challenge material is pretty tough this week. You're not meant to get throug
  6. [Interacting with Postgres from Ruby](06_interacting_with_postgres_from_ruby.md)
  7. [Upgrading your Toolset](07_upgrading_your_toolset.md)
  8. [Setting up a Testing Environment](08_setting_up_a_testing_environment.md)
- 9. [Creating Links](09_creating_links.md)
+ 9. [Creating Bookmarks](09_creating_bookmarks.md)
  10. [Extracting a Database Setup object](10_extracting_a_database_setup_object.md)
  11. [Using Rake](11_using_rake.md)
  12. [Validations](12_validations.md)
