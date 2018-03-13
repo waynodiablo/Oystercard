@@ -2,12 +2,12 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We now have a web application with some **hard-coded** data (an array of Bookmarks). 
+We now have a web application with some **hard-coded** data (an array of Bookmarks) and the users of our application can see those bookmarks listed on a page.
 
-In the next few challenges, we are going to: 
+In the next few challenges, we are going to:
 
-- set up a **database**, 
-- play with it a bit to understand its structure, and 
+- set up a **database**,
+- play with it a bit to understand its structure, and
 - connect it to our Sinatra application.
 
 > We'll return to building the Bookmark Manager application in [this challenge](./06_interacting_with_postgres_from_ruby.md), a few challenges down the line. If you're already comfortable with how Relational Databases work, feel free to skip to that challenge.
@@ -35,9 +35,9 @@ So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
 
-This user story requires that we persist bookmarks across interactions. At the moment, we _are_ persisting bookmarks as hard-coded strings in our code. This hard coding makes it tough to add new bookmarks while the program's running. 
+This user story requires that we persist bookmarks across interactions. At the moment, we _are_ persisting bookmarks as hard-coded strings in our code. This hard coding makes it tough to add new bookmarks while the program's running.
 
-We could solve the persistence problem using a global variable (or the other horrorshow we constructed towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**. 
+We could solve the persistence problem using a global variable (or the other horrorshow we constructed towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**.
 
 > A database is simply organised part of a filesystem. It's optimised for storing and retrieving data.
 
