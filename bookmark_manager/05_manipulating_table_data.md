@@ -11,7 +11,7 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 * Use SQL terms like `SELECT`, `FROM`, `WHERE` and `*` to query a database table
 * Use SQL terms like `INSERT`, `UPDATE` and `DELETE` to create, update and delete database entries
 
-## To complete this challenge, you will need to
+## To complete this challenge, using the psql command line interface
 
 - [ ] List any existing rows in the bookmarks table.
 - [ ] Create four link entries in the `bookmarks` table, with the following URLs: `http://makersacademy.com`, `http://askjeeves.com`, `http://twitter.com`, and `http://google.com`, using an `INSERT` statement.
