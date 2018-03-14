@@ -37,11 +37,17 @@ I would like to add the site's address and title to bookmark manager
 
 This user story requires that we persist bookmarks across interactions. At the moment, we _are_ persisting bookmarks as hard-coded strings in our code. This hard coding makes it tough to add new bookmarks while the program's running.
 
-We could solve the persistence problem using a global variable (or the other horrorshow we constructed towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**.
+We could solve the persistence problem using a global variable (or a class instance variable as we did towards the end of Battle), or even by saving link data out to a file. But it's far more normal to use a **database**.
 
-> A database is simply organised part of a filesystem. It's optimised for storing and retrieving data.
+- Why is a database the best solution here?
+- What are the limitations of the other potential solutions mentioned above?
 
-A common database system for modern web development is called [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL).
+#### What _is_ a database?
+>A database is simply organised part of a filesystem. It's optimised for storing and retrieving data.
+
+#### Is _Postgres_ a database?
+
+> A common database system for modern web development is called [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL).
 
 > PostgreSQL is actually a server that runs a database. Therefore, it can be started, stopped, and interacted with through an interface, `psql`.
 
