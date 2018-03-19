@@ -55,4 +55,5 @@ To achieve this, you will create a **validation** that the submitted URL is, in 
 * [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
 
-## [Walkthrough](walkthroughs/09.md)
+## [Walkthrough part one](walkthroughs/09_creating_bookmarks.md)
+## [Walkthrough part two](walkthroughs/09_validating_bookmarks.md)
