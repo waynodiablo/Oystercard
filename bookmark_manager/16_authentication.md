@@ -19,7 +19,7 @@ In this challenge, you will implement sign in and out, which together are called
   - [ ] Create the sign-in form.
   - [ ] On submission, use the user's email to find the user's data. Then wrap that data.
   - [ ] Set the `user_id` in the session to the User ID.
-  - [ ] Redirect to the links page.
+  - [ ] Redirect to the bookmarks page.
 - [ ] Refactor the sign-in SQL into an `authenticate` class method on `User`.
 - [ ] Write a feature test for unsuccessful sign-in: for instance, a user getting their email or password wrong.
 - [ ] Implement unsuccessful sign-in:

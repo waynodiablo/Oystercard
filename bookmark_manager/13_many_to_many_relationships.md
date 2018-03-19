@@ -27,7 +27,7 @@ In this challenge, you will set up a **many to many relationship** between Links
 
 ## To complete this challenge, you will need to
 
-- [ ] Create a new table for Tags. The columns are: 
+- [ ] Create a new table for Tags. The columns are:
   - [ ] an auto-incrementing primary key, `id`
   - [ ] a 60-character text field, `content`
 - [ ] Create a **join table** for Tags and Links, called `link_tags`. The columns are:
