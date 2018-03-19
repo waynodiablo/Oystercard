@@ -25,9 +25,16 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
 
 > This is your first 'full-stack' feature!
 
+Let's also ensure that the user actually submits a link: not an empty string, or some other string.
+
+> If we don't do this, Bookmark Manager will potentially have invalid URLs listed, which would severely impact on user experience.
+
+To achieve this, you will create a **validation** that the submitted URL is, in fact, a URL.
+
 ## Learning Objectives covered
 
 * Build a complete full-stack feature.
+* Validate user input in the model layer.
 
 ## To complete this challenge, you will need to
 
@@ -39,5 +46,13 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
   - [ ] Ensuring that your feature test passes
 - [ ] Test that your new feature also works in the development environment
 - [ ] Refactor any spec code that adds data to the database with this new `Bookmark.create` functionality.
+- [ ] Add a new feature test that expects some kind of error message, on the page, if the user does not submit a real URL.
+- [ ] Pass this feature test by adding functionality to the `Bookmark` model.
+
+## Resources
+
+* [How do I check if a URL is valid?](https://stackoverflow.com/questions/1805761/how-to-check-if-a-url-is-valid)
+* [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
+
 
 ## [Walkthrough](walkthroughs/09.md)
