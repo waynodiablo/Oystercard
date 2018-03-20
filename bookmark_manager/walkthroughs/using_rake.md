@@ -170,5 +170,3 @@ end
 ```
 
 We can now add a line to the README guiding new developers to set up their databases using Rake.
-
-[To the Next Challenge](../12_validations.md)
