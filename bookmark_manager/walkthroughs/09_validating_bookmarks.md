@@ -10,7 +10,7 @@ This walkthrough is in three parts:
 
 - Adding a feature test for an invalid URL.
 - Adding Sinatra-Flash to show a message, passing this test.
-- Refactoring the validation logic into the `Link` model.
+- Refactoring the validation logic into the `Bookmark` model.
 
 > If you prefer to work from a code diff, there is a commit for this challenge [here](https://github.com/sjmog/bookmark_manager/commit/41024c5617f84880400881a81d83fd7a6a3a42ee).
 
@@ -18,21 +18,21 @@ This walkthrough is in three parts:
 
 Here's the user flow for submitting an invalid URL:
 
-1. Visit the new link page.
-2. Submit a new link with a string like 'not a link'.
-3. See an error message, and don't see 'not a link' in the list of links.
+1. Visit the new bookmark page.
+2. Submit a new bookmark with a string like 'not a bookmark'.
+3. See an error message, and don't see 'not a bookmark' in the list of bookmarks.
 
 Here's that flow in Capybara terms:
 
 ```ruby
-# in spec/features/adding_a_new_link_spec.rb
+# in spec/features/adding_a_new_bookmark_spec.rb
 
-scenario 'The link must be a valid URL' do
-  visit('/add-a-new-link')
-  fill_in('url', with: 'not a real link')
+scenario 'The bookmark must be a valid URL' do
+  visit('/bookmarks/new')
+  fill_in('url', with: 'not a real bookmark')
   click_button('Submit')
 
-  expect(page).not_to have_content "not a real link"
+  expect(page).not_to have_content "not a real bookmark"
   expect(page).to have_content "You must submit a valid URL."
 end
 ```
@@ -47,9 +47,9 @@ We can solve this test in the controller, using [Ruby's built-in `uri` module](h
 # in app.rb
 require 'uri'
 
-post '/create-new-link' do
+post '/bookmarks' do
   if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
-    Link.create(url: params['url'])
+    Bookmark.create(url: params['url'])
   else
     flash[:notice] = "You must submit a valid URL."
   end
@@ -64,35 +64,35 @@ To use the `flash`, we need to add the `sinatra-flash` gem to our Gemfile, insta
 
 Instructions for doing all that are on the [Sinatra-Flash gem Github page](https://github.com/SFEley/sinatra-flash).
 
-## 3. Refactoring the validation logic into the `Link` model
+## 3. Refactoring the validation logic into the `Bookmark` model
 
-Our `/create-new-link` route is looking very messy. Wouldn't it be great if `Link.create` just handled validating URLs on its own?
+Our `post /bookmarks` route is looking very messy. Wouldn't it be great if `Bookmark.create` just handled validating URLs on its own?
 
 Let's write a unit test for that:
 
 ```ruby
-# in spec/link_spec.rb
+# in spec/bookmark_spec.rb
 
 describe '.create' do
-  it 'does not create a new link if the URL is not valid' do
-    Link.create(url: 'not a real link')
+  it 'does not create a new bookmark if the URL is not valid' do
+    Bookmark.create(url: 'not a real bookmark')
 
-    expect(Link.all).not_to include 'not a real link'
+    expect(Bookmark.all).not_to include 'not a real bookmark'
   end
 
   ### other test omitted for brevity ###
 end
 ```
 
-We can pass the test by simply moving the validation into the `Link.create` method. Let's split it out to a private method, too:
+We can pass the test by simply moving the validation into the `Bookmark.create` method. Let's split it out to a private method, too:
 
 ```ruby
-# in link.rb
+# in bookmark.rb
 
-class Link
+class Bookmark
   def self.create(options)
     return false unless is_url?(options[:url])
-    DatabaseConnection.query("INSERT INTO links (url) VALUES('#{options[:url]}')")
+    DatabaseConnection.query("INSERT INTO bookmarks (url) VALUES('#{options[:url]}')")
   end
 
   private
@@ -110,8 +110,8 @@ Now we can use this updated `create` method in our controller:
 ```ruby
 # in app.rb
 
-post '/create-new-link' do
-  flash[:notice] = "You must submit a valid URL." unless Link.create(url: params['url'])
+post '/bookmarks' do
+  flash[:notice] = "You must submit a valid URL." unless Bookmark.create(url: params['url'])
   redirect('/')
 end
 ```
