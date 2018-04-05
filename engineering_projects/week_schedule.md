@@ -1,6 +1,6 @@
 ## Engineering Project Schedule
----
-### Week 1
+
+## Week 1
 
 #### Monday
 - 10:00am - Kick off
@@ -13,7 +13,6 @@
 #### Friday
 - 15:30 - Cohort Retrospective
 
----
 ## Week 2
 
 #### Monday
