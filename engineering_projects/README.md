@@ -32,7 +32,7 @@ This is not a test, nor a challenge to see how many features you can cram into t
    - how you are working together as a team using Agile methodologies.
    - whether you have an understanding of a deployment pipeline
 
-## [Week 1 Schedule](./week_schedule.md)
+## [Project Schedule](./week_schedule.md)
 
 
 ## Project Blog
