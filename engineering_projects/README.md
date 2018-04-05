@@ -24,7 +24,16 @@ By the end of the engineering project, the goal is to be able to answer "yes" to
 
 ## What is a successful project?
 
-This is not a test, nor a challenge to see how many features you can cram into the application. **Far more important** is to consider how you are learning, how you are writing code and that you have worked well together as a team using Agile methodologies.
+This is not a test, nor a challenge to see how many features you can cram into the application.
+
+**Far more important** is to consider:
+   - how you are learning
+   - how you are writing code
+   - how you are working together as a team using Agile methodologies.
+   - whether you have an understanding of a deployment pipeline
+
+## [Week 1 Schedule](./week_schedule.md)
+
 
 ## Project Blog
 
