@@ -67,4 +67,4 @@ Bookmark.new(1) == Bookmark.new(1)
 
 * [What is an ORM?](https://stackoverflow.com/questions/1152299/what-is-an-object-relational-mapping-framework)
 
-## [Walkthrough](walkthroughs/10.md)
+## [Walkthrough](walkthroughs/11.md)

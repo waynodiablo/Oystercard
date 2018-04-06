@@ -34,4 +34,4 @@ In this challenge, you will extract an object which is used to setup a connectio
 - [class instance variables2](http://maximomussini.com/posts/ruby-class-variables/)
 - [variable scope](https://www.sitepoint.com/understanding-scope-in-ruby/)
 
-## [Walkthrough](walkthroughs/14.md)
+## [Walkthrough](walkthroughs/15.md)
