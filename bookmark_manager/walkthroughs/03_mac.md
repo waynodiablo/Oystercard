@@ -21,7 +21,7 @@ $> brew install postgresql
 
 After Homebrew has downloaded PostgreSQL it will show you some installation instructions: follow them!
 
-## 2. Allow Homebrew to start and stop the Postgres service
+## 2. Allow Homebrew to start and stop the Postgres service
 
 PostgreSQL is a database management service. It runs like a server 'in the background' – that is, it can start when your computer starts and won't lock up a terminal window. By default, this can be difficult on some Macs. To avoid this pain, you have to write this magic stuff into a Terminal:
 
