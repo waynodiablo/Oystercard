@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that can read and display bookmarks from the database. We've interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
+We've built a Sinatra application that can read bookmarks from the bookmark_manager database and display them to the user. We've also interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
 
 > `psql`, `pg` and TablePlus are **interfaces** to the PostgreSQL server.
 

@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that can read and display bookmarks from the database. We've interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
+We've built a Sinatra application that can read bookmarks from the bookmark_manager database and display them to the user. We've also interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
 
 Over the past few challenges, we:
 
@@ -14,9 +14,9 @@ Now that we have a reliable persistent database, let's build the next feature in
 
 * Show a list of bookmarks :white_check_mark:
 * Add new bookmarks :construction:
-* Delete bookmarks 
-* Update bookmarks 
-* Comment on bookmarks 
+* Delete bookmarks
+* Update bookmarks
+* Comment on bookmarks
 * Tag bookmarks into categories
 * Filter bookmarks by tag
 * Users manage their bookmarks
@@ -39,5 +39,13 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
   - [ ] Ensuring that your feature test passes
 - [ ] Test that your new feature also works in the development environment
 - [ ] Refactor any spec code that adds data to the database with this new `Bookmark.create` functionality.
+
+# Once you're done with creating bookmarks, prepare yourself for the next challenge by
+
+- [ ] Manually testing the application.  Think about both [happy](https://en.wikipedia.org/wiki/Happy_path) and unhappy paths.  Is the behaviour of your application conducive to a good user experience?
+
+## Resources
+
+* [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
 ## [Walkthrough](walkthroughs/09.md)

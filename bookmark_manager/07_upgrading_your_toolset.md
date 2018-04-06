@@ -2,7 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that can read and display bookmarks from the database. We've interacted with the database via `psql`, PostgreSQL's built-in interface. We've also interacted with the database in Ruby, via `pg`, PostgreSQL's official Ruby interface.
+We've built a Sinatra application that can read bookmarks from the bookmark_manager database and display them to the user. interacted with the database via `psql`, PostgreSQL's built-in interface. We've also interacted with the database in Ruby, via `pg`, PostgreSQL's official Ruby interface.
 
 In the next few challenges, we're going to:
 

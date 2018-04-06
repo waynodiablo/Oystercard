@@ -32,7 +32,7 @@ There are generally four actions you can take with persistent data:
 
 These are usually abbreviated to the acronym **CRUD**. a CRUD application is one that creates, reads, updates, and deletes data. The majority of web applications are, essentially, CRUD applications.
 
-In the next challenge, we'll see how so-called RESTful routing conventions relate to CRUD.
+Remember to maintain RESTful routing conventions.
 
 ## To complete this challenge, you will need to
 
@@ -44,5 +44,6 @@ In the next challenge, we'll see how so-called RESTful routing conventions relat
 ## Resources
 
 * [CRUD (Wikipedia)](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+* [:pill: REST](../pills/rest.md)
 
-## [Walkthrough](walkthroughs/11.md)
+## [Walkthrough](walkthroughs/12.md)
