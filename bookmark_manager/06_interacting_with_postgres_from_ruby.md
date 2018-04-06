@@ -4,7 +4,7 @@
 
 We've built a Sinatra application that displays some hard-coded bookmarks. We've also created a database, added a database table, and played with some data in that table using `psql`.
 
-In this challenge, you will get the application and database talking to each other. This will allow your application to **c**reate, **r**ead, **u**pdate and **d**elete database entries. Then you'll no longer need that hard-coded list of bookmarks ;)
+In this challenge, you will get the application and database talking to each other.  You will remove the hard-coded array of bookmarks and your application will read them from a database instead.
 
 ## Learning Objectives covered
 
