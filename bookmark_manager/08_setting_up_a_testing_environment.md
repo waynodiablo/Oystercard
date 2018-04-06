@@ -2,16 +2,18 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that can read and display links from the database. We've interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
+We've built a Sinatra application that can read bookmarks from the bookmark_manager database and display them to the user. We've also interacted with the database via `psql`, `pg`, and now a GUI, TablePlus.
+
+> `psql`, `pg` and TablePlus are **interfaces** to the PostgreSQL server.
 
 Right now, we have a problem:
 
-- Our feature and unit tests expect three specific links.
-- We've been adding links and changing links via `psql`, `pg`, and TablePlus.
+- Our feature and unit tests expect three specific bookmarks.
+- We've been adding bookmarks and changing bookmarks via `psql`, `pg`, and TablePlus.
 
-So, our feature and unit tests are probably failing right now. It's a real pain to have to change the data back to the 'just right' three links every time we want to run that feature test.
+So, our feature and unit tests are probably failing right now. It's a real pain to have to change the data back to the 'just right' three bookmarks every time we want to run that feature test.
 
-And, in future, we're planning on enabling the user to add more links. This problem is going to get worse!
+And, in future, we're planning on enabling the user to add more bookmarks. This problem is going to get worse!
 
 In this challenge, you will write a script to **reset your database** every time you run the tests. You'll build a **test environment** for your web application.
 
@@ -21,13 +23,39 @@ In this challenge, you will write a script to **reset your database** every time
 
 ## To complete this challenge, you will need to
 
-- [ ] Create a new database, `bookmark_manager_test`, with a `links` table.
-- [ ] Print out the Rack [Environment Variable](http://blog.honeybadger.io/ruby-guide-environment-variables/), `ENV`.
-- [ ] Use `ENV` to enable the following condition: when you run your application using `rackup`, Links are read from the `bookmark_manager` database. When you run your application tests using `rspec`, Links are read from the `bookmark_manager_test` database.
-- [ ] Write a script that uses `pg` to:
-  - [ ] Empty the `links` table in the database.
-  - [ ] Add the three links the feature test expects to the database.
-- [ ] Figure out how to run this script right before **each** RSpec test, so every test starts with a 'clean' test database.
+- [ ] Create a **test** database, `bookmark_manager_test`, with a `bookmarks` table.
+- [ ] Enable the following condition somehow:
+  - [ ] When you run your application using `rackup`, bookmarks are read from the `bookmark_manager` database.
+  - [ ] When you run your application tests using `rspec`, bookmarks are read from the `bookmark_manager_test` database.
+- [ ] Write a script that **truncates** (empties) the `bookmarks` table in the test database before each test run.
+- [ ] Run this script automatically right before **each** RSpec spec, so every test starts with a 'clean' test database.
+- [ ] Add required test bookmarks in each test that expects them.
+
+## Hints
+
+#### Switching database depending on environment
+
+You might want to use the global Rack [Environment Variable](http://blog.honeybadger.io/ruby-guide-environment-variables/), `ENV`, as a variable that stores the current environment. You could then use it to connect to the correct database for your environment.
+
+#### Truncating tables between tests
+
+You might want to write a script, `setup_test_database.rb`, that uses `pg` to `TRUNCATE` the bookmarks table.
+
+#### Integrating external scripts with RSpec
+
+The `spec/spec_helper.rb` is automatically executed whenever you run `rspec` (see your `.rspec` for why). In the Spec Helper, you can configure RSpec. You can make something happen before every spec with the following:
+
+```ruby
+config.before(:each) do
+  # Whatever you put here will happen before each spec runs
+end
+```
+
+> You can even use filesystem commands like `require` and `load` inside this `configure` block.
+
+#### Adding expected bookmarks
+
+You can `require` and use `pg` in your specs too: for instance, to insert data into the database in each `it()` block.
 
 ## Resources
 

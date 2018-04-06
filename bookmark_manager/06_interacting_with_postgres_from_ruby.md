@@ -2,9 +2,9 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that displays some hard-coded links. We've also built a database, added a database table, and played with some data in that table using `psql`.
+We've built a Sinatra application that displays some hard-coded bookmarks. We've also created a database, added a database table, and played with some data in that table using `psql`.
 
-In this challenge, you will get them talking to each other. You will remove the hard-coded array of links and read them from a database instead.
+In this challenge, you will get the application and database talking to each other.  You will remove the hard-coded array of bookmarks and your application will read them from a database instead.
 
 ## Learning Objectives covered
 
@@ -15,11 +15,10 @@ In this challenge, you will get them talking to each other. You will remove the 
 - [ ] Install the `pg` gem to your project.
 - [ ] Update the `.all` method of your `Link` model to do the following (through `pg`):
   - [ ] Connect to the PostgreSQL `bookmark_manager` database.
-  - [ ] Send a query to retrieve all records from the `links` table.
-  - [ ] Return those links as an array of URLs.
-- [ ] Make sure you still pass the first feature.
-- [ ] Without stopping the Sinatra program, add a new link via `psql` to the database.
-- [ ] Make sure this new link shows up on the page.
+  - [ ] Send a query to retrieve all records from the `bookmarks` table.
+- [ ] Make sure you still pass the first feature, using this new response. You will need to update the view.
+- [ ] Without stopping the Sinatra program, add a new bookmark via `psql` to the database.
+- [ ] Make sure this new bookmark shows up on the `/bookmarks` page.
 
 ## Resources
 

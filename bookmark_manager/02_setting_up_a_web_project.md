@@ -18,7 +18,7 @@ We've written a user story and we have a vague idea of the first interaction. Le
 - [ ] Set up Sinatra with RSpec and Capybara.
 - [ ] Test-drive the first feature: viewing links. Avoid adding a database.
 
-> You'll probably want to create a `Link` class that responds to the class method `.all` with a hard-coded array of `Link` instances.
+> You'll probably want to create a `Bookmark` model that responds to the class method `.all` with a hard-coded array of `Bookmark` instances.
 
 ## Resources
 

@@ -4,18 +4,18 @@
 
 The website will have the following **specification**:
 
-* Show a list of links
-* Add new links
-* Delete links
-* Update links
+* Show a list of bookmarks
+* Add new bookmarks
+* Delete bookmarks
+* Update bookmarks
 * Comment on Links
-* Tag links into categories
-* Filter links by tag
-* Users manage their links
+* Tag bookmarks into categories
+* Filter bookmarks by tag
+* Users manage their bookmarks
 
 > A specification is a list of **requirements**.
 
-We'll be using a BDD cycle (i.e. **outside-in testing**: Capybara first). 
+We'll be using a BDD cycle (i.e. **outside-in testing**: Capybara first).
 
 To guide us, create some User Stories and sketch a high-level domain model.
 
@@ -27,7 +27,7 @@ To guide us, create some User Stories and sketch a high-level domain model.
 
 ## To complete this challenge, you will need to
 
-- [ ] Write a user stories for showing a list of links
+- [ ] Write a user story for showing a list of bookmarks
 - [ ] Draw a rough domain model for the above
 - [ ] Put all these user stories and a snap of your domain model in your project README
 
