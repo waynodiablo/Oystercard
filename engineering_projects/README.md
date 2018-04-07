@@ -45,12 +45,12 @@ This is not a test, nor a challenge to see how many features you can cram into t
 
 Morning stand-ups and daily retrospectives in your teams.
 
-- [Standups](https://github.com/makersacademy/course/pills/student_standups.md)
-- [Retros](https://github.com/makersacademy/course/pills/student_retrospective.md)
+- :pill: [Standups](../pills/student_standups.md)
+- :pill: [Retros](../pills/student_retrospective.md)
 
 ### Workflow
- - [Git Workflow](https://github.com/makersacademy/course/pills/development_workflow.md)
- - [Ticket splitting](https://github.com/makersacademy/course/pills/splitting_stories.md)
+ - :pill: [Git Workflow](../pills/development_workflow.md)
+ - :pill: [Ticket splitting](../pills/splitting_stories.md)
  - [Ticket Estimation](https://www.atlassian.com/agile/project-management/estimation)
 
 
