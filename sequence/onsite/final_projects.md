@@ -6,8 +6,6 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 
 #### Monday to Friday
 
-* You'll each have a [session](../../pills/coach_developer_observation.md) where a coach observes you building a small project from scratch and gives you feedback on your developer processes.
-
 * Project work.
 
 ### Week 12
@@ -18,7 +16,7 @@ There will be almost no structure for the next two weeks.  It will be down to yo
 
 #### Thursday
 
-* 3.30pm - 5pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from your coach.  You can drop in and out - you don't all have to be here.
+* 3.30pm - 4.50pm: Practice presentations. This will be a session where you can practice your presentations and get feedback from your coach.  You can drop in and out - you don't all have to be here.
 
 #### Friday
 

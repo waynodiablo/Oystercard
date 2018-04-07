@@ -18,7 +18,6 @@ Everyone who is looking for a job as a developer will have the opportunity to ha
 #### Wednesday
 * 10am - 11am: Careers session: Practice Tech Interviews
 * 11am: You'll work solo on the tech test.
-* 3.00 - 4pm: Careers session: How to network
 * 5.00pm: You'll review your code in pairs.
 * 5.30pm: We'll review your code in a group.
 
@@ -27,6 +26,7 @@ Everyone who is looking for a job as a developer will have the opportunity to ha
 * 10.00am: We'll do a mini retro on yesterday's work.
 * 10.15am: Your coach will introduce the next tech test: [tic-tac-toe](../../individual_challenges/tic_tac_toe.md)
 * 10.30am: You'll work solo on the tech test.
+* 3.00 - 4pm: Careers session: How to network.
 
 #### Friday
 

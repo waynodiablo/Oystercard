@@ -2,7 +2,7 @@
 
 1. Create a Github issue in the relevant repository relating to the user story or bug.
 
-2. When you are ready to work on the user story, create a branch it, e.g. `dates-on-apply-page`.
+2. When you are ready to work on the user story, create a branch for it, e.g. `dates-on-apply-page`.
 
 3. Pair on implementing the user story.
 

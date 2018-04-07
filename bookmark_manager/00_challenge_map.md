@@ -31,7 +31,7 @@ As well as these things, you'll deepen your understanding of many of the [skills
 
 ## The project
 
-You're going to build a bookmark manager.  A bookmark manager is a website to maintain a collection of URLs. You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse links other users have added. You can comment on the links.
+You're going to build a bookmark manager.  A bookmark manager is a website to maintain a collection of bookmarks (URLs). You can use it to save a webpage you found useful. You can add tags to the webpages you saved to find them later. You can browse bookmarks other users have added. You can comment on the bookmarks.
 
 ### User Interface Sketch (Hi-Fi)
 
@@ -57,17 +57,14 @@ The challenge material is pretty tough this week. You're not meant to get throug
  6. [Interacting with Postgres from Ruby](06_interacting_with_postgres_from_ruby.md)
  7. [Upgrading your Toolset](07_upgrading_your_toolset.md)
  8. [Setting up a Testing Environment](08_setting_up_a_testing_environment.md)
- 9. [Creating Links](09_creating_links.md)
- 10. [Extracting a Database Setup object](10_extracting_a_database_setup_object.md)
- 11. [Using Rake](11_using_rake.md)
- 12. [Validations](12_validations.md)
- 13. [Wrapping Database data in program objects](13_wrapping_database_data_in_program_objects.md)
- 14. [CRUD](14_crud.md)
- 15. [REST and Resources](15_rest.md)
- 16. [One to Many Relationships](16_one_to_many_relations.md)
- 17. [Many to Many Relationships](17_many_to_many_relationships.md)
- 18. [Registration](18_registration.md)
- 19. [Authentication](19_authentication.md)
+ 9. [Creating Bookmarks](09_creating_bookmarks.md)
+ 10. [Wrapping Database data in program objects](10_wrapping_database_data_in_program_objects.md)
+ 11. [CRUD](11_crud.md)
+ 12. [One to Many Relationships](12_one_to_many_relations.md)
+ 13. [Many to Many Relationships](13_many_to_many_relationships.md)
+ 14. [Extracting a Database Setup object](14_extracting_a_database_setup_object.md)
+ 15. [Registration](18_registration.md)
+ 16. [Authentication](19_authentication.md)
 
  ### Post Challenges
 
