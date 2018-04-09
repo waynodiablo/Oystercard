@@ -39,9 +39,9 @@ In rspec, the `.to be()` matcher has the same syntax as `.to eq()`.  This conven
 
 ## Related Pills
 
-* :pill: [MVC](../pills/mvc.md)
-* :pill: [Rails console](../pills/rails_console.md)
-* :pill: [Active Record](../pills/activerecord.md)
+* :pill: [MVC](../../pills/mvc.md)
+* :pill: [Rails console](../../pills/rails_console.md)
+* :pill: [Active Record](../../pills/activerecord.md)
 
 ## Resources
 

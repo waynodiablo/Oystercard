@@ -3,7 +3,7 @@
 ## Week 1
 
 #### Monday
-- 10:00am - Kick off
+- 11:00am - Kick off
 
 #### Tuesday, Wednesday, Thursday
 - 9:30am - Team stand up _(suggested)_

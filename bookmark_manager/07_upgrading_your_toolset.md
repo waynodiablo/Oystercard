@@ -2,13 +2,13 @@
 
 [Back to the Challenge Map](00_challenge_map.md)
 
-We've built a Sinatra application that can read and display links from the database. We've interacted with the database via `psql`, PostgreSQL's built-in interface. We've also interacted with the database in Ruby, via `pg`, PostgreSQL's official Ruby interface.
+We've built a Sinatra application that can read bookmarks from the bookmark_manager database and display them to the user. interacted with the database via `psql`, PostgreSQL's built-in interface. We've also interacted with the database in Ruby, via `pg`, PostgreSQL's official Ruby interface.
 
 In the next few challenges, we're going to:
 
 - Upgrade our tooling so we can see what's going on in our database more easily.
-- Add the 'create new links' feature to our application using the `pg` gem.
-- Refactor all the complicated SQL in our `Link` model using an Object-Relational Map.
+- Add the 'create new bookmarks' feature to our application using the `pg` gem.
+- Refactor all the complicated SQL in our `Bookmark` model using an Object-Relational Map.
 
 > Feel free to just have a go at doing the stuff above yourself!
 
@@ -22,10 +22,10 @@ In this challenge, you will play with some tooling that gives you more insight i
 
 - [ ] Download and install [TablePlus](https://tableplus.io/).
 - [ ] Connect TablePlus to your PostgreSQL database management system.
-- [ ] Use the `INSERT`, `UPDATE`, `DELETE`, and `SELECT` commands within TablePlus to add, update, delete, and read some data from the `links` table in the `bookmark_manager` database.
-- [ ] Run your Sinatra application, and watch new links appearing in the application when you add them to the database via TablePlus.
+- [ ] Use the `INSERT`, `UPDATE`, `DELETE`, and `SELECT` commands within TablePlus to add, update, delete, and read some data from the `bookmarks` table in the `bookmark_manager` database.
+- [ ] Run your Sinatra application, and watch new bookmarks appearing in the application when you add them to the database via TablePlus.
 
-> Adding and changing links to your database will probably break your feature test. We'll look at solving this problem in the next challenge.
+> Adding and changing bookmarks to your database will probably break your feature test. We'll look at solving this problem in the next challenge.
 
 ## Resources
 

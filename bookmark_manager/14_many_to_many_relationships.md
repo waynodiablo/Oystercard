@@ -27,7 +27,7 @@ In this challenge, you will set up a **many to many relationship** between Links
 
 ## To complete this challenge, you will need to
 
-- [ ] Create a new table for Tags. The columns are: 
+- [ ] Create a new table for Tags. The columns are:
   - [ ] an auto-incrementing primary key, `id`
   - [ ] a 60-character text field, `content`
 - [ ] Create a **join table** for Tags and Links, called `link_tags`. The columns are:
@@ -45,4 +45,4 @@ In this challenge, you will set up a **many to many relationship** between Links
 * [SQL for one-to-one and many-to-many relationships](https://stackoverflow.com/questions/7296846/how-to-implement-one-to-one-one-to-many-and-many-to-many-relationships-while-de)
 * [How to design a many-to-many relationship](https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab)
 
-## [Walkthrough](walkthroughs/17.md)
+## [Walkthrough](walkthroughs/14.md)
