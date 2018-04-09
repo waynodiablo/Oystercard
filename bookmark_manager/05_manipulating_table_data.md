@@ -1,6 +1,6 @@
 ## Manipulating Table Data
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We have created a PostgreSQL database, and added a `bookmarks` table. At the moment, there's no data in the table.
 

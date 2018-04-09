@@ -1,6 +1,6 @@
 ## Authentication
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 > Want to jump in on this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/d3fa868bb2699924cd3418ef77aec697cbbc26b8).
 
