@@ -1,6 +1,6 @@
 ## Wrapping Database data in Program Objects
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We've built a database-enabled MVC Sinatra application with test and development environments.
 

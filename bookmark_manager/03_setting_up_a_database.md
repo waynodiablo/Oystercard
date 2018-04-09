@@ -1,6 +1,6 @@
 ## Setting up a database
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We now have a web application with some **hard-coded** data (an array of Bookmarks) and the users of our application can see those bookmarks listed on a page.
 

@@ -1,6 +1,6 @@
 ## Registration
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We've built a CRUD application for managing links. The routes are RESTful.
 
