@@ -24,7 +24,7 @@ Let's look at removing the global variable `$game` from our code altogether.
 
 ### Resources
 
-- [Class Variables and Methods](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/113-class-variables)
+- [Class Variables and Methods](http://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/113-class-variables)
 - [Singleton Pattern](https://en.wikipedia.org/wiki/Singleton_pattern)
 - [Sinatra Filters](http://www.sinatrarb.com/intro.html#Filters)
 
