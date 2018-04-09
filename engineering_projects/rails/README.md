@@ -12,6 +12,10 @@ Each team will start with the same project seed and virtual card-wall with some 
 
 The above objectives are a tool to focus on specific learning, which you can then assess using the [learning triangle](https://github.com/makersacademy/course/blob/master/pills/blooms_taxonomy.md).
 
+### Assessment Criteria
+
+These [assessment criteria](assessment_criteria.md) will be how we look at your work
+
 ### Intro to rails
 
 * [Intro to rails](intro_to_rails.md)

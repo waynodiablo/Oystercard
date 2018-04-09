@@ -6,7 +6,7 @@ You'll use Rails to build a clone of a popular social media website. We'll call 
 
 Last week, you did tons of low-level stuff.  You had to do lots of work that would have been much quicker and easier with libraries.
 
-This week, you'll use Rails. Rails is a web application framework that prioritises convention over configuration. This means two things:
+For this project, you'll use Rails. Rails is a web application framework that prioritises convention over configuration. This means two things:
 
 1. You don't tell Rails how your code is structured. You structure your code in the way Rails thinks is best.
 2. The API tries to be very consistent. You can often guess how a Rails API will work, based on the way other Rails APIs work.
