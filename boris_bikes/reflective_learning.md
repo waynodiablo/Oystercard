@@ -33,4 +33,4 @@
 - I keep track of my progress
 
 ## Stretch Goal
-- Explain what you have investigated in detail this week
+- I investigate topics that interest me
