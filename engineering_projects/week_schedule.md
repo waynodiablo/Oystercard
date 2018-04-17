@@ -25,5 +25,5 @@
 - 5:00pm - Team retrospective _(suggested)_
 
 #### Friday
-- 16:30 - Team Presentations
-- 17:00 - Cohort Retrospective
+- 15:00 - Cohort Retrospective
+- 16:00 - Team Presentations
