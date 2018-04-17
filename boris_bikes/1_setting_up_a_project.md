@@ -25,7 +25,7 @@ Every good code project starts with a git repository. To get started with Boris 
 - [git - the simple guide](http://rogerdudler.github.io/git-guide/)
 - :pill: [git - advanced guide](https://github.com/makersacademy/course/blob/master/pills/git.md)
 - [Creating and removing files from the Terminal](http://www.techrepublic.com/blog/apple-in-the-enterprise/creating-and-deleting-files-using-the-mac-terminal/)
-- [How to write a good README](http://stackoverflow.com/questions/2304863/how-to-write-a-good-readme)
+- [A beginners guide to writing a kickass README](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
 
 
 ### [Walkthrough](walkthroughs/1.md)
