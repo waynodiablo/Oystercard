@@ -1,6 +1,6 @@
 ## Interacting with PostgreSQL from Ruby
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We've built a Sinatra application that displays some hard-coded bookmarks. We've also created a database, added a database table, and played with some data in that table using `psql`.
 

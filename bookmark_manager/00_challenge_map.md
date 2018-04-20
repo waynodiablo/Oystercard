@@ -58,13 +58,14 @@ The challenge material is pretty tough this week. You're not meant to get throug
  7. [Upgrading your Toolset](07_upgrading_your_toolset.md)
  8. [Setting up a Testing Environment](08_setting_up_a_testing_environment.md)
  9. [Creating Bookmarks](09_creating_bookmarks.md)
- 10. [Wrapping Database data in program objects](10_wrapping_database_data_in_program_objects.md)
- 11. [CRUD](11_crud.md)
- 12. [One to Many Relationships](12_one_to_many_relations.md)
- 13. [Many to Many Relationships](13_many_to_many_relationships.md)
- 14. [Extracting a Database Setup object](14_extracting_a_database_setup_object.md)
- 15. [Registration](18_registration.md)
- 16. [Authentication](19_authentication.md)
+ 10. [Validating bookmarks](10_validating_bookmarks.md)
+ 11. [Wrapping Database data in program objects](11_wrapping_database_data_in_program_objects.md)
+ 12. [CRUD](12_crud.md)
+ 13. [One to Many Relationships](13_one_to_many_relations.md)
+ 14. [Many to Many Relationships](14_many_to_many_relationships.md)
+ 15. [Extracting a Database Setup object](15_extracting_a_database_setup_object.md)
+ 16. [Registration](16_registration.md)
+ 17. [Authentication](17_authentication.md)
 
  ### Post Challenges
 

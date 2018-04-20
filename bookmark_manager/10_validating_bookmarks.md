@@ -1,6 +1,6 @@
-## Creating bookmarks
+## Validating bookmarks
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 You now have an application that allows a user to add new bookmarks to, and review all bookmarks in, the bookmark_manager database.
 

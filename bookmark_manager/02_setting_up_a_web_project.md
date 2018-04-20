@@ -1,6 +1,6 @@
 ## Setting up a Web Project
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We've written a user story and we have a vague idea of the first interaction. Let's set up:
 

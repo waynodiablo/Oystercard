@@ -1,6 +1,6 @@
 ## Creating Your First Table
 
-[Back to the Challenge Map](00_challenge_map.md)
+[Back to the Challenge Map](00_challenge_map.md#challenges)
 
 We've just set up a Postgres database that can store (_persist_) data forever - even if you shut down and restart your computer.
 
