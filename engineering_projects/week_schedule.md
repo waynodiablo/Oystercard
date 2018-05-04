@@ -3,9 +3,13 @@
 ## Week 1
 
 #### Monday
-- 11:00am - Kick off
+- Bank Holiday
 
-#### Tuesday, Wednesday, Thursday
+#### Tuesday
+
+- 9:30am - Kickoff
+
+#### Wednesday, Thursday
 - 9:30am - Team stand up _(suggested)_
 - 10:00am - Surgery (optional)
 - 5:00pm - Team retrospective _(suggested)_

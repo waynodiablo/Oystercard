@@ -7,7 +7,7 @@
 
 ## Learning objectives
 
-### Goals for the week
+### Goals for the project
 
 Ask yourself the same two questions:
 
@@ -26,20 +26,10 @@ By the end of the engineering project, the goal is to be able to answer "yes" to
 
 This is not a test, nor a challenge to see how many features you can cram into the application.
 
-**Far more important** is to consider:
-   - how you are learning
-   - how you are writing code
-   - how you are working together as a team using Agile methodologies.
-   - whether you have an understanding of a deployment pipeline
+**It is more important to pay attention to the [assessment criteria](./assessment_criteria.md)**. The points listed in the criteria are general expectations of a good project.
 
 ## [Project Schedule](./week_schedule.md)
 
-
-## Project Blog
-
-- Nominate a team member
-- Create an account at medium.com and then create a blog for your team and slack a project coach with the URL.
-- Rotate team members to create daily posts: keep a record of what you learn and get blocked on
 
 ## Standups and retros
 
@@ -47,11 +37,6 @@ Morning stand-ups and daily retrospectives in your teams.
 
 - :pill: [Standups](../pills/student_standups.md)
 - :pill: [Retros](../pills/student_retrospective.md)
-
-### Workflow
- - :pill: [Git Workflow](../pills/development_workflow.md)
- - :pill: [Ticket splitting](../pills/splitting_stories.md)
- - [Ticket Estimation](https://www.atlassian.com/agile/project-management/estimation)
 
 
 ## Weekend challenge

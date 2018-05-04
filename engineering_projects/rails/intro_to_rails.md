@@ -45,8 +45,6 @@ In rspec, the `.to be()` matcher has the same syntax as `.to eq()`.  This conven
 
 ## Resources
 
-* [Michael Hartl's Rails tutorial](http://www.railstutorial.org/book)
-* [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)
 * [Structure of Rails apps (diagram)](http://images.thoughtbot.com/ember-rails-terminology-differences/rails.png)
 * [Active Record basics](http://guides.rubyonrails.org/active_record_basics.html)
 * [Associations](http://guides.rubyonrails.org/association_basics.html)

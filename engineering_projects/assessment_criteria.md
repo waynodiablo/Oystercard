@@ -6,9 +6,9 @@
 * Appropriate feature and isolated unit tests
 
 ### Quality
-* Passes rubocop
-* Code Climate grades of A
-* Low flog score
+* Passes linter
+* Passes code quality
+* Low complexity score
 
 ### Development
 * Evidence of git workflow
