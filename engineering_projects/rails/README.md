@@ -12,7 +12,7 @@ The above objectives are a tool to focus on specific learning, which you can the
 
 ### Assessment Criteria
 
-These [assessment criteria](assessment_criteria.md) will be how we look at your work
+These [assessment criteria](../assessment_criteria.md) will be how we look at your work
 
 ### Intro to rails
 
