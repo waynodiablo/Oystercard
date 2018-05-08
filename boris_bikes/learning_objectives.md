@@ -1,7 +1,5 @@
 # Learning Objectives: Boris Bikes
 
-> Learning Objectives summarise everything you will learn this week. If you want more detail, go to the [Learning Outcomes](learning_outcomes.md).
-
 ### [Challenge 1](1_setting_up_a_project.md)
 
 - Set up a simple project
