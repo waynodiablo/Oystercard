@@ -14,10 +14,18 @@ The above objectives are a tool to focus on specific learning, which you can the
 
 These [assessment criteria](../assessment_criteria.md) will be how we look at your work
 
-### Intro to rails
-
-* [Intro to rails](intro_to_rails.md)
-
 ## Project Set Up
 
 * [Set up instructions](../project_setup.md)
+
+## Repository
+
+* https://github.com/makersacademy/acebook-rails-template
+
+## Card Wall
+
+* https://trello.com/b/aN3xtXXl/acebook-rails-template
+
+### Intro to rails
+
+* [Intro to rails](intro_to_rails.md)
