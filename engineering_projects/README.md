@@ -38,6 +38,9 @@ Morning stand-ups and daily retrospectives in your teams.
 - :pill: [Standups](../pills/student_standups.md)
 - :pill: [Retros](../pills/student_retrospective.md)
 
+## Toolbox
+
+Here are some [strategies](./toolbox.md) to use when facing some common problems. Feel free to submit new issues or PRs with more questions, or different solutions!
 
 ## Weekend challenge
 
