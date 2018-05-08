@@ -1,7 +1,5 @@
 # More advanced OO with games: Battle Ships
 
-***Please note, as with all Makers Academy materials, there may be subtle errors in the following materials.  Please try to approach those as challenges on which to polish your debugging skills - pull requests always welcome.***
-
 Battleships (or Battleship) is a game where each player has a board upon which they can place a number of ships. The boards are 10x10 two dimensional grid.
 
 <img src="../images/battleships.jpg" width="500px" height="500px">

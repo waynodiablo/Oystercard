@@ -1,0 +1,65 @@
+# Project Set Up
+
+## Objectives
+
+- Investigate project workflow tools
+- Set a project up for development
+
+## Instructions
+1. In your team complete each of the following steps.
+
+  If there are options for which tool to use, discuss the merits of each and then choose one.
+
+ **Feel free to switch or use another tool at any point,** simply slack the project coach with the updates.
+
+2. When you're finished, slack your project coach
+  - How you're going to document your learning to keep the team accountable to its objectives
+  - the URL of your project repository
+  - the URL of your card wall
+
+3. Any questions, ask!
+
+# 1. Project Seed
+
+1. Nominate a team member to fork the template repository (Check the pathway for details)
+2. In the forked repo settings, rename the repo with your team name `acebook-<Team Name>`
+3. Add team members and project coaches as collaborators.
+4. Follow the set up instructions in the repo `README.md`
+
+# 2. Documenting your learning
+
+#### A blog
+- Create a team account at medium.com and then create a blog for your team and slack a project coach with the URL.
+- Rotate team members to create posts: keep a record of what you learn and get blocked on
+
+#### A wiki
+- Document your stand-ups, retrospectives, knowledge-share sessions. The github project wiki could be a good place to start
+
+#### Another tool
+- If you like using another tool, use it!
+
+# 3. Card Wall
+
+#### GitHub issue + waffle.io
+- Check the GitHub forked repo issues exist
+- Register for waffle.io with GitHub
+- Set up a waffle for the repository, and watch the magic happen!
+- Add your team members and project coach to the waffle
+- Update your GitHub project `README.md` with the URL of the Trello board
+
+#### Trello
+
+- Duplicate the trello board (Check the pathway for details)
+- Rename the board with your team name `acebook-<Team Name>`
+- Add your team members and project coaches
+- Update your GitHub project `README.md` with the URL of the Trello board
+
+#### Another tool
+- If you like using another tool, use it!
+
+# 4. Workflow
+
+  - Have a read through these pills. Writing smaller and better tickets will really help speed your development, as will estimating the complexity of the work to be done. You can make better decisions about your work:
+ - :pill: [Git Workflow](../pills/development_workflow.md)
+ - :pill: [Ticket splitting](../pills/splitting_stories.md)
+ - [Ticket Estimation](https://www.atlassian.com/agile/project-management/estimation)

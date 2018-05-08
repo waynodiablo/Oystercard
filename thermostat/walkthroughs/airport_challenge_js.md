@@ -7,7 +7,7 @@ Let's start with a user story to drive a feature test:
 ```
 As an air traffic controller
 To get passengers to a destination
-I want to instruct a plan to land at
+I want to instruct a plane to land at
   an airport and confirm that it has landed
 ```
 
