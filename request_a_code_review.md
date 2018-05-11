@@ -31,4 +31,4 @@ As always if you have questions about this process or feedback to share about it
 
 
 
-[1]: https://goo.gl/RNtj18
+[1]: http://ec2-23-20-235-139.compute-1.amazonaws.com/reviews/new
