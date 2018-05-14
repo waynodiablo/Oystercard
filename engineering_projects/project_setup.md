@@ -23,18 +23,20 @@
 
  **Feel free to switch or use another tool at any point,** simply slack the project coach with the updates.
 
-# 0. Team Name
+# Part 1 (45mins)
+
+## 0. Team Name
 
 1. Think. Discuss. Choose!
 
-# 1. Project Seed
+## 1. Project Seed
 
 1. Nominate a team member to own the fork, and then fork the template repository (Check the pathway for details)
 2. In the forked repo settings, add team members and project coaches as collaborators
 3. In the forked repo settings, rename the repo with your team name `acebook-<Team Name>`
 4. Each member can then clone the fork to their local machine and follow the set up instructions in the repo's `README.md`
 
-# 2. Documenting your learning
+## 2. Documenting your learning
 
 - Choose one of the following:
 
@@ -48,7 +50,7 @@
 #### Another tool
 - If you like using another tool, use it!
 
-# 3. Card Wall
+## 3. Card Wall
 
 - Choose one of the following:
 
@@ -69,9 +71,14 @@
 #### Another tool
 - If you like using another tool, use it!
 
-# 4. Workflow
+# Part 2 (45mins)
 
- - Have a read through these pills. Writing smaller and better tickets will really help speed your development, as will estimating the complexity of the work to be done. You can make better decisions about your work:
+## 4. Planning Session
+
+Read through how to run a 2-day sprint and plan your first one!
+- https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING.md
+
+To help, have a read through these pills. Writing smaller and better tickets will really help speed your development, as will estimating the complexity of the work to be done. You can make better decisions about your work:
  - :pill: [Git Workflow](../pills/development_workflow.md)
  - :pill: [Ticket splitting](../pills/splitting_stories.md)
  - [Ticket Estimation](https://www.atlassian.com/agile/project-management/estimation)

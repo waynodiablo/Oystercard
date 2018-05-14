@@ -26,14 +26,16 @@ By the end of the engineering project, the goal is to be able to answer "yes" to
 
 This is not a test, nor a challenge to see how many features you can cram into the application.
 
-**It is more important to pay attention to the [assessment criteria](./assessment_criteria.md)**. The points listed in the criteria are general expectations of a good project.
+**It is more important to pay attention to your learning objectives and the [assessment criteria](./assessment_criteria.md)**. The points listed in the criteria are general expectations of a good project.
 
-## [Project Schedule](./week_schedule.md)
+## Schedule
+
+- [Project Schedule](./week_schedule.md) for the two weeks
 
 
-## Standups and retros
+## 2-Day Sprints
 
-Morning stand-ups and daily retrospectives in your teams.
+https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING.md
 
 - :pill: [Standups](../pills/student_standups.md)
 - :pill: [Retros](../pills/student_retrospective.md)
