@@ -1,3 +1,5 @@
+# Recipe: Objects 1
+
 ## Getting started
 * **10.10: Encapsulation** An hour workshop on encapsulation, an important principle of object oriented design.
 * [Encapsulation Practical](https://hackmd.io/2yBI8-9vTwm4u-5c5Q4tsg). Another set of exercises focusing on encapsulation.
