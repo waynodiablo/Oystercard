@@ -12,4 +12,6 @@ This is summed up in the acronym CEP, standing for:
 
 **Moderate evidence is empirical.** It's based on things like written or quoted feedback, your verified capability to apply a skill through actually doing it, events where you have demonstrated competence, code that works, following a process correctly, etc.
 
-**Strong evidence is credible.** It's empirical evidence backed up by expertise or events that couldn't reasonably mean anything else. For example, if you explain a topic to a beginner and then they can apply it straight afterwards, that's credible. If you ask a coach "do you think this code would pass a tech test?" and they say it would, that's credible, expert feedback.
+**Strong evidence is credible.** It's empirical evidence backed up by expertise or events that couldn't reasonably mean anything else. For example, if you explain a topic to a beginner and then they can apply it straight afterwards, that's credible.
+
+Coaches are also a good source of credible feedback, as software engineering experts. Be mindful of the questions you ask them though! Are you looking for evidence that you're making progress? Or evidence that your code is of a professional standard?
