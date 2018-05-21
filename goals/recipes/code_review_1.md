@@ -8,7 +8,7 @@ You'll each be reviewing a colleague's code today. This morning the rule is: you
 
 * **10:10: Code review introduction.** A brief introduction to reviewing code in a way that genuinely helps your colleagues improve.
 * Follow this process
-  * [Four rules of simple design](https://martinfowler.com/bliki/BeckDesignRules.html). This will help you understand high level code design principles.
+  * Read the [Four rules of simple design](https://martinfowler.com/bliki/BeckDesignRules.html). This will help you understand high level code design principles.
   * Review your colleague's code without referring to the rubric. Stretch yourself to see how much feedback you can think of before you move on. Write it down, we'll use it later.
   * Use the [Airport Challenge Review Rubric](https://github.com/makersacademy/airport_challenge/blob/master/docs/review.md) to generate some more feedback for your colleague.
   * Share your feedback with your colleague.
