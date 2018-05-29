@@ -60,7 +60,7 @@ Some developers may notice they are completing the work easier than their peers 
 * [Learning by building RSpec](https://github.com/makersacademy/skills-workshops/blob/master/practicals/adventures/learning_by_building_rspec.md)
 * [Refactoring with OO](https://github.com/makersacademy/skills-workshops/blob/master/practicals/adventures/refactoring.md)
 
-### Skills workshops
+### Skills workshops
 
 * [Code Review Recipe](https://github.com/makersacademy/course/blob/master/goals/recipes/code_review_1.md)
 * [Domain modelling](https://github.com/makersacademy/skills-workshops/tree/master/week-2/domain_model_diagramming)
@@ -68,7 +68,7 @@ Some developers may notice they are completing the work easier than their peers 
 * [Making code simpler through polymorphism](https://github.com/makersacademy/skills-workshops/tree/master/week-2/making_code_simpler_through_polymorphism)
 * [Mocking with RSpec](https://github.com/makersacademy/skills-workshops/tree/master/week-2/mocking_2)
 
-## Week 3
+## Week 3
 
 By the end of the week all developers can:
 
