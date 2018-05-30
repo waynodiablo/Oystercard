@@ -24,7 +24,7 @@ Employers are looking for good developers.  Someone who has a developer communit
 
 * You'll go deeper into the areas of software development that interest you.
 
-* You'll find role models to learn from and you'll become role models for other people.
+* You'll find role models to learn from and you'll become a role model for other people.
 
 * You'll find mentors who can help guide your growth and you'll mentor others.
 
