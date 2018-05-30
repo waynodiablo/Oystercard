@@ -118,7 +118,7 @@ Basically the same as Slack communities, but via a different communication mediu
 
 The company you work for is one of the most powerful communities you can belong to.  It's very important to choose one where you can contribute and learn.  It's a community where you'll spend a lot of time, where you'll work on varied projects, where you'll get feedback, where you'll try to achieve a goal, and where you'll be constantly discussing new ideas.
 
-Learn more about how to [find and introduce yourself to a company](https://github.com/makersacademy/jobhunters/blob/master/pills/finding_a_job_the_smart_way.md).
+Learn more about how to [find and introduce yourself to a company](https://github.com/makersacademy/jobhunters/blob/master/pills/how%20to%20job%20hunt/finding_a_job_the_smart_way.md).
 
 ### [Stack Overflow](https://stackoverflow.com)
 
