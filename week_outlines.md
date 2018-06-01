@@ -93,6 +93,29 @@ By the end of the week all developers can:
 * [Modelling the request/response cycle](https://github.com/makersacademy/skills-workshops/tree/master/week-3/process_modelling)
 * [Debugging 2](https://github.com/makersacademy/skills-workshops/tree/master/week-3/debugging_2)
 
+## Week 4
+
+By the end of the week all developers can:
+
+* Build a simple web app with a database
+* Follow an effective debugging process for database applications
+* Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
+
+### Challenges
+
+* [Afternoons - Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager/00_challenge_map.md)
+* [Weekend - Chitter](https://github.com/makersacademy/chitter-challenge)
+
+### Practicals
+
+* [Entity Relationship Diagrams](https://github.com/makersacademy/skills-workshops/blob/master/practicals/databases/entity_relationship_diagrams.md)
+* [SQLZoo](https://sqlzoo.net/)
+
+### Skills workshops
+
+* [CRC Cards](https://github.com/makersacademy/skills-workshops/tree/master/week-4/databases_2)
+* [REST](https://github.com/sjmog/rest)
+
 ## Week 7
 
 By the end of the week all developers can:
@@ -122,3 +145,7 @@ Note: they get the choice of morning goals / afternoon challenges vs all day pro
 ### Skills workshops
 
 * [Javascript module pattern](https://github.com/makersacademy/skills-workshops/tree/master/week-7/javascript-module-pattern-workshop)
+
+## Week 8-9
+
+See: [Engineering project](./engineering_projects/README.md)
