@@ -37,13 +37,12 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 #### - We're not sure we're learning much without a tutorial
 
 - Focus on giving yourself a clear objective and a way to test that you've achieved it, eg:
-  - Objective: follow the flow of data in a req/res cycle
+  - Objective: I can follow the flow of data in a req/res cycle
     - Test: diagram the flow of data using boxes and arrows for a process like going to the homepage/submitting a form
-  - Objective: do some rails by myself
+  - Objective: I can do some rails by myself
     - Test: build a small rails app without a tutorial
-  - Objective: Learn about Rails routes
+  - Objective: I understand how http requests map to Rails routes
     - Test: Explain to someone how config/routes.rb relates to controllers
-
 
 - take notes on your understanding
 - explain your learning to someone else
@@ -58,5 +57,4 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
   - Because feature tests are slow to run, depending on the size of the application, and the number of edge cases for a user's journey you can have a look at testing in more detail: https://robots.thoughtbot.com/how-we-test-rails-applications
   - https://hackernoon.com/your-guide-to-testing-in-ruby-on-rails-5-c8bd122e38ad
 
--
 #### - What is the difference between Heroku and AWS and Docker and CI?

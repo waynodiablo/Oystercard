@@ -2,16 +2,14 @@
 
 ## Week 1
 
+#### Daily
+- 9:30am - Goal Setting
+
 #### Monday
-- Bank Holiday
+- 10:00am - Kickoff
 
-#### Tuesday
-
-- 9:30am - Kickoff
-
-#### Wednesday, Thursday
-- 9:30am - Team stand up _(suggested)_
-- 10:00am - Surgery (optional)
+#### Tuesday, Wednesday, Thursday
+- 9:45am - Team stand up _(suggested)_
 - 5:00pm - Team retrospective _(suggested)_
 
 #### Friday
@@ -19,15 +17,14 @@
 
 ## Week 2
 
-#### Monday
-- 9:30am - Team stand up _(suggested)_
-- 5:00pm - Team retrospective _(suggested)_
+#### Daily
+- 9:30am - Goal Setting
 
-#### Tuesday, Wednesday, Thursday
-- 9:30am - Team stand up _(suggested)_
-- 10:00am - Surgery (optional)
+#### Monday, Tuesday, Wednesday, Thursday
+- 9:45am - Team stand up _(suggested)_
 - 5:00pm - Team retrospective _(suggested)_
 
 #### Friday
+- 9:45am - Team stand up _(suggested)_
 - 15:00 - Cohort Retrospective
 - 16:00 - Team Presentations

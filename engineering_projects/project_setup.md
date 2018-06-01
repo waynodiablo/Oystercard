@@ -3,6 +3,8 @@
 ### Pathways
 
 - [rails](./rails)
+- [java](./java)
+
 
 ## Objectives
 
@@ -75,8 +77,9 @@
 
 ## 4. Planning Session
 
-Read through how to run a 2-day sprint and plan your first one!
-- https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING.md
+**MUST:**
+- Read through [how to run a 2-day sprint](../how-to/2_day_sprint.md)
+- Plan your first sprint
 
 To help, have a read through these pills. Writing smaller and better tickets will really help speed your development, as will estimating the complexity of the work to be done. You can make better decisions about your work:
  - :pill: [Git Workflow](../pills/development_workflow.md)

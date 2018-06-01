@@ -2,8 +2,8 @@
 
 ## Pathways
 
-- [rails](rails/README.md)
-
+- [rails](./rails)
+- [java](./java)
 
 ## Learning objectives
 
