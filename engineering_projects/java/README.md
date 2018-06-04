@@ -27,7 +27,7 @@ These [assessment criteria](../assessment_criteria.md) will be how we look at yo
 
 ## Card Wall
 
-* https://trello.com/b/aN3xtXXl/acebook-java-template
+* https://trello.com/b/3T1tgGU5/acebook-java-template
 
 ### Intro to Java
 
@@ -39,8 +39,5 @@ These [assessment criteria](../assessment_criteria.md) will be how we look at yo
 
 
 
-It's possible to not use intellij, and use a text editor with a linter, and run build commands on the command line.
+It's possible to not use intellij, and use a text editor with a linter, and run maven build commands on the command line.
 
-https://atom.io/packages/linter-javac
-
-atom
