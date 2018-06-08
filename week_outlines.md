@@ -141,7 +141,7 @@ By the end of the week all developers can:
 * [Following the Ajax request/response cycle](https://github.com/makersacademy/skills-workshops/tree/master/week-5/following_ajax_request_response_cycle)
 * [Callbacks and following the flow of control](https://github.com/makersacademy/skills-workshops/tree/master/week-5/callbacks_following_the_flow_of_control)
 
-### Resources
+### Resources
 
 * [Count app](https://github.com/maryrosecook/count):
 A tiny JavaScript/Sinatra app that mimics the architecture of the Thermostat app. A useful guide for developers to use for concepts and idioms.
