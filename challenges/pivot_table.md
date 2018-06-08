@@ -1,8 +1,13 @@
 # Singles Chart Pivot Table
 
-## Objective
+## Learning Objectives
 
-Continue learning about databases and data manipulation.
+Continue learning about databases and data manipulation by building a pivot table to display some data. To complete the challenge, you'll need to be able to:
+
+- Insert data from a CSV file into a database table
+- Aggregate data in the table using GROUP BY and corresponding aggregate functions. 
+- Sort data in the table both in ascending and descending order
+- Make design decisions about structuring dynamic database queries to maintain best OO and DRY practices
 
 ## Specification
 
