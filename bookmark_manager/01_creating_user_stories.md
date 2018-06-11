@@ -8,7 +8,7 @@ The website will have the following **specification**:
 * Add new bookmarks
 * Delete bookmarks
 * Update bookmarks
-* Comment on Links
+* Comment on bookmarks
 * Tag bookmarks into categories
 * Filter bookmarks by tag
 * Users manage their bookmarks

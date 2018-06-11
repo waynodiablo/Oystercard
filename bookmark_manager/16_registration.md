@@ -12,7 +12,7 @@ Let's return to our specification:
 * Add new links :white_check_mark:
 * Delete links :white_check_mark:
 * Update links :white_check_mark:
-* Comment on Links :white_check_mark:
+* Comment on Bookmarks :white_check_mark:
 * Tag links into categories :white_check_mark:
 * Filter links by tag :white_check_mark:
 * Users manage their links
@@ -33,7 +33,7 @@ In this challenge, you will **register** new users.
 - [ ] Complete a user **registration** feature:
   - [ ] Update the Rake tasks to set up a `users` table.
   - [ ] Write a feature test for user registration.
-  - [ ] Taking inspiration from `Link`, write a `User` class with a method, `create`, which is called during registration.
+  - [ ] Taking inspiration from `Bookmark`, write a `User` class with a method, `create`, which is called during registration.
   - [ ] When the user is created, store the user ID in the `session`.
   - [ ] Whenever the user's information is to be displayed to the user, `.find` the current user from the database using the ID stored in `session`.
 - [ ] Ensure the user password is stored securely: not as a plain text string.
