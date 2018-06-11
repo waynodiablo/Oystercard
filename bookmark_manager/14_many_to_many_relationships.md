@@ -2,22 +2,22 @@
 
 [Back to the Challenge Map](00_challenge_map.md#challenges)
 
-We've built a RESTful CRUD application for managing links. Users can comment on links.
+We've built a RESTful CRUD application for managing bookmarks. Users can comment on bookmarks.
 
 > Want to jump in to this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/c81305935bf16747f16bb20466d4c75d5e1d667d).
 
 Let's return to our specification:
 
-* Show a list of links :white_check_mark:
-* Add new links :white_check_mark:
-* Delete links :white_check_mark:
-* Update links :white_check_mark:
-* Comment on Links :white_check_mark:
-* Tag links into categories
-* Filter links by tag
-* Users manage their links
+* Show a list of bookmarks :white_check_mark:
+* Add new bookmarks :white_check_mark:
+* Delete bookmarks :white_check_mark:
+* Update bookmarks :white_check_mark:
+* Comment on Bookmarks :white_check_mark:
+* Tag bookmarks into categories
+* Filter bookmarks by tag
+* Users manage their bookmarks
 
-In this challenge, you will set up a **many to many relationship** between Links a new resource, Tags.
+In this challenge, you will set up a **many to many relationship** between Bookmarks a new resource, Tags.
 
 > A many-to-many relationship involves constructing a **join table**, which _belongs to_ more than one model (i.e. it has multiple foreign keys).
 
@@ -30,15 +30,15 @@ In this challenge, you will set up a **many to many relationship** between Links
 - [ ] Create a new table for Tags. The columns are:
   - [ ] an auto-incrementing primary key, `id`
   - [ ] a 60-character text field, `content`
-- [ ] Create a **join table** for Tags and Links, called `link_tags`. The columns are:
+- [ ] Create a **join table** for Tags and Bookmarks, called `bookmark_tags`. The columns are:
   - [ ] an auto-incrementing primary key, `id`
-  - [ ] a foreign key, `link_id`, which `REFERENCES` the link table.
+  - [ ] a foreign key, `bookmark_id`, which `REFERENCES` the bookmark table.
   - [ ] a foreign key, `tag_id`, which `REFERENCES` the tag table.
-- [ ] Allow users to create tags for links. A tag should have many links. A link should have many tags. Like comments, users should be able to see all tags given to a link.
-- [ ] Unlike comments, users should be able to click on a tag and see only links tagged with that tag.
+- [ ] Allow users to create tags for bookmarks. A tag should have many bookmarks. A bookmark should have many tags. Like comments, users should be able to see all tags given to a bookmark.
+- [ ] Unlike comments, users should be able to click on a tag and see only bookmarks tagged with that tag.
 
-> `link.tags` should give a list of all the tags that belong to this link.
-> `tag.links` should give a list of all the links that belong to this tag.
+> `bookmark.tags` should give a list of all the tags that belong to this bookmark.
+> `tag.bookmarks` should give a list of all the bookmarks that belong to this tag.
 
 ## Resources
 
