@@ -12,7 +12,7 @@ By the end of the week all developers can:
 ### Challenges
 
 * [Afternoons - Boris bikes](https://github.com/makersacademy/course/tree/master/boris_bikes)
-* [Weekend - Airport](https://github.com/makersacademy/airport_challenge)
+* [Weekend - Airport](https://diode.makersacademy.com/students/neoeno/projects/33)
 
 ### Practicals
 
@@ -126,7 +126,7 @@ By the end of the week all developers can:
 ### Challenges
 
 * [Afternoons - Thermostat](https://github.com/makersacademy/course/blob/master/thermostat/README.md)
-* [Weekend - Bowling](https://github.com/makersacademy/bowling-challenge)
+* [Weekend - Bowling](https://diode.makersacademy.com/students/neoeno/projects/32)
 
 ### Practicals
 
@@ -145,6 +145,22 @@ By the end of the week all developers can:
 
 * [Count app](https://github.com/maryrosecook/count):
 A tiny JavaScript/Sinatra app that mimics the architecture of the Thermostat app. A useful guide for developers to use for concepts and idioms.
+
+## Week 6
+
+By the end of the week all developers can build tested, easy-to-change software in a team using these processes:
+
+* Break down projects into tasks and allocate them to pairs
+* Build to a specificiation (rather than challenges)
+* Run stand-ups and retrospectives
+* Use a branch/PR/merge git workflow
+* Give and receive meaningful code review
+
+### Challenges
+
+* [Weekdays - MakersBnB](https://diode.makersacademy.com/students/neoeno/projects/34)
+* [Weekend — Bowling again](https://diode.makersacademy.com/students/neoeno/projects/32)
+
 
 ## Week 7
 
@@ -179,3 +195,7 @@ Note: they get the choice of morning goals / afternoon challenges vs all day pro
 ## Week 8-9
 
 See: [Engineering project](./engineering_projects/README.md)
+
+## Week 10
+
+See: [Individual challenges](./individual_challenges)
