@@ -6,7 +6,7 @@ We'll focus on helping others improve, as a key skill of a good developer in a t
 
 You'll each be reviewing a colleague's code today. This morning the rule is: you can't touch your own code!
 
-* **10:10: Code review introduction.** A brief introduction to reviewing code in a way that genuinely helps your colleagues improve.
+* **10:00: Code review introduction.** A brief introduction to reviewing code in a way that genuinely helps your colleagues improve.
 * Follow this process
   * Read the [Four rules of simple design](https://martinfowler.com/bliki/BeckDesignRules.html). This will help you understand high level code design principles.
   * Review your colleague's code without referring to the rubric. Stretch yourself to see how much feedback you can think of before you move on. Write it down, you'll share it later.
