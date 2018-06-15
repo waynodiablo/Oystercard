@@ -159,7 +159,7 @@ By the end of the week all developers can build tested, easy-to-change software 
 ### Challenges
 
 * [Weekdays - MakersBnB](https://diode.makersacademy.com/students/neoeno/projects/34)
-* [Weekend — Bowling again](https://diode.makersacademy.com/students/neoeno/projects/32)
+* [Weekend - Bowling again](https://diode.makersacademy.com/students/neoeno/projects/32)
 
 
 ## Week 7
