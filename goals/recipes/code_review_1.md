@@ -8,6 +8,7 @@ You'll each be reviewing a colleague's code today. This morning the rule is: you
 
 * **10:00: Code review introduction.** A brief introduction to reviewing code in a way that genuinely helps your colleagues improve.
 * Follow this process
+  * Read [this guide to code review](https://github.com/makersacademy/course/blob/master/goals/recipes/code_review_1.md)
   * Read the [Four rules of simple design](https://martinfowler.com/bliki/BeckDesignRules.html). This will help you understand high level code design principles.
   * Review your colleague's code without referring to the rubric. Stretch yourself to see how much feedback you can think of before you move on. Write it down, you'll share it later.
   * Use the code review rubric to generate some more feedback for your colleague (if available, it will be in the challenge repo under `docs/`).
