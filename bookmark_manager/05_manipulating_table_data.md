@@ -22,6 +22,7 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 ## Hints
 
 * Again, use the documents linked below to look up the commands you need.
+* Sanity check each step using a SELECT statement.
 
 ## Resources
 

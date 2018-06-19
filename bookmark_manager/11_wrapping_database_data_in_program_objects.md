@@ -46,11 +46,13 @@ The `Post` class would, in this case, _wrap_ the data in each row of the table, 
 
 ## Hints
 
-#### Returning objects that respond to `#id` and `#url` from database queries
+#### Returning objects that respond to `#id`, `#title` and `#url` from database queries
 
-You may want to update the `Bookmark.create` method to return an instance of the `Bookmark` class instead of a string. The instance should wrap and expose the attributes `id` and `url`.
+You may want to update the `Bookmark.create` and `Bookmark.all` methods to return instances of the `Bookmark` class instead of strings. The instance should wrap and expose the attributes `id`, `title` and `url`.
 
-You can use the PostgreSQL keyword `RETURNING` to ask a query to return something specific.
+In your `Bookmark.create` method you can use the PostgreSQL keyword `RETURNING` to ask a query to return specific values and pass them into your Bookmark's initialize method.
+
+Read more about the use of `RETURNING` in the document linked to below.
 
 #### Testing for Bookmark equality
 
@@ -66,5 +68,6 @@ Bookmark.new(1) == Bookmark.new(1)
 ## Resources
 
 * [What is an ORM?](https://stackoverflow.com/questions/1152299/what-is-an-object-relational-mapping-framework)
+* [PostgreSQL RETURNING](https://www.postgresql.org/docs/9.5/static/dml-returning.html)
 
 ## [Walkthrough](walkthroughs/11.md)

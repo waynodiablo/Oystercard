@@ -20,6 +20,9 @@ In this challenge, you will get the application and database talking to each oth
 - [ ] Without stopping the Sinatra program, add a new bookmark via `psql` to the database.
 - [ ] Make sure this new bookmark shows up on the `/bookmarks` page.
 
+## Hints
+- Depending on how closely you have been following the walkthroughs, you might see your tests failing as you work through this step.  Why might this be?
+
 ## Resources
 
 * [Talking to PostgreSQL using Ruby via `pg`](http://zetcode.com/db/postgresqlruby/) (most useful is the section called 'Retrieving multiple rows of data')
