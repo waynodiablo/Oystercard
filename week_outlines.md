@@ -50,7 +50,7 @@ Some developers may notice they are completing the work easier than their peers 
 ### Challenges
 
 * [Afternoons - Oystercard](https://github.com/makersacademy/course/tree/master/oystercard)
-* [Weekend - Takeaway](https://github.com/makersacademy/takeaway-challenge)
+* [Weekend - Takeaway](https://diode.makersacademy.com/students/neoeno/projects/132)
 
 ### Practicals
 
@@ -80,7 +80,7 @@ By the end of the week all developers can:
 ### Challenges
 
 * [Afternoons - Battle](https://github.com/makersacademy/course/tree/master/intro_to_the_web)
-* [Weekend - RPS](https://github.com/makersacademy/rps-challenge)
+* [Weekend - RPS](https://diode.makersacademy.com/students/neoeno/projects/133)
 
 ### Practicals
 
