@@ -57,4 +57,12 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
   - Because feature tests are slow to run, depending on the size of the application, and the number of edge cases for a user's journey you can have a look at testing in more detail: https://robots.thoughtbot.com/how-we-test-rails-applications
   - https://hackernoon.com/your-guide-to-testing-in-ruby-on-rails-5-c8bd122e38ad
 
-#### - What is the difference between Heroku and AWS and Docker and CI?
+
+#### I've spent two days working on a problem, and I'm still blocked!
+
+1. Break your problem down into steps. For each step:
+  - do you need more information?
+  - do you need a specific kind of information?
+  - from who or where can you get that information?
+2. Improve your problem solving process
+  - keep escalating the problem until you find the right un-blocker: use the coaches to help you!
