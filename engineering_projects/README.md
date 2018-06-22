@@ -44,6 +44,13 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 
 Here are some [strategies](./toolbox.md) to use when facing some common problems. Feel free to submit new issues or PRs with more questions, or different solutions!
 
+## Feedback
+
+Whenever you want please share feedback! Here are some options for you
+ - find a coach via slack or in person
+ - open a Github issue or pull request with your thoughts
+ - use this [feedback form](https://makersacademy.typeform.com/to/q3RjqK) to share anonymously
+
 ## Weekend challenge
 
 At the end of the 1st week of the project there's a challenge for each pathway. Use it as always: a tool to help you self-assess your understanding. There won't be a cohort review on the following Monday.
