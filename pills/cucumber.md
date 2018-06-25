@@ -1,16 +1,16 @@
-#Cucumber
+# Cucumber
 
 [Cucumber](http://cukes.info/) is a tool for writing [acceptance tests](http://en.wikipedia.org/wiki/Acceptance_testing) in Ruby. It's widely used in conjunction with [RSpec](http://rspec.info).
 
 Cucumber functions as a description of the software for both the developer and the client, as well as a testing framework to determine whether the software is meeting the description. Although written in Ruby, Cucumber tests are written in a Domain Specific Language (DSL) called Gherkin, which makes the test readable to both the developer and their client alike.
 
-##Why not just use Rspec
+## Why not just use Rspec
 
 You *could* use Rspec for acceptance testing - no law against it. But Cucumber
 and Gherkin extend the tests beyond just testing -- they act as a specification
 and design document for the whole project (that everyone can read!)
 
-##Installation
+## Installation
 
 Cucumber is a gem, and so can be easily installed with the command
 
@@ -24,7 +24,7 @@ Take a look at what's on offer by running the help command.
 cucumber --help
 ```
 
-##OH HAI CUCUMNER!
+## OH HAI CUCUMBER!
 
 Let's make a test! First I'll crack open a directory to put this bit of fun in:
 
@@ -92,7 +92,7 @@ the action occurs. You're doing similar things in Rspec, but less explicitly.
 **But**. They all mean the same things - they tell Cucumber to make a new test
 there. You could also use <b>\*</b> -- making a bulleted list.
 
-###Many Languages
+### Many Languages
 
 You don't even have to use English - here's the same in Spanish...
 
@@ -125,7 +125,7 @@ Cucumber can handle most of the world's languages, making it easy to show people
 from anywhere what the software specification is (and yes, Klingon works too. No,
 I'm not demoing it).
 
-###On with the show
+### On with the show
 
 OK, so save off one of those files (the first one, in English, is what we'll be
 following below). Now when we run `cucumber` we get this exciting message:
@@ -303,7 +303,7 @@ a good place to start)
 
 Note that if you like/prefer gherkin style 'given, when, then' syntax you can also use it for Rspec tests: [https://github.com/jimweirich/rspec-given](https://github.com/jimweirich/rspec-given)
 
-###Further Reading
+### Further Reading
 
 - [Business Readable, Domain Specific Languages](http://martinfowler.com/bliki/BusinessReadableDSL.html)
 
