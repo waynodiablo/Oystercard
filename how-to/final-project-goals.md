@@ -30,13 +30,10 @@ With this in mind, coaches will be looking for a few things from you as a measur
 - [ ] All commits have a low complexity score
 
 ### Documentation
-- [ ] Documentation should be up to date and include:
-  - [ ] a description of the project
-  - [ ] a description of any prerequisites to running your application
-  - [ ] a guide to installing your application
-  - [ ] instructions for running unit tests
-  - [ ] application usage instructions
-  - [ ] details of any dependencies 
+- [ ] There is up-to-date documentation: 
+  - [ ] a project description
+  - [ ] how to install and run it
+  - [ ] how to run tests
   
 It's also a great idea for your team to keep some sort of record of your learning process.  This could take the form of a blog, a wiki or any other format you like.
 
