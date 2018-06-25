@@ -1,6 +1,6 @@
 ## Final Project Goals
 
-It's time to get started on your final projects! Over the course of your time at Maker's you've learned a bunch of of useful skills and it's really important that you keep working on them for the next two weeks.  
+It's time to get started on your final projects! Over the course of your time at Makers you've learned a bunch of of useful skills and it's really important that you keep working on them for the next two weeks.  
 
 Even if your final project looks awesome, if your team's process was poor then it's not going to have been a great outcome for you, and your time spent working on it is likely to be far less enjoyable.
 
