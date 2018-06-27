@@ -28,6 +28,7 @@ With this in mind, coaches will be looking for a few things from you as a measur
   - [ ] a description of the problem it solves, with reference to the user.
 - [ ] The Linter passes on all commits.
 - [ ] All commits have a low complexity score.
+- [ ] All pull requests are peer reviewed. 
 
 ### Documentation
 - [ ] There is up-to-date documentation: 
