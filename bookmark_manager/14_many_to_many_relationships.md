@@ -38,10 +38,12 @@ In this challenge, you will set up a **many to many relationship** between Bookm
 - [ ] Unlike comments, users should be able to click on a tag and see only bookmarks tagged with that tag.
 
 ## Hints
+&nbsp;<details><summary>CLICK ME</summary>
 - Again, this challenge has multiple possible solutions, but you'll definitely need to create two new models `Tag` and `BookmarkTag`.
 - Whenever you add a new `Tag` to the database, you'll likely need to save a `LinkTag` separately.
 - Once you can save links to your database, in order to associate them with particular bookmarks in your views you'll probably want a `bookmark.tags` method which returns a list of all tags belonging to a given bookmark.
 - In order to filter by tag, you're also likely to need a `tag.bookmarks` method which returns all the bookmarks belonging to a given tag.
+&nbsp;</details>
 
 ## Resources
 

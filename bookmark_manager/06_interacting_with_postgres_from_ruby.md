@@ -21,7 +21,9 @@ In this challenge, you will get the application and database talking to each oth
 - [ ] Make sure this new bookmark shows up on the `/bookmarks` page.
 
 ## Hints
+&nbsp;<details><summary>CLICK ME</summary>
 - Depending on how closely you have been following the walkthroughs, you might see your tests failing as you work through this step.  Why might this be?
+&nbsp;</details>
 
 ## Resources
 

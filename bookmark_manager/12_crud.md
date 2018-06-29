@@ -40,10 +40,11 @@ Remember to maintain RESTful routing conventions.
 - [ ] Complete the 'update bookmarks' requirement.
 
 ##Hints
-
+&nbsp;<details><summary>CLICK ME</summary>
 - You'll likely need to write the methods `Bookmark.delete` and `Bookmark.update`.  First however, you'll probably want a `Bookmark.find` method in order to retrieve the specific Bookmark you want to perform one of those actions on.
 - You could make use of the [SQL WHERE keyword](https://www.w3schools.com/sql/sql_where.asp) to retrieve the correct Bookmark.
 - In order to keep your routes RESTful, you may want to make use of Sinatra's [named parameters](http://sinatrarb.com/intro.html)
+&nbsp;</details>
 
 ## Resources
 
