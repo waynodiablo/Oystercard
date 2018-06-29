@@ -20,9 +20,10 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 - [ ] Update the `http://askjeeves.com` link to `http://destroyallsoftware.com` using an `UPDATE` statement.
 
 ## Hints
-
+&nbsp;<details><summary>CLICK ME</summary>
 * Again, use the documents linked below to look up the commands you need.
 * Sanity check each step using a SELECT statement.
+&nbsp;</details>
 
 ## Resources
 

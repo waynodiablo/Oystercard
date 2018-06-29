@@ -45,7 +45,7 @@ The `Post` class would, in this case, _wrap_ the data in each row of the table, 
   - [ ] Clicking a link in the list should open the `url` of the bookmark.
 
 ## Hints
-
+&nbsp;<details><summary>CLICK ME</summary>
 #### Returning objects that respond to `#id`, `#title` and `#url` from database queries
 
 You may want to update the `Bookmark.create` and `Bookmark.all` methods to return instances of the `Bookmark` class instead of strings. The instance should wrap and expose the attributes `id`, `title` and `url`.
@@ -64,6 +64,7 @@ Either way, you can set what Ruby considers to be equal by defining your own `==
 # true if Bookmark defines its own == method, false otherwise.
 Bookmark.new(1) == Bookmark.new(1)
 ```
+&nbsp;</details>
 
 ## Resources
 

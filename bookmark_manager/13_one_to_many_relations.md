@@ -33,10 +33,12 @@ In this challenge, you will set up a [one to many relationship](http://www.datab
 - [ ] Display those comments below each bookmark.
 
 ## Hints
+&nbsp;<details><summary>CLICK ME</summary>
 - There is more than one reasonable approach to completing this challenge, but there are several things that any implementation will need.
   - A database table for storing comments which holds a reference to a bookmark.
   - A `Comment` model with a method for creating comments
 - You will also need a method for retrieving a list of all comments with a particular `bookmark_id`.  This could be `bookmark.comments`.
+&nbsp;</details>
 
 ## Resources
 

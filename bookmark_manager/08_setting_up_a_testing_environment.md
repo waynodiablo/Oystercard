@@ -32,7 +32,7 @@ In this challenge, you will write a script to **reset your database** every time
 - [ ] Add required test bookmarks in each test that expects them.
 
 ## Hints
-
+&nbsp;<details><summary>CLICK ME</summary>
 #### Switching database depending on environment
 
 You might want to use the global Rack [Environment Variable](http://blog.honeybadger.io/ruby-guide-environment-variables/), `ENV`, as a variable that stores the current environment. You could then use it to connect to the correct database for your environment.
@@ -58,6 +58,7 @@ end
 #### Adding expected bookmarks
 
 You can `require` and use `pg` in your specs too: for instance, to insert data into the database in each `it()` block.
+&nbsp;</details>
 
 ## Resources
 

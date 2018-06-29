@@ -20,8 +20,10 @@ In this challenge, you will use Postgres' built-in command-line program, `psql`,
 - [ ] Use `psql` to create a table called `bookmarks` in the `bookmark_manager` database, with two columns: `id`, a `SERIAL PRIMARY KEY`, and `url`, a `VARCHAR` with a maximum length of `60`.
 
 ## Hints
+&nbsp;<details><summary>CLICK ME</summary>
 - All of the commands you will need for this step are listed in the two documents listed below.  You may need to check both of them.
 - Don't forget that you can list databases using `\l` and tables using `\dt`. You can use these commands to check that your set up has been successful.
+&nbsp;</details>
 
 ## Resources
 
