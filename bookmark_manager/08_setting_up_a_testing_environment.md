@@ -37,6 +37,8 @@ In this challenge, you will write a script to **reset your database** every time
 
 You might want to use the global Rack [Environment Variable](http://blog.honeybadger.io/ruby-guide-environment-variables/), `ENV`, as a variable that stores the current environment. You could then use it to connect to the correct database for your environment.
 
+Think about how you can ensure that the variable is assigned a particular value every time you run RSpec.
+
 #### Truncating tables between tests
 
 You might want to write a script, `setup_test_database.rb`, that uses `pg` to `TRUNCATE` the bookmarks table.
@@ -51,7 +53,7 @@ config.before(:each) do
 end
 ```
 
-> You can even use filesystem commands like `require` and `load` inside this `configure` block.
+> You can call methods, and even use filesystem commands like `require` and `load` inside this `configure` block.
 
 #### Adding expected bookmarks
 

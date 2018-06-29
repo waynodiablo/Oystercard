@@ -18,7 +18,9 @@ We've written a user story and we have a vague idea of the first interaction. Le
 - [ ] Set up Sinatra with RSpec and Capybara.
 - [ ] Test-drive the first feature: viewing links. Avoid adding a database.
 
-> You'll probably want to create a `Bookmark` model that responds to the class method `.all` with a hard-coded array of `Bookmark` instances.
+## Hints
+* You set up a Sinatra project with RSpec and Capybara last week.  Need a reminder?  Click [here](https://github.com/makersacademy/course/blob/master/pills/ruby_web_project_setup_list.md)
+* You'll probably want to create a `Bookmark` model that responds to the [class method](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/) `.all` with a hard-coded array of `Bookmark` instances.
 
 ## Resources
 

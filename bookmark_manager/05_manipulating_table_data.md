@@ -19,6 +19,11 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 - [ ] Delete the link with a URL of `http://twitter.com` using a `DELETE` statement.
 - [ ] Update the `http://askjeeves.com` link to `http://destroyallsoftware.com` using an `UPDATE` statement.
 
+## Hints
+
+* Again, use the documents linked below to look up the commands you need.
+* Sanity check each step using a SELECT statement.
+
 ## Resources
 
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
