@@ -32,7 +32,7 @@ In this challenge, you will set up a [one to many relationship](http://www.datab
 - [ ] Allow users to create comments on bookmarks.
 - [ ] Display those comments below each bookmark.
 
-## Hints
+## Hints
 &nbsp;<details><summary>CLICK ME</summary>
 - There is more than one reasonable approach to completing this challenge, but there are several things that any implementation will need.
   - A database table for storing comments which holds a reference to a bookmark.
