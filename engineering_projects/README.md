@@ -2,8 +2,8 @@
 
 ## Pathways
 
-- [rails](./rails)
-- [java](./java)
+- [Rails](./rails)
+- [Java](./java)
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ By the end of the engineering project, the goal is to be able to answer "yes" to
 
 This is not a test, nor a challenge to see how many features you can cram into the application.
 
-**It is more important to pay attention to your learning objectives and the [assessment criteria](./assessment_criteria.md)**. The points listed in the criteria are general expectations of a good project.
+**It is more important to pay attention to your learning objectives and the [Makers Engineering Project criteria](https://github.com/makersacademy/course/blob/master/final_projects/project_criteria.md)**. The points listed in the criteria are general expectations of a good project.
 
 ## Schedule
 
@@ -43,6 +43,13 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 ## Toolbox
 
 Here are some [strategies](./toolbox.md) to use when facing some common problems. Feel free to submit new issues or PRs with more questions, or different solutions!
+
+## Feedback
+
+Whenever you want please share feedback! Here are some options for you
+ - find a coach via slack or in person
+ - open a Github issue or pull request with your thoughts
+ - use this [feedback form](https://makersacademy.typeform.com/to/q3RjqK) to share anonymously
 
 ## Weekend challenge
 

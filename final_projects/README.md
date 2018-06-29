@@ -26,11 +26,7 @@ The final projects also provide a safe environment for you to be creative and en
 
 ## What is a successful project?
 
-This is not a test, nor a challenge to see how many features you can cram in. Far more important is that you have:
-
-* A fully tested project.
-* Well-crafted code.
-* A team that has worked well together using Agile methodologies.
+This is not a test, nor a challenge to see how many features you can cram in. Instead, make sure that all code adheres to the [Engineering Project criteria](./project_criteria.md).
 
 ## What technology should you use?
 
@@ -69,4 +65,3 @@ See the [guidelines](../pills/final_project_presentations.md).
 
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/final_projects.md)
-* [Remote](../sequence/remote/final_projects.md)

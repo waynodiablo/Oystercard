@@ -1,3 +1,3 @@
 ## Intro to Java
 
-https://github.com/dearshrewdwit/java_intro
+https://github.com/makersacademy/java_intro

@@ -8,7 +8,7 @@ Junior Developers should:
 * be able to communicate
 * appreciate libraries as not magic and how to debug them
 * be able to use a debugger effectively
-* not ignor outstanding errors --> clean environment
+* not ignore outstanding errors --> clean environment
 * be able to understand command line not just IDE
 * be able to interpret stack traces
 * produce clean code
