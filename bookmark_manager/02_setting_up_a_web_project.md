@@ -19,8 +19,10 @@ We've written a user story and we have a vague idea of the first interaction. Le
 - [ ] Test-drive the first feature: viewing links. Avoid adding a database.
 
 ## Hints
+&nbsp;<details><summary>CLICK ME</summary>
 * You set up a Sinatra project with RSpec and Capybara last week.  Need a reminder?  Click [here](https://github.com/makersacademy/course/blob/master/pills/ruby_web_project_setup_list.md)
 * You'll probably want to create a `Bookmark` model that responds to the [class method](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/) `.all` with a hard-coded array of `Bookmark` instances.
+&nbsp;</details>
 
 ## Resources
 
