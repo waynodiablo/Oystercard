@@ -1,4 +1,18 @@
-#### - We have this ticket, but we don't know where to start on it.
+# Engineering Project Toolbox
+
+## Here you'll find tools to help with the following scenarios
+
+* [We have this ticket, but don't know where to start on it.](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--we-have-this-ticket-but-we-dont-know-where-to-start-on-it)
+* [We've finished our ticket, now we don't know what to do next](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--weve-finished-our-ticket-now-we-dont-know-what-to-do-next)
+* [We're finding pairing difficult in our team](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--were-finding-pairing-difficult-in-our-team)
+* [We're not sure we're learning much without a tutorial](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--were-not-sure-were-learning-much-without-a-tutorial)
+* [What should we test in a Rails app?](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--what-should-we-test-in-a-rails-app)
+* [I've spent two days working on a problem, and I'm still blocked!](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#ive-spent-two-days-working-on-a-problem-and-im-still-blocked)
+
+
+
+
+#### We have this ticket, but we don't know where to start on it
 https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING.md
 
 - Spend some time investigating how to approach it.
@@ -9,7 +23,7 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 - Create individual tickets for all of them, and put them in the right list.
 - Choose the smallest and easiest ticket first
 
-#### - We've finished our ticket, now we don't know what to do next
+#### We've finished our ticket, now we don't know what to do next
 https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING.md
 
 0. In the Unestimated list, split a big ticket into smaller tickets if needed.
@@ -23,7 +37,7 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 8. Move to Done
 9. Repeat from 3. Or from 1 if none are left
 
-#### - We're finding pairing difficult in our team
+#### We're finding pairing difficult in our team
 
 - honest communication is a skill everyone can improve on
 - normalise giving feedback
@@ -34,7 +48,7 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 - set timers for role switching, and timers for pairing sessions.
   - 1hr pairing in 15 min sessions before switching roles.
 
-#### - We're not sure we're learning much without a tutorial
+#### We're not sure we're learning much without a tutorial
 
 - Focus on giving yourself a clear objective and a way to test that you've achieved it, eg:
   - Objective: I can follow the flow of data in a req/res cycle
@@ -48,7 +62,7 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 - explain your learning to someone else
 - Keep doing and playing as much as you can without a tutorial
 
-#### - What should we test in a Rails app?
+#### What should we test in a Rails app?
 
 - Test the code that you write, not the code already written for you.
 - Rails is opinionated. One of its opinions is about the kinds of tests you need to write.
@@ -61,8 +75,8 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
 #### I've spent two days working on a problem, and I'm still blocked!
 
 1. Break your problem down into steps. For each step:
-  - do you need more information?
-  - do you need a specific kind of information?
-  - from who or where can you get that information?
+    - do you need more information?
+    - do you need a specific kind of information?
+    - from who or where can you get that information?
 2. Improve your problem solving process
-  - keep escalating the problem until you find the right un-blocker: use the coaches to help you!
+    - keep escalating the problem until you find the right un-blocker: use the coaches to help you!
