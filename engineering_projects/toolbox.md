@@ -2,11 +2,11 @@
 
 ## Here, you'll find help with the following scenarios
 
-* [We have this ticket, but don't know where to start on it.](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--we-have-this-ticket-but-we-dont-know-where-to-start-on-it)
-* [We've finished our ticket, now we don't know what to do next](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--weve-finished-our-ticket-now-we-dont-know-what-to-do-next)
+* [We have this ticket, but don't know where to start on it.](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#we-have-this-ticket-but-we-dont-know-where-to-start-on-it)
+* [We've finished our ticket, now we don't know what to do next](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#weve-finished-our-ticket-now-we-dont-know-what-to-do-next)
 * [We're finding pairing difficult in our team](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--were-finding-pairing-difficult-in-our-team)
-* [We're not sure we're learning much without a tutorial](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--were-not-sure-were-learning-much-without-a-tutorial)
-* [What should we test in a Rails app?](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--what-should-we-test-in-a-rails-app)
+* [We're not sure we're learning much without a tutorial](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#were-not-sure-were-learning-much-without-a-tutorial)
+* [What should we test in a Rails app?](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#what-should-we-test-in-a-rails-app)
 * [I've spent two days working on a problem, and I'm still blocked!](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#ive-spent-two-days-working-on-a-problem-and-im-still-blocked)
 
 
