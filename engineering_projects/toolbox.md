@@ -1,6 +1,6 @@
 # Engineering Project Toolbox
 
-## Here you'll find tools to help with the following scenarios
+## Here, you'll find help with the following scenarios
 
 * [We have this ticket, but don't know where to start on it.](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--we-have-this-ticket-but-we-dont-know-where-to-start-on-it)
 * [We've finished our ticket, now we don't know what to do next](https://github.com/makersacademy/course/blob/master/engineering_projects/toolbox.md#--weve-finished-our-ticket-now-we-dont-know-what-to-do-next)
