@@ -1,11 +1,11 @@
 DataMapper
 =========
 
-##Adding the database
+## Adding the database
 
 For instructions on how to install your database (and learn some basic interactions via SQL) please [visit the PostgreSQL pill.](../pills/postgres.md)
 
-##Talking to the database with Ruby
+## Talking to the database with Ruby
 So now we have a database running on our machine, how do we talk to it from Ruby?  We could start by looking for some low-level ruby libraries that allow us to interact directly with our database.  For example, libraries that allow enable us to execute `SELECT` statements to retrieve rows of data from our tables. We could then work out how to convert this data into Ruby objects that we can use in our code.  And that would be a _lot_ of work.  Fortunately, this is a problem that has been solved many times before; what we need is an Object-Relational Mapper (ORM).
 
 We'll be using an ORM called [DataMapper](../pills/datamapper.md).  DataMapper serves as a bridge between our Ruby classes and the database.  It allows us to define mappings between our classes and tables declaratively using a DSL.  Datamapper then handles all the necessary communication with the database to create, read, update and delete our data.
