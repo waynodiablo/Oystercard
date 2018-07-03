@@ -8,13 +8,13 @@ Most web applications don't return basic strings: they return advanced HTML docu
 
 In this challenge, you will substitute your basic response strings with some HTML.
 
-### Challenge Setup
+### Challenge Setup
 
 By the end of this challenge, you should see (in your browser) something like this:
 
 ![A fluffy cat in a red border. Cute.](./images/sinatra_cat_route.png)
 
-### Learning Objectives covered
+### Learning Objectives covered
 - Return HTML from a Sinatra route
 
 ### To complete this challenge, you will need to:
