@@ -16,13 +16,13 @@ Sinatra's error messages are very helpful. In this case, we are told what we can
 
 In this challenge, you will define a root **route** for Sinatra that responds with a string `"hello!"`.
 
-### Challenge Setup
+### Challenge Setup
 
 Here's what you should end up with:
 
 !["hello!" string in a browser window](./images/first_sinatra_route.png)
 
-### To complete this challenge, you will need to:
+### To complete this challenge, you will need to:
 
 - [ ] Use Sinatra's error message above to define a route that responds to incoming requests to the `/` path
 - [ ] Return the string `"hello!"` from this route
