@@ -38,33 +38,36 @@ database:
 Relational databases are managed using relational database management systems
 (RDBMS), such as PostgreSQL, MySQL and SQL Server.
 
-###One-to-One Relationships
+### One-to-One Relationships
 
 We could represent the users addresses like this:
+
+User v2
 
 |      id | user_name | password | email       |city | postcode|
 |---------|-----------|----------|-------------|-------|-------|
 |  1      | bob       | 1234     | bob@bob.com |London|SW1 1DB|
 |  2      | tom       | 5678     | tom@tom.com |Wisbech|PE13 2DB|
-[User_v2]
 
 But it would be better to make another table for the addresses and set up
 a relationship between the two tables. That's the 'relational' in Relational
 Database. The Address table might look like this:
 
+Address v1
+
 | id |  city | postcode |
 |---|---|---|
 | 27 |London|SW1 1DB|
 | 32 |Wisbech|PE13 2DB|
-[Address_v1]
 
 And the User table now looks like this:
+
+User v3
 
 |      id | user_name | password | email       | address_id |
 |---------|-----------|----------|-------------|----------|
 |  1      | bob       | 1234     | bob@bob.com |  27 |
 |  2      | tom       | 5678     | tom@tom.com |  32 |
-[User_v3]
 
 We can take a look at the full information about a user by using a SQL
 `INNER JOIN` statement as follows:
@@ -78,22 +81,26 @@ on user to get the matching `id` field on address. Note that if there is no
 Address for a user you will not see the user - you're exclusively showing the
 data that matches.
 
-###One-to-Many Relationships
+### One-to-Many Relationships
 
 Let's say our users are writing blogs. We'd need to save these blogs to the
 database -- title, content and all. Were we to store that information on the
 User table we'd be looking at something pretty ugly. And wide...
 
+User v4
+
 |      id | user_name | password | email       | address_id | blog1_title| blog1_content| blog2_title| blog2_content|
 |---------|-----------|----------|-------------|----------|---|---|---|---|
 |  1      | bob       | 1234     | bob@bob.com |  27 | my dog| my lovely dog| my cat| my wonderful cat|
 |  2      | tom       | 5678     | tom@tom.com |  32 | trees | Lovely trees| Prince| Yay Purple Rain |
-[User_v4]
+
 
 This is bad. We'd have to be adding new fields for each extra blog post, along
 with leaving some of the 'cells' for each row blank when there isn't an nth
 blog post by a user. Luckily there's a way around this by extracting out
 the blog posts to a separate table:
+
+Blogposts v1
 
 |id | user_id | title | content |
 |---|---|---|---|
@@ -101,7 +108,6 @@ the blog posts to a separate table:
 |2 | 2 | trees | Lovely trees |
 |3 | 2 | Prince | Yay Purple Rain|
 |4 | 1 | my cat | my wonderful cat|
-[Blogposts_v1]
 
 This is called a *one-to-many relationship* -- one user can have many blog
 posts. You can see that it's handled in the same way as the one-to-one
@@ -119,7 +125,7 @@ matching right hand side data (Blog). If there is no matching data on the right
 you'll just get an empty cell. This will let us see all users - even if they
 don't have a blog post.
 
-###Many-to-Many Relationships
+### Many-to-Many Relationships
 
 This is where things get a little gnarly. Blogging software often has a way of
 tagging each post based on its content. For instance 'animals', 'cats', 'gardening' and
@@ -131,18 +137,21 @@ a tag has posts. A *many-to-many relationship*.
 We could extend out the Blogposts table to display each and every tag for each
 post:
 
+Blogposts v2
+
 |id | user_id | title | content | tag1 | tag2|
 |---|---|---|---|---|---|
 |1 | 1 | my dog | my lovely dog | animals| |
 |2 | 2 | trees | Lovely trees | gardening| |
 |3 | 2 | Prince | Yay Purple Rain| diminutive pop-stars| |
 |4 | 1 | my cat | my wonderful cat| animals| cats|
-[Blogposts_v2]
 
 But we've already seen that this ends in a very long table, and the repetition
 of content. It also means that there's no direct relationship between the
 tags themselves and the blog posts - we'd have to have a Tags table that looked
 like this:
+
+Tags v1
 
 |id | tag_name| blog_post_one_id| blog_post_two_id|
 |---|---|---|---|
@@ -150,7 +159,6 @@ like this:
 |2 | animals|1 |4 |
 |3 | gardening|2 | |
 |4 | diminutive pop-stars|3 | |
-[Tags_v1]
 
 and then change all the tag fields in the Blogposts table into tag_ids. No fun,
 and lots of repetition of information.
@@ -160,6 +168,8 @@ using a *join table*. The join table matches ids of one table to ids in another
 table, removing the repetition in each. The join table for the tags would look
 like this:
 
+TagsBlogposts
+
 |blog_id|tag_id|
 |---|---|
 |4| 1|
@@ -167,7 +177,6 @@ like this:
 |1 |2|
 |2 |3|
 |3| 4|
-[TagsBlogposts]
 
 See how the table doesn't repeat any lines? And how it neatly joins the two
 tables? None of the data is now repeated in the other table - we would say that
