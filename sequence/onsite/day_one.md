@@ -4,17 +4,18 @@ If you have any questions, just ask!
 
 ## Schedule for the first day
 
-* 08.30 - 09.30 Breakfast
-* 09.30 - 10.30 Welcome to Makers (Coach)
-* 10.30 - 11.00 Name tag making (Coach, staff, all students)
-* 11.00 - 11.30 Get and setup your laptops
-* 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (Dana)
-* 12.30 - 13.30 Lunch and more laptop setup
-* 13.30 - 14.00 Meditation
-* 14.30 - 14.45 Introduction to careers team (Careers team)
-* 14.45 - 15.30 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (Coach)
-* 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges)
-* 17.30 - 18.30 Social with pizza
+* 08.30 - 09.30 Breakfast (2nd Floor Kitchen)
+* 09.30 - 10.30 Welcome to Makers (2nd Floor)
+* 10.30 - 11.00 Name tag making (2nd Floor)
+* 11.00 - 11.30 Get and setup your laptops (1st Floor)
+* 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (2nd Floor)
+* 12.30 - 13.30 Lunch and more laptop setup 
+* 13.30 - 14.00 Meditation (2nd Floor)
+* 14.00 - 14.30 Get your Makers T-shirt (3rd Floor)
+* 14.30 - 14.45 Introduction to careers team (Careers team)(2nd Floor)
+* 14.45 - 15.30 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (2nd Floor)
+* 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) (3rd Floor)
+* 17.30 - 18.30 Social with pizza (2nd Floor Kitchen)
 
 ## Code of conduct
 
