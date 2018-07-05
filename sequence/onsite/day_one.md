@@ -11,9 +11,9 @@ If you have any questions, just ask!
 * 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (2nd Floor)
 * 12.30 - 13.30 Lunch and more laptop setup 
 * 13.30 - 14.00 Meditation (2nd Floor)
-* 14.00 - 14.30 Get your Makers T-shirt (3rd Floor)
-* 14.30 - 14.45 Introduction to careers team (Careers team)(2nd Floor)
-* 14.45 - 15.30 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (2nd Floor)
+* 14.00 - 14.15 Get your Makers T-shirt (3rd Floor)
+* 14.15 - 15.00 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (2nd Floor)
+* 15.00 - 15.15 Introduction to careers team (Careers team)(2nd Floor)
 * 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) (3rd Floor)
 * 17.30 - 18.30 Social with pizza (2nd Floor Kitchen)
 
