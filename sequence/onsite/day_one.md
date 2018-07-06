@@ -14,6 +14,7 @@ If you have any questions, just ask!
 * 14.00 - 14.15 Get your Makers T-shirt (3rd Floor)
 * 14.15 - 15.00 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (2nd Floor)
 * 15.00 - 15.15 Introduction to careers team (Careers team)(2nd Floor)
+* 15.15 - 15.20 Introduction to marketing (Anna) (2nd Floor)
 * 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) (3rd Floor)
 * 17.30 - 18.30 Social with pizza (2nd Floor Kitchen)
 
