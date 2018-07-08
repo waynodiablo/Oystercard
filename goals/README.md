@@ -41,8 +41,7 @@ And then there's the matter of making the environment here as rich in opportunit
 ## What is your day like?
 In weeks 1-5:
 
-* **09.30–10.00: Daily review & planning.** You'll plan your day using our online tool. You will decide which goal to focus on today, what action to take to work towards it, and how to assess your progress.
-* **10.00–12.30: Self-directed work.** You'll work according to your plan. Coaches will be running workshops, mini projects. 1:1s, or generally available to chat to.
+* **09.30–12.30: Goal-directed project work.** You'll work independently on projects to achieve goals. You'll use [Diode](https://diode.makersacademy.com/) to self-assign projects and assess your progress. Coaches will be running workshops, mini projects, 1:1s, or generally available to chat to.
 * **12.30–13.30: Lunch.** Go out in droves to one of Shoreditch's fine local eateries, or there's often a lunchtime talk from one of the many CTOs that our hiring team speak to!
 * **13.30–14.00: Meditation.** Programming is extremely challenging. Meditation helps keep a lid on things, keeps you grounded, and helps keep your brain sharp.
 * **14.00–18.00: Challenges in pairs.** You'll work on a different set of challenges every week and with a different person every day. These form the main thread of the course and ensure everyone comes out with common important skills like debugging, pair programming, and web development.
