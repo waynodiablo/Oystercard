@@ -28,11 +28,11 @@ Here, you give feedback on what the person did that transgressed the code of con
 
 Choose the option below that makes you feel the most comfortable.  All reports are kept confidential.
 
-After you make a report, you'll have a conversation with a member of staff.  You'll talk through the incident.  And you'll decide together what to do next.  This might be a conversation mediated by the staff member between you and the person.  Or if might mean the staff member speaking to the person on your behalf.  Whichever it is, the member of staff will support you.
+After you make a report, you'll have a conversation with a member of staff.  You'll talk through the incident.  And you'll decide together what to do next.  This might be a conversation mediated by the staff member between you and the person.  Or it might mean the staff member speaking to the person on your behalf.  Whichever it is, the member of staff will support you.
 
 #### Reporting a transgression by speaking to a member of staff
 
-This can be your coach, or another member of staff you feel comfortable with.  Either message them over Slack or speak to them in person.
+This can be a coach or another member of staff you feel comfortable with.  Either message them over Slack or speak to them in person.
 
 #### Reporting a transgression by filling out the report form
 
