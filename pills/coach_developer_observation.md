@@ -2,7 +2,7 @@
 
 ## Prep
 
-* Book a slot with a coach.  (A spreadsheet will be sent out at the beginning of the week.)
+* Book a slot with a coach.  
 
 ## What will happen
 
