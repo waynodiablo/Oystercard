@@ -21,7 +21,7 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 #### Concepts
 
 - The relationship between a client and a server.
-- How HTTP encodes information sent over the web.
+- How HTTP is used to send information over the web.
 - RESTful APIs.
 - The request/response cycle.
 - Web templating with HTML/CSS.
