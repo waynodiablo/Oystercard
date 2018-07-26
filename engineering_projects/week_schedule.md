@@ -2,9 +2,6 @@
 
 ## Week 1
 
-#### Daily
-- 9:30am - Goal Setting
-
 #### Monday
 - 10:00am - Kickoff
 
@@ -16,9 +13,6 @@
 - 15:30 - Cohort Retrospective
 
 ## Week 2
-
-#### Daily
-- 9:30am - Goal Setting
 
 #### Monday, Tuesday, Wednesday, Thursday
 - 9:45am - Team stand up _(suggested)_
