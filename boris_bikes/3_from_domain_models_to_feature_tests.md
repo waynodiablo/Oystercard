@@ -39,6 +39,12 @@ DockingStation | release_bike
 - [ ] Set a variable `docking_station` equal to a new `DockingStation` object
 - [ ] Explain to your pair partner what the resulting error means.
 
+### Hints
+<details><summary>CLICK ME</summary>
+- Don't panic when you see the error message!  Error messages are a good thing and can be super helpful as long as you engage with them properly.
+- Read the error message line by line with your partner to see what information you can gain from it.
+</details>
+
 ### Resources
 
 - [Ruby Variables](https://github.com/makersacademy/course/blob/master/pills/variables.md):pill:
