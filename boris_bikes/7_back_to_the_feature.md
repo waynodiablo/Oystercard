@@ -24,7 +24,7 @@ Here is a functional representation of those stories:
 
 Objects  | Messages
 ------------- | -------------
-Person  | 
+Person  |
 Bike  | working?
 DockingStation | release_bike
 
@@ -49,6 +49,13 @@ end
 - [ ] Explain to your pair partner why you do not see an error now, when you did before
 - [ ] Ask the `docking_station` instance to `release_bike`
 - [ ] Explain to your pair partner what the resulting error means.
+
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Another failing feature test! Just like before, read the error message line by line and extract as much information from it as you're able.</li>
+  <li>The key question to ask yourself here is; 'what is the error telling me to do next?'</li>
+</details>
 
 ### Resources
 - [Including files in Ruby](http://rubylearning.com/satishtalim/including_other_files_in_ruby.html)
