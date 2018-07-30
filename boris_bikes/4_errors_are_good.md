@@ -26,6 +26,13 @@ In this challenge, you will dissect a Command Line error message.
 - [ ] Use the Ruby Documentation to find out what the error means
 - [ ] Suggest one way of solving the error.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Error messages contain a lot of information and can feel kind of overwhelming - it's important to approach reading them systematically.</li>
+  <li>Go line by line and try to extract each piece of information listed above.</li>
+</details>
+
 ### Resources
 
 - [Using the stack trace (video)](https://www.youtube.com/watch?v=TF_-tfOc9Pw)
