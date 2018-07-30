@@ -29,8 +29,8 @@ In this challenge, you will dissect a Command Line error message.
 ### Hints
 
 <details><summary>CLICK ME</summary>
-  <li>Error messages contain a lot of information and can feel kind of overwhelming - it's important to approach reading them systematically.</li>
-  <li>Go line by line and try to extract each piece of information listed above.</li>
+  <li>Don't panic when you see the error message!  Error messages are a good thing and can be super helpful as long as you engage with them properly.</li>
+  <li>Read the error message line by line with your partner to see what information you can gain from it.</li>
 </details>
 
 ### Resources
