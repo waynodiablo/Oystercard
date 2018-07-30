@@ -15,7 +15,7 @@ In this challenge, you will transform a User Story into a Domain Model.
 Here is a user story:
 
 ```
-As a user, 
+As a user,
 So I can find customers,
 I want to search for my customers by their surnames.
 ```
@@ -24,7 +24,7 @@ And here is a functional representation of that story:
 
 Objects  | Messages
 ------------- | -------------
-User  | 
+User  |
 Customer  | find_by_surname
 
 You must translate these two user stories into a functional representation:
@@ -46,6 +46,14 @@ I'd like to see if a bike is working
 - [ ] Draw a table like the one above
 - [ ] Organise the nouns and verbs into Objects and Messages within the table
 - [ ] Draw a diagram that shows how your Objects will use Messages to communicate with one another
+
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>  
+    <li>The first part of this challenge is straightforward enough - use the table above as an example of what you need to achieve</li>
+    <li>Next, you'll need to create a diagram to demonstrate Object interactions.  This can take any form you like as long as it shows what your objects will be, and what messages you expect them to respond to</li>
+  </ul>
+</details>
 
 ### Resources
 - [Introduction to User Stories](https://www.mountaingoatsoftware.com/agile/user-stories)
