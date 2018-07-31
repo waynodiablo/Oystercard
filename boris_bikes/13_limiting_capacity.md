@@ -23,6 +23,13 @@ In this challenge, you will raise an exception when a user attempts to dock a bi
 
 - [ ] Deliver the feature above in a Test-Driven manner
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>We now want to set a limit on the number of Bikes a DockingStation can hold, but right now we don't know what that limit should be.  For now, lets keep things simple and assume that the limit shoudl be one Bike.  Run a feature test which expects an error when trying to dock a Bike in a DockingStation which already contains one.</li>
+  <li>No error - no surprises there.  Now write a matching unit test - this is likely to look similar to the test you wrote in the last step.  Once you have a failing test, get it to pass!</li>
+</details>
+
 ### Resources
 
 - [RSpec errors documentation (Github)](https://github.com/rspec/rspec-expectations#expecting-errors)
