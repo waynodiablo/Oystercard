@@ -28,6 +28,17 @@ In this challenge, you will convert your instance variable `@bike` to reference 
 - [ ] Update your `release_bike` and `dock` methods to work with this new array (i.e. make your tests pass).
 - [ ] Update your `release_bike` and `dock` guard conditions to account for the new capacity of 20 bikes.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Let's start with the feature test - we want to be able to dock 20 bikes without problem, then see an error when we attempt to dock the 21st.</li>
+  <li>It feels as though we're going to need to make some changes to our code to accommodate this new requirement - for a start, we should change the name of our instance variable to reflect the fact that it will now be holding multiple bikes.</li>
+  <li>If you run your tests now, you're likely to see several failures as a result of this name change.  Don't panic!  This is a great example of why it's so important to write tests in the first place - we have a clear picture of all of the points at which our code is now failing and the fixes we need to make.</li>
+  <li>First of all, lets update the instance variable to point at a collection which can hold a number of bikes - an array seems a sensible choice</li>
+  <li>The next step is to update our tests and code to deal with this change - use your currently failing tests as a guide.</li>
+  <li>Now we can - finally - update the guard condition on the dock_bike method to reflect the new capacity.</li>
+</details>
+
 ### Resources
 
 - [Ruby `initialize` method](http://www.rubyist.net/~slagell/ruby/objinitialization.html)
