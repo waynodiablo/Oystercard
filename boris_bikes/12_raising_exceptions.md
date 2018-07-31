@@ -6,7 +6,7 @@ In the last challenge, we allowed `DockingStation` instances to `dock` a `Bike` 
 
 You should now understand that your methods can return other objects: in this case, `#release_bike` returns a `Bike.new`.
 
-This seems like a problem. Our Docking Station actually instantiates a _new_ `Bike` instance each time we want one released: 
+This seems like a problem. Our Docking Station actually instantiates a _new_ `Bike` instance each time we want one released:
 
 ```ruby
 def release_bike
@@ -41,6 +41,14 @@ In this challenge, you will learn how to test and raise exceptions.
 - [ ] Make the test pass by raising an exception
 - [ ] Explain why you use curly braces in the RSpec error handling syntax to your partner
 - [ ] Feature-test the feature again.
+
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>We want to raise an error when a user tries to release a bike from an empty DockingStation.  What would an 'empty' DockingStation object look like? Presumably one where the instance variable you set up in the last step doesn't yet contain a bike.  Run a feature test with the expectation that releasing a bike from an empty docking station will raise an error</li>
+  <li>Unsurprisingly, the feature test fails.  Not because we see an error message, but rather because we don't - we can release bikes from empty DockingStations without any problem.  You know the drill by now - let's write a matching unit test.  RSpec provides us with a raise_error method for just this sort of situation, but it's usage is a little tricky.  Check the documentation below to see how it works.</li>
+  <li>The last step is to make this test past.  You'll need to do some research on how to raise an error in Ruby.</li>
+</details>
 
 ### Resources
 
