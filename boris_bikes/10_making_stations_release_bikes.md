@@ -37,6 +37,16 @@ In this challenge, you will deliver the completed feature from the first two use
 - [ ] Make this test pass
 - [ ] Feature-test the feature again.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Your feature test should help you ascertain whether DockingStation's release_bike does, on fact, give you a Bike.  Right now the answer is no.  Why is this?  Take a look at the release_bike method.</li>
+  <li>We'll want to fix this, but, as usual we'll need to write a test first.  Your test should check that you can call working? on the result of DockingStation.release_bike, and that the result of doing so is true.</li>
+  <li>you're likely to have to go through several iterations of this test before it finally passes.  Remember to let your error messages guide you, doing the bare minimum to make progress.</li>
+  <li>First, you'll need to make it so that your release_bike method returns a Bike.  Having done this your test will still fail - your working? method return nil.</li>
+  <li>It's super important to keep running your feature test periodically throughout this process - your unit tests are not bullet proof and you need to be sure that the different objects in your programme play well together.  It's likely that at some point you'll have an unexpected error in your feature tests complaining that Bike is not defined.  But it is!  We've seen a problem similar to this before - how did we solve it?</li>
+</details>
+
 ### Resources
 - :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
