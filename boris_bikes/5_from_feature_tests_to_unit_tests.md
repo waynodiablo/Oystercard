@@ -27,7 +27,7 @@ In this challenge, you will initialize a testing framework, **RSpec**, and plan 
 <details><summary>CLICK ME</summary>
   <li>Your first instinct might be to just create a DockingStation class but remember that we're learning to do TDD - we never write any code without first writing a failing unit test.</li>
   <li>First you'll need to set up RSpec - a testing framework for Ruby.  Check out the resources below for more information on how to do this.</li>
-  <li>Once RSpec is up and running, you'll need to create a spec file for your DockingStation tests.  RSpec expects this file to follow certain syntactic conventions and to be located in a specific place within your project.  Again, check the links below for more information</li>
+  <li>Once RSpec is up and running, you'll need to create a spec file for your DockingStation tests.  RSpec expects this file to follow certain syntactic and naming conventions.  Again, check the links below for more information</li>
   <li>You'll know that everything is working when you see an error message similar to the one in the last step.</li>
 </details>
 

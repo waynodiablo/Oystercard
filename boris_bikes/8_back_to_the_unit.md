@@ -27,7 +27,7 @@ In this challenge, you will write a unit test for the missing method, and make i
 <details><summary>CLICK ME</summary>
   <li>Our job, once again, is to write a unit test which fails in the same way as the feature test we have just run.  Again, this will require some RSpec specific syntax to achieve - check the resources below for more information on this.</li>
   <li>Once you have a failing test, the next step is to pass it in the simplest way possible?  How do we do this?  First of all you need to be clear on why the test is currently failing - what is the error message telling you to do?</li>
-  <li>Resist the temptation to make guesses about how you think a unit of behaviour will work in the long run - do the bare minimum required to get past this error message</li>
+  <li>Resist the temptation to make guesses about how you think a unit of behaviour will work in the long run - do the bare minimum required to get past this error message.</li>
 </details>
 
 ### Resources
