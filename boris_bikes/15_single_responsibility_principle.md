@@ -33,6 +33,15 @@ In this challenge, you will use **private methods** to extract method responsibi
 - [ ] Do the same for `release_bike`, using an `empty?` method
 - [ ] Use the `private` keyword to ensure these methods cannot be called from 'outside' instances of the `DockingStation` class.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Before we begin our refactor, it's important to understand why we're doing it.  Take a look at the section on Single Responsibility Principle in the first linked resource below.</li>
+  <li>Our dock method has multiple responsibilities - managing the docking of bikes (which seems reasonable), and defining the capacity of a DockingStation (which doesn't)</li>
+  <li>We should extract this second bit of behaviour out into a private 'full?' method - see the second link below for more information on how to do this.  It's worth noting that we don't need to write additional tests for private methods, so we can do this straight away.</li>
+  <li>any time we perform a refactor, we should run our tests - we want to be sure we didn't break anything!</li>
+</details>
+
 ### Resources
 
 - [Single Responsibility Principle (Thoughtbot)](https://robots.thoughtbot.com/back-to-basics-solid) <-- extracts classes rather than methods, but the principle still applies
