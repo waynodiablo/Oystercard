@@ -30,6 +30,13 @@ In this challenge, you will implement two User Stories with minimal scaffolding.
 
 - [ ] Use the Feature - Unit cycle to implement the above User Stories.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>There's a lot of work to get through in order to complete this step!  Go right back to the start of the development process - think about what the user stories tell you about the objects you're going to need and the interactions between them.</li>
+  <li>Notice that the user stories each contain a lot of information - you'll likely want to break each one up into multiple feature tests.</li>
+</details>
+
 ### Resources
 - :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
