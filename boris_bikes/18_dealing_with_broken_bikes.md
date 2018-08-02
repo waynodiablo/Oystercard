@@ -30,6 +30,12 @@ In this challenge, you will implement the above features using the skills you ha
 
 - [ ] Complete the Red-Green-Refactor TDD cycle for each of the features above.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>By now you should be getting to grips with the TDD cycle.  Tackle of the above user stories one at a time, going through the full process of feature testing, unit testings, then implementing the feature.  Everything you need for this challenge has been covered in earlier steps - good luck!</li>
+</details>
+
 ### Resources
 - :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
