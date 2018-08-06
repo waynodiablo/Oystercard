@@ -5,10 +5,10 @@ If you have any questions, just ask!
 ## Schedule for the first day
 
 * 08.30 - 09.30 Breakfast (2nd Floor Kitchen)
-* 09.30 - 10.30 Welcome to Makers (2nd Floor)
-* 10.30 - 11.00 Name tag making (2nd Floor)
-* 11.00 - 11.30 Get and setup your laptops (1st Floor)
-* 11.30 - 12.30 Life at Makers/Intro to Emotional Intelligence Curriculum (2nd Floor)
+* 09.30 - 11.00 Welcome to Makers (2nd Floor)
+* 11.00 - 11.20 Get and setup your laptops (1st Floor)
+* 11:20 - 11:30 Meet the coaches
+* 11.30 - 12.30 Life at Makers
 * 12.30 - 13.30 Lunch and more laptop setup 
 * 13.30 - 14.00 Meditation (2nd Floor)
 * 14.00 - 14.15 Get your Makers T-shirt (3rd Floor)
