@@ -29,6 +29,13 @@ In this challenge, you will modify your `intialize` function to accept a `capaci
 - [ ] Create a unit test for this default capacity
 - [ ] Use a default argument value within the `initialize` method to make this test pass.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>We want to be able to set the capacity for a DockingStation by passing a number as an argument at initialisation.  You should be able to TDD this behaviour without too much trouble.</li>
+  <li>Once this works, we want to ensure that if the user doesn't provide an argument then the capacity defaults to 20.  Ruby provides us with a handy bit of syntax to deal with situations just like this - check out the linked document below.  Run a feature test, write a failing unit test and get it to pass.</li>
+</details>
+
 ### Resources
 
 - [Method arguments in Ruby](http://www.skorks.com/2009/08/method-arguments-in-ruby/)

@@ -63,6 +63,12 @@ There are ways of DRYing the above up, as well: check the Resources for more inf
 - [ ] Refactor the `allow` statements to use method stubs at the point of `double` creation (see [shorthand syntax](https://github.com/rspec/rspec-mocks#method-stubs))
 - [ ] Ensure all your feature and unit tests are passing
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Everything you need to solve this challenge step is in the materials above. Take some time before you start to make sure you understand exactly why your tests are currently failing.</li>
+</details>
+
 ### Resources
 - [Mocking a simple return value](https://www.relishapp.com/rspec/rspec-mocks/v/2-14/docs/method-stubs/allow-with-a-simple-return-value)
 - [RSpec Method Stubs (shorthand) (Github)](https://github.com/rspec/rspec-mocks#method-stubs)

@@ -19,6 +19,14 @@ Every good code project starts with a git repository. To get started with Boris 
 - [ ] Commit your changes with a clear message
 - [ ] Push the project to Github.
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>At the bottom of this challenge outline, and for most others you'll see over the course of the week, you'll find some links to external resources. These links will provide you with useful information to help you complete the challenge in question so <b><i>it's super important to look at them</i></b>! Sometimes the links will provide you with everything you need to complete a challenge, sometimes they'll provide you with a jumping off point for further research, but they'll always be worth reading before you resort to checking the walkthrough.</li>
+    <li>You should have already done everything you need to do as part of this challenge during the PreCourse.  Look at the checklist above, completing the steps one at a time.  Refer to the links below if you're struggling to remember the command you need.</li>
+  </ul>
+</details>
+
 ### Resources
 - [Common command-line commands](http://guides.macrumors.com/Terminal)
 - :pill: [Advanced command-line commands](https://github.com/makersacademy/course/blob/master/pills/command_line.md)

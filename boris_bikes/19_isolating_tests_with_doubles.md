@@ -78,6 +78,14 @@ In the next challenge, we'll figure out how to get this test passing (i.e. how t
 - [ ] Run `rspec` and see that the tests fail.
 - [ ] Explain to your pair partner why the tests are failing.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Again, before we make these changes, it's important to know why we're doing them. To help understand, change the Bike class' 'working?' method to always return false.  We've introduced a bug into our application, but that's ok - our tests will help guard against breaking changes like this.  Try running RSpec now - as expected, you'll see some tests for you Bike class fail. Less helpfully, however, you'll also see some DockingStation tests failing - this really shouldn't be happening - the bug is in the Bike, not the DockingStation.</li>
+  <li>We get around this problem by isolating our unit tests - ensuring that they do not rely on the actual implementation of any Object other than the one we are currently testing.</li>
+  <li>RSpec provides us with some handy syntax to help implement this pattern - check out the example above or the linked resources below. Create a double for your Bike class, then swap it in for any references to real Bikes in your DockingStation tests.</li>
+</details>
+
 ### Resources
 - :pill: [Doubles](https://github.com/makersacademy/course/blob/master/pills/doubles.md)
 - [RSpec Mocks (docs)](https://relishapp.com/rspec/rspec-mocks/docs)

@@ -17,6 +17,13 @@ In this challenge, you will further refactor your code, using a **constant**.
 - [ ] Remove references to the magic number `20` in your implementation, using `DEFAULT_CAPACITY` instead.
 - [ ] Refactor your tests to use this new constant instead of the magic number `20`.
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>The first part of this challenge is fairly straightforward - define a constant and replace all references to the number 20.  For more on defining constants see the first linked article below</li>
+  <li>We'd also like to replace the magic numbers in our tests, but how can we get access to our constant within our spec files?  You'll need to do some research to find out!</li>
+</details>
+
 ### Resources
 
 - [Ruby Constants (RubyDoc)](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html)

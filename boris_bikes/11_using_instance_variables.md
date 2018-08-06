@@ -31,6 +31,14 @@ In this challenge, you will pass instances of the `Bike` class into a `DockingSt
 - [ ] Pass both tests
 - [ ] Use an instance variable with `attr_reader` to do a full test-implementation cycle for the second User Story above
 
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>As usual, we're starting this step of the challenge with a failing feature test.  You've seen this kind of failure before - write a matching unit test and pass it in the simplest way possible.</li>
+  <li>We now have a method for docking bikes, but it doesn't do anything.  In order to implement the desired behaviour, a DockingStation object needs to have somewhere to stokre the Bike objects which get docked. Ruby provides us with something called instance variables which are perfectly suited for this job. Take a look at the materials linked below for more information.</li>
+  <li>Once you start to understand how instance variable operate, you can write your test.  You want to be able to pass a bike as an argument to your dock method, and for that same bike to then be stored in your instance variable.  Implement this behaviour and you're done!</li>
+</details>
+
 ### Resources
 
 - [Instance variables: the basics (video)](https://www.youtube.com/watch?v=MfNpf-Bcnm8)

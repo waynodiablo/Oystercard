@@ -16,7 +16,7 @@ When you **instantiate** this class:
 
 ```ruby
 docking_station = DockingStation.new
-``` 
+```
 
 you have an object (`docking_station`) that responds to `release_bike`. You would like `release_bike` to give you a Bike object. You would also like to check that this object responds to a method `working?`.
 
@@ -45,6 +45,14 @@ In this challenge, you will run a Feature Test to test the above. It will fail, 
 - [ ] Fix the error you see, similarly to how you fixed the same error for DockingStation
 - [ ] Add a test to your `bike_spec.rb` file that expects `Bike` instances to `respond_to` the method `working?`
 - [ ] Make this test pass.
+
+### Hints
+
+<details><summary>CLICK ME</summary>
+  <li>Running your feature test will result in another error?  Why?</li>
+  <li>Right now, we haven't defined a Bike object - we'll need to do so, but first set up a bike_spec file.  Make sure that you've seen a failing test before you create the Bike</li>
+  <li>The last step here is to write a test for the Bike's working? method. Think back to how you did this for release_bike on the DockingStation. Get this test to pass in the simplest way possible.</li>
+</details>
 
 ### Resources
 - :pill: [RSpec predicate matchers](https://github.com/makersacademy/course/blob/master/pills/rspec_predicate.md)
