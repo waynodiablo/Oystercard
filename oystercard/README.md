@@ -9,14 +9,10 @@ Mindful engagement with these challenges can help you achieve these goals:
 <dl>
   <dt>I write code that is easy to change</dt>
   <dd>Writing easy to change software is highly prized amongst developers and employers. By developers because most of a developer's time is spent changing software. By employers because their teams can deliver value to customers faster.</dd>
-  <dt>I write code that is easy to understand</dt>
-  <dd>To change code you need to understand it. Easier to understand — easier to change.</dd>
   <dt>I can test-drive my code</dt>
   <dd>Tested software is easier to change because you can tell when it's broken just by running a command, even the tricky edge cases.</dd>
   <dt>I can build with objects</dt>
   <dd>Most code in the world is structured in small pieces called objects. This is done because it is easier to change than having everything in one place.</dd>
-  <dt>I know how my language works</dt>
-  <dd>Understanding your language is important because it helps you reason and communicate about software effectively. This makes your teams more effective, and most software is made by teams.</dd>
 </dl>
 
 ## Weekly challenge user stories
