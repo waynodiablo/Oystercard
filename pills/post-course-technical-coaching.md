@@ -55,9 +55,11 @@ We don't have a particularly slick booking system - just contact Becks, Mark or 
 
 Coding more and committing to a regular working day following the course can only positively impact your ability to find work.
 
-When shortlisting for jobs, there careers team are trying to balance a number of factors, but ultimately the hiring partners want to see the strongest applicants. Those applicants are assess on a number of factors, explained in more detail in our [shortlisting pill](https://github.com/makersacademy/jobhunters/blob/master/careers/shortlisting.md). In particular "How frequently are they committing code on github?", "Do they have a side project?" and "Is there proof that they have acted on technical feedback from previous applications?" are all things that you can demonstrate by maintaining a structure routine of development work after your graduate.
+When shortlisting for jobs, there careers team are trying to balance a number of factors, but ultimately the hiring partners want to see the strongest applicants. Those applicants are assess on a number of factors, explained in more detail in our [shortlisting pill](https://github.com/makersacademy/jobhunters/blob/master/careers/shortlisting.md).
 
-Why do these things matter? They matter because this is what our hiring partners want to see - when they're assessing candidates, they're going to look at your Github as almost the first port of call. They want to see not only that you did stuff during the course, but that you've remained committed to development after the course and that you have the initiative and the ability to keep challenging yourself in that environment.
+In particular "How frequently are they committing code on github?", "Do they have a side project?" and "Is there proof that they have acted on technical feedback from previous applications?" are all things that you can demonstrate by maintaining a structure routine of development work after your graduate.
+
+Why do these things matter? They matter because this is what our hiring partners want to see - they're going to look at your Github and they're going to ask us for our technical recommendations. If you've got high quality side projects or you've requested a mock interview and done well, that tells us that you're a top quality candidate and you're more likely to be shortlisted. 
 
 ## FAQs
 
