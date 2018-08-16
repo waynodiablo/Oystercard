@@ -26,6 +26,13 @@ As we discovered last week, errors are good. In this challenge, you will dissect
 - [ ] Use the Ruby Documentation to find out what the error means
 - [ ] Suggest one way of solving the error
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Again, this process is probably starting to feel pretty familiar by now. Read the error message closely and carefully, extracting as much information as you are able to.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Using the stack trace (video)](https://www.youtube.com/watch?v=TF_-tfOc9Pw)
 - [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
