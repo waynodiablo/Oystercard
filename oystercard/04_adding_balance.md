@@ -52,7 +52,6 @@ I want money on my card
   </ul>
 </details>
 
-
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 - [RSpec basic structure](https://www.relishapp.com/rspec/rspec-core/v/3-3/docs/example-groups/basic-structure-describe-it)
