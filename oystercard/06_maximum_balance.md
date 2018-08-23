@@ -35,6 +35,13 @@ I want a maximum limit (of £90) on my card
 - [ ] Make the error message include the limit value
 - [ ] Use interpolation to keep your code DRY
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Remember to check the materials below if you don't remember any of the steps involved here from last week. They contain everything you'll need to complete this stage.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Handling and Raising exceptions](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/41-exceptions/lessons/92-handling)
 - [raise_error matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/raise-error-matcher)
