@@ -33,6 +33,14 @@ I need to have the minimum amount (£1) for a single journey.
 - [ ] Update existing tests, if necessary, to make sure they still pass
 - [ ] Refactor to remove any magic numbers and replace with a constant
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>The first thing to think about, as always, is writing a test to cover this requirement. You'll need to find out how to test that an error has been raised - check the links below for more information.</li>
+    <li>With a test in place, you can now implement the feature.  There will be a few things to think about here - where to check that the card has sufficient balance, how to raise an error if it doesn't, and how this new behaviour might affect your existing tests.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Handling and Raising exceptions](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/41-exceptions/lessons/92-handling)
 - [raise_error matcher](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/raise-error-matcher)
