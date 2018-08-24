@@ -179,7 +179,9 @@ Most of the work and interventions we have run historically are meant to 'de-mag
 Note: they get the choice of morning goals / afternoon challenges vs all day project groups.
 
 * [Afternoons - Notes app](https://github.com/makersacademy/course/blob/master/further_javascript)
-* [Weekend - News summary](https://github.com/makersacademy/news-summary-challenge)
+* Weekend, either of:
+  * [News summary](https://github.com/makersacademy/news-summary-challenge)
+  * [Chitter API Frontend Challenge](https://gist.github.com/neoeno/ebdcab5af41f23fbbcd306256b097575)
 
 ### Practicals
 
