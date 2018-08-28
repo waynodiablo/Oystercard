@@ -30,7 +30,7 @@ When my journey is complete, I need the correct amount deducted from my card
 <details><summary>CLICK ME</summary>
   <ul>
     <li>Start with a test that ensures that the balance on your `Oystercard` is reduced on touch out.  The syntax you'll need to do this is above.</li>
-    <li>Your `deduct` method should be made private - ensure that you understand why this is.</li>
+    <li>Your `deduct` method should now be made private - ensure that you understand why this is the case.</li>
   </ul>
 </details>
 

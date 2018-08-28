@@ -33,6 +33,7 @@ I want to add money to my card
 <details><summary>CLICK ME</summary>
   <ul>
     <li>Be sure to carefully follow the full TDD cycle - RED, GREEN, REFACTOR.</li>
+    <li>Again, if you start the process with a `responds_to` test, ensure that you replace it with something more rigorous - possibly by using RSpec's `change by` syntax.</li>
   </ul>
 </details>
 

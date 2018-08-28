@@ -39,6 +39,8 @@ I want a maximum limit (of £90) on my card
 <details><summary>CLICK ME</summary>
   <ul>
     <li>Remember to check the materials below if you don't remember any of the steps involved here from last week. They contain everything you'll need to complete this stage.</li>
+    <li>Once your test is passing, your `top_up` method is likely to have multiple responsibilities - consider refactoring some of this behaviour into a private method.</li>
+    <li>You now have two tests for your `top_up` method. Consider using a describe block in your `oystercard_spec` file to keep your tests well organised.</li>
   </ul>
 </details>
 
