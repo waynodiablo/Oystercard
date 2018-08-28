@@ -1,8 +1,8 @@
 # Walkthrough - Setting up a Database
 
-[Back to Challenge](../03_setting_up_a_database.md)
+[Back to Challenge](../04_setting_up_a_database.md)
 
-There are two ways of installing PostgreSQL: 
+There are two ways of installing PostgreSQL:
 
 1. (not recommended) Download the PostgreSQL app, [Postgres.app](https://postgresapp.com/).
 2. (yes recommended) Use a package manager, like [Homebrew](https://brew.sh/).
@@ -77,4 +77,4 @@ postgres=# \q
 
 Because you made a database with the same name as your computer, from now on you will be able to log in to `psql` without having to specify the database you want to log into. It's enough to type `psql` and get writing SQL.
 
-[Next Challenge](../04_creating_your_first_table.md)
+[Next Challenge](../05_creating_your_first_table.md)

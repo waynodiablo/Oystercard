@@ -2,10 +2,7 @@
 
 [Back to the Challenge Map](00_challenge_map.md#challenges)
 
-We've written a user story and we have a vague idea of the first interaction. Let's set up:
-
-- a **basic Ruby web project**.
-- this first interaction.
+We've written a user story and we have an idea of the first interaction, before we can start implementing this feature we need to **set up a basic Ruby web project**.
 
 > We're going to use Capybara with RSpec and Sinatra.
 
@@ -16,17 +13,17 @@ We've written a user story and we have a vague idea of the first interaction. Le
 ## To complete this challenge, you will need to
 
 - [ ] Set up Sinatra with RSpec and Capybara.
-- [ ] Test-drive the first feature: viewing links. Avoid adding a database.
+- [ ] Set up a 'Hello, world' Sinatra application.
+- [ ] Test drive a simple index page for your bookmark manager.
 
-## Hints
-&nbsp;<details><summary>CLICK ME</summary>
-* You set up a Sinatra project with RSpec and Capybara last week.  Need a reminder?  Click [here](https://github.com/makersacademy/course/blob/master/pills/ruby_web_project_setup_list.md)
-* You'll probably want to create a `Bookmark` model that responds to the [class method](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/) `.all` with a hard-coded array of `Bookmark` instances.
-&nbsp;</details>
+> Optional set up steps
+- Now is a good time to set up linting and test coverage reporting - we recommend using Rubocop and SimpleCov. Doing this early will help you to keep your code clean and test coverage high.
+- You can optionally use Rackup to run your Server.
 
 ## Resources
 
+* [:pill: Ruby Web Project Setup Checklist](../pills/ruby_web_project_setup_list.md)
+* [Makers configuration for Rubocop](https://github.com/makersacademy/scaffolint)
 * [RSpec-Sinatra gem](https://github.com/tansaku/rspec-sinatra)
-* [Week 3 guidance on setting up Capybara with Sinatra](https://github.com/makersacademy/course/blob/master/intro_to_the_web/getting_test_infrastructure_set_up.md)
 
 ## [Walkthrough](walkthroughs/02.md)

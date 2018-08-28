@@ -35,10 +35,10 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
 - [ ] Write a feature test for a user submitting a new bookmark via a form. _Think carefully about how to set up the Sinatra routes for this!_
 - [ ] Solve the feature test by:
   - [ ] Doing the simplest thing
-  - [ ] Refactoring bookmark creation into the `Bookmark` model (perhaps a `Bookmark.create` method?)
+  - [ ] Test drive a refactor of bookmark creation into the `Bookmark` model (perhaps a `Bookmark.create` method?)
   - [ ] Ensuring that your feature test passes
 - [ ] Test that your new feature also works in the development environment
-- [ ] Refactor any spec code that adds data to the database with this new `Bookmark.create` functionality.
+- [ ] Refactor any test code that adds data to the database with this new `Bookmark.create` functionality.
 
 # Once you're done with creating bookmarks, prepare yourself for the next challenge by
 
@@ -46,6 +46,7 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
 
 ## Resources
 
-* [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
+* [Capybara Cheat Sheet](https://gist.github.com/zhengjia/428105)
+* [PSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
 
-## [Walkthrough](walkthroughs/09.md)
+## [Walkthrough](walkthroughs/10.md)

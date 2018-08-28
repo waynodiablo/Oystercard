@@ -13,8 +13,8 @@ Let's return to our specification:
 * Delete bookmarks :white_check_mark:
 * Update bookmarks :white_check_mark:
 * Comment on Bookmarks :white_check_mark:
-* Tag bookmarks into categories
-* Filter bookmarks by tag
+* Tag bookmarks into categories :construction:
+* Filter bookmarks by tag :construction:
 * Users manage their bookmarks
 
 In this challenge, you will set up a **many to many relationship** between Bookmarks a new resource, Tags.
@@ -50,4 +50,4 @@ In this challenge, you will set up a **many to many relationship** between Bookm
 * [SQL for one-to-one and many-to-many relationships](https://stackoverflow.com/questions/7296846/how-to-implement-one-to-one-one-to-many-and-many-to-many-relationships-while-de)
 * [How to design a many-to-many relationship](https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab)
 
-## [Walkthrough](walkthroughs/14.md)
+## [Walkthrough](walkthroughs/16.md)

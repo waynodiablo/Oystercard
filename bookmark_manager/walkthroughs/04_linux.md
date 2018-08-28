@@ -1,6 +1,6 @@
 # Walkthrough - Setting up a Database
 
-[Back to Challenge](../03_setting_up_a_database.md)
+[Back to Challenge](../04_setting_up_a_database.md)
 
 Setting up Postgres on GNU/Linux systems requires a slightly different approach to Macs. On most Linux systems, postgres is not installed by default. This means you will need to install it, along with its server and libraries:
 
@@ -68,4 +68,4 @@ host    all             all             127.0.0.1/32            trust
 
 [Fedora Wiki](https://fedoraproject.org/wiki/PostgreSQL)
 
-[Next Challenge](../04_creating_your_first_table.md)
+[Next Challenge](../05_creating_your_first_table.md)

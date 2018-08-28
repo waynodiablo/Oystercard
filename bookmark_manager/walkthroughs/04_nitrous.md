@@ -1,6 +1,6 @@
 # Walkthrough - Setting up a Database
 
-[Back to Challenge](../03_setting_up_a_database.md)
+[Back to Challenge](../04_setting_up_a_database.md)
 
 Try installing the Postgres 9.3 server development headers like this:
 
@@ -12,4 +12,4 @@ Suggestion from [here](https://github.com/datamapper/do/issues/66)
 
 If that doesn't work, try using Ruby 2.1.5 (2.1.1 is ideal, but Nitrous won't let you downgrade that far).
 
-[Next Challenge](../04_creating_your_first_table.md)
+[Next Challenge](../05_creating_your_first_table.md)

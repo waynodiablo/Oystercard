@@ -13,21 +13,26 @@ In this challenge, you will get the application and database talking to each oth
 ## To complete this challenge, you will need to
 
 - [ ] Install the `pg` gem to your project.
-- [ ] Update the `.all` method of your `Bookmark` model to do the following (through `pg`):
-  - [ ] Connect to the PostgreSQL `bookmark_manager` database.
-  - [ ] Send a query to retrieve all records from the `bookmarks` table.
-- [ ] Make sure you still pass the first feature, using this new response. You will need to update the view.
-- [ ] Without stopping the Sinatra program, add a new bookmark via `psql` to the database.
-- [ ] Make sure this new bookmark shows up on the `/bookmarks` page.
+- [ ] Test drive an update to the `.all` method of your `Bookmark` model, to do the following:
+  - [ ] Use `PG` to connect to the PostgreSQL `bookmark_manager` database.
+  - [ ] Retrieve all bookmark records from the `bookmarks` table.
+  - [ ] Extract the URLs from the database response.
+- [ ] Make sure you still pass the first feature, using this new response.
+- [ ] Try adding and removing bookmarks via `psql` and check the `/bookmarks` page to see the results. How does this affect the tests?
 
 ## Hints
 &nbsp;<details><summary>CLICK ME</summary>
+- Use the [`pg` documentation](https://bitbucket.org/ged/ruby-pg/wiki/Home) to help you understand how your code will interact with `pg`.
+
+- You can also `require 'pg'` in irb to investigate how it works.
+
 - Depending on how closely you have been following the walkthroughs, you might see your tests failing as you work through this step.  Why might this be?
+
 &nbsp;</details>
 
 ## Resources
 
 * [Talking to PostgreSQL using Ruby via `pg`](http://zetcode.com/db/postgresqlruby/) (most useful is the section called 'Retrieving multiple rows of data')
-* [`pg` documentation](https://deveiate.org/code/pg/)
+* [`pg` documentation](https://bitbucket.org/ged/ruby-pg/wiki/Home)
 
-## [Walkthrough](walkthroughs/06.md)
+## [Walkthrough](walkthroughs/07.md)

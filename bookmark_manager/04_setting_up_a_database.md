@@ -63,13 +63,13 @@ In this challenge, you will **install the PostgreSQL database system**, and inte
 - [ ] Install the `postgresql` command-line package via Homebrew (use the command `brew`).
 - [ ] Start postgres and set it to run automatically when your computer starts. (See the instructions in the output that brew shows when it's installing postgres.)
 - [ ] Check your installation by running `psql` in the terminal. Use the resources below to understand any errors that you see.
-- [ ] Create a PostgreSQL database with the same name as your computer username, e.g. `timmy507`.
+- [ ] Use the `CREATE DATABASE` command in `psql` to set up a PostgreSQL database with the same name as your computer username, e.g. `timmy507`. PostgreSQL will connect to this database on startup.
 
 ## Resources
 
 * [Homebrew Package Manager](http://brew.sh/)
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 
-## [Walkthrough - Mac OS](walkthroughs/03_mac.md)
-## [Walkthrough - Linux](walkthroughs/03_linux.md)
-## [Walkthrough - Nitrous](walkthroughs/03_nitrous.md)
+## [Walkthrough - Mac OS](walkthroughs/04_mac.md)
+## [Walkthrough - Linux](walkthroughs/04_linux.md)
+## [Walkthrough - Nitrous](walkthroughs/04_nitrous.md)

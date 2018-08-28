@@ -40,35 +40,27 @@ The `Post` class would, in this case, _wrap_ the data in each row of the table, 
 
 ## To complete this challenge, you will need to
 
-- [ ] Update the `index.erb` view to show Bookmark titles instead of Bookmark URLs.
-  - [ ] Users should be able to give this `title` when they create the bookmark.
+- [ ] Update the **test** and **development** databases so that bookmarks have a `title`, in addition to the `url`.
+- [ ] Update creating a new bookmark so that a user enters a `url` and a `title`.
+- [ ] Update the `/bookmarks` view to show Bookmark titles instead of Bookmark URLs.
   - [ ] Clicking a link in the list should open the `url` of the bookmark.
 
 ## Hints
 &nbsp;<details><summary>CLICK ME</summary>
+#### Adding new fields to the database
+
+Before you can save bookmarks with a title, or display the title in the `bookmarks`, you'll need to update the `bookmarks` table in the `development` and `test` databases. See the suggested resources before for more information on how to do this.
+
 #### Returning objects that respond to `#id`, `#title` and `#url` from database queries
 
-You may want to update the `Bookmark.create` and `Bookmark.all` methods to return instances of the `Bookmark` class instead of strings. The instance should wrap and expose the attributes `id`, `title` and `url`.
+You may want to update the `Bookmark.all` method to return instances of the `Bookmark` class instead of strings. The instance should wrap and expose the attributes `id`, `title` and `url`.
 
-In your `Bookmark.create` method you can use the PostgreSQL keyword `RETURNING` to ask a query to return specific values and pass them into your Bookmark's initialize method.
-
-Read more about the use of `RETURNING` in the document linked to below.
-
-#### Testing for Bookmark equality
-
-You need to decide what makes two bookmarks 'the same' bookmark. You might pick two bookmarks that have the same URL. Or you might pick what your database picks – that two bookmarks are 'the same' if they have the same ID.
-
-Either way, you can set what Ruby considers to be equal by defining your own `==` method on an object. For instance:
-
-```ruby
-# true if Bookmark defines its own == method, false otherwise.
-Bookmark.new(1) == Bookmark.new(1)
-```
 &nbsp;</details>
 
 ## Resources
 
+* [PostgreSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
+* [Capybara Cheat Sheet](https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 * [What is an ORM?](https://stackoverflow.com/questions/1152299/what-is-an-object-relational-mapping-framework)
-* [PostgreSQL RETURNING](https://www.postgresql.org/docs/9.5/static/dml-returning.html)
 
-## [Walkthrough](walkthroughs/11.md)
+## [Walkthrough](walkthroughs/12.md)

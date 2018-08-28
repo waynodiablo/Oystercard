@@ -8,8 +8,8 @@ Let's return to our specification:
 
 * Show a list of bookmarks :white_check_mark:
 * Add new bookmarks :white_check_mark:
-* Delete bookmarks
-* Update bookmarks
+* Delete bookmarks :construction:
+* Update bookmarks :construction:
 * Comment on bookmarks
 * Tag bookmarks into categories
 * Filter bookmarks by tag
@@ -41,14 +41,21 @@ Remember to maintain RESTful routing conventions.
 
 ## Hints
 &nbsp;<details><summary>CLICK ME</summary>
-- You'll likely need to write the methods `Bookmark.delete` and `Bookmark.update`.  First however, you'll probably want a `Bookmark.find` method in order to retrieve the specific Bookmark you want to perform one of those actions on.
+- You'll likely need to write the methods `Bookmark.delete` and `Bookmark.update`.  
+- You'll probably want a `Bookmark.find` method in order to retrieve the specific Bookmark you want to update.
 - You could make use of the [SQL WHERE keyword](https://www.w3schools.com/sql/sql_where.asp) to retrieve the correct Bookmark.
-- In order to keep your routes RESTful, you may want to make use of Sinatra's [named parameters](http://sinatrarb.com/intro.html)
+- In order to keep your routes RESTful, you may want to make use of Sinatra's [named parameters](http://sinatrarb.com/intro.html) - you'll need to need to enable `method_override` to use this feature.
+- If the feature tests are failing because there is no bookmark with an `id` of `1`, this might be because of how you are cleaning the database between your tests. Check to see whether you are using `TRUNCATE` or `DROP TABLE`. The resources below includes an explanation of the differences between these actions.
 &nbsp;</details>
 
 ## Resources
 
 * [CRUD (Wikipedia)](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 * [:pill: REST](../pills/rest.md)
+* [Difference between TRUNCATE and DROP TABLE](https://stackoverflow.com/questions/135653/difference-between-drop-table-and-truncate-table)
+* [Sinatra Configuation for method override](http://sinatrarb.com/configuration.html)
+* [REST-ful routes in Sinatra](https://learn.co/lessons/sinatra-restful-routes-readme)
+* [PostgreSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
+* [Capybara Cheat Sheet](https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 
-## [Walkthrough](walkthroughs/12.md)
+## [Walkthrough](walkthroughs/13.md)

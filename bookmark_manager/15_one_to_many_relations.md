@@ -4,6 +4,7 @@
 
 We've built a CRUD application for managing bookmarks.
 
+<!-- TODO update link to commit -->
 > Want to jump in to this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/58da0fff8056009c83c848a3eb21c757ae4017de).
 
 Let's return to our specification:
@@ -44,4 +45,4 @@ In this challenge, you will set up a [one to many relationship](http://www.datab
 
 * [One-to-many relationships](http://www.databaseprimer.com/pages/relationship_1tox/)
 
-## [Walkthrough](walkthroughs/13.md)
+## [Walkthrough](walkthroughs/15.md)

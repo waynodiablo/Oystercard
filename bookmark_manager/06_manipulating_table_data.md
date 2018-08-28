@@ -14,10 +14,10 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 ## To complete this challenge, using the psql command line interface
 
 - [ ] List any existing rows in the bookmarks table.
-- [ ] Create four link entries in the `bookmarks` table, with the following URLs: `http://makersacademy.com`, `http://askjeeves.com`, `http://twitter.com`, and `http://google.com`, using an `INSERT` statement.
+- [ ] Create four link entries in the `bookmarks` table, with the following URLs: `http://www.makersacademy.com`, `http://askjeeves.com`, `http://twitter.com`, and `http://www.google.com`, using an `INSERT` statement.
 - [ ] List the four entries using a `SELECT` statement.
 - [ ] Delete the link with a URL of `http://twitter.com` using a `DELETE` statement.
-- [ ] Update the `http://askjeeves.com` link to `http://destroyallsoftware.com` using an `UPDATE` statement.
+- [ ] Update the `http://askjeeves.com` link to `http://www.destroyallsoftware.com` using an `UPDATE` statement.
 
 ## Hints
 &nbsp;<details><summary>CLICK ME</summary>
@@ -28,7 +28,8 @@ In this challenge, you will use SQL to **c**reate, **r**ead (**query**), **u**pd
 ## Resources
 
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
+* [Alternative PostgreSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
 * [SQL in One Page](http://www.cheat-sheets.org/sites/sql.su/)
 * [Relational Database: Terminology](https://en.wikipedia.org/wiki/Relational_database#Terminology)
 
-## [Walkthrough](walkthroughs/05.md)
+## [Walkthrough](walkthroughs/06.md)

@@ -15,9 +15,9 @@ The website will have the following **specification**:
 
 > A specification is a list of **requirements**.
 
-We'll be using a BDD cycle (i.e. **outside-in testing**: Capybara first).
+We'll be using a Behaviour Driven Development (BDD) cycle (i.e. **outside-in testing**: Capybara first).
 
-To guide us, create some User Stories and sketch a high-level domain model.
+Throughout this challenge we'll create User Stories based on the specification, and sketch a high-level domain model.
 
 > There's no need to create all user stories at once. In fact, doing so can trap us in having to build an app a particular way. Let's just create user stories for the first feature. Once we've built it, we can decide the next one. Same with domain models: don't draw the whole thing. Just jot down enough info to get started. Aim to get coding ASAP.
 
@@ -29,12 +29,13 @@ To guide us, create some User Stories and sketch a high-level domain model.
 
 - [ ] Write a user story for showing a list of bookmarks
 - [ ] Draw a rough domain model for the above
-- [ ] Put all these user stories and a snap of your domain model in your project README
+- [ ] Put the user story and a snap of your domain model in your project README
 
 ## Resources
 
 * [:pill: User Stories Pill](../pills/user_stories.md)
 * [UK Government advice on creating user stories](https://www.gov.uk/service-manual/agile/writing-user-stories.html)
 * [Agile Modeling tips on User stories](http://www.agilemodeling.com/artifacts/userStory.htm)
+* [Wikipedia article on BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)
 
 ## [Walkthrough](walkthroughs/01.md)

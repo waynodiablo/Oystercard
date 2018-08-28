@@ -24,11 +24,16 @@ To fix this problem, you will create a **validation** that ensures the submitted
 ## To complete this challenge, you will need to
 
 - [ ] Add a new feature test that expects some kind of error message, on the page, if the user does not submit a real URL.
-- [ ] Pass this feature test by adding functionality to the `Bookmark` model.
+- [ ] Pass the feature test by:
+  - [ ] Doing the simplest thing
+  - [ ] Displaying a flash notice on the `/bookmarks` page when the new bookmark is invalid
+  - [ ] Test drive a refactor of bookmark validation into the `Bookmark` model
 
 ## Resources
 
+* [Capybara Cheat Sheet](https://gist.github.com/zhengjia/428105)
 * [How do I check if a URL is valid?](https://stackoverflow.com/questions/1805761/how-to-check-if-a-url-is-valid)
+* [Setting up Sinatra Flash](https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 * [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
-## [Walkthrough](walkthroughs/10.md)
+## [Walkthrough](walkthroughs/11.md)
