@@ -37,7 +37,7 @@ I want to see all my previous trips
   <ul>
     <li>Once again, you're likely to break a number of your tests in the course of completing this challenge.  When this happens, take the same approach as before; read the error messages and fix one at a time</li>
     <li>The first step in completing this challenge will be to make your `touch_out` method take an exit station. Write the test and implement this behaviour.</li>
-    <li>Next, you'll need to set up an instance variable to hold a list of journeys. Test drive setting up this storage, and then adding journeys to it on touch out</li>
+    <li>Next, you'll need to set up an instance variable to hold a list of journeys. Test drive setting up this storage, and then adding journeys to it on touch out. Use a hash which stores the entry and exit stations to represent each journey.</li>
     <li>Depending on how you have implemented this feature, you'll probably have some refactoring to do. For example, your `touch_out` method may have more than one responsibility. Could you extract some of it's behaviour to a private method?</li>
   </ul>
 </details>

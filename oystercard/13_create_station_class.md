@@ -25,6 +25,13 @@ I want to know what zone a station is in
 - [ ] Test drive the creation of a Station class that exposes a name and a zone variable
 - [ ] Use only one expectation per test
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>This should be far simpler than the previous challenge - just make sure that you stick to the RED, GREEN, REFACTOR loop and you'll be fine.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Betterspecs#let](http://betterspecs.org/#let)
 - [Modules on RubyMonk](https://rubymonk.com/learning/books/1-ruby-primer/chapters/35-modules/lessons/79-getting-modular)
