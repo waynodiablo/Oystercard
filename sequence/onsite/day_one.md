@@ -4,19 +4,23 @@ If you have any questions, just ask!
 
 ## Schedule for the first day
 
+### Morning
+
 * 08.30 - 09.30 Breakfast (2nd Floor Kitchen)
-* 09.30 - 11.00 Welcome to Makers (2nd Floor)
-* 11.00 - 11.20 Get and setup your laptops (1st Floor)
+* 09.30 - 11.00 _Welcome to Makers_ by Ed (2nd Floor)
+* 11.00 - 11.20 Get your laptops (1st Floor)
 * 11:20 - 11:30 Meet the coaches
-* 11.30 - 12.30 Life at Makers
-* 12.30 - 13.30 Lunch and more laptop setup 
+* 11.30 - 12.30 _Life at Makers_ by Dana
+* 12.30 - 13.30 **Lunch**
+
+### Afternoon
+
 * 13.30 - 14.00 Meditation (2nd Floor)
 * 14.00 - 14.15 Get your Makers T-shirt (3rd Floor)
-* 14.15 - 15.00 [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) (2nd Floor)
-* 15.00 - 15.15 Introduction to careers team (Careers team)(2nd Floor)
-* 15.15 - 15.20 Introduction to marketing (Anna) (2nd Floor)
+* 14.15 - 15.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam & Ed (2nd Floor)
+* 15.00 - 15.20 Introduction to other staff members (Careers, Marketing)(2nd Floor)
 * 15.30 - 17.30 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) (3rd Floor)
-* 17.30 - 18.30 Social with pizza (2nd Floor Kitchen)
+* 17.30 - 18.30 **Hang out & eat pizza** (2nd Floor Kitchen)
 
 ## Code of conduct
 
