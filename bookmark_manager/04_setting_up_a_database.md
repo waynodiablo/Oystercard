@@ -10,7 +10,7 @@ In the next few challenges, we are going to:
 - play with it a bit to understand its structure, and
 - connect it to our Sinatra application.
 
-> We'll return to building the Bookmark Manager application in [this challenge](./06_interacting_with_postgres_from_ruby.md), a few challenges down the line. If you're already comfortable with how Relational Databases work, feel free to skip to that challenge.
+> We'll return to building the Bookmark Manager application in [this challenge](./07_interacting_with_postgres_from_ruby.md), a few challenges down the line. If you're already comfortable with how Relational Databases work, feel free to skip to that challenge.
 
 In this challenge, you will prepare to move the hard-coded data into a **database**. To do this, you will set up **PostgreSQL** (a database management system) and create a new database.
 
