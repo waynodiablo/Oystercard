@@ -8,9 +8,10 @@ If you have any questions, just ask!
 
 * 08.30 - 09.30 Breakfast (2nd Floor Kitchen)
 * 09.30 - 09.45 _Intro to staff_ by Dan
-* 09.30 - 10.00 _Welcome to Makers_ by Dan
+* 09.30 - 10.00 _Welcome to Makers_ by Alice
 * 10.00 - 10.30 _Why Makers?_ by Dan
-* 10.30 - 11.00 _The Makers Marshmallow Challenge_ by Eddie
+* 10.30 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
+* 11.00 - 11.30 _The Makers Marshmallow Challenge_ by Eddie - ONE OF THESE SLOTS NEEDS TO MOVE
 * 11.00 - 12.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam 
 * 12.00 - 12.30 _Tour of the building_ by Cat
 * 12.30 - 13.30 **Lunch**
