@@ -1,4 +1,4 @@
-# Your first day at Makers Academy
+# Your first day at Makers
 
 If you have any questions, just ask!
 
