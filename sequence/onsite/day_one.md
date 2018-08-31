@@ -11,7 +11,7 @@ If you have any questions, just ask!
 * 11.00 - 11.20 Get your laptops :computer: (1st Floor)
 * 11:20 - 11:30 Meet the coaches
 * 11.30 - 12.30 _Life at Makers_ by Dana
-* 12.30 - 13.30 **Lunch**
+* 12.30 - 13.30 **Lunch** (here are some [options](https://github.com/makersacademy/course/blob/master/pills/lunch_near_makers.pdf))
 
 ### Afternoon
 
