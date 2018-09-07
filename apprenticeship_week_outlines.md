@@ -10,7 +10,7 @@ By the end of the week all developers can:
 ### Challenges
 
 * [Afternoons - Boris bikes](https://github.com/makersacademy/course/tree/master/boris_bikes)
-* [Friday - Airport](https://diode.makersacademy.com/students/neoeno/projects/33)
+* [Friday - Airport](https://diode.makersacademy.com/students/alicelieutier/projects/960)
 
 ### Practicals
 
