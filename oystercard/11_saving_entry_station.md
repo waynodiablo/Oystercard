@@ -30,6 +30,14 @@ I need to know where I've travelled from
 - [ ] Make the card forget the entry station on touch out by setting it to `nil`
 - [ ] When your tests are all green, refactor to remove the `in_journey` variable. Rewrite the `in_journey?` method to infer its status based on whether or not there is an entry station
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>In the course of completing this challenge, you're likely to see a lot of your tests go red. Don't panic! Use the error messages you see to figure out exactly what has broken, and fix each test, one at a time.</li>
+    <li>Once your tests are all passing it's time for a refactor. We can now infer whether the card is in a journey by the presence of an entry station - the `in_journey` instance variable has been made redundant.  Remove it and create an `in_journey` method which checks for an entry station.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Doubles, Mocks, Stubs and Spies](https://github.com/makersacademy/course/blob/master/pills/doubles.md)
 - [let and let! in RSpec](https://www.relishapp.com/rspec/rspec-core/v/2-4/docs/helper-methods/let-and-let)

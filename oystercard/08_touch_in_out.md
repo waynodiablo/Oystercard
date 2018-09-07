@@ -34,6 +34,14 @@ I need to touch in and out.
 - [ ] Use an RSpec predicate matcher to check if the card is in use
 - [ ] Use boolean values to store the state of the card
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Remember to move in small steps - dont try to test and implement all three bit of behaviour at one.  Go one at a time</li>
+    <li>`in_journey?` will need to return either true or false depending on the current state of the card.  Consider using an instance variable and changing its value on touch in and touch out.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Ruby instance variables](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables)
 - [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type)

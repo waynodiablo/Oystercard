@@ -24,6 +24,15 @@ In this issue you will create a valid Gemfile for this project.
 - [ ] add the `rspec` gem to ‘test’ and ’development’ groups
 - [ ] commit only this Gemfile
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>We use a Gemfile to manage the various gems our Ruby projects depend upon.  We can set one up from the terminal - check the linked documents below for information on how to do so</li>
+    <li>Once we have a Gemfile, we can use it to specify various requirements of our project.  Take a look at the final link below for more.  The most important thing for us to do right now is to list the gems we expect to use.  As far as we know at this point, the only gem we'll be depending on is RSpec.  We'll want to add RSpec, using the Gemfile's group block syntax to specify the environments where we want RSpec to be available.</li>
+    <li>Once the contents of our Gem file is complete, we can run `bundle` from the terminal. We can verify that this has been successful by checking that we now have a file called `Gemfile.lock` within out project.</li>
+  </ul>
+</details>
+
 ## Suggested resources
 - [RubyGems basics](http://guides.rubygems.org/rubygems-basics)
 - [RVM documentation](http://www.rvm.io)
