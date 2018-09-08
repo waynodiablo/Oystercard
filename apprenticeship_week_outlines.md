@@ -24,4 +24,30 @@ These can be used by the devs independently, or enhanced by a coach delivering a
 * [Git collaboration](https://github.com/makersacademy/skills-workshops/blob/master/practicals/git_collaboration.md)
 
 ## Week 2
+
+By the end of the week all developers can:
+
+* Explain why modularity through encapsulation is useful for developers, tying it to ease of change
+* Break up programs into multiple objects which work together, with test coverage
+
+Stretch:
+
+* Test classes in isolation using mocking and dependency injection
+
+### Challenges
+
+* [Afternoons - Oystercard](https://github.com/makersacademy/course/tree/master/oystercard)
+* [Weekend - Takeaway](https://diode.makersacademy.com/students/neoeno/projects/132)
+
+### Practicals
+
+These can be used by the devs independently, or enhanced by a coach delivering and offering structured process, group discussion, feedback, etc.
+
+* [Encapsulation](https://diode.makersacademy.com/students/EdwardAndress/projects/981)
+* [OO Relationships (Forwarding, Polymorphism)](https://diode.makersacademy.com/students/EdwardAndress/projects/980)
+* [Dependency Injection](https://diode.makersacademy.com/students/EdwardAndress/projects/979)
+* [Testing OO Relationships](https://diode.makersacademy.com/students/EdwardAndress/projects/975)
+* [Refactoring with OO](https://diode.makersacademy.com/students/EdwardAndress/projects/977)
+
+## Week 3
  ... come back next week ...
