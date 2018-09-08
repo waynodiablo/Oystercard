@@ -37,7 +37,7 @@ Stretch:
 ### Challenges
 
 * [Afternoons - Oystercard](https://github.com/makersacademy/course/tree/master/oystercard)
-* [Weekend - Takeaway](https://diode.makersacademy.com/students/neoeno/projects/132)
+* [Friday - Takeaway](https://diode.makersacademy.com/students/neoeno/projects/132)
 
 ### Practicals
 
