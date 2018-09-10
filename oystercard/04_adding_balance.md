@@ -45,6 +45,15 @@ I want money on my card
 - [ ] Now refactor by setting the balance in initialize using an instance variable
 - [ ] Remove the balance method entirely and replace with an attr_reader
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Once again, there's nothing required in this challenge that you haven't covered previously! However, try to take your time and ensure that you really understand what you're doing at each step. Talk it through with your pair partner.</li>
+    <li>You may want to start your TDD process with a `responds_to` test. This is a great first step, but try to replace it with a more rigorous test before moving on.</li>
+    <li>Once your tests passes, don't forget to refactor!</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 - [RSpec basic structure](https://www.relishapp.com/rspec/rspec-core/v/3-3/docs/example-groups/basic-structure-describe-it)

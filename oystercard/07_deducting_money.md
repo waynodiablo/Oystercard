@@ -4,7 +4,7 @@
 
 By now you have a card that can hold a balance and be topped up. However, unless we can use it to spend money it's not of much use. We should also have a mechanism for deducting money from it.
 
-Write the `deduct` method that will reduce the balance by a specified amount using test-driven approach.
+Write the `deduct` method that will reduce the balance by a specified amount using a test-driven approach.
 
 ```
 In order to pay for my journey
@@ -19,6 +19,13 @@ I need my fare deducted from my card
 - [ ] Write up a plan for how you will interact with your code and manually test in IRB.
 - [ ] Write a test for the `deduct` method, see it fail
 - [ ] Implement the method, see the test pass
+
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>The important thing here is to continue to apply a tight TDD loop. Doing this should provide you with clear error messages and guide your next steps after each change.</li>
+  </ul>
+</details>
 
 ## Suggested resources:
 - [RSpec](http://rspec.info/)

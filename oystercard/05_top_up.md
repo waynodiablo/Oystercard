@@ -29,6 +29,14 @@ I want to add money to my card
 - [ ] Make sure the test fails before implementing the method
 - [ ] Implement the method to make the test pass
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Be sure to carefully follow the full TDD cycle - RED, GREEN, REFACTOR.</li>
+    <li>Again, if you start the process with a `responds_to` test, ensure that you replace it with something more rigorous - possibly by using RSpec's `change by` syntax.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 - [TDD on Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)

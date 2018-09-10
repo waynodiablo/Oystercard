@@ -34,6 +34,15 @@ I need a penalty charge deducted if I fail to touch in or out
 - [ ] Make sure the entire codebase is DRY
 - [ ] Make sure all methods are three lines or shorter
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Things get significantly trickier at this point. You'll want to move slowly through this challenge, making sure that you think carefully about what you're doing at each step.</li>
+    <li>Right now, the `Oystercard` class is doing far too much. Some of it's behaviour should definitely be moved to the `Journey` class. Before you start, take some time to think about what needs to be moved, and how this will effect your tests and the running of your application. Ensure that you have a plan for what you want to do before you start doing it</li>
+    <li>Again, there are many ways to approach this challenge, but it's almost guaranteed that your tests will break as you extract your new `Journey` class. Understand why your tests are failing and fix them one at a time. The key here is to take it slow - extract behaviour piece by piece, fixing errors as you go.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [Edge case](https://en.wikipedia.org/wiki/Edge_case)
 - [Test all possible cases on Better Specs](http://betterspecs.org/#all)

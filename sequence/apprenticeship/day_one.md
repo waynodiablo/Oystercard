@@ -1,4 +1,4 @@
-# Your first day at Makers Academy
+# Your first day at Makers
 
 If you have any questions, just ask!
 
@@ -6,11 +6,11 @@ If you have any questions, just ask!
 
 ### Morning
 
-* 08.30 - 09.30 Breakfast (2nd Floor Kitchen)
+* 08.30 - 09.30 Breakfast
 * 09.30 - 10.15 _Welcome to Makers_ by Alice
 * 10.15 - 10.30 _Code of Conduct_ by Dan
 * 10.30 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
-* 11.00 - 11.30 _The Makers Marshmallow Challenge_ by Eddie
+* 11.00 - 11.30 _Receive laptops_
 * 11.30 - 12.30 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam 
 * 12.30 - 12.45 _Tour of the building_ by Cat
 * 12.45 - 13.45 **Lunch**

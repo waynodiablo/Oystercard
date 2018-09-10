@@ -22,6 +22,14 @@ Prepare your project for RSpec by creating a helper file and an empty test file.
 - [ ] Follow RSpec naming convention for files and folders
 - [ ] Create a test file for the Oystercard class without any tests but with a `describe` block (doesn't exist yet)
 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>Everything required in order to complete this challenge should be familiar to you from week one.  First generate the files required to run RSpec tests from your terminal, then set up an empty spec file, describing an Oystercard class.</li>
+    <li>Check that everything is working by running 'rspec' from the command-line.  You should see a familiar error message.</li>
+  </ul>
+</details>
+
 ## Suggested resources:
 - [RSpec](http://rspec.info/)
 

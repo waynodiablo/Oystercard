@@ -12,13 +12,13 @@
 
 ## Overview of the week
 
-* You'll work in teams to build a clone of Airbnb.  (I'll announce the teams on Slack.)
+* You'll work in teams to build a [clone of Airbnb](https://github.com/makersacademy/course/blob/master/makersbnb/specification_and_mockups.md). 
 
 * You'll organise your own work.
 
-* There won't be any workshops, byte standups, a confidence survey or an end-of-week retrospective.
+* There won't be any workshops or an end-of-week retrospective.
 
-* Your coach will be around as usual.
+* Use coaches to help unblock you
 
 * Careers sessions begin this week.
 
@@ -47,7 +47,6 @@ To guide your learning, aim to be able to answer "yes" to the questions below.  
 
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/week06.md)
-* [Remote](../sequence/remote/week06.md)
 
 ### Specification and mockups
 
@@ -67,7 +66,7 @@ If your specification asks for a car, don't build the wheels in the first week, 
 
 ### Turning a specification into user stories
 
-* Make sure the make each user story small enough to be completable in less than half a day.
+* Make sure each user story is small enough to be completable in less than half a day.
 * Some items in the spec include more than one feature. e.g. "Any signed up user can list a new space". Break this into two user stories and prioritise the one that gets you as close as possible to a product.
 * Use the customer's language (the domain language) in the user stories.  Most words in the user stories should appear in the spec.
 

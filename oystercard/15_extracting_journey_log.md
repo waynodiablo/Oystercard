@@ -22,7 +22,16 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [ ] `#journeys` should return a list of all previous journeys without exposing the internal array to external modification
 - [ ] remove redundant code from OysterCard class
 
-## Suggested resources: 
+### Hints
+<details><summary>CLICK ME</summary>
+  <ul>
+    <li>This is another tricky one. Take your time, move in small increments, and have an idea of what it is you want to do before jumping in and doing it.</li>
+    <li>The `JourneyLog` will need to be able to create `Journey` objects, but you'll want to avoid creating a hard dependency. Make use of dependency injection to pass the `Journey` in.</li>
+    <li>Using an attr_reader to return you journeys array will return the actual object, which eaves it open to being tampered with by pesky users. You'll want to avoid this by investigating ways that Ruby will allow you to return a copy of the array.</li>
+  </ul>
+</details>
+
+## Suggested resources:
 - [Ruby](http://www.getlaura.com/dependency-inversion-principle-in-ruby/)
 
 ## [Walkthrough](walkthroughs/15_extracting_journey_log.md)
