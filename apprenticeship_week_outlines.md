@@ -50,4 +50,24 @@ These can be used by the devs independently, or enhanced by a coach delivering a
 * [Refactoring with OO](https://diode.makersacademy.com/students/EdwardAndress/projects/977)
 
 ## Week 3
- ... come back next week ...
+
+By the end of the week all developers can:
+
+* Build a simple web app
+* Explain the basics of how the web works (e.g. request/response, HTTP, Client, Server, MVC...)
+
+### Challenges
+
+* [Afternoons - Battle](https://github.com/makersacademy/course/tree/master/intro_to_the_web)
+* [Friday - RPS](https://diode.makersacademy.com/students/neoeno/projects/133)
+
+### Practicals
+
+* [Servers](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/servers.md)
+* [Clients](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/clients.md)
+* [HTTP Servers](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/http_servers.md)
+
+### Project ideas
+
+* Create a [Birthday Greeter App](https://diode.makersacademy.com/students/alicelieutier/projects/439)
+* Come up with your own!
