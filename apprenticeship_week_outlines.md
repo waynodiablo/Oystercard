@@ -61,8 +61,9 @@ By the end of the week all developers can:
 * [Afternoons - Battle](https://github.com/makersacademy/course/tree/master/intro_to_the_web)
 * [Friday - RPS](https://diode.makersacademy.com/students/neoeno/projects/133)
 
-### Practicals
+### Practicals and projects
 
+* [Diagram the HTTP req/response cycle](https://diode.makersacademy.com/students/alicelieutier/projects/415)
 * [Servers](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/servers.md)
 * [Clients](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/clients.md)
 * [HTTP Servers](https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/http_servers.md)
