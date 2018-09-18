@@ -4,7 +4,7 @@
 
 We've built a CRUD application for managing links. The routes are RESTful.
 
-> Want to jump in to this challenge? Start from [this commit](https://github.com/sjmog/bookmark_manager/commit/ecdcdbca3e859127a2123ce10791f27e20eac76b).
+> Want to jump in to this challenge? Start from [this commit](https://github.com/soph-g/bookmark-manager-example/commit/a4836358c2bd81899dadfc9acf358f70495a4fff).
 
 Let's return to our specification:
 
