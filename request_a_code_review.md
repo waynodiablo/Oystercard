@@ -31,4 +31,4 @@ As always if you have questions about this process or feedback to share about it
 
 
 
-[1]: http://code-review.makersacademy.com/reviews/new
+[1]: https://code-review.makersacademy.com/reviews/new
