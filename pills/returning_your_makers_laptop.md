@@ -5,10 +5,11 @@ This is a kind reminder that the laptops have to be returned by the last Friday 
 ## Remember to
 
 1. Clean the laptop using the wipes in the stationary cabinet.
-2. Reset the laptop to Factory settings. You can either use the Mac OS sticks we have or download Mac OS online as you reset the laptop.
+2. Reset the laptop to Factory settings. You can either use the Mac OS sticks we have on the 1st floor or download Mac OS online as you reset the laptop.
 3. Report any damages or hardware problems.
-4. Return it to Florence on the first floor
+4. Return it to Florence on the first floor before the presentations
 
+Please note that this process can take around half an hour so please leave plenty of time
 
 # How to reset the laptop by USB
 
@@ -20,7 +21,7 @@ Insert USB
 
 Press and hold the ON button and ALT at the same time.
 
-Choose "Install OSX Yosemite"  and wait for the OS X Installation box to appear.
+Choose "Install Mac OS"  and wait for the OS Installation box to appear.
 
 Choose "Continue"
 Choose "Continue" again and "Agree"
@@ -41,6 +42,6 @@ Close window.
 
 Click "Continue and Installed" .
 
-Let it install. It takes about 12 minutes.
+Let it install. It takes about 20 minutes.
 
 Restart it. Once it’s done, it should be back to factory settings.
