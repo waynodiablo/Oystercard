@@ -72,3 +72,30 @@ By the end of the week all developers can:
 
 * Create a [Birthday Greeter App](https://diode.makersacademy.com/students/alicelieutier/projects/439)
 * Come up with your own!
+
+## Week 4
+
+By the end of the week all developers can:
+
+* Build a database-backed web app, and explain these as used within:
+	* Data flow from user action all the way to server resource and back again
+	* Relevant aspects of tables/rows/relations etc
+* Follow an effective debugging process for database-backed web apps
+
+### Challenges
+
+* [Afternoons - Bookmark Manager](https://github.com/makersacademy/course/blob/master/bookmark_manager/00_challenge_map.md)
+* [Friday - Chitter](https://github.com/makersacademy/chitter-challenge)
+
+### Practicals
+
+* [Entity Relationship Diagrams](https://github.com/makersacademy/skills-workshops/blob/master/practicals/databases/entity_relationship_diagrams.md)
+* [SQLZoo](https://sqlzoo.net/)
+* [ELI5 What is a database](https://diode.makersacademy.com/students/alicelieutier/projects/1286)
+
+More of a tool: 
+
+* [REST](https://github.com/sjmog/rest)
+
+## Week 5
+Where we learn Javascript. Exciting!
