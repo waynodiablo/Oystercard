@@ -181,7 +181,7 @@ Note: they get the choice of morning goals / afternoon challenges vs all day pro
 * [Afternoons - Notes app](https://github.com/makersacademy/course/blob/master/further_javascript)
 * Weekend, either of:
   * [News summary](https://github.com/makersacademy/news-summary-challenge)
-  * [Chitter API Frontend Challenge](https://gist.github.com/neoeno/ebdcab5af41f23fbbcd306256b097575)
+  * [Chitter API Frontend Challenge](https://github.com/makersacademy/frontend-api-challenge)
 
 ### Practicals
 
