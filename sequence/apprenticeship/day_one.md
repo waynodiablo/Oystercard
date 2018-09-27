@@ -12,7 +12,6 @@ If you have any questions, just ask!
 * 10.15 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
 * 11.00 - 11.15 _Tour of the Building_
 * 11.15 - 12.00 _Receive and set up laptops_
-
 * 12.00 - 13.00 **Lunch**
 
 ### Afternoon
