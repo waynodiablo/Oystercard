@@ -8,18 +8,14 @@ If you have any questions, just ask!
 
 * 08.30 - 09.30 Breakfast
 * 09.30 - 10.00 _Welcome to Makers_ by COACH
-* 10.00 - 10.15 _Code of Conduct_ by COACH
-* 10.15 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
-* 11.00 - 11.15 _Tour of the Building_
-* 11.15 - 12.00 _Receive and set up laptops_
+* 10.00 - 12.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by COACH
 * 12.00 - 13.00 **Lunch**
 
 ### Afternoon
-
-* 13.00 - 14.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam 
-* 14.15 - 14.45 _Life at Makers_ by COACH
-* 15.00 - 17.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by COACH
-* 17.30 - 18.30 **Hang out & eat pizza** (2nd Floor Kitchen)
+* 13.00 - 14.00 _Mindfulness and Wellbeing at Makers_ by Dana
+* 14.00 - 15.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam
+* 15.15 - 15.30 _Code of Conduct_ by COACH
+* 15.30 - 16.00 _Life at Makers_ by COACH
 
 ## Code of conduct
 
