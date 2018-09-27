@@ -19,7 +19,7 @@ If you have any questions, just ask!
 * 13.00 - 14.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam 
 * 14.15 - 14.45 _Life at Makers_ by COACH
 * 15.00 - 17.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by COACH
-* 17.30 - 18.30 **Hang out & eat pizza** (2nd Floor Kitchen)
+* 17.30 - 18.30 **Hang out & eat pizza** (1st Floor Kitchen)
 
 ## Code of conduct
 
