@@ -10,7 +10,7 @@ If you have any questions, just ask!
 * 09.30 - 10.00 _Welcome to Makers_ by COACH
 * 10.00 - 10.15 _Code of Conduct_ by COACH
 * 10.15 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
-* 11.00 - 11.15 _Tour of the Building_
+* 11.00 - 11.15 _Tour of the Building_ by COACH
 * 11.15 - 12.00 _Receive and set up laptops_
 * 12.00 - 13.00 **Lunch**
 
