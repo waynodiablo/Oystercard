@@ -93,9 +93,33 @@ By the end of the week all developers can:
 * [SQLZoo](https://sqlzoo.net/)
 * [ELI5 What is a database](https://diode.makersacademy.com/students/alicelieutier/projects/1286)
 
-More of a tool: 
+More of a tool:
 
 * [REST](https://github.com/sjmog/rest)
 
 ## Week 5
-Where we learn Javascript. Exciting!
+
+By the end of the week all developers can:
+
+* Follow an effective learning process for learning a new language
+* Test drive simple front-end web app with Javascript
+
+### Challenges
+
+* [Afternoons - Thermostat](https://github.com/makersacademy/course/blob/master/thermostat/README.md)
+* [Friday - Bowling](https://diode.makersacademy.com/students/neoeno/projects/32)
+
+### Practicals
+
+* [Learning a new language by translation](https://hackmd.io/kMNgXiPHQf2Q_P9A-tnS9A)
+* [Following the flow](https://github.com/makersacademy/skills-workshops/tree/master/practicals/js-following-the-flow-async)
+* [JS Objects & Prototypes](https://hackmd.io/nb1VZarCTGicD6dMOo43Ww)
+
+
+### Resources
+
+* [You Don't Know JS – a free book series](https://github.com/getify/You-Dont-Know-JS)
+
+## Week 6
+
+Time for team work!
