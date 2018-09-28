@@ -33,17 +33,9 @@ Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
-## Facilities
-
-[Facilities](https://github.com/makersacademy/course/blob/master/pills/facilities.md).
-
 ## Low noise policy
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/low_noise_policy.md).
-
-## Seating plan
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/seating_plan.md).
 
 ## Setting up your laptop
 
