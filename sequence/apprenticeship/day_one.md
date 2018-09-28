@@ -33,9 +33,6 @@ Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety_at_treehouse.md).
 
-## Low noise policy
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/low_noise_policy.md).
 
 ## Setting up your laptop
 
