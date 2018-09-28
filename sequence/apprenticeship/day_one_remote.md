@@ -24,10 +24,6 @@ Make sure to read the [code of conduct guide](https://github.com/makersacademy/c
 
 Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md) for an outline of what success means here, and how to engage with that (including schedules).
 
-## Health and safety
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
-
 
 ## Setting up your laptop
 
