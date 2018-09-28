@@ -12,7 +12,12 @@ If you have any questions, just ask!
 * 10.15 - 11.00 _Mindfulness and Wellbeing at Makers_ by Dana
 * 11.00 - 11.15 _Tour of the Building_ by Eddie
 * 11.15 - 12.00 _Receive and set up laptops_
-* 12.00 - 13.00 **Lunch**
+* 12.00 - 13.00 **Lunch** here are some options for you:
+  * [Whitecross St Market](http://www.bitecross.co.uk/)
+  * [Leather Lane Market](https://leatherlanestars.wordpress.com/the-market/)
+  * [Exmouth Market](http://exmouth.london/)
+  * [Look Mum No Hands](http://www.lookmumnohands.com/locations/old-street)
+  * There is a Tesco supermarket and a Waitrose supermarket on the corner of Brewhouse Yard and St John Street
 
 ### Afternoon
 
