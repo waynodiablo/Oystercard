@@ -50,4 +50,4 @@ In this challenge, you will set up a **many to many relationship** between Bookm
 * [SQL for one-to-one and many-to-many relationships](https://stackoverflow.com/questions/7296846/how-to-implement-one-to-one-one-to-many-and-many-to-many-relationships-while-de)
 * [How to design a many-to-many relationship](https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab)
 
-## [Walkthrough](walkthroughs/17.md)
+## [Walkthrough](walkthroughs/16.md)

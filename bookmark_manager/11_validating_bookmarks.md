@@ -36,4 +36,4 @@ To fix this problem, you will create a **validation** that ensures the submitted
 * [Setting up Sinatra Flash](https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 * [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
-## [Walkthrough](walkthroughs/15.md)
+## [Walkthrough](walkthroughs/11.md)

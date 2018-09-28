@@ -72,3 +72,4 @@ In this challenge, you will **install the PostgreSQL database system**, and inte
 
 ## [Walkthrough - Mac OS](walkthroughs/04_mac.md)
 ## [Walkthrough - Linux](walkthroughs/04_linux.md)
+## [Walkthrough - Nitrous](walkthroughs/04_nitrous.md)

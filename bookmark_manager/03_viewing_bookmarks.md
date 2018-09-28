@@ -24,7 +24,5 @@ Now we've set up our basic web app we can start implementing features! So let's 
 
 * [Sinatra: Getting Started](http://sinatrarb.com/intro.html)
 
-* [Class and instance methods in Ruby](http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/)
-
 
 ## [Walkthrough](walkthroughs/03.md)
