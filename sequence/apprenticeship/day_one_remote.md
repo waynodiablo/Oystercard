@@ -7,15 +7,15 @@ If you have any questions, just ask!
 ### Morning
 
 * 08.30 - 09.30 Breakfast
-* 09.30 - 10.00 _Welcome to Makers_ by COACH
-* 10.00 - 12.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by COACH
+* 09.30 - 10.00 _Welcome to Makers_ by Dan
+* 10.00 - 12.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by Sam
 * 12.00 - 13.00 **Lunch**
 
 ### Afternoon
 * 13.00 - 14.00 _Mindfulness and Wellbeing at Makers_ by Dana
 * 14.00 - 15.00 _[Succeeding at Makers, and beyond](https://github.com/makersacademy/course/blob/master/goals/README.md)_ by Sam
-* 15.15 - 15.30 _Code of Conduct_ by COACH
-* 15.30 - 16.00 _Life at Makers_ by COACH
+* 15.15 - 15.30 _Code of Conduct_ by Dan
+* 15.30 - 16.00 _Life at Makers_ by Dan
 
 ## Code of conduct
 
@@ -29,17 +29,6 @@ Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/
 
 [A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
 
-## Facilities
-
-[Facilities](https://github.com/makersacademy/course/blob/master/pills/facilities.md).
-
-## Low noise policy
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/low_noise_policy.md).
-
-## Seating plan
-
-[A summary](https://github.com/makersacademy/course/blob/master/pills/seating_plan.md).
 
 ## Setting up your laptop
 
