@@ -6,7 +6,6 @@ If you have any questions, just ask!
 
 ### Morning
 
-* 08.30 - 09.30 Breakfast
 * 09.30 - 10.00 _Welcome to Makers_ by Dan
 * 10.00 - 12.00 [Pairing challenges](https://github.com/makersacademy/skills-workshops/tree/master/week-1/pairing_challenges) by Sam
 * 12.00 - 13.00 **Lunch**
