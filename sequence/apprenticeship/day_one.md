@@ -31,7 +31,7 @@ Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/
 
 ## Health and safety
 
-[A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety.md).
+[A summary](https://github.com/makersacademy/course/blob/master/pills/health_and_safety_at_treehouse.md).
 
 ## Low noise policy
 
