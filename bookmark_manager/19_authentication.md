@@ -35,4 +35,4 @@ In this challenge, you will implement sign in and out, which together are called
 
 * [How to use bcrypt-ruby in general](https://github.com/codahale/bcrypt-ruby)
 
-## [Walkthrough](walkthroughs/18.md)
+## [Walkthrough](walkthroughs/19.md)
