@@ -52,6 +52,10 @@ Some developers may notice they are completing the work easier than their peers 
 * [Afternoons - Oystercard](https://github.com/makersacademy/course/tree/master/oystercard)
 * [Weekend - Takeaway](https://diode.makersacademy.com/students/neoeno/projects/132)
 
+### Projects
+
+* [Gilded Rose Design Project](https://github.com/makersacademy/gilded_rose_design_project) — your coach will introduce this if you'll be doing it in your cohort.
+
 ### Practicals
 
 * [OO Relationships (Forwarding, Polymorphism)](https://github.com/makersacademy/skills-workshops/blob/master/practicals/object_oriented_design/oo_relationships.md)
