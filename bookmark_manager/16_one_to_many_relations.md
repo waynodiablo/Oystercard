@@ -45,4 +45,4 @@ In this challenge, you will set up a [one to many relationship](http://www.datab
 
 * [One-to-many relationships](http://www.databaseprimer.com/pages/relationship_1tox/)
 
-## [Walkthrough](walkthroughs/15.md)
+## [Walkthrough](walkthroughs/16.md)
