@@ -33,7 +33,7 @@ Afternoon - [Battle](../../intro_to_the_web)
 Morning - [Diagram the http request/response cycle](https://diode.makersacademy.com/students/alicelieutier/projects/415)
 Afternoon - [Battle](../../intro_to_the_web)
 
-#### Friday
+#### Friday
 11:00am - Retro
 
 Morning - Friday Challenge
