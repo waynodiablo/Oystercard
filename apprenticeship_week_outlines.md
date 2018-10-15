@@ -123,3 +123,26 @@ By the end of the week all developers can:
 ## Week 6
 
 Time for team work!
+
+## Week 7
+
+By the end of the week, all developers:
+
+* Have an effective strategy for gaining a deeper understanding of a new programming language
+
+## Challenges
+
+* [Afternoons - Notes app](https://github.com/makersacademy/course/blob/master/further_javascript)
+* Weekend, either of:
+  * [News summary](https://github.com/makersacademy/news-summary-challenge)
+  * [Chitter API Frontend Challenge](https://github.com/makersacademy/frontend-api-challenge)
+
+## Practicals
+
+* [Closures](https://hackmd.io/cIFsMAqISHqVHN_-p9hY0Q)
+* [Reading beyond your level](https://hackmd.io/F-pmnp3hRhePddmf3mnKGw)
+* [Reasoning about JS using frames](https://hackmd.io/cnH7BqucQ7yzqnLiqmizXw)
+
+## Week 8
+
+*Engineering project 1!*  More details to appear soon.
