@@ -148,6 +148,6 @@ By the end of the week, all developers:
 By the end of the week, all developers can:
 
 * *Use high-quality processes* to build a project in a team?
-	* Note that the goal IS NOT TO COMPLETE ACEBOOK
+	* Note that the goal *is not to complete, or reach a certain point on, Acebook*
 
 For more information about this project and what constitutes 'high-quality processes' look [here](./engineering_projects/README.md).
