@@ -69,6 +69,28 @@ The challenge material is pretty tough this week. You're not meant to get throug
  18. [Registration](18_registration.md)
  19. [Authentication](19_authentication.md)
 
- ### Post Challenges
+### Post Challenges
 
 :construction:
+
+If you finish the walkthrough, try implementing some of these extra challenges:
+
+#### Linking Bookmarks to a User
+
+At the moment logging in doesn't change the user experience much. Can you extend the application so that:
+
+- A user has to be logged in to add or view Bookmarks
+- A user can only read/update/delete bookmarks they have added
+
+#### Deleting Bookmarks with Comments and Tags
+
+Have you tried deleting a Bookmark that has a Comment or a Tag? You might notice an error!
+Can you use TDD to resolve this error, and allow the user to delete a Bookmark that has Comments and/or Tags?
+
+#### Improve User Interface
+
+At the end of the walkthrough we are left with a number of unlinked routes. Can you improve the user experience by linking the pages together? Don't forget to test drive these changes!
+
+#### Automate Migrations
+
+You should have a number of `.sql` files that have the individual migration steps required to set up the databases. Can you use these to set up Ruby methods to run each SQL command? You could then run these methods to do the database setup in test and development.
