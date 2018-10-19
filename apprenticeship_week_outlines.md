@@ -143,6 +143,11 @@ By the end of the week, all developers:
 * [Reading beyond your level](https://hackmd.io/F-pmnp3hRhePddmf3mnKGw)
 * [Reasoning about JS using frames](https://hackmd.io/cnH7BqucQ7yzqnLiqmizXw)
 
-## Week 8
+## Week 8-9
 
-*Engineering project 1!*  More details to appear soon.
+By the end of the week, all developers can:
+
+* *Use high-quality processes* to build a project in a team?
+	* Note that the goal IS NOT TO COMPLETE ACEBOOK
+
+For more information about this project and what constitutes 'high-quality processes' look [here](./engineering_projects/README.md).
