@@ -15,6 +15,12 @@ Even worse – at the moment, we have no way of telling whether we're connecting
 
 In this challenge, you will extract an object which is used to setup a connection to the database when the application starts, and refactor `Bookmark` to use it.
 
+*Object Relational Mapping*
+
+So far we've written all the code to interact with the database using the `psql` gem. As you've probably noticed, this can make the code difficult to read as SQL queries can be quite lengthy! It's become common to instead use an [Object Relational Mapping](https://en.wikipedia.org/wiki/Object-relational_mapping) tool to abstract the database interaction. An example of an ORM is [DataMapper](https://datamapper.org/).
+
+In this stage you'll make a first step towards making your own ORM!
+
 ## Learning Objectives
 
 * Separate application behaviour from database behaviour.
@@ -33,5 +39,7 @@ In this challenge, you will extract an object which is used to setup a connectio
 - [class instance variables1](http://thoughts.codegram.com/understanding-class-instance-variables-in-ruby/)
 - [class instance variables2](http://maximomussini.com/posts/ruby-class-variables/)
 - [variable scope](https://www.sitepoint.com/understanding-scope-in-ruby/)
+- [What is an ORM?](https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it)
+
 
 ## [Walkthrough](walkthroughs/14.md)

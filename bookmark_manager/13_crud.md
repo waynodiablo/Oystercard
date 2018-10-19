@@ -8,14 +8,14 @@ Let's return to our specification:
 
 * Show a list of bookmarks :white_check_mark:
 * Add new bookmarks :white_check_mark:
-* Delete bookmarks :construction:
+* Delete bookmarks :white_check_mark:
 * Update bookmarks :construction:
 * Comment on bookmarks
 * Tag bookmarks into categories
 * Filter bookmarks by tag
 * Users manage their bookmarks
 
-In this challenge, you will add functionality to **delete** and **update** bookmarks.
+In this challenge, you will add functionality to **update** bookmarks.
 
 ## Learning Objectives
 

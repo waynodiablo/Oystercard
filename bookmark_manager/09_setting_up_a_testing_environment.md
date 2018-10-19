@@ -33,6 +33,7 @@ In this challenge, you will write a script to **reset your database** every time
 - [ ] Run this helper method automatically right before **each** RSpec spec, so every test starts with a 'clean' test database.
 - [ ] Add required test bookmarks to the `bookmark_manager_test` database in the feature and `Bookmark` tests.
 - [ ] Make sure your feature and unit tests are passing.
+- [ ] Update your database setup instructions to include the test database.
 
 ## Hints
 &nbsp;<details><summary>CLICK ME</summary>

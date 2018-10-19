@@ -7,8 +7,7 @@ We now have a web application with some **hard-coded** data (an array of Bookmar
 In the next few challenges, we are going to:
 
 - set up a **database**,
-- play with it a bit to understand its structure, and
-- connect it to our Sinatra application.
+- play with it a bit to understand its structure
 
 > We'll return to building the Bookmark Manager application in [this challenge](./07_interacting_with_postgres_from_ruby.md), a few challenges down the line. If you're already comfortable with how Relational Databases work, feel free to skip to that challenge.
 
