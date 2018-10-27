@@ -119,3 +119,6 @@ Here are some things to consider:
 * What API should your test library have?
 
 * How will you publish your library? npm?
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/writing_tests_without_a_testing_library.md)

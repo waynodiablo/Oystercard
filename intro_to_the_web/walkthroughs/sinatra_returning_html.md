@@ -46,3 +46,6 @@ Before we move on let's commit our code, push it to Github and switch Driver/Nav
 Next up, we'll see if we can modularize some of our code into a _view_.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_returning_html.md)

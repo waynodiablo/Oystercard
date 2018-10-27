@@ -171,3 +171,6 @@ end
 ## Resources
 
 - [Official RSpec docs on predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/predicate-matchers)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rspec_predicate.md)

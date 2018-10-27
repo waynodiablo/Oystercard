@@ -34,3 +34,6 @@ For this challenge you will need a Gemfile listing Sinatra as a dependency.
 * [Jump Start Sinatra (Book)](http://www.sitepoint.com/store/jump-start-sinatra/)
 
 ### [Walkthrough](walkthroughs/sinatra_getting_started.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_getting_started.md)

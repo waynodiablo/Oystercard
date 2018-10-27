@@ -29,3 +29,6 @@ In this challenge, you will install Jasmine, set up a new project and try to fin
 - [A detailed breakdown of the &lt;script&gt; tag](http://www.sitepoint.com/a-detailed-breakdown-of-the-script-tag/)
 
 ### [Walkthrough](walkthroughs/setting_up_jasmine.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/setting_up_jasmine.md)

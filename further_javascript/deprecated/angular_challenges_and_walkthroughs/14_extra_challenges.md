@@ -21,3 +21,6 @@ So I never see them again
 * Deploy the app to Heroku
 * Create a persistence layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
 * Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/14_extra_challenges.md)

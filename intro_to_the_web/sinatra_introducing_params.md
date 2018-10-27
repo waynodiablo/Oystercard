@@ -32,3 +32,6 @@ In this challenge, you will use `params` to extract extra information from a cli
 
 
 ### [Walkthrough](walkthroughs/sinatra_introducing_params.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_introducing_params.md)

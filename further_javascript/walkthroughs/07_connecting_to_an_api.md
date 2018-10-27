@@ -149,3 +149,6 @@ toDoApp.service('ToDoService', ['$http', 'ToDoFactory', function($http, ToDoFact
 You should now have an idea of how Services and Factories can be used to construct ViewModels and remove responsibilities from Controllers. That's your basic introduction to Angular: on to Test-Driven Development!
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/07_connecting_to_an_api.md)

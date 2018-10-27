@@ -182,3 +182,6 @@ Dog.prototype.bark = function() {
 It takes a while to understand JavaScript and the worst way to start is to try to force your understanding of Ruby onto it.  Once you are comfortable with the idea that a function is an object that can be invoked; and there are different ways to invoke a function, you are well on your way.
 
 *Tip: in Sublime Text, you can type `proto` and hit Tab in a JS file to autocomplete the boilerplate code for defining a function on a prototype*
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/js_functions.md)

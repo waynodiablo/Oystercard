@@ -30,3 +30,6 @@
 # I love my job
   - I am passionate about software
   - I set my own direction
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makersbnb/reflection_objectives.md)

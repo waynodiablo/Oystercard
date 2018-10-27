@@ -114,3 +114,6 @@ _Avoid going down the Node rabbithole. This week is for learning Frontend stuff;
 ##### Resources
 
 - [:pill: Pill: JavaScript Promises](https://github.com/makersacademy/course/blob/master/pills/js_promises.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/getting_to_grips_with_angular.md)

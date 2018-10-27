@@ -38,3 +38,6 @@ As we discovered last week, errors are good. In this challenge, you will dissect
 - [Ruby Docs - Exception (Ruby's name for 'error')](http://ruby-doc.org/core-2.2.0/Exception.html)
 
 ## [Walkthrough](walkthroughs/03_debugging.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/03_debugging.md)

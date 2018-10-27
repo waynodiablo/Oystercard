@@ -12,3 +12,5 @@ Apart from nil, there are other special objects built into into Ruby. One of the
 True and false are also called [boolean values](http://en.wikipedia.org/wiki/Boolean_data_type). So, if you read that a method returns a boolean, this means that it will return either true or false.
 
 Try it for yourself in irb. Double equals in the example above means comparison, instead of assignment (single equals).
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/boolean.md)

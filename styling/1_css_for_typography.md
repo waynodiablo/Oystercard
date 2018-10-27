@@ -35,3 +35,6 @@ Text is still a dominant internet medium, and poor typography is a barrier to re
 ### Exercise 2: vertical rhythm
 
 - Take your solution to Exercise 1, and use [4 Simple Steps to Vertical Rhythm](http://typecast.com/blog/4-simple-steps-to-vertical-rhythm) to establish a consistent vertical rhythm to the webpage.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/styling/1_css_for_typography.md)

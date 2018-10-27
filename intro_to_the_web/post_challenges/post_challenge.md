@@ -50,3 +50,6 @@ You have met all the concepts required to implement these User Stories, but they
 - Full Test-Driven Development using Capybara
 
 [Back to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/post_challenges/post_challenge.md)

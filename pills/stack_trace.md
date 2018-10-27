@@ -39,3 +39,6 @@ Other lines in the output show the path in the code Ruby went through before enc
 This tells us that a line 1226 in the file `configuration.rb` that is inside a method "load" called our line in bike_spec that ultimately caused an error. This file is part of the [rspec-core](https://github.com/rspec/rspec-core) gem, version 3.2.1 that's installed for the version of Ruby 2.1.5 managed by the Ruby Version Manager rvm (hence these files are all in ~/.rvm). Normally you wouldn't go there unless you suspect a gem is misbehaving or you want to really understand how it works. However, if this stack trace goes through your code for a while before raising an error, this information would be far more valuable.
 
 The next line in the stack trace shows what was executed directly before `configuration.rb:1226` and so on. In this case the stack trace is showing the flow of execution through the underlying system code before the error was encountered.  In general you'll be hunting through stack traces to see if there are any parts of *your code* being hit and focusing on those.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/stack_trace.md)

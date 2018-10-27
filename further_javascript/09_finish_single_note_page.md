@@ -33,3 +33,6 @@ Don't worry if you need to jump around between the three parts of this challenge
 - :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [Getting the current browser URL](http://stackoverflow.com/questions/1034621/get-current-url-in-web-browser)
 - [JavaScript string methods (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/09_finish_single_note_page.md)

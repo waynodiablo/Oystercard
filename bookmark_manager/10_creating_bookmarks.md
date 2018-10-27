@@ -50,3 +50,6 @@ In this challenge, you will build the entire feature of 'adding bookmarks to the
 * [PSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
 
 ## [Walkthrough](walkthroughs/10.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/10_creating_bookmarks.md)

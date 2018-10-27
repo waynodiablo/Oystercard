@@ -42,3 +42,6 @@ Version 3
 Implement a user interface that can actually be used as a till.
 
 You may use whatever technologies you see fit.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges_with_reviews/till_tech_test.md)

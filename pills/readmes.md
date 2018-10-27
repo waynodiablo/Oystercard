@@ -65,3 +65,6 @@ This may seem like not much, but this is the minimum amount of information a new
 If you do feel like making your README extra awesome, [here is a list of awesome READMEs for inspiration](https://github.com/matiassingers/awesome-readme).
 
 Happy documentationing.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/readmes.md)

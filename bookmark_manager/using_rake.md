@@ -25,3 +25,6 @@ In this challenge, you will use **Rake**, a **task runner**, to automate the tas
 * [Rake .invoke versus .execute](https://stackoverflow.com/questions/32381017/running-rake-tasks-in-rspec-multiple-times-returns-nil)
 
 ## [Walkthrough](walkthroughs/using_rake.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/using_rake.md)

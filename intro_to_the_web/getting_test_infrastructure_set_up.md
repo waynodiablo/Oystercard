@@ -28,3 +28,6 @@ We have a basic project structure. Let's get our testing infrastructure glued to
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
 ### [Walkthrough](walkthroughs/getting_test_infrastructure_set_up.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/getting_test_infrastructure_set_up.md)

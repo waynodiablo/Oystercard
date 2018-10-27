@@ -78,3 +78,6 @@ postgres=# \q
 Because you made a database with the same name as your computer, from now on you will be able to log in to `psql` without having to specify the database you want to log into. It's enough to type `psql` and get writing SQL.
 
 [Next Challenge](../05_creating_your_first_table.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/walkthroughs/04_mac.md)

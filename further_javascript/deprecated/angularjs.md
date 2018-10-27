@@ -741,3 +741,6 @@ There's a couple of things to clean up:
 * Notice how when you clear the text box you're still trying to search.
 * Add a label to let the user know what they have just searched for.
 * Do you have a bug where some of the avatars are blown up really huge?
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angularjs.md)

@@ -21,3 +21,6 @@ In this challenge, you will build the skeleton of a UI, so that you can then sta
 ### Resources
 
 ### [Walkthrough](walkthroughs/interface.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/interface.md)

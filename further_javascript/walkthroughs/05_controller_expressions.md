@@ -148,3 +148,6 @@ Great! We can now build custom ToDos and remove them. However, our Controller is
 When our Controller is overstuffed, we put logic in...you guessed it, the Model. In Angular, Models are kind of strange. Let's take a look at them.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/05_controller_expressions.md)

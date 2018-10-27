@@ -27,3 +27,6 @@ In this challenge, you will store more than one item in the ViewModel, and itera
 - [Official Angular website](https://angularjs.org/)
 
 ### [Walkthrough](walkthroughs/04_more_than_one_thing.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/04_more_than_one_thing.md)

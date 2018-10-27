@@ -21,3 +21,6 @@ before_script:
 8. Bower will install to your root folder by default: if you have a `public` folder, you need to install there. This can be controlled using a `.bowerrc`.
 9. Add, commit and push.
 10. Cross fingers.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_and_travis.md)

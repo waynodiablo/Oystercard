@@ -37,3 +37,6 @@ In this challenge, you will initialize a testing framework, **RSpec**, and plan 
 - [RSpec basics and Spec files](https://semaphoreci.com/community/tutorials/getting-started-with-rspec) (start from 'RSpec basics' partway down the page)
 
 ### [Walkthrough](walkthroughs/5.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/5_from_feature_tests_to_unit_tests.md)

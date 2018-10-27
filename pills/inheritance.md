@@ -33,3 +33,5 @@ end
 ` InternalCombustionCar.new("Ford").start #=> Ford starting... `
 
 Some of the methods and classes mentioned above (check_brakes, ElectricEngine, etc.) are not defined in the code. This code sample is incomplete but it does show that some methods (e.g. check_brakes) could be common to all subclasses of Car, while the implementation of some methods (e.g. engine) could differ. 
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/inheritance.md)

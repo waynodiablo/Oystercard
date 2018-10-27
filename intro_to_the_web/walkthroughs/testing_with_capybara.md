@@ -15,3 +15,6 @@ Then run the commands as instructed, in IRB. What this will do is start an insta
 of the "headed" browser with which we can play with Capybara commands.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/testing_with_capybara.md)

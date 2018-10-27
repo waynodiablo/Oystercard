@@ -39,3 +39,6 @@ Using CDNs does also introduce a dependency so that if a CDN goes down, so does 
 ```
 
 Note the 'min' in the jquery examples above.  This refers to minified javascript (or other asset, e.g. CSS), which is the same javascript, but with all the spaces taken out, and possibly all the variable names reduced to the minimum possible.  The idea is to simply shrink the file size to reduce the time it takes to load.  It also has the effect of making the file almost unreadable to humans.  If you are in development mode and may need to debug through the file prefer the non-minified versions of assets.  Prefer minified versions when going into production.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/content_delivery_network.md)

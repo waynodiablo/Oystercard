@@ -92,3 +92,6 @@ end
 This change should not make your test fail - so ensure that you immediately mirror the change in your code. When refactoring like this, it is often wise to 'break' your code to watch the test fail, then make it pass again - this helps to protect against accidentally writing vacuous tests.
 
 [Next challenge](../07_deducting_money.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/06_maximum_balance.md)

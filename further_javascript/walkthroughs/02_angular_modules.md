@@ -31,3 +31,6 @@ Then we use the `ng-app` directive to 'wire' our module to our HTML (more on **d
 We have now created a named Angular module, `toDoApp`, and all HTML on this page is within its scope. Now, we will attach a controller to our `toDoApp` module, so we can track (and later, manipulate) application state.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/02_angular_modules.md)

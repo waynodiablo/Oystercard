@@ -38,3 +38,5 @@ address = first_line + second_line + postcode
 ````
 
 The value of `address` will be "Makers Academy, 25 City Rd., EC1Y 1AA". So, you create new variables (and change them) by putting the variable name on the left and the value on the right of the assignment.
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/variables.md)

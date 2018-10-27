@@ -45,3 +45,6 @@ Click "Continue and Installed" .
 Let it install. It takes about 20 minutes.
 
 Restart it. Once it’s done, it should be back to factory settings.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/returning_your_makers_laptop.md)

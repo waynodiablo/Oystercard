@@ -351,3 +351,6 @@ Resources
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/rails.md)

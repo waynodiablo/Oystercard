@@ -192,3 +192,6 @@ _*compared to wrestling a lion._
 * [jasmine-node](https://github.com/mhevery/jasmine-node)  
 * [Understanding module.exports in Node.js](http://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 * [Intro Video by Spike](https://www.youtube.com/watch?v=4J3PCKjRH-8)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/intro_to_node.md)

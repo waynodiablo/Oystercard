@@ -9,3 +9,5 @@ Resources:
 * [Node style](https://github.com/felixge/node-style-guide)
 * [npm Packages](https://www.npmjs.com/)
 * [Spike on Node Good Practices](https://www.youtube.com/watch?v=-EaT-6rGNqI)
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/jshint.md)

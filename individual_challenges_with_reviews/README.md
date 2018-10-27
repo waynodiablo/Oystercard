@@ -75,3 +75,6 @@ Enjoy these challenges - they are either adapted or directly copied from actual 
 
 * [Tech test checklist](https://github.com/makersacademy/jobhunters/blob/master/pills/tech_test_guide.md)
 * [The Coding Dojo Handbook (recommended reading post-course)](https://leanpub.com/codingdojohandbook)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges_with_reviews/README.md)

@@ -102,3 +102,6 @@ result < 12995
 
 - [Float class](http://www.ruby-doc.org/core-2.1.2/Float.html)
 - [BigDecimal class](http://ruby-doc.org/stdlib-2.1.2/libdoc/bigdecimal/rdoc/BigDecimal.html)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/floats.md)

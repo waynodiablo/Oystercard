@@ -54,3 +54,6 @@ Warden.test_mode!
     - only allow user to edit/delete restaurants they created 
     - only one review per user
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/devise.md)

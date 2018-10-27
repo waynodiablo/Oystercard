@@ -44,3 +44,6 @@ First download this [challenge file](https://dl.dropboxusercontent.com/u/1319685
 - *List all processes on the system ("ps" command with some extra flags), find out how many processes of Google Chrome are running using grep and wc. Save this number to a file "Challenge 1/chrome.list" using command-line only (redirect the output stream to a file).*
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/command_line_challenges.md)

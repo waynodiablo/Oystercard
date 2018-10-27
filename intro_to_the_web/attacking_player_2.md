@@ -26,3 +26,6 @@ In this challenge, you will implement this user story with little support. You s
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
 ### [Walkthrough](walkthroughs/attacking_player_2.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/attacking_player_2.md)

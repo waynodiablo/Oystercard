@@ -29,3 +29,6 @@ C: Coach
 O: Mid or senior or, if space, an alumni
 P: Mid or senior project team member
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/seating_plan.md)

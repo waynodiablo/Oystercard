@@ -35,3 +35,6 @@ Here's what you should end up with:
 * [Sinatra Main Intro Documentation](http://www.sinatrarb.com/intro.html)
 
 ### [Walkthrough](walkthroughs/sinatra_defining_a_route.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_defining_a_route.md)

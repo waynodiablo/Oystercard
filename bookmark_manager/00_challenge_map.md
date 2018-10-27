@@ -94,3 +94,6 @@ At the end of the walkthrough we are left with a number of unlinked routes. Can 
 #### Automate Migrations
 
 You should have a number of `.sql` files that have the individual migration steps required to set up the databases. Can you use these to set up Ruby methods to run each SQL command? You could then run these methods to do the database setup in test and development.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/00_challenge_map.md)

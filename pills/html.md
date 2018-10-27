@@ -58,3 +58,6 @@ Once you have the developer pane open, you can hover over HTML 'elements' (repre
 ![Using the developer pane to highlight page elements visually](images/html/html_basics_4.png)
 
 :construction:
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/html.md)

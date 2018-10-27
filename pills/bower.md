@@ -34,3 +34,6 @@ Most package managers don't work the same way as Ruby gems - Ruby gems are insta
 ## External resources
 
 * [Bower documentation](http://bower.io/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/bower.md)

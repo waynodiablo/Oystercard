@@ -37,3 +37,6 @@ server.listen(3000);
 ## Resources
 
 - [http-server documentation on npmjs.com](https://www.npmjs.com/package/http-server)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/http_server.md)

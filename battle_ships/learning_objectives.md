@@ -112,3 +112,6 @@ Weekly Challenge
 * Use of Gems and APIs
 * Ability to effectively mock 3rd party APIs in order to avoid test suites being bad net citizens
 * Further OOD and OOP practice
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/battle_ships/learning_objectives.md)

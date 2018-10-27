@@ -80,3 +80,6 @@ You'll then build the business logic to model a simple thermostat, and learn to 
 * [Thermostat: APIs](apis.md)
 * [Thermostat: styling](styling.md)
 * [Thermostat: saving state](saving_state.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/README.md)

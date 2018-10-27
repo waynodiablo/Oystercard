@@ -19,3 +19,6 @@
 9. Do some QA on your live site if you have it set up.
 
 10. Highfive someone/something.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/development_workflow.md)

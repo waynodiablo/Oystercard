@@ -310,3 +310,6 @@ Note that if you like/prefer gherkin style 'given, when, then' syntax you can al
 - [Uncle Bob on Given/When/Then](https://sites.google.com/site/unclebobconsultingllc/the-truth-about-bdd)
 
 - [Cucumber Home Page](http://cukes.info/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/cucumber.md)

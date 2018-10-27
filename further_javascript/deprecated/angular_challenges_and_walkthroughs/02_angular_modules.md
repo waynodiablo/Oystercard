@@ -25,3 +25,6 @@ Over the next few challenges, we're going to try and build a basic 'To Do' list.
 - [Angular Docs: Module](https://docs.angularjs.org/guide/module)
 
 ### [Walkthrough](walkthroughs/02_angular_modules.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/02_angular_modules.md)

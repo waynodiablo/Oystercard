@@ -29,3 +29,6 @@ You will probably need to do some serious mocking for these tests.  To get the m
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [getElementById on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/13_user_create_note.md)

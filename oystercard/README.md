@@ -105,3 +105,6 @@ I need to have the correct fare calculated
   16. [Calculating the fare between zones](16_fare_for_zones.md)
 
 ## [Example Code](walkthroughs/example_code)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/README.md)

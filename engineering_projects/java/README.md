@@ -28,3 +28,6 @@ These [assessment criteria](../assessment_criteria.md) will be how we look at yo
 ## Card Wall
 
 * https://trello.com/b/3T1tgGU5/acebook-java-template
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/java/README.md)

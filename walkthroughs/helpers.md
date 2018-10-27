@@ -363,3 +363,6 @@ All unit tests and feature tests should now pass, and this approach is very comm
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/helpers.md)

@@ -26,3 +26,6 @@ In this challenge, you'll create a static HTML page and make it available for br
 
 - [A minimal HTML5 document (SitePoint)](http://www.sitepoint.com/a-minimal-html-document-html5-edition/)
 - :pill: [http-server](../pills/http_server.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/04_index_page.md)

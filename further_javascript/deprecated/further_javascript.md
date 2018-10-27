@@ -75,3 +75,6 @@ What about build tools? Have you got everything optimized with Grunt? Have you t
 Redo everything in Coffeescript (or DogeScript). But in all seriousness, actually try to redo everything in ES6.
 
 <sup><sub>And, if you have finished all of the above (except Version 5) and you really really want to try Node (at your own peril!), have a look at these resources: [node](https://github.com/makersacademy/course/blob/master/pills/node.md), [Node guide](https://github.com/makersacademy/course/blob/master/node_guide.md)</sub></sup>
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/further_javascript.md)

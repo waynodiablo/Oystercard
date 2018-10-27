@@ -63,3 +63,6 @@ Github and switch! :twisted_rightwards_arrows:
 It's a pain to interact with our app via the URL bar. Next up, let's allow our users to interact with our app via a `<form>` element.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_introducing_params.md)

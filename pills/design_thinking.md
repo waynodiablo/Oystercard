@@ -12,3 +12,6 @@ This part of the course was inspired by [Chris Granger's post on the importance 
 * [Don't learn to code, learn to think](http://www.ybrikman.com/writing/2014/05/19/dont-learn-to-code-learn-to-think/)
 * [Thoughtbot's Product Design Sprint](https://robots.thoughtbot.com/the-product-design-sprint), additional material on their [GitHub](https://github.com/thoughtbot/design-sprint)
 * [Human Centred Design](https://www.ideo.com/work/human-centered-design-toolkit/) by OpenIDEO
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/design_thinking.md)

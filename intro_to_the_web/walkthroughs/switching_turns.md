@@ -128,3 +128,6 @@ end
 Let's check our feature tests - everything passes. Nice, we can switch turns! Now let's ensure the other player can join in our game.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/switching_turns.md)

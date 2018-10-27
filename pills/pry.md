@@ -115,3 +115,6 @@ end
 puts array
 
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/pry.md)

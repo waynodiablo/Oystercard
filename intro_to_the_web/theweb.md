@@ -30,3 +30,6 @@ This challenge uses [httpie](https://github.com/jkbrzt/httpie), a command line t
 - [Client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
 
 ### [Walkthrough](walkthroughs/theweb.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/theweb.md)

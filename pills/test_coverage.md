@@ -106,3 +106,6 @@ Resources
 * [Martin Fowler on Test Coverage](http://martinfowler.com/bliki/TestCoverage.html)
 * [Wikipedia on Code Coverage](http://en.wikipedia.org/wiki/Code_coverage)
 * [Archive Video of Sam talking about Test Coverage](https://www.youtube.com/watch?v=S6qV8vbjPu8)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/test_coverage.md)

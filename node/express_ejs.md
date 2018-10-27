@@ -63,3 +63,6 @@ Since everything is being passed around as JavaScript objects, this means that w
 * [Getting started with the Github API](https://developer.github.com/guides/getting-started/)
 * [Spike on Express and EJS](https://www.youtube.com/watch?v=br4k2QnM0Rw)
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/express_ejs.md)

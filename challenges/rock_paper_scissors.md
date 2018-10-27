@@ -157,3 +157,6 @@ These are starting to be a little dated, but they are awesome!  And they contain
 ### Refactor for UI testing
 
 * https://github.com/makersacademy/rpsls-javascript-jquery/tree/ui-testing-refactor
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/rock_paper_scissors.md)

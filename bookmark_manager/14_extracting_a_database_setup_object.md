@@ -43,3 +43,6 @@ In this stage you'll make a first step towards making your own ORM!
 
 
 ## [Walkthrough](walkthroughs/14.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/14_extracting_a_database_setup_object.md)

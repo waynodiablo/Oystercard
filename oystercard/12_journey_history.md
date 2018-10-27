@@ -55,3 +55,6 @@ I want to see all my previous trips
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 ## [Walkthrough](walkthroughs/12_journey_history.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/12_journey_history.md)

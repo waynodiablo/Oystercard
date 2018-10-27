@@ -145,3 +145,6 @@ end
 It's good to know each of these 'attr_*' methods and what they do in Ruby, as they are great way to DRY out repetitive getter and setter methods in your Ruby classes, as well as provide a concise description of the public getting/setting interface that your class provides.  However consider the least power principle.  Always use only the least power that you need to get the job done.  In terms of the least power principle attr_accessors are more powerful that attr_writers which are more powerful than attr_readers.
 
 Each time you are tempted to use an attr_accessor, consider if you can get away with just an attr_reader or an attr_writer.  And whenever using an attr_writer, consider if you really want to give your class's collaborators the power to directly update their internal instance variables with whatever they fancy.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/getters_and_setters.md)

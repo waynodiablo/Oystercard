@@ -67,3 +67,6 @@ You should now be ready to continue with the Postgres [pill](postgres.md#more-fu
 [Datamapper Github Issues Board](https://github.com/datamapper/do/issues/66)
 
 [Fedora Wiki](https://fedoraproject.org/wiki/PostgreSQL)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/postgres_linux.md)

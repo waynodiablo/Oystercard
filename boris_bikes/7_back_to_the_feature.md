@@ -64,3 +64,6 @@ end
 
 
 ### [Walkthrough](walkthroughs/7.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/7_back_to_the_feature.md)

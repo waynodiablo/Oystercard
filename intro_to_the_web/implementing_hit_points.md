@@ -28,3 +28,6 @@ In this challenge, you will implement a feature that meets this User Story. You 
 - [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### [Walkthrough](walkthroughs/implementing_hit_points.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/implementing_hit_points.md)

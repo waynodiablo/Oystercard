@@ -56,3 +56,6 @@ Remember to maintain RESTful routing conventions.
 * [Capybara Cheat Sheet](https://gist.github.com/cmkoller/0d3b048b3c4b48ee4955)
 
 ## [Walkthrough](walkthroughs/12.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/12_deleting_bookmarks.md)

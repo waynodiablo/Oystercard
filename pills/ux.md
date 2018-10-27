@@ -12,3 +12,6 @@ Resources
 * Jakob Nielsen, [Usability Articles](http://www.nngroup.com/articles/)
 * [Scott Klemmer's HCI Course](https://www.coursera.org/course/hcidesign)
 * Jeff Raskin, [The Humane Interface](http://www.amazon.co.uk/Humane-Interface-Directions-Designing-Interactive/dp/0201379376)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/ux.md)

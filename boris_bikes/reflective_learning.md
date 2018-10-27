@@ -34,3 +34,6 @@
 
 ## Stretch Goal
 - I investigate topics that interest me
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/reflective_learning.md)

@@ -34,3 +34,6 @@ Work with a group to improve your developer processes.
 * Repeat.
 
 * At the end, a photo of the whiteboard is circulated to the members of the group.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/process_surgery.md)

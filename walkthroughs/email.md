@@ -223,3 +223,6 @@ heroku run rake db:migrate
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/email.md)

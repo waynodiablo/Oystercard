@@ -42,3 +42,6 @@ First, we are extracting parameters to state. Then, we are rendering a view. But
 - [Post/Redirect/Get pattern](https://en.wikipedia.org/wiki/Post/Redirect/Get)
 
 ### [Walkthrough](walkthroughs/post_redirect_get_pattern.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/post_redirect_get_pattern.md)

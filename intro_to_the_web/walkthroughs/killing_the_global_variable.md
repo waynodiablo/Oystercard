@@ -107,3 +107,6 @@ The End.
 
 Now let's move on to some extension exercises:
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/killing_the_global_variable.md)

@@ -61,3 +61,6 @@ $(document).ready(function(){
 * Might well need to get javascript tests to work:
 
 http://robots.thoughtbot.com/automatically-wait-for-ajax-with-capybara
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/websockets2.md)

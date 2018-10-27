@@ -111,3 +111,6 @@ OK, now let's use {{Mustache}} syntax to interpolate the `todo` attribute on our
 We're done! We can now track application state using the controller, so long as that state is a simple string. Now let's try using more complex state, containing more than one item.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/03_using_a_controller_to_keep_track_of_state.md)

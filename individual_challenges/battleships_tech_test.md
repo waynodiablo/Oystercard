@@ -65,3 +65,6 @@ As a player
 So that I can play against a human opponent
 I would like to play a two-player game
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges/battleships_tech_test.md)

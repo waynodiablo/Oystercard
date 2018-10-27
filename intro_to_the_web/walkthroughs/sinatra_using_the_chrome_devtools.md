@@ -11,3 +11,6 @@ While there is no formal 'solution' to this exercise, do read the - [Chrome DevT
 Once you are satisfied you know how the DevTools work, let's move on.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_using_the_chrome_devtools.md)

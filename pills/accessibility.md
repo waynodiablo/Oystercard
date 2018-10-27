@@ -47,3 +47,5 @@ Images convey meaning to sighted users: they should do the same for those using 
 - Take [this inaccessible photo album](https://github.com/sjmog/inaccessible_sites/blob/master/images.html) and add useful `alt` attributes to images.
 
 > Tip: 'interesting' doesn't just mean a statement of what the image is. Visually-impaired users will appreciate an entertaining description. `<img alt="people holding hands" />` is less fun than `<img alt="Two people holding hands. They are standing on a beach and watching the sea. Both people are wearing red and they are smiling." />`.
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/accessibility.md)

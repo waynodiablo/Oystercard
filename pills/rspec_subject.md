@@ -45,3 +45,6 @@ Related Resources
 * [Chelimsky on Subject](http://blog.davidchelimsky.net/blog/2012/05/13/spec-smell-explicit-use-of-subject/)
 * https://github.com/reachlocal/rspec-style-guide
 * https://robots.thoughtbot.com/lets-not
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rspec_subject.md)

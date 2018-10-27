@@ -49,3 +49,6 @@ Having said that don't fall into a common trap - if you don't build a mobile sit
 * [RWD Bookmarklet](http://responsive.victorcoulon.fr/ - RWD bookmarklet)
 * [This Is Responsive](http://bradfrost.github.io/this-is-responsive/)
 * [mediaqueri.es](http://mediaqueri.es/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/responsive_web_design.md)

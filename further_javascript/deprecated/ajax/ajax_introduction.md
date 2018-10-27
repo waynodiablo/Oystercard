@@ -318,3 +318,6 @@ Resources
 * [Updated Address Bar with JavaScript](http://stackoverflow.com/questions/3338642/updating-address-bar-with-new-url-without-hash-or-reloading-the-page)
 * [How to access GET params in JavaScript](http://stackoverflow.com/questions/5448545/how-to-retrieve-get-parameters-from-javascript)
 * [Video of Sam on Ajax](https://www.youtube.com/watch?v=zrnKg5TyXjY)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/ajax/ajax_introduction.md)

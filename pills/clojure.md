@@ -840,3 +840,6 @@ Try to write small, reusable functions and make use of Clojure's [standard libra
 * [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
 * [Managing state](http://blog.jayfields.com/2011/04/clojure-state-management.html)
 * [Atoms, Refs, Vars](http://programmers.stackexchange.com/questions/143361/clojure-vars-atoms-and-refs-oh-my)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/clojure.md)

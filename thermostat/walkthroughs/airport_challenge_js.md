@@ -711,3 +711,6 @@ Full code for above available at: https://github.com/tansaku/airport_js
 
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/walkthroughs/airport_challenge_js.md)

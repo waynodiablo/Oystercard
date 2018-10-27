@@ -92,3 +92,6 @@ The string you get back from + is always a new string. You can test this by assi
 At its simplest, [string interpolation](https://github.com/makersacademy/course/blob/master/pills/string_interpolation.md) involves dropping one existing string into another.
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/strings.md)

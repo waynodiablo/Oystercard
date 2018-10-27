@@ -84,3 +84,6 @@ By the end of the week, the goal is to be able to answer "yes" to the week's pri
 After the challenges, you can stretch yourself by increasing the complexity of Battle.
 
 * [Post Challenge](post_challenges/post_challenge.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/README.md)

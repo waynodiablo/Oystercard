@@ -13,3 +13,6 @@ Here are some suggested screens, but feel free to change the content, style and 
 <img alt="Birthday first page" src="./images/birthday_app_1.png" width="400px" style="display: block;" />
 <img alt="Birthday greet" src="./images/birthday_app_3.png" width="400px" style="display: block;" />
 <img alt="Birthday counter" src="./images/birthday_app_2.png" width="400px" style="display: block;" />
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/post_challenges/birthday_app.md)

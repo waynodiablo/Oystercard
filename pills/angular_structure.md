@@ -43,3 +43,6 @@ Showing variables in the view isn't that exciting. But have a look at ngRepeat a
 
 ##9 Views
 This is what the user sees and interacts with. The user experience of Angular pages can be very special though. Since data gets synchronized between models and the view instantly there are no reloads required. The page magically updates it's contents when an API-call has succeeded or a filter button has been clicked.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/angular_structure.md)

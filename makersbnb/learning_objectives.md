@@ -15,3 +15,6 @@
 - Analyse daily progress to elicit weaker topic area focus
 - Evaluate own progress throughout the week
 - Create a repository containing the week's activity and retrospective notes
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makersbnb/learning_objectives.md)

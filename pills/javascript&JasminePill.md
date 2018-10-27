@@ -529,3 +529,6 @@ In addition to the 5 JavaScript and JQuery pills we have supplied for you in the
 * [Codecademy - Javascript Track](http://www.codecademy.com/tracks/javascript) - They also have a JQuery track that is worth working through.
 * [JavaScript for Cats](http://jsforcats.com/) - An introduction for new Programmers.
 * [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript) - An Awesome repository of JavaScript resources.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/javascript&JasminePill.md)

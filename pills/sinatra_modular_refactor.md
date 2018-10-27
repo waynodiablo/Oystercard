@@ -181,3 +181,6 @@ Rewrite your config.ru to `run Armadillo::MyApp`, and you're done!
 Note that we haven't touched our models or helpers. Go through the same process, nesting them within `Armadillo::Models`. Good luck!
 
 (*by Ptolemy. Questions / comments to ptolemy@makersacademy.com, or raise an issue)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/sinatra_modular_refactor.md)

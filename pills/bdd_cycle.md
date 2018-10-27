@@ -74,3 +74,6 @@ The client will frequently change their mind. This often happens for the same re
 Fortunately, we've written a highly-documented system (our tests act as our documentation), so we can make adjustments very easily. In this case, our client has added an addendum to their high-level request. We identify the User Stories that need updating, which show us to the Acceptance Tests that need altering, which take us to the Unit Tests that need to be changed, which guides us to the section of the Implementation that we need to alter. Because everything is so well-tested, we can be confident that our updated test structure will leave us - and the client - with a robust application, adjusted to the new requirements.
 
 ![Changes](./images/bdd/8_changes.jpg)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/bdd_cycle.md)

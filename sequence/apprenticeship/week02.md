@@ -39,3 +39,6 @@
 [Dependency Injection](https://diode.makersacademy.com/students/samjones1001/projects/1742)
 
 [Testing Relationships Between Classes](https://diode.makersacademy.com/students/EdwardAndress/projects/975)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/week02.md)

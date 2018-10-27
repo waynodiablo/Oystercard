@@ -161,3 +161,6 @@ Io> Michaelangelo slotNames
 
 And with that, it's time for you to accept the keys and take Io for a spin. Be safe, but have fun! You will find plenty of help in the [guide section of the official website](http://iolanguage.org/scm/io/docs/IoGuide.html), and [syntax help in the reference guide](http://iolanguage.org/scm/io/docs/reference/index.html).
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/IoPill.md)

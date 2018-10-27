@@ -13,3 +13,5 @@ Depending on the environment, we may or may not do certain things: e.g. send rea
 Databases are a major consideration: we don't want to use the same database in different environments. Imagine you have one million users registered on your website. You don't want to use the same database for development. When you launch the website locally you only want to have a database with a few users that you control manually. And when you run your tests, you want your database to be empty because every test assumes that there is nothing there that wasn't created explicitly. What happens if your test deletes all data from the database and you run them on a production or development database? You'd lose data. So, we really need to use one database per environment.
 
 That is why we check what environment we're in, and default to development.
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/development_environments.md)

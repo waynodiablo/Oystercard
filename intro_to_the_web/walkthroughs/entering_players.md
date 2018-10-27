@@ -187,3 +187,6 @@ We want to Start a fight by entering our names and seeing them
 It feels like we've solved that. Let's move on to the next one!
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/entering_players.md)

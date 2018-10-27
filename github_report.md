@@ -71,3 +71,6 @@ Related Walkthoughs
 * http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents 
 * https://docs.angularjs.org/tutorial
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/github_report.md)

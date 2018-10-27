@@ -30,3 +30,6 @@ end
 ```
 
 You write methods in that module and call them elsewhere. In the [Yelp walkthrough](https://github.com/makersacademy/course/blob/master/rails/yelp_further_challenges/1_average_ratings.md#diy-helper-methods), there's an example of using a helper method to generate star ratings from a number. You can simply call that helper method in the view.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rails_helpers.md)

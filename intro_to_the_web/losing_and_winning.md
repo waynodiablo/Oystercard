@@ -29,3 +29,6 @@ In this challenge, you will implement losing.
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
 ### [Walkthrough](walkthroughs/losing_and_winning.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/losing_and_winning.md)

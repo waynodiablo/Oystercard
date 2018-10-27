@@ -38,3 +38,6 @@ In this challenge, you will write a unit test for the missing method, and make i
 - [RSpec's one-liner syntax](https://www.relishapp.com/rspec/rspec-core/v/3-2/docs/subject/one-liner-syntax)
 
 ### [Walkthrough](walkthroughs/8.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/8_back_to_the_unit.md)

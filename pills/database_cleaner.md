@@ -24,3 +24,6 @@ end
 ```
 
 This will make sure that the database is cleared after every test run.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/database_cleaner.md)

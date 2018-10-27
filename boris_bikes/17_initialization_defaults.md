@@ -41,3 +41,6 @@ In this challenge, you will modify your `intialize` function to accept a `capaci
 - [Method arguments in Ruby](http://www.skorks.com/2009/08/method-arguments-in-ruby/)
 
 ### [Walkthrough](walkthroughs/17.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/17_initialization_defaults.md)

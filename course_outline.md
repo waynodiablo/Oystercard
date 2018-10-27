@@ -38,3 +38,6 @@ We warmly encourage every student at Makers Academy to introduce themselves to a
 
 - Curious to know about the staff? [Meet the team!](http://www.makersacademy.com/team/)
 - Interested to know more about [how we work as an organisation?](https://blog.makersacademy.com/search?q=management)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/course_outline.md)

@@ -43,3 +43,5 @@ Some books about this:
 
   * User Story Mapping by Jeff Patton
   * Fifty Quick Ideas to Improve your User Stories by Gojko Adzic and David Evans
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/splitting_stories.md)

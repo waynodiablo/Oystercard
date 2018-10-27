@@ -70,3 +70,6 @@ But you could just as well use a `form` element (so long as I changed my feature
 Let's run `rspec` - everything passes. On to the next User Story!
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/attacking_player_2.md)

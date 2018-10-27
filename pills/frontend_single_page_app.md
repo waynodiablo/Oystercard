@@ -148,3 +148,6 @@ What about if we have a list of animals that we want to show on separate "pages"
 
 * [Single page web app on Wikipedia](https://en.wikipedia.org/wiki/Single-page_application)
 * [`preventDefault()` on MDN](https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/frontend_single_page_app.md)

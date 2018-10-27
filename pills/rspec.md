@@ -212,3 +212,6 @@ Resources
 * [RSpec Expectation Docs](http://www.relishapp.com/rspec/rspec-expectations/v/3-2/docs/)
 * [RSpec Mock Docs](http://www.relishapp.com/rspec/rspec-mocks/v/3-2/docs)
 * http://betterspecs.org/
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rspec.md)

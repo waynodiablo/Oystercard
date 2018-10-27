@@ -47,3 +47,6 @@ I need to know where I've travelled from
 - [RSpec predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/predicate-matchers)
 
 ## [Walkthrough](walkthroughs/11_saving_entry_station.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/11_saving_entry_station.md)

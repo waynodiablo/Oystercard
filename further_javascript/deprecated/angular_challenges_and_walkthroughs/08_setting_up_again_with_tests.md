@@ -31,3 +31,6 @@ our dependencies.
 * [Video: Introduction to Bower](https://egghead.io/lessons/bower-introduction-and-setup)
 
 ### [Walkthrough](walkthroughs/08_setting_up_again_with_tests.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/08_setting_up_again_with_tests.md)

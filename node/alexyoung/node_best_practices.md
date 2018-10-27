@@ -43,3 +43,6 @@ readThisFile().on('data', function(data) {
 
 1. Use process.nextTick to execute something on the next cycle of the event loop. This allows the asynchronous code to run after you've returned the EventEmitter instance
 2. Check for errors in the callback and handle it
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/alexyoung/node_best_practices.md)

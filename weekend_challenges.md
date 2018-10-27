@@ -32,3 +32,6 @@
 [5]: https://github.com/makersacademy/bowling-challenge
 [6]: https://github.com/makersacademy/news-summary-challenge
 [7]: https://github.com/makersacademy/instagram-challenge
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/weekend_challenges.md)

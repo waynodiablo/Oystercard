@@ -21,3 +21,6 @@ In this challenge, you'll create a non-functioning HTML form that, in the future
 - :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [HTML forms on W3 schools](http://www.w3schools.com/html/html_forms.asp)
 - [RESTful routing question on Stack Overflow](http://stackoverflow.com/questions/2441962/what-is-restful-routing)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/10_create_note_form.md)

@@ -112,3 +112,6 @@ end
 Our test is now green again and our code is clean.
 
 [Next challenge](../05_top_up.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/04_adding_balance.md)

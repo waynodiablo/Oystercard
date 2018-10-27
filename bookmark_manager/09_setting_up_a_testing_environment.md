@@ -81,3 +81,6 @@ Once your feature test is passing, your unit tests for `Bookmark.all` are probab
 * [Running a command before each RSpec test](https://stackoverflow.com/questions/9958110/is-it-possible-to-add-somewhere-a-beforeeach-hook-so-that-all-spec-file-c)
 
 ## [Walkthrough](walkthroughs/09.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/09_setting_up_a_testing_environment.md)

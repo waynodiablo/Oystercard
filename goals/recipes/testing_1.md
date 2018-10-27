@@ -15,3 +15,6 @@ This is a good project to start with to learn test driven development.
 * [Take a look at the RSpec intro](http://rspec.info/)
 * Test drive something you've written before, but following [The Three Laws of Test-Driven Development](http://www.softwaretestingmagazine.com/knowledge/the-three-rules-of-test-driven-development/). How close can you get to perfect adherence?
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/recipes/testing_1.md)

@@ -15,3 +15,6 @@ This is summed up in the acronym CEP, standing for:
 **Strong evidence is credible.** It's empirical evidence backed up by expertise or events that couldn't reasonably mean anything else. For example, if you explain a topic to a beginner and then they can apply it straight afterwards, that's credible.
 
 Coaches are also a good source of credible feedback, as software engineering experts. Be mindful of the questions you ask them though! Are you looking for evidence that you're making progress? Or evidence that your code is of a professional standard?
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/strength_of_evidence.md)

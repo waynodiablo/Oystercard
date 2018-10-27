@@ -54,3 +54,6 @@ DockingStation | release_bike
 - [Feature Testing in IRB (video)](https://www.youtube.com/watch?v=rShBRLyEccY)
 
 ### [Walkthrough](walkthroughs/3.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/3_from_domain_models_to_feature_tests.md)

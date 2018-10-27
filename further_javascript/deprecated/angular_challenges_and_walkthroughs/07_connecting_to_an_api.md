@@ -20,3 +20,6 @@ In this challenge, you will import ToDos from an API via a **Service**.
 - [Angular Docs: Service Recipe](https://docs.angularjs.org/guide/providers#service-recipe)
 
 ### [Walkthrough](walkthroughs/07_connecting_to_an_api.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/07_connecting_to_an_api.md)

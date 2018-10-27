@@ -22,3 +22,6 @@ In this challenge, you will write a **controller expression** bound to a button 
 - [Angular Docs: Controller](https://docs.angularjs.org/guide/controller)
 
 ### [Walkthrough](walkthroughs/05_controller_expressions.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/05_controller_expressions.md)

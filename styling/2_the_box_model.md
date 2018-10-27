@@ -25,3 +25,6 @@ The best introduction to the CSS Box Model is [CSS-Tricks](https://css-tricks.co
 - Take [this webpage](./webpages/2-3.html) and make it look like [this design](./designs/2-3-full.jpg). Also, when you resize the page, it should look like [this design](./designs/2-3-mobile.jpg). _This webpage deliberately contains a bunch of hard-to-figure-out edge cases for CSS. Oh, and you're **not allowed to change the HTML other than adding classes**._
 
 > Top tip: try out small CSS changes using the Developer tools, in the 'Styles' panel of the 'Elements' pane. You can nudge items, and test things out live.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/styling/2_the_box_model.md)

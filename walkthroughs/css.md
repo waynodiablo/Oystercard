@@ -765,3 +765,6 @@ Resources:
 
 * [CSS tricks a guide to flex box](http://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Can I Use](http://caniuse.com)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/css.md)

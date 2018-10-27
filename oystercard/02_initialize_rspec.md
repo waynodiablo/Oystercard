@@ -34,3 +34,6 @@ Prepare your project for RSpec by creating a helper file and an empty test file.
 - [RSpec](http://rspec.info/)
 
 ## [Walkthrough](walkthroughs/02_initialize_rspec.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/02_initialize_rspec.md)

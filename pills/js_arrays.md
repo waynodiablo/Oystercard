@@ -47,3 +47,5 @@ if(animals.indexOf('cow') > -1) {
   alert('Mooo');
 }
 ~~~
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/js_arrays.md)

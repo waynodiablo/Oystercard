@@ -35,3 +35,6 @@ Let's extract a JourneyLog class. It should be responsible for starting a journe
 - [Ruby](http://www.getlaura.com/dependency-inversion-principle-in-ruby/)
 
 ## [Walkthrough](walkthroughs/15_extracting_journey_log.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/15_extracting_journey_log.md)

@@ -29,3 +29,6 @@ In order to display a list of notes to the user, they need to be converted to HT
 - [Array join](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 - [HTML lists on MDN](https://developer.mozilla.org/en/docs/Web/HTML/Element/ul)
 - :pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/03_note_list_view.md)

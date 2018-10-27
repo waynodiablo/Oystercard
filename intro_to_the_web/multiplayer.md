@@ -37,3 +37,6 @@ In this challenge, you will implement two-player functionality.
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
 ### [Walkthrough](walkthroughs/multiplayer.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/multiplayer.md)

@@ -382,3 +382,6 @@ Resources
 ---------
 
 * [The Internet and WWW](../pills/internet_web.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/deprecated/battle_ships_web_rspec.md)

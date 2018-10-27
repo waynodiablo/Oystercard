@@ -30,3 +30,6 @@ In this challenge, you will move the name-randomising logic from the view to the
 - [Separation of Concerns (Wikipedia)](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### [Walkthrough](walkthroughs/sinatra_keeping_views_clean.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_keeping_views_clean.md)

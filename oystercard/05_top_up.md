@@ -43,3 +43,6 @@ I want to add money to my card
 - [RubyMonk](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/45-more-classes/lessons/110-instance-variables)
 
 ## [Walkthrough](walkthroughs/05_top_up.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/05_top_up.md)

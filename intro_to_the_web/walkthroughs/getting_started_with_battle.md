@@ -80,3 +80,6 @@ Our project directory now looks like this:
 OK, we're done with this challenge. Next up, we'll implement our first User Story.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/getting_started_with_battle.md)

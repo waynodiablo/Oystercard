@@ -42,3 +42,6 @@ In this challenge, you will implement two User Stories with minimal scaffolding.
 
 
 ### [Walkthrough](walkthroughs/21.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/21_men_with_ven.md)

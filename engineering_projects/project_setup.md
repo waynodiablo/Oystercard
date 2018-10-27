@@ -85,3 +85,6 @@ To help, have a read through these pills. Writing smaller and better tickets wil
  - :pill: [Git Workflow](../pills/development_workflow.md)
  - :pill: [Ticket splitting](../pills/splitting_stories.md)
  - [Ticket Estimation](https://www.atlassian.com/agile/project-management/estimation)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/project_setup.md)

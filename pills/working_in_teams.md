@@ -9,3 +9,6 @@ Working in Teams
 * Working around interfaces
 * Handling merge conflicts
 * Handling interpersonal conflicts
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/working_in_teams.md)

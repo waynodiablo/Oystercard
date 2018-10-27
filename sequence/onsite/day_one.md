@@ -55,3 +55,6 @@ At 11.00am on the first day, go to the first floor and ask for Egle or Florence.
 ### Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/onsite/day_one.md)

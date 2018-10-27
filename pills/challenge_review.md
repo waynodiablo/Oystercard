@@ -66,3 +66,6 @@ If the coach receives your list of questions they may send out reading material 
 ## Feedback!
 
 We're always looking to improve our processes! If you have any feedback, please let us know.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/challenge_review.md)

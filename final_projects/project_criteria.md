@@ -43,3 +43,6 @@ It's also a great idea for your team to keep some sort of record of your learnin
 - Merging any branch into `master` automatically deploys after passing automated tests.
 - All code on `master` is containerized.
 - `master` is deployed into production.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/final_projects/project_criteria.md)

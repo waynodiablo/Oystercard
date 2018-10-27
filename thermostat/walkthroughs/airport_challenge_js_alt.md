@@ -160,3 +160,6 @@ Now you'll note that the test I wrote is looking for a `planesAvailable` method.
 
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/walkthroughs/airport_challenge_js_alt.md)

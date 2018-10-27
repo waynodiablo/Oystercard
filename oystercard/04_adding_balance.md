@@ -63,3 +63,6 @@ I want money on my card
 - [Writing your own classes in Ruby](http://rubylearning.com/satishtalim/writing_our_own_class_in_ruby.html)
 
 ## [Walkthrough](walkthroughs/04_adding_balance.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/04_adding_balance.md)

@@ -104,3 +104,6 @@ end
 OK! We've extracted a bunch of logic into our Model layer. Now, let's implement the hit points functionality from the User Story we're trying to solve.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/extracting_logic_to_the_model.md)

@@ -6,3 +6,6 @@
 - 17.00 - [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md). Coach-facilitated.
 - 18.00 - Announcements for the weekend.
 - 18.00 - [Daily feedback](../../pills/learning_at_makers.md#daily-feedback)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/onsite/challenges_friday_schedule.md)

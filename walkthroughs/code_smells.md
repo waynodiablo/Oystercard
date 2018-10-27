@@ -22,3 +22,6 @@ References
 * [https://github.com/troessner/reek](https://github.com/troessner/reek)
 * [https://github.com/troessner/reek/wiki/Code-Smells](https://github.com/troessner/reek/wiki/Code-Smells)
 * [http://sourcemaking.com/refactoring/bad-smells-in-code](http://sourcemaking.com/refactoring/bad-smells-in-code)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/code_smells.md)

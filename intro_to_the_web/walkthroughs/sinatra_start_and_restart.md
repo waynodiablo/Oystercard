@@ -57,3 +57,6 @@ Shotgun works by reloading your entire application on every request. While this 
 Webpages that return strings are kind of boring. Next up, let's add some [HTML](pills/html.md) to the mix.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_start_and_restart.md)

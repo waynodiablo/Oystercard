@@ -44,3 +44,6 @@ Afternoon - [Battle](../../intro_to_the_web)
 Morning - Friday Challenge
 
 Afternoon - Friday Challenge
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/week03.md)

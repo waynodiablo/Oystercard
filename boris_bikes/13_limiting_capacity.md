@@ -36,3 +36,6 @@ In this challenge, you will raise an exception when a user attempts to dock a bi
 - [Relish errors documentation](http://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/raise-error-matcher)
 
 ### [Walkthrough](walkthroughs/13.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/13_limiting_capacity.md)

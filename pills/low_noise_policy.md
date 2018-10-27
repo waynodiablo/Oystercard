@@ -9,3 +9,6 @@ On floor three and the mezzanine, there's a "low noise" policy. Programming is h
 * Set your laptop and phone on silent.
 
 * On floor three, please take phone calls in the hallway.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/low_noise_policy.md)

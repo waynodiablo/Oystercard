@@ -28,3 +28,6 @@
 
 #### Weekend challenge
 - [Chitter challenge](https://github.com/makersacademy/chitter-challenge)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/week04.md)

@@ -18,3 +18,6 @@ Earlier this year, Alex Young (an awesome Node guy who wrote [this awesome Node 
 * [Mini Node workshop](/node/alexyoung/node_workshop.md)
 * [What a junior Node developer should know](/node/alexyoung/node_jr_checklist.md)
 * [Node best practices](/node/alexyoung/node_best_practices.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/node_guide.md)

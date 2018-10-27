@@ -53,3 +53,6 @@ I need a penalty charge deducted if I fail to touch in or out
 - [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
 
 ## [Walkthrough](walkthroughs/14_no_touch_in_or_out.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/14_no_touch_in_or_out.md)

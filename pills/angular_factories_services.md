@@ -104,3 +104,6 @@ By using factories and services, your logic can be broken down into small chunks
 - [Factory vs Service with example](http://blog.manishchhabra.com/2013/09/angularjs-service-vs-factory-with-example)
 - [StackOverflow Answer](http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory)
 - [Official Angular docs](https://docs.angularjs.org/guide/providers)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/angular_factories_services.md)

@@ -39,3 +39,6 @@ The JavaScript equivalent is the Console tab of the Chrome developer tools.  Whe
 - :pill: [Three tier web architecture](/pills/three_tier_architecture.md)
 
 ### [Walkthrough](walkthroughs/javascript_basics.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/javascript_basics.md)

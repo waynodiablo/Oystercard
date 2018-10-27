@@ -205,3 +205,6 @@ Checking this file into version control ensures that automated CI systems will a
 * https://www.relishapp.com/webmock/webmock/docs/stubbing/stubbing-requests
 * https://github.com/vcr/vcr
 * http://stackoverflow.com/questions/9816152/filtering-sensitive-data-with-vcr/9831148#9831148
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/levels_of_stubbing.md)

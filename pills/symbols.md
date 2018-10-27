@@ -63,3 +63,6 @@ Even though there's no colon in front of the symbol name, this is a perfectly va
 
 You can verify that it's just an alternative syntax by trying it in the irb. Note how irb uses the default syntax when it echoes the hash back to you.
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/symbols.md)

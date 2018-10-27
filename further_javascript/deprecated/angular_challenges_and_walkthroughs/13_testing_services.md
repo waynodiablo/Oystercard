@@ -34,3 +34,6 @@ This is a problem with spiking and not coding test-first in general - it makes i
 - [Angular Docs: Services](https://docs.angularjs.org/guide/services)
 
 ### [Walkthrough](walkthroughs/13_testing_services.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/13_testing_services.md)

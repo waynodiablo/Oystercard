@@ -197,3 +197,6 @@ INNER JOIN Blogposts ON Blogposts.id = TagsBlogposts.blog_id;
 a semi-colon). This query will return all the data about Tags and their related
 Blogposts. Note that you don't need to make a join table when the two tables are
 linked through a pre-existing table.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/db_relationships.md)

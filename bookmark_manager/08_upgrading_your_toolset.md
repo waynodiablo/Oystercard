@@ -32,3 +32,6 @@ In this challenge, you will play with some tooling that gives you more insight i
 * [Why we built TablePlus](https://medium.com/tableplus/modern-native-tool-for-relational-database-79efc35b647d)
 
 ## [Walkthrough](walkthroughs/08.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/08_upgrading_your_toolset.md)

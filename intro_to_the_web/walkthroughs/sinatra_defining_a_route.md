@@ -58,3 +58,6 @@ What this method does is tell Sinatra to respond to a `GET` HTTP request to the 
 The '/' part of the address is the last slash in `http://localhost:4567/`. Next up, let's try adding another page.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_defining_a_route.md)

@@ -13,3 +13,6 @@ Instagram Marketplace
 * [Email](https://github.com/makersacademy/course/blob/master/walkthroughs/email.md)
 * [Maps](https://github.com/makersacademy/course/blob/master/walkthroughs/gmaps.md)
 * [OmniAuth](https://github.com/makersacademy/course/blob/master/walkthroughs/devise_omniauth.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/instagram-marketplace.md)

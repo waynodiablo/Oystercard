@@ -13,3 +13,6 @@ We'll focus on debugging today, as a method of understanding more about a progra
 
 * Go through a program you've written and put a comment on every line explaining what it does. Go through it with someone and see if they agree.
 * As above, but with a program you haven't written. You won't understand it all immediately — that's okay! Try the [Geocoder](https://github.com/alexreisner/geocoder) gem.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/recipes/understanding_language_1.md)

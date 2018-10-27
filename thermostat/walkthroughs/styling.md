@@ -24,3 +24,6 @@
 - Grouping rules
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/walkthroughs/styling.md)

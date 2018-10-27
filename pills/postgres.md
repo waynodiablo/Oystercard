@@ -49,3 +49,6 @@ Resources:
 
 * [PostgreSQL Command Line Cheat Sheet](http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/)
 * [SQL in one page](http://www.cheat-sheets.org/sites/sql.su/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/postgres.md)

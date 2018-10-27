@@ -253,3 +253,6 @@ Resources:
 * [Mocha Webdriver integration](https://github.com/admc/wd#mocha-integration)
 * [Grunt Mocha Webdriver support](https://github.com/jmreidy/grunt-mocha-webdriver)
 * [Video of Sam on Ajax with Extra JQuery](https://www.youtube.com/watch?v=pp1b4FqcNGA)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/ajax/ajax_with_extra_jquery.md)

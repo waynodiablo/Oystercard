@@ -88,3 +88,6 @@ You should see a Firefox browser window pop up and a website load. Now play arou
 * Type `page`. Try `page.methods`. Try out some of the methods on the page object.
 * Instruct the browser to click on a link or a button.
 * Fill in a form.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/capybara.md)

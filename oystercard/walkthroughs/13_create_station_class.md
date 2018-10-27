@@ -22,3 +22,6 @@ end
 > Getting these tests to pass should be trivial for you by this point, so bonus points if you can figure out a way to generate new stations based on a file of station names and their correct zones (you might consider coming back to this at the end of the challenge).
 
 [Next challenge](../14_no_touch_in_or_out.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/13_create_station_class.md)

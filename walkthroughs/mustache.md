@@ -113,3 +113,6 @@ template {
   display: none:
 }
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/mustache.md)

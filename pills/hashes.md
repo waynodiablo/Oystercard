@@ -19,3 +19,6 @@ another_empty_hash = Hash.new # same as {}
 
 Play with the hash in irb (:pill:  [irb](https://github.com/makersacademy/course/blob/master/pills/irb.md) ) to learn how to use it. You'll be using hashes and array in every Ruby project you'll ever build.
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/hashes.md)

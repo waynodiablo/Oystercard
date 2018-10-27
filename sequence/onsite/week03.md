@@ -11,3 +11,6 @@
 #### Friday
 
 [Challenges Friday schedule](./challenges_friday_schedule.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/onsite/week03.md)

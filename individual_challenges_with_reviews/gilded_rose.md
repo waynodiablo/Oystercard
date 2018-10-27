@@ -26,3 +26,6 @@ Feel free to make any changes to the UpdateQuality method and add any new code a
 Choose [legacy code](https://github.com/emilybache/GildedRose-Refactoring-Kata) (translated by Emily Bache) in the language of your choice. The aim is to practice good design in the language of your choice. Refactor the code in such a way that adding the new "conjured" functionality is easy.
 
 HINT: Test first FTW!
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges_with_reviews/gilded_rose.md)

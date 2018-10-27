@@ -246,3 +246,6 @@ Where to go next
 
 **warning** The default angular end-to-end mocking library `ngMockE2E` is usually difficult to set up. We recommend trying [Protractor http mock](https://github.com/atecarlos/protractor-http-mock) instead.
 * BDD ALL THE THINGS with your newfound Protractor skillz. Aww yeah.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/protractor.md)

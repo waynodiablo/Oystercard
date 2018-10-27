@@ -44,3 +44,6 @@ In this challenge, you will convert your instance variable `@bike` to reference 
 - [Ruby `initialize` method](http://www.rubyist.net/~slagell/ruby/objinitialization.html)
 
 ### [Walkthrough](walkthroughs/14.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/14_complex_attributes.md)

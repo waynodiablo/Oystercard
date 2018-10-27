@@ -28,3 +28,6 @@ Read [Succeeding at Makers, and beyond](https://github.com/makersacademy/course/
 ## Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/day_one_remote.md)

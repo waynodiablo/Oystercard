@@ -104,3 +104,6 @@ Structure:
   * routes/ -- route handler, where your REST API is implemented
   * middleware/ -- use lots of middleware
   * index.js -- define the routes, load express stuff
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/alexyoung/node_workshop.md)

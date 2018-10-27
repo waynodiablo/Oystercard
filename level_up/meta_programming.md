@@ -112,3 +112,6 @@ If it doesn't match this pattern then we should continue what we were originally
 Good luck students, and when you're done go and call has_metaroid? on yourself and return a big fat 'true'. 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/level_up/meta_programming.md)

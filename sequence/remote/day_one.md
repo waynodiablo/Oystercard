@@ -26,3 +26,6 @@ See [here](./example_schedule.md) for the rough weekly schedule.
 ### Setting up your laptop
 
 Have a look at [Prepare to Code](http://www.preparetocode.io/).  It has a guide for what software to install to prepare for the Makers course.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/day_one.md)

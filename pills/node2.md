@@ -63,3 +63,6 @@ Resources:
 * [Ajax Introduction](https://github.com/makersacademy/course/blob/master/node/ajax_introduction.md)
 * [Ajax with Extra JQuery](https://github.com/makersacademy/course/blob/master/node/ajax_with_extra_jquery.md)
 * [Ajax JQuery Spinners](https://github.com/makersacademy/course/blob/master/node/ajax_jquery_spinners.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/node2.md)

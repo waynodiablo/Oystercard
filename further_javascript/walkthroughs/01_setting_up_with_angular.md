@@ -56,3 +56,6 @@ And, setting up our Angular app in accordance with the Angular guide, our `index
 > Open index.html (either by double-clicking or using `open index.html` from the command line). Notice how letters you type in the input immediately reflect in the header. This is Angular's first piece of magic: data-binding. Think of how this process is similar to updating the temperature of the Thermostat by clicking one of its buttons.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/01_setting_up_with_angular.md)

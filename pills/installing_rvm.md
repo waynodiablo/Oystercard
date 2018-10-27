@@ -31,3 +31,6 @@ and you may need to enter your administrator password a few times to complete th
 ## Resources
 
 - [RVM](http://rvm.io)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/installing_rvm.md)

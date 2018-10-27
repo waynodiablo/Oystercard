@@ -43,3 +43,6 @@ experience, refactors the existing code). Then:
 * Offer alternative implementations, but assume the author already considered
   them. ("What do you think about using a custom validator here?")
 * Seek to understand the author's perspective.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/how-to/code-review.md)

@@ -53,3 +53,6 @@ Mindful engagement with these challenges can help you achieve these goals:
 After the challenges, you can stretch yourself by implementing additional User Stories that significantly enhance the domain.
 
 1. [Post-challenge](post_challenge.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/0_challenge_map.md)

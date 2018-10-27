@@ -108,3 +108,6 @@ http://stackoverflow.com/questions/12181253/changing-node-js-listening-port
 
  
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/gmaps.md)

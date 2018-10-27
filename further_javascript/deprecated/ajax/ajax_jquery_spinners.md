@@ -223,3 +223,6 @@ Resources:
 ------
 
 * [Video Sam on Spinners and Modals](https://www.youtube.com/watch?v=xE2K-Tlzqi8)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/ajax/ajax_jquery_spinners.md)

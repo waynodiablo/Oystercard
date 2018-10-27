@@ -7,3 +7,5 @@ Angular is a front-end MVC framework designed to build web applications rather t
 * [Introduction to Angular](https://docs.angularjs.org/guide/introduction)  
 * [The official Angular tutorial](https://docs.angularjs.org/tutorial)
 * [AngularJS Tutorial - 10,000 word guide](https://www.airpair.com/angularjs/posts/angularjs-tutorial) <-- recommended!
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/angularjs.md)

@@ -71,3 +71,6 @@ Active Record also deals with migrations. (Is there *anything* it doesn't do?)
 * [Koans for Performing Active Record Migrations](https://github.com/ptolemybarnes/galactical-relations-koans)
 * [Martin Fowler, *Patterns of Enterprise Application Architecture*](http://books.google.co.uk/books?id=FyWZt5DdvFkC&lpg=PA1&dq=Patterns%20of%20Enterprise%20Application%20Architecture%20by%20Martin%20Fowler&pg=PT187#v=onepage&q=active%20record&f=false) – Google Books
 * [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html) – RailsGuides
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/activerecord.md)

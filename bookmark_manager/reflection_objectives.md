@@ -28,3 +28,6 @@
   - I am passionate about software
   - I set my own direction
   
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/reflection_objectives.md)

@@ -99,3 +99,6 @@ Make sure everything runs as expected.
 ## Most importantly
 * Feel free to poke, prod, tear apart, and rebuild this little example as much as you want.
 * This may feel deceptively simple, but it actually contains a lot of the key concepts you will be looking at in the front-end this week.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/jQuery.md)

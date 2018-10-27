@@ -50,3 +50,6 @@ Resources
 ---------
 
 * https://relishapp.com/rspec/rspec-mocks/docs
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/doubles.md)

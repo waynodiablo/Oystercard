@@ -132,3 +132,5 @@ Capybara.app = BookmarkManager
 You can now add feature tests to the `spec/features` directory, and run feature tests with `rspec spec/features`.
 
 > Running `rspec` will run both features and regular unit specs.
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/ruby_web_project_setup_list.md)

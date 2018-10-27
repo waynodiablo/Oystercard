@@ -112,3 +112,6 @@ And the `play.erb` view:
 OK, our controller is much skinnier now! Refactoring complexity into the model is hugely advantageous. You'll see that we can now implement many User Stories in rapid succession without worrying too much about controller difficulties. Let's move on!
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/skinny_controllers.md)

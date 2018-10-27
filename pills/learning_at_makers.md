@@ -117,3 +117,6 @@ A [killer article from Allison Kaptur](http://akaptur.com/blog/2015/10/10/effect
 ### Skills workshops
 
 * Skills workshops are interactive sessions where you practice a developer skill.  For example: debugging, or domain modelling.  They are guided by your coach, but you will spend most of your time doing, rather than listening.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/learning_at_makers.md)

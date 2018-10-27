@@ -143,3 +143,6 @@ expect(page).to have_content 'Posted by: alex@example.com'
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/devise-review.md)

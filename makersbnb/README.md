@@ -98,3 +98,6 @@ If your specification asks for a car, don't build the wheels in the first week, 
 5. Create a branch.
 6. Add the user stories to the README.
 7. Use the [developer workflow](#developer-workflow) to get the README merged into master.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makersbnb/README.md)

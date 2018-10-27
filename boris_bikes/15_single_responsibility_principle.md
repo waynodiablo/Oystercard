@@ -48,3 +48,6 @@ In this challenge, you will use **private methods** to extract method responsibi
 - [`private` methods in Ruby](http://culttt.com/2015/06/03/the-difference-between-public-protected-and-private-methods-in-ruby/)
 
 ### [Walkthrough](walkthroughs/15.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/15_single_responsibility_principle.md)

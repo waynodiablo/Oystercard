@@ -134,3 +134,6 @@ For further practice, you can check out the [Javascripting workshopper](https://
 Once you feel comfortable with JavaScript and using the browser's JavaScript console to play with code ideas, let's start writing some TDD JavaScript.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/walkthroughs/javascript_basics.md)

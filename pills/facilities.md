@@ -39,3 +39,6 @@ There's a shower in the larger toilet on the second floor.  Please leave it clea
 * If there will be any changes to the facilities, Florence will post a bulletin to `#facilities`.  This will include what is going to happen, why we're doing it, when it will happen and how long it will go on for.
 
 * As far as possible, painting and smaller facilities construction projects that affect you will happen outside the core hours.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/facilities.md)

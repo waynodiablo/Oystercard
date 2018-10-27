@@ -46,3 +46,6 @@ This Gruntfile will run `jshint` every time you type `grunt`.
 * Get the `grunt-contrib-watch` module working so that JSHint runs automatically every time you save.  
 * See if you can set up `grunt-contrib-jasmine` to run your client-side Jasmine tests.  
 * Modify your default task to run both JSHint and Jasmine.  
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/grunt.md)

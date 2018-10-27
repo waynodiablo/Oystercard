@@ -27,3 +27,6 @@ You'll need to inject your factory into your unit test, the resource on injectin
 - [Angular Style Guide: Factories](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#factories)
 
 ### [Walkthrough](walkthroughs/12_testing_factories.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/12_testing_factories.md)

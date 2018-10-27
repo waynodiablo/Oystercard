@@ -34,3 +34,6 @@ In this challenge, you will allow players to enter their names and see them on-s
 - [Relishapp notes on feature specs with capybara] (https://www.relishapp.com/rspec/rspec-rails/docs/feature-specs/feature-spec)
 
 ### [Walkthrough](walkthroughs/entering_players.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/entering_players.md)

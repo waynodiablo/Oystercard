@@ -80,3 +80,6 @@ https://github.com/makersacademy/acebook-rails-template/blob/master/CONTRIBUTING
     - from who or where can you get that information?
 2. Improve your problem solving process
     - keep escalating the problem until you find the right un-blocker: use the coaches to help you!
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/toolbox.md)

@@ -45,3 +45,6 @@ end
 Make sure that all your tests are green and you have looked for opportunities to refactor before moving on to the next challenge.
 
 [Next challenge](../12_journey_history.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/11_saving_entry_station.md)

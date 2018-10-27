@@ -37,3 +37,6 @@ References
 * Janzen, D., & Saiedian, H. (2008a). Test-driven learning in early programming courses. In ACM SIGCSE Bulletin (Vol. 40, No. 1, pp. 532-536). ACM.
 * Janzen, D. S., & Saiedian, H. (2008b). Does test-driven development really improve software design quality?. Software, IEEE, 25(2), 77-84.
 * Vu, J. H., Frojd, N., Shenkel-Therolf, C., & Janzen, D. S. (2009). Evaluating test-driven development in an industry-sponsored capstone project. In Information Technology: New Generations, 2009. ITNG'09. Sixth International Conference on (pp. 229-234). IEEE.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/tdd_quality_discussion.md)

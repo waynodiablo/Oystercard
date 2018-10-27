@@ -46,3 +46,6 @@ In this challenge, you will **register** new users.
 * [BCrypt, a secure password hasher](https://github.com/codahale/bcrypt-ruby)
 
 ## [Walkthrough](walkthroughs/18.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/18_registration.md)

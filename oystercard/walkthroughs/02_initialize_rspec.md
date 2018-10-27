@@ -32,3 +32,6 @@ git push origin master
 The `git push` command will sync the changed you made locally (that you staged and committed) to your Github account (where you cloned this repo from). Now go to your Github repo and check that the commit you made is there. Verify that the three files in the commit are the ones you added in the command line.
 
 [Next challenge](../03_debugging.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/02_initialize_rspec.md)

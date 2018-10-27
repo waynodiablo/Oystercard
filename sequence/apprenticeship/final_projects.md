@@ -46,3 +46,6 @@ This is a chance to interact and explain more deeply the journey and the process
 * 6.45pm: Closing spiel from coach.
 * 6.45pm: Hanging out on floor 2.
 * 8.00pm: Close.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/final_projects.md)

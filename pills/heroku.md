@@ -152,3 +152,6 @@ into the Command Line and it will be launched in the browser! It should look exa
 Note that heroku relies on whatever is visible in git.  Any time you make a change to your local code you will need to ensure that you have committed it to your git repository in order for it to be pushed to heroku.  Please also take care with files that are being ignored by git due to a .gitignore file:
 
 https://devcenter.heroku.com/articles/gitignore
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/heroku.md)

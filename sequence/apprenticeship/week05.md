@@ -28,3 +28,6 @@ Standups are student-organised.
 Standups are student-organised.
 
 [Challenges Friday schedule](./challenges_friday_schedule.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/week05.md)

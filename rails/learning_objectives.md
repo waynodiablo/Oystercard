@@ -41,3 +41,6 @@
   * Devise.
   * FactoryGirl.
   * Shoulda.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/rails/learning_objectives.md)

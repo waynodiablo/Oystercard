@@ -35,3 +35,6 @@ To get an idea of what you'll be building, here are some [user stories and a moc
 13. [Use TDD to finish support for user note creation](13_user_create_note.md)
 14. [Refactor](14_refactor.md)
 15. [Extract a standalone test library](15_extract_test_library.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/00_challenge_track.md)

@@ -74,3 +74,6 @@ There are ways of DRYing the above up, as well: check the Resources for more inf
 - [RSpec Method Stubs (shorthand) (Github)](https://github.com/rspec/rspec-mocks#method-stubs)
 
 ### [Walkthrough](walkthroughs/20.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/20_mocking_behaviour_on_doubles.md)

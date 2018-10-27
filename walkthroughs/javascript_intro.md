@@ -469,3 +469,6 @@ Exercises
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/javascript_intro.md)

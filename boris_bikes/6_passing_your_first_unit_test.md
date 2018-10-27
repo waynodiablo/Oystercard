@@ -49,3 +49,6 @@ In this challenge, you will create a `DockingStation` class and include it in th
 - [Including files in Ruby](http://rubylearning.com/satishtalim/including_other_files_in_ruby.html)
 
 ### [Walkthrough](walkthroughs/6.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/6_passing_your_first_unit_test.md)

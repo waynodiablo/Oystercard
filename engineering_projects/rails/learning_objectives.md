@@ -55,3 +55,6 @@
   * Devise.
   * FactoryBot.
   * Shoulda.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/rails/learning_objectives.md)

@@ -183,3 +183,6 @@ To fix this put in the `<head>` of the page
 And everything should be green. Almost there now!
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/12_testing_factories.md)

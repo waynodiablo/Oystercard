@@ -20,3 +20,6 @@ Testing a complete application end to end
 * Compare unit tests, feature tests, request tests and integration tests. 
 * Evaluate appropriate test frameworks for each test layer of your application.
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makermix/makermix_learning_objectives.md)

@@ -26,3 +26,6 @@ I'd like a recognized technique for capturing and defining requirements in plain
 ## Footnote
 1. You might call this a meta user story (see footnote 2).
 2. This is geek humour.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/user_stories.md)

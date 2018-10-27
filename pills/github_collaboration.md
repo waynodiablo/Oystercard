@@ -29,3 +29,6 @@ You can use the approach below to collaborate with your pair on the weekly chall
 4. Bob can now push new commits from his clone to `boris-bikes-2`.
 
 5. Bob adds Chetna as a collaborator.  She can now clone and contribute to his repo.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/github_collaboration.md)

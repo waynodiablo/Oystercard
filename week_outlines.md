@@ -205,3 +205,6 @@ See: [Engineering project](./engineering_projects/README.md)
 ## Week 10
 
 See: [Individual challenges](./individual_challenges)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/week_outlines.md)

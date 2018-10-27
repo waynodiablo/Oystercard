@@ -75,3 +75,6 @@ Secondly, the `params` we print to the console have not changed. This is what we
 In the next challenge, we will take a closer look at the HTTP requests we are sending by using the Chrome inspector.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_posted_params.md)

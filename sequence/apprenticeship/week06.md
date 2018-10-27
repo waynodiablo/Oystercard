@@ -12,3 +12,6 @@
 
 - 17.30 - Individual group retros (organised in your groups)
 - 18.00 - Announcements for the weekend
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/week06.md)

@@ -143,3 +143,6 @@ You can follow [this video](https://vimeo.com/112265555) (from around 35 minutes
 
 * You might get a memory error when installing your composer files, if so run `sudo subl /usr/local/etc/php/5.6/php.ini` and search for memory_limit and change it to **5000M**.
 * You need to make sure your terminal uses Homebrew's version of PHP, if you're having problems getting the Postgres driver working you need to add to your **.bash_profile** in your home directory the following line `export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"`
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/php.md)

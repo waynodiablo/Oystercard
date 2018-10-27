@@ -182,3 +182,6 @@ self.removeToDo = function() {
 ```
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/11_testing_behaviour.md)

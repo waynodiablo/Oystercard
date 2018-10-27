@@ -86,3 +86,6 @@ end
 > Above I'm suggesting another helper method, "user_params", that would allow you to keep the knowledge of what values are needed to create a user in one place. If only there were some nice gem for doing this... <notextile>*</notextile>
 
 <notextile>*</notextile>https://github.com/thoughtbot/factory_girl
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/spec_helper_methods.md)

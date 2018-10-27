@@ -42,3 +42,6 @@ Above are the *response* headers. They originate from the server. We can see *me
 Lastly, the *body* of the response. This is the information that motivated our request in the first place. It originated from the server.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/http.md)

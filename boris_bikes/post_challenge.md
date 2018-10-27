@@ -45,3 +45,6 @@ Other possible feature requests and system changes
 * Users must pay to release bikes, docking stations must check user credit levels
 
 [Back to the Challenge Map](0_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/post_challenge.md)

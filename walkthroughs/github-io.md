@@ -151,3 +151,6 @@ you're done.
 
 That's it :-)
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/github-io.md)

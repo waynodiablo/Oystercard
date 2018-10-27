@@ -117,3 +117,6 @@ Weekly Challenge
 - Use Simple OOD and OOP to create and link at least two objects via composition
 - Use RSpec mocks to mock random behaviour effectively in order to ensure consistent and reliable tests
 - Complete a project from scratch using Test-Driven Development (TDD)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/learning_objectives.md)

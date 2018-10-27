@@ -85,3 +85,6 @@ DELETE  /restaurants/:id       restaurants#destroy
 
 - Design the url schema for a RESTful API for the Makers Bnb project (a clone of Airbnb)
 - Design a RESTful API schema for Gmail
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rest.md)

@@ -49,3 +49,6 @@ I need to touch in and out.
 - [RSpec predicate matchers](https://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/predicate-matchers)
 
 ## [Walkthrough](walkthroughs/08_touch_in_out.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/08_touch_in_out.md)

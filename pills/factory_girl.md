@@ -106,3 +106,6 @@ FactoryGirl gives us a lot of options. It allows you to generate models without 
 Check out the [docs](http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md) for getting the most out of FactoryGirl.  
 
 *(by Ptolemy, comments/questions about this pill to: ptolemy@makersacademy.com)*
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/factory_girl.md)

@@ -31,3 +31,6 @@
 * npm start/stop/test, scripts
 * Build systems for client-side projects: Browserify, Grunt, Gulp
 * Testing: Mocha, Jasmine
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/alexyoung/node_jr_checklist.md)

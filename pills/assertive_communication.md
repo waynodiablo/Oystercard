@@ -29,3 +29,6 @@ If you say you'll take action e.g. report them for something, make sure you're p
 Compliments come at the end, not the start (see step 1 if you've forgotten why). Because when you've been critical of someone, it is helpful and kind to remind them of their value. Just make sure you do it all in the right order. 
 
 n.b. Being nice != dismissing everything you've just said. If you're feeling uncomfortable you may feel the urge to do this, but dont—it defeats the purpose of raising the issue in the first place. Stand by your words—they were reasonable and sincere.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/assertive_communication.md)

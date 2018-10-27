@@ -111,3 +111,6 @@ class Friendship
   belongs_to :target, 'Person', :key => true
 end
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/dm_db_relationships.md)

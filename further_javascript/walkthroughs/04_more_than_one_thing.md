@@ -91,3 +91,6 @@ So, we need to update the Mustache syntax in our Template:
 _Voila!_ Our View now prints exactly what we wanted. But we're limited to precisely two items in our application state: what if we want to add or remove others?
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/04_more_than_one_thing.md)

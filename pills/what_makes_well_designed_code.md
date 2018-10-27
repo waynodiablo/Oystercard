@@ -73,3 +73,6 @@ Imagine making a car with screws or with glue. Screws make the car inherently ea
 There are many, often conflicting, software design principles. Some favour object oriented design, some functional design, some a mixture of both. How do you tell which is better to use?
 
 Trace the logic back to which techniques and designs make your software easier to change in future. With this as your 'moral compass', you will be able to fit each idea into its right place, and gradually learn to tell the gold from the hype.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/what_makes_well_designed_code.md)

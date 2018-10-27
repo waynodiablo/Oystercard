@@ -65,3 +65,6 @@ A staff member will give the person a formal warning.  If they make a second med
 An illegal or trust-breaking act.
 
 The person will be told to leave Makers permanently.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/code_of_conduct_guide.md)

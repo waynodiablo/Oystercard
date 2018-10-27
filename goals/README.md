@@ -55,3 +55,6 @@ The team projects follow the same pattern but instead with
 - **14.00-18.00: Group project work.**
 
 Most weekends you'll plan how to achieve your goals within the context of a  weekend challenge that we provide.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/README.md)

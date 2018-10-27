@@ -52,3 +52,6 @@ end
 Our `Player` class has one less responsibility. Great! Now let's minimise those pesky global variables using our new `Game` class.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/srp_anyone.md)

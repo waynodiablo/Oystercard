@@ -27,3 +27,6 @@ In this challenge, you will refactor your controller to make it more 'skinny'. Y
 - [Sandi Metz' Rules for Developers (Thoughtbot)](https://robots.thoughtbot.com/sandi-metz-rules-for-developers)
 
 ### [Walkthrough](walkthroughs/skinny_controllers.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/skinny_controllers.md)

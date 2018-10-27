@@ -31,3 +31,6 @@ In case you've forgotten the rules of FizzBuzz:
 - :pill: [JavaBuzz pill](/pills/javascript&JasminePill.md)
 
 ### [Walkthrough](walkthroughs/fizzbuzz_in_javascript.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/fizzbuzz_in_javascript.md)

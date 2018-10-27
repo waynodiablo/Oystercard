@@ -48,3 +48,6 @@ Notice how we described the **method** as a verb that "expresses the intention o
 - [How are parameters sent in an HTTP POST request? (Stack Overflow)](http://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request)
 
 ### [Walkthrough](walkthroughs/sinatra_posted_params.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_posted_params.md)

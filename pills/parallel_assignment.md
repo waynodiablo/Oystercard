@@ -25,3 +25,6 @@ If you want to assign all elements to variables, you can do it in one line:
 name, age, job_title = employee_data
 "#{name}, aged #{age}, is a #{job_title}" #=> "Joe Wilson, aged 17, is a salesman"
 ````
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/parallel_assignment.md)

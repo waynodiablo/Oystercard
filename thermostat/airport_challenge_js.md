@@ -25,3 +25,6 @@ Take your Ruby code and attempt to rewrite it in JavaScript - don't dwell too lo
 - [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
 ### [Walkthrough](walkthroughs/airport_challenge_js.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/airport_challenge_js.md)

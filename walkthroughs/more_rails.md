@@ -38,3 +38,6 @@ Under Construction ...
 17. javascript confirmation
 
 18. making apps in a resource based way (REST) only using those verbs in routes
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/more_rails.md)

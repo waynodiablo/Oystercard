@@ -11,3 +11,6 @@
 * Talk about any interesting technical or teamwork struggles you had and how you overcame them.
 
 * If you'd like to show your app working, prepare a short video that demos it.  The video doesn't have to be polished - just a screen movie of someone using the app is great.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/practice_project_week/presentation_guidelines.md)

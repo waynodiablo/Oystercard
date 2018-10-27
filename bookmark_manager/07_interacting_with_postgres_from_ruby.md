@@ -36,3 +36,6 @@ In this challenge, you will get the application and database talking to each oth
 * [`pg` documentation](https://bitbucket.org/ged/ruby-pg/wiki/Home)
 
 ## [Walkthrough](walkthroughs/07.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/07_interacting_with_postgres_from_ruby.md)

@@ -61,3 +61,5 @@ I want a beautiful frontend
 ## Mockup
 
 ![GitHub profile viewer](https://makersacademy.mybalsamiq.com/mockups/2895691.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_project.md)

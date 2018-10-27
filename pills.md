@@ -123,3 +123,6 @@ Knowledge pills are like little vitamin pills you can take in quickly to underst
 ## Community
 
 :pill: [A guide to building your community](./pills/building_your_community_guide.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills.md)

@@ -127,3 +127,6 @@ Resources
 * [Detailed Talk Slides on Sinatra](http://www.slideshare.net/BobNadlerJr/sinatra-flatiron)
 * [Sinatra Up and Running (Book)](http://shop.oreilly.com/product/0636920019664.do)
 * [Jump Start Sinatra (Book)](http://www.sitepoint.com/store/jump-start-sinatra/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/sinatra_8.md)

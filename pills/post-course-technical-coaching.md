@@ -73,3 +73,6 @@ If you're making a lot of applications but not having a great deal of luck, then
 We don't want the JOG to be a barrier. If you think you would benefit from some time spent focussing on development, come talk to us. If in the course of an ILP or as the result of a Mock Interview we think you should spend some time focussing on code, we'll tell you. This won't affect your JOG - we want to give you the best possible chance, and sometimes that means taking time out to level up.
 
 **Ultimately, if you're unsure about anything, please come talk to one of us!**
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/post-course-technical-coaching.md)

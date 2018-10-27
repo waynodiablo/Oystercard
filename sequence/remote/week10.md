@@ -31,3 +31,6 @@
 * 9.30am: We'll do a mini retro on yesterday's work.
 * 11:30am: You'll continue to work solo. You can continue on [Gilded rose](../../individual_challenges/gilded_rose.md) or choose another tech test from the directory.
 * 4.30pm: Retro... Dan says goodbye :-(
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/week10.md)

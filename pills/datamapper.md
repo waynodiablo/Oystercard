@@ -66,3 +66,6 @@ Resources
 * https://github.com/datamapper
 * https://github.com/DatabaseCleaner/database_cleaner
 * http://stackoverflow.com/questions/10904996/difference-between-truncation-transaction-and-deletion-database-strategies
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/datamapper.md)

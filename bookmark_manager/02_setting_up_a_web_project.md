@@ -27,3 +27,6 @@ We've written a user story and we have an idea of the first interaction, before 
 * [RSpec-Sinatra gem](https://github.com/tansaku/rspec-sinatra)
 
 ## [Walkthrough](walkthroughs/02.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/02_setting_up_a_web_project.md)

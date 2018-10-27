@@ -65,3 +65,6 @@ See the [guidelines](../pills/final_project_presentations.md).
 
 ### Sequence & Schedule
 * [Onsite](../sequence/onsite/final_projects.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/final_projects/README.md)

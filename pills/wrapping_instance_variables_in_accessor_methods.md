@@ -56,3 +56,6 @@ Dealing with data as if it’s an object that understands messages introduces tw
 
 The second issue is more abstract. Because it’s possible to wrap every instance variable in a method and to therefore treat any variable as if it’s just another object, the distinction between data and a regular object begins to disappear. While it’s sometimes expedient to think of parts of your application as behavior-less data, most things are better thought of as plain old objects.
 Regardless of how far your thoughts move in this direction, you should hide data from yourself. Doing so protects the code from being affected by unexpected changes. Data very often has behavior that you don’t yet know about. Send messages to access variables, even if you think of them as data.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/wrapping_instance_variables_in_accessor_methods.md)

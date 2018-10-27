@@ -30,3 +30,6 @@ In this challenge, you will further refactor your code, using a **constant**.
 - [Magic Numbers](https://www.eliotsykes.com/magic-numbers)
 
 ### [Walkthrough](walkthroughs/16.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/16_removing_magic_numbers.md)

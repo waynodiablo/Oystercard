@@ -83,3 +83,6 @@ Finally, add your node_modules folder to your .gitignore file, to avoid clogging
 ###Further resources
 * [What is the package.json?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-the-file-package-json)
 * [npm-init documentation](https://www.npmjs.org/doc/cli/npm-init.html)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/npm.md)

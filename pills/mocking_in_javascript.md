@@ -102,3 +102,6 @@ function testCanLandPlaneIfWeatherIsNotStormy() {
   }
 };
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/mocking_in_javascript.md)

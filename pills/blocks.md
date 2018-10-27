@@ -179,3 +179,6 @@ David Steel
 ````
 
 In this example, the block has access to the variable name, even though the block is actually executed somewhere inside the [each()](http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-each) method, where the name variable doesn't exist. You can read and modify all variables that are accessible when the block was defined inside it.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/blocks.md)

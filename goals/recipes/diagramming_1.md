@@ -13,3 +13,6 @@ Pick your own focus goal. Diagramming is helpful everywhere!
 ## Challenging yourself
 * [An introduction to UML](https://www.ibm.com/developerworks/rational/library/769.html)
 * Diagram out how RSpec works internally by reading the source code.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/recipes/diagramming_1.md)

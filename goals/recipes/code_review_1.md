@@ -18,3 +18,6 @@ You'll each be reviewing a colleague's code today. This morning the rule is: you
 ## Challenging yourself
 
 * Fork your colleague's repository and refactor their code to improve it. Use small commit messages where the commit messages explain what you've done and why.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/recipes/code_review_1.md)

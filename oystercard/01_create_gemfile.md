@@ -41,3 +41,6 @@ In this issue you will create a valid Gemfile for this project.
 - [What is a Gemfile](http://tosbourn.com/what-is-the-gemfile/)
 
 ## [Walkthrough](walkthroughs/01_create_gemfile.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/01_create_gemfile.md)

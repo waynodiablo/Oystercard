@@ -12,3 +12,6 @@ In this challenge, you'll practice exploring the contents of a JavaScript object
 
 - [ ] You can spike this code.
 - [ ] Fill out and submit the note create form.  Find where the note text you entered (e.g. `Favourite drink: seltzer`) is stored on the `submit` event that was triggered.  To do this, `console.log` the `submit` event and use your browser JavaScript console to explore it.  `console.log` the note text to prove to yourself that you've got it.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/12_extract_note_text_from_submit_event.md)

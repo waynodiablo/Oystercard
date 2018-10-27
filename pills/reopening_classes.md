@@ -41,3 +41,5 @@ Then all instances of the array class will return _42_ when you call the method 
 ````ruby
 [1,2,3].size #=> 42
 ````
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/reopening_classes.md)

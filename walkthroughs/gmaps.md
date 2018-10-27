@@ -393,3 +393,6 @@ $(document).ready(function(){
 , and here we are opening up a generic channel for grabbing data about our posts via json
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/gmaps.md)

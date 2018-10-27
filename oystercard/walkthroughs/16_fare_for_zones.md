@@ -45,3 +45,6 @@ end
 - [ ] Implement a mechanism to deduct the penalty fare from the card if the user forgets to touch out
 
 [Back to README](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/16_fare_for_zones.md)

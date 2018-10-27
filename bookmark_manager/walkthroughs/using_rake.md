@@ -170,3 +170,6 @@ end
 ```
 
 We can now add a line to the README guiding new developers to set up their databases using Rake.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/walkthroughs/using_rake.md)

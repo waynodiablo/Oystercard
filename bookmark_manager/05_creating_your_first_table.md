@@ -33,3 +33,6 @@ In this challenge, you will use Postgres' built-in command-line program, `psql`,
 * [PostgreSQL Cheat Sheet](http://www.postgresqltutorial.com/postgresql-cheat-sheet/)
 
 ## [Walkthrough](walkthroughs/05.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/05_creating_your_first_table.md)

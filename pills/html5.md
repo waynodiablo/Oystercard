@@ -26,3 +26,6 @@ But thankfully, the doctype for HTML5 is super compact:
 ```
 
 Isn't that lovely? And the great thing about it, is this actually triggers something called ['Standards Mode'](https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode) in the browser.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/html5.md)

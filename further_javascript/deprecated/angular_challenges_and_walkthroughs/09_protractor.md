@@ -28,3 +28,6 @@ Don't forget to do this challenge test-first!
 - :pill: [Protractor](https://github.com/makersacademy/course/blob/master/pills/protractor.md)
 
 ### [Walkthrough](walkthroughs/09_protractor.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/09_protractor.md)

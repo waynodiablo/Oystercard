@@ -303,3 +303,6 @@ Resources
 * [Sinatra/Cucumber Talk](https://www.youtube.com/watch?v=t4lGyjfpnS8)
 * [Sinatra/Cucumber Cont](https://www.youtube.com/watch?v=_ptHGBh9sys)
 * [The Internet and WWW](../pills/internet_web.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/deprecated/battle_ships_web_cucumber.md)

@@ -87,3 +87,5 @@ You can create empty arrays using either a literal construct or by simply callin
 empty_array = []
 another_empty_array = Array.new # exactly the same as []
 ````
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/arrays.md)

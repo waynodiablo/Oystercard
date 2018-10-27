@@ -40,3 +40,6 @@ $ rake auto_migrate
 ```
 
 This way you can upgrade or migrate your database manually after every change to the model. Ruby on Rails makes extensive use of Rake tasks, as we'll see later.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rake_tasks_for_database_management.md)

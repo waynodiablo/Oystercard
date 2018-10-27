@@ -135,3 +135,6 @@ See it in action here - http://jsfiddle.net/2yySD/
 * [jQuery events](http://jqfundamentals.com/chapter/events) - Chapter from jQuery fundamentals
 * [`.on` method](http://api.jquery.com/on/) - jQuery official docs
 * [Comparison between jQuery and simple JavaScript](http://youmightnotneedjquery.com/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/jquery_events.md)

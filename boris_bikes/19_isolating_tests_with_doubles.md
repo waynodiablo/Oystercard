@@ -91,3 +91,6 @@ In the next challenge, we'll figure out how to get this test passing (i.e. how t
 - [RSpec Mocks (docs)](https://relishapp.com/rspec/rspec-mocks/docs)
 
 ### [Walkthrough](walkthroughs/19.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/19_isolating_tests_with_doubles.md)

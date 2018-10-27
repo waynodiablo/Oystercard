@@ -34,3 +34,6 @@ I need my fare deducted from my card
 - [4 phase testing](https://robots.thoughtbot.com/four-phase-test)
 
 ## [Walkthrough](walkthroughs/07_deducting_money.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/07_deducting_money.md)

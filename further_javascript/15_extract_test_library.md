@@ -16,3 +16,6 @@ In this challenge, you'll extract a a standalone test library from your notes ap
 ### Resources
 
 - [Writing tests without a library](https://github.com/makersacademy/course/blob/master/pills/writing_tests_without_a_testing_library.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/15_extract_test_library.md)

@@ -124,3 +124,6 @@ Sinatra will actually take the splat values and put them into an array that is s
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/params.md)

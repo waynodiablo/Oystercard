@@ -68,3 +68,6 @@ git push origin master
 What you've just done was to add the files individually (first Gemfile, then Gemfile.lock). There's a git command to add all files in the current directory that will save you typing individual filenames but we advise you to add the files individually while you're still learning how to use git to make sure that you're adding exactly what you want and not something else.
 
 [Next challenge](../02_initialize_rspec.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/01_create_gemfile.md)

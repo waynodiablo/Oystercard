@@ -131,3 +131,6 @@ Pair Programming Videos
 * [Pair Programming in the Classroom](https://www.youtube.com/watch?v=rG_U12uqRhE)
 * [Remote Pair Programming](https://www.youtube.com/watch?v=Yq1qgWvSIdI)
 * [More Remote Pair Programming](https://www.youtube.com/watch?v=f9ALSPlPQhg)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/pairing.md)

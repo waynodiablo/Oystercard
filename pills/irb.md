@@ -78,3 +78,6 @@ Dir['./lib/*.rb'].each { |f| require f }
 ```
 
 will autoload ruby files from your lib directory
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/irb.md)

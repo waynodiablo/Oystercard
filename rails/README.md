@@ -94,3 +94,6 @@ Remember to focus on getting to an MVP ASAP.
 * [Validations](http://guides.rubyonrails.org/active_record_validations.html)
 * [Layouts and Rendering](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Active Record Migrations](http://guides.rubyonrails.org/migrations.html)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/rails/README.md)

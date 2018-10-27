@@ -49,3 +49,6 @@ Monday is [Day one](./day_one.md)
 [Rectangle Kata](https://github.com/makersacademy/skills-workshops/tree/master/week-1/rectangle_kata)
 
 [TDD a Notes App](https://diode.makersacademy.com/students/neoeno/projects/13)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/apprenticeship/week01.md)

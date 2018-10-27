@@ -51,3 +51,6 @@ I need to have the minimum amount (£1) for a single journey.
 - [If statements](http://www.dev-hq.net/ruby/5--if-statements)
 
 ## [Walkthrough](walkthroughs/09_min_balance_on_touch_in.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/09_min_balance_on_touch_in.md)

@@ -17,3 +17,6 @@ See the [main document](../../individual_challenges_with_reviews/README.md) for 
 ### Friday
 
 * 5pm: Confidence survey and retro
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/onsite/week10_with_reviews.md)

@@ -333,3 +333,6 @@ Submarine
 2.1.5 :024 > player.lost?
  => true 
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/mvp.md)

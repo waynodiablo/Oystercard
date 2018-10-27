@@ -28,3 +28,6 @@ In this challenge, you will implement a simple User Story driven by Capybara. Th
 - [Capybara Cheat Sheet](https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/capybara-cheat-sheet)
 
 ### [Walkthrough](walkthroughs/viewing_hit_points.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/viewing_hit_points.md)

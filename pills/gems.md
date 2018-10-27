@@ -81,3 +81,6 @@ you are actually requiring the `lib/twilio-ruby.rb` file that, in turn, loads al
 ## How to create a gem
 
 _Creating a gem is not much harder than writing a usual Ruby class, but that is another story..._
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/gems.md)

@@ -23,3 +23,6 @@ There are many ways for a final project to stand out. Usually a great final proj
 - **The story around the building of the project**
     - How will you communicate what you learned and how you evolved as a team?
         - Example, admire the README of [hipspot](https://github.com/ejbyne/hipspot).
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/what_makes_a_good_final_project.md)

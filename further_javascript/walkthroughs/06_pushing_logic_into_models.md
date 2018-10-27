@@ -150,3 +150,6 @@ Now that `Todo` objects can complete themselves, wiring the functionality up to 
 We could now, if we wished, add Updating, Deleting, and Ordering functionality to `Todo`s directly - all without changing our Controller. Awesome!
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/06_pushing_logic_into_models.md)

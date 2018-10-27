@@ -112,3 +112,6 @@ To consider how to build an app properly, generally you need to be just applying
 * [KISS](http://www.computerhope.com/jargon/k/kiss.htm) - Always aim for the simplest solution to your problem, it is almost always the best solution.
 * [You Aren't Gonna Need It](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) - Only add things to your code that you're actually doing and solve the problem at hand, don't add anything more than you need to, we are always looking for people who can KISS and build an MVP rather than build unneccesary things that don't solve anything.
 * [Principle of Least Astonishment](http://programmers.stackexchange.com/a/187462) - Does your code do what someone would expect it to? Are you finding there a lots of comments where you have to explain yourself? If so you need to refactor your code so it is self-evident what is going on wherever possible.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/code_reviews.md)

@@ -523,3 +523,6 @@ Thermostat.prototype.energyUsage = function() {
 Fantastic! Truly exciting! Now we have a fully-tested thermostat ready to go. Next step - hooking it up to an interface! Onward, brave Soldiers...
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/walkthroughs/thermostat_logic.md)

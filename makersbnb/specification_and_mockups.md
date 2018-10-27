@@ -33,3 +33,6 @@ We would like a web application that allows users to list spaces they have avail
 ### Mockups
 
 Mockups for MakersBnB are available [here](https://github.com/makersacademy/course/blob/master/makersbnb/makers_bnb_images/MakersBnB_mockups.pdf).
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makersbnb/specification_and_mockups.md)

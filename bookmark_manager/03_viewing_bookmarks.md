@@ -28,3 +28,6 @@ Now we've set up our basic web app we can start implementing features! So let's 
 
 
 ## [Walkthrough](walkthroughs/03.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/03_viewing_bookmarks.md)

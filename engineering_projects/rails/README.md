@@ -29,3 +29,6 @@ These [assessment criteria](../assessment_criteria.md) will be how we look at yo
 ### Intro to rails
 
 * [Intro to rails](intro_to_rails.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/rails/README.md)

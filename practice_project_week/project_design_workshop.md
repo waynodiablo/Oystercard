@@ -45,3 +45,6 @@ Choose the next most important interaction of your MVP, design it and build it.
 ## Announce project description and MVP interaction (10m)
 
 We'll gather back together and share our project descriptions and MVP interactions.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/practice_project_week/project_design_workshop.md)

@@ -31,3 +31,6 @@ Project work.
 * 6.30pm: Closing spiel from coach.
 * 6.30pm: Hanging out on floor 2.
 * 7.00pm: Close.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/final_projects.md)

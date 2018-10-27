@@ -94,3 +94,6 @@ Resources
 * [HTML5 Rocks Article on Promises](http://www.html5rocks.com/en/tutorials/es6/promises)
 * [jQuery Promises are Broken](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken/)
 * [Promises in Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/js_promises.md)

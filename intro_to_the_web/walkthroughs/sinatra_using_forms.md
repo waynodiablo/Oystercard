@@ -77,3 +77,6 @@ Github and switch! :twisted_rightwards_arrows:
 Next up, we'll hide our query parameters by using the `POST` action.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/sinatra_using_forms.md)

@@ -21,3 +21,5 @@
 - *Look at the list of commits. Check that there are no missing commits. Your repo should be in exactly in the same as it was before you deleted it.*
 - *Now delete one of the files in the local repository and commit the change.*
 - *Push to Github and verify that you don't see the deleted file there.*
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/git_challenge.md)

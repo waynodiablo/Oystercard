@@ -28,3 +28,6 @@ By the end of this challenge, you should see (in your browser) something like th
 - [CSS Borders (Mozilla Developer Network)](https://developer.mozilla.org/en/docs/Web/CSS/border)
 
 ### [Walkthrough](walkthroughs/sinatra_returning_html.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/sinatra_returning_html.md)

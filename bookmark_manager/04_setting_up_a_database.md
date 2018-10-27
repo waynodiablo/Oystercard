@@ -71,3 +71,6 @@ In this challenge, you will **install the PostgreSQL database system**, and inte
 
 ## [Walkthrough - Mac OS](walkthroughs/04_mac.md)
 ## [Walkthrough - Linux](walkthroughs/04_linux.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/04_setting_up_a_database.md)

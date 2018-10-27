@@ -60,3 +60,6 @@ In this challenge, you will run a Feature Test to test the above. It will fail, 
 
 
 ### [Walkthrough](walkthroughs/9.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/9_building_a_bike.md)

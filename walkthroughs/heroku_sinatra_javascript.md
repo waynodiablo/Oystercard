@@ -86,3 +86,6 @@ Resources:
 -------
 
 * [Getting Started with Sinatra on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby-o)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/heroku_sinatra_javascript.md)

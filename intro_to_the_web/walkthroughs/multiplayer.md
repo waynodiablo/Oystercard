@@ -43,3 +43,6 @@ By this point, I was concerned that `Game` was getting overly-responsible again,
 Once you're happy you have approximated solutions to these feature tests, let's move on to losing and winning the game.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/multiplayer.md)

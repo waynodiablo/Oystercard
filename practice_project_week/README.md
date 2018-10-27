@@ -59,3 +59,6 @@ Here are some [guidelines](./presentation_guidelines.md) to follow when planning
 ## Resources
 
 * :pill: [Development workflow](https://github.com/makersacademy/course/blob/master/pills/development_workflow.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/practice_project_week/README.md)

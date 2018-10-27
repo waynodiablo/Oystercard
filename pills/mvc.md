@@ -62,3 +62,6 @@ Keeping your model, view and controller code isolated ensures that you can chang
 
 That separation keeps your code clean, makes it semantic and easy to understand, and makes it *break less*.
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/mvc.md)

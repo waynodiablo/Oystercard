@@ -20,3 +20,6 @@
 8. I can build a database-backed `springboot`/`thymeleaf` basic CRUD notes app
 9. I can build a springboot REST API that returns 'hello, world' in JSON at `localhost:8080/api/hello-world`
 10. I can build a basic react app with 2 components
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/java/learning_objectives.md)

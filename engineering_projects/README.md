@@ -60,3 +60,6 @@ At the end of the 1st week of the project there's a challenge for each pathway. 
 At the end of the project, each team will present the great work done!  They will talk through a very simple slide deck and do a quick demo of their project.  There's no need to spend ages planning or practising the presentation.  It's mainly to communicate about your learning, technical achievements, and show off your cool project to the rest of your cohort.
 
 - [guidelines](./presentation_guidelines.md) to follow when planning your presentation.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/README.md)

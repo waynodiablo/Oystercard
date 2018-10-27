@@ -64,3 +64,6 @@ In general you should start with weak evidence and move to strong evidence. Each
 
 ### Moderate & strong evidence
 * You know what to do here — set your own goals and take action to achieve them! :)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/progress_insight.md)

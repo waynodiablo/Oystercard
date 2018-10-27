@@ -68,3 +68,6 @@ Under each objective is an example thing. If you can confidently do that example
   * Write a test for a `Bookmark.create` method that takes properties as arguments, and gives you back an object which exposes all those properties as attributes, and has an `id` attribute.
 * :heart: Use a step-by-step approach to pull out logic from concretes to abstractions.
   * Take a line of SQL written in a controller that reads bookmarks from the database. Encapsulate it in a method on a `Bookmark` model.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/learning_objectives.md)

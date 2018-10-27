@@ -22,3 +22,6 @@ In this challenge, you'll write code that inserts some HTML into your `index.htm
 - [Document Object Model (DOM) on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [getElementById on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 - [innerHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/05_insert_html_into_page.md)

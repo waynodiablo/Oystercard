@@ -855,3 +855,6 @@ Before moving on to the next lesson, make sure that you're able to do each of th
 
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/command_line.md)

@@ -22,3 +22,6 @@ The bottom line is that we need both acceptance tests and unit tests - and no on
 ![Testing Pyramid](../images/test_pyramid.gif)
 
 And ultimately if you have acceptance tests and unit tests then you are doing BDD!
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/bdd_or_tdd.md)

@@ -28,3 +28,6 @@ In this challenge, you will set up an **Angular Controller** and use it to keep 
 - [Official Angular website](https://angularjs.org/)
 
 ### [Walkthrough](walkthroughs/03_using_a_controller_to_keep_track_of_state.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/03_using_a_controller_to_keep_track_of_state.md)

@@ -162,3 +162,6 @@ Run the server, and then open the browser console. We can now send messages to t
 [MDN Websockets reference](https://developer.mozilla.org/en/docs/WebSockets)  
 [Pusher: what are Websockets?](http://pusher.com/websockets)  
 [socket.io](http://socket.io/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/intro_to_websockets.md)

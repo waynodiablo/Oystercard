@@ -55,3 +55,6 @@ Coach Pair Scaffolding Workshops in Haskell
 
 * [Stephen, Ptolemy and Tansaku](https://www.youtube.com/watch?v=La_EtOkgryY)
 * [Irina, Stefan and Jordan](https://www.youtube.com/watch?v=srSriMqNLqw)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/pair_scaffolding.md)

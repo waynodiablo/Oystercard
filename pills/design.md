@@ -18,3 +18,6 @@ _(please note, this is not an exhaustive list!)_
 
 ***BRUCIE BONUS!!!***
 * [The Typography of 'Alien'](http://typesetinthefuture.com/alien/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/design.md)

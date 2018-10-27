@@ -22,3 +22,6 @@ So I can see all the information in the note
 ```
 
 (NB: notes do not need to be permanently stored.  If the user refreshes their web page, they'll lose their notes, and that's fine.)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/notes_app_user_stories.md)

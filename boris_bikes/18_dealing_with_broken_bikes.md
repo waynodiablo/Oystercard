@@ -40,3 +40,6 @@ In this challenge, you will implement the above features using the skills you ha
 - :pill: [The BDD Cycle](https://github.com/makersacademy/course/blob/master/pills/bdd_cycle.md)
 
 ### [Walkthrough](walkthroughs/18.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/18_dealing_with_broken_bikes.md)

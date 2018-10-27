@@ -80,3 +80,6 @@ Post.delete_all
 ```
 
 * re-post and we see that image is actually small and can delete css resizing, and only reference stored in db
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/paperclip.md)

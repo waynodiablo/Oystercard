@@ -24,3 +24,6 @@ In this challenge, you will create a **static** webpage and set up an **Angular 
 - [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
 ### [Walkthrough](walkthroughs/01_setting_up_with_angular.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/01_setting_up_with_angular.md)

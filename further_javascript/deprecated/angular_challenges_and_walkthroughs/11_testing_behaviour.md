@@ -28,3 +28,6 @@ did in [Challenge 4](04_more_than_one_thing.md)
 - [Karma documentation](https://docs.angularjs.org/guide/unit-testing)
 
 ### [Walkthrough](walkthroughs/11_testing_behaviour.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/11_testing_behaviour.md)

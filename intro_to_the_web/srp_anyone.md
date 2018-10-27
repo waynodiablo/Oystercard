@@ -22,3 +22,6 @@ In this challenge, you will extract a model capable of performing attacks from t
 - [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### [Walkthrough](walkthroughs/srp_anyone.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/srp_anyone.md)

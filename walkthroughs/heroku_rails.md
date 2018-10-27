@@ -84,3 +84,6 @@ end
 
 
  
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/walkthroughs/heroku_rails.md)

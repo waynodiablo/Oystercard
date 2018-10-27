@@ -28,3 +28,6 @@ FIRST AID
 * If somebody gets injured, get help from one of the first aiders - Nikesh and Dana
 
 * There are first aid boxes on the 3rd floor
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/health_and_safety.md)

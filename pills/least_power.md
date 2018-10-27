@@ -24,3 +24,6 @@ Attr_* from least to most powerful:
 3. attr_accessor
 
 Wherever possible you should prefer the items with lower power to avoid uneccessary complexity.  Don't use a tool any more complex than you need, unless you really are getting something from it, such as special flexibility that you are pretty damn sure is going to support delivering value to the client.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/least_power.md)

@@ -7,3 +7,6 @@
 * By Friday afternoon, please send your coach:
   * The link to your slides on slides.com
   * A link to your demo video.  (This way I can have it downloaded on my machine in case the internet dies.)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/demo_day_presentations.md)

@@ -19,3 +19,6 @@ To allow you the freedom to direct your own learning, this tutorial will not tak
 * [TDD your node API with Mocha](http://webapplog.com/test-driven-development-in-node-js-with-mocha/)
 
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/makermix/intro_to_makermix.md)

@@ -75,3 +75,6 @@ That's much neater! Plus, we now have a handy method `sign_in_and_play` that wil
 OK, let's implement another user story.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/test_helpers.md)

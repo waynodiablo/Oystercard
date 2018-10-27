@@ -60,3 +60,6 @@ You can invoke the console in sandbox mode, so all your changes will be rolled b
 $ rails console --sandbox
 ```
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/rails_console.md)

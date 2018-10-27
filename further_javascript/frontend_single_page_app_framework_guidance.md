@@ -42,3 +42,6 @@ When you decide on the API for your abstraction and feature, try to make it as t
 - :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [Constructor and prototype pattern](https://github.com/makersacademy/skills-workshops/tree/master/week-5/encapsulation_with_constructor_and_prototype_pattern)
 - :pill: [JavaScript module pattern](https://github.com/makersacademy/course/blob/master/pills/javascript_module_pattern.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/frontend_single_page_app_framework_guidance.md)

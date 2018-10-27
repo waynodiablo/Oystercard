@@ -56,3 +56,6 @@ end
 Write code to make this test pass, and then look at ways to refactor.
 
 [Next challenge](../09_min_balance_on_touch_in.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/08_touch_in_out.md)

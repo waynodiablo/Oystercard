@@ -34,3 +34,6 @@ Build a [frontend, single page web app that summarises the news](news_summary_pr
 #### Starter repo
 
 For the news summary project, you can build on this [starter repo](https://github.com/makersacademy/news-summary).  It already has a working Angular app, and passing Protractor feature test and Karma unit test.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/challenge_and_walkthrough_track.md)

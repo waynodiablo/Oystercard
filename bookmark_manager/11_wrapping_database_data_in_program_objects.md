@@ -64,3 +64,6 @@ You may want to update the `Bookmark.all` method to return instances of the `Boo
 * [What is an ORM?](https://stackoverflow.com/questions/1152299/what-is-an-object-relational-mapping-framework)
 
 ## [Walkthrough](walkthroughs/11.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/11_wrapping_database_data_in_program_objects.md)

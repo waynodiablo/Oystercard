@@ -46,3 +46,6 @@ In this challenge, you will set up a [one to many relationship](http://www.datab
 * [One-to-many relationships](http://www.databaseprimer.com/pages/relationship_1tox/)
 
 ## [Walkthrough](walkthroughs/16.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/16_one_to_many_relations.md)

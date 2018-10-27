@@ -151,3 +151,6 @@ By the end of the week, all developers can:
 	* Note that the goal *is not to complete, or reach a certain point on, Acebook*
 
 For more information about this project and what constitutes 'high-quality processes' look [here](./engineering_projects/README.md).
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/apprenticeship_week_outlines.md)

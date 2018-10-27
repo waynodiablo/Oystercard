@@ -114,3 +114,6 @@ There is an issue with your thermometer interface!  If you close your browser an
 
 #### Resources
 See the video overview of Ajax for how to talk to a remote API with jQuery: https://www.youtube.com/watch?v=QDsrErWpizI
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/deprecated/thermostat.md)

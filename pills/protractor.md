@@ -247,3 +247,6 @@ $('create').click();
 - [Protractor
   Locators](https://github.com/angular/protractor/blob/master/docs/locators.md)
 - [Protractor API Reference](http://angular.github.io/protractor/#/api)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/protractor.md)

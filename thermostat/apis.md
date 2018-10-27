@@ -25,3 +25,6 @@ Add a feature to display the weather in a city selected by the user.
 - [jQuery shortcut methods](http://api.jquery.com/category/ajax/shorthand-methods/)
 
 ### [Walkthrough](walkthroughs/apis.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/apis.md)

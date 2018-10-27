@@ -39,3 +39,6 @@ Some setup you must do manually if you haven't yet:
        rails g devise:views
 
 ```
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/devise.md)

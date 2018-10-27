@@ -40,3 +40,6 @@ Both Factories and Services are kinds of Angular service (Google is well aware t
 - [Factories, Services (& Providers) Pill](https://github.com/makersacademy/course/blob/master/pills/angular_factories_services.md)
 
 ### [Walkthrough](walkthroughs/06_pushing_logic_into_models.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/06_pushing_logic_into_models.md)

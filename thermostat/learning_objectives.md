@@ -42,3 +42,6 @@
 * Link the concept of 'routes' and 'API endpoints'
 * Use jQuery and AJAX to communicate with an API
 * Build a simple API
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/learning_objectives.md)

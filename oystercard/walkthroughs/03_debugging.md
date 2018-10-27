@@ -40,3 +40,6 @@ The other lines in the stack trace show how Ruby got to the `oystercard_spec.rb`
 One way of solving this error would be to define this class and link it to this file, so that Ruby can find it.
 
 [Next challenge](../04_adding_balance.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/03_debugging.md)

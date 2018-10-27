@@ -34,3 +34,6 @@ Reflective workshops are similar, but you will focus more on building your skill
 ## Careers
 
 * From week 6, there will be one careers session per week.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/blue_july_example_schedule.md)

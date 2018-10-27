@@ -29,3 +29,6 @@ A number of other data files are available - for example, you can get the top 10
 - Try extending the app such that you can specify a date range and aggregate by year or by month. 
 - Try adding paging to the table, so you see only 20 results at a time and can click forwards or backwards to see e.g. results 21 to 40, 41 to 60 etc. 
 - Try adding the option to view albums rather than songs. 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/pivot_table.md)

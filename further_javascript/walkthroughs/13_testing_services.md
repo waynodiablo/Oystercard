@@ -173,3 +173,6 @@ afterEach(function(){
 Everything should be passing again, and running a bit quicker as well! Now, if the data changes on the API it won't make a difference as we're never actually hitting our API.
 
 [Forward to the Challenge Map](../00_challenge_map.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/walkthroughs/13_testing_services.md)

@@ -27,3 +27,6 @@ Now we are using our `touch_out` method to deduct from the balance, we are actua
 Have a check through your code for any further repetition you can refactor away.
 
 [Next challenge](../11_saving_entry_station.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/walkthroughs/10_charge_on_touch_out.md)

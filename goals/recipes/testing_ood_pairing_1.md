@@ -10,3 +10,6 @@
 ## Challenging yourself
 * [Learning by Building RSpec Practical](https://hackmd.io/-sKTN9oCR6aBxECYEitBKQ)
 * Test drive student directory
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/goals/recipes/testing_ood_pairing_1.md)

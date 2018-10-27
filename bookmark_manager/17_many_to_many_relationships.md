@@ -51,3 +51,6 @@ In this challenge, you will set up a **many to many relationship** between Bookm
 * [How to design a many-to-many relationship](https://dzone.com/articles/how-to-handle-a-many-to-many-relationship-in-datab)
 
 ## [Walkthrough](walkthroughs/17.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/17_many_to_many_relationships.md)

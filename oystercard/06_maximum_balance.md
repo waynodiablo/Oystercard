@@ -54,3 +54,6 @@ I want a maximum limit (of £90) on my card
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 ## [Walkthrough](walkthroughs/06_maximum_balance.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/06_maximum_balance.md)

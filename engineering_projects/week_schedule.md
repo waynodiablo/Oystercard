@@ -22,3 +22,6 @@
 - 9:45am - Team stand up _(suggested)_
 - 15:00 - Cohort Retrospective
 - 16:00 - Team Presentations
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/engineering_projects/week_schedule.md)

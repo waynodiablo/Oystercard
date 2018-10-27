@@ -21,3 +21,6 @@ Here are some guidelines for your final project presentations:
 * There's no need to talk about the future direction of the project.  Focus your presentation on what you've already achieved.
 
 ### Important instructions: [Remote](../sequence/remote/demo_day_presentations.md) | [Onsite](../sequence/onsite/demo_day_presentations.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/final_project_presentations.md)

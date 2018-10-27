@@ -88,3 +88,6 @@ end
 We run `rspec`. RSpec outputs `1 example, 0 failures`.
 
 [Forward to the Challenge Map](../README.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/walkthroughs/getting_test_infrastructure_set_up.md)

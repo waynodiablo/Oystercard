@@ -174,3 +174,6 @@ r.pipe(z).pipe(w);
 * The built-in assertions are OK and would be what I'd teach, but many people use other APIs like Chai http://chaijs.com
 * I also think this is where people should be taught about npm scripts
   * You can add a property to the package.json file for the test script so you can run tests with npm test
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/node/alexyoung/node_intro.md)

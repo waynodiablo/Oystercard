@@ -119,3 +119,5 @@ So, factorial(6) == factorial(5) * 6 == 720
 ````
 
 This way you'll see the execution trace, showing how the code works. As you can see from the output, first the code is **folding** until it reaches the base case and then it's **unfolding**. So first, the problem is broken down into smaller pieces and then, once the base case is reached, it's used to compute all other values.
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/recursion.md)

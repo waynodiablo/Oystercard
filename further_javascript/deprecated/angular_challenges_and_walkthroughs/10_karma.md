@@ -28,3 +28,6 @@ your app to help you write your tests.
 - [Karma documentation](https://docs.angularjs.org/guide/unit-testing)
 
 ### [Walkthrough](walkthroughs/10_karma.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/angular_challenges_and_walkthroughs/10_karma.md)

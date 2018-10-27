@@ -16,3 +16,6 @@ Resources
 * [Talk: When students sprint: Experiences with athletic software engineering](http://philipmjohnson.org/talks/athletic/)
 * [Athletic Software Engineering Education](http://philipmjohnson.org/2013/07/12/athletic-software-engineering-education/)
 * [Athletic Software Engineering Education: Initial Results](http://philipmjohnson.org/2013/12/16/athletic-software-engineering-education-initial-results/)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/athletic_coding.md)

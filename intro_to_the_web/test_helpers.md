@@ -32,3 +32,6 @@ In this challenge, we will DRY up our tests using a **helper**.
 - [Helper class (Wikipedia)](https://en.wikipedia.org/wiki/Helper_class)
 
 ### [Walkthrough](walkthroughs/test_helpers.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/intro_to_the_web/test_helpers.md)

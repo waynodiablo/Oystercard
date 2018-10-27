@@ -46,3 +46,6 @@ In this challenge, you will pass instances of the `Bike` class into a `DockingSt
 - [RSpec `respond_to` expectations documentation](http://www.relishapp.com/rspec/rspec-expectations/v/3-3/docs/built-in-matchers/respond-to-matcher)
 
 ### [Walkthrough](walkthroughs/11.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/11_using_instance_variables.md)

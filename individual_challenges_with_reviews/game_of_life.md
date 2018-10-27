@@ -19,3 +19,6 @@ The rules are as follows:
 
 Write code that is capable of calculating each new generation, given a starter board. Although you don't have to build a visualisation tool to be able to see the evolution, it should be easy to extend the program to add on a web or command line ui.
 
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges_with_reviews/game_of_life.md)

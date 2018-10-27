@@ -228,3 +228,6 @@ Exercises
 * Try to implement different donation amounts
 * Try to implement user selected donation amount
 * Try to style the form to match your site style
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/stripe.md)

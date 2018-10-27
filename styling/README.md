@@ -21,3 +21,6 @@ In this module, we're going to introduce:
 ### Getting a Review of Your Solution
 
 Fork the [Styling Exercises solutions repository](https://github.com/sjmog/styling_exercises), and follow the instructions there.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/styling/README.md)

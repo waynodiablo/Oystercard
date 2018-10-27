@@ -32,3 +32,6 @@ Monday is [Day one](./day_one.md)
 - [Airport challenge](https://github.com/makersacademy/airport_challenge).
 - (optional) Make a video of fully TDD'd FizzBuzz. Can you do it in less than 5 minutes? (Record for a student is around 4mins, 30 secs, with well named methods, not taking any shortcuts)
 - (optional) Write a blog post about TDD - maybe an intro for someone new to it, or a particularly challenging problem you faced.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/week01.md)

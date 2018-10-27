@@ -77,3 +77,6 @@ Finally, let's focus on uploading images, and creating a better user experience.
 * Use SCSS to enhance the overall design of the site
 * Refactor your more complex views to use partials
 * Add the ability for users to add an image to a restaurant
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/rails/yelp_project_specification.md)

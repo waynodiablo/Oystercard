@@ -37,3 +37,6 @@ Every good code project starts with a git repository. To get started with Boris 
 
 
 ### [Walkthrough](walkthroughs/1.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/1_setting_up_a_project.md)

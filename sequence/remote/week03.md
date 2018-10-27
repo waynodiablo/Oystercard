@@ -27,3 +27,6 @@
 - 5.00: Confidence Workshop
 - 5.30: [Retro](https://github.com/makersacademy/course/blob/master/pills/student_retrospective.md)
 - 6.00: Announcements for the weekend
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/sequence/remote/week03.md)

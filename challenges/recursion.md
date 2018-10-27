@@ -32,3 +32,5 @@ end
 ## Palindrome
 
 Write a recursive function that determines whether an array is a palindrome. Use the same approach as the previous exercise (tests, base cases).
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/challenges/recursion.md)

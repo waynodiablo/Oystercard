@@ -62,3 +62,6 @@ I'd like to see if a bike is working
 - [What's a Class Structure?](http://sjmog.github.io/posts/504_whats-a-class-structure/)
 
 ### [Walkthrough](walkthroughs/2.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/boris_bikes/2_working_with_user_stories.md)

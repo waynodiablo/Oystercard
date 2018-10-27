@@ -29,3 +29,6 @@ FIRST AID
 * First aid boxes are located in marked cupboards:
   - In the first floor kitchen
   - In the GrantTree office (ground floor)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/health_and_safety_at_treehouse.md)

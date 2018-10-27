@@ -38,3 +38,6 @@ Specification:
 - [Some examples of the scope of variables in JavaScript](http://stackoverflow.com/a/500459/1109968)
 
 ### [Walkthrough](walkthroughs/thermostat_logic.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/thermostat/thermostat_logic.md)

@@ -37,3 +37,6 @@ To fix this problem, you will create a **validation** that ensures the submitted
 * [Sinatra Flash (for showing one-time messages)](https://github.com/SFEley/sinatra-flash)
 
 ## [Walkthrough](walkthroughs/15.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/bookmark_manager/15_validating_bookmarks.md)

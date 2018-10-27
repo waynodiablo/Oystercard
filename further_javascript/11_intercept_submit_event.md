@@ -21,3 +21,6 @@ In this challenge, you'll learn how to listen for the event triggered when a use
 - :pill: [Frontend, single page app](https://github.com/makersacademy/course/blob/master/pills/frontend_single_page_app.md)
 - [You don't need jQuery - ways of interacting with the DOM without using jQuery](http://blog.garstasio.com/you-dont-need-jquery/)
 - [`preventDefault()` on MDN](https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/11_intercept_submit_event.md)

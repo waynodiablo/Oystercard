@@ -65,3 +65,6 @@ But in all seriousness, if you've made it through this, we can assume that you d
 And remember, if all else fails, there's alwasy [xkcd](http://xkcd.com/) for consolation:
 
 ![XKCD](http://imgs.xkcd.com/comics/computer_problems.png)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/resources.md)

@@ -21,3 +21,5 @@ friends = "Bob"
 friends << " and Alice"
 puts friends #=> "Bob and Alice"
 ````
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/shovel_operator.md)

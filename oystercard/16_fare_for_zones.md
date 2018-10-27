@@ -42,3 +42,6 @@ I need to have the correct fare calculated
 - [Parallel assignment on SO](http://stackoverflow.com/questions/2895957/parallel-assignment-operator-in-ruby)
 
 ## [Walkthrough](walkthroughs/16_fare_for_zones.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/16_fare_for_zones.md)

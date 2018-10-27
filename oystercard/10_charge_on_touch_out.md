@@ -41,3 +41,6 @@ When my journey is complete, I need the correct amount deducted from my card
 - [DRY: Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 ## [Walkthrough](walkthroughs/10_charge_on_touch_out.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/10_charge_on_touch_out.md)

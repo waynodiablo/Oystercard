@@ -155,3 +155,6 @@ Learn more about how to [find and introduce yourself to a company](https://githu
 * Find a community that you can contribute to.
 
 * Make a concrete plan to join that community.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/building_your_community_guide.md)

@@ -41,3 +41,6 @@ I want to know what zone a station is in
 - [Don't repeat yourself – O'Reilly](http://programmer.97things.oreilly.com/wiki/index.php/Don't_Repeat_Yourself)
 
 ## [Walkthrough](walkthroughs/13_create_station_class.md)
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/oystercard/13_create_station_class.md)

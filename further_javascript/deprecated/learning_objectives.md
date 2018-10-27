@@ -37,3 +37,6 @@
 * Utilise node with express to host a single page Angular application.
 * Link express routing to create a RESTful API.
 * Describe the use of express middleware to serve static files.
+
+
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/further_javascript/deprecated/learning_objectives.md)
