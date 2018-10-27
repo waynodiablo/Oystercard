@@ -20,4 +20,4 @@ At Makers Academy, we worked hard to figure out what needs to be learned in what
 
 **Are you ready?** [Go to the Course outline!](https://github.com/makersacademy/course/blob/master/course_outline.md)
 
-![Tracking pixel](https://githubanalytics.herokuapp.com/track.jpg)
+![Tracking pixel](https://githubanalytics.herokuapp.com/course/README.md)
