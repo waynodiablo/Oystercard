@@ -44,5 +44,14 @@ experience, refactors the existing code). Then:
   them. ("What do you think about using a custom validator here?")
 * Seek to understand the author's perspective.
 
+Sample Rubrics
+--------------
+For inspiration, here are some example review rubrics for some of the weekend challenges:
+
+[Airport Challenge](https://github.com/makersacademy/airport_challenge/blob/master/docs/review.md)
+[Takeaway Challenge](https://github.com/makersacademy/takeaway-challenge/blob/master/docs/review.md)
+[Rps Challenge](https://github.com/makersacademy/rps-challenge/blob/master/docs/review.md)
+[Chitter Challenge](https://github.com/makersacademy/chitter-challenge/blob/master/docs/review.md)
+[Bowling Challenge](https://github.com/makersacademy/bowling-challenge/blob/master/docs/review.md)
 
 ![Tracking pixel](https://githubanalytics.herokuapp.com/course/how-to/code-review.md)
