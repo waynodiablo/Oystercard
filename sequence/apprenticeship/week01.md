@@ -17,6 +17,10 @@ Monday is [Day one](./day_one.md)
 
 ### Mornings
 
+Each of the exercises in the table below will link you to a Diode project with further details. The intention is that you should work through the core exercises in order, from the top to the bottom of the table, looking at optional exercises which interest you or which relate to key skills you feel you need more practice on.
+
+Please **do not** proceed on to the next core exercise until you have validated the previous one in Diode and, ideally, have received feedback from a coach.
+
 |Key Skill|Core Exercise|Optional Exercises| 
 |---|---|---|
 |Debugging|[Debugging Pratical](https://diode.makersacademy.com/students/dearshrewdwit/projects/832) |  [Debug Fizzbuzz](https://diode.makersacademy.com/students/samjones1001/projects/2286) |
