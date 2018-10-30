@@ -18,9 +18,7 @@ At Makers Academy, you're learning to learn.  This is why the list below priorit
 
 5. *Diagram.* Draw boxes and arrows, or whatever you like.  Get ideas out of your head and onto paper.  This makes it be easier to manipulate, examine and generate ideas.
 
-6. *Slack Overflow* Post a [Slack Overflow](https://github.com/makersacademy/slack-overflow) issue.  Or
-
-7. *Coach.* If all else fails, get some 1-1 help. This help may come in the form of more questions!
+6. *Coach.* If all else fails, get some 1-1 help. This help may come in the form of more questions!
 
 
 ![Tracking pixel](https://githubanalytics.herokuapp.com/course/pills/escalation_process.md)
