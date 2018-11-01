@@ -75,6 +75,7 @@ Implement your own algorithm for sorting an array (you cannot use `.sort`).
 Given an array of integers and a target number, find if there exist a sequence of numbers that sum up to the target.
 
 For example:
+
 | array | target | expected return |
 |-------|--------|--------------|
 |`[10,3,1,7]`|`8`| should return `true` (because 1+7 = 8) |
