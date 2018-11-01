@@ -19,9 +19,9 @@ By the end of this week, the goal is to be able to answer "yes" to these questio
 * You'll write your own algorithms, trying to be as efficient as possible
 * There will be workshops throughout the week to unblock parts of the problem and help you get further.
 
-### Sequence
+## Sequence
 
-#### Timing code
+### Timing code
 
 To start, let's look at how fast some standard library functions run. Here are four different ones you could be looking at (these are names of functions in ruby, but you can easily find equivalent in other languages):
 * `last`
@@ -35,7 +35,7 @@ What if you make the array passed into the functions 10, 100, 1000, 10000 times 
 
 Take down the times it takes to process different size of array, and use a spreadsheet utility to plot the results into a curve (time spent over input size).
 
-#### Build your own algorithms
+### Build your own algorithms
 
 Now, let's look at efficiency for our own algorithms.
 
@@ -50,28 +50,28 @@ Which algorithms seem more efficient? How do they scale?
 
 Here are a few algorithms you should try to implement:
 
-*Shuffling*
+#### Shuffling
 Implement your own algorithm for shuffling (you cannot use `.shuffle`).
 
-*Reversing*
+#### Reversing
 Implement your own algorithm for reversing an array (you cannot use `.reverse`).
 
-*Mechacoach Pairing:*
+#### Mechacoach Pairing
 Given a list of students names, create all possible pairings.
 
-*Find Duplicates:*
+#### Find Duplicates
 Given a list of words, find all words that appear more than once.
 
-*Most frequent words*
+#### Most frequent words
 Given a text, find which are the ten most common words.
 
-*Sorting 0s and 1s*
+#### Sorting 0s and 1s
 Given an array containing only 0s and 1s, sort it.
 
-*Sorting*
+#### Sorting
 Implement your own algorithm for sorting an array (you cannot use `.sort`).
 
-*Subsequence sum*
+#### Sub-sequence sum
 Given an array of integers and a target number, find if there exist a sequence of numbers that sum up to the target.
 _For example:_
 array: [10,3,1,7] and target: 8 should return `true` (because 1+7 = 8)
@@ -80,7 +80,7 @@ array: [10,3,1,7] and target: 21 should return `true` (because the sum of the wh
 array: [10,3,1,7] and target: 22 should return `false` (because you can't reach 22 by summing all numbers)
 array: [10,3,1,7] and target: 17 should return `false` (because 10 and 7 are not next to each other)
 
-#### Making algorithms more efficient
+### Making algorithms more efficient
 
 Can you make your algorithms more efficient?
 
@@ -94,7 +94,7 @@ Here are a two classic techniques to make algorithms more efficient:
 Using these techniques, try to make your algorithms more efficient. Is it possible?
 Can you make them as efficient as the built-in functions?
 
-*Optimising:*
+#### Optimising:
 
 Optimising is trying to make algorithms more efficient in some specific cases. If you know something about your input, you could apply an algorithm that uses that knowledge to its advantage (for example in the case of sorting only 0s and 1s).
 
@@ -103,12 +103,12 @@ Some other times, you do not know things about about the specific input, but you
 Lastly, optimising storage means using a data-structure that will be most efficient for the most frequent usage you'll make of it. A real life example would be to place the kitchen utensils you use most in the top drawer and the ones you only use a few times a year hidden on the top shelve.
 In software, your usage of memory can be optimised in the same way if you know which elements you'll need to access most often.
 
-*Resources*
+#### Resources
 * [A video introducing algorithmic efficiency](https://www.youtube.com/watch?v=u2iHB2vv3iE)
 * [Introduction to ruby hashes (an example of hash tables)](https://launchschool.com/blog/how-the-hash-works-in-ruby
 )
 
-#### Big O Notations
+### Big O Notations
 
 Using some of the following resources, describe the curves you obtained in terms of Big O notations:
 
@@ -117,7 +117,7 @@ Using some of the following resources, describe the curves you obtained in terms
 What do these notations mean?
 Can you characterise your algorithms into *logarithmic*, *linear*, *quadratic*, *cubic* or *exponential* complexity?
 
-#### Going further
+### Going further
 
 In this project, we talked about time complexity, but what about space complexity? Space complexity looks at how much memory a programme takes, and how that memory usage scales.
 Some programmes could be very time efficient, but allocate tons of memory.
