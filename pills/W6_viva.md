@@ -2,6 +2,9 @@
 
 Hi! You've found info on the W6 viva! Congrats!
 
+Join `#vivas` on slack for a place to ask more questions or get more info!
+_Here's a link to the instructions doc with useful information for the end of course viva https://docs.google.com/document/d/1w4uywH24Q68ffHi-WTcQhaHwyknMIQ9WLpOLTAS1czk/edit_
+
 There are 3 main reasons for having a smaller viva halfway through the course.
 
 1. Feedback from students indicated that it was tough to start and finish a thesis all at the end of the course - so spreading this reflective work over the course makes sense, and has the advantage that it should push you even more to think of your goals when you're prioritising what to learn.
