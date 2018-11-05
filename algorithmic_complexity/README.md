@@ -114,6 +114,16 @@ In software, your usage of memory can be optimised in the same way if you know w
 
 ### Big O Notations
 
+Why is timing not the best solution to look at code efficiency?
+
+#### Counting Steps
+An other way to look at efficiency would be to look at how many *operations* or *instructions* are executed in the programme.
+How could you track how many steps there are in your algorithm?
+Add step counters on some of the algorithms above, and compare the curves obtained for time vs steps.
+
+Do the shapes differ? Why?
+
+#### A theoretical model for Complexity
 Using some of the following resources, describe the curves you obtained in terms of Big O notations:
 
 * [Curves and corresponding BigO Notations](http://science.slc.edu/~jmarshall/courses/2002/spring/cs50/BigO/)
