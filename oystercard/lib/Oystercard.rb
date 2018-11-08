@@ -3,14 +3,14 @@ DEFAULT_BALANCE = 0
 MAXIMUM_BALANCE = 90
 MIN_FARE = 1
 attr_accessor :balance, :in_journey, :entry_station
-attr_reader :max_balance, :min_fare
+attr_reader :max_balance, :min_fare, :journey_history
 
 
   def initialize(balance = DEFAULT_BALANCE, max_balance = MAXIMUM_BALANCE, min_fare = MIN_FARE)
     @balance = balance
     @max_balance = max_balance
     @min_fare = min_fare
-    # @in_journey = false
+    @journey_history = []
   end
 
   def top_up(amount)
@@ -31,13 +31,14 @@ attr_reader :max_balance, :min_fare
 
   def touch_in(station)
     raise ("You must have £#{MIN_FARE} balance") if balance < MIN_FARE
-    @entry_station = station
-    @in_journey = true
+    @journey_history.push({start: station, end: nil})
   end
 
-  def touch_out
-    @in_journey = false
+  def touch_out(station)
     deduct(min_fare)
+    @journey_history.last[:end] = station
+
+
   end
 
 
